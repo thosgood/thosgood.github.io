@@ -10,12 +10,14 @@ pages on the nLab, along with a few other sources. There is nothing original
 here, except any mistakes.*
 
 A motto of category theory is that 'Kan extensions are everywhere'. As a
-simplification of this, '(co)limits[^1] are in a lot of places'. By rephrasing
+simplification of this, '(co)limits are in a lot of places'. By rephrasing
 the definition of a limit we end up with something that looks invitingly
 generalisable. This is how we can stumble across the idea of a
 **weighted limit**. In this post I'm going to assume that you are already
 convinced of the usefulness and omnipresence of limits and not talk too much
 (if at all) about why they are interesting in their own right.
+
+<!--more-->
 
 ## Motivation
 
@@ -85,7 +87,3 @@ $$\lim^W F\cong [I,\mathcal{V}](W,F)$$.
 _In the next post we'll have a look at *why* this generalisation is of
 any interest, and how we can use it to define (co)ends._
 
-#### Footnotes
-
-[^1]:  I'll probably just start writing 'limit', 'representable presheaf',
-    'end', etc. to mean both the construction and its 'co' (dual).
