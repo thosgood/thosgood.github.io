@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weighted limits, ends, and Day convolution
+title: Weighted limits, ends, and Day convolution - part 1
 category: "summaries"
 tags: "category-theory"
 ---
@@ -17,12 +17,12 @@ generalisable. This is how we can stumble across the idea of a
 convinced of the usefulness and omnipresence of limits and not talk too much
 (if at all) about why they are interesting in their own right.
 
-# Motivation
+## Motivation
 
 We start by rephrasing what it means for an object to be the limit of a functor
 in terms of representable presheaves.
 
-## Part 1
+#### Part 1
 
 Let $$F\colon I^\mathrm{op}\to\mathsf{Set}$$ be a presheaf on a small category
 $$I$$. Then the limit of $$F$$ over $$I$$ is the hom-set
@@ -38,7 +38,7 @@ $$\mathrm{Hom}_{\mathsf{Set}}(S,\lim_I F) \cong \lim_I\mathrm{Hom}_{\mathsf{Set}
 
 for any set $$S$$.
 
-## Part 2
+#### Part 2
 
 If we now find ourselves in the more general case of having a functor 
 $$F\colon I^\mathrm{op}\to\mathcal{C}$$ for some arbitrary (small) category
@@ -60,7 +60,7 @@ way, is exactly an object representing the presheaf $$\widehat{\lim}_I F$$, i.e.
 
 $$\mathcal{C}(c, \lim_I F)\cong\hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big)$$
 
-# Generalisation
+## Generalisation
 
 There are two things in the above that look interesting to try to
 generalise:
@@ -85,7 +85,7 @@ $$\lim^W F\cong [I,\mathcal{V}](W,F)$$.
 _In the next post we'll have a look at *why* this generalisation is of
 any interest, and how we can use it to define (co)ends._
 
-## Footnotes
+#### Footnotes
 
 [^1]:  I'll probably just start writing 'limit', 'representable presheaf',
     'end', etc. to mean both the construction and its 'co' (dual).
