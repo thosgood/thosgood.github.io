@@ -23,7 +23,6 @@ github_username:  thosgood
 
 # Build settings
 markdown: kramdown
-theme: jekyll-athena
 plugins:
   - jekyll-feed
 

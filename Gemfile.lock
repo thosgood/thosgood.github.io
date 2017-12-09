@@ -90,7 +90,6 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 3)
       safe_yaml (~> 1.0)
-    jekyll-athena (0.0.2)
     jekyll-avatar (0.5.0)
       jekyll (~> 3.0)
     jekyll-coffeescript (1.0.2)
@@ -235,9 +234,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll (~> 3.6.2)
-  jekyll-athena
   jekyll-feed (~> 0.6)
-  minima (~> 2.0)
   tzinfo-data
 
 BUNDLED WITH
