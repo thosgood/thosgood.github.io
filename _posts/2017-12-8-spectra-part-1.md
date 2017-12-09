@@ -47,9 +47,9 @@ $$X\wedge Y:=\frac{X\times Y}{X\vee Y}$$
 and where $X\vee Y$ is the **wedge sum**, given by identifying base points.
 It would be tantamount to a crime to not put in any pictures here, so below are some examples.
 
-!pictures!
+**PICTURES**
 
-In fact, $\mathsf{Top}_*$ is a *closed* symmetric monoidal category:[^2] we have the adjunction $(\wedge\dashv\mathsf{Top}_*)$, and thus the natural isomorphism
+In fact, $\mathsf{Top}\_\*$ is a *closed* symmetric monoidal category:[^2] we have the adjunction $(\wedge\dashv\mathsf{Top}_*)$, and thus the natural isomorphism
 
 $$\mathsf{Top}_*(X\wedge Y, Z)\cong\mathsf{Top}_*(X,\mathsf{Top}_*(Y,Z)).$$
 
@@ -102,7 +102,7 @@ Given two loops, $\gamma_1$ and $\gamma_2$ in $X$, we can define their 'product'
 I mean, obviously here there is some caveat so that the actual answer is _no_, but I think that making this mistake is in some way a good thing, because it means that we're thinking homotopically without maybe even realising it.[^6] The problem with associativity comes from the fact that we have picked some model of $S^1$, namely $[0,1]$, and so our composed loops have to respect this. That is, we can't just define $\gamma_1\cdot\gamma_2$ as the obvious map $[0,2]\to X$; we have to scale the paths so that $\gamma_1\cdot\gamma_2\colon[0,1]\to X$. This is easy enough: we do $\gamma_1(t/2)$ for $0\leqslant t\leqslant\frac12$ and $\gamma_2((t+1)/2)$ for $\frac12\leqslant t\leqslant1$.
 But the problem then arises that $(\gamma_1\cdot\gamma_2)\cdot\gamma_3\neq\gamma_1\cdot(\gamma_2\cdot\gamma_2)$ (this might be better explained in the pictures below), although they are clearly homotopic. Then, however, we have a similar problem when we want to look at $\gamma_1\cdot\gamma_2\cdot\gamma_3\cdot\gamma_4$, but now we have many[^7] ways of bracketing this. All possible ways will be homotopic, of course, but there is a lot of structure contained in this information of _how_ the different choices are homotopic, and if we can somehow remember all of this then maybe we will gain something from it.
 
-!pictures!
+**PICTURES**
 
 #### Footnotes
 
