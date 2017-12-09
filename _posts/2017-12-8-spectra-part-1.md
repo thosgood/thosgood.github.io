@@ -3,6 +3,7 @@ layout: post
 title: Loop spaces, spectra, and operads - part 1
 category: "summaries"
 tags: "category-theory spectra algebraic-topology operads"
+comments: false
 ---
 
 I have been reading recently about spectra and their use in defining cohomology theories. Something that came up quite a lot was the idea of **$E_\infty$-algebras**, which I knew roughly corresponded to some commutative version of $A_\infty$-algebras, but beyond that I knew nothing. After some enlightening discussions with one of my supervisors, I feel like I'm starting to see how the ideas of spectra, $E_\infty$-algebras, and operads all fit together. In an attempt to solidify this understanding and pinpoint any difficulties, I'm going to try to write up what I 'understand' so far.
