@@ -87,8 +87,8 @@ But now we use a 'simple' trick:[^4] replace the point with the contractible spa
 Dually, the (reduced) suspension can be realised as the homotopy pushout
 
 $$\begin{array}{ccc}
-    X &\to &* \\\\
-    \downarrow & \ulcorner&\downarrow \\\\
+    X &\to &* \\
+    \downarrow & \ulcorner&\downarrow \\
     * &\to &B
 \end{array}$$
 
