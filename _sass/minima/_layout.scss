@@ -204,13 +204,16 @@
 
 .tag-list {
   font-size: $small-font-size;
-  color: $grey-color;
   list-style-type: none;
   margin-left: 0;
 }
 
 .tag-list li {
   display: inline;
+}
+
+.tag-list li a {
+  color: $grey-color;
 }
 
 
