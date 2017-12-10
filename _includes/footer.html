@@ -34,6 +34,12 @@
           </li>
           {% endif %}
 
+          {% if site.orcid_id %}
+          <li>
+            {% include icon-orcid.html username=site.orcid_id %}
+          </li>
+          {% endif %}
+
           {% if site.github_username %}
           <li>
             {% include icon-github.html username=site.github_username %}
