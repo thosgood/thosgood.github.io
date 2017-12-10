@@ -202,20 +202,6 @@
   @include relative-font-size(1.5);
 }
 
-.tag-list {
-  font-size: $small-font-size;
-  list-style-type: none;
-  margin-left: 0;
-}
-
-.tag-list li {
-  display: inline;
-}
-
-.tag-list li a {
-  color: $grey-color;
-}
-
 
 
 /**
@@ -261,4 +247,46 @@
       @include relative-font-size(1.125);
     }
   }
+}
+
+
+
+/**
+ * Tags
+ */
+
+.tag-list {
+  font-size: $small-font-size;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.tag-list li {
+  display: inline;
+}
+
+.tag-list li a {
+  color: $grey-color;
+}
+
+
+
+/**
+ * Papers
+ */
+
+.papers-list {
+  list-style-type: none;
+}
+
+.papers-link {
+}
+
+.papers-year {
+  font-size: $small-font-size;
+  color: $grey-color;
+  margin-bottom: 0;
+}
+
+.papers-description {
 }
