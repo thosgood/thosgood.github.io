@@ -339,15 +339,3 @@
 .fixed {
   @include relative-font-size(0.92);
 }
-
-
-
-
-/**
- * Misc
- */
-
-.nice-ul {
-  list-style-type: none;
-  margin-left: 0;
-}
