@@ -15,19 +15,12 @@ layout: default
       <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-
         <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }} ({{ post.part | escape }})</a>
         </h2>
         {{ post.excerpt }}
-        <h4><a href="{{ post.url | relative_url }}">[Continue reading]</a></h4>
-        <ul class="tag-list">
-          {% for tag in post.tags %}
-            <li>
-              <a href="/tag/#{{ tag | slugify }}">[{{ tag }}]</a>
-            </li>
-          {% endfor %}
-        </ul>
+        <h4><a href="{{ post.url | relative_url }}">Continue reading &#8702;</a></h4>
+        {% include tag_list.html %}
       </li>
     {% endfor %}
   </ul>

@@ -4,7 +4,9 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h2 class="post-part">{{ page.part | escape }}</h2>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -18,6 +20,10 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+  
+  <p><a href="{{ "/" | relative_url }}">&#8701; Back to home</a></p>
+
+  {% include tag_list.html %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}

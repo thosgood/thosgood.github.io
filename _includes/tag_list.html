@@ -1,0 +1,12 @@
+<ul class="tag-list">
+  {% if post %}
+    {% assign tags = post.tags %}
+  {% else %}
+    {% assign tags = page.tags %}
+  {% endif %}
+  {% for tag in tags %}
+    <li>
+      <a href="/tags/#{{ tag | slugify }}">[{{ tag }}]</a>
+    </li>
+  {% endfor %}
+</ul>
