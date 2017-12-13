@@ -349,3 +349,7 @@
 .fixed {
   @include relative-font-size(0.92);
 }
+
+.page-description {
+  color: $grey-color;
+}
