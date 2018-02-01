@@ -112,7 +112,7 @@ The prototypical example of such a category is exactly what we've been looking a
 
 A really good introduction to all of this, and where I actually saw most of this for the first time, is [Moritz Groth's _A short course on $\infty$-categories_](https://arxiv.org/abs/1007.2925).
 
-This is all understood much better when we bring operads into the picture. In the next post in this series I'll try to show how spectra are 'just commutative monoids', and that commutative monoids in an $(\infty,1)$-category are 'just $E_\infty$-algebras'.
+This is all understood much better when we bring operads into the picture. In the next post in this series I'll try to show how certain spectra are 'just commutative monoids', and that commutative monoids in an $(\infty,1)$-category are 'just $E_\infty$-algebras'.
 
 #### Nice properties
 
