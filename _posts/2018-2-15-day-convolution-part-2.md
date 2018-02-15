@@ -23,8 +23,11 @@ We can define ends in enriched categories in a pretty slick manner, and in not-n
 
 First, let $\mathcal{C}$ and $\mathcal{D}$ be $\mathcal{V}$-enriched categories (with $\mathcal{V}$ a closed symmetric monoidal category) and $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ a $\mathcal{V}$-functor.
 Then the **end** of $F$, written $\int_\mathcal{C} F$ is (_if it exists!_) the $\mathrm{Hom}_\mathcal{C}$-weighted limit of $F$:
+
 $$\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.$$
+
 Dually, the **coend** of $F$, written $\int^\mathcal{C} F$, is
+
 $$\int^{c\in\mathcal{C}} F(c,c) := \mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.$$
 
 Alternatively now, suppose that we have some $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ between not-necessarily-enriched categories.
@@ -67,13 +70,13 @@ In particular then, we see that the generalisation of limits to weighted limits 
 
 ## Manipulation and ninja Yoneda
 
-It's often useful to know the following fact: _continuous functors preserve ends (and ,dually, cocontinuous functors preserve coends)_.
+It's often useful to know the following fact: *continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)*.
 In particular,
 
-\begin{align*}
+$$\begin{align*}
     \mathcal{D}\left( d,\int_\mathcal{C} F \right) &\cong \int_\mathcal{C} \mathcal{D}(d,F)\\
     \mathcal{D}\left( \int^\mathcal{C} F, d \right) &\cong \int_\mathcal{C} \mathcal{D}(F,d).
-\end{align*}
+\end{align*}$$
 
 We can also rephrase the Yoneda lemma[^3] in terms of ends, as well as finding a **co-Yoneda lemma**.[^2]
 The Yoneda lemma (in the setting of $\mathcal{V}$-enriched categories) reads
