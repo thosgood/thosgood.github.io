@@ -33,6 +33,12 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+
           {% if site.arxiv_username %}
           <li>
             {% include icon-arxiv.html username=site.arxiv_username %}
