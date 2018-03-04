@@ -103,7 +103,7 @@ Here are some papers and blog posts that I found interesting and really well wri
 
 ## Footnotes
 [^1]: A subobject of an object $y$ is a (class of isomorphisms of) monomorphism(s) into $y$.
-[^2]: This presentation of the (co-)Yoneda lemma is [sometimes referred to](https://mathoverflow.net/a/20451) as the ninja Yoneda lemma
+[^2]: This presentation of the (co-)Yoneda lemma is [sometimes referred to](https://mathoverflow.net/a/20451) as the _ninja Yoneda lemma_.
 [^3]: When phrased in terms of ends, this is sometimes called _Yoneda reduction_.
 [^4]: One thing that I've learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to _accept_ that something is a triviality without really thinking about _why_ it's trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year's resolution is to always prove that trivialities are trivial.
 [^5]: I'm not sure if this should be 'enriched functor-category' or 'enriched-functor category'. My first thought was the latter, because it's the category of enriched functors, but I suppose that it's clearer that our natural transformations are also enriched if we describe this as 'the functor category enriched over $\mathcal{V}$'. But then, I tend to overuse hyphens when there's more than one adjective, just to be extra safe.
