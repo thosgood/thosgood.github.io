@@ -66,7 +66,7 @@ As for showing universality, we cheat:[^3] if we have some other $A'$ with a nat
 
 #### Infinite delooping
 
-What we showed above is really that every group has a delooping (at least, in the groupoidal sense). A natural question to pose now is, _can we always deloop things_? There is a theorem that states that, when working in the $(\infty,1)$ category of topological spaces, we can deloop a space whenever it is an $A_\infty$-space, and thus homotopy equivalent to loop space (in the classical sense).
+What we showed above is really that every _group_ has a delooping (at least, in the groupoidal sense). A natural question to pose now is, _can we always deloop things_? There is a theorem that states that, when working in the $(\infty,1)$-category of topological spaces, we can deloop a space whenever it is an $A_\infty$-space, and thus homotopy equivalent to loop space (in the classical sense).
 
 As I'll 'explain' in a bit, if our category is a stable $(\infty,1)$-category then all deloopings exist and are given by suspension. Before I do this though, I'm going to give one important example of objects that are **infinitely-deloopable**, i.e. their deloopings can be delooped, and so can _their_ deloopings, and etc., so we have an infinite sequence of objects
 
@@ -86,7 +86,7 @@ Let $X$ be a pointed topological space[^13] and $A$ an abelian group. It is a cl
 
 $$H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)$$
 
-where $\mathbb{H}$ is some 'nice' category in which we have infinite deloopings of $A$, e.g. $\mathsf{Top}\_*$ or $\infty-\mathsf{Groupoid}$. Even better, these two example choices of $\mathbb{H}$ give us homotopically equivalent objects, by the homotopy hypothesis.
+where $\mathbb{H}$ is some 'nice' category in which we have infinite deloopings of $A$, e.g. $\mathsf{Top}\_*$ or $\infty\mathsf{Groupoid}$. Even better, these two example choices of $\mathbb{H}$ give us homotopically equivalent objects, by the homotopy hypothesis.
 
 This is really nice for many reasons, but one particularly nice one is that singular cohomology with coefficients in $A$ is _representable_, and it is pretty much represented exactly by $A$. There is a [theorem](https://ncatlab.org/nlab/show/Brown+representability+theorem) that tells us that, in particular, any sufficiently well-behaved cohomology theory is representable in this way.
 
@@ -104,7 +104,7 @@ In the bigger picture, every sequential pre-spectrum has a **spectrification**, 
 
 Generally, we can define [$\Omega$-spectrum objects in any $(\infty,1)$-category](https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects), but when people talk about 'spectra' with no reference to a specific category, it's usually implicit that they are working in $\mathsf{Top}\_*$ with weak homotopy equivalences.
 
-But the 'honest' setting for spectra is in a **stable $(\infty,1)$-category**: pointed[^7] $(\infty,1)$-categories $\mathcal{C}$ with finite limits where the loop $(\infty,1)$-functor $\Omega\colon\mathcal{C}\to\mathcal{C}$ is an _equivalence_, where the inverse is given by suspension $\Sigma$. Given some not-necessarily-stable pointed $(\infty,1)$-category $\mathcal{C}$ with finite limits, we can form its **stabilisation** by taking the limit[^8] of iterating the loop space functor on the category of **pointed objects of $\mathcal{C}$**:
+But the 'honest' setting for spectra is in a **stable $(\infty,1)$-category**: pointed[^7] $(\infty,1)$-categories $\mathcal{C}$ with finite limits, where the loop $(\infty,1)$-functor $\Omega\colon\mathcal{C}\to\mathcal{C}$ is an _equivalence_, with the inverse given by suspension $\Sigma$. Given some not-necessarily-stable pointed $(\infty,1)$-category $\mathcal{C}$ with finite limits, we can form its **stabilisation** by taking the limit[^8] of iterating the loop space functor on the category of **pointed objects of $\mathcal{C}$**:
 
 $$\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).$$
 
@@ -116,7 +116,7 @@ This is all understood much better when we bring operads into the picture. In th
 
 #### Nice properties
 
-Before wrapping this post up, I'm just going to mention briefly something that always confused me about spectra that represent cohomology theories.[^9]
+Before wrapping this post up, I'm just going to mention briefly something that always confused me about spectra that represent cohomology theories.
 
 We can define 'cohomology' in any $(\infty,1)$-category $\mathbb{H}$ by just setting $H(X,A):=\pi_0\mathbb{H}(X,A)$, but if we want this to behave like 'usual' cohomology then we have to impose some restrictions. First of all, if we want our 'cocycles' to classify something (namely principal bundles over $X$) then we have to be working in an _$(\infty,1)$-topos_. Secondly, if we want to obtain a $\mathbb{Z}$-graded cohomology then the simplest way[^10] of doing so is to ask that our coefficient object $A$ be a _component of a spectrum object_, i.e. $A=\mathcal{E}\_n$ for some spectrum object $\mathcal{E}$. Thirdly, if we want our cohomology to have a group structure then we need[^11] $A$ to be a _group object_, which is always the case if $A$ is a component of a spectrum object.[^12] Note that this is abelian if $A$ is at least an $E\_2$-object. Finally, if we want a ring structure then we can ask that the spectrum object $\mathcal{E}$ of which $A$ is a component be an $E_\infty$-ring, or a _ring spectra_.
 
@@ -153,8 +153,7 @@ and we claim that it is a natural isomorphism when we restrict to the subcategor
 [^6]: Depending on the setting, this could mean homeomorphisms, or weak homotopy equivalences, or something similar.
 [^7]: That is, it has a zero object.
 [^8]: Really, taking the $(\infty,1)$-limit in the $(\infty,1)$-category of $(\infty,1)$-categories...
-[^9]: And I'll prove this 'classical fact' too.
 [^10]: I have no idea if this is the _only_ way though.
 [^11]: Again, this is sufficient but I don't know if it's necessary.
 [^12]: Since the loop space gives an equivalence between $0$-connected pointed objects and group objects (this is Lemma 7.2.2.11 (1) in [Higher Topos Theory](https://arxiv.org/abs/math/0608040)).
-[^13]: Although for the following theorem to be true it really needs e.g. $X$ is a CW complex.
+[^13]: Although for the following theorem to be true it really needs $X$ to be a e.g. CW complex.
