@@ -92,11 +92,11 @@ This is really nice for many reasons, but one particularly nice one is that sing
 
 ## Spectra
 
-So with all this talk around spectra, it's time to actually define them. Like many concepts, there are a bunch of different models and settings, and we're not going to explore most of them, but instead focus on **sequential pre-spectra** and $\Omega$-spectra.
+So with all this talk around spectra, it's time to actually define them. Like many concepts, there are a bunch of different models and settings, and we're not going to explore most of them, but instead focus on **sequential pre-spectra** and **$\Omega$-spectra**.
 
 #### The setting (infinity categories)
 
-First of all we work in $\mathsf{Top}\_*$ and keep our example of $K(A,n)$ in mind. Here, we define a **sequential pre-spectrum $\mathcal{E}$** to be a sequence $(\mathcal{E}\_n)\_{n\in\mathbb{N}}$ of pointed spaces, along with the data of **structure maps**, which are continuous maps $\Sigma \mathcal{E}\_n\to \mathcal{E}\_{n+1}$. Then, using the adjunction $(\Sigma\dashv\Omega)$, we can turn these structure maps into maps $\mathcal{E}\_n\to\Omega \mathcal{E}\_{n+1}$. If these are isomorphisms[^6] then we say that $\mathcal{E}$ is an $\Omega$-spectrum.
+First of all we work in $\mathsf{Top}\_*$ and keep our example of $K(A,n)$ in mind. Here, we define a **sequential pre-spectrum $\mathcal{E}$** to be a sequence $(\mathcal{E}\_n)\_{n\in\mathbb{N}}$ of pointed spaces, along with the data of **structure maps**, which are continuous maps $\Sigma \mathcal{E}\_n\to \mathcal{E}\_{n+1}$. Then, using the adjunction $(\Sigma\dashv\Omega)$, we can turn these structure maps into maps $\mathcal{E}\_n\to\Omega \mathcal{E}\_{n+1}$. If these are isomorphisms[^6] then we say that $\mathcal{E}$ is an **$\Omega$-spectrum**.
 
 Our previous example of $\mathcal{E}\_n=K(A,n)$ then gives us an $\Omega$-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.
 
