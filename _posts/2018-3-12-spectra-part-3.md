@@ -105,5 +105,5 @@ As an interesting fact, we can see that $E_n$ is generally homotopically non-tri
 &nbsp;
 
 I haven't really talked much about spectra here, but the definition of an **infinite loop space** in Vogt is the same as the definition of an $\Omega$-spectrum in the previous post.
-Vogt mentions (5.2) that if $X$ is an infinite loop space then $Y\mapsto[Y,X_n]^bullet$ defines a cohomology theory, and that any cohomology theory arises in this way.
+Vogt mentions (5.2) that if $X$ is an infinite loop space then $Y\mapsto[Y,X_n]^\bullet$ defines a cohomology theory, and that any cohomology theory arises in this way.
 This all seems really nice, but I'm not entirely certain how complicated a proof of this is.
