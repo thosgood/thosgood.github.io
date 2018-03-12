@@ -61,8 +61,6 @@ The very first page of Vogt's paper has a beautiful `dictionary' that I'll repro
 
 &nbsp;
 
-&nbsp;
-
 Now, first of all, we need to define _what_ exactly e.g. an $A_\infty$-space is, which means we need to define two things:
 
 1. the operad $\mathcal{A}_\infty$, and
@@ -71,7 +69,7 @@ Now, first of all, we need to define _what_ exactly e.g. an $A_\infty$-space is,
 For the second point, given some non-$\Sigma$-operad $\mathcal{A}$, we define an **$\mathcal{A}$-space** to be a continuous functor $X\colon\mathcal{B}\to\mathsf{Top}$ that sends $\oplus$ to $\times$.
 In particular then, $X(n)=X(1)^n$, and so we often abuse notation and identify $X$ with the space $X(1)$.
 
-For the first point, we let {$\mathcal{A}_\infty$} be the terminal non-$\Sigma$-operad, so that each {$\mathcal{A}_\infty(n,1)$} consists of just a single point which we will call {$\mu_n$}.
+For the first point, we let $\mathcal{A}\_\infty$ be the terminal non-$\Sigma$-operad, so that each $\mathcal{A}\_\infty(n,1)$ consists of just a single point which we will call {$\mu_n$}.
 This forces the composition to satisfy
 
 $$\mu_k\circ(\mu_{r_1}\oplus\ldots\oplus\mu_{r_k}) = \mu_{r_1+\ldots+r_k}.$$
@@ -104,7 +102,7 @@ As an interesting fact, we can see that $E_n$ is generally homotopically non-tri
 
 ![Proof that $E_2(2)$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg){:class="img-responsive"}
 
----
+&nbsp;
 
 I haven't really talked much about spectra here, but the definition of an **infinite loop space** in Vogt is the same as the definition of an $\Omega$-spectrum in the previous post.
 Vogt mentions (5.2) that if $X$ is an infinite loop space then $Y\mapsto[Y,X_n]^bullet$ defines a cohomology theory, and that any cohomology theory arises in this way.
