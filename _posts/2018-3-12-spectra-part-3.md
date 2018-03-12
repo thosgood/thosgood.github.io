@@ -24,17 +24,17 @@ One of the really important points that Tai-Danae makes is talking about the the
 
 But as well as algebras over an operad, we also have the notion of **spaces** over an operad, where we obtain similar looking equivalences.
 This idea is more in the language of **brave new algebra** – a phrase introduced by Waldhausen for topological spaces that have some algebraic structures up to coherent homotopies.
-There is a paper, _Introduction to algebra over ``brave new rings''_, by R.M. Vogt (Rendiconti del Circolo Matematico di Palermo, Serie II, Suppl. 59 (1999) pp. 49-82) that is a really great read, if you keep in mind the proviso of slightly different approach: he often works with **non-$\Sigma$-operads**, which are operads without necessarily having the datum of an action by the symmetric group.
+There is a paper, _Introduction to Algebra over "Brave New Rings"_, by R.M. Vogt (Rendiconti del Circolo Matematico di Palermo, Serie II, Suppl. 59 (1999) pp. 49-82) that is a really great read, if you keep in mind the proviso of slightly different approach: he often works with **non-$\Sigma$-operads**, which are operads without necessarily having the datum of an action by the symmetric group.
 Just to save you from finding his exact definition, I paraphrase it here.
 
 ---
 
 **Definition.** A **non-$\Sigma$-operad** is a $\mathsf{Top}$-enriched category $\mathcal{A}$ with objects in bijection with $\mathbb{N}=\{0,1,\ldots\}$, along with an associative continuous bifunctor $\oplus\colon\mathcal{A}\times\mathcal{A}\to\mathcal{A}$ given on objects by $m\oplus n=m+n$, and such that, for all $k$ and $n$, the morphism
 
-\begin{align*}
+$$\begin{align*}
     \coprod_{n=\Sigma r_i} \mathcal{A}(r_1,1)\times\ldots\times\mathcal{A}(r_k,1) &\to \mathcal{A}(n,k)\\
     (f_1,\ldots,f_k) &\mapsto f_1\oplus\ldots\oplus f_k
-\end{align*}
+\end{align*}$$
 
 is a homeomorphism.
 
@@ -57,6 +57,7 @@ The very first page of Vogt's paper has a beautiful `dictionary' that I'll repro
 | commutative ring | | $E_\infty$-ring space | commutative monoid in $\mathsf{Mod}_\mathbb{S}$ |
 | ground ring $\mathbb{Z}$ | | $E_\infty$-ring space $Q(S^0)$ | sphere spectrum $\mathbb{S}$ |
 | tensor product $\otimes_\mathbb{Z}$ | | ? | smash product $\wedge_\mathbb{S}$ |
+{:.bordered-table}
 
 Now, first of all, we need to define _what_ exactly e.g. an $A_\infty$-space is, which means we need to define two things:
 
