@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Loop spaces, spectra, and operads - part 3
+title: Loop spaces, spectra, and operads
+part: Part 3
 category: "summaries"
 tags: "category-theory spectra algebraic-topology operads"
 comments: true
