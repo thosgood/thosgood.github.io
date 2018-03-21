@@ -7,7 +7,7 @@ tags: "category-theory"
 comments: true
 ---
 
-_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %})]_
+_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-8-day-convolution-part-1 %})]_
 
 ## Ends
 
