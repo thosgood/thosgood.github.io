@@ -9,6 +9,9 @@ comments: true
 
 _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-8-day-convolution-part-1 %})]_
 
+**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
+I honestly don't think there is a better teaching of this anywhere else in the literature.
+
 ## Ends
 
 Using the idea of weighted limits, defined in the last post, we can now talk about **ends**.
