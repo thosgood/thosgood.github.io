@@ -194,7 +194,7 @@ where the matrix is of size $2\times4$ because AND is an operation $\\{0,1\\}\ti
 [^1]: Well, in some way we _do_, because quantum theory governs fundamental actions of particles themselves, which sort of make up everything, so of course we're affected. But what I mean here is that we don't tend to see things in two places at once, or witness 'mutually exclusive' events simultaneously.
 [^2]: In general, it seems that quantum physics shares the fate of Gödel's incompleteness theorems – to be misquoted and misapplied for the purpose of sensationalism.
 [^3]: To be fair, I have neither witnessed an otter-pigeon swimming race nor an otter-pigeon drinking race, so this could be a flawed analogy.
-[^4]: So, in our example, an electron in its ground state is said to be in state $\vert0rangle$, and in its higher energy state its said to be in state $\vert1\rangle$,
+[^4]: So, in our example, an electron in its ground state is said to be in state $\vert0\rangle$, and in its higher energy state its said to be in state $\vert1\rangle$,
 [^5]: Enthusiasm isn't a substitute for knowledge, so I really hope that I haven't said anything misleading here. If it were the case that being really excited about everything counted the same as understanding it all, then I'd be a much better mathematician.
 [^6]: We always need a _choice of basis_, because this is equivalent to being able to interpret a qubit 'as a 0 or a 1'.
 [^7]: This is a possible sticky wicket. A particle can be in a superposition of states, but any measurement will result in just _one_ state; we can't actually _observe_ a superposition. See the comments in a bit about measurement and collapse.
