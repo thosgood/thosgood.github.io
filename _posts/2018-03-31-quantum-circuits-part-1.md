@@ -187,7 +187,7 @@ and the classical AND gate would be given by the matrix
 
 $$\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}$$
 
-where the size is different because AND is an operation $\{0,1\}\times\{0,1\}\to\{0,1\}$.
+where the matrix is of size $2\times4$ because AND is an operation 
 
 ---
 
