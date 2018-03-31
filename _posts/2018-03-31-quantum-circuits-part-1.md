@@ -170,7 +170,7 @@ Then we can describe the four classical computations on a single bit by matrices
 
 $$\begin{array}{cccc}
     \begin{pmatrix}1&0\\0&1\end{pmatrix} & \begin{pmatrix}0&1\\1&0\end{pmatrix} & \begin{pmatrix}1&1\\0&0\end{pmatrix} & \begin{pmatrix}0&0\\1&1\end{pmatrix}\\[1em]
-    \textsc{identity} & \textsc{not} & \textsc{constant 0} & \textsc{constant 1}
+    \text{IDENTITY} & \text{NOT} & \text{CONSTANT0} & \text{CONSTANT1}
 \end{array}$$
 
 If we have two bits, we can use that $\mathbb{R}^2\otimes\mathbb{R}^2\cong\mathbb{R}^4$ to write state vectors in the form
@@ -179,15 +179,15 @@ $$\begin{pmatrix}\delta_a\\1-\delta_a\end{pmatrix}\otimes \begin{pmatrix}\delta_
 
 for $\delta_a,\delta_b\in\{0,1\}$.
 
-Then, for example, a gate that acts as \sc not \rm on the first bit and as the \sc constant 1 \rm gate on the second bit would be given by[^9] the matrix
+Then, for example, a gate that acts as NOT on the first bit and as the CONSTANT1 gate on the second bit would be given by[^9] the matrix
 
 $$\begin{pmatrix}0&1\\1&0\end{pmatrix} \otimes \begin{pmatrix}0&0\\1&1\end{pmatrix} = \begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&0\\0&0&1&1\end{pmatrix}$$
 
-and the classical \sc and \rm gate would be given by the matrix
+and the classical AND gate would be given by the matrix
 
 $$\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}$$
 
-where the size is different because \sc and \rm is an operation $\{0,1\}\times\{0,1\}\to\{0,1\}$.
+where the size is different because AND is an operation $\{0,1\}\times\{0,1\}\to\{0,1\}$.
 
 ---
 
