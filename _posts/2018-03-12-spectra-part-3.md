@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-8-spectra-part-1 %}) and part 2 [here]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
+_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) and part 2 [here]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
 
 _This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process._
 

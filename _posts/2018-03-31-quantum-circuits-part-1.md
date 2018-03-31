@@ -144,6 +144,8 @@ So far it seems to agree with every physical experiment we can throw at it, but 
 
 ---
 
+&nbsp;
+
 Finally, for this section, an important note on measurements and the troublesome notion of **collapsing**.
 When we have some particle in a coherent superposition and then measure it, we find it in state $\vert0\rangle$ with probability $\vert\alpha_0\vert$.
 But then, after the measurement, the particle is in state $\vert0\rangle$, _full stop_; there is now no uncertainty, and we know that we can measure this particle over and over and always find it in state $\vert0\rangle$.
@@ -159,10 +161,10 @@ Finally for this post, we'll talk a bit about classical circuits.
 Let's take a single bit, which can be in one of two states: $\vert0\rangle$ (off) and $\vert1\rangle$ (on).
 Using the same notation as before, we can use a 2-vector to describe the state of this bit:
 
-\begin{align*}
+$$\begin{align*}
     \begin{pmatrix}1\\0\end{pmatrix} \,\,\leftrightarrow\, &\vert0\rangle \leftrightarrow \text{off}\\
     \begin{pmatrix}0\\1\end{pmatrix} \,\,\leftrightarrow\, &\vert1\rangle \leftrightarrow \text{on}.
-\end{align*}
+\end{align*}$$
 
 Then we can describe the four classical computations on a single bit by matrices:
 
@@ -186,6 +188,8 @@ and the classical \sc and \rm gate would be given by the matrix
 $$\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}$$
 
 where the size is different because \sc and \rm is an operation $\{0,1\}\times\{0,1\}\to\{0,1\}$.
+
+---
 
 [^1]: Well, in some way we _do_, because quantum theory governs fundamental actions of particles themselves, which sort of make up everything, so of course we're affected. But what I mean here is that we don't tend to see things in two places at once, or witness 'mutually exclusive' events simultaneously.
 [^2]: In general, it seems that quantum physics shares the fate of Gödel's incompleteness theorems – to be misquoted and misapplied for the purpose of sensationalism.
