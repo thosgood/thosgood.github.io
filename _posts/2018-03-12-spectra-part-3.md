@@ -10,7 +10,7 @@ comments: true
 
 _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) and part 2 [here]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
 
-_This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process._
+This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process.
 
 Now would be a great time to talk about operads, but I really could not do a better job than [Tai-Danae Bradley](https://twitter.com/math3ma) has already done over at her [blog](http://www.math3ma.com) in the post _What is an Operad_, parts [1](http://www.math3ma.com/mathema/2017/10/23/what-is-an-operad-part-1) and [2](http://www.math3ma.com/mathema/2017/10/30/what-is-an-operad-part-2).
 So throughout this post I'm going to assume that you've read this, and I'll freely reference bits of it without necessarily saying so.
@@ -41,6 +41,8 @@ is a homeomorphism.
 There is also the technical assumption that $\mathrm{id}_1\in\mathcal{A}(1,1)$ is a closed fibration, which we will pass over.
 
 ---
+
+&nbsp;
 
 An important thing to note is how this corresponds to May's definition of an operad.
 The property satisfied by $\oplus$ on coproducts means that $\mathcal{A}$ is actually uniquely determined by composition and the morphism spaces $\mathcal{A}(n,1)$ for $n\geqslant0$, which is the data that May uses to define (non-$\Sigma$-)operads.

@@ -21,7 +21,7 @@ One of the reasons that I'm posting this, apart from to help me to not forget it
 As a naive guess, I would think that there is some `string diagram' approach to all this, but I'd need to sit down and have a think about what exactly that would be...
 So if anybody has any comments or references then I'd be more that interested to hear them!
 
-# Foundational ideas #
+# Foundational ideas
 
 Before jumping in to the jacuzzi that is quantum circuitry, let's dip our toes in the vast ocean of **quantum physics axiomatisation**.
 First of all though, a note on quantum computers in practice.
@@ -155,7 +155,7 @@ This seems to be a contradiction to our assumptions on quantum evolutions: this 
 There are many ways of dealing with this problem, but the important thing to note is that measurements can still be described in exactly the same way as all other quantum processes, and aren't subject to a different axiomatisation or something.[^8]
 However, for the moment, it's a convenient way of thinking that simplifies the maths (and conceptualisation) to just think of measurements as collapses.
 
-## Classical circuits
+# Classical circuits
 
 Finally for this post, we'll talk a bit about classical circuits.
 Let's take a single bit, which can be in one of two states: $\vert0\rangle$ (off) and $\vert1\rangle$ (on).
@@ -190,6 +190,8 @@ $$\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}$$
 where the matrix is of size $2\times4$ because AND is an operation $\\{0,1\\}\times\\{0,1\\}\to\\{0,1\\}$.
 
 ---
+
+# Footnotes
 
 [^1]: Well, in some way we _do_, because quantum theory governs fundamental actions of particles themselves, which sort of make up everything, so of course we're affected. But what I mean here is that we don't tend to see things in two places at once, or witness 'mutually exclusive' events simultaneously.
 [^2]: In general, it seems that quantum physics shares the fate of Gödel's incompleteness theorems – to be misquoted and misapplied for the purpose of sensationalism.

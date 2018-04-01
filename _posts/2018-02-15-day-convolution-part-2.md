@@ -12,15 +12,15 @@ _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-par
 **Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
 I honestly don't think there is a better teaching of this anywhere else in the literature.
 
-## Ends
-
 Using the idea of weighted limits, defined in the last post, we can now talk about **ends**.
 The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$, which we can think of as defining both a left and a right action on $\prod_{c\in\mathcal{C}}F(c,c)$, we wish to construct some sort of universal subobject[^1] where the two actions coincide.
 Dually, a motivation behind the **coend** is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that _forces_ the two actions to agree.
 
 <!--more-->
 
-#### Definitions and settings
+# Ends
+
+## Definitions and settings
 
 We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.
 
@@ -45,7 +45,7 @@ F(c,c) & \xrightarrow{F(\mathrm{id},f)} & F(c,c')
 
 Then we can define the end as a _universal_ wedge $w$ (if it exists), i.e. any other wedge $w'$ factors uniquely through $w'\to w$
 
-#### Examples
+## Examples
 
 I'm going to talk more about the exciting examples and applications of ends (tensor products of categories, geometric realisation, and Day convolution) in the next post in this series, but I would feel awful if I didn't mention at least a couple here.
 
@@ -71,7 +71,7 @@ where $\odot$ is the co-power.
 
 In particular then, we see that the generalisation of limits to weighted limits is 'at least as general as' the idea of Kan extensions.
 
-## Manipulation and ninja Yoneda
+# Manipulation and ninja Yoneda
 
 It's often useful to know the following fact: *continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)*.
 In particular,
@@ -94,7 +94,7 @@ whence we find the co-Yoneda lemma:
 
 $$F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c).$$
 
-## Much better references
+# Much better references
 
 If you really want to read about ends then you my friend are in the wrong place.
 Here are some papers and blog posts that I found interesting and really well written:
@@ -104,7 +104,10 @@ Here are some papers and blog posts that I found interesting and really well wri
 3. [Ends](https://golem.ph.utexas.edu/category/2014/01/ends.html), on the the n-Category Café
 4. [Ends and coends](https://bartoszmilewski.com/2017/03/29/ends-and-coends/), on Bartosz Milewski's Programming Cafe
 
-## Footnotes
+---
+
+# Footnotes
+
 [^1]: A subobject of an object $y$ is a (class of isomorphisms of) monomorphism(s) into $y$.
 [^2]: This presentation of the (co-)Yoneda lemma is [sometimes referred to](https://mathoverflow.net/a/20451) as the _ninja Yoneda lemma_.
 [^3]: When phrased in terms of ends, this is sometimes called _Yoneda reduction_.

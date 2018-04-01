@@ -16,6 +16,8 @@ layout: default
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       {% endif %}</p>
   </header>
+  
+  {% include toc.html html=content %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}

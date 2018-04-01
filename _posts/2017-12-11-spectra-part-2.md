@@ -9,21 +9,21 @@ comments: true
 
 _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %})]_
 
-In the [previous post of this series]({{ site.baseurl }}{% post_url 2017-12-8-spectra-part-1 %}) I talked a bit about basic loop space stuff and how this gave birth to the idea of 'homotopically-associative algebras'. I'm going to detour slightly from what I was going to delve into next and speak about **delooping** for a bit first. Then I'll introduce **spectra** as sort of a generalisation of infinite deloopings. I'll probably leave the stuff about $E_\infty$-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.
+In the [previous post of this series]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) I talked a bit about basic loop space stuff and how this gave birth to the idea of 'homotopically-associative algebras'. I'm going to detour slightly from what I was going to delve into next and speak about **delooping** for a bit first. Then I'll introduce **spectra** as sort of a generalisation of infinite deloopings. I'll probably leave the stuff about $E_\infty$-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.
 
 As a warning: I am far (oh so very far) from being an expert in this stuff, so it's very possible that there are mistakes. If you spot any then please do give me a shout.
 
 <!--more-->
 
-## Delooping
+# Delooping
 
-#### The basic idea
+## The basic idea
 
 The basic idea of delooping is exactly what the name suggests: given some object $A$, if we can find another object $B$ such that $A\simeq\Omega B$ then we say that $B$ is the **delooping of $A$**. We often write $\mathbb{B}A$ or $\mathcal{B}A$ to mean the delooping, depending on the context ('groupoidal' or 'topological'), though these are, of course, linked.
 
 As an important note, by looking at the homotopy pullback diagram of a delooping, we see that in some sense a delooping is the same as a suspension. We will come back to this later.
 
-#### Groupoids and nerves and geometric realisation
+## Groupoids and nerves and geometric realisation
 
 If $A$ is some topological group then we have (at least) two ways of describing it:
 
@@ -38,7 +38,7 @@ This is all closely linked to the [bar construction](https://ncatlab.org/nlab/sh
 
 Before going any further, we are actually going to look at a concrete example (something that I often forget to do when working in this more abstract setting).
 
-#### An example
+## An example
 
 Let $A$ be some group, _which we think of as a discrete groupoid_, and define $\mathbb{B}A$ to be the one-object groupoid with morphisms given by $A$, as above. We're going to show that this really _is_ a delooping of $A$, in that the homotopy square below homotopy-commutes and is homotopy-universal:
 
@@ -64,7 +64,7 @@ Now we see that $\eta$ (defined by the identity) is, as one would hope, a natura
 
 As for showing universality, we cheat:[^3] if we have some other $A'$ with a natural isomorphism $\eta'\colon\Lambda\implies\Lambda$ then it must map objects in $A'$ to isomorphisms (i.e. morphisms) in $\mathbb{B}A$. But say that it maps an object $x'$ in $A'$ to the morphism $x$ in $\mathbb{B}A$. Then we can factor through $A$ by sending the object $x'$ in $A'$ to the object $x$ in $A$.
 
-#### Infinite delooping
+## Infinite delooping
 
 What we showed above is really that every _group_ has a delooping (at least, in the groupoidal sense). A natural question to pose now is, _can we always deloop things_? There is a theorem that states that, when working in the $(\infty,1)$-category of topological spaces, we can deloop a space whenever it is an $A_\infty$-space, and thus homotopy equivalent to loop space (in the classical sense).
 
@@ -72,7 +72,7 @@ As I'll 'explain' in a bit, if our category is a stable $(\infty,1)$-category th
 
 $$A, \mathbb{B}A, \mathbb{B}^2A, \ldots.$$
 
-#### Singular cohomology and the associated infinite delooping
+## Singular cohomology and the associated infinite delooping
 
 I claim that any _abelian_ group can be infinitely delooped by setting $\mathbb{B}^nA$ to be the ([strict omega](https://ncatlab.org/nlab/show/strict+omega-groupoid)) groupoid that has one object; only identity $k$-morphisms for $k\neq n$; and $\mathrm{Mor}_n(\mathbb{B}^nA)=A$. So we just take our usual construction of $\mathbb{B}A$ and 'shift the morphisms up in degree'.
 
@@ -90,11 +90,11 @@ where $\mathbb{H}$ is some 'nice' category in which we have infinite deloopings 
 
 This is really nice for many reasons, but one particularly nice one is that singular cohomology with coefficients in $A$ is _representable_, and it is pretty much represented exactly by $A$. There is a [theorem](https://ncatlab.org/nlab/show/Brown+representability+theorem) that tells us that, in particular, any sufficiently well-behaved cohomology theory is representable in this way.
 
-## Spectra
+# Spectra
 
 So with all this talk around spectra, it's time to actually define them. Like many concepts, there are a bunch of different models and settings, and we're not going to explore most of them, but instead focus on **sequential pre-spectra** and **$\Omega$-spectra**.
 
-#### The setting (infinity categories)
+## The setting (infinity categories)
 
 First of all we work in $\mathsf{Top}\_*$ and keep our example of $K(A,n)$ in mind. Here, we define a **sequential pre-spectrum $\mathcal{E}$** to be a sequence $(\mathcal{E}\_n)\_{n\in\mathbb{N}}$ of pointed spaces, along with the data of **structure maps**, which are continuous maps $\Sigma \mathcal{E}\_n\to \mathcal{E}\_{n+1}$. Then, using the adjunction $(\Sigma\dashv\Omega)$, we can turn these structure maps into maps $\mathcal{E}\_n\to\Omega \mathcal{E}\_{n+1}$. If these are isomorphisms[^6] then we say that $\mathcal{E}$ is an **$\Omega$-spectrum**.
 
@@ -114,7 +114,7 @@ A really good introduction to all of this, and where I actually saw most of this
 
 This is all understood much better when we bring operads into the picture. In the next post in this series I'll try to show how certain spectra are 'just commutative monoids', and that commutative monoids in an $(\infty,1)$-category are 'just $E_\infty$-algebras'.
 
-#### Nice properties
+## Nice properties
 
 Before wrapping this post up, I'm just going to mention briefly something that always confused me about spectra that represent cohomology theories.
 
@@ -122,7 +122,7 @@ We can define 'cohomology' in any $(\infty,1)$-category $\mathbb{H}$ by just set
 
 The point here is that, cohomology can be defined very generally, but if we want to recover something that we really recognise from it then we can basically restrict ourselves to looking at **ring spectra in an $(\infty,1)$-topos**.
 
-## That 'classical fact'
+# That 'classical fact'
 
 A full and good proof (of the fact in question but also much more besides) can be found in Chapter 4.3 of [Hatcher's _Algebraic Topology_](https://www.math.cornell.edu/~hatcher/AT/AT.pdf). I'll be content here to give a small sketch, as found in e.g. [these lecture notes](http://math.mit.edu/~mbehrens/18.906/notes/lec15.pdf).
 
@@ -145,7 +145,9 @@ and we claim that it is a natural isomorphism when we restrict to the subcategor
 
 **Edit:** This `classical fact' is really an example of [Eckmann-Hilton duality](https://ncatlab.org/nlab/show/Eckmann-Hilton+duality).
 
-#### Footnotes
+---
+
+# Footnotes
 
 [^1]:  In fact, there's the important point that we can _prove_ that classifying spaces for principal $A$-bundles exist by showing exactly that $\vert N(\mathbb{B}A)\vert$ satisfies all the required properties.
 [^2]: Maybe have a look [here](https://ncatlab.org/nlab/show/groupoid+object+in+an+(infinity%2C1)-category#Delooping).

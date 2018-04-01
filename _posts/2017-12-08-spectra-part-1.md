@@ -19,9 +19,9 @@ After this, I might do a series on the uses of spectra, like 'nice' cohomology t
 
 _There probably won't be many references or pictures to begin with, but I will try to come back and add some at some point in the hopefully not-too-distant future._
 
-## Loop spaces
+# Loop spaces
 
-#### Classical approach
+## Classical approach
 
 Given some topological space $X$, we have many good reasons to be interested in its fundamental group. That is, we are interested in what happens to **loops** (maps from $S^1$ to $X$) in our space when we consider everything up to homotopy. With this in mind, we define the **(pointed) loop space $\Omega(X,x)$ of $X$ at some point $x\in X$** as the mapping space
 
@@ -36,7 +36,7 @@ In fact, we can just iterate loop spaces to obtain such objects: we define the *
 
 $$\Omega^i(X,x):=\Omega\big(\Omega^{i-1}(X,x)\big).$$
 
-#### Suspensions and smashing
+## Suspensions and smashing
 
 This definition of higher loop spaces might be a tad surprising in so far as one might have expected 'higher loops' to be defined as maps from 'higher spheres', and thus to have defined the $i$-fold loop space as
 
@@ -51,7 +51,7 @@ $$X\wedge Y:=\frac{X\times Y}{X\vee Y}$$
 and where $X\vee Y$ is the **wedge sum**, given by identifying base points.
 It would be tantamount to a crime to not put in any pictures here, so below are some examples.
 
-**PICTURES**
+**INSERT PICTURES**
 
 In fact, $\mathsf{Top}\_\*$ is a *closed* symmetric monoidal category:[^2] we have the adjunction $(\wedge\dashv\mathsf{Top}_*)$, and thus the natural isomorphism
 
@@ -74,7 +74,7 @@ Then
 
 $$S^i\wedge S^j\simeq\frac{e^0\sqcup e^j\sqcup e^i\sqcup e^{i+j}}{e^0\sqcup e^i\sqcup e^j}\simeq e^0\sqcup e^{i+j}.$$
 
-#### Homotopy pullbacks
+## Homotopy pullbacks
 
 We claim that the loop space construction can also be described as the homotopy pullback of $X$ along the base point $x\colon*\to X$. That is, we want to realise
 
@@ -97,7 +97,7 @@ $$\begin{array}{ccc}
 
 or, said in a different way,[^5] as the mapping cone of the terminal map $X\to *$.
 
-#### Sneak peek at $A_\infty$-algebras
+## Sneak peek at $A_\infty$-algebras
 
 In one of Stasheff's theses, in the 60s, he formalised the idea of algebras that behave 'like loop spaces' in that they have a multiplication structure that is only associative _up to some higher homotopies_. These are called **$A_\infty$-algebras**, and there are plenty of classic introductions to them in their own right. The 'most classic' is probably _[Keller, Bernhard (2001). Introduction to A-infinity algebras and modules](https://arxiv.org/abs/math/9910179)_, which also describes (in §2.2) what I'm going to briefly sketch out below (and will cover in more detail in the future): how loop spaces are 'almost associative algebras'.
 
@@ -106,9 +106,11 @@ Given two loops, $\gamma_1$ and $\gamma_2$ in $X$, we can define their 'product'
 I mean, obviously here there is some caveat so that the actual answer is _no_, but I think that making this mistake is in some way a good thing, because it means that we're thinking homotopically without maybe even realising it.[^6] The problem with associativity comes from the fact that we have picked some model of $S^1$, namely $[0,1]$, and so our composed loops have to respect this. That is, we can't just define $\gamma_1\cdot\gamma_2$ as the obvious map $[0,2]\to X$; we have to scale the paths so that $\gamma_1\cdot\gamma_2\colon[0,1]\to X$. This is easy enough: we do $\gamma_1(t/2)$ for $0\leqslant t\leqslant\frac12$ and $\gamma_2((t+1)/2)$ for $\frac12\leqslant t\leqslant1$.
 But the problem then arises that $(\gamma_1\cdot\gamma_2)\cdot\gamma_3\neq\gamma_1\cdot(\gamma_2\cdot\gamma_2)$ (this might be better explained in the pictures below), although they are clearly homotopic. Then, however, we have a similar problem when we want to look at $\gamma_1\cdot\gamma_2\cdot\gamma_3\cdot\gamma_4$, but now we have many[^7] ways of bracketing this. All possible ways will be homotopic, of course, but there is a lot of structure contained in this information of _how_ the different choices are homotopic, and if we can somehow remember all of this then maybe we will gain something from it.
 
-**PICTURES**
+**INSERT PICTURES**
 
-#### Footnotes
+---
+
+# Footnotes
 
 [^1]: Careful here: we need to be working with '[nice enough](https://ncatlab.org/nlab/show/convenient+category+of+topological+spaces)' spaces, otherwise this product [isn't associative (not even weakly)](https://mathoverflow.net/a/76594/73622).
 [^2]: This needs proving, but I'm not gonna do that here because half of the fun of writing these posts is that I can just talk about the ideas themselves, and not repeat proofs that I don't want to have to type out. It's also nice to escape from the usual 'definition, theorem, proof' format. But for a proof of this particular claim see e.g. [the nLab](https://ncatlab.org/nlab/show/pointed+object#ClosedMonoidalStructure) (although they also refer elsewhere for a proof so I feel less bad for doing so).
