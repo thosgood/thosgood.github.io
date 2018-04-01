@@ -189,6 +189,10 @@
 
   > li {
     margin-bottom: $spacing-unit;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-left: 2px solid $brand-color;
+    border-bottom: 1px dashed $brand-color;
   }
 }
 
