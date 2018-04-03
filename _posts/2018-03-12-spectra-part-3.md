@@ -47,7 +47,7 @@ There is also the technical assumption that $\mathrm{id}_1\in\mathcal{A}(1,1)$ i
 An important thing to note is how this corresponds to May's definition of an operad.
 The property satisfied by $\oplus$ on coproducts means that $\mathcal{A}$ is actually uniquely determined by composition and the morphism spaces $\mathcal{A}(n,1)$ for $n\geqslant0$, which is the data that May uses to define (non-$\Sigma$-)operads.
 
-The very first page of Vogt's paper has a beautiful `dictionary' that I'll reproduce (in full, even though we won't talk about some of the more complicated rows) here, as well as adding another column with references to the places where Vogt proves these equivalences.
+The very first page of Vogt's paper has a beautiful 'dictionary' that I'll reproduce (in full, even though we won't talk about some of the more complicated rows) here, as well as adding another column with references to the places where Vogt proves these equivalences.
 
 | classical algebra | ref. | brave new algebra | spectra |
 | ----------------- | ---- | ----------------- | ------- |
@@ -91,16 +91,16 @@ _I'm still working on understanding all this, and there are definitely some larg
 _If anybody has some nice explanations then it would be greatly appreciated, but until then, what follows is nothing more than a sketch of an elephant by a blind man._
 
 Again, there is an important note about names and notation.
-What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{W}\mathcal{A_\infty}$ in Vogt, because he constructs it as a `homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{W}\mathcal{A_\infty}$ in Vogt, because he constructs it as a 'homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
 In fact, there is the idea of [Boardman-Vogt resolution](https://ncatlab.org/nlab/show/Boardman-Vogt+resolution), which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of $\mathrm{Assoc}$.
 Then an associative algebra, viewed as a representation of $\mathrm{Assoc}$ in the endomorphism operad $\mathrm{End}$, gives us a morphism in some $\infty$-category of operads, as an anafunctor
 
 $$\mathrm{Assoc}\overset{\sim}{\leftarrow}\mathcal{A}_\infty\to\mathrm{End}.$$
 
 As for the commutative case, section 3 of Vogt explains in detail how the little cubes operad (in one dimension) is an $A_\infty$-operad that acts on loop spaces.
-This generalises in section 6 to showing that $n$-fold loop spaces can be acted on by the little $n$-cubes operad, and taking a suitable colimit we find that infinite loop spaces are acted on by some `little $\infty$-cubes operad'.
+This generalises in section 6 to showing that $n$-fold loop spaces can be acted on by the little $n$-cubes operad, and taking a suitable colimit we find that infinite loop spaces are acted on by some 'little $\infty$-cubes operad'.
 That is, we define $E_n$ to be the little $n$-discs operad[^1], and $E_\infty$ to be the colimit of the $E_n$, which is weakly equivalent to the commutative operad $\mathrm{Comm}$.
-As an interesting fact, we can see that $E_n$ is generally homotopically non-trivial (see the picture below), but $E_\infty$ is contractible.
+As an interesting fact, we can see that $E_n$ is generally homotopically non-trivial (tiny picture below), but $E_\infty$ is contractible.
 
 ![Proof that $E_2(2)$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg){:class="img-responsive"}
 
@@ -108,4 +108,4 @@ As an interesting fact, we can see that $E_n$ is generally homotopically non-tri
 
 I haven't really talked much about spectra here, but the definition of an **infinite loop space** in Vogt is the same as the definition of an $\Omega$-spectrum in the previous post.
 Vogt mentions (5.2) that if $X$ is an infinite loop space then $Y\mapsto[Y,X_n]^\bullet$ defines a cohomology theory, and that any cohomology theory arises in this way.
-This all seems really nice, but I'm not entirely certain how complicated a proof of this is.
+This all seems really nice, but I'm not entirely certain how complicated a proof of this is, or how trivial this statement is.
