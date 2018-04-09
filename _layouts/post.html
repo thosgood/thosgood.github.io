@@ -7,14 +7,19 @@ layout: default
     <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <h2 class="post-part">{{ page.part | escape }}</h2>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+    <p><time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </time></p>
+    {% if page.tags != "" %}
+      <ul class="tag-list">
+      {% for tag in page.tags %}
+        <li>
+            <a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
   </header>
   
   {% include toc.html html=content %}
@@ -25,12 +30,15 @@ layout: default
   
   <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
 
-  <span>[
+  {% if page.tags != "" %}
+    <ul class="tag-list">
     {% for tag in page.tags %}
-      {% capture tag_name %}{{ tag }}{% endcapture %}
-      <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+      <li>
+          <a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a>
+      </li>
     {% endfor %}
-  ]</span>
+    </ul>
+  {% endif %}
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}

@@ -225,14 +225,20 @@
   }
 }
 
+.post-date {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
 .post-part {
-  @include relative-font-size(1.625);
+  @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(1.25);
+    @include relative-font-size(2.25);
   }
+  color: $grey-color;
 }
 
 .post-content {
@@ -269,18 +275,25 @@
  * Tags
  */
 
-.tag-list {
+ul.tag-list {
   font-size: $small-font-size;
   list-style-type: none;
   margin-left: 0;
 }
 
-.tag-list li {
+ul.tag-list li {
   display: inline;
 }
 
-.tag-list li a {
+ul.tag-list li a {
   color: $grey-color;
+  font-family: monospace;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+}
+
+ul.tagged-posts {
+  list-style-type: none;
 }
 
 

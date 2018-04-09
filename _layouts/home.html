@@ -24,7 +24,15 @@ layout: default
         </h2>
         {{ post.excerpt }}
         <h4><a href="{{ post.url | relative_url }}">Continue reading &#8702;</a></h4>
-        {% include tag_list.html %}
+        {% if post.tags != "" %}
+          <ul class="tag-list">
+          {% for tag in post.tags %}
+            <li>
+                <a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a>
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
