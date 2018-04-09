@@ -25,7 +25,12 @@ layout: default
   
   <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
 
-  {% include tag_list.html %}
+  <span>[
+    {% for tag in page.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+    {% endfor %}
+  ]</span>
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
