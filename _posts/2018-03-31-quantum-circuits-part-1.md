@@ -142,6 +142,8 @@ So far it seems to agree with every physical experiment we can throw at it, but 
 
     The evolutions are then described by tensor products of the relevant unitary matrices.
 
+    **Edit.** More about this at the end of the post.
+
 ---
 
 &nbsp;
@@ -191,7 +193,26 @@ where the matrix is of size $2\times4$ because AND is an operation $\\{0,1\\}\ti
 
 ---
 
-**Edit:** Somehow I forgot to talk about **entaglement**, so let me fix that now with a small update.
+**Edit.** Somehow I forgot to talk about **entanglement**, so let me fix that now with a small update.
+
+When we have a multi-particle system (e.g. two qubits), then the states of this joint system are described by tensor products, as we said in our four-point axiomatisation.
+This means that states of the form
+
+$$\vert0\rangle\otimes\vert0\rangle = \vert0\rangle\vert0\rangle = \vert00\rangle$$
+
+(where the latter two equalities are just us introducing some shorthand notation) describe our system.
+However, not every element of a tensor product is a tensor of elements in each component: they are _linear combinations_ of such things.
+For example,
+
+$$\alpha\vert00\rangle + \beta\vert01\rangle = \vert0\rangle\otimes(\alpha\vert0\rangle + \beta\vert1\rangle)$$
+
+but
+
+$$\alpha\vert00\rangle + \beta\vert11\rangle$$
+
+_cannot_ be written in the form $\vert \Psi_a\rangle\otimes\vert \Psi_b\rangle$.
+
+We call states in the former form (tensors of states of the composite systems) **pure states**, and the latter form (states that don't 'split' as a state in each composite system) **entangled states**, because somehow the two systems are interacting with each other in such a way that we can't 'pull them apart'.
 
 ---
 
