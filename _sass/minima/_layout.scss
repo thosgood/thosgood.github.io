@@ -370,3 +370,19 @@ ul.tagged-posts {
 .page-description {
   color: $grey-color;
 }
+
+/**
+ * Pagination
+ */
+
+.pagination {
+  text-align: center;
+}
+
+.page-number {
+  padding: 0 10px;
+}
+
+.page-nav-inactive {
+  color: $grey-color;
+}

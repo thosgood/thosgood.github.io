@@ -23,10 +23,11 @@ github_username:  thosgood
 twitter_username: tjohnhos
 disqus:
   shortname: thosgood
-
 arxiv_username: hosgood_t_1
 orcid_id: 0000-0003-4580-0741
 excerpt_separator: <!--more-->
+paginate: 5
+# paginate_path: ""
 
 # Build settings
 markdown: kramdown
