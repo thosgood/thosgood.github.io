@@ -11,7 +11,7 @@ I know there are a bunch of nice properties that simplices have that other shape
 Nicolas, however, showed me a great little calculation that solves this problem.
 Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.
 
-<!-- more -->
+<!--more-->
 
 If we take the (geometric realisation of the) 1-cube (the interval $[0,1]$), then we can take the product with itself to get $[0,1]\times[0,1]$, which is automatically the 2-cube.
 More generally, any product of cubes will itself be a cube.
@@ -55,6 +55,10 @@ Five of these are non-degenerate,[^3] and the one that interests us is $[0,1]\ti
 ![The final result](/assets/post-images/2018-04-11-triangulation-of-products-result.jpg "The final result")
 
 In essence, the idea is simple, but it's a trick that I'd never seen before, and it really makes me 'believe' in simplices.
+
+---
+
+# Footnotes
 
 [^1]: Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is _not_ strict, but becomes strict when we consider cubes with connections. See (as always) the [nLab page on test categories](https://ncatlab.org/nlab/show/test+category#examples).
 [^2]: Geometrically, this means we take 'lines' that are actually points, 'triangles' that are actually lines or points, etc. Algebraically, this means that we take simplices in the image of the degeneracy maps $s_i^p\colon\Delta_p\to\Delta_{p+1}$ given by $s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]$.
