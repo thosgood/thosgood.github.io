@@ -296,6 +296,24 @@ ul.tagged-posts {
   list-style-type: none;
 }
 
+ul.tag-cloud {
+  font-size: $small-font-size;
+  list-style-type: none;
+  text-align: center;
+  padding: 15px;
+}
+
+ul.tag-cloud li {
+  display: inline;
+}
+
+ul.tag-cloud li a {
+  color: $grey-color-dark;
+  font-family: monospace;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+}
+
 
 
 /**
