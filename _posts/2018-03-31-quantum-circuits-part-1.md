@@ -104,7 +104,7 @@ Well, as an example that I still think about in awe, even if quantum theory is c
 This doesn't sound very exciting or big, but if you say it in a different way you can see why people would get so worked up about it: _if all of our lab equipment is made by some private corporation that we don't trust, and we want to produce a random number, then using quantum physics we can do so with **complete certainty**, even if the equipment has been tampered with to produce certain states of particles more often than others, or to produce seemingly random states that are actually just following a predetermined order._
 
 I don't want to be turning quantum physics into sensationalism now, so this comes with the obvious caveat that doing things in practice is usually really hard.
-As Artur Ekert once wrote in his lecture notes, _"in theory there is no difference between theory and practice, but in practice there is"_.
+A quote I remember hearing from Artur is that _"in theory there is no difference between theory and practice, but in practice there is"_.
 But, even so, wow this stuff is cool.
 
 Awed ravings aside,[^5] let's briefly end this section on axiomatisation by actually stating what our axiomatisation is.
