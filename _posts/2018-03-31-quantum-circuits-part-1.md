@@ -177,19 +177,13 @@ $$\begin{array}{cccc}
 
 If we have two bits, we can use that $\mathbb{R}^2\otimes\mathbb{R}^2\cong\mathbb{R}^4$ to write state vectors in the form
 
-$$\begin{pmatrix}\delta_a\\1-\delta_a\end{pmatrix}\otimes \begin{pmatrix}\delta_b\\1-\delta_b\end{pmatrix} \longleftrightarrow \begin{pmatrix}\delta_a\\1-\delta_a\\\delta_b\\1-\delta_b\end{pmatrix}$$
+$$\begin{pmatrix}\delta_a\\1-\delta_a\end{pmatrix}\otimes \begin{pmatrix}\delta_b\\1-\delta_b\end{pmatrix} \longleftrightarrow \begin{pmatrix}\delta_a\otimes\delta_b\\\delta_a\otimes(1-\delta_b)\\(1-\delta_a)\otimes\delta_b\\(1-\delta_a)\otimes(1-\delta_b)\end{pmatrix}$$
 
 for $\delta_a,\delta_b\in\{0,1\}$.
 
 Then, for example, a gate that acts as NOT on the first bit and as the CONSTANT1 gate on the second bit would be given by[^9] the matrix
 
-$$\begin{pmatrix}0&1\\1&0\end{pmatrix} \otimes \begin{pmatrix}0&0\\1&1\end{pmatrix} = \begin{pmatrix}0&1&0&0\\1&0&0&0\\0&0&0&0\\0&0&1&1\end{pmatrix}$$
-
-and the classical AND gate would be given by the matrix
-
-$$\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}$$
-
-where the matrix is of size $2\times4$ because AND is an operation $\\{0,1\\}\times\\{0,1\\}\to\\{0,1\\}$.
+$$\begin{pmatrix}0&1\\1&0\end{pmatrix} \otimes \begin{pmatrix}0&0\\1&1\end{pmatrix} = \begin{pmatrix}0&0&0&0\\0&0&1&1\\0&0&0&0\\1&1&0&0\end{pmatrix}.$$
 
 ---
 
