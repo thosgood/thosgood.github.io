@@ -50,6 +50,8 @@ Here are a few words about the above diagram.
     _But_, there is a model structure that we can put on $\mathsf{Ch}(\mathcal{A})$, and so there _is_ some link between the two: to quote from [a mathoverflow answer by Simon Henry](https://mathoverflow.net/a/188199/73622),
     _"The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen's "Homotopical Algebra" (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects."_
 
+    There is, however, the slightly confusing fact that the construction of $K(\mathcal{A})$ as a quotient _does_ agree with a localisation construction (as explained [here](https://math.stackexchange.com/a/1128937/71510)).
+
 # Unresolved confusions
 
 I still don't fully see the link between the homotopy category $\mathrm{h}(\mathcal{C})$ and the homotopy category $\mathrm{Ho}(\mathcal{C})$ and localisation in general (e.g. I 'know' that $\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))$, where $\mathrm{L}$ is the simplicial localisation, but that's about it).
