@@ -20,11 +20,11 @@ To do so, we need to know what the classical constructions become in this higher
 
 |classical|categorified|
 |-|-|
-abelian group $A$|stable $\infty$-category $\mathscr{A}$
-$x\in A$|$X\in\mathscr{A}$
-$y-x\in A$|$\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}$
-$\sum_{i=0}^n(-1)^i x_i\in A$|$\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}$
-$C\cong A\oplus B$|$\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle$
+|abelian group $A$|stable $\infty$-category $\mathscr{A}$|
+|$x\in A$|$X\in\mathscr{A}$|
+|$y-x\in A$|$\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}$|
+|$\sum_{i=0}^n(-1)^i x_i\in A$|$\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}$|
+|$C\cong A\oplus B$|$\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle$|
 {:.bordered-table}
 
 Note that the difference of two elements $X,Y$ in the categorified language depends on the choice of some morphism between them, so there are lots of 'values' of "$X-Y$", one for each $f\colon X\to Y$.
