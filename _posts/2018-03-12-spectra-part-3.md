@@ -71,12 +71,12 @@ Now, first of all, we need to define _what_ exactly e.g. an $A_\infty$-space is,
 For the second point, given some non-$\Sigma$-operad $\mathcal{A}$, we define an **$\mathcal{A}$-space** to be a continuous functor $X\colon\mathcal{B}\to\mathsf{Top}$ that sends $\oplus$ to $\times$.
 In particular then, $X(n)=X(1)^n$, and so we often abuse notation and identify $X$ with the space $X(1)$.
 
-For the first point, we let $\mathcal{A}\_\infty$ be the terminal non-$\Sigma$-operad, so that each $\mathcal{A}\_\infty(n,1)$ consists of just a single point which we will call {$\mu_n$}.
+For the first point, we let $\mathrm{Assoc}$ be the terminal non-$\Sigma$-operad, so that each $\mathrm{Assoc}(n,1)$ consists of just a single point which we will call {$\mu_n$}.
 This forces the composition to satisfy
 
 $$\mu_k\circ(\mu_{r_1}\oplus\ldots\oplus\mu_{r_k}) = \mu_{r_1+\ldots+r_k}.$$
 
-It can be seen that an $\mathcal{A}_\infty$-space is exactly a monoid (this is example 2.4 in Vogt).
+It can be seen that an $\mathrm{Assoc}$-space is exactly a monoid (this is example 2.4 in Vogt).
 
 ---
 
@@ -86,16 +86,13 @@ If this is the case, then we call a $\mathcal{B}$-space an **$A_\infty$-space**.
 
 ---
 
-**Warning.** _From here onwards, things become sketchy._
-_I'm still working on understanding all this, and there are definitely some large gaps in what I know._
-_If anybody has some nice explanations then it would be greatly appreciated, but until then, what follows is nothing more than a sketch of an elephant by a blind man._
+**Warning.** _What follows is nothing more than a sketch of an elephant by a blind man._
 
 Again, there is an important note about names and notation.
-What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{W}\mathcal{A_\infty}$ in Vogt, because he constructs it as a 'homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
-In fact, there is the idea of [Boardman-Vogt resolution](https://ncatlab.org/nlab/show/Boardman-Vogt+resolution), which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of $\mathrm{Assoc}$.
-Then an associative algebra, viewed as a representation of $\mathrm{Assoc}$ in the endomorphism operad $\mathrm{End}$, gives us a morphism in some $\infty$-category of operads, as an anafunctor
+What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{A}$ in Vogt, and what is now called $\mathcal{A}_\infty$ is called $\mathcal{W}\mathcal{A}$ in Vogt, because he constructs it as a 'homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+In fact, there is the idea of [Boardman-Vogt resolution](https://ncatlab.org/nlab/show/Boardman-Vogt+resolution), which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of $\mathrm{Assoc}$, i.e. a cofibrant replacement:
 
-$$\mathrm{Assoc}\overset{\sim}{\leftarrow}\mathcal{A}_\infty\to\mathrm{End}.$$
+$$\mathcal{A}_\infty\to\mathrm{Assoc}.$$
 
 As for the commutative case, section 3 of Vogt explains in detail how the little cubes operad (in one dimension) is an $A_\infty$-operad that acts on loop spaces.
 This generalises in section 6 to showing that $n$-fold loop spaces can be acted on by the little $n$-cubes operad, and taking a suitable colimit we find that infinite loop spaces are acted on by some 'little $\infty$-cubes operad'.
