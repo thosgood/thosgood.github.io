@@ -317,28 +317,6 @@ ul.tag-cloud li a {
 
 
 /**
- * Papers
- */
-
-.papers-list {
-  list-style-type: none;
-}
-
-.papers-link {
-}
-
-.papers-year {
-  font-size: $small-font-size;
-  color: $grey-color;
-  margin-bottom: 0;
-}
-
-.papers-description {
-}
-
-
-
-/**
  * Images
  */
 
@@ -346,7 +324,6 @@ ul.tag-cloud li a {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  padding: 15px;
 }
 
 
@@ -369,6 +346,7 @@ ul.tag-cloud li a {
 .page-col-l {
   width: -webkit-calc(60% - (#{$spacing-unit} / 2));
   width:         calc(60% - (#{$spacing-unit} / 2));
+  padding-right: $spacing-unit;
 }
 
 .page-col-r {
@@ -390,6 +368,8 @@ ul.tag-cloud li a {
   color: $grey-color;
 }
 
+
+
 /**
  * Pagination
  */
@@ -404,4 +384,41 @@ ul.tag-cloud li a {
 
 .page-nav-inactive {
   color: $grey-color;
+}
+
+
+
+/**
+ * About
+ */
+
+#about-page-col-r {
+  text-align: center;
+}
+
+#about-page-col-r img {
+  padding-bottom: 15px;
+}
+
+
+
+
+/**
+ * Papers
+ */
+
+.papers-list {
+  list-style-type: none;
+}
+
+.papers-link {
+}
+
+.papers-year {
+  font-size: $small-font-size;
+  color: $grey-color;
+  margin-bottom: 0;
+}
+
+.papers-description {
 }
