@@ -272,51 +272,6 @@
 
 
 /**
- * Tags
- */
-
-ul.tag-list {
-  font-size: $small-font-size;
-  list-style-type: none;
-  margin-left: 0;
-}
-
-ul.tag-list li {
-  display: inline;
-}
-
-ul.tag-list li a {
-  color: $grey-color;
-  font-family: monospace;
-  padding: 2px 4px;
-  background-color: $grey-color-light;
-}
-
-ul.tagged-posts {
-  list-style-type: none;
-}
-
-ul.tag-cloud {
-  font-size: $small-font-size;
-  list-style-type: none;
-  text-align: center;
-  padding: 15px;
-}
-
-ul.tag-cloud li {
-  display: inline;
-}
-
-ul.tag-cloud li a {
-  color: $grey-color-dark;
-  font-family: monospace;
-  padding: 2px 4px;
-  background-color: $grey-color-light;
-}
-
-
-
-/**
  * Images
  */
 
@@ -385,6 +340,77 @@ ul.tag-cloud li a {
 .page-nav-inactive {
   color: $grey-color;
 }
+
+
+
+.rss-subscribe {
+  text-align: center;
+  font-size: $small-font-size;
+}
+
+
+
+/**
+ * Tags
+ */
+
+span.tag-name {
+  font-family: monospace;
+}
+
+ul.tag-list {
+  font-size: $small-font-size;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+ul.tag-list li {
+  display: inline;
+}
+
+ul.tag-list li a {
+  color: $grey-color;
+  font-family: monospace;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+}
+
+ul.tag-cloud {
+  font-size: $small-font-size;
+  list-style-type: none;
+  text-align: center;
+  padding: 15px;
+}
+
+ul.tag-cloud li {
+  display: inline;
+}
+
+ul.tag-cloud li a {
+  color: $grey-color-dark;
+  font-family: monospace;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+}
+
+li#all-tags-tag a {
+  font-weight: bold;
+}
+
+
+
+/**
+ * Tag and category pages
+ */
+
+ul.tagged-posts {
+  list-style-type: none;
+}
+
+ul.tagged-posts time {
+  font-family: monospace;
+}
+
 
 
 
