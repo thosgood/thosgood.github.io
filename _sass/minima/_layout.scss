@@ -46,6 +46,11 @@
     }
   }
 
+  .page-link-active {
+    padding-bottom: 15px;
+    border-bottom: 3px solid $brand-color;
+  }
+
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
