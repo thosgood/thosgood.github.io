@@ -11,11 +11,11 @@ _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %})]
 
 In the [previous post of this series]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) I talked a bit about basic loop space stuff and how this gave birth to the idea of 'homotopically-associative algebras'. I'm going to detour slightly from what I was going to delve into next and speak about **delooping** for a bit first. Then I'll introduce **spectra** as sort of a generalisation of infinite deloopings. I'll probably leave the stuff about $E_\infty$-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.
 
+<!--more-->
+
 As a warning: I am far (oh so very far) from being an expert in this stuff, so it's very possible that there are mistakes. If you spot any then please do give me a shout.
 
 **Edit (21/04/18):** [this paper by Clark Barwick](http://www.maths.ed.ac.uk/~cbarwick/papers/salamanca.pdf) starts off with a really nice explanation of all this spectra/cohomology stuff.
-
-<!--more-->
 
 # Delooping
 

@@ -8,11 +8,12 @@ comments: true
 
 So I'm currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on 'Higher algebra and mathematical physics'.
 Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.
+
+<!--more-->
+
 There was a talk yesterday on [$\mathbb{F}_1$ things](http://www.mpim-bonn.mpg.de/node/8635) by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on [moduli spaces of connections on open varieties](http://www.mpim-bonn.mpg.de/node/8633) as well as one by Damien Calaque (my co-supervisor) on [$\mathbb{E}_n$-algebras and vertex models](http://www.mpim-bonn.mpg.de/node/8617), all of which I managed to follow at least partially (take what you can get, I guess).
 Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a [categorified Dold-Kan correspondence](http://www.mpim-bonn.mpg.de/node/8648).
 I don't really want to talk about the details (because I'm not at all qualified to do so, and you'd be better served by going directly to the source), but something that I really enjoyed was a 'dictionary' that he presented.
-
-<!--more-->
 
 Historically, the first step towards 'groupification' was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
 Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable $\infty$-categories: we can turn homological algebra into _categorified homological algebra_, and, taking inspiration from Serge Lang's famous 'exercise' in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.

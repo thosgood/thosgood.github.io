@@ -7,11 +7,12 @@ comments: true
 ---
 
 At a conference this week, I ended up having a conversation with Nicolas Vichery and Eduard Balzin about why simplices are the prevalent choice of geometric shape for higher structure, as opposed to e.g. cubes or globes.
+
+<!--more-->
+
 I know there are a bunch of nice properties that simplices have that other shapes don't have[^1], and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.[^4]
 Nicolas, however, showed me a great little calculation that solves this problem.
 Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.
-
-<!--more-->
 
 If we take the (geometric realisation of the) 1-cube (the interval $[0,1]$), then we can take the product with itself to get $[0,1]\times[0,1]$, which is automatically the 2-cube.
 More generally, any product of cubes will itself be a cube.

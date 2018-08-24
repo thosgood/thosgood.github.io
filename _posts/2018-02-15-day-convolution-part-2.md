@@ -9,14 +9,14 @@ comments: true
 
 _[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %})]_
 
-**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
-I honestly don't think there is a better teaching of this anywhere else in the literature.
-
 Using the idea of weighted limits, defined in the last post, we can now talk about **ends**.
 The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$, which we can think of as defining both a left and a right action on $\prod_{c\in\mathcal{C}}F(c,c)$, we wish to construct some sort of universal subobject[^1] where the two actions coincide.
 Dually, a motivation behind the **coend** is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that _forces_ the two actions to agree.
 
 <!--more-->
+
+**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
+I honestly don't think there is a better teaching of this anywhere else in the literature.
 
 # Ends
 

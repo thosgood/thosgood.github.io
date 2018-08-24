@@ -47,7 +47,8 @@
   }
 
   .page-link-active {
-    padding-bottom: 15px;
+    font-weight: bold;
+    padding-bottom: 2px;
     border-bottom: 3px solid $brand-color;
   }
 

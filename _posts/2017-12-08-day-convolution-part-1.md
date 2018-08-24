@@ -7,13 +7,6 @@ tags: "category-theory"
 comments: true
 ---
 
-**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
-I honestly don't think there is a better teaching of this anywhere else in the literature.
-
-*This is the first in a series of notes that are basically summaries of various
-pages on the nLab, along with a few other sources. There is nothing original
-here, except any mistakes.*
-
 A motto of category theory is that 'Kan extensions are everywhere'. As a
 simplification of this, '(co)limits are in a lot of places'. By rephrasing
 the definition of a limit we end up with something that looks invitingly
@@ -23,6 +16,14 @@ convinced of the usefulness and omnipresence of limits and not talk too much
 (if at all) about why they are interesting in their own right.
 
 <!--more-->
+
+**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
+I honestly don't think there is a better teaching of this anywhere else in the literature.
+
+*This is the first in a series of notes that are basically summaries of various
+pages on the nLab, along with a few other sources. There is nothing original
+here, except any mistakes.*
+
 
 # Motivation
 

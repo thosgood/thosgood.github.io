@@ -9,9 +9,10 @@ comments: true
 
 I am not at all a physicist, and my knowledge of quantum physics in particular comes solely from undergraduate courses that I followed years ago, and any reading I can get done when feeling mathematical but not inclined to work on my thesis.
 However, after scanning through some papers by [Bartlett](https://arxiv.org/abs/math/0512103), [Baez, Lauda](https://arxiv.org/abs/0908.2469), and [Lurie](https://arxiv.org/abs/0905.0465), my interest in quantum physics, and quantum computing especially, has come back with a vengeance.
-The following is aimed at people who have maybe read some things about quantum physics before and know some linear algebra.
 
 <!--more-->
+
+_The following is aimed at people who have maybe read some things about quantum physics before and know some linear algebra._
 
 Quantum computing has fascinated me ever since  I first studied it at university, despite being a self-proclaimed 'non-physicist', swearing to do only 'mathematical maths' and none of this applied stuff (a shameful phase that I am really glad I outgrew).
 This is without a doubt almost entirely due to the incredible teaching of [Artur Ekert](http://www.arturekert.org), whose lectures were probably the best that I ever experienced as an undergrad/masters student.

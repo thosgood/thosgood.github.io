@@ -8,6 +8,8 @@ comments: true
 Just a small post to point out that I've [uploaded some new notes](https://thosgood.github.io/papers/), including some I took at the Derived Algebraic Geometry in Toulouse (DAGIT) conference last year.
 I've been hard at work on thesis things, so haven't been able to write up all the blog stuff that I've wanted to, but hopefully will get a chance sometime in the near future.
 
+<!--more-->
+
 To give some mathematical content to this post, here are a few of the questions on math.stackexchange/mathoverflow that I've come back to read time and time again, because they just float my boat:
 
 - [In (relatively) simple words: What is an inverse limit?](https://math.stackexchange.com/questions/38517/in-relatively-simple-words-what-is-an-inverse-limit/38522#38522)
