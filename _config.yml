@@ -27,7 +27,13 @@ arxiv_username: hosgood_t_1
 orcid_id: 0000-0003-4580-0741
 excerpt_separator: <!--more-->
 paginate: 3
-# paginate_path: ""
+paginate_path: "blog/page-:num"
+
+# defaults:
+#   - scope:
+#       path: "blog/"
+#     values:
+#       sitemap: false
 
 # Build settings
 markdown: kramdown

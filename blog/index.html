@@ -1,0 +1,53 @@
+---
+layout: page
+title: Blog
+---
+
+<div class="fixed">
+
+    <p class="page-description">
+        This blog is a collection of reading notes of things that I try to learn. Often they are nothing more than summaries of various pages on the nLab, but collated, (over)simplified, and reordered to be more easily understood by, e.g., me. There will almost certainly be mistakes and bad viewpoints, so <i>caveat lector</i>.
+    </p>
+
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+          <li>
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h2>
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}{% if post.part != nil %} ({{ post.part | escape }}){% endif %}</a>
+            </h2>
+            {{ post.excerpt }}
+            <h4><a href="{{ post.url | relative_url }}">Continue reading &#8702;</a></h4>
+            {% if post.tags != "" %}
+              <ul class="tag-list">
+              {% for tag in post.tags %}
+                <li>
+                    <a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a>
+                </li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+    </ul>
+
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="page-nav">« Previous</a>
+        {% else %}
+            <span class="page-nav-inactive">Previous</span>
+        {% endif %}
+        <span class="page-number">[{{ paginator.page }} of {{ paginator.total_pages }}]</span>
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="page-nav">Next »</a>
+        {% else %}
+            <span class="page-nav-inactive ">Next</span>
+        {% endif %}
+    </div>
+
+    {% include archive.html %}
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>

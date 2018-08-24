@@ -4,7 +4,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
+    <p><a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a></p>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
     <h2 class="post-part">{{ page.part | escape }}</h2>
     <p><time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -28,7 +28,7 @@ layout: default
     {{ content }}
   </div>
   
-  <p><a href="{{ "/" | relative_url }}">&#8701; Back to all posts</a></p>
+  <p><a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a></p>
 
   {% if page.tags != "" %}
     <ul class="tag-list">
