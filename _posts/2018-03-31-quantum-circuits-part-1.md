@@ -173,7 +173,7 @@ Then we can describe the four classical computations on a single bit by matrices
 
 $$\begin{array}{cccc}
     \begin{pmatrix}1&0\\0&1\end{pmatrix} & \begin{pmatrix}0&1\\1&0\end{pmatrix} & \begin{pmatrix}1&1\\0&0\end{pmatrix} & \begin{pmatrix}0&0\\1&1\end{pmatrix}\\[1em]
-    \text{IDENTITY} & \text{NOT} & \text{CONSTANT0} & \text{CONSTANT1}
+    \text{IDENTITY} & \text{NOT} & \text{CONSTANT-0} & \text{CONSTANT-1}
 \end{array}$$
 
 If we have two bits, we can use that $\mathbb{R}^2\otimes\mathbb{R}^2\cong\mathbb{R}^4$ to write state vectors in the form

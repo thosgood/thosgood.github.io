@@ -37,8 +37,12 @@
   }
 
   .page-link {
+    padding: 2px;
     color: $text-color;
     line-height: $base-line-height;
+    display: inline-block;
+    width: $spacing-unit * 2;
+    text-align: center;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -48,7 +52,6 @@
 
   .page-link-active {
     font-weight: bold;
-    padding-bottom: 2px;
     border-bottom: 3px solid $brand-color;
   }
 
@@ -429,7 +432,7 @@ ul.tagged-posts time {
 }
 
 #about-page-col-r img {
-  padding-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 

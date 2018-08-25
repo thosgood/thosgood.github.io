@@ -216,9 +216,13 @@ pre {
 
 
 .bordered-table {
-        border-collapse: collapse;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $spacing-unit;
 
    > table, td, th {
         border: 1px solid black;
+        padding: 10px;
         }
 }
