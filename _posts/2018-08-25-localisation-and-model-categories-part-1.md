@@ -65,7 +65,7 @@ This is a way of constructing an $(\infty,1)$-category $L_\mathcal{W}\mathcal{C}
 We talk more about simplicial categories later on, but first we quote Julia E. Bergner from "A model category structure on the category of simplicial categories":
 
 _Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets._
-_If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$._
+_If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}\_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$._
 _This notion is more restrictive than that of a simplicial object in the category of categories._
 _Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved._
 
