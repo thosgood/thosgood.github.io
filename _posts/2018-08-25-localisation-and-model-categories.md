@@ -94,6 +94,8 @@ $$\begin{array}{ccccccccc}
 i.e. commutative diagrams of zigzags, where the 'linking' arrows are all in $\mathcal{W}$.
 The equivalence relations are the 'natural' ones: we can insert or remove identity maps, and compose any composable morphisms.
 
+#### Comparison
+
 Now then, we can ask how this 'new' localisation is related to the 'old' one, and we can answer this question with the following lemma.
 
 **Lemma.** $\pi_0(L_\mathcal{W}\mathcal{C}(x,y))\simeq\mathcal{C}[\mathcal{W}^{-1}]$.
