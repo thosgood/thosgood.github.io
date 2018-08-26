@@ -120,6 +120,6 @@ The lemma that we'll look at is the following (where we've yet to define the rig
 
 [^1]: These are just to ensure that composition and the identity morphism behave as expected. See [the nLab](https://ncatlab.org/nlab/show/localization#general_construction) for details.
 [^2]: I think of the diagram you want to show commutes as a tiny house of cards, two layers high.
-[^3]: There are so many things that 'homotopy category' or '$\operatorname{Ho}(\mathcal{C})$' or '\operatorname{h}(\mathcal{C})' can mean, so the context is always very important
+[^3]: There are so many things that 'homotopy category' or '$\operatorname{Ho}(\mathcal{C})$' or '$\operatorname{h}(\mathcal{C})$' can mean, so the context is always very important
 [^4]: This diagram is horribly formatted. I am lost without `tikz-cd`.
 [^5]: But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$.
