@@ -32,17 +32,35 @@ title: Blog
         {% endfor %}
     </ul>
 
-    <div class="pagination">
+     <div class="pagination">
         {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="page-nav">« Previous</a>
+            <!-- <a href="{{ "/blog" | relative_url }}" class="page-nav">&llarr;</a> -->
+            <a href="{{ paginator.previous_page_path }}" class="page-nav">&larr;</a>
         {% else %}
-            <span class="page-nav-inactive">Previous</span>
+            <!-- <span class="page-nav-inactive">&llarr;</span> -->
+            <span class="page-nav-inactive">&larr;</span>
         {% endif %}
-        <span class="page-number">[{{ paginator.page }} of {{ paginator.total_pages }}]</span>
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="page-nav">Next »</a>
+
+        {% if paginator.page == 1 %}
+            <span class="page-nav-inactive">1</span>
         {% else %}
-            <span class="page-nav-inactive ">Next</span>
+            <a href="{{ "/blog" | relative_url }}" class="page-nav">1</a>
+        {% endif %}
+        
+        {% for num in (2..paginator.total_pages) %}
+            {% if num == paginator.page %}
+                <span class="page-nav-inactive">{{ num }}</span>
+            {% else %}
+                <a href="{{ num | prepend:'/blog/page-' | relative_url }}" class="page-nav">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="page-nav">&rarr;</a>
+            <!-- <a href="{{ paginator.total_pages | prepend:'page-' }}" class="page-nav">&rrarr;</a> -->
+        {% else %}
+            <span class="page-nav-inactive">&rarr;</span>
+            <!-- <span class="page-nav-inactive">&rrarr;</span> -->
         {% endif %}
     </div>
 

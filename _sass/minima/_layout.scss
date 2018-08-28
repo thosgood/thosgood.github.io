@@ -351,8 +351,15 @@
   padding: 0 10px;
 }
 
+.page-nav {
+  padding: 5px;
+  border: 1px solid $grey-color-dark;
+}
+
 .page-nav-inactive {
   color: $grey-color;
+  padding: 5px;
+  border: 1px solid $grey-color-light;
 }
 
 
