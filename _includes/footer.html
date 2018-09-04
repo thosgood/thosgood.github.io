@@ -15,7 +15,7 @@
             {% endif %}
             </li>
             <li>
-              {{ site.description | escape }}
+              Maths PhD student<br/>Université d&rsquo;Aix-Marseille
             </li>
             {% if site.email %}
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
@@ -35,25 +35,26 @@
         <ul class="social-media-list">
           {% if site.twitter_username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}"><img class="icon" src="/assets/twitter.png"><span class="username">Twitter</span></a>
           </li>
           {% endif %}
 
           {% if site.arxiv_username %}
           <li>
-            {% include icon-arxiv.html username=site.arxiv_username %}
+            <a href="https://arxiv.com/a/{{ site.arxiv_username }}"><img class="icon" src="/assets/arxiv.png"><span class="username">arXiv</span></a>
           </li>
           {% endif %}
 
           {% if site.orcid_id %}
           <li>
-            {% include icon-orcid.html username=site.orcid_id %}
+            <a href="https://orcid.org/{{ site.orcid_id }}"><img class="icon" src="/assets/orcid.png"><span class="username">Orcid</span></a>
+
           </li>
           {% endif %}
 
           {% if site.github_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}"><img class="icon" src="/assets/github.png"><span class="username">GitHub</span></a>
           </li>
           {% endif %}
         </ul>

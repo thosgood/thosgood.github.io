@@ -95,11 +95,12 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    // color: darken($brand-color, 15%);
   }
 
   &:hover {
-    color: $text-color;
+    // color: $text-color;
+    color: darken($brand-color, 15%);
     text-decoration: underline;
   }
 
@@ -206,6 +207,8 @@ pre {
 
 .social-media-list {
   .icon {
+    height: 16px;
+    width: 16px;
     padding-right: 5px;
   }
 
@@ -225,4 +228,19 @@ pre {
         border: 1px solid black;
         padding: 10px;
         }
+}
+
+
+
+
+/**
+ * Spans
+ */
+
+.username {
+  // font-family: monospace;
+}
+
+.emph {
+  // color: $grey-color-light;
 }
