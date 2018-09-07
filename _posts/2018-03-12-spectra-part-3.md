@@ -89,7 +89,7 @@ If this is the case, then we call a $\mathcal{B}$-space an **$A_\infty$-space**.
 **Warning.** _What follows is nothing more than a sketch of an elephant by a blind man._
 
 Again, there is an important note about names and notation.
-What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{A}$ in Vogt, and what is now called $\mathcal{A}_\infty$ is called $\mathcal{W}\mathcal{A}$ in Vogt, because he constructs it as a 'homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+What is commonly known as the **associative operad** $\mathrm{Assoc}$ is referred to as $\mathcal{A}$ in Vogt, and what is now called $\mathcal{A}\_\infty$ is called $\mathcal{W}\mathcal{A}$ in Vogt, because he constructs it as a 'homotopy universal $A_\infty$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
 In fact, there is the idea of [Boardman-Vogt resolution](https://ncatlab.org/nlab/show/Boardman-Vogt+resolution), which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of $\mathrm{Assoc}$, i.e. a cofibrant replacement:
 
 $$\mathcal{A}_\infty\to\mathrm{Assoc}.$$
