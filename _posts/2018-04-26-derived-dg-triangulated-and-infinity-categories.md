@@ -21,7 +21,7 @@ _Please do let me know if there is anything grossly misleading or just plain wro
 First of all, there are two points that I want to make about choices of language that I think are really very confusing.
 
 1. When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics[^1]: a **derived category** is like a homotopy truncation (i.e. the $\pi_0$) of some thing with much higher homotopical data; a **derived scheme/stack/whatever** is something whose $\pi_0$ is the corresponding classical object.
-    Derived 'algebraic objects' _have_ homotopy truncations; derived categories _are_ homotopy truncations.
+    Derived 'algebraic/geometric objects' _have_ homotopy truncations; derived categories _are_ homotopy truncations.
 2. When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category $K(\mathcal{A})$ the **homotopy category of chain complexes**.
     This is maybe not the best nomenclature, in some sense, because the category that 'truly' deserves this name is the _actual_ homotopy category of chain complexes $\mathrm{Ho}\mathsf{Ch}(\mathcal{A})$, which is, by definition, the derived category $D(\mathcal{A})$.
     Because of this, I won't refer to $K(\mathcal{A})$ as anything but $K(\mathcal{A})$.

@@ -76,7 +76,7 @@ $$|z_1+z_2|^2 = |z_1|^2 + |z_2|^2 + z_1^*z_2 + z_1z_2^* = p_1 + p_2 + 2\sqrt{p_1
 The other generalisation of classical things that we work with is the idea of a **qubit**.
 The classical idea of a **bit** is that we can store information by encoding things in binary and then, for example, inducing a charge between the plates of a capacitor to represent a 1, and leaving it uncharged to represent a 0.
 To make this quantum, we can look at storing our data not on capacitors but on electrons, or using polarisation of light.
-For example, we could say that an electron in its **ground state** (its lowest energy state) represents a 0, and if its in a higher energy state then it represents a 1.
+For example, we could say that an electron in its **ground state** (its lowest energy state) represents a 0, and if it's in a higher energy state then it represents a 1.
 So far so good, but what's new?
 Well, by shining light of varying frequencies and brightness for varying durations, we can change the electron's energy state, but if we shine light at, for example, half the brightness, then we will find that our electron is now in a state that can't be described classically: it's in a **coherent superposition** of states.
 These are states where the electron is in _both energy levels at once_, similar to how the particle went through both slits at once.
@@ -102,7 +102,7 @@ There is a bunch of really exciting 'quantum philosophy' that asks questions lik
 What is really astonishing is that quantum theory is in some sense more general and powerful that quantum theory.
 What do I mean by this?
 Well, as an example that I still think about in awe, even if quantum theory is completely entirely 'wrong', in that the universe works by some entirely different theory, then we can _still_ use quantum physics to produce truly random data.
-This doesn't sound very exciting or big, but if you say it in a different way you can see why people would get so worked up about it: _if all of our lab equipment is made by some private corporation that we don't trust, and we want to produce a random number, then using quantum physics we can do so with **complete certainty**, even if the equipment has been tampered with to produce certain states of particles more often than others, or to produce seemingly random states that are actually just following a predetermined order._
+This doesn't sound very exciting or big, but if you say it in a different way you can see why people would get so worked up about it: _if all of our lab equipment is made by some private corporation that we don't trust, and we want to produce a random number, then using quantum physics we can do so with **complete certainty**,[^10] even if the equipment has been tampered with to produce certain states of particles more often than others, or to produce seemingly random states that are actually just following a predetermined order._
 
 I don't want to be turning quantum physics into sensationalism now, so this comes with the obvious caveat that doing things in practice is usually really hard.
 A quote I remember hearing from Artur is that _"in theory there is no difference between theory and practice, but in practice there is"_.
@@ -222,3 +222,4 @@ We call states in the former form (tensors of states of the composite systems) *
 [^7]: This is a possible sticky wicket. A particle can be in a superposition of states, but any measurement will result in just _one_ state; we can't actually _observe_ a superposition. See the comments in a bit about measurement and collapse.
 [^8]: What even _is_ measurement? The more you think about it and try to define it, the more you realise what a tricky concept it is. It's when an observer learns information about a quantum system, but then, what is an observer? And how do we formalise the idea of 'gaining information about something'? There is a lot of 'quantum philosophy' here, and many ways of answering these questions. Personally, I like the approach that captures the 'measurement collapse' as 'lots of decoherence', and describes decoherence as 'the universe trying to learn information about the quantum system'. Hopefully I'll write about this some other time, and try to find some good references by real physicists.
 [^9]: The tensor product of matrices is given by the [Kronecker product](https://en.wikipedia.org/wiki/Kronecker_product).
+[^10]: Whatever this might mean.
