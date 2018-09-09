@@ -360,9 +360,13 @@
 .page-nav {
   padding: 5px;
   border: 1px solid $grey-color-dark;
+  
+    &:hover {
+      background-color: $grey-color-light;
+      text-decoration: none;
+    }
 }
 
-// TODO: make the hover on pagination buttons apply to the whole 'rectangle'
 .page-nav-inactive {
   color: $grey-color;
   padding: 5px;
@@ -401,6 +405,12 @@ ul.tag-list li a {
   font-family: monospace;
   padding: 2px 4px;
   background-color: $grey-color-light;
+  
+    &:hover {
+      background-color: $grey-color;
+      color: $grey-color-light;
+      text-decoration: none;
+    }
 }
 
 ul.tag-cloud {
@@ -419,6 +429,12 @@ ul.tag-cloud li a {
   font-family: monospace;
   padding: 2px 4px;
   background-color: $grey-color-light;
+  
+    &:hover {
+      background-color: $grey-color;
+      color: $grey-color-light;
+      text-decoration: none;
+    }
 }
 
 li#all-tags-tag a {
