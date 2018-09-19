@@ -358,7 +358,7 @@
 }
 
 .page-nav {
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid $grey-color-dark;
   
     &:hover {
@@ -369,7 +369,7 @@
 
 .page-nav-inactive {
   color: $grey-color;
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid $grey-color-light;
 }
 
