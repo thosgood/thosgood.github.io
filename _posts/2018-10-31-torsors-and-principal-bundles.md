@@ -6,9 +6,9 @@ tags: "algebraic-topology bundles"
 comments: true
 ---
 
-In my research,  switching between vector bundles and principal $\mathrm{GL}_r$-bundles has often made certain problems easier (or harder) to understand.
+In my research, switching between vector bundles and principal $\mathrm{GL}\_r$-bundles has often made certain problems easier (or harder) to understand.
 Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz's (absolutely fantastic) book [Principal Bundles — The Classical Case](https://www.springer.com/fr/book/9783319147642), I've really grown quite fond of bundles, especially when you start talking about all the lovely $\mathbb{B}G$ and $\mathbb{E}G$ things therein[^1][^3].
-Point is, I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $\mathrm{GL}_r$-torsors', which makes a nice short topic of discussion, whence this post.
+Point is, I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $\mathrm{GL}\_r$-torsors', which makes a nice short topic of discussion, whence this post.
 
 <!--more-->
 
@@ -38,10 +38,10 @@ What do we mean by this last 'equivalence'?
 Just that $G$-torsors retain all the structure of $G$, but don't have some specified point that acts as the identity.
 Here are some nice examples.
 
-+ $\mathrm{GL}_r$-torsors are (affine) vector spaces; $\mathrm{GL}_r$-bundles are vector bundles.
++ $\mathrm{GL}\_r$-torsors are (affine) vector spaces; $\mathrm{GL}\_r$-bundles are vector bundles.
 + $O(r)$-torsors are vector spaces with an inner product.
-+ $\mathrm{GL}_r^+$-torsors are oriented vector spaces (where $\mathrm{GL}_r^+$ is the connected component of $\mathrm{GL}_r$ consisting of matrices with determinant strictly positive).
-+ $\mathrm{SL}_r$-torsors are vector spaces with a specified isomorphism $\det V\xrightarrow{\sim} k$, where $\det V:=\wedge_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}_r$-conjugacy class of bases.
++ $\mathrm{GL}\_r^+$-torsors are oriented vector spaces (where $\mathrm{GL}\_r^+$ is the connected component of $\mathrm{GL}\_r$ consisting of matrices with determinant strictly positive).
++ $\mathrm{SL}\_r$-torsors are vector spaces with a specified isomorphism $\det V\xrightarrow{\sim} k$, where $\det V:=\wedge\_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}\_r$-conjugacy class of bases.
 
 ---
 
