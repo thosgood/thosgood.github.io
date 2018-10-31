@@ -41,7 +41,7 @@ Here are some nice examples.
 + $\mathrm{GL}_r$-torsors are (affine) vector spaces; $\mathrm{GL}_r$-bundles are vector bundles.
 + $O(r)$-torsors are vector spaces with an inner product.
 + $\mathrm{GL}_r^+$-torsors are oriented vector spaces (where $\mathrm{GL}_r^+$ is the connected component of $\mathrm{GL}_r$ consisting of matrices with determinant strictly positive).
-+ $\mathrm{SL}_r$-torsors are vector spaces with a specified isomorphism $\det V\to k$, where $\det V:=\wedge_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}_r$-conjugacy class of bases.
++ $\mathrm{SL}_r$-torsors are vector spaces with a specified isomorphism $\det V\xrightarrow{\sim} k$, where $\det V:=\wedge_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}_r$-conjugacy class of bases.
 
 ---
 
