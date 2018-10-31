@@ -32,7 +32,7 @@ Another definition is now useful.
 
 **Definition.** A _$G$-torsor_ is a space upon which $G$ acts _freely_ and _transitively_.
 
-**Motto.** _$G$-torsors_ are _principal $G$-bundles over a point_ are _affine versions of $G$_.
+**Motto.** $G$-torsors _are_ principal $G$-bundles over a point _are_ affine versions of $G$.
 
 What do we mean by this last 'equivalence'?
 Just that $G$-torsors retain all the structure of $G$, but don't have some specified point that acts as the identity.
