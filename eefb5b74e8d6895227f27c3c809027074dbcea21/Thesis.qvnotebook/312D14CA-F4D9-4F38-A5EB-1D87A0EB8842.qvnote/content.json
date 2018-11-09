@@ -1,0 +1,25 @@
+{
+  "title": "Stiefel manifolds",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### 'My' notation and conventions\n\n* $$W_{n,k}:=\\frac{\\mathrm{GL}_n(\\mathbb{C})}{\\mathrm{GL}_{n-k}(\\mathbb{C})}$$ (**N.B.** we use $\\GL$ rather than $\\mathrm{U}$) is the space of $k$-frames in $\\mathbb{C}^n$ (as opposed to the $\\mathrm{U}(n)$ definition, which gives _orthonormal_ $k$-frames).\n* $W_{n,k}$ has a trivial rank-$???$ sub-bundle\n* We usually work (for transgression) with $W_{n,k-1}$ — have to be careful to not make degree mistakes because of this!\n* We transgress $c_k$ of a rank-$r$ bundle to $\\H^{2k-1}(W_{n,n-k+1};\\mathbb{Z})$"
+    },
+    {
+      "type": "markdown",
+      "data": "### Other notations\n\n* In [BM96] _they_ write $W_{n,k}$ to mean what _we_ call $W_{n,n-k}$, i.e. $$W^\\text{BM}_{n,k}:=\\frac{\\mathrm{GL}_n(\\mathbb{C})}{\\mathrm{GL}_k(\\mathbb{C})}.$$"
+    },
+    {
+      "type": "markdown",
+      "data": "### Special cases\n\n|$W_{n,k}$|$k$|Notes|\n|-|-|-|\n|$\\mathbb{R}^{2n-1}\\setminus{(0,\\ldots,0)}$|1|this is the non-unital version of $S^{2n-1}$|\n|$\\mathrm{SL}_n(\\mathbb{C})$|$n-1$|it is a principal homogeneous space for $\\mathrm{SL}_n(\\mathbb{C})$ (diffeomorphic to $\\mathrm{SL}_n(\\mathbb{C})$)|\n|$\\mathrm{GL}_n(\\mathbb{C})$|$n$|it is a principal homogeneous space for $\\mathrm{GL}_n(\\mathbb{C})$ (diffeomorphic to $\\mathrm{GL}_n(\\mathbb{C}))$|"
+    },
+    {
+      "type": "markdown",
+      "data": "### Principal bundles and Grassmannians\n\nhttp://www.wikiwand.com/en/Stiefel_manifold#/As_a_principal_bundle"
+    },
+    {
+      "type": "markdown",
+      "data": "### Homotopy classes\n\nhttp://www.wikiwand.com/en/Stiefel_manifold#/Homotopy"
+    }
+  ]
+}

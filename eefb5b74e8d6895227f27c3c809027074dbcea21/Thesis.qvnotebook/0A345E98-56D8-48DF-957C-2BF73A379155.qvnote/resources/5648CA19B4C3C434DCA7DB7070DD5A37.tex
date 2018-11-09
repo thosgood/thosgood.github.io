@@ -1,0 +1,257 @@
+\documentclass[11pt,twoside]{article}
+
+% PREAMBLE %
+
+    %%% General packages and things %%%
+
+        \usepackage{amsmath,amssymb,amsthm}
+        % \usepackage{charter}
+        \usepackage{kpfonts,baskervald}
+        \usepackage{mathrsfs,calligra}
+        \usepackage[utf8]{inputenc}
+        \usepackage[hmarginratio=1:1,bindingoffset=13mm]{geometry}
+        \usepackage[capitalize,noabbrev]{cleveref}
+        \usepackage{enumerate}
+        \usepackage{tikz-cd}
+        \usepackage{mathdots}
+        \usepackage{thmtools}
+        \usepackage{mathtools}
+        \usepackage[perpage,symbol]{footmisc}
+
+        \allowdisplaybreaks
+
+    %%% Bibliography %%%
+
+        \usepackage[backend=biber,style=alphabetic]{biblatex}
+        \bibliography{everything}
+
+        \usepackage[toc,page]{appendix}
+
+    %%% Environments %%%
+
+        \numberwithin{equation}{subsection}
+
+        \declaretheoremstyle[
+            spacebelow=1\topsep,
+            spaceabove=1\topsep,
+            headfont=\normalfont\bfseries,
+            bodyfont=\itshape,
+            postheadspace=\newline,
+            qed=${\lrcorner}$,
+            headpunct={},
+            notebraces={[}{]}
+        ]{breakit}
+
+        \declaretheoremstyle[
+            spacebelow=1\topsep,
+            spaceabove=1\topsep,
+            headfont=\normalfont\bfseries,
+            bodyfont=\normalfont,
+            postheadspace=\newline,
+            qed=${\lrcorner}$,
+            headpunct={},
+            notebraces={[}{]}
+        ]{breakup}
+
+        \declaretheorem[numberlike=equation,style=breakit]{theorem}
+        \declaretheorem[numberlike=theorem,style=breakit]{lemma}
+        \declaretheorem[numberlike=theorem,style=breakit]{corollary}
+
+        \declaretheorem[numberlike=theorem,style=breakup]{definition}
+        \declaretheorem[numberlike=theorem,style=breakup]{example}
+        \declaretheorem[numberlike=theorem,style=breakup]{note}
+
+        \numberwithin{theorem}{subsection}
+        \numberwithin{lemma}{subsection}
+        \numberwithin{corollary}{subsection}
+
+        \numberwithin{definition}{subsection}
+        \numberwithin{example}{subsection}
+        \numberwithin{note}{subsection}
+
+        \usepackage{needspace}
+
+        \AtBeginEnvironment{theorem}{\Needspace{2.5\baselineskip}}
+        \AtBeginEnvironment{lemma}{\Needspace{2.5\baselineskip}}
+        \AtBeginEnvironment{corollary}{\Needspace{2.5\baselineskip}}
+        \AtBeginEnvironment{definition}{\Needspace{2.5\baselineskip}}
+        \AtBeginEnvironment{example}{\Needspace{2.5\baselineskip}}
+        \AtBeginEnvironment{note}{\Needspace{2.5\baselineskip}}
+
+    %%% Section titles %%%
+
+        \usepackage{titlesec}
+
+        \titlespacing*{\section}
+        {0pt}{10.5ex plus 1ex minus .2ex}{5.3ex plus .2ex}
+        \titlespacing*{\subsection}
+        {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+        \titlespacing*{\subsubsection}
+        {0pt}{5.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+        \titleformat*{\section}{\needspace{10\baselineskip}\centering\huge}
+        \titleformat*{\subsection}{\needspace{8\baselineskip}\Large}
+        \titleformat*{\subsubsection}{\needspace{6\baselineskip}\Large}
+
+
+    %%% Headers and footers %%%
+
+        \usepackage{fancyhdr}
+
+        \pagestyle{fancy}
+        \fancyhf{}
+
+        % \renewcommand{\headrulewidth}{0pt}
+        \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+        \renewcommand{\subsectionmark}[1]{\markright{#1}{}}
+
+        \fancyhead[LE,RO]{\small\ddag\thepart~§\thesubsection~p.\thepage}
+        \fancyhead[LO,RE]{\small\nouppercase{\leftmark: \rightmark}}
+
+
+    %%% Shortcuts %%%
+
+        \newcommand{\congto}{\xrightarrow{\sim}}
+        \newcommand{\id}{\mathrm{id}}
+        \newcommand{\blank}{\mathrm{-}}
+        \newcommand{\cover}{\mathscr{U}}
+        \newcommand{\E}{\mathcal{E}}
+        \newcommand{\cech}{\mathscr{\check{C}}_\cover}
+        \newcommand{\cechnou}{\mathscr{\check{C}}}
+        \newcommand{\fieq}{\overset{\int_{|\Delta|}}{=}}
+        \newcommand{\simpconn}{\nabla_{\mu}}
+        \renewcommand{\H}{H}
+        \renewcommand{\O}{\mathcal{O}}
+        \renewcommand{\d}{\mathrm{d}}
+        \renewcommand{\ss}{\varsigma}
+        \renewcommand{\Im}{\operatorname{Im}}
+
+        \DeclareMathOperator{\at}{at}
+        \DeclareMathOperator{\Ext}{Ext}
+        \DeclareMathOperator{\sheafhom}{\mathscr{H}\textup{\kern -3pt {\calligra\large om}}\,}
+        \DeclareMathOperator{\sheafend}{\mathscr{E}\textup{\kern -3pt {\calligra\large nd}}\,\,}
+        \DeclareMathOperator{\End}{End}
+        \DeclareMathOperator{\Hom}{Hom}
+        \DeclareMathOperator{\Tot}{Tot}
+        \DeclareMathOperator{\tr}{tr}
+        \DeclareMathOperator{\Ker}{Ker}
+        \DeclareMathOperator{\sgn}{sgn}
+        \DeclareMathOperator{\GL}{GL}
+
+
+    %%% Title %%%
+
+        \title{Twisting cochains and Chern classes\\in complex geometry\\\textit{\Large An approach using derived analytic geometry}}
+        \author{Timothy Hosgood\\Supervisors: Julien Grivaux and Damien Calaque}
+
+    %%% Embedding %%%
+
+        \usepackage{embedfile}
+
+        \embedfile{\jobname.tex}
+
+
+% DOCUMENT %
+
+\begin{document}
+
+    \maketitle
+    \thispagestyle{fancy}
+    
+    % subsection todo (end)
+
+    % \subsection*{Thanks} % (fold)
+    %     {\color{red}\textbf{!!!!!!!!!!!!!!!!!!!!!}}
+    % \label{sub:thanks}
+    
+    % subsection thanks (end)
+
+
+
+    \tableofcontents
+
+    \vspace{4em}
+
+    \begin{quote}
+        Having all the answers just means you've been asking boring questions.\\
+        \emph{--- Joey Comeau and Emily Horne.}
+    \end{quote}
+
+
+    \newpage
+    \part{Introduction} % (fold)
+    \label{prt:introduction}
+
+        \input{parts/introduction}
+    
+    % part introduction (end)
+
+
+
+    \newpage
+    \part{Vector bundles and Hodge cohomology} % (fold)
+    \label{prt:vector_bundles_de_rham}
+    
+        \input{parts/vector-bundles-de-rham}
+
+    % part vector_bundles_de_rham (end)
+
+
+
+    \newpage
+    \part{Chern classes} % (fold)
+    \label{prt:chern_classes}
+
+        \input{parts/chern-classes}
+    
+    % part chern_classes (end)
+
+
+
+    \newpage
+    \part{Vector bundles and Deligne cohomology} % (fold)
+    \label{prt:vector_bundles_deligne}
+    
+        \input{parts/vector-bundles-deligne}
+
+    % part vector_bundles_deligne (end)
+
+
+
+    \newpage
+    \part{Twisting cochains} % (fold)
+    \label{prt:twisting_cochains}
+    
+        \input{parts/twisting-cochains}
+
+    % part twisting_cochains (end)
+
+
+
+    \newpage
+    \part{Coherent sheaves} % (fold)
+    \label{prt:coherent_sheaves}
+
+        \input{parts/coherent-sheaves}
+    
+    % part coherent_sheaves (end)
+
+
+
+    \newpage
+    \part{Appendices and references} % (fold)
+    \label{prt:appendices_and_references}
+    
+        \begin{appendices}
+
+            \input{parts/appendices/dupont-isomorphism}
+
+        \end{appendices}
+
+        \newpage
+        \printbibliography
+        \addcontentsline{toc}{section}{References}
+
+    % part appendices_and_references (end)
+
+\end{document}

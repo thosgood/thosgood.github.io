@@ -1,0 +1,41 @@
+{
+  "title": "Algebraic transgression",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "Basically, we can use Huybrecht's proof of 4.4.6 in Complex Geometry (see below) with **compatible families of admissible** simplicial connections (see [Simplicial connections and other conventions](quiver-note-url/C3C5014A-E7C2-4469-8B4C-9FDC60035242)), but the line bundle case works nicely by hand, as follows."
+    },
+    {
+      "type": "markdown",
+      "data": "**Motto.** _We transgress $c_k$ of a rank-$r$ bundle to $\\H^{2k-1}(W_{n,n-k+1};\\mathbb{Z})$; see [Stiefel manifolds](quiver-note-url/312D14CA-F4D9-4F38-A5EB-1D87A0EB8842)._"
+    },
+    {
+      "type": "markdown",
+      "data": "### Line bundles"
+    },
+    {
+      "type": "markdown",
+      "data": "#### Transition maps POV\n\nPull back our line bundle $E$ to the space of $1$-frames in $\\mathbb{C}$, which is just $\\mathrm{GL}_1(\\mathbb{C})$. The local sections $s_\\alpha\\colon x\\mapsto(x,\\sigma_\\alpha(x))$ of $E$ pull back to\n\\begin{align*}\n    \\pi_* s_\\alpha\\colon U_\\alpha\\times\\mathrm{GL}_1&\\to(U_\\alpha\\times\\mathrm{GL}_1)\\times\\mathbb{C}^\\times\\\\\n    (x,m)&\\mapsto((x,m),\\sigma_\\alpha(x))\n\\end{align*}\n(**N.B.** $\\pi$ here is the map from the associated bundle of $1$-frames to $X$ — should really change the notation to $p$ or something less misleading...)\nbut we also have the global section\n\\begin{align*}\n    s\\colon U_\\alpha\\times\\mathrm{GL}_1&\\to(U_\\alpha\\times\\mathrm{GL}_1)\\times\\mathbb{C}^\\times\\\\\n    (x,m)&\\mapsto((x,m),m).\n\\end{align*}\n\nSince $s_\\beta=g_{\\alpha\\beta}s_\\alpha$ we see that $$\\pi^*g_{\\alpha\\beta} = \\frac{\\pi^*s_\\beta}{\\pi^*s_\\alpha} = \\frac{(\\pi^*s_\\beta)/s}{(\\pi^*s_\\alpha)/s}$$ where we note that $\\pi^*s_\\alpha$ is just a section, but $(\\pi^*s_\\alpha)/s$ is a true function.\n\nThen $\\mathrm{at}_E = g_{\\alpha\\beta}^{-1}\\mathrm{d}g_{\\alpha\\beta}\\in\\check{\\mathcal{C}}^1(\\Omega^1)$ is such that $\\pi^*\\mathrm{at}_E = \\check{\\delta}\\mathrm{dlog}(\\pi^*s_\\alpha/s)$. This is our transgression.\n\nFurther, we can recover the generator of homology on the fibre as follows. The function $\\pi^*s_\\alpha/s$ acts as $(x,m)\\mapsto((x,m),1/m)$ (since we can assume that $\\sigma_\\alpha(x)=1$ for **some** $\\alpha$) and so \n\\begin{align*}\n    \\mathrm{dlog}(\\pi^*s_\\alpha/s) &= \\mathrm{dlog}(1/z)\\\\\n    &= \\frac{\\mathrm{d}(1/z)}{(1/z)}\\\\\n    &= -\\frac{\\mathrm{d}z}{z}\\\\\n    &= \\pm\\frac{\\mathrm{d}(re^{i\\theta})}{re^{i\\theta}}\\\\\n    &= \\frac{1}{r}\\mathrm{d}r+i\\mathrm{d}\\theta.\n\\end{align*}\n"
+    },
+    {
+      "type": "markdown",
+      "data": "#### Connections POV\n\nSince $\\pi^*E$ is trivial we have a global connection $\\nabla$. Then $$\\pi^*(\\nabla_\\beta-\\nabla_\\alpha) = (\\pi^*\\nabla_\\beta-\\nabla)-(\\pi^*\\nabla_\\alpha-\\nabla) =: \\vartheta_\\beta-\\vartheta_\\alpha = \\check{\\delta}\\vartheta_\\alpha$$ for some Čech-1-cochain $\\vartheta_\\alpha$ of a 1-form, since the difference of two connections is a 1-form.\n\nNow, the $s_\\alpha$ are taken to be $\\nabla_\\alpha$-flat, and $s$ is (trivially) $\\nabla$-flat, whence, assuming (wlog) that $\\sigma_\\alpha(x)=1$, $$s_\\alpha\\colon(x,m)\\mapsto\\big((x,m),1\\big)=\\big((x,m),z\\cdot 1/z\\big) = \\frac{1}{z}s.$$\nThen, by Leibnitz and flatness,\n\\begin{align*}\n    \\vartheta_\\alpha s_\\alpha &= -\\nabla s_\\alpha\\\\\n    &= -\\nabla\\left(\\frac{1}{z}s\\right)\\\\\n    &= -\\frac{1}{z}\\nabla(s) - s\\otimes\\mathrm{d}(1/z)\\\\\n    &= s\\mathrm{d}(1/z)\\\\\n    &= \\frac{-z\\mathrm{d}z}{z^2}\\\\\n    &= -\\frac{\\mathrm{d}z}{z}.\n\\end{align*}"
+    },
+    {
+      "type": "markdown",
+      "data": "### Higher transgression by hand\n\nTODO explain why by hand it doesn't quite work"
+    },
+    {
+      "type": "markdown",
+      "data": "### Transgression à la Huybrecht/Chern"
+    },
+    {
+      "type": "markdown",
+      "data": "#### Simplicial proof\n\nWe can adapt the proof in Huybrecht's if we can show the following five statements are true.\n\n1. _The difference of two simplicial connections is an admissible endomorphism-valued simplicial 1-form._\n2. _$K(\\nabla_\\bullet+A_\\bullet) = K(\\nabla_\\bullet)+A_\\bullet\\wedge A_\\bullet+\\nabla_\\bullet(A_\\bullet)$._\n3. $\\tilde{P}(K(\\nabla_\\bullet+A_\\bullet)) = \\tilde{P}(K(\\nabla_\\bullet))+ktP(K(\\nabla_\\bullet),\\ldots,K(\\nabla_\\bullet),\\nabla_\\bullet(A_\\bullet))+\\mathcal{O}(t^2)$\n4. $\\nabla_\\bullet(K(\\nabla_\\bullet))$ _(the Bianchi identity)._\n5. $\\mathrm{d}P(\\gamma_\\bullet^1,\\ldots,\\gamma_\\bullet^k)=\\sum_{j=1}^k(-1)^{\\text{sign}}P(\\gamma_\\bullet^1,\\ldots,\\nabla_\\bullet(\\gamma_\\bullet^j),\\ldots,\\gamma_\\bullet^k)$.\n\nLet's prove them.\n\n1. This is true if we have a **compatible family of admissible simplicial connections**.\n2. This works level-by-level, and that our simplicial connection is admissible ensures that all the forms are admissible endomorphism-valued simplicial forms.\n3. As above.\n4. As above.\n5. As above, as well as the fact that $\\tilde{P}$ acts on the form parts by wedging, and the wedge of two simplicial forms is again simplicial."
+    },
+    {
+      "type": "text",
+      "data": "<h4>Original proof (non-simplicial case)</h4>\n<p><img src=\"quiver-image-url/17C26E35F9659BDFD5601F18668CE856.png\" alt=\"Screen Shot 2018-07-15 at 23.49.13.png\"></p>\n<p><img src=\"quiver-image-url/EE299CD7E3C2BA0F88E803D903A71BD5.png\" alt=\"Screen Shot 2018-07-15 at 23.48.14.png\"></p>\n<p><img src=\"quiver-image-url/4C0930E1A7435E3E1055F98EE08779BC.png\" alt=\"Screen Shot 2018-07-15 at 23.47.55.png\"></p><p><img src=\"quiver-image-url/390F110C51B5C07F6178BF1E3D33E931.png\" alt=\"Screen Shot 2018-08-28 at 18.49.13.png\" width=\"698\" height=\"530\"><br></p>\n<p><img src=\"quiver-image-url/D2842167F74D1B20B19308D507727477.png\" alt=\"Screen Shot 2018-07-15 at 23.47.48.png\"></p>\n"
+    }
+  ]
+}

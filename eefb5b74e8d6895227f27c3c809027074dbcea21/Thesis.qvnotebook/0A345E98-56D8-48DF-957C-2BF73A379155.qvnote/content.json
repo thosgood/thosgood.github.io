@@ -1,0 +1,17 @@
+{
+  "title": "everything.pdf",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "# errata\n\n* The $\\overline{\\omega}_p$ do _not_ give a simplicial form, because they are all endomorphism valued, over different bundles! need to ask for some kind of commutativity — see [Simplicial connections and other conventions](quiver-note-url/C3C5014A-E7C2-4469-8B4C-9FDC60035242)."
+    },
+    {
+      "type": "markdown",
+      "data": "[everything.pdf](quiver-file-url/B3512119F4041E1E9893CDEA01122C00.pdf)"
+    },
+    {
+      "type": "markdown",
+      "data": "### Structure\n\n* parts/\n    * appendices/\n        * [dupont-isomorphism.tex](quiver-file-url/E3518DCC48543689E6792BCC2DA639EA.tex)\n    * [chern-classes.tex](quiver-file-url/B4038F4D6E7E6760AB790997AE667476.tex)\n    * [coherent-sheaves.tex](quiver-file-url/7C59C3E11117C0CEBFD06BA7F1AEF234.tex)\n    * [introduction.tex](quiver-file-url/E6F97004D7A9941DF6CF3A21517D8DF1.tex)\n    * [twisting-cochains.tex](quiver-file-url/B95A492235049BA55166DB956E3B1975.tex)\n    * [vector-bundles-de-rham.tex](quiver-file-url/EE3C7E3AF8CEAC07C3D4787D9EA120DB.tex)\n    * [vector-bundles-deligne.tex](quiver-file-url/6D28B366C0E528FEDA5CDBC019C410D9.tex)\n* [everything.tex](quiver-file-url/5648CA19B4C3C434DCA7DB7070DD5A37.tex)\n* [everything.bib](quiver-file-url/65249EF2830626026ECD2777727D29B3.bib)"
+    }
+  ]
+}

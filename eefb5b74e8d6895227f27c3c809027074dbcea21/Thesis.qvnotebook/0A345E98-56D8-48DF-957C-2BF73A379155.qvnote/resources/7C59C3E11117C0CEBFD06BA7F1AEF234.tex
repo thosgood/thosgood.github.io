@@ -1,0 +1,151 @@
+%!TEX root = ../everything.tex
+
+\section{Green's resolution} % (fold)
+\label{sec:green_s_resolution}
+
+    \subsection{Definitions} % (fold)
+    \label{sub:definitions}
+
+        \begin{note}
+            We use almost the same definitions and notations as in \cref{sec:holomorphic-twisting-cochains}, but with a few important differences.
+            To avoid confusion, we redefine everything.
+        \end{note}
+        
+        Let $X$ be a paracompact complex-analytic $N$-manifold with sheaf of holomorphic functions $\mathcal{O}_X$, and let $\cover=\{U_\alpha\}$ be a sufficiently-nice\footnote{Locally finite and Stein.} open cover.
+        Suppose that over each $U_\alpha$ we have a finite-length complex $(\E_\alpha^\bullet,\d_\alpha)$ of locally-free $\mathcal{O}_{U_\alpha}$-modules.
+        Define 
+        \[
+            \End^q(\E)|_{U_{\alpha_0\ldots\alpha_p}} = \Big\{\big(f^i\colon \E_{\alpha_p}^i|_{U_{\alpha_0\ldots\alpha_p}}\to \E_{\alpha_0}^{i+q}|_{U_{\alpha_0\ldots\alpha_p}}\big)_{i\in\mathbb{Z}} \,\Big|\, \d_{\alpha_p}\circ\,f^i = f^{i+1}\circ\,\d_{\alpha_0}\Big\}.
+        \]
+
+        There are two important differences here when compared to \cref{ssub:vector-bundles-and-graded-vector-spaces}:
+        \begin{enumerate}[(i)]
+            \item the maps go from $\E_{\alpha_p}$ to $\E_{\alpha_0}$;
+            \item the maps are degree-$q$ \textit{chain maps}, i.e. they are `true' maps of complexes and respect the differentials.
+        \end{enumerate}
+        However, when using a twisting cochain to construct a total differential (as at the end of \cref{ssub:vector-bundles-and-graded-vector-spaces}), we get the same result whether we use this definition or that in \cref{ssub:vector-bundles-and-graded-vector-spaces}.
+        
+        Next we set
+        \[
+            \cech^p\big(\End^q(\E)\big) = \smashoperator{\prod_{\substack{(\alpha_0\ldots\alpha_p)\text{ s.t.}\\U_{\alpha_0\ldots\alpha_p}\neq\varnothing}}}\End^q(\E)|_{U_{\alpha_0\ldots\alpha_p}}
+        \]
+        and define our deleted \v{C}ech differential \textit{almost} exactly as before:\footnote{This is really a natural modification to make, since we need to end up with a map from $\E_{\alpha_p}$ to $\E_{\alpha_0}$.}
+        \begin{align*}
+            \hat{\delta}\colon\cech^p\big(\End^q(\E)\big) &\to \cech^{p+1}\big(\End^q(\E)\big)\\
+            (\hat{\delta}c)_{\alpha_0\ldots\alpha_{p+1}} &= \sum_{i=1}^p(-1)^ic_{\alpha_0\ldots\hat{\alpha_i}\ldots\alpha_{p+1}}|_{U_{\alpha_0\ldots\alpha_{p+1}}},
+        \end{align*}
+        so the sum only goes from $i=1$ to $p$, missing out both $i=0$ \textit{and} $i=p+1$.
+        We can further make this bicomplex into an $\mathcal{O}_X$-module by defining the obvious multiplication:
+        \[
+            (c^{p,q}\cdot d^{r,s})_{\alpha_0\ldots\alpha_{p+r}} = (-1)^{qr}c^{p,q}_{\alpha_0\ldots\alpha_{p}}d^{r,s}_{\alpha_p\ldots\alpha_{p+r}}.
+        \]
+
+        \begin{definition}[Holomorphic twisting cochain]
+            A \textit{holomorphic twisting cochain} is an element $\mathfrak{a}=\sum_{k\geqslant0}\mathfrak{a}^{k,1-k}\in\Tot^1\cech^\bullet\big(\End^\bullet(\E)\big)$ such that
+            \begin{enumerate}[(i)]
+                \item $\mathfrak{a}^{0,1}_\alpha=\d_\alpha$;
+                \item $\hat{\delta}\mathfrak{a}+\mathfrak{a}\cdot\mathfrak{a}=0$. \qedhere
+            \end{enumerate}
+        \end{definition}
+
+        \begin{note}
+            With Green's definition there is no requirement for $\mathfrak{a}^{1,0}$ to be the identity as of yet, but he imposes so in his definition of a holomorphic twisted resolution.
+        \end{note}
+
+        \begin{definition}[Holomorphic twisted resolution]
+            Let $\mathcal{F}$ be a sheaf of $\mathcal{O}_X$-modules on $X$.
+            Then a \textit{holomorphic twisted resolution of $\mathcal{F}$} is a triple $(\cover,\E^\bullet,\mathfrak{a})$ such that the following conditions are satisfied:
+            \begin{enumerate}[(i)]
+                \item $\cover=\{U_\alpha\}$ is a locally-finite open Stein cover of $X$;
+                \item $\E^\bullet=(\E^\bullet_\alpha,\d_\alpha)$ is a collection\footnote{There is a lot to gain from noting that $E^\bullet$ is more than just a collection: using the nerve of the cover we can realise it as a simplicial object of some sort.} of local locally-free resolutions of $\mathcal{F}$ over each $U_\alpha$ of globally-bounded length;\footnote{That is, each $\E^\bullet_\alpha$ is a resolution of $\mathcal{F}|_{U_\alpha}$ by locally-free $\mathcal{O}_{U_\alpha}$-modules. Further, there exists some $B\in\mathbb{N}$ such that every $\E^\bullet_\alpha$ is of length no more than $B$.}
+                \item $\mathfrak{a}$ is a holomorphic twisting cochain \textit{over $\mathcal{F}$}, i.e. we have the following commutative diagram:
+                    \begin{equation*}
+                        \begin{tikzcd}[column sep=small]
+                            \E^\bullet
+                                \ar{rr}{\mathfrak{a}^{1,0}}
+                                \ar{dr}
+                            &
+                            &\E^\bullet
+                                \ar{dl}\\
+                            &\mathcal{F}&
+                        \end{tikzcd}
+                    \end{equation*}
+                \item on degenerate simplices of the form $\alpha=(\alpha_0\ldots\alpha_p)$ with $\alpha_i=\alpha_{i+1}$ for some $i$, we have that $\mathfrak{a}^{1,0}_\alpha=\id$ and $\alpha^{k,1-k}=0$ for $k>1$.\qedhere
+            \end{enumerate}
+        \end{definition}
+        This last condition is the identity condition that we've seen before (ensuring that we take values in some $\GL(n)$), since requiring $\mathfrak{a}^{k,1-k}$ to be zero for $k>1$ just means that we want $\mathfrak{a}^{1,0}$ to be the identity `on the nose'.
+
+        \begin{note}
+             \Cite[Lemma~8.13]{Toledo:1976gy} and \cite[Lemma~2.4]{Toledo:1978tq} both show existence of a holomorphic twisting resolution when $\mathcal{F}$ is coherent (the latter shows a stronger result using the Hilbert syzygy theorem: we can ensure that our global-length bound $B$ is no more than the dimension of $X$).
+        \end{note}
+
+        \begin{definition}[Elementary sequence]
+            Given a ring $R$, we say that a sequence $0\to M_r\to\ldots\to M_0\to0$ is \emph{elementary} if it a sum of terms of the form $0\to M\xrightarrow{\id}M\to 0$ for some $R$-modules $M$.
+        \end{definition}
+
+        \begin{theorem}[Green's simplicial resolution]
+            Let $\mathcal{S}$ be a coherent sheaf of $\O_X$-modules on $X$.
+            Let $(\cover,\E^\bullet,\mathfrak{a})$ be a holomorphic twisted resolution of $\mathcal{S}$.
+            Denote by $\mathcal{S}_\bullet$ the pullback of $\mathcal{S}$ to $X^\bullet_\cover$.
+            Then there exists a resolution of $\mathcal{S}_\bullet$ by simplicial sheaves of $\O_{X^\bullet_\cover}$-modules:
+            \begin{equation*}
+                0 \to \mathcal{F}_\bullet^n \to \ldots \to \mathcal{F}_\bullet^0 \to \mathcal{S}_\bullet
+            \end{equation*}
+            where $n=\dim X$.
+            Further, the $\mathcal{F}_\bullet^i$ all satisfy the following properties:
+            \begin{enumerate}[(i)]
+                \item $\mathcal{F}_\bullet^i$ is locally free on each $X_\cover^p$;
+                \item $F_0^\bullet|_{U_\alpha} \cong \E^\bullet_\alpha$.
+            \end{enumerate}
+            Finally, for all simplices\footnote{So $\alpha=(\alpha_0,\ldots,\alpha_p)$, and we write $\beta\leqslant\alpha$ to mean that $\beta$ is a subsimplex of $\alpha$.} $\gamma\leqslant\beta\leqslant\alpha$, we have the following properties:
+            \begin{enumerate}[(i)]
+                \item $\mathcal{F}_\alpha^\bullet \cong \mathcal{F}^\bullet_\beta\oplus E_\alpha^\beta$ for some elementary sequence $E_\alpha^\beta$ in $\E^\bullet_{\alpha_0},\ldots,\E^\bullet_{\alpha_p}$;
+                \item $E_\alpha^\gamma \cong E_\beta^\gamma\oplus E_\alpha^\beta$;
+                \item over each $U_\alpha$ there is the commutative diagram
+                    \begin{equation*}
+                        \begin{tikzcd}
+                            0 \rar
+                            &\mathcal{F_\beta^\bullet} \rar
+                            &\mathcal{F_\alpha^\bullet} \rar
+                            &E_\alpha^\beta \rar
+                            &0\\
+                            0 \rar
+                            &\mathcal{F_\gamma^\bullet}\oplus E_\beta^\gamma \rar \uar{\wr}
+                            &\mathcal{F_\gamma^\bullet}\oplus E_\alpha^\gamma \rar \uar{\wr}
+                            &E_\alpha^\beta \rar \uar{\id}
+                            &0
+                        \end{tikzcd}
+                    \end{equation*}
+                    (omitting the restriction notation), where the bottom map is induced by the natural inclusion $E_\beta^\gamma\to E_\alpha^\gamma$ coming from $E_\alpha^\gamma \cong E_\beta^\gamma\oplus E_\alpha^\beta$.\qedhere
+            \end{enumerate}
+        \end{theorem}
+
+        \begin{proof}
+            The explicit construction is given in \cite[§1]{Green:1980wpa}.
+        \end{proof}
+
+        \begin{example}[Green's example]
+            Let $X=\mathbb{P}^1_\mathbb{C}$ be the Riemann sphere $\mathbb{C}\cup\{\infty\}$ with the (Stein) cover $U_\alpha=X\setminus\{\infty\}$ and $U_\beta=X\setminus\{0\}$, and let $\mathcal{J}=\mathbb{I}(\{0\})$ be the sheaf of ideals corresponding to the subvariety $\{0\}\subset X$.
+            Then $\mathcal{S}=\O_X/\mathcal{J}$ is a coherent sheaf.
+
+            The stalks of $\mathcal{S}$ are simple to understand: $\mathcal{S}_x=0$ for $x\neq0$, and $\mathcal{S}_0=\mathbb{C}$.
+            Thus, over $U_\alpha$ we have the resolution
+            \begin{equation*}
+                \xi_\alpha^\bullet\colon 0\to\O_X\vert_{U_\alpha}\xrightarrow{f\mapsto z\cdot f}\O_X\vert_{U_\alpha}\to S\vert_{U_\alpha}\to0,
+            \end{equation*}
+            and over $U_\beta$ we have the resolution
+            \begin{equation*}
+                \xi_\beta^\bullet\colon 0\to0\to0\to S\vert_{U_\beta}\to0.\qedhere
+            \end{equation*}
+        \end{example}
+
+    % subsection definitions (end)
+
+    \subsection{Gluing connections} % (fold)
+    \label{sub:gluing_connections}
+
+    {\color{red}\textbf{TODO}}
+    
+    % subsection gluing_connections (end)
+
+% section green_s_resolution (end)

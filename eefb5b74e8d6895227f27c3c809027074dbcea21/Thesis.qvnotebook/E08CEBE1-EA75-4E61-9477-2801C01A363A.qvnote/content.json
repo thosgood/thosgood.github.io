@@ -1,0 +1,13 @@
+{
+  "title": "Miscellaneous conventions",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "(other conventions: [Simplicial conventions](quiver-note-url/C3C5014A-E7C2-4469-8B4C-9FDC60035242), [Stiefel manifolds](quiver-note-url/312D14CA-F4D9-4F38-A5EB-1D87A0EB8842), [Chern and Atiyah things](quiver-note-url/2F9529E0-462E-4649-959A-0C69AF00E69C))"
+    },
+    {
+      "type": "markdown",
+      "data": "* Vector bundles have...\n    - a **left** action (when viewed as a principal $\\GL$-bundle);\n    - $\\psi_\\alpha\\colon\\pi^{-1}(U_\\alpha)\\xrightarrow{\\sim}U_\\alpha\\times\\mathbb{C}^r$;\n    - $g_{\\alpha\\beta}=\\psi_\\alpha\\circ\\psi_\\beta^{-1}\\colon U_\\beta\\times\\mathbb{C}^r\\to U_\\alpha\\times\\mathbb{C}^r$;\n    - $g_{\\alpha\\beta}s_\\beta=s_\\alpha$ for sections $s_\\alpha(x)\\leftrightarrow(x,\\sigma_\\alpha(x))$.\n* $\\mathrm{d}\\log M:=M^{-1}\\mathrm{d}M$ for a matrix $M$.\n    - generally, $M/N:=N^{-1}M$ (although we try to avoid this notation...) (but used to 'make sense of' e.g. Čech cohomology)"
+    }
+  ]
+}
