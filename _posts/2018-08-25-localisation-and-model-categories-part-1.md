@@ -3,7 +3,7 @@ title: Localisation and model categories
 part: Part 1
 layout: post
 category: "maths"
-tags: "category-theory"
+tags: "category-theory homotopy-theory"
 comments: true
 ---
 
@@ -62,7 +62,7 @@ Of course, just constructing a category is not usually enough these days, and we
 Enter _Dwyer-Kan_ (or _simplicial_) localisation.
 
 This is a way of constructing an $(\infty,1)$-category $L_\mathcal{W}\mathcal{C}$, realised as a _simplicial category_.
-We talk more about simplicial categories later on, but first we quote Julia E. Bergner from "A model category structure on the category of simplicial categories":
+We talk more about simplicial categories later on, but first we quote Julia E. Bergner from ["A model category structure on the category of simplicial categories"](https://arxiv.org/abs/math/0406507):
 
 _Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets._
 _If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}\_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$._
