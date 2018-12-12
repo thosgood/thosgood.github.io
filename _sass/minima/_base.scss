@@ -133,6 +133,19 @@ blockquote {
 
 
 /**
+ * Footnotes
+ */
+
+a.footnote:before {   
+ content: "[";
+}
+
+a.footnote:after {
+    content: "]";
+}
+
+
+/**
  * Code formatting
  */
 pre,

@@ -4,9 +4,10 @@ layout: post
 category: "maths"
 tags: "algebraic-topology bundles"
 comments: true
+excerpt: "I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that \'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation\', which makes a nice short topic of discussion, whence this post."
 ---
 
-In my research, switching between vector bundles and principal $\mathrm{GL}\_r$-bundles has often made certain problems easier (or harder) to understand.
+In my thesis, switching between vector bundles and principal $\mathrm{GL}\_r$-bundles has often made certain problems easier (or harder) to understand.
 Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz's (absolutely fantastic) book [Principal Bundles — The Classical Case](https://www.springer.com/fr/book/9783319147642), I've really grown quite fond of bundles, especially when you start talking about all the lovely $\mathbb{B}G$ and $\mathbb{E}G$ things therein[^1][^3].
 Point is, I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that _'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation'_,[^4] which makes a nice short topic of discussion, whence this post.
 
