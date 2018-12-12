@@ -1,0 +1,21 @@
+{
+  "title": "Simplicial vector bundles and twisting cochains",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "TODO talk about constructing Green's resolution from twisting cochains"
+    },
+    {
+      "type": "markdown",
+      "data": "TODO make sure that the notation is good! don't use $\\mathcal{F}_\\alpha^\\bullet$ as a shorthand for $\\mathcal{F}_p^\\bullet|_{U_{\\alpha_0\\ldots\\alpha_p}}$"
+    },
+    {
+      "type": "markdown",
+      "data": "* a twisting cochain is some extra data that a complex of vector bundles over each open set **can possibly** have\n* coherent sheaf -> complexes of vector bundles over each open set (local resolutions)\n    * further,(O)TT show that we actually get a twisting cochain 'for free' in this case\n* **any** twisting cochain gives us a complex of coherent sheaves by taking homology\n    * **if** this complex (**after** taking homology) is exact, except at the final degree, then we have a resolution of the final term (a coherent sheaf) by coherent sheaves\n* **not necessarily** the case that the homology of twisting cochain coming from a coherent sheaf will give us a resolution of that sheaf — see Proposition (2.4) in TT78\n* Green shows that the twisting cochain coming from a local resolution of a coherent sheaf can be 'refined' to give us **simplicial vector bundles**\n    * before this, we could only think of such twisting cochains as resolutions by 'homotopic vector bundles', i.e. the gluing was up to higher homotopy gluing, and we could only get rid of this by passing to homology\n    * so what Green does is a strictification: we turn our 'things defined up to higher homotopy gluing' intos 'global things', but note that 'global' is a bit of a cheat word, since they are still **simplicial**\n    * simplicial is like a strict version of 'up to higher homotopy'?\n        * think about what Eduard said ([Descent and Grothendieck fibrations](quiver-note-url/839EC547-FC66-48D7-B82B-7C0343BDF025))\n    * Green **additionally** constructs given elementary sequences to obtain isomorphisms on overlaps, i.e. the data of a twisting cochain is enough to construct a 'strict' resolution **plus** predetermined splittings"
+    },
+    {
+      "type": "markdown",
+      "data": "### Geometric/algebraic interpretation\nTODO tie this in to [Admissibilty and simplicial connections](quiver-note-url/B8FD4D1C-2C33-4B31-A00D-7378FDF29BB7) by using that flat things <-> elementary sequences (since the cone of these is homotopic to zero) and so adding them doesn't change the invariant polynomials etc\n\n* An elementary sequence (of $R$-modules), as defined in Green, is a direct sums of complexes of the form $0\\to R\\xrightarrow{\\id}R\\to0$. We could extend this definition slightly by defining them as mapping cones of identities: $\\mathrm{cone}(X^\\bullet\\xrightarrow{\\id}X^\\bullet)$ for complexes $X^\\bullet$; or we could generalise this even further and allow mapping cones of arbitrary automorphisms. The main point is that these things are all zero in $K(\\mathrm{Mod}_R)$, since the distinguished triangle $X^\\bullet\\to X^\\bullet\\to\\mathrm{cone}\\to X^\\bullet[1]$ ....... TODO"
+    }
+  ]
+}

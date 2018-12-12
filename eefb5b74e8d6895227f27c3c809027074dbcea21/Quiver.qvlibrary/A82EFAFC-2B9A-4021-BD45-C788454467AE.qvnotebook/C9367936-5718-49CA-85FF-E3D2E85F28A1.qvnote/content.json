@@ -1,0 +1,13 @@
+{
+  "title": "Bloch’s conjecture on torsion in Deligne cohomology",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "### Statement\n\nN.B. this is unique to Deligne cohomology! (i.e. not in de Rham)\n\n![Screen Shot 2018-10-28 at 18.46.01.png](quiver-image-url/4D8EFC1BCE8BE8E7F90DC83192518A53.png)\n\n![Screen Shot 2018-10-28 at 18.46.06.png](quiver-image-url/AE1E6F5C9FB5CF9600EA8E51B777006E.png)\n\n![Screen Shot 2018-10-28 at 18.46.11.png](quiver-image-url/500C797B9E07BC920BADA4BB99139692.png)\n\n![Screen Shot 2018-10-28 at 18.46.20.png](quiver-image-url/361ECFA4764143ED6507164A51388C1F.png)"
+    },
+    {
+      "type": "markdown",
+      "data": "### An example of a torsion class\n\n![Screen Shot 2018-10-27 at 01.47.10.png](quiver-image-url/B7ACF03CA6B11E80D4F94E3F41CE1CBF.png =295x491)\n![Screen Shot 2018-10-27 at 01.47.13.png](quiver-image-url/7676F7BF75C160F3A18C5489C4A1BED1.png =465x355)"
+    }
+  ]
+}

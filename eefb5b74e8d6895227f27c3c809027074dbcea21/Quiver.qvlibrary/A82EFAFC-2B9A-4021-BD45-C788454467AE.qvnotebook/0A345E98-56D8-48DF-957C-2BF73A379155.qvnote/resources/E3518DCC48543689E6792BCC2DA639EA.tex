@@ -1,0 +1,147 @@
+%!TEX root = ../../everything.tex
+
+\section{The Dupont isomorphism (fibre integration)} % (fold)
+\label{sec:the_dupont_isomorphism}
+
+    \subsection*{Sign conventions} % (fold)
+    \label{sub:sign_conventions}
+
+        \begin{itemize}
+            \item We adopt the Koszul sign convention for the tensor product of two complexes:
+                \begin{align*}
+                    a\otimes b &= (-1)^{|a||b|}b\otimes a\\
+                    (a\otimes b)\wedge(x\otimes y) &= (-1)^{|b||x|}(a\wedge x)\otimes(b\wedge y).\qedhere
+                \end{align*}
+            \item Write $\d_Y$, $\d_{|\Delta_p|}$, and $\d_{|\Delta_p|\times Y^p}$ to mean the de Rham differential on $Y$, $|\Delta_p|$, and $|\Delta_p|\times Y^p$, respectively.
+                Then the simplicial de Rham complex is isomorphic to the total complex of the de~Rham bicomplex of simplicial forms grouped by type:
+                \[
+                    \Big(\widetilde{\Omega}^\bullet_{Y^\circ},\d_{|\Delta_\circ|\times Y^\circ}\Big) \cong \Big(\Tot^\bullet\Omega^{i,j}_{|\Delta_\circ|\times Y^\circ},\, \d_{|\Delta_\circ|}+(-1)^i\d_Y\Big).
+                \]
+                It's useful to note, however, that this total differential is simply `the product rule': writing a type $(i,j)$ form as $\tau\otimes\omega$ means that $\d(\tau\otimes\omega)=\d\tau\otimes\omega + (-1)^i\tau\otimes\d\omega$.
+        \end{itemize}
+
+        There is a subtlety in the above: $\d_{|\Delta_\circ|}+(-1)^i\d_Y$ is a differential on $\pi_1^{-1}\Omega_{|\Delta_\circ|}^\bullet\otimes_R \pi_2^{-1}\Omega_{Y^\circ}^\bullet$ where $\pi_1 = \pi_{|\Delta_\circ|}^{-1}$ and $\pi_2 = \pi_{Y^\circ}$ are the projection maps from the product, and
+        \[
+            R=\pi_1^{-1}\O_{|\Delta_\circ|}\otimes\pi_2^{-1}\O_{Y^\circ}.
+        \]
+        This differential extends to a differential on
+        \[
+            \big(\pi_1^{-1}\Omega_{|\Delta_\circ|}^\bullet\otimes_R \pi_2^{-1}\Omega_{Y^\circ}^\bullet\big)\otimes_R \O_{|\Delta_\circ|\times Y^\circ}
+        \]
+        which is exactly $\d_{|\Delta_\circ|\times Y^\circ}$.
+
+    % subsection sign_conventions (end)
+
+    \subsection*{Integrals of differential forms} % (fold)
+    \label{sub:integrals_of_differential_forms}
+
+        \begin{itemize}
+            \item Since the integral of a $k$-form over an $\ell$-manifold is only non-zero when $k=\ell$ we see that the fibre integral of some simplicial differential $r$-form $\omega=\{\omega_p^{i,j}\}_{p\in\mathbb{N},i+j=r}$ is determined entirely by the type $(p,r-p)$ parts on the $p$-simplices.
+                That is,
+                \begin{equation}\label{equation:fibre-integration-decomposition-1}
+                    \int_{|\Delta|}\omega = \int_{|\Delta_0|}\omega^{0,r}_0+\int_{|\Delta_1|}\omega^{1,r-1}_1+\ldots+\int_{|\Delta_r|}\omega^{r,0}_r.
+                \end{equation}
+            \item Given two simplicial forms $\omega$ and $\sigma$, we write $\omega\fieq\sigma$ to mean that $\int_{|\Delta|}\omega=\int_{|\Delta|}\sigma$.
+                We can therefore rewrite \cref{equation:fibre-integration-decomposition-1} as
+                \begin{equation}
+                    \omega \fieq \sum_{p=0}^r\omega^{p,r-p}_p.
+                \end{equation}
+        \end{itemize}
+
+        An important point is that we integrate terms of the form $\tau\otimes\omega$ and \emph{not} $\omega\otimes\tau$.
+        This makes a non-trivial difference, because
+        \[
+            \int_{|\Delta_p|}\tau\otimes\omega = (-1)^{|\tau||\omega|}\int_{|\Delta_p|}\omega\otimes\tau
+        \]
+        and so \cref{equation:fibre-integration-decomposition-1} (with $r=2k$ for some $k\in\mathbb{N}$) would have alternating signs if we swapped the order in the tensor product before integrating.
+        However, it is only $\int_{|\Delta_p|}\tau\otimes\omega$ that gives a morphism of complexes with our choice of differentials.
+
+    % subsection integrals_of_differential_forms (end)
+    
+    \subsection*{Orientation} % (fold)
+    \label{sub:orientation}
+
+        \begin{itemize}
+            \item The coordinates of the $p$-simplex can be written as $\{t_1,\ldots,t_p\}$ and $t_0=1-\sum_{i=1}^pt_i$, with all $t_i$ positively oriented.
+            Recall that we pick the orientation to be such that $\int_{|\Delta_p|}\d t_1\wedge\ldots\wedge\d t_p>0$ and take the induced orientations on the boundaries.
+            There is, however, a subtlety with the orientations of the boundaries.
+            \item Suppose we have some oriented manifold $M$ with boundary $\partial M$, and orientations on each connected component $(\partial M)_\alpha$ of the boundary (not necessarily the canonical ones).
+                Define
+                \begin{equation*}
+                    \varepsilon_\alpha =
+                    \begin{cases}
+                        \,\,\,\,1 &\text{if }(\partial M)_\alpha\text{ has the canonical orientation};\\
+                        -1 &\text{otherwise.}
+                    \end{cases}
+                \end{equation*}
+                Then, for any differential $(n-1)$-form $\omega$ on $M$,
+                \begin{equation*}
+                    \int_M\d\omega = \sum_{\alpha}\varepsilon_\alpha\int_{(\partial M)_\alpha}\omega.
+                \end{equation*}
+        \end{itemize}
+
+        \begin{example}\label{example:orientation-of-simplices}
+            Give $|\Delta_p|$ the orientation that makes $\d t_1\wedge\ldots\wedge\d t_p$ positive, as above.
+            Orientate the $i$-th face $(\partial|\Delta_p|)_i\simeq |\Delta_{p-1}|$ using the orientation on $|\Delta_{p-1}|$, so that $\d t_1\wedge\ldots\wedge\d t_{p-1}$ is positive.
+            Then $\varepsilon_i=(-1)^i$.
+        \end{example}
+
+    % subsection orientation (end)
+
+    \subsection*{Fibre integration is a quasi-isomorphism} % (fold)
+    \label{sub:fibre_integration_is_a_quasi_isomorphism}
+
+        \begin{proof}[Proof of \cref{lemma:fibre-integration}]
+            We split this proof into steps, recalling \cref{example:fibre-integration-simplicial-forms-nerve}.
+            \begin{enumerate}[(i)]
+                \item \emph{The map $\int_{|\Delta|}\colon\widetilde{\Omega}_{X^\bullet_\cover}^r\to\bigoplus_{p=0}^r\Omega_{X^p_\cover}^{r-p}$ is a morphism of complexes.}
+
+                    Let $\omega=\sum_{k\geqslant0}\omega_{k}$ be a simplicial form of degree $r$, where $\omega_k\in\Omega^r_{|\Delta_k|\times X^k_\cover}$.
+                    Then, recalling \cref{example:orientation-of-simplices},
+                    \begin{align*}
+                        \int_{|\Delta_k|}\d\omega_k &= \int_{|\Delta_k|}\d_{|\Delta_\circ|}\omega_k + (-1)^k\int_{|\Delta_k|}\d_X\omega_k\\
+                        &= \int_{\partial|\Delta_k|}\omega_k\Big|_{\partial|\Delta_k|} + (-1)^k \d_X\left(\int_{|\Delta_k|}\omega_k\right)\\
+                        &= \sum_i(-1)^i\int_{|\Delta_{k-1}|}(f_i\times\id_{X^k_\cover})^*\omega_k + (-1)^k\d_X\left(\int_{|\Delta_k|}\omega_k\right)\\
+                        &= \sum_i(-1)^i\int_{|\Delta_{k-1}|}\big(\id_{|\Delta_k|}\times X(f_i)\big)^*\omega_{k-1} + (-1)^k\d_X\left(\int_{|\Delta_k|}\omega_k\right)\\
+                        &= \check\delta\left(\int_{|\Delta_{k-1}|}\omega_{k-1}\right) + (-1)^k\d_X\left(\int_{|\Delta_k|}\omega_k\right).
+                    \end{align*}
+                    So we have shown that fibre integration commutes with the differentials:
+                    \begin{align*}
+                        \int_{|\Delta|}\d\omega_k &= \sum_{k\geqslant r}\left( \check\delta\left( \int_{|\Delta_{k-1}|}\omega_{k-1} \right) + (-1)^k\d_X\left( \int_{|\Delta_k|}\omega_k \right) \right)\\
+                        &= \d\left(\int_{|\Delta|}\omega_k\right).
+                    \end{align*}
+
+                \item \emph{There is a map $\mathscr{E}\colon\bigoplus_{p=0}^r\Omega_{X^p_\cover}^{r-p}\to\widetilde{\Omega}_{Y^\bullet}^r$.}
+
+                    Let $\omega\in\cech^k(\Omega_X^\ell)$.
+
+                    {\color{red}TODO}
+
+                \item \emph{The map $\mathscr{E}$ is a morphism of complexes.}
+
+                    {\color{red}TODO}
+
+                \item \emph{The maps $\int_{|\Delta|}$ and $\mathscr{E}$ are quasi-inverse.}
+
+                    {\color{red}TODO}
+
+            \end{enumerate}
+            {\color{red}\textbf{TODO}}
+        \end{proof}
+
+    % subsection fibre_integration_is_a_quasi_isomorphism (end)
+
+    \subsection*{Products} % (fold)
+    \label{sub:products}
+
+        \begin{lemma}
+            The morphism $\mathscr{E}\colon\bigoplus_{p=0}^r\Omega_{Y^p}^{r-p}\to\widetilde{\Omega}_{Y^\bullet}^r$ commutes with products.
+        \end{lemma}
+
+        \begin{proof}
+            {\color{red}\textbf{TODO}}
+        \end{proof}
+
+    % subsection products (end)
+
+% section the_dupont_isomorphism (end)
