@@ -110,7 +110,6 @@ The lemma that we'll look at is the following (where we've yet to define the rig
 
 - Julia E. Bergner, "A model category structure on the category of simplicial categories", [arXiv:math/0406507](https://arxiv.org/abs/math/0406507).
 - V. Hinich, "Dwyer-Kan localization revisited", [arXiv:1311.4128](https://arxiv.org/abs/1311.4128).
-- dhks
 - W.G. Dwyer and D.M. Kan, "Calculating simplicial localizations", [_available online_](https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf).
 - Pierre Gabriel, Michel Zisman, "Calculus of Fractions and Homotopy Theory", [_available online_](http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf).
 
