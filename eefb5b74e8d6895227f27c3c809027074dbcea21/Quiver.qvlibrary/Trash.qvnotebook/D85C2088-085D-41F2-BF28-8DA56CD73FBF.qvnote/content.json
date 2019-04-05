@@ -1,9 +1,0 @@
-{
-  "title": "Phone call with Julien — 22/09/18",
-  "cells": [
-    {
-      "type": "markdown",
-      "data": "- you have your connection and you want to produce a 1 form on this space of frames\n- what is a connection? it's a way of giving yourself horizontal vectors, so it amounts to say that (notation: total space $B$ of the vector bundle $E$ over manifold $X$ and space of frames is $B^\\times$) we look at the SES (over $B$) $0\\to\\pi^*\\Omega_X^1\\to\\Omega_B^1\\to\\pi^*E^*\\to0$\n- direct sum of wedge p + wedge q (for p+q = 3)\n- take curvature of connection and pull back to $B^\\times$\n- $\\operatorname{Hom}(E,E)\\cong E\\otimes E^*$\n- $\\mathcal{O}_{B^\\times}\\to\\pi^*E\\to Q$"
-    }
-  ]
-}

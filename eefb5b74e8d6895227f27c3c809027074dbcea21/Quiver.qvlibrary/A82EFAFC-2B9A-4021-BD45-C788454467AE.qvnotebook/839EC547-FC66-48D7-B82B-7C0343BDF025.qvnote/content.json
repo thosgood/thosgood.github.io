@@ -1,9 +1,0 @@
-{
-  "title": "Descent and Grothendieck fibrations",
-  "cells": [
-    {
-      "type": "markdown",
-      "data": "basically, the idea of ’n-equivalences up to (n+1)-equivalences’ is pretty much impossible to formalise in this sense\n\nTODO understand what eduard explained\n\n![IMG\\_20180817\\_170128539.jpg](quiver-image-url/7231142CE2B6335D359F909E212D4B87.jpg)\n\n**we want to be able to write the data of a twisting cochain _not_ as complexes with morphisms up to morphisms etc. _but instead_ as _objects_ at each level (the two maps into $M_1$ in the picture)**"
-    }
-  ]
-}
