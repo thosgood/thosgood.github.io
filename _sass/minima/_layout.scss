@@ -69,9 +69,11 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
+    // position: absolute;
+    // top: 5px;
+    // right: $spacing-unit / 2;
+    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    width:         calc(50% - (#{$spacing-unit} / 2));
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
