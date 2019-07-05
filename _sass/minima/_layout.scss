@@ -472,6 +472,10 @@ ul.tagged-posts time {
   margin-bottom: 25px;
 }
 
+.username {
+    font-family: monospace;
+}
+
 
 
 
@@ -490,7 +494,6 @@ ul.tagged-posts time {
   font-size: $small-font-size;
   color: $grey-color;
   margin-bottom: 0;
-  font-family: monospace;
 }
 
 .papers-description {
