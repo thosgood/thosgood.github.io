@@ -12,7 +12,7 @@ This isn't a long post and could probably instead be a tweet but then this blog 
 
 <!--more-->
 
-First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),[^7] I will shamelessly refer the interested reader to [some notes I wrote a while back](https://github.com/thosgood/papers/blob/master/twisted-complexes-summary/twisted-complexes-summary.pdf).
+First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),[^7] I will shamelessly refer the interested reader to ~~some notes I wrote a while back~~. (update: these notes have been subsumed into my PhD thesis)
 
 Secondly, the 'quirk' of dg-categories about which I'm talking[^1] is that, for a lot of people[^2], it is the (pre-)triangulated structure that is interesting.
 This means that (as far as I am aware)[^3] an arbitrary dg-category lacks some sort of homotopic interpretation because it has no structure corresponding to _stability_ 'upstairs'.
