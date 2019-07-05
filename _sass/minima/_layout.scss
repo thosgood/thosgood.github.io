@@ -477,6 +477,15 @@ ul.tagged-posts time {
     color: $grey-color;
 }
 
+.contact-list {
+  list-style-type: none;
+}
+
+.contact-list .icon {
+    padding-right: 3px;
+    height: 16px;
+    width: 16px;
+}
 
 
 
