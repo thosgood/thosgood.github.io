@@ -129,7 +129,7 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
-  font-family: monospace;
+  font-family:  "Lucida Console", Monaco, monospace;
 }
 
 .footer-heading {
@@ -389,7 +389,7 @@
  */
 
 span.tag-name {
-  font-family: monospace;
+  font-family:  "Lucida Console", Monaco, monospace;
 }
 
 ul.tag-list {
@@ -404,7 +404,7 @@ ul.tag-list li {
 
 ul.tag-list li a {
   color: $grey-color;
-  font-family: monospace;
+  font-family:  "Lucida Console", Monaco, monospace;
   padding: 2px 4px;
   background-color: $grey-color-light;
   
@@ -428,7 +428,7 @@ ul.tag-cloud li {
 
 ul.tag-cloud li a {
   color: $grey-color-dark;
-  font-family: monospace;
+  font-family:  "Lucida Console", Monaco, monospace;
   padding: 2px 4px;
   background-color: $grey-color-light;
   
@@ -454,7 +454,7 @@ ul.tagged-posts {
 }
 
 ul.tagged-posts time {
-  font-family: monospace;
+  font-family:  "Lucida Console", Monaco, monospace;
 }
 
 
