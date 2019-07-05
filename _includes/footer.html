@@ -39,6 +39,12 @@
           </li>
           {% endif %}
 
+          {% if site.matrix_username %}
+          <li>
+            <a href="https://riot.im/app/#/user/@{{ site.matrix_username }}"><img class="icon" src="/assets/riot.png"><span class="username">Riot</span></a>
+          </li>
+          {% endif %}
+
           {% if site.arxiv_username %}
           <li>
             <a href="https://arxiv.com/a/{{ site.arxiv_username }}"><img class="icon" src="/assets/arxiv.png"><span class="username">arXiv</span></a>

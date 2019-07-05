@@ -23,6 +23,7 @@ disqus:
   shortname: thosgood
 arxiv_username: hosgood_t_1
 orcid_id: 0000-0003-4580-0741
+matrix_username: thosgood:matrix.org
 excerpt_separator: <!--more-->
 paginate: 3
 paginate_path: "blog/page-:num"
