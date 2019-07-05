@@ -342,12 +342,7 @@
 }
 
 @include media-query($on-palm) {
-  .page-col-l {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
-    padding-right: $spacing-unit;
-  }
-
+  .page-col-l,
   .page-col-r {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
     width:         calc(100% - (#{$spacing-unit} / 2));
