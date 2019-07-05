@@ -40,6 +40,7 @@
     padding: 2px;
     color: $text-color;
     line-height: $base-line-height;
+    border-bottom: 3px solid #ffffff;
 
     &:hover {
       // font-weight: bold;
@@ -157,38 +158,47 @@
 }
 
 .footer-col-1 {
-  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-  width:         calc(30% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
 }
 
+.footer-col-2 {
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
+}
+
 .footer-col-3 {
-  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-  width:         calc(50% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
   }
 
   .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+    width:         calc(60% - (#{$spacing-unit} / 2));
   }
 }
 
 @include media-query($on-palm) {
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+  .footer-col-1,
+  .footer-col-2 {
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
+    margin: 0px;
+  }
+
+  .footer-col-3 {
+    width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+    width:         calc(60% - (#{$spacing-unit} / 2));
+  }
+  .social-media-list {
+    margin: 2px;
   }
 }
 
@@ -321,14 +331,27 @@
 }
 
 .page-col-l {
-  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
-  width:         calc(60% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
+  width:         calc(30% - (#{$spacing-unit} / 2));
   padding-right: $spacing-unit;
 }
 
 .page-col-r {
-  width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-  width:         calc(30% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(60% - (#{$spacing-unit} / 2));
+  width:         calc(60% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-palm) {
+  .page-col-l {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+    padding-right: $spacing-unit;
+  }
+
+  .page-col-r {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width:         calc(100% - (#{$spacing-unit} / 2));
+  }
 }
 
 
