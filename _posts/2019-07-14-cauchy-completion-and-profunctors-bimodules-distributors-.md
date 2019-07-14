@@ -8,7 +8,7 @@ comments: true
 
 An idea that came up in a few talks at CT2019 was that of 'spans whose left leg is a left adjoint'.
 I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in [`#math.CT:matrix.org`](https://www.matrix.to/#/#math.CT:matrix.org).
-What follows are some things that I learnt, mostly from \[BD86\].
+What follows are some things that I learnt (mostly from \[BD86\]).
 
 <!--more-->
 
@@ -93,8 +93,10 @@ This is now not so much of a surprising condition, since we've already seen that
 
 ## References
 
-- \[BD86\] [Borceux, Francis; Dejean, Dominique. "Cauchy completion in category theory". Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.](http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf)
-- [John Baez, _Bimodules Versus Spans_, n-Category Café](https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html)
+- \[BD86\] [F. Borceux and D. Dejean. "Cauchy completion in category theory". Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.](http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf)
+- [J. Baez, _Bimodules Versus Spans_, n-Category Café](https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html)
+- [M. Shulman. _Framed bicategories and monoidal fibrations._ arXiv: 0706.1286v2 \[math.CT\].](https://arxiv.org/pdf/0706.1286.pdf)
+- [R. Garner and M. Shulman. _Enriched categories as a free cocompletion._ arXiV: 1301.3191v2 \[math.CT\].](https://arxiv.org/pdf/1301.3191.pdf)
 
 ---
 
