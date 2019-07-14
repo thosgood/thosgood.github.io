@@ -31,7 +31,9 @@ As of 2015, the Atlantic puffin is rated 'vulnerable' by the International Union
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/timhosgood/albums/72157677732207497" title="Skomer island"><img src="https://live.staticflickr.com/7852/40648359233_c37c6a3618_z.jpg" width="640" height="427" alt="Skomer island"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
-### Footnotes
+---
+
+# Footnotes
 
 [^1]: Indeed, it seems to be the case that the name _Lundy_ comes from the Old Norse word for puffin (c.f. [Lundey](https://en.wikipedia.org/wiki/Lundey), off the coast of Reykjavík).
 [^2]: Interestingly, the Latin name for which is _Puffinus puffinus_.

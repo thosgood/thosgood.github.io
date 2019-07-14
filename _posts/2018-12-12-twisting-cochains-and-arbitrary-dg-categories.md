@@ -24,7 +24,9 @@ Really I am just parroting back the reasons why these things were initially inve
 I really have no geometric/homotopic intuition as to why this specific case of twisted complexes corresponds thusly, and haven't been able to find any references at all.
 Any ideas?
 
-### Footnotes
+---
+
+# Footnotes
 
 [^1]: Having hidden this part in the main post and not the excerpt makes me feel like I'm writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as _"Nine functors that you wouldn't believe have derived counterparts — number six will shock you!"_ and _"You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction"_. I apologise in advance.
 [^2]: [weasel words] [citation needed]

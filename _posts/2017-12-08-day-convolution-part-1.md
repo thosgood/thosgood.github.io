@@ -25,12 +25,12 @@ pages on the nLab, along with a few other sources. There is nothing original
 here, except any mistakes.*
 
 
-# Motivation
+## Motivation
 
 We start by rephrasing what it means for an object to be the limit of a functor
 in terms of representable presheaves.
 
-## Part 1
+### Part 1
 
 Let $$F\colon I^\mathrm{op}\to\mathsf{Set}$$ be a presheaf on a small category
 $$I$$. Then the limit of $$F$$ over $$I$$ is the hom-set
@@ -46,7 +46,7 @@ $$\mathrm{Hom}_{\mathsf{Set}}(S,\lim_I F) \cong \lim_I\mathrm{Hom}_{\mathsf{Set}
 
 for any set $$S$$.
 
-## Part 2
+### Part 2
 
 If we now find ourselves in the more general case of having a functor 
 $$F\colon I^\mathrm{op}\to\mathcal{C}$$ for some arbitrary (small) category
@@ -68,7 +68,7 @@ way, is exactly an object representing the presheaf $$\widehat{\lim}_I F$$, i.e.
 
 $$\mathcal{C}(c, \lim_I F)\cong\hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big)$$
 
-# Generalisation
+## Generalisation
 
 There are two things in the above that look interesting to try to
 generalise:
