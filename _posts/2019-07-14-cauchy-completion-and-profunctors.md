@@ -93,6 +93,9 @@ Given some category $\mathcal{E}$ with pullbacks, we can define an _internal cat
 
 This is now not so much of a surprising condition, since we've already seen that this left-adjoint condition is what ensures that profunctors are actually functors!
 
+What happens then, we may well ask, if we don't ask for this condition?
+We recover the idea of a **Mealy morphism**.[^6]
+
 ## References
 
 - \[BD86\] [F. Borceux and D. Dejean. "Cauchy completion in category theory". Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.](http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf)
@@ -109,3 +112,4 @@ This is now not so much of a surprising condition, since we've already seen that
 [^3]: That is, preserves all (small) colimits.
 [^4]: That is, of the form $F^\*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$.
 [^5]: If you prefer more of an article-style thing to slides then take a look at the [pre-proceedings](http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf) from ACT2019.
+[^6]: Thanks again to Bryce Clarke for [answering this question](https://twitter.com/8ryceClarke/status/1150434205031161864).
