@@ -41,7 +41,9 @@ Of course, lots of people have different preferences for names, but a _profuncto
 People often write such a thing as $\mathcal{C}\nrightarrow\mathcal{D}$.
 We can define their compositions via colimits or coends:
 
-$$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d).$$
+$$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)$$
+
+(although we don't really care so much about this post).
 
 ### Yoneda
 
@@ -105,5 +107,5 @@ This is now not so much of a surprising condition, since we've already seen that
 [^1]: $x\cdot_{R^{\text{op}}}y:=y\cdot_R x$.
 [^2]: To construct $\mathcal{C}^{\text{op}}$ we need $V$ to be braided; to be able to compose bimodules we need cocompleteness of $V$, with $\otimes$ cocontinuous in both arguments, etc.
 [^3]: That is, preserves all (small) colimits.
-[^4]: That is, of the form $F^\*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$
+[^4]: That is, of the form $F^\*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$.
 [^5]: If you prefer more of an article-style thing to slides then take a look at the [pre-proceedings](http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf) from ACT2019.
