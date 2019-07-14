@@ -64,22 +64,32 @@ given by $F\mapsto F^\*$.
 
 ### Recovering functors
 
-**Lemma.** A presheaf $\mathcal{F}\in\hat{\mathcal{C}}$ is _absolutely presentable_[^3] if and only if it admits a right adjoint.
-
-**Proof.** \[Propositions 2 and 4, BD86\].
-
-**Theorem.** A profunctor $\mathbb{1}\to\mathcal{C}$ admits a right adjoint if and only if it is of the form $F^\*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$.
+**Theorem.** A profunctor $\mathbb{1}\nrightarrow\mathcal{C}$ is a functor (via Yoneda[^4]) if and only if it admits a right adjoint.
+More generally, a profunctor $\mathcal{A}\nrightarrow\mathcal{C}$, for any small category $\mathcal{A}$, is a functor (via Yoneda) if and only if it admits a right adjoint.
 
 **Proof.** \[Theorem 2, BD86\].
 
-That is, a profunctor 'is a functor' if and only if it admits a right adjoint.
-This is a fact that we will come back to later.
+We will come back to this fact later.
 
 ## Cauchy completion
 
+The _Cauchy completion_ of a (small) category $\mathcal{C}$ can be defined in many ways (as described in \[BD86\]), but we pick the following: the Cauchy completion of $\mathcal{C}$ is the full subcategory $\overline{\mathcal{C}}$ of $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ spanned by _absolutely presentable_[^3] presheaves.
+
+The idea of Cauchy completeness for a category is in some sense meant to mirror that of Cauchy completeness of real numbers: if we think of a metric space as a category enriched over (the poset of) non-negative real numbers, then we recover this analytic notion (see \[Example 3, BD86\]).
+
+**Lemma.** A presheaf $\mathcal{F}\in\hat{\mathcal{C}}$ is absolutely presentable if and only if it admits a right adjoint.
+
+**Proof.** \[Propositions 2 and 4, BD86\].
+
 ## Internal categories
 
-Recall that \[Theorem 2, BD86\] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints.
+Recall that \[Theorem 2, BD86\] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by \[Propositions 2 and 4, BD86\], are exactly those (in the case where $\mathcal{A}=\mathbb{1}$) that are in the Cauchy completion of $\mathcal{C}$).
+
+Now for what motivated me to write this post: something I saw in [Bryce Clarke](https://twitter.com/8ryceClarke)'s talk [Internal lenses as monad morphisms](http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf) at CT2019.[^5]
+
+Given some category $\mathcal{E}$ with pullbacks, we can define an _internal category of $\mathcal{E}$_ as a monad in the 2-category $\mathsf{Span}(\mathcal{E})$, but it is **not** the case that internal functors are just (colax) morphisms of monads: **we need to require that the 1-cell admits a right adjoint** (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).
+
+This is now not so much of a surprising condition, since we've already seen that this left-adjoint condition is what ensures that profunctors are actually functors!
 
 ## References
 
@@ -93,3 +103,5 @@ Recall that \[Theorem 2, BD86\] tells us that the profunctors that are functors 
 [^1]: $x\cdot_{R^{\text{op}}}y:=y\cdot_R x$.
 [^2]: To construct $\mathcal{C}^{\text{op}}$ we need $V$ to be braided; to be able to compose bimodules we need cocompleteness of $V$, with $\otimes$ cocontinuous in both arguments, etc.
 [^3]: That is, preserves all (small) colimits.
+[^4]: That is, of the form $F^\*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$
+[^5]: If you prefer more of an article-style thing to slides then take a look at the [pre-proceedings](http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf) from ACT2019.
