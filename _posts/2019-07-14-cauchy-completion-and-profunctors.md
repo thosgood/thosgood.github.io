@@ -2,7 +2,7 @@
 layout: post
 title: Cauchy completion and profunctors
 category: "maths"
-tags: ""
+tags: "category-theory"
 comments: true
 ---
 
