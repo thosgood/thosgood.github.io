@@ -2,7 +2,7 @@
 title: Torsors and principal bundles
 layout: post
 category: "maths"
-tags: "algebraic-topology bundles"
+tags: "algebraic-topology"
 comments: true
 excerpt: "I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that \'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation\', which makes a nice short topic of discussion, whence this post."
 ---
