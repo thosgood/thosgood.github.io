@@ -10,7 +10,7 @@ As I mentioned in [the previous post]({{ site.baseurl }}{% post_url 2019-07-26-t
 
 <!--more-->
 
-The main reference is `[RH19]` Rachel Hardeman. _Computing A-homotopy groups using coverings and lifting properties_. [arXiv: 1904.12065](https://arxiv.org/abs/1904.12065).
+The main reference is \[RH19\] Rachel Hardeman. _Computing A-homotopy groups using coverings and lifting properties_. [arXiv: 1904.12065](https://arxiv.org/abs/1904.12065).
 
 ### Preliminaries
 
@@ -27,7 +27,7 @@ The main reference is `[RH19]` Rachel Hardeman. _Computing A-homotopy groups usi
     
     We say that two graphs $G$ and $H$ are _A-homotopic_ if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi\simeq_A\operatorname{id}_G$ and $\varphi\circ\psi\simeq_A\operatorname{id}_H$.
 - **N.B.** A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs $C_n$ and $C_m$ (for $m,n\geqslant 3$) are A-homotopic if and only if $m=n$, and $C_n$ is contractible (i.e. homotopic to the graph with a single point and no edges) for $n=3,4$, but not for any $n\geqslant 5$.
-- The _A-homotopic fundamental group_ of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in `[RH19]`.
+- The _A-homotopic fundamental group_ of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in \[RH19\].
 
 ### "Graded homotopy" structure
 
@@ -41,7 +41,7 @@ Then we can consider the category $\mathsf{Grph}_n$, which has objects being equ
 - $\mathsf{Grph}\_\infty = \mathrm{Ho}(\mathsf{Grph})$;
 - functors $\mathsf{Grph}\_n \to \mathsf{Grph}\_{n+1}$ that are surjective on objects, where functoriality relies on the fact that $n$-homotopies can be considered as $(n+1)$-homotopies.
 
-We can think of the number $n$ as some sort of "complexity" of the homotopy: small $n$ correspond to "homotopies that can be performed in a few steps" (here it is a good idea to see some of the examples in `[RH19]` to get an idea of how graph homotopies behave).
+We can think of the number $n$ as some sort of "complexity" of the homotopy: small $n$ correspond to "homotopies that can be performed in a few steps" (here it is a good idea to see some of the examples in \[RH19\] to get an idea of how graph homotopies behave).
 
 ### Questions
 
