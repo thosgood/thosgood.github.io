@@ -48,6 +48,8 @@ We can think of the number $n$ as some sort of "complexity" of the homotopy: sma
 
 ### Questions
 
+If anybody has any answers to, or comments about, the following questions (or this post in general) then please don't hesitate to get in touch!
+
 1. What is this structure? Some sort of enrichment? Does it already have a name?
 2. What other examples exist? For example, it would be nice to get something similar for the category of chain complexes of an abelian category, but I see no way a priori of assigning "complexity" to a homotopy for an arbitrary choice of abelian category. If things are enriched over metric spaces, however, then this is a different story...
 3. It seems believable that we could define something analogous with $\mathbb{R}^{\geqslant0}$ instead of $\mathbb{N}$. Could we do so for arbitrary (bounded-below) posets?
