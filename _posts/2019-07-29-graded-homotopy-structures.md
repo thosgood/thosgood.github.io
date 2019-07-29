@@ -6,7 +6,7 @@ tags: "homotopy-theory category-theory questions"
 comments: true
 ---
 
-As I mentioned in [the previous post]({{ site.baseurl }}{% post_url 2019-07-26-twisting-cochains-and-twisted-complexes %}), I recently saw a talk by [Rachel Hardeman](http://math.ucalgary.ca/math_unitis/profiles/1-7046986) on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a ``graded homotopy structure'', as I've been calling it in my head. Rather than trying to type out everything in [`#math.CT:matrix.org`](https://www.matrix.to/#/#math.CT:matrix.org), I've decided to post it here, in the hope that I might be able to get some answers.
+As I mentioned in [the previous post]({{ site.baseurl }}{% post_url 2019-07-26-twisting-cochains-and-twisted-complexes %}), I recently saw a talk by [Rachel Hardeman](http://math.ucalgary.ca/math_unitis/profiles/1-7046986) on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a "graded homotopy structure", as I've been calling it in my head. Rather than trying to type out everything in [`#math.CT:matrix.org`](https://www.matrix.to/#/#math.CT:matrix.org), I've decided to post it here, in the hope that I might be able to get some answers.
 
 <!--more-->
 
