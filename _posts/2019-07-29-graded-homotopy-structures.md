@@ -21,7 +21,6 @@ The main reference is `[RH19]` Rachel Hardeman. _Computing A-homotopy groups usi
     + $u=v$ and $[s,t]\in E(G)$.
 - The _path of length $n$_, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $[i,i+1]$ for $i=0,\ldots,n-1$. The _path of infinite length_, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.
 - We say that two graphs homomorphisms $\varphi,\psi\colon(G,x)\to(H,y)$ are _A-homotopic_, written $\varphi\simeq_A\psi$, if there exists some $n\in\mathbb{N}$ and a graph homomorphism $h\colon G\mathbin{\square} I_n\to H$ such that
-    
     + $h(s,0) = \varphi(s)$ for all $s\in V(G)$;
     + $h(s,n) = \psi(s)$ for all $s\in V(G)$; and
     + $h(x,i)=y$ for all $0\leqslant i\leqslant n$.
