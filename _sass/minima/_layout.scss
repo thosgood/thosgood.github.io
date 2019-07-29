@@ -306,6 +306,10 @@
       @include relative-font-size(1.125);
     }
   }
+
+  ul li {
+    margin: 0 0 8px 0;
+  }
 }
 
 
