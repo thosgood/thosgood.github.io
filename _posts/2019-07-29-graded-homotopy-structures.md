@@ -10,9 +10,7 @@ As I mentioned in [the previous post]({{ site.baseurl }}{% post_url 2019-07-26-t
 
 <!--more-->
 
-The main reference is the following:
-
-`[RH19]` Rachel Hardeman. _Computing A-homotopy groups using coverings and lifting properties_. [arXiv: 1904.12065](https://arxiv.org/abs/1904.12065).
+The main reference is `[RH19]` Rachel Hardeman. _Computing A-homotopy groups using coverings and lifting properties_. [arXiv: 1904.12065](https://arxiv.org/abs/1904.12065).
 
 ### Preliminaries
 
