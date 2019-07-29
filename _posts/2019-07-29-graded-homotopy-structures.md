@@ -14,12 +14,12 @@ The main reference is `[RH19]` Rachel Hardeman. _Computing A-homotopy groups usi
 
 ### Preliminaries
 
-- Graphs $G$ consist of _vertices_ $V(G)$ and _edges_ $E(G)$, where we write the edge between vertices $s$ and $t$ as $\{s,t\}$. All graphs are assumed to be _simple_ (no multiple edges between any two points or loops on a single point) and have a _distinguished vertex_ $x\in V(G)$. We write $(G,x)$ to mean the graph along with its distinguished vertex.
-- A _(weak) graph homomorphism_ $\varphi\colon (G,x)\to(H,y)$ is a map of sets $V(G)\to V(H)$ such that, for all $\{s,t\}\in E(G)$, either $\varphi(s)=\varphi(t)$ or $\{\varphi(s),\varphi(t)\}\in E(H)$. It is said to be _based_ if $\varphi(x)=y$.
+- Graphs $G$ consist of _vertices_ $V(G)$ and _edges_ $E(G)$, where we write the edge between vertices $s$ and $t$ as $[s,t]$. All graphs are assumed to be _simple_ (no multiple edges between any two points or loops on a single point) and have a _distinguished vertex_ $x\in V(G)$. We write $(G,x)$ to mean the graph along with its distinguished vertex.
+- A _(weak) graph homomorphism_ $\varphi\colon (G,x)\to(H,y)$ is a map of sets $V(G)\to V(H)$ such that, for all $[s,t]\in E(G)$, either $\varphi(s)=\varphi(t)$ or $[\varphi(s),\varphi(t)]\in E(H)$. It is said to be _based_ if $\varphi(x)=y$.
 - The _cartesian product_ $G\square H$ of the graphs $(G,x)$ and $(H,y)$ is the graph with vertex set $V(G)\times V(H)$, with distinguished vertex $(x,y)$, and with an edge between $(s,u)$ and $(t,v)$ whenever
-    + $s=t$ and $\{u,v\}\in E(H)$; or
-    + $u=v$ and $\{s,t\}\in E(G)$.
-- The _path of length $n$_, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $\{i,i+1\}$ for $i=0,\ldots,n-1$. The _path of infinite length_, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.
+    + $s=t$ and $[u,v]\in E(H)$; or
+    + $u=v$ and $[s,t]\in E(G)$.
+- The _path of length $n$_, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $[i,i+1]$ for $i=0,\ldots,n-1$. The _path of infinite length_, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.
 - We say that two graphs homomorphisms $\varphi,\psi\colon(G,x)\to(H,y)$ are _A-homotopic_, written $\varphi\simeq_A\psi$, if there exists some $n\in\mathbb{N}$ and a graph homomorphism $h\colon G\square I_n\to H$ such that
     
     + $h(s,0) = \varphi(s)$ for all $s\in V(G)$;
