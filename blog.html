@@ -48,14 +48,6 @@ pagination:
 
 
   <div class="pagination">
-        
-    {% if paginator.previous_page %}
-      <!-- <a href="{{ "/blog" | relative_url }}" class="page-nav">&llarr;</a> -->
-      <a href="{{ paginator.previous_page_path }}" class="page-nav">&larr;</a>
-    {% else %}
-      <!-- <span class="page-nav-inactive">&llarr;</span> -->
-      <span class="page-nav-inactive">&larr;</span>
-    {% endif %}
 
     {% if paginator.page == 1 %}
       <span class="page-nav-inactive">1</span>
@@ -70,14 +62,6 @@ pagination:
         <a href="{{ num | prepend:'/blog/page-' | relative_url }}" class="page-nav">{{ num }}</a>
       {% endif %}
     {% endfor %}
-        
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="page-nav">&rarr;</a>
-      <!-- <a href="{{ paginator.total_pages | prepend:'page-' }}" class="page-nav">&rrarr;</a> -->
-    {% else %}
-      <span class="page-nav-inactive">&rarr;</span>
-      <!-- <span class="page-nav-inactive">&rrarr;</span> -->
-    {% endif %}
 
   </div>
   
