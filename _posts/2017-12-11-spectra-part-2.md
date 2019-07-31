@@ -47,7 +47,7 @@ Let $A$ be some group, _which we think of as a discrete groupoid_, and define $\
 $$\begin{array}{ccc}
 A &\to &*\\
 \downarrow & &\downarrow\\
-* &\to &\mathbb{B}A\label{a}\tag{1}
+* &\to &\mathbb{B}A\tag{1}
 \end{array}$$
 
 Now the map $A\to *\to\mathbb{B}A$ is the constant functor $\Lambda$ to the single object of $\mathbb{B}A$, and there is a natural transformation $\eta$ from this functor to itself given by the identity. Let's unwrap what that says.
@@ -62,7 +62,7 @@ $$\begin{array}{ccc}
 
 commutes. But by the definition of $\Lambda$, this just means that $\eta_x$ is any morphism in $\mathbb{B}A$, so we can pick the morphism $x$ (we're really just using that $\mathrm{Ob}(A)=\mathrm{Mor}(\mathbb{B}A)$).
 
-Now we see that $\eta$ (defined by the identity) is, as one would hope, a natural isomorphism, which tells us that the homotopy square ($\ref{a}$) commutes up to homotopy.[^2]
+Now we see that $\eta$ (defined by the identity) is, as one would hope, a natural isomorphism, which tells us that the square (1) commutes up to homotopy.[^2]
 
 As for showing universality, we cheat:[^3] if we have some other $A'$ with a natural isomorphism $\eta'\colon\Lambda\implies\Lambda$ then it must map objects in $A'$ to isomorphisms (i.e. morphisms) in $\mathbb{B}A$. But say that it maps an object $x'$ in $A'$ to the morphism $x$ in $\mathbb{B}A$. Then we can factor through $A$ by sending the object $x'$ in $A'$ to the object $x$ in $A$.
 
