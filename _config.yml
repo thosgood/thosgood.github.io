@@ -30,6 +30,11 @@ paginate_path: "blog/page-:num"
 minima:
   date_format: "%e %B, %Y"
 markdown: kramdown
+plugins_dir: ./_plugins
 plugins:
   - jekyll-feed
+jekyll_get:
+  - data: github
+    json: 'https://api.github.com/users/thosgood/repos'
+    cache: false
 exclude: [vendor]
