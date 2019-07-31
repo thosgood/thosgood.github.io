@@ -28,6 +28,7 @@ matrix_username: thosgood:matrix.org
 pagination:
   enabled: true
   debug: false
+  sort_reverse: true
   per_page: 6
   permalink: '/page-:num.html'
   limit: 0
