@@ -224,16 +224,24 @@
 }
 
 .post-list {
-  margin-left: 0;
-  list-style: none;
+    margin-left: 0;
+    list-style: none;
 
-  > li {
-    margin-bottom: $spacing-unit;
-    padding-left: 15px;
-    padding-bottom: 10px;
-    border-left: 2px solid $brand-color;
-    border-bottom: 1px dashed $brand-color;
-  }
+    .post-list-heading {
+        margin-bottom: $spacing-unit / 2;
+
+        h2 {
+            margin: 0px;
+        }
+    }
+
+    > li {
+        margin-bottom: $spacing-unit;
+        padding-left: 15px;
+        padding-bottom: 10px;
+        border-left: 2px solid $brand-color;
+        border-bottom: 1px dashed $brand-color;
+    }
 }
 
 .post-meta {
@@ -252,33 +260,43 @@
  * Posts
  */
 .post-header {
-  margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
+
+    div.post-navigation {
+        margin-top: 0;
+        margin-bottom: $spacing-unit / 2;
+    }
+}
+
+div.post-navigation {
+    margin-top: ($spacing-unit / 2);
+    overflow: hidden;
+
+    ul {
+        width: 75%;
+        float: right;
+        margin: 0px;
+    }
 }
 
 .post-title {
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.25);
   letter-spacing: -1px;
   line-height: 1;
+  margin-top: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 4;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(2);
   }
 }
 
 .post-date {
-  font-size: $small-font-size;
   color: $grey-color;
 }
 
-.post-part {
-  // @include relative-font-size(2.625);
-  letter-spacing: -1px;
-  line-height: 1;
-
-  @include media-query($on-laptop) {
-    // @include relative-font-size(2.25);
-  }
-  color: $grey-color;
+ol.post-toc {
+    list-style-type: upper-roman;
 }
 
 .post-content {
@@ -386,11 +404,11 @@
  */
 
 .fixed {
-  // @include relative-font-size(0.92);
+    // @include relative-font-size(0.92);
 }
 
 .page-description {
-  color: $grey-color;
+    color: $grey-color;
 }
 
 
@@ -400,34 +418,34 @@
  */
 
 .pagination {
-  text-align: center;
+    text-align: center;
 }
 
 .page-number {
-  padding: 0 10px;
+    padding: 0 10px;
 }
 
 .page-nav {
-  padding: 5px 10px;
-  border: 1px solid $grey-color-dark;
+    padding: 5px 10px;
+    border: 1px solid $grey-color-dark;
   
     &:hover {
-      background-color: $grey-color-light;
-      text-decoration: none;
+        background-color: $grey-color-light;
+        text-decoration: none;
     }
 }
 
 .page-nav-inactive {
-  color: $grey-color;
-  padding: 5px 10px;
-  border: 1px solid $grey-color-light;
+    color: $grey-color;
+    padding: 5px 10px;
+    border: 1px solid $grey-color-light;
 }
 
 
 
 .rss-subscribe {
-  text-align: center;
-  font-size: $small-font-size;
+    text-align: center;
+    font-size: $small-font-size;
 }
 
 
@@ -437,61 +455,61 @@
  */
 
 span.tag-name {
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
+    font-family: $monospace-font-family;
+    font-size: $monospace-font-size;
 }
 
 ul.tag-list {
-  font-size: $small-font-size;
-  list-style-type: none;
-  margin-left: 0;
+    font-size: $small-font-size;
+    list-style-type: none;
+    margin-left: 0;
 }
 
 ul.tag-list li {
-  display: inline;
+    display: inline;
 }
 
 ul.tag-list li a {
-  color: $grey-color;
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
-  padding: 2px 4px;
-  background-color: $grey-color-light;
+    color: $grey-color;
+    font-family: $monospace-font-family;
+    font-size: $monospace-font-size;
+    padding: 2px 4px;
+    background-color: $grey-color-light;
   
     &:hover {
-      background-color: $grey-color;
-      color: $grey-color-light;
-      text-decoration: none;
+        background-color: $grey-color;
+        color: $grey-color-light;
+        text-decoration: none;
     }
 }
 
 ul.tag-cloud {
-  font-size: $small-font-size;
-  list-style-type: none;
-  text-align: center;
-  padding: 15px;
+    font-size: $small-font-size;
+    list-style-type: none;
+    text-align: center;
+    padding: 15px;
 }
 
 ul.tag-cloud li {
-  display: inline;
+    display: inline;
 }
 
 ul.tag-cloud li a {
-  color: $grey-color-dark;
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
-  padding: 2px 4px;
-  background-color: $grey-color-light;
+    color: $grey-color-dark;
+    font-family: $monospace-font-family;
+    font-size: $monospace-font-size;
+    padding: 2px 4px;
+    background-color: $grey-color-light;
   
     &:hover {
-      background-color: $grey-color;
-      color: $grey-color-light;
-      text-decoration: none;
+        background-color: $grey-color;
+        color: $grey-color-light;
+        text-decoration: none;
     }
 }
 
 li#all-tags-tag a {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 
@@ -501,12 +519,12 @@ li#all-tags-tag a {
  */
 
 ul.tagged-posts {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 ul.tagged-posts time {
-  font-family: $monospace-font-family;
-  font-size: $monospace-font-size;
+    font-family: $monospace-font-family;
+    font-size: $monospace-font-size;
 }
 
 
@@ -517,11 +535,11 @@ ul.tagged-posts time {
  */
 
 #about-image-column {
-  text-align: center;
+    text-align: center;
 }
 
 #about-image-column img {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .username {
@@ -550,13 +568,13 @@ ul.tagged-posts time {
  */
 
 .papers-list {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .papers-year {
-  font-size: $small-font-size;
-  color: $grey-color;
-  margin-bottom: 0;
+    font-size: $small-font-size;
+    color: $grey-color;
+    margin-bottom: 0;
 }
 
 .papers-list li.arxiv {

@@ -28,6 +28,9 @@ excerpt_separator: <!--more-->
 paginate: 6
 paginate_path: "blog/page-:num"
 
+minima:
+  date_format: "%e %B, %Y"
+
 # defaults:
 #   - scope:
 #       path: "blog/"
