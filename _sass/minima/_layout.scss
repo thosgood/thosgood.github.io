@@ -418,7 +418,8 @@ ol.post-toc {
  */
 
 .pagination {
-    text-align: center;
+  padding: ($spacing-unit / 2) 0;
+  text-align: center;
 }
 
 .page-number {
