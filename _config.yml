@@ -25,9 +25,15 @@ arxiv_username: hosgood_t_1
 orcid_id: 0000-0003-4580-0741
 matrix_username: thosgood:matrix.org
 
+pagination:
+  enabled: true
+  debug: false
+  per_page: 6
+  permalink: '/page/:num/'
+  limit: 0
+
 excerpt_separator: <!--more-->
-paginate: 6
-paginate_path: "blog/page-:num"
+
 minima:
   date_format: "%e %B, %Y"
 markdown: kramdown
