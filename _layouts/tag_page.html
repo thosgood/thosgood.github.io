@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="post">
+
+  <h4>Tag: <span class="tag-name">{{ page.tag }}</span></h1>
+  
+
+  {% if page.tag == 'all' %}
+    <ul class="tagged-posts">
+  
+      {% for post in site.posts %}
+        <li>
+          <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.minima.date_format | default: "%b %d, %Y" %}
+          {{ post.date | date: date_format }}
+          </time>
+
+          <a href="{{ post.url }}">{{ post.title }} {% if post.part %}({{ post.part }}){% endif%}</a>
+        </li>
+      {% endfor %}
+
+    </ul>
+  {% else %}
+    <ul class="tagged-posts">
+    
+      {% for post in site.tags[page.tag] %}
+        <li>
+          <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% assign date_format = site.minima.date_format | default: "%b %d, %Y" %}
+          {{ post.date | date: date_format }}
+          </time>
+
+          <a href="{{ post.url }}">{{ post.title }} {% if post.part %}({{ post.part }}){% endif%}</a>
+      </li>
+      {% endfor %}
+      
+    </ul>
+  {% endif %}
+
+</div>
+
+
+{% include archive.html %}
