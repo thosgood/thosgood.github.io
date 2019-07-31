@@ -16,7 +16,7 @@ pagination:
   enabled: true
   debug: false
   sort_reverse: true
-  per_page: 5
+  per_page: 4
   permalink: '/page-:num.html'
   limit: 0
   trail: 
