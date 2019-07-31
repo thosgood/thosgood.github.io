@@ -3,50 +3,70 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">
-        <div class="post-navigation">
-            <a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a>
-            {% if page.tags != "" %}
-              <ul class="tag-list">
-              {% for tag in page.tags %}
-                <li>
-                    <a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a>
-                </li>
-              {% endfor %}
-              </ul>
-            {% endif %}
-        </div>
-    
-        <hr>
+  <header class="post-header">
 
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        
-        <p><time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-            {{ page.date | date: date_format }}
-        </time></p>
-    </header>
+    <div class="post-navigation">
+
+      <a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a>
+
+      {% if page.tags != "" %}
+        <ul class="tag-list">
   
-    {% include toc.html html=content class="post-toc" ordered=true%}
+          {% for tag in page.tags %}
+            <li><a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a></li>
+          {% endfor %}
+      
+        </ul>
+    {% endif %}
 
-    <div class="post-content" itemprop="articleBody">
-        {{ content }}
     </div>
+    
 
     <hr>
 
-    <div class="post-navigation">
-        <a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a>
-        {% if page.tags != "" %}
-            <ul class="tag-list">
-                {% for tag in page.tags %}
-                    <li><a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
 
-    {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        
+    <p><time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </time></p>
+
+  </header>
+
+  
+  {% include toc.html html=content class="post-toc" ordered=true%}
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    {{ content }}
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a>
+
+    {% if page.tags != "" %}
+      <ul class="tag-list">
+
+        {% for tag in page.tags %}
+          <li><a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a></li>
+        {% endfor %}
+
+      </ul>
     {% endif %}
+  
+  </div>
+
+  
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+
 </article>
