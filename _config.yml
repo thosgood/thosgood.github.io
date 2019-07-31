@@ -41,7 +41,7 @@ markdown: kramdown
 plugins_dir: ./_plugins
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-paginate-v2
 jekyll_get:
   - data: github
     json: 'https://api.github.com/users/thosgood/repos'
