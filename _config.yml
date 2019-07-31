@@ -24,17 +24,21 @@ disqus:
 arxiv_username: hosgood_t_1
 orcid_id: 0000-0003-4580-0741
 matrix_username: thosgood:matrix.org
+
 excerpt_separator: <!--more-->
 paginate: 6
 paginate_path: "blog/page-:num"
 minima:
   date_format: "%e %B, %Y"
 markdown: kramdown
+
 plugins_dir: ./_plugins
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 jekyll_get:
   - data: github
     json: 'https://api.github.com/users/thosgood/repos'
     cache: false
+
 exclude: [vendor]
