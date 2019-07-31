@@ -68,6 +68,7 @@ pagination:
         <span class="page-nav-inactive">{{ num }}</span>
       {% else %}
         <a href="{{ num | prepend:'/blog/page-' | relative_url }}" class="page-nav">{{ num }}</a>
+      {% endif %}
     {% endfor %}
         
     {% if paginator.next_page %}
