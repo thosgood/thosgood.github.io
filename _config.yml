@@ -27,29 +27,9 @@ matrix_username: thosgood:matrix.org
 excerpt_separator: <!--more-->
 paginate: 6
 paginate_path: "blog/page-:num"
-
 minima:
   date_format: "%e %B, %Y"
-
-# defaults:
-#   - scope:
-#       path: "blog/"
-#     values:
-#       sitemap: false
-
-# Build settings
 markdown: kramdown
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude: [vendor]
