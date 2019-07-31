@@ -4,5 +4,7 @@ gem "jekyll"
 gem "json"
 gem "hash-joiner"
 
-gem "jekyll-feed"
-gem "jekyll-paginate-v2"
+group :jekyll_plugins do
+  gem "jekyll-paginate-v2"
+  gem "jekyll-feed"
+end
