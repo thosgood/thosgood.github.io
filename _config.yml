@@ -34,15 +34,8 @@ plugins_dir: ./_plugins
 plugins:
   - jekyll-paginate-v2
   - jekyll-feed
+  
 jekyll_get:
   - data: github
     json: 'https://api.github.com/users/thosgood/repos'
     cache: false
-
-katex:
-  rendering_options:
-    # Default KaTeX rendering options. See https://github.com/Khan/KaTeX#rendering-options
-    throw_error: true                       # throwOnError - set to false if you want rendering to output error as text rather than a build error
-    error_color: "#cc0000"                  # errorColor
-
-exclude: [vendor]
