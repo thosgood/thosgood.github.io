@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-07-31T17:02:56+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;The main reference is [RH19] Rachel Hardeman. &lt;em&gt;Computing A-homotopy groups using coverings and lifting properties&lt;/em&gt;. &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;arXiv: 1904.12065&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;preliminaries&quot;&gt;Preliminaries&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Graphs $G$ consist of &lt;em&gt;vertices&lt;/em&gt; $V(G)$ and &lt;em&gt;edges&lt;/em&gt; $E(G)$, where we write the edge between vertices $s$ and $t$ as $[s,t]$. All graphs are assumed to be &lt;em&gt;simple&lt;/em&gt; (no multiple edges between any two points or loops on a single point) and have a &lt;em&gt;distinguished vertex&lt;/em&gt; $x\in V(G)$. We write $(G,x)$ to mean the graph along with its distinguished vertex.&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;(weak) graph homomorphism&lt;/em&gt; $\varphi\colon (G,x)\to(H,y)$ is a map of sets $V(G)\to V(H)$ such that, for all $[s,t]\in E(G)$, either $\varphi(s)=\varphi(t)$ or $[\varphi(s),\varphi(t)]\in E(H)$. It is said to be &lt;em&gt;based&lt;/em&gt; if $\varphi(x)=y$.&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;cartesian product&lt;/em&gt; $G\mathbin{\square} H$ of the graphs $(G,x)$ and $(H,y)$ is the graph with vertex set $V(G)\times V(H)$, with distinguished vertex $(x,y)$, and with an edge between $(s,u)$ and $(t,v)$ whenever
+    &lt;ul&gt;
+      &lt;li&gt;$s=t$ and $[u,v]\in E(H)$; or&lt;/li&gt;
+      &lt;li&gt;$u=v$ and $[s,t]\in E(G)$.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;path of length $n$&lt;/em&gt;, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $[i,i+1]$ for $i=0,\ldots,n-1$. The &lt;em&gt;path of infinite length&lt;/em&gt;, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.&lt;/li&gt;
+  &lt;li&gt;We say that two graphs homomorphisms $\varphi,\psi\colon(G,x)\to(H,y)$ are &lt;em&gt;A-homotopic&lt;/em&gt;, written $\varphi\simeq_A\psi$, if there exists some $n\in\mathbb{N}$ and a graph homomorphism $h\colon G\mathbin{\square} I_n\to H$ such that
+    &lt;ul&gt;
+      &lt;li&gt;$h(s,0) = \varphi(s)$ for all $s\in V(G)$;&lt;/li&gt;
+      &lt;li&gt;$h(s,n) = \psi(s)$ for all $s\in V(G)$; and&lt;/li&gt;
+      &lt;li&gt;$h(x,i)=y$ for all $0\leqslant i\leqslant n$.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;We say that two graphs $G$ and $H$ are &lt;em&gt;A-homotopic&lt;/em&gt; if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi\simeq_A\operatorname{id}_G$ and $\varphi\circ\psi\simeq_A\operatorname{id}_H$.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;N.B.&lt;/strong&gt; A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs $C_n$ and $C_m$ (for $m,n\geqslant 3$) are A-homotopic if and only if $m=n$, and $C_n$ is contractible (i.e. homotopic to the graph with a single point and no edges) for $n=3,4$, but not for any $n\geqslant 5$.&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;A-homotopic fundamental group&lt;/em&gt; of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in [RH19].&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;graded-homotopy-structure&quot;&gt;“Graded homotopy” structure&lt;/h3&gt;
+
+&lt;p&gt;Given two A-homotopic graph homomorphisms $\varphi\simeq_A\psi$ we can ask for the &lt;em&gt;minimal&lt;/em&gt; such $n\in\mathbb{N}$ in the definition of the A-homotopy. We then say that the A-homotopy is an &lt;em&gt;$n$-homotopy&lt;/em&gt;, and we extend this definition slightly to allow for the fact that we can trivially consider an $n$-homotopy as an $(n+1)$-homotopy (in $n+1$ various ways, corresponding to the classical idea of simplicial (co)face/(co)degeneracy (depending on your choice of nomenclature) maps). That is, we say $n$-homotopic to mean “$m$-homotopic with $m\leqslant n$”.&lt;/p&gt;
+
+&lt;p&gt;We say that two graphs $G,H$ are &lt;em&gt;$n$-homotopic&lt;/em&gt; if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi$ is $m_1$-homotopic to $\operatorname{id}_G$ and $\varphi\circ\psi$ is $m_2$-homotopic to $\operatorname{id}_H$, with $\operatorname{max}{m_1,m_2}=n$.&lt;/p&gt;
+
+&lt;p&gt;Then we can consider the category $\mathsf{Grph}_n$, which has objects being equivalence classes of $n$-homotopic graphs, and morphisms being equivalence classes of $n$-homotopic graph homomorphisms. This gives us the following structure:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$\mathsf{Grph}_0 = \mathsf{Grph}$;&lt;/li&gt;
+  &lt;li&gt;$\mathsf{Grph}_\infty = \mathrm{Ho}(\mathsf{Grph})$;&lt;/li&gt;
+  &lt;li&gt;functors $\mathsf{Grph}_n \to \mathsf{Grph}_{n+1}$ that are surjective on objects, where functoriality relies on the fact that $n$-homotopies can be considered as $(n+1)$-homotopies.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We can think of the number $n$ as some sort of “complexity” of the homotopy: small $n$ correspond to “homotopies that can be performed in a few steps” (here it is a good idea to see some of the examples in [RH19] to get an idea of how graph homotopies behave).&lt;/p&gt;
+
+&lt;h3 id=&quot;questions&quot;&gt;Questions&lt;/h3&gt;
+
+&lt;p&gt;If anybody has any answers to, or comments about, the following questions (or this post in general) then please don’t hesitate to get in touch!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What is this structure? Some sort of enrichment? Does it already have a name?&lt;/li&gt;
+  &lt;li&gt;What other examples exist? For example, it would be nice to get something similar for the category of chain complexes of an abelian category, but I see no way a priori of assigning “complexity” to a homotopy for an arbitrary choice of abelian category. If things are enriched over metric spaces, however, then this is a different story…&lt;/li&gt;
+  &lt;li&gt;It seems believable that we could define something analogous with $\mathbb{R}^{\geqslant0}$ instead of $\mathbb{N}$. Could we do so for arbitrary (bounded-below) posets?&lt;/li&gt;
+  &lt;li&gt;Does this tie in to the idea of “approximate composition” (c.f. &lt;a href=&quot;http://www.cs.ox.ac.uk/ACT2019/preproceedings/Walter%20Tholen%20Approximate%20composition%20(revised).pdf&quot;&gt;Walter Tholen’s talk on metagories at ACT2019&lt;/a&gt;).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="maths" /><category term="homotopy-theory" /><category term="category-theory" /><category term="questions" /><summary type="html">As I mentioned in the previous post, I recently saw a talk by Rachel Hardeman on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in #math.CT:matrix.org, I’ve decided to post it here, in the hope that I might be able to get some answers.</summary></entry><entry><title type="html">Twisting cochains and twisted complexes</title><link href="https://thosgood.github.io/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html" rel="alternate" type="text/html" title="Twisting cochains and twisted complexes" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/26/twisting-cochains-and-twisted-complexes</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html">&lt;p&gt;This week was the &lt;a href=&quot;https://ytm2019.epfl.ch&quot;&gt;Young Topologists Meeting&lt;/a&gt; at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub &lt;a href=&quot;https://github.com/thosgood/papers/blob/master/twisting-cochains-YTM19/twisting-cochains-YTM19-handout.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;One talk that I really liked was &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt;’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, $C_n$ is only contractible for $n\leqslant4$. You can read more about this in &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;her paper on the arXiv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also really great one was &lt;a href=&quot;http://pi.math.cornell.edu/~maru/index.html&quot;&gt;Maru Sarazola&lt;/a&gt;’s talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don’t think she currently has notes for this stuff typed up anywhere, but (from what I gather) it’s in the works!&lt;/p&gt;</content><author><name></name></author><category term="maths" /><category term="differential-geometry" /><category term="complex-geometry" /><category term="algebraic-topology" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">This week was the Young Topologists Meeting at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub here.</summary></entry><entry><title type="html">More-than-one-but-less-than-three-categories</title><link href="https://thosgood.github.io/maths/2019/07/15/more-than-one-less-than-three.html" rel="alternate" type="text/html" title="More-than-one-but-less-than-three-categories" /><published>2019-07-15T00:00:00+00:00</published><updated>2019-07-15T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/15/more-than-one-less-than-three</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/15/more-than-one-less-than-three.html">&lt;p&gt;What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category theory.
+But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;background-and-strictification&quot;&gt;Background and strictification&lt;/h2&gt;
+
+&lt;p&gt;Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;), I’ll just say a tiny bit about why I’m an idiot.&lt;/p&gt;
+
+&lt;p&gt;In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, “they’re just $n$-categories with $n$=2”; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
+Both of these things are rather bad points of view to take.&lt;/p&gt;
+
+&lt;p&gt;For the latter point, it’s important to note that, yes, weak 2-categories can be strictified, and every pseudofunctor is equivalent to a strict one, but it is &lt;strong&gt;not&lt;/strong&gt; true that every pseudonatural transformation is equivalent to a (strict) natural transformation.&lt;/p&gt;
+
+&lt;p&gt;As explained in &lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf&quot;&gt;Mike Shulman’s talk&lt;/a&gt;, working in the $(2,1)$-topos $[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$, every pseudofunctor $X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}$ is equivalent to a strict one, but &lt;strong&gt;not&lt;/strong&gt; every pseudonatural transformation $X\rightsquigarrow Y$ is equivalent to a strict one.
+But we do have the following lemma (from Mike’s talk).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For any $Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$ there is a strict $\mathcal{C}^{\mathbb{D}}Y$ and a bijection between pseudonatural $X\rightsquigarrow Y$ and strict $X\to\mathcal{C}^{\mathbb{D}}Y$.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;. Almost by definition: a pseudonatural $X\rightsquigarrow Y$ assigns to each $x\in X(d)$ some image $f_x(x)\in Y(d)$ along with an isomorphism $\gamma^*(f_x(x))\cong f_{x’}(\gamma^*(x))$ for all $\gamma\colon x\to x’$ in $\mathbb{D}$, and this isomorphism satisfies a coherence condition.
+So we just define $\mathcal{C}^{\mathbb{D}}Y(d)$ to consist of all this data.&lt;/p&gt;
+
+&lt;p&gt;There is then a lovely theory of &lt;em&gt;coflexible&lt;/em&gt; objects, which are those $Y$ such that the canonical morphism $Y\to\mathcal{C}^{\mathbb{D}}Y$ has a strict retraction.
+These objects are such that &lt;strong&gt;all&lt;/strong&gt; pseudonatural transformations &lt;em&gt;into&lt;/em&gt; them are isomorphic to &lt;em&gt;strict&lt;/em&gt; such ones.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-idea&quot;&gt;The idea&lt;/h2&gt;
+
+&lt;h3 id=&quot;roughly&quot;&gt;Roughly&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A 2-category should be something which has &lt;em&gt;objects&lt;/em&gt;, &lt;em&gt;1-morphisms&lt;/em&gt; between the objects, and &lt;em&gt;2-morphisms&lt;/em&gt; between the morphisms.&lt;/li&gt;
+  &lt;li&gt;We should be able to compose 1-morphisms ‘along objects’, in that, given 1-morphisms $f\colon x\to y$ and $g\colon y\to z$, we should get some 1-morphism $g\circ f\colon x\to z$.&lt;/li&gt;
+  &lt;li&gt;We should be able to compose 2-morphisms ‘along objects’ (so-called &lt;em&gt;horizontally&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-horizontal-2-composition.png&quot; alt=&quot;horizontal composition&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;but &lt;em&gt;also&lt;/em&gt; ‘along 1-morphisms’ (so-called &lt;em&gt;vertically&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-vertical-2-composition.png&quot; alt=&quot;vertical composition&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and we ask that both senses of composition be associative &lt;em&gt;only up to coherent associator 2-morphisms&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;categorification-and-monoidal-delooping&quot;&gt;Categorification and monoidal delooping&lt;/h3&gt;
+
+&lt;p&gt;An $(n=2)$-category can be thought of as the Oidification (or &lt;a href=&quot;https://ncatlab.org/nlab/show/horizontal+categorification&quot;&gt;horizontal categorification&lt;/a&gt;) of a monoidal category: it is like a monoidal category with many objects.
+To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms ‘up one degree’) is exactly a one object $(n=2)$-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.&lt;/p&gt;
+
+&lt;h2 id=&quot;strict-vs-weak&quot;&gt;Strict vs. weak&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-categories&quot;&gt;The categories&lt;/h3&gt;
+
+&lt;p&gt;The general consensus is to call &lt;em&gt;strict&lt;/em&gt; 2-categories “&lt;strong&gt;2-categories&lt;/strong&gt;”, and the algebraic notion of &lt;em&gt;weak&lt;/em&gt; 2-categories “&lt;strong&gt;bicategories&lt;/strong&gt;”.
+This can be confusing, &lt;a href=&quot;https://ncatlab.org/nlab/show/bicategory#terminology&quot;&gt;for a few reasons&lt;/a&gt;, but such is life.
+From now on, in this post, we will say &lt;strong&gt;$(n=2)$-categories&lt;/strong&gt; to talk about both senses of 2-categories.&lt;/p&gt;
+
+&lt;p&gt;Specifically, a &lt;em&gt;2-category&lt;/em&gt; is a category enriched over the cartesian monoidal category $\mathsf{Cat}$; a &lt;em&gt;bicategory&lt;/em&gt; is a category &lt;strong&gt;weakly&lt;/strong&gt; enriched over $\mathsf{Cat}$ (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).&lt;/p&gt;
+
+&lt;h3 id=&quot;the-functors&quot;&gt;The functors&lt;/h3&gt;
+
+&lt;p&gt;Whether we take strict or weak $(n=2)$-categories, we can still choose whether we want our $(n=2)$-functors to be strict or weak.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;2-functor&lt;/em&gt; is a strict $(n=2)$-functor (which &lt;a href=&quot;https://www.ncatlab.org/nlab/show/2-functor#fn:1&quot;&gt;usually&lt;/a&gt; only makes sense between 2-categories); a &lt;em&gt;pseudofunctor&lt;/em&gt; is a weak $(n=2)$-functor (so the composition of 1-morphisms is preserved only up to coherent (specified) 2-isomorphisms, and similarly for the identity 1-morphisms) (which can be between strict or weak $(n=2)$-categories).&lt;/p&gt;
+
+&lt;p&gt;If we forget the 2-structure of an $(n=2)$-category and consider the hom-categories as discrete, then both of these notions of $(n=2)$-functors reduce to 1-functors between 1-categories.
+There is, however, an even weaker type of $(n=2)$-functor for which this is &lt;strong&gt;not&lt;/strong&gt; the case: a(n) &lt;em&gt;(op)lax 2-functor&lt;/em&gt;: here the associator and compositor 2-cells are &lt;strong&gt;not&lt;/strong&gt; required to even be coherent &lt;em&gt;isomorphisms&lt;/em&gt;, but instead just coherent &lt;em&gt;morphisms&lt;/em&gt;, in some direction (with one direction corresponding to lax and the other to oplax).
+This is exactly the idea of an (op)lax functor of monoidal categories, and so reassures us that $(n=2)$-categories can be thought of as monoidal categories with multiple objects, as mentioned above.&lt;/p&gt;
+
+&lt;p&gt;That is,&lt;/p&gt;
+
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;$(n=2)$-functor&lt;/th&gt;
+      &lt;th&gt;compositor&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2-functor&lt;/td&gt;
+      &lt;td&gt;$F(g\circ f)=F(g)\circ F(f)$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;pseudofunctor&lt;/td&gt;
+      &lt;td&gt;$F(g\circ f)\cong F(g)\circ F(f)$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;(op)lax 2-functor&lt;/td&gt;
+      &lt;td&gt;$F(g\circ f)\Rightarrow F(g)\circ F(f)$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;At a first glance, (op)-lax functors seem like almost too weak to be useful, but there are &lt;a href=&quot;https://www.ncatlab.org/nlab/show/lax+functor#examples&quot;&gt;many nice examples&lt;/a&gt; of when they are good things to study.&lt;/p&gt;
+
+&lt;h2 id=&quot;double-categories&quot;&gt;Double categories&lt;/h2&gt;
+
+&lt;p&gt;Something that looks a bit like an $(n=2)$-category when you unwrap the abstract definition is a &lt;em&gt;double category&lt;/em&gt;: an internal category $\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)$ of $\mathsf{Cat}$.
+This means that it has&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;objects&lt;/em&gt;, given by the objects of $\mathcal{C}_0$;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;vertical morphisms&lt;/em&gt;, given by the morphisms of $\mathcal{C}_0$;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;horizontal morphisms&lt;/em&gt;, given by the objects of $\mathcal{C}_1$; and&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;2-cells, or _squares&lt;/em&gt;, given by the morphisms of $\mathcal{C}_1$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We can picture the 2-cells as a square (hence the name), as&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-double-square.png&quot; alt=&quot;squares&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;where $x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$ are objects, $f,g\in\operatorname{ob}\mathcal{C}_1$ are horizontal morphisms, $\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$ are vertical morphisms, and $\phi\in\operatorname{Arr}\mathcal{C}_1$ is the 2-cell.&lt;/p&gt;
+
+&lt;p&gt;Composition ‘horizontally’ of two squares, left and right of each other, is given by the usual composition in the categories $\mathcal{C}_0$ and $\mathcal{C}_1$; composition ‘vertically’ of two squares, one above the other, is given by the composition operation on $\mathcal{C}_1\rightrightarrows\mathcal{C}_0$, coming from the fact that $\mathscr{C}$ is an internal category.&lt;/p&gt;
+
+&lt;p&gt;There are two &lt;em&gt;edge categories&lt;/em&gt; associated to $\mathscr{C}$, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
+If the two edge categories agree then we say that $\mathscr{C}$ is &lt;em&gt;edge-symmetric&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;From &lt;a href=&quot;https://ncatlab.org/nlab/show/double+category#examples&quot;&gt;the nLab&lt;/a&gt;, we have some fun examples.&lt;/p&gt;
+
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;objects&lt;/th&gt;
+      &lt;th&gt;vertical&lt;/th&gt;
+      &lt;th&gt;horizontal&lt;/th&gt;
+      &lt;th&gt;2-cells&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$\mathsf{Prof}$&lt;/td&gt;
+      &lt;td&gt;small categories&lt;/td&gt;
+      &lt;td&gt;functors&lt;/td&gt;
+      &lt;td&gt;profunctors&lt;/td&gt;
+      &lt;td&gt;nat. trans.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$\mathsf{Mod}$&lt;/td&gt;
+      &lt;td&gt;model categories&lt;/td&gt;
+      &lt;td&gt;left Quil. functors&lt;/td&gt;
+      &lt;td&gt;right Quil. functors&lt;/td&gt;
+      &lt;td&gt;nat. trans.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$\mathsf{MonCat}$&lt;/td&gt;
+      &lt;td&gt;monoidal categories&lt;/td&gt;
+      &lt;td&gt;colax mon. functors&lt;/td&gt;
+      &lt;td&gt;lax mon. functors&lt;/td&gt;
+      &lt;td&gt;mon. nat. trans.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$\mathsf{Dbl}\Pi(X)$&lt;/td&gt;
+      &lt;td&gt;points of top. space $X$&lt;/td&gt;
+      &lt;td&gt;paths&lt;/td&gt;
+      &lt;td&gt;paths&lt;/td&gt;
+      &lt;td&gt;homotopies&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For more details about why $\mathsf{Mod}$ is so interesting, see [S11].&lt;/p&gt;
+
+&lt;p&gt;Note that we can also get weak versions of double categories, in many ways, as described &lt;a href=&quot;https://ncatlab.org/nlab/show/double+category#weakenings&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;1-categories-as-2-categories-as-double-categories&quot;&gt;1-categories as 2-categories as double categories&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We can consider any 1-category as an $(n=2)$-category by taking the 2-cells to just be identities.&lt;/li&gt;
+  &lt;li&gt;We can consider any $(n=2)$-category as an edge-symmetric double category, its &lt;em&gt;double category of squares&lt;/em&gt;, via the so-called &lt;em&gt;quintet construction&lt;/em&gt;: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.
+  We could also construct two other double categories: by taking either the vertical or the horizontal morphisms to be the 1-morphisms, and the other to be just the identity 1-morphisms.
+  Finally, one last construction is the &lt;em&gt;mate construction&lt;/em&gt;: the vertical arrows are adjunctions, the horizontal arrows are 1-morphisms, and the 2-cells are &lt;a href=&quot;https://ncatlab.org/nlab/show/mate&quot;&gt;mate-pairs of 2-morphisms&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In the opposite direction to the above, there are two underlying 2-categories of any double category, where we let 1-morphisms be just the vertical (resp. horizontal) morphisms, and the 2-morphisms are for commutative squares whose horizontal (resp. vertical) arrows are identities.
+  We call these the &lt;em&gt;associated vertical&lt;/em&gt; (resp. &lt;em&gt;horizontal&lt;/em&gt;) &lt;em&gt;2-category&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[S11] &lt;a href=&quot;https://arxiv.org/pdf/0706.2868.pdf&quot;&gt;Michael Shulman, &lt;em&gt;Comparing composites of left and right derived functors.&lt;/em&gt; arXiv: 0706.2868v2 [math.CT].&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;For some reason this reminds me of the confusion I always have when trying to remember what ‘biannual’ means. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;The reason that Mike talked about them was in the context of interpreting types as coflexible objects. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category theory. But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.</summary></entry><entry><title type="html">Cauchy completion and profunctors</title><link href="https://thosgood.github.io/maths/2019/07/14/cauchy-completion-and-profunctors.html" rel="alternate" type="text/html" title="Cauchy completion and profunctors" /><published>2019-07-14T00:00:00+00:00</published><updated>2019-07-14T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/14/cauchy-completion-and-profunctors</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/14/cauchy-completion-and-profunctors.html">&lt;p&gt;An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’.
+I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;.
+What follows are some things that I learnt (mostly from [BD86]).&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;bimodules&quot;&gt;Bimodules&lt;/h2&gt;
+
+&lt;p&gt;A good place to begin is with the definition of a &lt;em&gt;bimodule&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;classically&quot;&gt;Classically&lt;/h3&gt;
+
+&lt;p&gt;Given rings $R$ and $S$, we say that an abelian group $M$ is an &lt;em&gt;$(R,S)$-bimodule&lt;/em&gt; if it is a left $R$-module and a right $S$-module &lt;strong&gt;in a compatible way&lt;/strong&gt;: we ask that $(rm)s=r(ms)$.&lt;/p&gt;
+
+&lt;p&gt;Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that $M$ be a right module over $R^{\text{op}}\otimes_{\mathbb{Z}}S$ (or, equivalently, a left module over $R\otimes_{\mathbb{Z}}S^{\text{op}}$), where $R^{\text{op}}$ is the &lt;em&gt;opposite&lt;/em&gt; ring of $R$, given by just ‘turning the multiplication around’.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;categorically&quot;&gt;Categorically&lt;/h3&gt;
+
+&lt;p&gt;Modulo a bunch of technical conditions on the categories involved,&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; a &lt;em&gt;bimodule&lt;/em&gt; is a $\mathcal{V}$-functor (i.e. a functor of $\mathcal{V}$-enriched categories) $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$.&lt;/p&gt;
+
+&lt;p&gt;We can recover the previous definition similar to how we can recover the definition of an $R$-module as an $\mathsf{Ab}$-enriched functor $R^{\text{op}}\to\mathsf{Ab}$. Or, taking $\mathcal{V}=\mathsf{Vect}$, and $\mathcal{C}=\mathbb{B}A$, $\mathcal{D}=\mathbb{B}B$, with $A$ and $B$ both vector spaces, we recover the notion of a vector space with a left $A$-action and a right $B$-action.&lt;/p&gt;
+
+&lt;p&gt;A fundamental example that seems a bit different from this algebraic one, however, arises when we take $\mathcal{V}=\mathsf{Set}$ and $\mathcal{C}=\mathcal{D}$ to be arbitrary (small) categories.
+Then the hom functor $\mathcal{C}(-,-)\colon\mathcal{C}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$ is a bimodule.
+This suggests that we should maybe somehow think of bimodules as generalised hom functors, where the objects can live in a different category.&lt;/p&gt;
+
+&lt;p&gt;As a small aside, there is some hot debate about whether to use $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$ or $\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}$, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors $\mathcal{C}\to\mathcal{D}$ give you profunctors by composition with the &lt;strong&gt;covariant&lt;/strong&gt; Yoneda embedding, as opposed to the contravariant one.
+But the two are formally dual, so it’s really not the biggest of issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;profunctors-distributors-bimodules-or-whatever&quot;&gt;Profunctors, distributors, bimodules, or whatever&lt;/h2&gt;
+
+&lt;p&gt;Of course, lots of people have different preferences for names, but a &lt;em&gt;profunctor&lt;/em&gt; is (using the convention of Borceux and Dejean) a functor $\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$.
+People often write such a thing as $\mathcal{C}\nrightarrow\mathcal{D}$.
+We can define their compositions via colimits or coends:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)&lt;/script&gt;
+
+&lt;p&gt;(although we don’t really care so much about this post).&lt;/p&gt;
+
+&lt;h3 id=&quot;yoneda&quot;&gt;Yoneda&lt;/h3&gt;
+
+&lt;p&gt;Every functor $F\colon\mathcal{C}\to\mathcal{D}$ gives a profunctor $F^*\colon\mathcal{C}\nrightarrow\mathcal{D}$ by setting&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F^*(d,c) = \mathcal{D}(d,Fc),&lt;/script&gt;
+
+&lt;p&gt;and $F^*$ has a right adjoint $F_*\colon\mathcal{D}\nrightarrow\mathcal{C}$ given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F_*(c,d) = \mathcal{D}(Fc,d),&lt;/script&gt;
+
+&lt;p&gt;where we define adjunctions of profunctors using the classical notion of natural transformations.&lt;/p&gt;
+
+&lt;p&gt;If we write $\mathbb{1}$ to mean the category with one object and one (identity) (endo)morphism then any (small) category $\mathcal{C}$ can be identified with the functor category $\mathsf{Fun}(\mathbb{1},\mathcal{C})$, and the presheaf category $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ is just the category $\mathsf{Profun}(\mathbb{1},\mathcal{C})$.
+Then the Yoneda embedding is the inclusion&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})&lt;/script&gt;
+
+&lt;p&gt;given by $F\mapsto F^*$.&lt;/p&gt;
+
+&lt;h3 id=&quot;recovering-functors&quot;&gt;Recovering functors&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; A profunctor $\mathbb{1}\nrightarrow\mathcal{C}$ is a functor (via Yoneda&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) if and only if it admits a right adjoint.
+More generally, a profunctor $\mathcal{A}\nrightarrow\mathcal{C}$, for any small category $\mathcal{A}$, is a functor (via Yoneda) if and only if it admits a right adjoint.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt; [Theorem 2, BD86].&lt;/p&gt;
+
+&lt;p&gt;We will come back to this fact later.&lt;/p&gt;
+
+&lt;h2 id=&quot;cauchy-completion&quot;&gt;Cauchy completion&lt;/h2&gt;
+
+&lt;p&gt;The &lt;em&gt;Cauchy completion&lt;/em&gt; of a (small) category $\mathcal{C}$ can be defined in many ways (as described in [BD86]), but we pick the following: the Cauchy completion of $\mathcal{C}$ is the full subcategory $\overline{\mathcal{C}}$ of $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ spanned by &lt;em&gt;absolutely presentable&lt;/em&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; presheaves.&lt;/p&gt;
+
+&lt;p&gt;The idea of Cauchy completeness for a category is in some sense meant to mirror that of Cauchy completeness of real numbers: if we think of a metric space as a category enriched over (the poset of) non-negative real numbers, then we recover this analytic notion (see [Example 3, BD86]).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; A presheaf $\mathcal{F}\in\hat{\mathcal{C}}$ is absolutely presentable if and only if it admits a right adjoint.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt; [Propositions 2 and 4, BD86].&lt;/p&gt;
+
+&lt;h2 id=&quot;internal-categories&quot;&gt;Internal categories&lt;/h2&gt;
+
+&lt;p&gt;Recall that [Theorem 2, BD86] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by [Propositions 2 and 4, BD86], are exactly those (in the case where $\mathcal{A}=\mathbb{1}$) that are in the Cauchy completion of $\mathcal{C}$).&lt;/p&gt;
+
+&lt;p&gt;Now for what motivated me to write this post: something I saw in &lt;a href=&quot;https://twitter.com/8ryceClarke&quot;&gt;Bryce Clarke&lt;/a&gt;’s talk &lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf&quot;&gt;Internal lenses as monad morphisms&lt;/a&gt; at CT2019.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Given some category $\mathcal{E}$ with pullbacks, we can define an &lt;em&gt;internal category of $\mathcal{E}$&lt;/em&gt; as a monad in the 2-category $\mathsf{Span}(\mathcal{E})$, but it is &lt;strong&gt;not&lt;/strong&gt; the case that internal functors are just (colax) morphisms of monads: &lt;strong&gt;we need to require that the 1-cell admits a right adjoint&lt;/strong&gt; (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).&lt;/p&gt;
+
+&lt;p&gt;This is now not so much of a surprising condition, since we’ve already seen that this left-adjoint condition is what ensures that profunctors are actually functors!&lt;/p&gt;
+
+&lt;p&gt;What happens then, we may well ask, if we don’t ask for this condition?
+We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[BD86] &lt;a href=&quot;http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf&quot;&gt;F. Borceux and D. Dejean. “Cauchy completion in category theory”. Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html&quot;&gt;J. Baez, &lt;em&gt;Bimodules Versus Spans&lt;/em&gt;, n-Category Café&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/0706.1286.pdf&quot;&gt;M. Shulman. &lt;em&gt;Framed bicategories and monoidal fibrations.&lt;/em&gt; arXiv: 0706.1286v2 [math.CT].&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1301.3191.pdf&quot;&gt;R. Garner and M. Shulman. &lt;em&gt;Enriched categories as a free cocompletion.&lt;/em&gt; arXiV: 1301.3191v2 [math.CT].&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;$x\cdot_{R^{\text{op}}}y:=y\cdot_R x$. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;To construct $\mathcal{C}^{\text{op}}$ we need $V$ to be braided; to be able to compose bimodules we need cocompleteness of $V$, with $\otimes$ cocontinuous in both arguments, etc. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;That is, of the form $F^*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;That is, preserves all (small) colimits. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;If you prefer more of an article-style thing to slides then take a look at the &lt;a href=&quot;http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf&quot;&gt;pre-proceedings&lt;/a&gt; from ACT2019. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Thanks again to Bryce Clarke for &lt;a href=&quot;https://twitter.com/8ryceClarke/status/1150434205031161864&quot;&gt;answering this question&lt;/a&gt;. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’. I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in #math.CT:matrix.org. What follows are some things that I learnt (mostly from [BD86]).</summary></entry><entry><title type="html">CT2019</title><link href="https://thosgood.github.io/maths/2019/07/13/ct2019.html" rel="alternate" type="text/html" title="CT2019" /><published>2019-07-13T00:00:00+00:00</published><updated>2019-07-13T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/13/ct2019</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/13/ct2019.html">&lt;p&gt;I have just come back from CT2019 in Edinburgh, and it was a fantastic week. There were a bunch of really interesting talks, and I had a chance to meet some lovely people. I also got to tell people about &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, and so hopefully that will start to pick up in the not-too-distant future.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;In no particular order, and with many glaring omissions, here are the slides from some of the talks that I really enjoyed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf&quot;&gt;Internal languages of higher toposes (Michael Shulman)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/sobocinski.pdf&quot;&gt;Graphical Linear Algebra (Pawel Sobocinski)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/riehl.pdf&quot;&gt;A formal category theory for $\infty$-categories (Emily Riehl)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/paoli.pdf&quot;&gt;Segal-type models of weak $n$-categories (Simona Paoli)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/3.pdf&quot;&gt;An Axiomatic Approach to Algebraic Topology: A Theory of Elementary $(\infty,1)$-Toposes (Nima Rasekh)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf&quot;&gt;Internal lenses as monad morphisms (Bryce Clarke)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/54.pdf&quot;&gt;Dagger limits (Martti Karvonen)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/73.pdf&quot;&gt;Hopf-Frobenius Algebras (Joseph Collins)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">I have just come back from CT2019 in Edinburgh, and it was a fantastic week. There were a bunch of really interesting talks, and I had a chance to meet some lovely people. I also got to tell people about #math.CT:matrix.org, and so hopefully that will start to pick up in the not-too-distant future.</summary></entry><entry><title type="html">Skomer island</title><link href="https://thosgood.github.io/life/2019/04/15/skomer-island.html" rel="alternate" type="text/html" title="Skomer island" /><published>2019-04-15T00:00:00+00:00</published><updated>2019-04-15T00:00:00+00:00</updated><id>https://thosgood.github.io/life/2019/04/15/skomer-island</id><content type="html" xml:base="https://thosgood.github.io/life/2019/04/15/skomer-island.html">&lt;p&gt;I haven’t posted anything in a while, and rather than trying to write about maths, I wanted to just share some lovely photos of Skomer island (which I recently visited).
+I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I’d actually seen a puffin in the flesh!&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;I am from North Devon, and just off the coast there is a small island called &lt;a href=&quot;https://en.wikipedia.org/wiki/Lundy&quot;&gt;Lundy&lt;/a&gt;, which has a very interesting history, but is also famous for being the home to one of the few Atlantic puffin colonies in the British Isles.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+In the last few decades, sadly, the number of breeding pairs of puffins has been in sharp decline, and when I went over there about 10 years ago I didn’t see a single one.
+Thanks to lots of work by dedicated volunteers, it seems like the puffin population of Lundy is slowly on the rise again, and so hopefully the future will see the return of Lundy as a puffin sanctuary.&lt;/p&gt;
+
+&lt;p&gt;Just off the west coast of Wales, in Pembrokeshire, there is another island famous for its fauna: &lt;a href=&quot;https://en.wikipedia.org/wiki/Skomer&quot;&gt;Skomer&lt;/a&gt;.
+As well as housing about half of the world’s population of &lt;a href=&quot;https://en.wikipedia.org/wiki/Manx_shearwater&quot;&gt;Manx shearwaters&lt;/a&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, being the unique home of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Skomer_vole&quot;&gt;Skomer vole&lt;/a&gt;, and having numerous other species of birds, seals, and rabbits, it also has the largest puffin colony in southern Britain.&lt;/p&gt;
+
+&lt;p&gt;Puffins are extremely cute&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; birds who mate for life, returning to the same burrows each year in order to find their partner, mate, and then leave (flying solo to the northern seas) for six or seven months, before coming back the next April.
+To quote from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Atlantic_puffin&quot;&gt;Wikipedia article&lt;/a&gt;,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Spending the autumn and winter in the open ocean of the cold northern seas, the Atlantic puffin returns to coastal areas at the start of the breeding season in late spring.
+It nests in clifftop colonies, digging a burrow in which a single white egg is laid.
+The chick mostly feeds on whole fish and grows rapidly.
+After about 6 weeks, it is fully fledged and makes its way at night to the sea.
+It swims away from the shore and does not return to land for several years.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As of 2015, the Atlantic puffin is rated ‘vulnerable’ by the International Union for the Conservation of Nature, and was reported as being ‘threatened with extinction’ by BirdLife International in 2018.&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/timhosgood/albums/72157677732207497&quot; title=&quot;Skomer island&quot;&gt;&lt;img src=&quot;https://live.staticflickr.com/7852/40648359233_c37c6a3618_z.jpg&quot; width=&quot;640&quot; height=&quot;427&quot; alt=&quot;Skomer island&quot; /&gt;&lt;/a&gt;&lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Indeed, it seems to be the case that the name &lt;em&gt;Lundy&lt;/em&gt; comes from the Old Norse word for puffin (c.f. &lt;a href=&quot;https://en.wikipedia.org/wiki/Lundey&quot;&gt;Lundey&lt;/a&gt;, off the coast of Reykjavík). &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;Interestingly, the Latin name for which is &lt;em&gt;Puffinus puffinus&lt;/em&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;No citation needed. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="life" /><category term="birds" /><summary type="html">I haven’t posted anything in a while, and rather than trying to write about maths, I wanted to just share some lovely photos of Skomer island (which I recently visited). I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I’d actually seen a puffin in the flesh!</summary></entry><entry><title type="html">Twisting cochains and arbitrary dg-categories</title><link href="https://thosgood.github.io/maths/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html" rel="alternate" type="text/html" title="Twisting cochains and arbitrary dg-categories" /><published>2018-12-12T00:00:00+00:00</published><updated>2018-12-12T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2018/12/12/twisting-cochains-and-arbitrary-dg-categories</id><content type="html" xml:base="https://thosgood.github.io/maths/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html">&lt;p&gt;Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote &lt;a href=&quot;/maths/2018/04/26/derived-dg-triangulated-and-infinity-categories.html&quot;&gt;this post&lt;/a&gt; about derived, dg-, and $A_\infty$-categories and their role in ‘homotopy things’.&lt;/p&gt;
+
+&lt;p&gt;This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; I will shamelessly refer the interested reader to &lt;del&gt;some notes I wrote a while back&lt;/del&gt;. (update: these notes have been subsumed into my PhD thesis)&lt;/p&gt;
+
+&lt;p&gt;Secondly, the ‘quirk’ of dg-categories about which I’m talking&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; is that, for a lot of people&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;, it is the (pre-)triangulated structure that is interesting.
+This means that (as far as I am aware)&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; an arbitrary dg-category lacks some sort of homotopic interpretation because it has no structure corresponding to &lt;em&gt;stability&lt;/em&gt; ‘upstairs’.
+Twisting cochains then, as they were introduced by Bondal and Kapranov&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, are a sort of solution to this problem, in that (to quote from where else but the nLab) &lt;em&gt;“passing from a dg-category to its category of twisted complexes is a step towards enhancing it to a pretriangulated dg-category”&lt;/em&gt;.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;
+In essence, they give us the ‘smallest’ ‘bigger’ dg-category in which we have shifts and functorial cones.&lt;/p&gt;
+
+&lt;p&gt;Really I am just parroting back the reasons why these things were initially invented, but it’s something that I hadn’t fully appreciated, since I’ve been working with specific types of twisted complexes (ones that somehow correspond to projective/free things and concentrated in a single degree) that really arise in what appears (to me) to be a completely different manner: namely in the setting of (O’Brian), Toledo, and Tong&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; where they are (to be vague) thought of as resolutions of coherent sheaves, or first-order perturbations of certain bicomplexes by flat connections.&lt;/p&gt;
+
+&lt;p&gt;I really have no geometric/homotopic intuition as to why this specific case of twisted complexes corresponds thusly, and haven’t been able to find any references at all.
+Any ideas?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Although for me, at least, I (tend to) use &lt;em&gt;twisted complex&lt;/em&gt; to refer to the concept of Bondal and Kapranov, and &lt;em&gt;twisting cochain&lt;/em&gt; to refer to the concept of (O’Brian), Toledo, and Tong. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Having hidden this part in the main post and not the excerpt makes me feel like I’m writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as &lt;em&gt;“Nine functors that you wouldn’t believe have derived counterparts — number six will shock you!”&lt;/em&gt; and &lt;em&gt;“You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction”&lt;/em&gt;. I apologise in advance. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;[weasel words] [citation needed] &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;which is, admittedly, best measured on the Planck scale. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;A. I. Bondal, M. M. Kapranov, “Enhanced triangulated categories”, Mat. Sb., 181:5 (1990), 669–683; Math. USSR-Sb., 70:1 (1991), 93–107. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://ncatlab.org/nlab/show/twisted+complex&quot;&gt;https://ncatlab.org/nlab/show/twisted+complex&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, “Duality and Intersection Theory in Complex Manifolds. I.”, Math. Ann., 237 (1978), 41—77. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote this post about derived, dg-, and $A_\infty$-categories and their role in ‘homotopy things’. This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</summary></entry><entry><title type="html">Torsors and principal bundles</title><link href="https://thosgood.github.io/maths/2018/10/31/torsors-and-principal-bundles.html" rel="alternate" type="text/html" title="Torsors and principal bundles" /><published>2018-10-31T00:00:00+00:00</published><updated>2018-10-31T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2018/10/31/torsors-and-principal-bundles</id><content type="html" xml:base="https://thosgood.github.io/maths/2018/10/31/torsors-and-principal-bundles.html">&lt;p&gt;In my thesis, switching between vector bundles and principal $\mathrm{GL}_r$-bundles has often made certain problems easier (or harder) to understand.
+Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book &lt;a href=&quot;https://www.springer.com/fr/book/9783319147642&quot;&gt;Principal Bundles — The Classical Case&lt;/a&gt;, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely $\mathbb{B}G$ and $\mathbb{E}G$ things therein&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that &lt;em&gt;‘affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation’&lt;/em&gt;,&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; which makes a nice short topic of discussion, whence this post.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We briefly&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; recall the definition of a principal $G$-bundle over a space $X$, where $G$ is some &lt;em&gt;topological&lt;/em&gt; group.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;principal $G$-bundle over $X$&lt;/em&gt; is a fibre bundle $P\xrightarrow{\pi}X$ with a continuous right action $P\times G\to P$ such that&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$G$ acts &lt;em&gt;freely&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;$G$ acts &lt;em&gt;transitively&lt;/em&gt; on the orbits; and&lt;/li&gt;
+  &lt;li&gt;$G$ acts &lt;em&gt;properly&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It is maybe helpful to think of the following ‘dictionary’:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;free = injective (i.e. $\exists x$ s.t. $gx=hx\implies g=h$)&lt;/li&gt;
+  &lt;li&gt;transitively = surjective (i.e. $\forall x,y$ $\exists g$ s.t. $gx=y$)&lt;/li&gt;
+  &lt;li&gt;properly = something that you care about if you care about infinite sequences or Hausdorffness or things like that (i.e. the inverse image of $G\times X\to X\times X$ given by $(g,x)\mapsto(gx,x)$ preserves compactness)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thus the fibres $F$ are homeomorphic to $G$, and also give the orbits, and the orbit space $P/G$ is homeomorphic to $X$.&lt;/p&gt;
+
+&lt;p&gt;Another definition is now useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;$G$-torsor&lt;/em&gt; is a space upon which $G$ acts &lt;em&gt;freely&lt;/em&gt; and &lt;em&gt;transitively&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Motto.&lt;/strong&gt; $G$-torsors &lt;em&gt;are&lt;/em&gt; principal $G$-bundles over a point &lt;em&gt;are&lt;/em&gt; affine versions of $G$.&lt;/p&gt;
+
+&lt;p&gt;What do we mean by this last ‘equivalence’?
+Just that $G$-torsors retain all the structure of $G$, but don’t have some specified point that acts as the identity.
+Here are some nice examples.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$\mathrm{GL}_r$-torsors are vector spaces; $\mathrm{GL}_r$-bundles are vector bundles.&lt;/li&gt;
+  &lt;li&gt;$O(r)$-torsors are vector spaces with an inner product.&lt;/li&gt;
+  &lt;li&gt;$\mathrm{GL}_r^+$-torsors are oriented vector spaces (where $\mathrm{GL}_r^+$ is the connected component of $\mathrm{GL}_r$ consisting of matrices with determinant strictly positive).&lt;/li&gt;
+  &lt;li&gt;$\mathrm{SL}_r$-torsors are vector spaces with a specified isomorphism $\det V\xrightarrow{\sim} k$, where $\det V:=\wedge_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}_r$-conjugacy class of bases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;About which I recently had a nice little Twitter conversation with &lt;a href=&quot;https://twitter.com/johncarlosbaez&quot;&gt;John Baez&lt;/a&gt;; his replies starting &lt;a href=&quot;https://twitter.com/johncarlosbaez/status/1056999200125157376&quot;&gt;here&lt;/a&gt; are really quite nice. P.S. if you are not on Twitter then I would highly recommend it: the maths community is really friendly and interesting, and if you have a little question to ask then chances are you’ll get a bunch of nice responses. Also a chance to talk to people across the globe in a completely different time zone. Don’t get me wrong, Twitter has &lt;em&gt;many&lt;/em&gt; problems, but you can ignore most of them and just follow the people that you like. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;(which I won’t talk about here because (a) I think there are many other places to read about this that are much better than something that I could write; and (b) I should be working on my thesis but I’m sort of using this post as a method of procrastination/searching for inspiration). &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;An earlier version of this post incorrectly said ‘$\mathrm{GL}_r$-torsor’; thanks to &lt;a href=&quot;https://twitter.com/BarbaraFantechi/status/1057701336291123200&quot;&gt;Barbara Fantechi for pointing this out!&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can’t think of that means ‘self-containedness’ but is actually a real word/phrase?) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry><entry><title type="html">Localisation and model categories</title><link href="https://thosgood.github.io/maths/2018/08/25/localisation-and-model-categories-part-1.html" rel="alternate" type="text/html" title="Localisation and model categories" /><published>2018-08-25T00:00:00+00:00</published><updated>2018-08-25T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2018/08/25/localisation-and-model-categories-part-1</id><content type="html" xml:base="https://thosgood.github.io/maths/2018/08/25/localisation-and-model-categories-part-1.html">&lt;p&gt;After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together.
+There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;&lt;em&gt;Notational note:&lt;/em&gt; we write $\mathcal{C}(x,y)$ instead of $\mathrm{Hom}_\mathcal{C}(x,y)$.&lt;/p&gt;
+
+&lt;h2 id=&quot;localisation-of-categories&quot;&gt;Localisation of categories&lt;/h2&gt;
+
+&lt;p&gt;Let $(\mathcal{C},\mathcal{W})$ be a pair, with $\mathcal{C}$ a category and $\mathcal{W}$ a wide subcategory (that is, a subcategory containing all the objects of $\mathcal{C}$, or, equivalently, a set of morphisms in $\mathcal{C}$).
+This data is known as a &lt;em&gt;relative category&lt;/em&gt;, which is a weaker version of a category with weak equivalences, or a homotopical category, or other such notions.&lt;/p&gt;
+
+&lt;p&gt;Often we want to &lt;em&gt;localise&lt;/em&gt; $\mathcal{C}$ along $\mathcal{W}$, i.e. ‘formally invert all morphisms in $\mathcal{W}$’.
+A nice way of making this rigorous is by defining the localisation $\mathcal{C}[\mathcal{W}^{-1}]$ (also written $\operatorname{Ho}(\mathcal{C})$ or $W^{-1}\mathcal{C}$)&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; by a universal property:&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{array}{lcr}
+    \mathcal{C} &amp; \xrightarrow{\mathcal{W}\,\mapsto\,\text{iso}_\mathcal{D}} &amp; \mathcal{D}\\
+    \quad\searrow &amp; &amp; \nearrow_{\exists!}\\
+    &amp; \mathcal{C}[\mathcal{W}^{-1}] &amp;
+\end{array} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;That is, any category (along with a functor into it) such that all morphisms in $\mathcal{W}$ become isomorphisms &lt;em&gt;must&lt;/em&gt; factor &lt;em&gt;uniquely&lt;/em&gt; through $\mathcal{C}[\mathcal{W}^{-1}]$.&lt;/p&gt;
+
+&lt;p&gt;Since our definition is in terms of a universal property, &lt;strong&gt;if&lt;/strong&gt; the localisation of a category exists then it is unique.&lt;/p&gt;
+
+&lt;h3 id=&quot;gabriel-zisman&quot;&gt;Gabriel-Zisman&lt;/h3&gt;
+
+&lt;p&gt;There is a reasonably concrete way of constructing the localisation that is called &lt;em&gt;Gabriel-Zisman&lt;/em&gt; (or sometimes &lt;em&gt;zigzag&lt;/em&gt;) &lt;em&gt;localisation&lt;/em&gt;.
+It has a few issues, which we discuss below, after giving a definition.
+This is the localisation that most people will first study in the case of constructing the derived category of complexes, or some other such example, in a course on homological algebra or algebraic geometry.&lt;/p&gt;
+
+&lt;p&gt;We define the objects of $\mathcal{C}[\mathcal{W}^{-1}]$ to be those of $\mathcal{C}$, and the morphisms to be &lt;em&gt;zigzags&lt;/em&gt; of morphisms: a morphism $x\to y$ is given by a directed graph whose vertices are objects of $\mathcal{C}$, and whose edges are labelled by arrows in $\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})$, &lt;strong&gt;modulo certain equivalence relations&lt;/strong&gt;.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
+That is, a morphism from $x=a_0$ to $y=a_{n+1}$ is given by a string of objects $a_1,\ldots,a_n\in\mathcal{C}$ with maps between them: either a map $a_i\to a_{i+1}$ in $\mathcal{C}$, or a map $a_i\leftarrow a_{i+1}$ in $\mathcal{W}$.&lt;/p&gt;
+
+&lt;p&gt;Note that, if $\mathcal{W}$ contains all identity maps (for example), then we can always insert identity maps in our zigzags to ensure that they are always of the form $f_1g_1\ldots f_ng_n$ with $f_i\in\operatorname{Arr}(\mathcal{C})$ and $g_i\in\operatorname{Arr}(\mathcal{W}^\text{op})$.&lt;/p&gt;
+
+&lt;p&gt;As you can see, arbitrary morphisms in this category can be unreasonably large (in terms of the data describing them), and so we might hope that, by placing some conditions on $\mathcal{W}$, we can globally bound the length of the zigzags.
+If fact, if $\mathcal{W}$ is a &lt;em&gt;&lt;a href=&quot;https://ncatlab.org/nlab/show/calculus+of+fractions#definition&quot;&gt;calculus of fractions&lt;/a&gt;&lt;/em&gt; then we can show that all the zigzags are actually just (co)roofs (depending on the handedness of the calculus of fractions):&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;x\to a\xleftarrow{\small\mathcal{W}} y \quad\text{or}\quad x\xleftarrow{\small\mathcal{W}}a\to y.&lt;/script&gt;
+
+&lt;p&gt;Note that we &lt;strong&gt;still&lt;/strong&gt; have an equivalence relation: two morphisms $x\xleftarrow{\mathcal{W}}a\to y$ and $x\xleftarrow{\mathcal{W}}b\to y$ are equivalent if there exists some roof $a\xleftarrow{\mathcal{W}}e\to b$ such that ‘everything commutes’.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;One potential problem with this construction (depending on how much you care about these things) is that the localisation might live only in some bigger universe, and so you have to start worrying about that.&lt;/p&gt;
+
+&lt;h3 id=&quot;dwyer-kan&quot;&gt;Dwyer-Kan&lt;/h3&gt;
+
+&lt;p&gt;Of course, just constructing a category is not usually enough these days, and we instead want to give it some higher structure.
+Enter &lt;em&gt;Dwyer-Kan&lt;/em&gt; (or &lt;em&gt;simplicial&lt;/em&gt;) localisation.&lt;/p&gt;
+
+&lt;p&gt;This is a way of constructing an $(\infty,1)$-category $L_\mathcal{W}\mathcal{C}$, realised as a &lt;em&gt;simplicial category&lt;/em&gt;.
+We talk more about simplicial categories later on, but first we quote Julia E. Bergner from &lt;a href=&quot;https://arxiv.org/abs/math/0406507&quot;&gt;“A model category structure on the category of simplicial categories”&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets.&lt;/em&gt;
+&lt;em&gt;If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$.&lt;/em&gt;
+&lt;em&gt;This notion is more restrictive than that of a simplicial object in the category of categories.&lt;/em&gt;
+&lt;em&gt;Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;First of all, note that we now require that $(\mathcal{C},\mathcal{W})$ be a &lt;em&gt;category with weak equivalences&lt;/em&gt;: all isomorphisms are in $\mathcal{W}$, and if any two of ${f,g,g\circ f}$ are in $\mathcal{W}$ then so too is the third.
+For example, any model category or homotopical category is automatically a category with weak equivalences.&lt;/p&gt;
+
+&lt;p&gt;Now then, the definition by universal property is (modulo some technical $\infty$-details) what you would expect: $L_\mathcal{W}\mathcal{C}$ is an $(\infty,1)$-category such that $\mathcal{C}$ injects into $L_\mathcal{W}\mathcal{C}$ with every morphism in $\mathcal{W}$ becoming an equivalence (in the $(\infty,1)$-sense) in $L_\mathcal{W}\mathcal{C}$, and such that any other such $(\infty,1)$-category factors ‘uniquely’ through this.&lt;/p&gt;
+
+&lt;p&gt;One such way of constructing this localisation is by &lt;em&gt;hammock localisation&lt;/em&gt;.
+For any $x,y\in\mathcal{C}$ we define their $\mathrm{Hom}$ as the simplicial set $L^\mathrm{H}(x,y)$ given by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L^\mathrm{H}(x,y) := \coprod_{n\in\mathbb{N}}\mathcal{N}(\operatorname{H}_n(x,y))/\sim&lt;/script&gt;
+
+&lt;p&gt;where $\mathcal{N}$ is the nerve (which sends a category to a simplicial set), and both the categories $\operatorname{H}_n(x,y)$ and the equivalence relation $\sim$ remain to be defined.&lt;/p&gt;
+
+&lt;p&gt;For each $n\in\mathbb{N}$ the category $\operatorname{H}_n(x,y)$ has objects being length-$n$ zigzags, as in Gabriel-Zisman localisation&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, and the morphisms are ‘hammocks’&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{array}{ccccccccc}
+    &amp;&amp;a_1&amp;\to&amp;a_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;a_n&amp;\\
+    &amp;^{\small\mathcal{W}}\swarrow&amp;&amp;&amp;&amp;&amp;&amp;\searrow\\
+    x&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;\ldots&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;y\\
+    &amp;_{\small\mathcal{W}}\nwarrow&amp;&amp;&amp;&amp;&amp;&amp;\nearrow\\
+    &amp;&amp;b_1&amp;\to&amp;b_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;b_n&amp;
+\end{array} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;i.e. commutative diagrams of zigzags, where the ‘linking’ arrows are all in $\mathcal{W}$.
+The equivalence relations are the ‘natural’ ones: we can insert or remove identity maps, and compose any composable morphisms.&lt;/p&gt;
+
+&lt;h3 id=&quot;comparison&quot;&gt;Comparison&lt;/h3&gt;
+
+&lt;p&gt;Now then, we can ask how this ‘new’ localisation is related to the ‘old’ one, and we can answer this question with the following lemma.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\pi_0(L_\mathcal{W}\mathcal{C}(x,y))\simeq\mathcal{C}[\mathcal{W}^{-1}]$.&lt;/p&gt;
+
+&lt;p&gt;For this post, that’s it, but my next post will talk about how we can extend these ideas to localise &lt;em&gt;quasi-categories&lt;/em&gt;, and how the Bergner model structure on simplicial categories comes into the story.
+This will, in particular, let us formalise the fact that taking the homotopy category of a category (whenever this makes sense, e.g. for quasi-categories) is somehow equivalent to localising the category along weak equivalences.
+The lemma that we’ll look at is the following (where we’ve yet to define the right-hand side).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\mathcal{C}[\mathcal{W}^{-1}]\simeq\mathrm{h}L\mathcal{C}$.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Julia E. Bergner, “A model category structure on the category of simplicial categories”, &lt;a href=&quot;https://arxiv.org/abs/math/0406507&quot;&gt;arXiv:math/0406507&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;V. Hinich, “Dwyer-Kan localization revisited”, &lt;a href=&quot;https://arxiv.org/abs/1311.4128&quot;&gt;arXiv:1311.4128&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;W.G. Dwyer and D.M. Kan, “Calculating simplicial localizations”, &lt;a href=&quot;https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf&quot;&gt;&lt;em&gt;available online&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Pierre Gabriel, Michel Zisman, “Calculus of Fractions and Homotopy Theory”, &lt;a href=&quot;http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf&quot;&gt;&lt;em&gt;available online&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;There are so many things that ‘homotopy category’ or ‘$\operatorname{Ho}(\mathcal{C})$’ or ‘$\operatorname{h}(\mathcal{C})$’ can mean, so the context is always very important &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;This diagram is horribly formatted. I am lost without &lt;code class=&quot;highlighter-rouge&quot;&gt;tikz-cd&lt;/code&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;These are just to ensure that composition and the identity morphism behave as expected. See &lt;a href=&quot;https://ncatlab.org/nlab/show/localization#general_construction&quot;&gt;the nLab&lt;/a&gt; for details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;I think of the diagram you want to show commutes as a tiny house of cards, two layers high. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together. There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.</summary></entry><entry><title type="html">Categorication of the Dold-Kan correspondence</title><link href="https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html" rel="alternate" type="text/html" title="Categorication of the Dold-Kan correspondence" /><published>2018-08-16T00:00:00+00:00</published><updated>2018-08-16T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence</id><content type="html" xml:base="https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html">&lt;p&gt;So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’.
+Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;There was a talk yesterday on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8635&quot;&gt;$\mathbb{F}_1$ things&lt;/a&gt; by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8633&quot;&gt;moduli spaces of connections on open varieties&lt;/a&gt; as well as one by Damien Calaque (my co-supervisor) on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8617&quot;&gt;$\mathbb{E}_n$-algebras and vertex models&lt;/a&gt;, all of which I managed to follow at least partially (take what you can get, I guess).
+Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8648&quot;&gt;categorified Dold-Kan correspondence&lt;/a&gt;.
+I don’t really want to talk about the details (because I’m not at all qualified to do so, and you’d be better served by going directly to the source), but something that I really enjoyed was a ‘dictionary’ that he presented.&lt;/p&gt;
+
+&lt;p&gt;Historically, the first step towards ‘groupification’ was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
+Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable $\infty$-categories: we can turn homological algebra into &lt;em&gt;categorified homological algebra&lt;/em&gt;, and, taking inspiration from Serge Lang’s famous ‘exercise’ in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.
+To do so, we need to know what the classical constructions become in this higher-category language, whence the dictionary.&lt;/p&gt;
+
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;classical&lt;/th&gt;
+      &lt;th&gt;categorified&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;abelian group $A$&lt;/td&gt;
+      &lt;td&gt;stable $\infty$-category $\mathscr{A}$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$x\in A$&lt;/td&gt;
+      &lt;td&gt;$X\in\mathscr{A}$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$y-x\in A$&lt;/td&gt;
+      &lt;td&gt;$\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$\sum_{i=0}^n(-1)^i x_i\in A$&lt;/td&gt;
+      &lt;td&gt;$\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}$&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$C\cong A\oplus B$&lt;/td&gt;
+      &lt;td&gt;$\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Note that the difference of two elements $X,Y$ in the categorified language depends on the choice of some morphism between them, so there are lots of ‘values’ of “$X-Y$”, one for each $f\colon X\to Y$.
+The last line (corresponding to a direct sum) is a semi-orthogonal decomposition.
+Finally, we need to define what $\mathrm{Tot}$ is.&lt;/p&gt;
+
+&lt;p&gt;For $n=1$, we have already defined that $\mathrm{Tot}$ is given by $\mathrm{cone}$.
+For $n=2$, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_cartesian).
+For $n=3$ we embed the above cube as the face of a 4-dimensional cube, and take a colimit, etc. etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg&quot; alt=&quot;Defining Tot for length 3 complexes.&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’. Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.</summary></entry></feed>

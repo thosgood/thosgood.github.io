@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Cauchy completion and profunctors</title>
+
+
+  <meta name="description" content="An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’. I managed (luckily) to get a chance to ask Mike Shulman a...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2019/07/14/cauchy-completion-and-profunctors.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Cauchy completion and profunctors</h1>
+        
+    <p><time class="post-date" datetime="2019-07-14T00:00:00+00:00" itemprop="datePublished">
+      
+      14 July, 2019
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#bimodules">Bimodules</a>
+    <ol>
+      <li><a href="#classically">Classically</a></li>
+      <li><a href="#categorically">Categorically</a></li>
+    </ol>
+  </li>
+  <li><a href="#profunctors-distributors-bimodules-or-whatever">Profunctors, distributors, bimodules, or whatever</a>
+    <ol>
+      <li><a href="#yoneda">Yoneda</a></li>
+      <li><a href="#recovering-functors">Recovering functors</a></li>
+    </ol>
+  </li>
+  <li><a href="#cauchy-completion">Cauchy completion</a></li>
+  <li><a href="#internal-categories">Internal categories</a></li>
+  <li><a href="#references">References</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’.
+I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in <a href="https://www.matrix.to/#/#math.CT:matrix.org"><code class="highlighter-rouge">#math.CT:matrix.org</code></a>.
+What follows are some things that I learnt (mostly from [BD86]).</p>
+
+<!--more-->
+
+<h2 id="bimodules">Bimodules</h2>
+
+<p>A good place to begin is with the definition of a <em>bimodule</em>.</p>
+
+<h3 id="classically">Classically</h3>
+
+<p>Given rings $R$ and $S$, we say that an abelian group $M$ is an <em>$(R,S)$-bimodule</em> if it is a left $R$-module and a right $S$-module <strong>in a compatible way</strong>: we ask that $(rm)s=r(ms)$.</p>
+
+<p>Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that $M$ be a right module over $R^{\text{op}}\otimes_{\mathbb{Z}}S$ (or, equivalently, a left module over $R\otimes_{\mathbb{Z}}S^{\text{op}}$), where $R^{\text{op}}$ is the <em>opposite</em> ring of $R$, given by just ‘turning the multiplication around’.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h3 id="categorically">Categorically</h3>
+
+<p>Modulo a bunch of technical conditions on the categories involved,<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> a <em>bimodule</em> is a $\mathcal{V}$-functor (i.e. a functor of $\mathcal{V}$-enriched categories) $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$.</p>
+
+<p>We can recover the previous definition similar to how we can recover the definition of an $R$-module as an $\mathsf{Ab}$-enriched functor $R^{\text{op}}\to\mathsf{Ab}$. Or, taking $\mathcal{V}=\mathsf{Vect}$, and $\mathcal{C}=\mathbb{B}A$, $\mathcal{D}=\mathbb{B}B$, with $A$ and $B$ both vector spaces, we recover the notion of a vector space with a left $A$-action and a right $B$-action.</p>
+
+<p>A fundamental example that seems a bit different from this algebraic one, however, arises when we take $\mathcal{V}=\mathsf{Set}$ and $\mathcal{C}=\mathcal{D}$ to be arbitrary (small) categories.
+Then the hom functor $\mathcal{C}(-,-)\colon\mathcal{C}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$ is a bimodule.
+This suggests that we should maybe somehow think of bimodules as generalised hom functors, where the objects can live in a different category.</p>
+
+<p>As a small aside, there is some hot debate about whether to use $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$ or $\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}$, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors $\mathcal{C}\to\mathcal{D}$ give you profunctors by composition with the <strong>covariant</strong> Yoneda embedding, as opposed to the contravariant one.
+But the two are formally dual, so it’s really not the biggest of issues.</p>
+
+<h2 id="profunctors-distributors-bimodules-or-whatever">Profunctors, distributors, bimodules, or whatever</h2>
+
+<p>Of course, lots of people have different preferences for names, but a <em>profunctor</em> is (using the convention of Borceux and Dejean) a functor $\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$.
+People often write such a thing as $\mathcal{C}\nrightarrow\mathcal{D}$.
+We can define their compositions via colimits or coends:</p>
+
+<script type="math/tex; mode=display">Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)</script>
+
+<p>(although we don’t really care so much about this post).</p>
+
+<h3 id="yoneda">Yoneda</h3>
+
+<p>Every functor $F\colon\mathcal{C}\to\mathcal{D}$ gives a profunctor $F^*\colon\mathcal{C}\nrightarrow\mathcal{D}$ by setting</p>
+
+<script type="math/tex; mode=display">F^*(d,c) = \mathcal{D}(d,Fc),</script>
+
+<p>and $F^*$ has a right adjoint $F_*\colon\mathcal{D}\nrightarrow\mathcal{C}$ given by</p>
+
+<script type="math/tex; mode=display">F_*(c,d) = \mathcal{D}(Fc,d),</script>
+
+<p>where we define adjunctions of profunctors using the classical notion of natural transformations.</p>
+
+<p>If we write $\mathbb{1}$ to mean the category with one object and one (identity) (endo)morphism then any (small) category $\mathcal{C}$ can be identified with the functor category $\mathsf{Fun}(\mathbb{1},\mathcal{C})$, and the presheaf category $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ is just the category $\mathsf{Profun}(\mathbb{1},\mathcal{C})$.
+Then the Yoneda embedding is the inclusion</p>
+
+<script type="math/tex; mode=display">\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})</script>
+
+<p>given by $F\mapsto F^*$.</p>
+
+<h3 id="recovering-functors">Recovering functors</h3>
+
+<p><strong>Theorem.</strong> A profunctor $\mathbb{1}\nrightarrow\mathcal{C}$ is a functor (via Yoneda<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>) if and only if it admits a right adjoint.
+More generally, a profunctor $\mathcal{A}\nrightarrow\mathcal{C}$, for any small category $\mathcal{A}$, is a functor (via Yoneda) if and only if it admits a right adjoint.</p>
+
+<p><strong>Proof.</strong> [Theorem 2, BD86].</p>
+
+<p>We will come back to this fact later.</p>
+
+<h2 id="cauchy-completion">Cauchy completion</h2>
+
+<p>The <em>Cauchy completion</em> of a (small) category $\mathcal{C}$ can be defined in many ways (as described in [BD86]), but we pick the following: the Cauchy completion of $\mathcal{C}$ is the full subcategory $\overline{\mathcal{C}}$ of $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ spanned by <em>absolutely presentable</em><sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> presheaves.</p>
+
+<p>The idea of Cauchy completeness for a category is in some sense meant to mirror that of Cauchy completeness of real numbers: if we think of a metric space as a category enriched over (the poset of) non-negative real numbers, then we recover this analytic notion (see [Example 3, BD86]).</p>
+
+<p><strong>Lemma.</strong> A presheaf $\mathcal{F}\in\hat{\mathcal{C}}$ is absolutely presentable if and only if it admits a right adjoint.</p>
+
+<p><strong>Proof.</strong> [Propositions 2 and 4, BD86].</p>
+
+<h2 id="internal-categories">Internal categories</h2>
+
+<p>Recall that [Theorem 2, BD86] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by [Propositions 2 and 4, BD86], are exactly those (in the case where $\mathcal{A}=\mathbb{1}$) that are in the Cauchy completion of $\mathcal{C}$).</p>
+
+<p>Now for what motivated me to write this post: something I saw in <a href="https://twitter.com/8ryceClarke">Bryce Clarke</a>’s talk <a href="http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf">Internal lenses as monad morphisms</a> at CT2019.<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup></p>
+
+<p>Given some category $\mathcal{E}$ with pullbacks, we can define an <em>internal category of $\mathcal{E}$</em> as a monad in the 2-category $\mathsf{Span}(\mathcal{E})$, but it is <strong>not</strong> the case that internal functors are just (colax) morphisms of monads: <strong>we need to require that the 1-cell admits a right adjoint</strong> (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).</p>
+
+<p>This is now not so much of a surprising condition, since we’ve already seen that this left-adjoint condition is what ensures that profunctors are actually functors!</p>
+
+<p>What happens then, we may well ask, if we don’t ask for this condition?
+We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup></p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>[BD86] <a href="http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf">F. Borceux and D. Dejean. “Cauchy completion in category theory”. Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.</a></li>
+  <li><a href="https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html">J. Baez, <em>Bimodules Versus Spans</em>, n-Category Café</a></li>
+  <li><a href="https://arxiv.org/pdf/0706.1286.pdf">M. Shulman. <em>Framed bicategories and monoidal fibrations.</em> arXiv: 0706.1286v2 [math.CT].</a></li>
+  <li><a href="https://arxiv.org/pdf/1301.3191.pdf">R. Garner and M. Shulman. <em>Enriched categories as a free cocompletion.</em> arXiV: 1301.3191v2 [math.CT].</a></li>
+</ul>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>$x\cdot_{R^{\text{op}}}y:=y\cdot_R x$. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>To construct $\mathcal{C}^{\text{op}}$ we need $V$ to be braided; to be able to compose bimodules we need cocompleteness of $V$, with $\otimes$ cocontinuous in both arguments, etc. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>That is, of the form $F^*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>That is, preserves all (small) colimits. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>If you prefer more of an article-style thing to slides then take a look at the <a href="http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf">pre-proceedings</a> from ACT2019. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Thanks again to Bryce Clarke for <a href="https://twitter.com/8ryceClarke/status/1150434205031161864">answering this question</a>. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2019/07/14/cauchy-completion-and-profunctors.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

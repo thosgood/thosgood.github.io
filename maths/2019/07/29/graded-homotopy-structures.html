@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Graded homotopy structures</title>
+
+
+  <meta name="description" content="As I mentioned in the previous post, I recently saw a talk by Rachel Hardeman on the A-homotopy theory of graphs, and it really intrigued me. In particular, ...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/homotopy-theory"><nobr>homotopy-theory</nobr></a></li>
+          
+            <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+          
+            <li><a href="/tag/questions"><nobr>questions</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Graded homotopy structures</h1>
+        
+    <p><time class="post-date" datetime="2019-07-29T00:00:00+00:00" itemprop="datePublished">
+      
+      29 July, 2019
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#preliminaries">Preliminaries</a></li>
+  <li><a href="#graded-homotopy-structure">“Graded homotopy” structure</a></li>
+  <li><a href="#questions">Questions</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>As I mentioned in <a href="/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html">the previous post</a>, I recently saw a talk by <a href="http://math.ucalgary.ca/math_unitis/profiles/1-7046986">Rachel Hardeman</a> on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in <a href="https://www.matrix.to/#/#math.CT:matrix.org"><code class="highlighter-rouge">#math.CT:matrix.org</code></a>, I’ve decided to post it here, in the hope that I might be able to get some answers.</p>
+
+<!--more-->
+
+<p>The main reference is [RH19] Rachel Hardeman. <em>Computing A-homotopy groups using coverings and lifting properties</em>. <a href="https://arxiv.org/abs/1904.12065">arXiv: 1904.12065</a>.</p>
+
+<h3 id="preliminaries">Preliminaries</h3>
+
+<ul>
+  <li>Graphs $G$ consist of <em>vertices</em> $V(G)$ and <em>edges</em> $E(G)$, where we write the edge between vertices $s$ and $t$ as $[s,t]$. All graphs are assumed to be <em>simple</em> (no multiple edges between any two points or loops on a single point) and have a <em>distinguished vertex</em> $x\in V(G)$. We write $(G,x)$ to mean the graph along with its distinguished vertex.</li>
+  <li>A <em>(weak) graph homomorphism</em> $\varphi\colon (G,x)\to(H,y)$ is a map of sets $V(G)\to V(H)$ such that, for all $[s,t]\in E(G)$, either $\varphi(s)=\varphi(t)$ or $[\varphi(s),\varphi(t)]\in E(H)$. It is said to be <em>based</em> if $\varphi(x)=y$.</li>
+  <li>The <em>cartesian product</em> $G\mathbin{\square} H$ of the graphs $(G,x)$ and $(H,y)$ is the graph with vertex set $V(G)\times V(H)$, with distinguished vertex $(x,y)$, and with an edge between $(s,u)$ and $(t,v)$ whenever
+    <ul>
+      <li>$s=t$ and $[u,v]\in E(H)$; or</li>
+      <li>$u=v$ and $[s,t]\in E(G)$.</li>
+    </ul>
+  </li>
+  <li>The <em>path of length $n$</em>, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $[i,i+1]$ for $i=0,\ldots,n-1$. The <em>path of infinite length</em>, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.</li>
+  <li>We say that two graphs homomorphisms $\varphi,\psi\colon(G,x)\to(H,y)$ are <em>A-homotopic</em>, written $\varphi\simeq_A\psi$, if there exists some $n\in\mathbb{N}$ and a graph homomorphism $h\colon G\mathbin{\square} I_n\to H$ such that
+    <ul>
+      <li>$h(s,0) = \varphi(s)$ for all $s\in V(G)$;</li>
+      <li>$h(s,n) = \psi(s)$ for all $s\in V(G)$; and</li>
+      <li>$h(x,i)=y$ for all $0\leqslant i\leqslant n$.</li>
+    </ul>
+
+    <p>We say that two graphs $G$ and $H$ are <em>A-homotopic</em> if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi\simeq_A\operatorname{id}_G$ and $\varphi\circ\psi\simeq_A\operatorname{id}_H$.</p>
+  </li>
+  <li><strong>N.B.</strong> A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs $C_n$ and $C_m$ (for $m,n\geqslant 3$) are A-homotopic if and only if $m=n$, and $C_n$ is contractible (i.e. homotopic to the graph with a single point and no edges) for $n=3,4$, but not for any $n\geqslant 5$.</li>
+  <li>The <em>A-homotopic fundamental group</em> of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in [RH19].</li>
+</ul>
+
+<h3 id="graded-homotopy-structure">“Graded homotopy” structure</h3>
+
+<p>Given two A-homotopic graph homomorphisms $\varphi\simeq_A\psi$ we can ask for the <em>minimal</em> such $n\in\mathbb{N}$ in the definition of the A-homotopy. We then say that the A-homotopy is an <em>$n$-homotopy</em>, and we extend this definition slightly to allow for the fact that we can trivially consider an $n$-homotopy as an $(n+1)$-homotopy (in $n+1$ various ways, corresponding to the classical idea of simplicial (co)face/(co)degeneracy (depending on your choice of nomenclature) maps). That is, we say $n$-homotopic to mean “$m$-homotopic with $m\leqslant n$”.</p>
+
+<p>We say that two graphs $G,H$ are <em>$n$-homotopic</em> if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi$ is $m_1$-homotopic to $\operatorname{id}_G$ and $\varphi\circ\psi$ is $m_2$-homotopic to $\operatorname{id}_H$, with $\operatorname{max}{m_1,m_2}=n$.</p>
+
+<p>Then we can consider the category $\mathsf{Grph}_n$, which has objects being equivalence classes of $n$-homotopic graphs, and morphisms being equivalence classes of $n$-homotopic graph homomorphisms. This gives us the following structure:</p>
+
+<ul>
+  <li>$\mathsf{Grph}_0 = \mathsf{Grph}$;</li>
+  <li>$\mathsf{Grph}_\infty = \mathrm{Ho}(\mathsf{Grph})$;</li>
+  <li>functors $\mathsf{Grph}_n \to \mathsf{Grph}_{n+1}$ that are surjective on objects, where functoriality relies on the fact that $n$-homotopies can be considered as $(n+1)$-homotopies.</li>
+</ul>
+
+<p>We can think of the number $n$ as some sort of “complexity” of the homotopy: small $n$ correspond to “homotopies that can be performed in a few steps” (here it is a good idea to see some of the examples in [RH19] to get an idea of how graph homotopies behave).</p>
+
+<h3 id="questions">Questions</h3>
+
+<p>If anybody has any answers to, or comments about, the following questions (or this post in general) then please don’t hesitate to get in touch!</p>
+
+<ol>
+  <li>What is this structure? Some sort of enrichment? Does it already have a name?</li>
+  <li>What other examples exist? For example, it would be nice to get something similar for the category of chain complexes of an abelian category, but I see no way a priori of assigning “complexity” to a homotopy for an arbitrary choice of abelian category. If things are enriched over metric spaces, however, then this is a different story…</li>
+  <li>It seems believable that we could define something analogous with $\mathbb{R}^{\geqslant0}$ instead of $\mathbb{N}$. Could we do so for arbitrary (bounded-below) posets?</li>
+  <li>Does this tie in to the idea of “approximate composition” (c.f. <a href="http://www.cs.ox.ac.uk/ACT2019/preproceedings/Walter%20Tholen%20Approximate%20composition%20(revised).pdf">Walter Tholen’s talk on metagories at ACT2019</a>).</li>
+</ol>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/homotopy-theory"><nobr>homotopy-theory</nobr></a></li>
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+          <li><a href="/tag/questions"><nobr>questions</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

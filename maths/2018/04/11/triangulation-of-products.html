@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Triangulations of products of triangulations</title>
+
+
+  <meta name="description" content="At a conference this week, I ended up having a conversation with Nicolas Vichery and Eduard Balzin about why simplices are the prevalent choice of geometric ...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2018/04/11/triangulation-of-products.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/algebraic-topology"><nobr>algebraic-topology</nobr></a></li>
+          
+            <li><a href="/tag/quick-tip"><nobr>quick-tip</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Triangulations of products of triangulations</h1>
+        
+    <p><time class="post-date" datetime="2018-04-11T00:00:00+00:00" itemprop="datePublished">
+      
+      11 April, 2018
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#footnotes">Footnotes</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>At a conference this week, I ended up having a conversation with Nicolas Vichery and Eduard Balzin about why simplices are the prevalent choice of geometric shape for higher structure, as opposed to e.g. cubes or globes.</p>
+
+<!--more-->
+
+<p>I know there are a bunch of nice properties that simplices have that other shapes don’t have<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>
+Nicolas, however, showed me a great little calculation that solves this problem.
+Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.</p>
+
+<p>If we take the (geometric realisation of the) 1-cube (the interval $[0,1]$), then we can take the product with itself to get $[0,1]\times[0,1]$, which is automatically the 2-cube.
+More generally, any product of cubes will itself be a cube.
+For simplices, however, this is not at all immediate: think of the problem of trying to find a triangulation for a product of spaces when calculating simplicial homology in an undergraduate course, for example.
+Explicitly, if we take the product of the (geometric realisations of) two 1-simplices (the interval $[0,1]$ again), then we, as above, get the space $[0,1]\times[0,1]$, which is not a $\Delta$-complex (in the language of Hatcher).
+To triangulate this space, we need to add a 1-simplex along the diagonal of the square.</p>
+
+<p><img src="/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg" alt="Cubes work, simplices don't" title="Cubes work, simplices don't" /></p>
+
+<p>This isn’t too hard to see, but for arbitrary triangulations of spaces, it’s much harder to see what extra simplices we need to add to their product to recover a triangulation.
+Even if we <em>can</em> figure out how to do it for hard examples, then we still would need a way to describe an algorithm for doing it to <em>any</em> product space.
+But there is a ‘trick’, which works as follows: write your simplices as simplicial sets, <strong>including degeneracies</strong>,<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup> and then take the product in the category of simplicial sets.</p>
+
+<p>Consider our example of $\Delta^1\times\Delta^1$, i.e. $[0,1]\times[0,1]$.
+Define the simplicial set $X_\bullet$ by</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+    X_0 &= \{[0], [1]\}\\
+    X_1 &= \{[0,0],[0,1],[1,1]\}\\
+    X_2 &= \{[0,0,0],[0,0,1],[0,1,1],[1,1,1]\}\\
+    &\vdots
+\end{align*} %]]></script>
+
+<p>that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points 0 and 1; and the 1-simplices correspond to the line from 0 to 1, as well as the two degenerate ‘lines’ from 0 to 0 and from 1 to 1_.</p>
+
+<p>When we apply geometric realisation, these degenerate simplices will ‘vanish’, and so we can just look at what the non-degenerate 1-simplices of $X_\bullet\times X_\bullet$ are to see what happens in terms of triangulation.
+There are nine 1-simplices in the product:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+   &[0,0]\times[0,0], [0,0]\times[0,1], [0,0]\times[1,1],\\
+   &[0,1]\times[0,0], [0,1]\times[0,1], [0,1]\times[1,1],\\
+   &[1,1]\times[0,0], [1,1]\times[0,1], [1,1]\times[1,1].
+\end{align*} %]]></script>
+
+<p>Five of these are non-degenerate,<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> and the one that interests us is $[0,1]\times[0,1]$: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.</p>
+
+<p><img src="/assets/post-images/2018-04-11-triangulation-of-products-result.jpg" alt="The final result" title="The final result" /></p>
+
+<p>In essence, the idea is simple, but it’s a trick that I’d never seen before, and it really makes me ‘believe’ in simplices.</p>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is <em>not</em> strict, but becomes strict when we consider cubes with connections. See (as always) the <a href="https://ncatlab.org/nlab/show/test+category#examples">nLab page on test categories</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>I mean, what follows doesn’t really answer what we were actually discussing at all (why simplices are the ‘right’ choice, if they even are), but just assuaged one of my doubts about the niceness of simplices that originally led me to wonder about this problem in the first place. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Geometrically, this means we take ‘lines’ that are actually points, ‘triangles’ that are actually lines or points, etc. Algebraically, this means that we take simplices in the image of the degeneracy maps $s_i^p\colon\Delta_p\to\Delta_{p+1}$ given by $s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]$. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/algebraic-topology"><nobr>algebraic-topology</nobr></a></li>
+        
+          <li><a href="/tag/quick-tip"><nobr>quick-tip</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2018/04/11/triangulation-of-products.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

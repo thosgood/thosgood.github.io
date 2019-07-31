@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Weighted limits, ends, and Day convolution (Part 2)</title>
+
+
+  <meta name="description" content="[See part 1 here] Using the idea of weighted limits, defined in the last post, we can now talk about ends. The idea of an end is that, given some functor $F\...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2018/02/15/day-convolution-part-2.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Weighted limits, ends, and Day convolution</h1>
+        
+    <p><time class="post-date" datetime="2018-02-15T00:00:00+00:00" itemprop="datePublished">
+      
+      15 February, 2018
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#ends">Ends</a>
+    <ol>
+      <li><a href="#definitions-and-settings">Definitions and settings</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ol>
+  </li>
+  <li><a href="#manipulation-and-ninja-yoneda">Manipulation and ninja Yoneda</a></li>
+  <li><a href="#much-better-references">Much better references</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p><em>[See part 1 <a href="/maths/2017/12/08/day-convolution-part-1.html">here</a>]</em></p>
+
+<p>Using the idea of weighted limits, defined in the last post, we can now talk about <strong>ends</strong>.
+The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$, which we can think of as defining both a left and a right action on $\prod_{c\in\mathcal{C}}F(c,c)$, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
+Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that <em>forces</em> the two actions to agree.</p>
+
+<!--more-->
+
+<p><strong>Edit:</strong> If you actually want to learn this stuff then have a look at either of Emily Riehl’s books (<a href="http://www.math.jhu.edu/~eriehl/cathtpy.pdf">Categorical Homotopy Theory</a> and <a href="http://www.math.jhu.edu/~eriehl/context.pdf">Category Theory in Context</a>).
+I honestly don’t think there is a better teaching of this anywhere else in the literature.</p>
+
+<h2 id="ends">Ends</h2>
+
+<h3 id="definitions-and-settings">Definitions and settings</h3>
+
+<p>We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.</p>
+
+<p>First, let $\mathcal{C}$ and $\mathcal{D}$ be $\mathcal{V}$-enriched categories (with $\mathcal{V}$ a closed symmetric monoidal category) and $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ a $\mathcal{V}$-functor.
+Then the <strong>end</strong> of $F$, written $\int_\mathcal{C} F$ is (<em>if it exists!</em>) the $\mathrm{Hom}_\mathcal{C}$-weighted limit of $F$:</p>
+
+<script type="math/tex; mode=display">\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.</script>
+
+<p>Dually, the <strong>coend</strong> of $F$, written $\int^\mathcal{C} F$, is</p>
+
+<script type="math/tex; mode=display">\int^{c\in\mathcal{C}} F(c,c) := \mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.</script>
+
+<p>Alternatively now, suppose that we have some $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ between not-necessarily-enriched categories.
+We can still define the end by using <strong>wedges</strong>.
+A <strong>wedge</strong> $e\colon w\to F$ is the data of an object $e\in\mathcal{D}$ and morphisms $e_c\colon w\to F(c,c)$ such that, for any $f\colon c\to c’$, the following diagram commutes:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{ccc}
+w & \xrightarrow{e_{c'}} & F(c',c')\\
+^{e_c}\Big\downarrow\,\,\,\, & & _{F(f,\mathrm{id})}\Big\downarrow\qquad\\
+F(c,c) & \xrightarrow{F(\mathrm{id},f)} & F(c,c')
+\end{array} %]]></script>
+
+<p>Then we can define the end as a <em>universal</em> wedge $w$ (if it exists), i.e. any other wedge $w’$ factors uniquely through $w’\to w$</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>I’m going to talk more about the exciting examples and applications of ends (tensor products of categories, geometric realisation, and Day convolution) in the next post in this series, but I would feel awful if I didn’t mention at least a couple here.</p>
+
+<p>One application of ends is in defining <strong>natural transformations</strong>, which shows how overarching the concept is.
+It is pretty much a triviality (from the definitions)<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup> that</p>
+
+<script type="math/tex; mode=display">[\mathcal{C},\mathcal{D}](F,G) \cong \int_{c\in\mathcal{C}} \mathcal{D}\big(F(c),G(c)\big).</script>
+
+<p>This is a nice way of saying it, because it means that we can get the enriched natural transformations of enriched functors “for free” by defining them in exactly this way.</p>
+
+<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from the nLab</a>) is when we take $\mathcal{V}=\mathbb{R}_{\geqslant0}\cup{\infty}$, with the monoidal product given by addition.
+Then a $\mathcal{V}$-enriched category is a metric space, and the hom objects tell us the distance between points.
+Further, given two maps $f,g\colon X\to Y$ between two metric spaces, the distance between the maps is exactly the enriched functor-category<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup> (given by the end)</p>
+
+<script type="math/tex; mode=display">[X,Y](f,g) = \int _{x\in X} Y(f(x),g(x)) = \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.</script>
+
+<p>Finally, for the moment, there is the example of <strong>Kan extensions</strong>.
+If we have some $\mathcal{V}$-enriched category $\mathcal{D}$ that is tensored<sup id="fnref:6"><a href="#fn:6" class="footnote">4</a></sup> over $\mathcal{V}$, and some functors $F\colon\mathcal{C}\to\mathcal{D}$ and $p\colon\mathcal{C}\to\mathcal{B}$, then the <strong>left Kan extension</strong> of $F$ along $p$ is given by the coend:</p>
+
+<script type="math/tex; mode=display">\mathrm{Lan}F = \int^{c\in\mathcal{C}} \mathrm{Hom}(p(c),-)\odot F(c)</script>
+
+<p>where $\odot$ is the co-power.</p>
+
+<p>In particular then, we see that the generalisation of limits to weighted limits is ‘at least as general as’ the idea of Kan extensions.</p>
+
+<h2 id="manipulation-and-ninja-yoneda">Manipulation and ninja Yoneda</h2>
+
+<p>It’s often useful to know the following fact: <em>continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)</em>.
+In particular,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+    \mathcal{D}\left( d,\int_\mathcal{C} F \right) &\cong \int_\mathcal{C} \mathcal{D}(d,F)\\
+    \mathcal{D}\left( \int^\mathcal{C} F, d \right) &\cong \int_\mathcal{C} \mathcal{D}(F,d).
+\end{align*} %]]></script>
+
+<p>We can also rephrase the Yoneda lemma<sup id="fnref:3"><a href="#fn:3" class="footnote">5</a></sup> in terms of ends, as well as finding a <strong>co-Yoneda lemma</strong>.<sup id="fnref:2"><a href="#fn:2" class="footnote">6</a></sup>
+The Yoneda lemma (in the setting of $\mathcal{V}$-enriched categories) reads</p>
+
+<script type="math/tex; mode=display">[\mathcal{C}^\mathrm{op},\mathcal{V}](\mathcal{C}(-,c),F) \cong F(c)</script>
+
+<p>and so can be rephrased as</p>
+
+<script type="math/tex; mode=display">F \cong \int_{c\in\mathcal{C}} \mathcal{C}(c,-)\otimes F(c)</script>
+
+<p>whence we find the co-Yoneda lemma:</p>
+
+<script type="math/tex; mode=display">F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c).</script>
+
+<h2 id="much-better-references">Much better references</h2>
+
+<p>If you really want to read about ends then you my friend are in the wrong place.
+Here are some papers and blog posts that I found interesting and really well written:</p>
+
+<ol>
+  <li><a href="https://arxiv.org/abs/1501.02503">This is the (co)end, my only (co)friend</a></li>
+  <li><a href="https://arxiv.org/abs/1604.01670">Coends in conformal field theory</a></li>
+  <li><a href="https://golem.ph.utexas.edu/category/2014/01/ends.html">Ends</a>, on the the n-Category Café</li>
+  <li><a href="https://bartoszmilewski.com/2017/03/29/ends-and-coends/">Ends and coends</a>, on Bartosz Milewski’s Programming Cafe</li>
+</ol>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>A subobject of an object $y$ is a (class of isomorphisms of) monomorphism(s) into $y$. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>One thing that I’ve learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to <em>accept</em> that something is a triviality without really thinking about <em>why</em> it’s trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year’s resolution is to always prove that trivialities are trivial. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>I’m not sure if this should be ‘enriched functor-category’ or ‘enriched-functor category’. My first thought was the latter, because it’s the category of enriched functors, but I suppose that it’s clearer that our natural transformations are also enriched if we describe this as ‘the functor category enriched over $\mathcal{V}$’. But then, I tend to overuse hyphens when there’s more than one adjective, just to be extra safe. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>‘Tensor’ is another name for ‘co-power’, i.e. a $\mathcal{V}$-category $\mathcal{E}$ is <strong>tensored over $\mathcal{V}$</strong> if all pairs of objects $(x,k)$, where $x\in\mathcal{E}$ and $k\in\mathcal{V}$, have a <strong>co-power</strong>: an object $k\odot x$ along with a natural isomorphism $\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k, \mathcal{C}(x,-))$, where $\mathcal{V}(-,-)$ is the internal hom in $\mathcal{V}$. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>When phrased in terms of ends, this is sometimes called <em>Yoneda reduction</em>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This presentation of the (co-)Yoneda lemma is <a href="https://mathoverflow.net/a/20451">sometimes referred to</a> as the <em>ninja Yoneda lemma</em>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2018/02/15/day-convolution-part-2.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

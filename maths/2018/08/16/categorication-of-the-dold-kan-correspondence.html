@@ -10,15 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Tim Hosgood — Blog</title>
+  <title>Tim Hosgood — Categorication of the Dold-Kan correspondence</title>
 
 
-  <meta name="description" content="">
+  <meta name="description" content="So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’. Lots of the tal...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
-  <link rel="canonical" href="https://thosgood.github.io/blog/">
+  <link rel="canonical" href="https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html">
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
@@ -143,7 +143,7 @@
                 
                   
                     
-                      <a class="page-link page-link-active" href="/blog/">Blog</a>
+                      <a class="page-link" href="/blog/">Blog</a>
                     
                   
                 
@@ -228,142 +228,147 @@
    
       <div class="wrapper">
    
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<!--   <header class="post-header">
-    <h1 class="post-title">Blog</h1>
-  </header> -->
+  <header class="post-header">
 
-  <div class="post-content">
-   
-    <div class="fixed">
+    <div class="post-navigation">
 
-  <p class="page-description">This blog is a collection of reading notes of things that I try to learn. Often they are nothing more than summaries of various pages on the nLab, but collated, (over)simplified, and reordered to be more easily understood by, e.g., me. There will almost certainly be mistakes and bad viewpoints, so <i>caveat lector</i>.</p>
+      <a href="/blog">&#8701; Back to all posts</a>
 
-  <ul class="post-list">
-
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+          
+      
+        </ul>
     
 
-  </ul>
-
-
-  <div class="pagination">
-    
-    
-      <!-- <span class="page-nav-inactive">&llarr;</span> -->
-      <span class="page-nav-inactive">&larr;</span>
+    </div>
     
 
-    
-      <a href="/blog" class="page-nav">1</a>
-    
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Categorication of the Dold-Kan correspondence</h1>
         
-    
-        
-    
-      <span class="page-nav-inactive">&rarr;</span>
-      <!-- <span class="page-nav-inactive">&rrarr;</span> -->
-    
+    <p><time class="post-date" datetime="2018-08-16T00:00:00+00:00" itemprop="datePublished">
+      
+      16 August, 2018
+    </time></p>
+
+  </header>
+
+  
+  
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’.
+Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.</p>
+
+<!--more-->
+
+<p>There was a talk yesterday on <a href="http://www.mpim-bonn.mpg.de/node/8635">$\mathbb{F}_1$ things</a> by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on <a href="http://www.mpim-bonn.mpg.de/node/8633">moduli spaces of connections on open varieties</a> as well as one by Damien Calaque (my co-supervisor) on <a href="http://www.mpim-bonn.mpg.de/node/8617">$\mathbb{E}_n$-algebras and vertex models</a>, all of which I managed to follow at least partially (take what you can get, I guess).
+Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a <a href="http://www.mpim-bonn.mpg.de/node/8648">categorified Dold-Kan correspondence</a>.
+I don’t really want to talk about the details (because I’m not at all qualified to do so, and you’d be better served by going directly to the source), but something that I really enjoyed was a ‘dictionary’ that he presented.</p>
+
+<p>Historically, the first step towards ‘groupification’ was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
+Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable $\infty$-categories: we can turn homological algebra into <em>categorified homological algebra</em>, and, taking inspiration from Serge Lang’s famous ‘exercise’ in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.
+To do so, we need to know what the classical constructions become in this higher-category language, whence the dictionary.</p>
+
+<table class="bordered-table">
+  <thead>
+    <tr>
+      <th>classical</th>
+      <th>categorified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>abelian group $A$</td>
+      <td>stable $\infty$-category $\mathscr{A}$</td>
+    </tr>
+    <tr>
+      <td>$x\in A$</td>
+      <td>$X\in\mathscr{A}$</td>
+    </tr>
+    <tr>
+      <td>$y-x\in A$</td>
+      <td>$\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}$</td>
+    </tr>
+    <tr>
+      <td>$\sum_{i=0}^n(-1)^i x_i\in A$</td>
+      <td>$\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}$</td>
+    </tr>
+    <tr>
+      <td>$C\cong A\oplus B$</td>
+      <td>$\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle$</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that the difference of two elements $X,Y$ in the categorified language depends on the choice of some morphism between them, so there are lots of ‘values’ of “$X-Y$”, one for each $f\colon X\to Y$.
+The last line (corresponding to a direct sum) is a semi-orthogonal decomposition.
+Finally, we need to define what $\mathrm{Tot}$ is.</p>
+
+<p>For $n=1$, we have already defined that $\mathrm{Tot}$ is given by $\mathrm{cone}$.
+For $n=2$, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_cartesian).
+For $n=3$ we embed the above cube as the face of a 4-dimensional cube, and take a colimit, etc. etc.</p>
+
+<p><img src="/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg" alt="Defining Tot for length 3 complexes." class="img-responsive" /></p>
+
 
   </div>
 
 
-  
+  <hr>
 
 
+  <div class="post-navigation">
 
+    <a href="/blog">&#8701; Back to all posts</a>
 
+    
+      <ul class="tag-list">
 
-<ul class="tag-cloud">
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
 
-  <li id="all-tags-tag">
-    <a href="/tag/all"><nobr>all tags</nobr></a>
-  </li>
-
-  
+      </ul>
     
-    
-    <li>
-      <a href="/tag/category-theory"><nobr>category-theory</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/algebraic-topology"><nobr>algebraic-topology</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/spectra"><nobr>spectra</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/operads"><nobr>operads</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/homotopy-theory"><nobr>homotopy-theory</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/quick-tip"><nobr>quick-tip</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/questions"><nobr>questions</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/quantum-physics"><nobr>quantum-physics</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/quantum-computing"><nobr>quantum-computing</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/differential-geometry"><nobr>differential-geometry</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/complex-geometry"><nobr>complex-geometry</nobr></a>
-    </li>
-  
-    
-    
-    <li>
-      <a href="/tag/birds"><nobr>birds</nobr></a>
-    </li>
-  
-  
-</ul>
-
-  
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
-
   
   </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
 
 </article>
 

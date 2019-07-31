@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Derived, DG, triangulated, and infinity-categories</title>
+
+
+  <meta name="description" content="This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and $A_\infty$-categories, and wondered how they...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2018/04/26/derived-dg-triangulated-and-infinity-categories.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Derived, DG, triangulated, and infinity-categories</h1>
+        
+    <p><time class="post-date" datetime="2018-04-26T00:00:00+00:00" itemprop="datePublished">
+      
+      26 April, 2018
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#warnings">Warnings</a></li>
+  <li><a href="#a-nice-diagram">A nice diagram</a></li>
+  <li><a href="#unresolved-confusions">Unresolved confusions</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and $A_\infty$-categories, and wondered how they all linked together.
+In particular, as an undergraduate I was always confused as to what the difference was between the two steps of constructing the derived category of chain complexes was: taking equivalence classes of chain homotopic complexes; and then formally inverting all quasi-isomorphisms.
+Both of them seemed to be some sort of quotienting/equivalence-class-like action, so why not do them at the same time?
+What different roles were played by each step?</p>
+
+<!--more-->
+
+<p><em>This post could have many errors, and I don’t understand the proofs for many of the things I vaguely imply; I just mildly believe.</em>
+<em>Please do let me know if there is anything grossly misleading or just plain wrong.</em></p>
+
+<h2 id="warnings">Warnings</h2>
+
+<p>First of all, there are two points that I want to make about choices of language that I think are really very confusing.</p>
+
+<ol>
+  <li>When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: a <strong>derived category</strong> is like a homotopy truncation (i.e. the $\pi_0$) of some thing with much higher homotopical data; a <strong>derived scheme/stack/whatever</strong> is something whose $\pi_0$ is the corresponding classical object.
+ Derived ‘algebraic/geometric objects’ <em>have</em> homotopy truncations; derived categories <em>are</em> homotopy truncations.</li>
+  <li>When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category $K(\mathcal{A})$ the <strong>homotopy category of chain complexes</strong>.
+ This is maybe not the best nomenclature, in some sense, because the category that ‘truly’ deserves this name is the <em>actual</em> homotopy category of chain complexes $\mathrm{Ho}\mathsf{Ch}(\mathcal{A})$, which is, by definition, the derived category $D(\mathcal{A})$.
+ Because of this, I won’t refer to $K(\mathcal{A})$ as anything but $K(\mathcal{A})$.</li>
+</ol>
+
+<h2 id="a-nice-diagram">A nice diagram</h2>
+
+<p>Without further ado, here is a diagram that attempts to explain the relationships between various things that you might have learnt about in various places.</p>
+
+<p><img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png" alt="How things all sort of fit together" title="How things all sort of fit together" /></p>
+
+<p>Here are a few words about the above diagram.</p>
+
+<ul>
+  <li>The structure of a <em>triangulated category</em> is essentially the structure that the category $\mathrm{Ho}(\mathcal{C})$ inherits from the fact that $\mathcal{C}$ is a <em>stable</em> $(\infty,1)$-category.
+  The equivalent notion in the more general case (the left-hand side of the diagram) is the structure inherent to $\mathrm{h}(\mathcal{C})$ from an $(\infty,1)$-category viewed as a quasi-category (and thus, in particular, simplicial set).</li>
+  <li>A <em>stable dg-category</em> is also known as an <em>enhanced triangulated category</em> or a <em>pretriangulated category</em>.</li>
+  <li>If we wanted to draw a column in the middle for <em>stable</em> $(\infty,1)$-categories that <em>aren’t necessarily linear</em>, then we’d arrive at the notion of a <em>spectral category</em> instead of a dg-category.</li>
+</ul>
+
+<p>Now here is a picture of where the derived category of chain complexes fits in to all this.</p>
+
+<p><img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png" alt="Where does the derived category fit in?" title="Where does the derived category fit in?" /></p>
+
+<p>Here are a few words about the above diagram.</p>
+
+<ul>
+  <li>We can understand the definition of <em>chain homotopies</em> much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval object in chain complexes</a>.</li>
+  <li>
+    <p>As said at the beginning of this post, there <em>is</em> a difference between passing from $\mathsf{Ch}(\mathcal{A})$ to $K(\mathcal{A})$ and from $K(\mathcal{A})$ to $D(\mathcal{A})$, i.e. quotienting and localising have no reason to behave similarly<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.
+  <em>But</em>, there is a model structure that we can put on $\mathsf{Ch}(\mathcal{A})$, and so there <em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by Simon Henry</a>,
+  <em>“The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen’s “Homotopical Algebra” (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects.”</em></p>
+
+    <p>There is, however, the slightly confusing fact that the construction of $K(\mathcal{A})$ as a quotient <em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
+  </li>
+</ul>
+
+<h2 id="unresolved-confusions">Unresolved confusions</h2>
+
+<p>I still don’t fully see the link between the homotopy category $\mathrm{h}(\mathcal{C})$ and the homotopy category $\mathrm{Ho}(\mathcal{C})$ and localisation in general (e.g. I ‘know’ that $\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))$, where $\mathrm{L}$ is the simplicial localisation, but that’s about it).</p>
+
+<p>You know what?
+There are a lot of things that I still don’t understand, but oh my goodness am I having fun trying to figure it all out.</p>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Namely <em>derived algebraic geometry</em>, and its siblings, and its cousins, and etc. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Think of rings (for some reason localisations and quotients of rings don’t look as confusingly similar to me as the categorical versions do). <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2018/04/26/derived-dg-triangulated-and-infinity-categories.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

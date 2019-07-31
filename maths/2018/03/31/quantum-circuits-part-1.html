@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Quantum circuits (Part 1)</title>
+
+
+  <meta name="description" content="I am not at all a physicist, and my knowledge of quantum physics in particular comes solely from undergraduate courses that I followed years ago, and any rea...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/maths/2018/03/31/quantum-circuits-part-1.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+
+
+  
+      
+
+
+
+
+
+
+
+
+
+  
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+      <nav class="site-nav">
+
+        <div class="trigger">
+
+          
+            <a class="page-link" href="/">About</a>
+          
+
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/blog/">Blog</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/papers/">Papers</a>
+                    
+                  
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+            
+          
+              
+              
+                
+                  
+                    
+                      <a class="page-link" href="/teaching/">Teaching</a>
+                    
+                  
+                
+            
+          
+              
+              
+          
+
+        </div>
+
+      </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+      
+        <ul class="tag-list">
+  
+          
+            <li><a href="/tag/quantum-physics"><nobr>quantum-physics</nobr></a></li>
+          
+            <li><a href="/tag/quantum-computing"><nobr>quantum-computing</nobr></a></li>
+          
+      
+        </ul>
+    
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Quantum circuits</h1>
+        
+    <p><time class="post-date" datetime="2018-03-31T00:00:00+00:00" itemprop="datePublished">
+      
+      31 March, 2018
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#foundational-ideas">Foundational ideas</a>
+    <ol>
+      <li><a href="#quantum-interference">Quantum interference</a></li>
+      <li><a href="#axiomatics">Axiomatics</a></li>
+    </ol>
+  </li>
+  <li><a href="#classical-circuits">Classical circuits</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>I am not at all a physicist, and my knowledge of quantum physics in particular comes solely from undergraduate courses that I followed years ago, and any reading I can get done when feeling mathematical but not inclined to work on my thesis.
+However, after scanning through some papers by <a href="https://arxiv.org/abs/math/0512103">Bartlett</a>, <a href="https://arxiv.org/abs/0908.2469">Baez, Lauda</a>, and <a href="https://arxiv.org/abs/0905.0465">Lurie</a>, my interest in quantum physics, and quantum computing especially, has come back with a vengeance.</p>
+
+<!--more-->
+
+<p><em>The following is aimed at people who have maybe read some things about quantum physics before and know some linear algebra.</em></p>
+
+<p>Quantum computing has fascinated me ever since  I first studied it at university, despite being a self-proclaimed ‘non-physicist’, swearing to do only ‘mathematical maths’ and none of this applied stuff (a shameful phase that I am really glad I outgrew).
+This is without a doubt almost entirely due to the incredible teaching of <a href="http://www.arturekert.org">Artur Ekert</a>, whose lectures were probably the best that I ever experienced as an undergrad/masters student.
+Really, most of what I’m going to say comes from notes I took in these lectures, so hopefully I don’t distort them too much.</p>
+
+<p>One of the reasons that I’m posting this, apart from to help me to not forget it, is that quantum physics has such a strong link to $n$-category theory, but I don’t know at all really how quantum computing fits into this <a href="https://ncatlab.org/nlab/show/nPOV">nPOV</a> picture.
+As a naive guess, I would think that there is some `string diagram’ approach to all this, but I’d need to sit down and have a think about what exactly that would be…
+So if anybody has any comments or references then I’d be more that interested to hear them!</p>
+
+<h2 id="foundational-ideas">Foundational ideas</h2>
+
+<p>Before jumping in to the jacuzzi that is quantum circuitry, let’s dip our toes in the vast ocean of <strong>quantum physics axiomatisation</strong>.
+First of all though, a note on quantum computers in practice.
+There are a bunch of companies that make ‘quantum computers’ (for example the <a href="https://www.dwavesys.com">D-Wave</a>) but these are of a completely different species to those that we’re going to have a look at.
+These computers work using <a href="https://en.wikipedia.org/wiki/Quantum_annealing">quantum annealing</a> – a sort of quantum version of <a href="http://www.wikiwand.com/en/Simulated_annealing">thermal annealing</a>; what I’m going to talk about are <a href="http://www.wikiwand.com/en/Quantum_Turing_machine">universal quantum computers</a>.
+Quantum annealing lets you implement so-called hill-climbing algorithms, but many of the famous quantum algorithms, like Shor’s, cannot be implemented in this way.Quantum annealing lets you implement so-called hill-climbing algorithms, but many of the more well-known quantum algorithms, such as <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm?oldformat=true">Shor’s</a>, cannot be implemented in this way.
+I hate to be a cynic about something in which I am far from an expert, but it seems to me that calling systems like the D-Wave ‘quantum computers’ is a way to boost sales by using not-entirely-false-but-definitely-misleading buzzwords.<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup></p>
+
+<p>Another very important point is that <strong>quantum algorithm complexity</strong> is by no means trivial.
+Said in another way, there are some things that quantum computers can do so much better than classical ones (e.g. prime factorisation), but they are neither ‘better’ nor ‘faster’ overall: there are some things that they are much <em>worse</em> at than classical computers.
+Expecting a quantum computer to be able to run arbitrary programs quicker than a classical computer is somewhat akin to expecting an otter to be able to drink a pint of water quicker than a pigeon could, simply because an otter swims faster in water.<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></p>
+
+<p>Anyway, with that aside, let’s go get our feet wet.</p>
+
+<h3 id="quantum-interference">Quantum interference</h3>
+
+<p>Here is an experimental fact that you can read about in who-knows-how-many places and find numerous videos of: if we send a particle through a barrier with two tiny (really really tiny) holes (or <em>slits</em>, to agree with the name <strong>double-slit experiment</strong>) and place a detector on the other side, it is <em>not necessarily</em> true that the particle reaches the detector with probability $p_1+p_2$, where $p_i$ is the probability of the particle going through the $i$-th hole.
+In fact, the probability is given by</p>
+
+<script type="math/tex; mode=display">p_1 + p_2 + 2\sqrt{p_1p_2}\cos(\varphi_1-\varphi_2)</script>
+
+<p>where $\varphi_i$ are numbers, called the <strong>phase</strong>, associated to the $p_i$ (we describe what exactly they are in a bit).
+This means that the total probability depends on the <strong>relative phase</strong> of the system: the value $\vert\varphi_1-\varphi_2\vert$.
+Sometimes this <em>will</em> agree with $p_1+p_2$, and sometimes <em>not</em>.</p>
+
+<p>The point is, the <strong>Kolmogorov additivity axiom</strong> (the probability of two <em>mutually exclusive</em> events is the sum of the probabilities of the constituent events) seems to fail – but why?
+As a result of decades of thinking and experiments and failed ideas, the theory that seems the ‘most likely’ is that of <strong>quantum theory</strong>, which says in particular that <em>the particle passes through both slits simultaneously</em>, and so the events of passing through each slit individually are <em>not</em> mutually exclusive at all.
+This does seem to explain the formula for the probability of detection that we described above: the only way that it can depend on $\varphi_1-\varphi_2$ is if the particle ‘interacts’ with both paths each time it passes through the barrier.</p>
+
+<p>I’m not going to talk much more about actual quantum physics, since there are so many great references written about it already, and I am also not a physicist, and even less so an experimental quantum physicist.
+However, it’s good to have this basic understanding of quantum physics to really understand how quantum computers work: in some sense that we will make precise, they follow <em>all</em> computational paths at the same time, and give an answer that depends on <em>all</em> of the results.</p>
+
+<p>It is very natural, reading this, to wonder why it is that we don’t experience quantum effects in our daily lives.<sup id="fnref:1"><a href="#fn:1" class="footnote">3</a></sup>
+You can try throwing a ball at a wall with two open windows as much as you want, but you’ll never have it go through both windows simultaneously.
+The answer is the very thing that’s stopping us from being able to actually build quantum computers with our current technology: <strong>decoherence</strong>.
+Simply put, no physical system is really truly separate from the external environment – there is always gravity of far away objects pulling on things, and even being able to <em>look</em> at a physical system means that there are photons passing through and touching things and generally being a nuisance.
+Decoherence, then, is when the external environment ‘gets in the way’ of our very delicate teeny tiny quantum systems, and influences the <strong>interference term</strong> (the term with the relative phase) in such a way that we can’t recover it.
+This also ties in with the fact that, given any ‘quantum theorem’ (i.e. formula or equation for a quantum system), if we make all the ‘quantum terms’ tend to zero then we should recover the corresponding ‘classical theorem’.
+Later on we will talk about decoherence again, and look at what it means explicitly in terms of quantum circuits, but to begin with we just sort of ignore it and work in an ideal world where we can get rid of it entirely.</p>
+
+<h3 id="axiomatics">Axiomatics</h3>
+
+<p>In our discussion of the double-slit experiment we mentioned how there were ‘extra’ numbers $\varphi_i$ associated to the probabilities $p_i$, so let’s try to formalise that now.
+Quantum theory suggests that we work with <strong>probability amplitudes</strong> instead of <strong>probabilities</strong>.
+That is, rather than just saying an event happens with probability $p$ for some real number $0\leqslant p\leqslant1$, we say that it has <strong>associated probability amplitude $z$</strong>, where $z$ is some complex number such that $\vert z\vert\leqslant1$, and then the probability of the event occurring is exactly $|z|$.
+The way that amplitudes behave are very similar to they ways that probabilities behave: the amplitude associated to two events occurring one after the other is the <em>product</em> $z_1z_2$ of their probability amplitudes; the amplitude associated to an event that can occur in two different ways it the sum $z_1+z_2$ of the amplitudes associated to the individual ways.
+In fact, writing our complex numbers as $z=|z|e^{i\varphi}$, we can recover the probability in the double-slit experiment:</p>
+
+<script type="math/tex; mode=display">|z_1+z_2|^2 = |z_1|^2 + |z_2|^2 + z_1^*z_2 + z_1z_2^* = p_1 + p_2 + 2\sqrt{p_1p_2}\cos(\varphi_1-\varphi_2).</script>
+
+<p>The other generalisation of classical things that we work with is the idea of a <strong>qubit</strong>.
+The classical idea of a <strong>bit</strong> is that we can store information by encoding things in binary and then, for example, inducing a charge between the plates of a capacitor to represent a 1, and leaving it uncharged to represent a 0.
+To make this quantum, we can look at storing our data not on capacitors but on electrons, or using polarisation of light.
+For example, we could say that an electron in its <strong>ground state</strong> (its lowest energy state) represents a 0, and if it’s in a higher energy state then it represents a 1.
+So far so good, but what’s new?
+Well, by shining light of varying frequencies and brightness for varying durations, we can change the electron’s energy state, but if we shine light at, for example, half the brightness, then we will find that our electron is now in a state that can’t be described classically: it’s in a <strong>coherent superposition</strong> of states.
+These are states where the electron is in <em>both energy levels at once</em>, similar to how the particle went through both slits at once.</p>
+
+<p>Again, I’m not really the best person to explain this, but the idea is that, experimentally, we can prepare particles in such a way that, when we measure their energy, sometimes we find that they’re in their ground state, and other times they’re in their higher energy state (and anything that we can prepare consistently like this we call a <strong>qubit</strong>; we call one of the states $\vert0\rangle$ and the other $\vert1\rangle$).<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>
+But, you may be saying, how do we know that it isn’t simply the case that some of the particles we prepare are already in one state, and the others in another state?
+That is, imagine the two following scenarios:</p>
+
+<ol>
+  <li>We have an electron in an ‘equal’ superposition (it’s in both states ‘in equal amounts’) and we measure its energy</li>
+  <li>We have a bag containing two electrons, one in state $\vert0\rangle$ and the other in state $\vert1\rangle$. We pick one randomly and measure its energy.</li>
+</ol>
+
+<p>In both cases, when we measure the energy of the particle we will find it to be in state $\vert0\rangle$ or state $\vert1\rangle$ with equal probability (50%), so how does this supposed ‘superposition particle’ differ from a particle with a randomly picked state?
+Well, experimentally, we can show a difference, but maybe more convincingly we can give a good mathematical reason why these two situations are completely different.
+To do so <em>properly</em>, we need at least the basics of quantum circuitry, but we can describe the proof right now.</p>
+
+<p>If it were the case that sending a pulse of light at the electron that puts it in a 50/50 superposition were the same as simply setting the electron to state $\vert0\rangle$ or $\vert1\rangle$ randomly, then firing this same beam of light <em>twice</em> in a row at the same electron should be the same as firing it once.
+In other words, if we randomly set it to 0 or 1, and then randomly set it <em>again</em> to 0 or 1, it’s the same as randomly setting it to 0 or 1 just once.
+<em>But</em> (and here’s the kicker), we can show that <em>every single time</em> you start with an electron in state $\vert0\rangle$ and hit it with this pulse of light two times in a row, what you actually end up with is an electron in state $\vert1\rangle$.
+<em>Every single time.</em>
+It’s a hard thing to understand when you first meet it (and still even after the second and third encounters), but coherent superpositions are not at all the same as a particle being in a randomly chosen state – it really is a particle that is in both states at once.</p>
+
+<p>There is a bunch of really exciting ‘quantum philosophy’ that asks questions like, “if quantum theory is wrong in some way, then can any of it still be right, or does it all break down if we find one problem?”, and “how can we tell that there isn’t a <em>hidden variable</em>?”, i.e. “how do we know that the result of our measurement of a particle isn’t predetermined?”.
+What is really astonishing is that quantum theory is in some sense more general and powerful that quantum theory.
+What do I mean by this?
+Well, as an example that I still think about in awe, even if quantum theory is completely entirely ‘wrong’, in that the universe works by some entirely different theory, then we can <em>still</em> use quantum physics to produce truly random data.
+This doesn’t sound very exciting or big, but if you say it in a different way you can see why people would get so worked up about it: <em>if all of our lab equipment is made by some private corporation that we don’t trust, and we want to produce a random number, then using quantum physics we can do so with <strong>complete certainty</strong>,<sup id="fnref:10"><a href="#fn:10" class="footnote">5</a></sup> even if the equipment has been tampered with to produce certain states of particles more often than others, or to produce seemingly random states that are actually just following a predetermined order.</em></p>
+
+<p>I don’t want to be turning quantum physics into sensationalism now, so this comes with the obvious caveat that doing things in practice is usually really hard.
+A quote I remember hearing from Artur is that <em>“in theory there is no difference between theory and practice, but in practice there is”</em>.
+But, even so, wow this stuff is cool.</p>
+
+<p>Awed ravings aside,<sup id="fnref:5"><a href="#fn:5" class="footnote">6</a></sup> let’s briefly end this section on axiomatisation by actually stating what our axiomatisation is.
+This isn’t going to be entirely self-contained for those new to maths I’m afraid – I’m going to freely talk about vector spaces and complex numbers and matrices and the like (basically, <em>linear algebra over $\mathbb{C}$</em>).</p>
+
+<p>The following is all experimentally inspired and guided, but it still a purely <em>mathematical</em> formalism.
+So far it seems to agree with every physical experiment we can throw at it, but we won’t worry too much about this, and instead just see what happens if we play around with the maths, and leave physical implementations to the physicists (though we won’t forget that, whenever something seems to pop up out of thin air, it’s almost always because it’s been suggested to exist by some experimental experiences).</p>
+
+<hr />
+
+<ol>
+  <li>
+    <p>A <strong>qubit</strong> is any object that can be reliably prepared to be in one of two states (or any superposition therein), manipulated, and measured.
+ Any qubit can be described by a <strong>state vector</strong>:<sup id="fnref:6"><a href="#fn:6" class="footnote">7</a></sup> a qubit in state $\vert0\rangle$ with probability amplitude $\alpha_0$ and state $\vert1\rangle$ with probability amplitude $\alpha_1$ is represented by the unit vector with entries $\alpha_0$ and $\alpha_1$</p>
+
+    <script type="math/tex; mode=display">\alpha_0\vert1\rangle + \alpha\vert1\rangle \longleftrightarrow \begin{pmatrix}\alpha_0\\\alpha_1\end{pmatrix}.</script>
+
+    <p>This means that the qubit is in an $\alpha_0\colon\alpha_1$ coherent superposition, and so when measured it will be in state $\vert0\rangle$ with probability $\vert\alpha_0\vert^2$ and in state $\vert1\rangle$ with probability $\vert\alpha_1\vert^2$.</p>
+
+    <p>Note that we ignore <strong>global phase</strong>: if we have a qubit in the state $e^{i\vartheta}(\alpha_0\vert1\rangle + \alpha\vert1\rangle)$ then this is the same as a qubit in the state $\alpha_0\vert1\rangle + \alpha\vert1\rangle$.
+ We do <strong>not</strong>, however, ignore <strong>local phase</strong>: $\alpha_0\vert1\rangle + e^{i\vartheta}\alpha\vert1\rangle$ is <strong>not</strong> the same as $\alpha_0\vert1\rangle + \alpha\vert1\rangle$.</p>
+  </li>
+  <li>
+    <p>Qubits are modified by <strong>quantum evolutions</strong>: redistributions of the amplitudes between the states (for example, the changes of energy induced by pulses of light on an electron qubit).
+ Admissible quantum evolutions are described by complex isometries, in particular by <strong>unitary matrices</strong>.
+ For example, the matrix</p>
+
+    <script type="math/tex; mode=display">% <![CDATA[
+\begin{pmatrix}0&-1\\1&0\end{pmatrix} %]]></script>
+
+    <p>sends the basis state $\vert0\rangle$ to $\vert1\rangle$, and the basis state $\vert1\rangle$ to $-\vert0\rangle$, and extends linearly to act on any superposition $\vert\Psi\rangle = \alpha_0\vert0\rangle + \alpha_1\vert1\rangle$.</p>
+  </li>
+  <li>
+    <p>We take <strong>measurements</strong> corresponding to our choice of basis states $\vert0\rangle$ and $\vert1\rangle$.
+ As mentioned above, the probability of the outcomes of any measurement are given by the moduli of the probability amplitudes, and the choice of basis consists of distinguishable states, so the outcomes of any measurement are mutually exclusive.<sup id="fnref:7"><a href="#fn:7" class="footnote">8</a></sup></p>
+  </li>
+  <li>
+    <p>For multiple qubits (and composite systems in general), the corresponding state vectors are the unit vectors in the tensor product of the Hilbert spaces associated to each individual system, e.g. a system consisting of two qubits is described by the complex Hilbert space $\mathbb{C}^2\otimes\mathbb{C}^2$, and so state vectors are of the form</p>
+
+    <script type="math/tex; mode=display">\begin{pmatrix}\alpha_0\\\alpha_1\end{pmatrix}\otimes\begin{pmatrix}\beta_0\\\beta_1\end{pmatrix}.</script>
+
+    <p>The evolutions are then described by tensor products of the relevant unitary matrices.</p>
+
+    <p><strong>Edit.</strong> More about this at the end of the post.</p>
+  </li>
+</ol>
+
+<hr />
+
+<p> </p>
+
+<p>Finally, for this section, an important note on measurements and the troublesome notion of <strong>collapsing</strong>.
+When we have some particle in a coherent superposition and then measure it, we find it in state $\vert0\rangle$ with probability $\vert\alpha_0\vert$.
+But then, after the measurement, the particle is in state $\vert0\rangle$, <em>full stop</em>; there is now no uncertainty, and we know that we can measure this particle over and over and always find it in state $\vert0\rangle$.
+Even more worryingly, the original state $\alpha_0\vert0\rangle+\alpha_1\vert1\rangle$ is completely irretrievable.
+This seems to be a contradiction to our assumptions on quantum evolutions: this ‘collapse’ that follows a measurement is not described by a hermitian operator (in particular, it’s not invertible, since we lose the original state), but instead something far more blunt and sudden.</p>
+
+<p>There are many ways of dealing with this problem, but the important thing to note is that measurements can still be described in exactly the same way as all other quantum processes, and aren’t subject to a different axiomatisation or something.<sup id="fnref:8"><a href="#fn:8" class="footnote">9</a></sup>
+However, for the moment, it’s a convenient way of thinking that simplifies the maths (and conceptualisation) to just think of measurements as collapses.</p>
+
+<h2 id="classical-circuits">Classical circuits</h2>
+
+<p>Finally for this post, we’ll talk a bit about classical circuits.
+Let’s take a single bit, which can be in one of two states: $\vert0\rangle$ (off) and $\vert1\rangle$ (on).
+Using the same notation as before, we can use a 2-vector to describe the state of this bit:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align*}
+    \begin{pmatrix}1\\0\end{pmatrix} \,\,\leftrightarrow\, &\vert0\rangle \leftrightarrow \text{off}\\
+    \begin{pmatrix}0\\1\end{pmatrix} \,\,\leftrightarrow\, &\vert1\rangle \leftrightarrow \text{on}.
+\end{align*} %]]></script>
+
+<p>Then we can describe the four classical computations on a single bit by matrices:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{cccc}
+    \begin{pmatrix}1&0\\0&1\end{pmatrix} & \begin{pmatrix}0&1\\1&0\end{pmatrix} & \begin{pmatrix}1&1\\0&0\end{pmatrix} & \begin{pmatrix}0&0\\1&1\end{pmatrix}\\[1em]
+    \text{IDENTITY} & \text{NOT} & \text{CONSTANT-0} & \text{CONSTANT-1}
+\end{array} %]]></script>
+
+<p>If we have two bits, we can use that $\mathbb{R}^2\otimes\mathbb{R}^2\cong\mathbb{R}^4$ to write state vectors in the form</p>
+
+<script type="math/tex; mode=display">\begin{pmatrix}\delta_a\\1-\delta_a\end{pmatrix}\otimes \begin{pmatrix}\delta_b\\1-\delta_b\end{pmatrix} \longleftrightarrow \begin{pmatrix}\delta_a\otimes\delta_b\\\delta_a\otimes(1-\delta_b)\\(1-\delta_a)\otimes\delta_b\\(1-\delta_a)\otimes(1-\delta_b)\end{pmatrix}</script>
+
+<p>for $\delta_a,\delta_b\in{0,1}$.</p>
+
+<p>Then, for example, a gate that acts as NOT on the first bit and as the CONSTANT1 gate on the second bit would be given by<sup id="fnref:9"><a href="#fn:9" class="footnote">10</a></sup> the matrix</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{pmatrix}0&1\\1&0\end{pmatrix} \otimes \begin{pmatrix}0&0\\1&1\end{pmatrix} = \begin{pmatrix}0&0&0&0\\0&0&1&1\\0&0&0&0\\1&1&0&0\end{pmatrix}. %]]></script>
+
+<hr />
+
+<p><strong>Edit.</strong> Somehow I forgot to talk about <strong>entanglement</strong>, so let me fix that now with a small update.</p>
+
+<p>When we have a multi-particle system (e.g. two qubits), then the states of this joint system are described by tensor products, as we said in our four-point axiomatisation.
+This means that states of the form</p>
+
+<script type="math/tex; mode=display">\vert0\rangle\otimes\vert0\rangle = \vert0\rangle\vert0\rangle = \vert00\rangle</script>
+
+<p>(where the latter two equalities are just us introducing some shorthand notation) describe our system.
+However, not every element of a tensor product is a tensor of elements in each component: they are <em>linear combinations</em> of such things.
+For example,</p>
+
+<script type="math/tex; mode=display">\alpha\vert00\rangle + \beta\vert01\rangle = \vert0\rangle\otimes(\alpha\vert0\rangle + \beta\vert1\rangle)</script>
+
+<p>but</p>
+
+<script type="math/tex; mode=display">\alpha\vert00\rangle + \beta\vert11\rangle</script>
+
+<p><em>cannot</em> be written in the form $\vert \Psi_a\rangle\otimes\vert \Psi_b\rangle$.</p>
+
+<p>We call states in the former form (tensors of states of the composite systems) <strong>pure states</strong>, and the latter form (states that don’t ‘split’ as a state in each composite system) <strong>entangled states</strong>, because somehow the two systems are interacting with each other in such a way that we can’t ‘pull them apart’.</p>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p>In general, it seems that quantum physics shares the fate of Gödel’s incompleteness theorems – to be misquoted and misapplied for the purpose of sensationalism. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>To be fair, I have neither witnessed an otter-pigeon swimming race nor an otter-pigeon drinking race, so this could be a flawed analogy. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>Well, in some way we <em>do</em>, because quantum theory governs fundamental actions of particles themselves, which sort of make up everything, so of course we’re affected. But what I mean here is that we don’t tend to see things in two places at once, or witness ‘mutually exclusive’ events simultaneously. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>So, in our example, an electron in its ground state is said to be in state $\vert0\rangle$, and in its higher energy state its said to be in state $\vert1\rangle$, <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>Whatever this might actually mean… <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Enthusiasm isn’t a substitute for knowledge, so I really hope that I haven’t said anything misleading here. If it were the case that being really excited about everything counted the same as understanding it all, then I’d be a much better mathematician. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>We always need a <em>choice of basis</em>, because this is equivalent to being able to interpret a qubit ‘as a 0 or a 1’. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>This is a possible sticky wicket. A particle can be in a superposition of states, but any measurement will result in just <em>one</em> state; we can’t actually <em>observe</em> a superposition. See the comments in a bit about measurement and collapse. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>What even <em>is</em> measurement? The more you think about it and try to define it, the more you realise what a tricky concept it is. It’s when an observer learns information about a quantum system, but then, what is an observer? And how do we formalise the idea of ‘gaining information about something’? There is a lot of ‘quantum philosophy’ here, and many ways of answering these questions. Personally, I like the approach that captures the ‘measurement collapse’ as ‘lots of decoherence’, and describes decoherence as ‘the universe trying to learn information about the quantum system’. Hopefully I’ll write about this some other time, and try to find some good references by real physicists. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>The tensor product of matrices is given by the <a href="https://en.wikipedia.org/wiki/Kronecker_product">Kronecker product</a>. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/quantum-physics"><nobr>quantum-physics</nobr></a></li>
+        
+          <li><a href="/tag/quantum-computing"><nobr>quantum-computing</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  
+  
+    
+  <div id="disqus_thread"></div>
+
+  <script>
+    // var disqus_config = function () {
+    //   this.page.url = 'https://thosgood.github.io/maths/2018/03/31/quantum-circuits-part-1.html';
+    //   this.page.identifier = 'thosgood';
+    // };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://thosgood.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="username">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="username">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="username">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="username">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="username">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
