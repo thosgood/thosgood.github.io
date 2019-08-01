@@ -458,8 +458,8 @@ ol.post-toc {
 
 
 .rss-subscribe {
-    text-align: center;
-    font-size: $small-font-size;
+  text-align: center;
+  font-size: $small-font-size;
 }
 
 
@@ -469,14 +469,14 @@ ol.post-toc {
  */
 
 span.tag-name {
-    font-family: $monospace-font-family;
-    font-size: $monospace-font-size;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
 }
 
 ul.tag-list {
-    font-size: $small-font-size;
-    list-style-type: none;
-    margin-left: 0;
+  font-size: $small-font-size;
+  list-style-type: none;
+  margin-left: 0;
 }
 
 ul.tag-list li {
@@ -484,28 +484,28 @@ ul.tag-list li {
 }
 
 ul.tag-list li a {
-    color: $grey-color;
-    font-family: $monospace-font-family;
-    font-size: $monospace-font-size;
-    padding: 2px 4px;
-    background-color: $grey-color-light;
-  
-    &:hover {
-        background-color: $grey-color;
-        color: $grey-color-light;
-        text-decoration: none;
-    }
+  color: $grey-color;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+
+  &:hover {
+    background-color: $grey-color;
+    color: $grey-color-light;
+    text-decoration: none;
+  }
 }
 
 ul.tag-cloud {
-    font-size: $small-font-size;
-    list-style-type: none;
-    text-align: center;
-    padding: 15px;
+  font-size: $small-font-size;
+  list-style-type: none;
+  text-align: center;
+  padding: 15px;
 }
 
 ul.tag-cloud li {
-    display: inline;
+  display: inline;
 }
 
 ul.tag-cloud li a {
