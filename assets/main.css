@@ -577,6 +577,9 @@ ul.tagged-posts time {
 .papers-list {
   list-style-type: none; }
 
+.papers-description {
+  font-size: 16.65px; }
+
 .papers-year {
   font-size: 16.65px;
   color: #828282;
