@@ -9,16 +9,6 @@ layout: default
 
       <a href="{{ "/blog" | relative_url }}">&#8701; Back to all posts</a>
 
-      {% if page.tags != "" %}
-        <ul class="tag-list">
-  
-          {% for tag in page.tags %}
-            <li><a href="/tag/{{ tag }}"><nobr>{{ tag }}</nobr></a></li>
-          {% endfor %}
-      
-        </ul>
-      {% endif %}
-
     </div>
     
 
