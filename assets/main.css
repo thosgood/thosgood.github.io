@@ -178,7 +178,11 @@ pre {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 55.95px;
+  margin-bottom: 10px;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    .site-header {
+      border-bottom: none; } }
 
 .site-title {
   font-size: 29.25px;
@@ -193,8 +197,6 @@ pre {
 .site-nav {
   float: right;
   line-height: 52.65px; }
-  .site-nav .nav-trigger {
-    display: none; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -249,12 +251,11 @@ pre {
         display: block;
         padding-bottom: 5px; }
       .site-nav .page-link {
+        font-size: 22.5px;
         display: inline;
-        padding: 2px 5px;
-        margin-left: 5px;
-        margin-right: 5px; }
+        padding: 2px 5px; }
         .site-nav .page-link:not(:last-child) {
-          margin-right: 0; } }
+          margin-right: 30px; } }
 
 /**
  * Site footer
@@ -320,8 +321,9 @@ pre {
 /**
  * Page content
  */
-.page-content {
-  padding: 30px 0; }
+@media screen and (max-width: 800px) {
+  .page-content {
+    padding-top: 0; } }
 
 .page-heading {
   font-size: 22.5px; }
@@ -354,7 +356,6 @@ pre {
 .post-header {
   margin-bottom: 15px; }
   .post-header div.post-navigation {
-    margin-top: 0;
     margin-bottom: 15px; }
 
 div.post-navigation {
@@ -364,6 +365,14 @@ div.post-navigation {
     width: 75%;
     float: right;
     margin: 0px; }
+    @media screen and (max-width: 800px) {
+      div.post-navigation ul {
+        font-size: 27px;
+        width: 100%; } }
+  @media screen and (max-width: 800px) {
+    div.post-navigation {
+      font-size: 22.5px;
+      text-align: center; } }
 
 .post-title {
   font-size: 40.5px;
