@@ -5,3 +5,5 @@
 - floating TOC?
     + would have to disable on small enough screens
     + or, instead/as well, that thing where the section headers glue to the top of the screen while scrolling? or is that just too flashy...
+- rewrite CSS from scratch
+    + update the sass plugin too? keep on getting warnings that it's been deprecated
