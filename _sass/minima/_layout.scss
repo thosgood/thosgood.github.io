@@ -228,24 +228,24 @@
 }
 
 .post-list {
-    margin-left: 0;
-    list-style: none;
+  margin-left: 0;
+  list-style: none;
 
-    .post-list-heading {
-        margin-bottom: $spacing-unit / 2;
+  .post-list-heading {
+    margin-bottom: $spacing-unit / 2;
 
-        h2 {
-            margin: 0px;
-        }
+    h2 {
+      margin: 0px;
     }
+  }
 
-    > li {
-        margin-bottom: $spacing-unit;
-        padding-left: 15px;
-        padding-bottom: 10px;
-        border-left: 2px solid $brand-color;
-        border-bottom: 1px dashed $brand-color;
-    }
+  > li {
+    margin-bottom: $spacing-unit;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-left: 2px solid $brand-color;
+    border-bottom: 1px dashed $brand-color;
+  }
 }
 
 .post-meta {
@@ -264,32 +264,32 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit / 2;
+  margin-bottom: $spacing-unit / 2;
 
-    div.post-navigation {
-        margin-bottom: $spacing-unit / 2;
-    }
+  div.post-navigation {
+    margin-bottom: $spacing-unit / 2;
+  }
 }
 
 div.post-navigation {
-    margin-top: ($spacing-unit / 2);
-    overflow: hidden;
+  margin-top: ($spacing-unit / 2);
+  overflow: hidden;
 
-    ul {
-        width: 75%;
-        float: right;
-        margin: 0px;
-
-      @include media-query($on-laptop) {
-        @include relative-font-size(1.5);
-        width: 100%;
-      }
-    }
+  ul {
+    width: 75%;
+    float: right;
+    margin: 0px;
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.25);
-      text-align: center;
+      @include relative-font-size(1.5);
+      width: 100%;
     }
+  }
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(1.25);
+    text-align: center;
+  }
 }
 
 .post-title {
@@ -421,7 +421,7 @@ ol.post-toc {
 }
 
 .page-description {
-    color: $grey-color;
+  color: $grey-color;
 }
 
 
@@ -436,23 +436,23 @@ ol.post-toc {
 }
 
 .page-number {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .page-nav {
-    padding: 5px 10px;
-    border: 1px solid $grey-color-dark;
-  
-    &:hover {
-        background-color: $grey-color-light;
-        text-decoration: none;
-    }
+  padding: 5px 10px;
+  border: 1px solid $grey-color-dark;
+
+  &:hover {
+    background-color: $grey-color-light;
+    text-decoration: none;
+  }
 }
 
 .page-nav-inactive {
-    color: $grey-color;
-    padding: 5px 10px;
-    border: 1px solid $grey-color-light;
+  color: $grey-color;
+  padding: 5px 10px;
+  border: 1px solid $grey-color-light;
 }
 
 
