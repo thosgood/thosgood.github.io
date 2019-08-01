@@ -509,21 +509,21 @@ ul.tag-cloud li {
 }
 
 ul.tag-cloud li a {
-    color: $grey-color-dark;
-    font-family: $monospace-font-family;
-    font-size: $monospace-font-size;
-    padding: 2px 4px;
-    background-color: $grey-color-light;
-  
-    &:hover {
-        background-color: $grey-color;
-        color: $grey-color-light;
-        text-decoration: none;
-    }
+  color: $grey-color-dark;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  padding: 2px 4px;
+  background-color: $grey-color-light;
+
+  &:hover {
+    background-color: $grey-color;
+    color: $grey-color-light;
+    text-decoration: none;
+  }
 }
 
 li#all-tags-tag a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
@@ -533,12 +533,12 @@ li#all-tags-tag a {
  */
 
 ul.tagged-posts {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 ul.tagged-posts time {
-    font-family: $monospace-font-family;
-    font-size: $monospace-font-size;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
 }
 
 
@@ -549,17 +549,17 @@ ul.tagged-posts time {
  */
 
 #about-image-column {
-    text-align: center;
+  text-align: center;
 }
 
 #about-image-column img {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .username {
-    font-family: $monospace-font-family;
-    font-size: $monospace-font-size;
-    color: $grey-color;
+  font-family: $monospace-font-family;
+  font-size: $monospace-font-size;
+  color: $grey-color;
 }
 
 .contact-list {
@@ -567,13 +567,13 @@ ul.tagged-posts time {
 }
 
 .contact-list .icon {
-    padding-right: 5px;
-    height: 16px;
-    width: 16px;
+  padding-right: 5px;
+  height: 16px;
+  width: 16px;
 }
 
 .contact-list .username {
-    padding-left: 8px;
+  padding-left: 8px;
 }
 
 
@@ -585,28 +585,32 @@ ul.tagged-posts time {
     list-style-type: none;
 }
 
+.papers-description {
+  font-size: $small-font-size;
+}
+
 .papers-year {
-    font-size: $small-font-size;
-    color: $grey-color;
-    margin-bottom: 0;
+  font-size: $small-font-size;
+  color: $grey-color;
+  margin-bottom: 0;
 }
 
 .papers-list li.arxiv {
-    background: url("/assets/icons/arxiv.png") no-repeat;
-    background-position: 0px 4px;
-    background-size: 16px 16px;
-    padding-left: 20px;
+  background: url("/assets/icons/arxiv.png") no-repeat;
+  background-position: 0px 4px;
+  background-size: 16px 16px;
+  padding-left: 20px;
 }
 
 .papers-list li.github {
-    background: url("/assets/icons/github.png") no-repeat left top;
-    background-position: 0px 4px;
-    background-size: 16px 16px;
-    padding-left: 20px;
+  background: url("/assets/icons/github.png") no-repeat left top;
+  background-position: 0px 4px;
+  background-size: 16px 16px;
+  padding-left: 20px;
 }
 
 .icon {
-    height: 16px;
-    width: 16px;
-    padding-left: 5px;
+  height: 16px;
+  width: 16px;
+  padding-left: 5px;
 }
