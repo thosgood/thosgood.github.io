@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-08-01T14:42:52+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-08-02T00:17:46+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -95,11 +95,11 @@ These objects are such that &lt;strong&gt;all&lt;/strong&gt; pseudonatural trans
   &lt;li&gt;We should be able to compose 2-morphisms ‘along objects’ (so-called &lt;em&gt;horizontally&lt;/em&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-horizontal-2-composition.png&quot; alt=&quot;horizontal composition&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-horizontal-2-composition.png&quot; alt=&quot;horizontal composition&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;but &lt;em&gt;also&lt;/em&gt; ‘along 1-morphisms’ (so-called &lt;em&gt;vertically&lt;/em&gt;)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-vertical-2-composition.png&quot; alt=&quot;vertical composition&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-vertical-2-composition.png&quot; alt=&quot;vertical composition&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and we ask that both senses of composition be associative &lt;em&gt;only up to coherent associator 2-morphisms&lt;/em&gt;.&lt;/p&gt;
 
@@ -169,7 +169,7 @@ This means that it has&lt;/p&gt;
 
 &lt;p&gt;We can picture the 2-cells as a square (hence the name), as&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-double-square.png&quot; alt=&quot;squares&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-double-square.png&quot; alt=&quot;squares&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;where $x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$ are objects, $f,g\in\operatorname{ob}\mathcal{C}_1$ are horizontal morphisms, $\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$ are vertical morphisms, and $\phi\in\operatorname{Arr}\mathcal{C}_1$ is the 2-cell.&lt;/p&gt;
 
