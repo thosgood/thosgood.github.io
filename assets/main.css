@@ -413,7 +413,7 @@ ol.post-toc {
       margin-bottom: 8px; }
       .post-content ul li ul li {
         margin-bottom: 3px; }
-  .post-content img {
+  .post-content img.centred {
     display: block;
     margin-left: auto;
     margin-right: auto; }
