@@ -91,7 +91,7 @@ This means that it has
 - _objects_, given by the objects of $\mathcal{C}_0$;
 - _vertical morphisms_, given by the morphisms of $\mathcal{C}_0$;
 - _horizontal morphisms_, given by the objects of $\mathcal{C}_1$; and
-- _2-cells, or _squares_, given by the morphisms of $\mathcal{C}_1$.
+- _2-cells_, or _squares_, given by the morphisms of $\mathcal{C}_1$.
 
 We can picture the 2-cells as a square (hence the name), as
 
