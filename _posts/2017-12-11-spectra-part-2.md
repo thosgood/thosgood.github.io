@@ -145,7 +145,7 @@ $$\begin{align*}
 
 and we claim that it is a natural isomorphism when we restrict to the subcategory of pointed CW complexes.
 
-**Edit:** This `classical fact' is really an example of [Eckmann-Hilton duality](https://ncatlab.org/nlab/show/Eckmann-Hilton+duality).
+**Edit:** This 'classical fact' is really an example of [Eckmann-Hilton duality](https://ncatlab.org/nlab/show/Eckmann-Hilton+duality).
 
 ---
 
