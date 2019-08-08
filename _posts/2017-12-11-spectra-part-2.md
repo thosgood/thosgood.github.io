@@ -30,7 +30,7 @@ As an important note, by looking at the homotopy pullback diagram of a delooping
 If $A$ is some topological group then we have (at least) two ways of describing it:
 
 1. 'topological': we can study principal $A$-bundles, and then we have a classifying space $\mathcal{B}A\in\mathsf{Top}$;
-2. 'groupoidal': we can consider $A$ as the one-object groupoid $\mathbb{B}A\in\infty-\mathsf{Groupoid}$ whose morphisms are given by $A$.
+2. 'groupoidal': we can consider $A$ as the one-object groupoid $\mathbb{B}A\in\infty\mathsf{Grpd}$ whose morphisms are given by $A$.
 
 As the choice of notation suggests, these two 'associated objects' are (we claim) both deloopings of $A$ in the relevant category, and, in fact, under the [homotopy hypothesis](https://ncatlab.org/nlab/show/homotopy+hypothesis), these two are equivalent via geometric realisation (of the nerve):[^4]
 
