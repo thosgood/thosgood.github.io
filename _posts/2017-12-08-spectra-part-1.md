@@ -13,7 +13,8 @@ I have been reading recently about spectra and their use in defining cohomology 
 
 <!--more-->
 
-The rough idea is to study loop spaces and consider their 'generalisation' as homotopy pullbacks, then to define **spectrum objects** in stable $(\infty,1)$-categories.  We also consider why we can call $A_\infty$-algebras 'generalised loop spaces'.Then we will have a look at the $E_\infty$ and $A_\infty$ operads and try to describe the algebras over them, before seeing how this is linked to the idea of **spectra** (spectrum objects in the category of topological spaces).
+The rough idea is to study loop spaces and consider their 'generalisation' as homotopy pullbacks, then to define **spectrum objects** in stable $(\infty,1)$-categories.  We also consider why we can call $A_\infty$-algebras 'generalised loop spaces'.
+Then we will have a look at the $E_\infty$ and $A_\infty$ operads and try to describe the algebras over them, before seeing how this is linked to the idea of **spectra** (spectrum objects in the category of topological spaces).
 
 After this, I might do a series on the uses of spectra, like 'nice' cohomology theories in $(\infty,1)$-topoi, and 'brave new geometry' in the framework of Toën and Vezzosi's homotopical algebraic geometry.
 
