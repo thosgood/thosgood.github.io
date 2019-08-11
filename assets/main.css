@@ -68,10 +68,10 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #ff8c00;
+  color: #005fbe;
   text-decoration: none; }
   a:hover {
-    color: #b36200;
+    color: #003972;
     text-decoration: underline; }
   .social-media-list a:hover {
     text-decoration: none; }
@@ -215,7 +215,7 @@ pre {
   .site-nav .page-link-active {
     font-weight: bold;
     letter-spacing: -1px;
-    border-bottom: 3px solid #ff8c00; }
+    border-bottom: 3px solid #005fbe; }
   @media screen and (max-width: 600px) {
     .site-nav {
       width: -webkit-calc(100% - (30px / 3));
@@ -339,8 +339,8 @@ pre {
     margin-bottom: 30px;
     padding-left: 15px;
     padding-bottom: 10px;
-    border-left: 2px solid #ff8c00;
-    border-bottom: 1px dashed #ff8c00; }
+    border-left: 2px solid #005fbe;
+    border-bottom: 1px dashed #005fbe; }
 
 .post-meta {
   font-size: 16.65px;
