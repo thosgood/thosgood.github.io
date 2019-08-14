@@ -4,7 +4,7 @@ layout: post
 category: "maths"
 tags: "algebraic-topology"
 comments: true
-excerpt: "I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that \'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation\', which makes a nice short topic of discussion, whence this post."
+excerpt: "I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post."
 ---
 
 In my thesis, switching between vector bundles and principal $\mathrm{GL}\_r$-bundles has often made certain problems easier (or harder) to understand.
