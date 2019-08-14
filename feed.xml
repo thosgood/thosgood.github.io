@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-08-11T00:02:06+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-08-14T14:11:17+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Mathematical motivation and meagre contributions</title><link href="https://thosgood.github.io/maths/2019/08/14/mathematical-motivation-meagre-contributions.html" rel="alternate" type="text/html" title="Mathematical motivation and meagre contributions" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/08/14/mathematical-motivation-meagre-contributions</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/08/14/mathematical-motivation-meagre-contributions.html">&lt;p&gt;I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;These days, living abroad (away from friends and family), most of my social interactions take place with other mathematicians. This is great, because I do love talking about maths, but also has a rather negative effect. Namely, every single person in my office already has a PhD. Because of this, it’s very easy to feel like I know absolutely nothing about maths. Combine this with the typical thésard problem of “my thesis just has trivial results but even so my proofs are incomplete and bad”, reading things written by the geniuses of your field, and throw in a dash of “so much of academia is about trying to sell your maths as having either profitable (for the few) or military applications”, and it can be hard to enjoy maths at times.&lt;/p&gt;
+
+&lt;p&gt;By no means am I claiming to have a solution to this problem, but I have found a few things that help (some very obvious), so I thought I’d share them here for whatever small help they might be to anybody reading.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Talk to people outside of maths as much as you possibly can, especially about things that aren’t maths.&lt;/li&gt;
+  &lt;li&gt;Don’t give up talking to mathematicians. One thing that prompted me to put down these thoughts on this blog was a &lt;a href=&quot;https://twitter.com/johncarlosbaez/status/1161454391901085696&quot;&gt;Twitter thread this morning by John Baez&lt;/a&gt; that just got me so excited about maths again. Read things outside of your current work, and try to make time for learning maths that you find irresistibly intriguing, even if it’s completely unrelated to the work you have to do.&lt;/li&gt;
+  &lt;li&gt;Get involved in some community projects. I’ve been contributing to a &lt;a href=&quot;https://github.com/ryankeleti/ega&quot;&gt;translation project for Grothendieck’s EGA&lt;/a&gt; recently, and it’s been great for me personally: I can use the fact that I speak French and know enough about algebraic geometry to help make something that could hopefully help other people. I’ve also been working on &lt;a href=&quot;https://github.com/matrix-org/matrix-react-sdk/pull/3251&quot;&gt;LaTex support in riot.im&lt;/a&gt;, so that mathematicians can have an instant-messaging service, like Discord or Slack, where they can actually type how they would write: with nice maths symbols. In general, open-source projects are a great thing to get involved in.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take up bird watching. I know that not everybody might love these feather friends as much as I do, but I’m far from the first to have written about what a great thing it can be. It’s not like you have to do it “seriously” either: I spend a lot of time just giving names to the pigeons I see every day, and watching how they interact with each other. As one of my favourite poets, Wendy Cope, so beautifully writes:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;em&gt;‘A great deal of anecdotal evidence suggests that we respond positively to birdsong.’&lt;/em&gt;&lt;br /&gt;
+— Scientific researcher quoted in &lt;em&gt;The Daily Telegraph&lt;/em&gt; 8.2.2012.&lt;/p&gt;
+
+      &lt;p&gt;Centuries of English verse&lt;br /&gt;
+Suggest the selfsame thing:&lt;br /&gt;
+A negative response is rare&lt;br /&gt;
+When birds are heard to sing.&lt;br /&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;em&gt;What’s the use of poetry?&lt;/em&gt;&lt;br /&gt;
+You ask. Well, here’s a start:&lt;br /&gt;
+It’s anecdotal evidence&lt;br /&gt;
+About the human heart.&lt;br /&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As the above poem also suggests, spend time growing and learning as a human being. It’s said so often that it’s become cliché, but being a human being can be very hard. Poetry, music, books, and so on, are all ways that other human beings have tried to convey what they have themselves wanted to hear at one point or another, so listen to what they have to say.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><category term="birds" /><summary type="html">I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.</summary></entry><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/maths/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/maths/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
 
 &lt;!--more--&gt;
 
@@ -676,56 +707,4 @@ The lemma that we’ll look at is the following (where we’ve yet to define the
       &lt;p&gt;But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together. There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.</summary></entry><entry><title type="html">Categorication of the Dold-Kan correspondence</title><link href="https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html" rel="alternate" type="text/html" title="Categorication of the Dold-Kan correspondence" /><published>2018-08-16T00:00:00+00:00</published><updated>2018-08-16T00:00:00+00:00</updated><id>https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence</id><content type="html" xml:base="https://thosgood.github.io/maths/2018/08/16/categorication-of-the-dold-kan-correspondence.html">&lt;p&gt;So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’.
-Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;There was a talk yesterday on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8635&quot;&gt;$\mathbb{F}_1$ things&lt;/a&gt; by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8633&quot;&gt;moduli spaces of connections on open varieties&lt;/a&gt; as well as one by Damien Calaque (my co-supervisor) on &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8617&quot;&gt;$\mathbb{E}_n$-algebras and vertex models&lt;/a&gt;, all of which I managed to follow at least partially (take what you can get, I guess).
-Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a &lt;a href=&quot;http://www.mpim-bonn.mpg.de/node/8648&quot;&gt;categorified Dold-Kan correspondence&lt;/a&gt;.
-I don’t really want to talk about the details (because I’m not at all qualified to do so, and you’d be better served by going directly to the source), but something that I really enjoyed was a ‘dictionary’ that he presented.&lt;/p&gt;
-
-&lt;p&gt;Historically, the first step towards ‘groupification’ was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
-Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable $\infty$-categories: we can turn homological algebra into &lt;em&gt;categorified homological algebra&lt;/em&gt;, and, taking inspiration from Serge Lang’s famous ‘exercise’ in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.
-To do so, we need to know what the classical constructions become in this higher-category language, whence the dictionary.&lt;/p&gt;
-
-&lt;table class=&quot;bordered-table&quot;&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;classical&lt;/th&gt;
-      &lt;th&gt;categorified&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;abelian group $A$&lt;/td&gt;
-      &lt;td&gt;stable $\infty$-category $\mathscr{A}$&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$x\in A$&lt;/td&gt;
-      &lt;td&gt;$X\in\mathscr{A}$&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$y-x\in A$&lt;/td&gt;
-      &lt;td&gt;$\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}$&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$\sum_{i=0}^n(-1)^i x_i\in A$&lt;/td&gt;
-      &lt;td&gt;$\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}$&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;$C\cong A\oplus B$&lt;/td&gt;
-      &lt;td&gt;$\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle$&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Note that the difference of two elements $X,Y$ in the categorified language depends on the choice of some morphism between them, so there are lots of ‘values’ of “$X-Y$”, one for each $f\colon X\to Y$.
-The last line (corresponding to a direct sum) is a semi-orthogonal decomposition.
-Finally, we need to define what $\mathrm{Tot}$ is.&lt;/p&gt;
-
-&lt;p&gt;For $n=1$, we have already defined that $\mathrm{Tot}$ is given by $\mathrm{cone}$.
-For $n=2$, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_cartesian).
-For $n=3$ we embed the above cube as the face of a 4-dimensional cube, and take a colimit, etc. etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg&quot; alt=&quot;Defining Tot for length 3 complexes.&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><summary type="html">So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’. Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="maths" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together. There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.</summary></entry></feed>
