@@ -255,13 +255,13 @@ ul.tagged-posts time { font-family: "Fira Code", monospace; font-size: 14px; }
 
 #about-image-column img { margin-bottom: 25px; }
 
-.username { font-family: "Fira Code", monospace; font-size: 14px; color: #828282; }
+.backtick { font-family: "Fira Code", monospace; font-size: 14px; color: #828282; }
 
 .contact-list { list-style-type: none; }
 
 .contact-list .icon { padding-right: 5px; height: 16px; width: 16px; }
 
-.contact-list .username { padding-left: 8px; }
+.contact-list .backtick { padding-left: 8px; }
 
 /** Papers */
 .papers-list { list-style-type: none; }
