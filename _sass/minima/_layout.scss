@@ -118,12 +118,13 @@
     }
 
     .page-link {
-      @include relative-font-size(1.25);
+      @include relative-font-size(1.15);
       display: inline;
       padding: 2px 5px;
+      margin: 2px 0px;
 
       &:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 12px;
       }
     }
   }
