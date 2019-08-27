@@ -103,8 +103,8 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
   .site-nav .menu-icon > svg path { fill: #424242; }
   .site-nav input ~ .trigger { clear: both; display: none; }
   .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; }
-  .site-nav .page-link { font-size: 22.5px; display: inline; padding: 2px 5px; }
-  .site-nav .page-link:not(:last-child) { margin-right: 30px; } }
+  .site-nav .page-link { font-size: 20.7px; display: inline; padding: 2px 5px; margin: 2px 0px; }
+  .site-nav .page-link:not(:last-child) { margin-right: 12px; } }
 
 /** Site footer */
 .site-footer { border-top: 1px solid #e8e8e8; padding: 30px 0; font-family: "Fira Code", monospace; font-size: 14px; }
