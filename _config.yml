@@ -1,6 +1,13 @@
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thosgood.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+repository: thosgood/thosgood.github.io
+comments:
+  provider: "staticman_v2"
+  staticman:
+    branch: "master"
+    endpoint: https://dev.staticman.net/v3/entry/github/
+
 title: Tim Hosgood
 email: timhosgood@gmail.com
 

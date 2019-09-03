@@ -1,0 +1,27 @@
+<div>
+
+    <h2>Comments</h2>
+
+    {% for comment in site.data.comments | where: "slug", page.slug %}
+
+    <article>
+
+        <div>
+
+            <h3>{{ comment.name | strip_html }}</h3>
+
+            <p><time><a href="{{ page.url }}#{{ comment._id}}">{{ comment.created_at | date: "%b %-d, %Y, %H:%M" }}</a></time></p>
+
+        </div>
+
+        <div>
+
+            {{ comment.message | strip_html | markdownify | smartify }}
+
+        </div>
+
+    </article>
+
+    {% endfor %}
+
+</div>
