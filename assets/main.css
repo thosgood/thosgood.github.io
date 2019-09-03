@@ -150,9 +150,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 /** Posts */
 .post-header { margin-bottom: 15px; }
 
-.post-header div.post-navigation { margin-bottom: 15px; }
-
-div.post-navigation { margin-top: 15px; overflow: hidden; }
+div.post-navigation { margin-top: 15px; margin-bottom: 15px; overflow: hidden; }
 
 div.post-navigation ul { width: 75%; float: right; margin: 0px; }
 
@@ -167,8 +165,6 @@ div.post-navigation ul { width: 75%; float: right; margin: 0px; }
 .post-date { color: #828282; }
 
 ol.post-toc { list-style-type: upper-roman; }
-
-.post-content { margin-bottom: 30px; }
 
 .post-content h2 { font-size: 36px; }
 
@@ -196,7 +192,7 @@ ol.post-toc { list-style-type: upper-roman; }
 /** Page columns */
 .page-col-wrapper { margin-left: -15px; }
 
-.page-col { float: left; margin-bottom: 15px; padding-left: 15px; }
+.page-col { float: left; padding-left: 15px; }
 
 .page-col-l-small { width: -webkit-calc(30% - (30px / 2)); width: calc(30% - (30px / 2)); padding-right: 30px; }
 
