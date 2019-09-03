@@ -316,6 +316,48 @@
   
   </div>
 
+  <div>
+
+    <h2>Comments</h2>
+
+    
+
+</div>
+
+  
+  <div id="comment-form">
+
+    <h2>Add a comment</h2>
+
+    <p><small>Your email details will not be shared with anyone. All fields <span>required</span>.</small></p>
+
+    <form name="comments" data-netlify="true" method="post" action="https://dev.staticman.net/v3/entry/github/thosgood/thosgood.github.io/master">
+
+        <input name="slug" hidden type="hidden" value="twisting-cochains-and-twisted-complexes">
+
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text" spellcheck="false" required>
+
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" spellcheck="false" required>
+
+        <label for="message">Comment</label>
+        <textarea name="message" id="message" spellcheck="false" required></textarea>
+
+        <div hidden class="clip">
+
+            <label for="hp">Complete this if you <b>don't</b> want your comment to appear</label>
+            <input name="bot-field" id="hp" type="text">
+
+        </div>
+
+        <button type="submit">Submit comment</button>
+
+    </form>
+
+</div>
+
+
 </article>
 
    
