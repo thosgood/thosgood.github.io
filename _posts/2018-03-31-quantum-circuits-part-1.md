@@ -2,7 +2,7 @@
 layout: post
 title: Quantum circuits
 part: Part 1
-category: "maths"
+category: "blog"
 tags: "quantum-physics quantum-computing"
 comments: true
 ---

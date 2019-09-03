@@ -1,7 +1,7 @@
 ---
 title: Categorication of the Dold-Kan correspondence
 layout: post
-category: "maths"
+category: "blog"
 tags: "category-theory"
 comments: true
 ---

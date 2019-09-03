@@ -1,7 +1,7 @@
 ---
 layout: post
 title: More-than-one-but-less-than-three-categories
-category: "maths"
+category: "blog"
 tags: "category-theory"
 comments: true
 ---

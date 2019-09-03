@@ -2,7 +2,7 @@
 title: Localisation and model categories
 part: Part 1
 layout: post
-category: "maths"
+category: "blog"
 tags: "category-theory homotopy-theory"
 comments: true
 ---

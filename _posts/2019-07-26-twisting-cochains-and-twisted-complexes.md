@@ -1,7 +1,7 @@
 ---
 title: Twisting cochains and twisted complexes
 layout: post
-category: "maths"
+category: "blog"
 tags: "differential-geometry complex-geometry algebraic-topology category-theory homotopy-theory"
 comments: true
 ---

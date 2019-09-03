@@ -1,7 +1,7 @@
 ---
 title: Graded homotopy structures
 layout: post
-category: "maths"
+category: "blog"
 tags: "homotopy-theory category-theory questions"
 comments: true
 ---

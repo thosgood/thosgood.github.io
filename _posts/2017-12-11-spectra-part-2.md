@@ -2,7 +2,7 @@
 layout: post
 title: Loop spaces, spectra, and operads
 part: Part 2
-category: "maths"
+category: "blog"
 tags: "category-theory spectra algebraic-topology operads"
 comments: true
 ---

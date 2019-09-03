@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Triangulations of products of triangulations
-category: "maths"
+category: "blog"
 tags: "algebraic-topology quick-tip"
 comments: true
 ---

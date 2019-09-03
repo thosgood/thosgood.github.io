@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Derived, DG, triangulated, and infinity-categories
-category: "maths"
+category: "blog"
 tags: "category-theory"
 comments: true
 ---

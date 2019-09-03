@@ -1,7 +1,7 @@
 ---
 title: Mathematical motivation and meagre contributions
 layout: post
-category: "maths"
+category: "blog"
 tags: "category-theory birds"
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: Twisting cochains and arbitrary dg-categories
 layout: post
-category: "maths"
+category: "blog"
 tags: "category-theory"
 comments: true
 ---

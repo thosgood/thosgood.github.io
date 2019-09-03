@@ -1,7 +1,7 @@
 ---
 title: Nothing really that new
 layout: post
-category: "maths"
+category: "blog"
 comments: true
 ---
 
