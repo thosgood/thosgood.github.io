@@ -2,6 +2,7 @@
 
 # todo
 - switch from disqus to https://staticman.net/docs/ !
+    + if this works, mailgun for notifications?
 - use Tachyons? https://www.leonpaternoster.com/posts/jekyll-tachyons/
 - floating TOC?
     + would have to disable on small enough screens
