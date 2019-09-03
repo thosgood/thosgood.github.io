@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/thosgood/thosgood.github.io.svg?branch=release)](https://travis-ci.org/thosgood/thosgood.github.io)
 
 # todo
+- switch from disqus to https://staticman.net/docs/ !
 - floating TOC?
     + would have to disable on small enough screens
     + or, instead/as well, that thing where the section headers glue to the top of the screen while scrolling? or is that just too flashy...
