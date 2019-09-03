@@ -16,3 +16,6 @@ deploy:
   keep-history: true
   on:
     branch: release
+notifications:
+  email:
+    - timhosgood@gmail.com
