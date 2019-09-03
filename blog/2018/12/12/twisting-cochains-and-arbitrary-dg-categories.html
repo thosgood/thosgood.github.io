@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Twisting cochains and arbitrary dg-categories</title>
+
+
+  <meta name="description" content="Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+    <nav class="site-nav">
+
+      <div class="trigger">
+
+        
+          <a class="page-link" href="/">About</a>
+        
+
+        
+          
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link" href="/papers/">Papers</a>
+                
+              
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link" href="/projects/">Projects</a>
+                
+              
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link page-link-active" href="/blog/">Blog</a>
+                
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+        
+
+      </div>
+
+    </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Twisting cochains and arbitrary dg-categories</h1>
+        
+    <p><time class="post-date" datetime="2018-12-12T00:00:00+00:00" itemprop="datePublished">
+      
+      12 December, 2018
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#footnotes">Footnotes</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote <a href="/blog/2018/04/26/derived-dg-triangulated-and-infinity-categories.html">this post</a> about derived, dg-, and $A_\infty$-categories and their role in ‘homotopy things’.</p>
+
+<p>This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</p>
+
+<!--more-->
+
+<p>First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),<sup id="fnref:7"><a href="#fn:7" class="footnote">1</a></sup> I will shamelessly refer the interested reader to <del>some notes I wrote a while back</del>. (update: these notes have been subsumed into my PhD thesis)</p>
+
+<p>Secondly, the ‘quirk’ of dg-categories about which I’m talking<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup> is that, for a lot of people<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup>, it is the (pre-)triangulated structure that is interesting.
+This means that (as far as I am aware)<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> an arbitrary dg-category lacks some sort of homotopic interpretation because it has no structure corresponding to <em>stability</em> ‘upstairs’.
+Twisting cochains then, as they were introduced by Bondal and Kapranov<sup id="fnref:4"><a href="#fn:4" class="footnote">5</a></sup>, are a sort of solution to this problem, in that (to quote from where else but the nLab) <em>“passing from a dg-category to its category of twisted complexes is a step towards enhancing it to a pretriangulated dg-category”</em>.<sup id="fnref:5"><a href="#fn:5" class="footnote">6</a></sup>
+In essence, they give us the ‘smallest’ ‘bigger’ dg-category in which we have shifts and functorial cones.</p>
+
+<p>Really I am just parroting back the reasons why these things were initially invented, but it’s something that I hadn’t fully appreciated, since I’ve been working with specific types of twisted complexes (ones that somehow correspond to projective/free things and concentrated in a single degree) that really arise in what appears (to me) to be a completely different manner: namely in the setting of (O’Brian), Toledo, and Tong<sup id="fnref:6"><a href="#fn:6" class="footnote">7</a></sup> where they are (to be vague) thought of as resolutions of coherent sheaves, or first-order perturbations of certain bicomplexes by flat connections.</p>
+
+<p>I really have no geometric/homotopic intuition as to why this specific case of twisted complexes corresponds thusly, and haven’t been able to find any references at all.
+Any ideas?</p>
+
+<hr />
+
+<h1 id="footnotes">Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:7">
+      <p>Although for me, at least, I (tend to) use <em>twisted complex</em> to refer to the concept of Bondal and Kapranov, and <em>twisting cochain</em> to refer to the concept of (O’Brian), Toledo, and Tong. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>Having hidden this part in the main post and not the excerpt makes me feel like I’m writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as <em>“Nine functors that you wouldn’t believe have derived counterparts — number six will shock you!”</em> and <em>“You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction”</em>. I apologise in advance. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>[weasel words] [citation needed] <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>which is, admittedly, best measured on the Planck scale. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>A. I. Bondal, M. M. Kapranov, “Enhanced triangulated categories”, Mat. Sb., 181:5 (1990), 669–683; Math. USSR-Sb., 70:1 (1991), 93–107. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p><a href="https://ncatlab.org/nlab/show/twisted+complex">https://ncatlab.org/nlab/show/twisted+complex</a> <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, “Duality and Intersection Theory in Complex Manifolds. I.”, Math. Ann., 237 (1978), 41—77. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  <div>
+
+    <h2>Comments</h2>
+
+    
+
+</div>
+
+  
+  <div id="comment-form">
+
+    <h2>Add a comment</h2>
+
+    <p><small>Your email details will not be shared with anyone. All fields <span>required</span>.</small></p>
+
+    <form name="comments" data-netlify="true" method="post" action="https://dev.staticman.net/v3/entry/github/thosgood/thosgood.github.io/master">
+
+        <input name="slug" hidden type="hidden" value="twisting-cochains-and-arbitrary-dg-categories">
+
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text" spellcheck="false" required>
+
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" spellcheck="false" required>
+
+        <label for="message">Comment</label>
+        <textarea name="message" id="message" spellcheck="false" required></textarea>
+
+        <div hidden class="clip">
+
+            <label for="hp">Complete this if you <b>don't</b> want your comment to appear</label>
+            <input name="bot-field" id="hp" type="text">
+
+        </div>
+
+        <button type="submit">Submit comment</button>
+
+    </form>
+
+</div>
+
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="backtick">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="backtick">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="backtick">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="backtick">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="backtick">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

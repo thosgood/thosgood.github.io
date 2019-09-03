@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+  <head>
+    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Tim Hosgood — Weighted limits, ends, and Day convolution (Part 1)</title>
+
+
+  <meta name="description" content="A motto of category theory is that ‘Kan extensions are everywhere’. As a simplification of this, ‘(co)limits are in a lot of places’. By rephrasing the defin...">
+
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
+  <link rel="canonical" href="https://thosgood.github.io/blog/2017/12/08/day-convolution-part-1.html">
+  <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+      var path = '/assets/backgrounds/';
+      $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+    });
+  </script>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    },
+    "HTML-CSS" : {
+      fonts: ["Asana-Math"]
+    }
+  });
+</script>
+
+  
+</head>
+
+
+
+  <body>
+
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    
+    
+
+
+    <a class="site-title" href="/">Tim Hosgood</a>
+
+  
+    
+    <nav class="site-nav">
+
+      <div class="trigger">
+
+        
+          <a class="page-link" href="/">About</a>
+        
+
+        
+          
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link" href="/papers/">Papers</a>
+                
+              
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link" href="/projects/">Projects</a>
+                
+              
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+          
+        
+          
+          
+            
+              
+                
+                  <a class="page-link page-link-active" href="/blog/">Blog</a>
+                
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+            
+              
+            
+          
+        
+          
+          
+        
+
+      </div>
+
+    </nav>
+    
+
+  </div>
+  
+</header>
+
+
+
+    <main class="page-content" aria-label="Content">
+   
+      <div class="wrapper">
+   
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <div class="post-navigation">
+
+      <a href="/blog">&#8701; Back to all posts</a>
+
+    </div>
+    
+
+    <hr>
+
+
+    <h1 class="post-title" itemprop="name headline">Weighted limits, ends, and Day convolution</h1>
+        
+    <p><time class="post-date" datetime="2017-12-08T00:00:00+00:00" itemprop="datePublished">
+      
+       8 December, 2017
+    </time></p>
+
+  </header>
+
+  
+  <ol class="post-toc">
+  <li><a href="#motivation">Motivation</a>
+    <ol>
+      <li><a href="#part-1">Part 1</a></li>
+      <li><a href="#part-2">Part 2</a></li>
+    </ol>
+  </li>
+  <li><a href="#generalisation">Generalisation</a></li>
+</ol>
+
+
+  <div class="post-content" itemprop="articleBody">
+
+    <p>A motto of category theory is that ‘Kan extensions are everywhere’. As a
+simplification of this, ‘(co)limits are in a lot of places’. By rephrasing
+the definition of a limit we end up with something that looks invitingly
+generalisable. This is how we can stumble across the idea of a
+<strong>weighted limit</strong>. In this post I’m going to assume that you are already
+convinced of the usefulness and omnipresence of limits and not talk too much
+(if at all) about why they are interesting in their own right.</p>
+
+<!--more-->
+
+<p><strong>Edit:</strong> If you actually want to learn this stuff then have a look at either of Emily Riehl’s books (<a href="http://www.math.jhu.edu/~eriehl/cathtpy.pdf">Categorical Homotopy Theory</a> and <a href="http://www.math.jhu.edu/~eriehl/context.pdf">Category Theory in Context</a>).
+I honestly don’t think there is a better teaching of this anywhere else in the literature.</p>
+
+<p><em>This is the first in a series of notes that are basically summaries of various
+pages on the nLab, along with a few other sources. There is nothing original
+here, except any mistakes.</em></p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>We start by rephrasing what it means for an object to be the limit of a functor
+in terms of representable presheaves.</p>
+
+<h3 id="part-1">Part 1</h3>
+
+<p>Let <script type="math/tex">F\colon I^\mathrm{op}\to\mathsf{Set}</script> be a presheaf on a small category
+<script type="math/tex">I</script>. Then the limit of <script type="math/tex">F</script> over <script type="math/tex">I</script> is the hom-set</p>
+
+<script type="math/tex; mode=display">\lim_I F := [I,\mathsf{Set}] (\underline{\{*\}},F)</script>
+
+<p>where <script type="math/tex">[I,\mathsf{Set}]</script> is the functor category, and <script type="math/tex">\underline{\{*\}}</script> is the
+constant functor to a singleton set. Since the covariant hom functor commutes
+with set-valued limits, we can use the Yoneda lemma, as always, to work with
+<script type="math/tex">\hat{Y}(\lim_I F) = \mathrm{Hom}_{\mathsf{Set}}(-,\lim_I F)</script> and see that</p>
+
+<script type="math/tex; mode=display">\mathrm{Hom}_{\mathsf{Set}}(S,\lim_I F) \cong \lim_I\mathrm{Hom}_{\mathsf{Set}}(S,F(-))</script>
+
+<p>for any set <script type="math/tex">S</script>.</p>
+
+<h3 id="part-2">Part 2</h3>
+
+<p>If we now find ourselves in the more general case of having a functor 
+<script type="math/tex">F\colon I^\mathrm{op}\to\mathcal{C}</script> for some arbitrary (small) category
+<script type="math/tex">\mathcal{C}</script> then we can use the above trick: we define the presheaf
+<script type="math/tex">\widehat{\lim}_I F</script> by using the set-valued limit above, i.e.</p>
+
+<script type="math/tex; mode=display">(\widehat{\lim}_I F)(c) \cong \hat{\mathcal{C}}(\hat{Y}(c), \widehat{\lim}_I F) := \lim_I\mathsf{Set}(\hat{Y}(c),F(-))</script>
+
+<p>where <script type="math/tex">\hat{\mathcal{C}}</script> is the presheaf category
+<script type="math/tex">[\mathcal{C}^\mathrm{op},\mathsf{Set}]</script>, and we write <script type="math/tex">\mathcal{D}(x,y)</script> to
+mean <script type="math/tex">\mathrm{Hom}_\mathcal{D}(x,y)</script>. But by the definition of the limit given
+at the start, this can be rewritten (‘‘setting
+<script type="math/tex">F = \mathsf{Set}(\hat{Y}(c),F(-))</script>’’) as</p>
+
+<script type="math/tex; mode=display">(\widehat{\lim}_I F)(c) \cong \hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big).</script>
+
+<p>It can then be shown that the limit of <script type="math/tex">F</script>, as defined in any other classical
+way, is exactly an object representing the presheaf <script type="math/tex">\widehat{\lim}_I F</script>, i.e.</p>
+
+<script type="math/tex; mode=display">\mathcal{C}(c, \lim_I F)\cong\hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big)</script>
+
+<h2 id="generalisation">Generalisation</h2>
+
+<p>There are two things in the above that look interesting to try to
+generalise:</p>
+
+<ol>
+  <li>Consider something more complicated than terminal cones: replace
+<script type="math/tex">\underline{\{*\}}</script> with some arbitrary functor <script type="math/tex">W\in\hat{I}</script> (that will be
+called the <strong>weight</strong>);</li>
+  <li>Work in <script type="math/tex">\mathcal{V}</script>-enriched categories rather than just
+<script type="math/tex">\mathsf{Set}</script>-enriched (i.e small) ones.</li>
+</ol>
+
+<p>This leads to the following definition. Let <script type="math/tex">\mathcal{C}</script> be a
+<script type="math/tex">\mathcal{V}</script>-enriched category, and <script type="math/tex">W\colon I^\mathrm{op}\to\mathcal{V}</script> and
+<script type="math/tex">F\colon I^\mathrm{op}\to\mathcal{C}</script> functors. The <strong><script type="math/tex">W</script>-weighted limit of <script type="math/tex">F</script></strong>
+is (if it exists) an object <script type="math/tex">\lim^W F\in\mathcal{C}</script> that represents (for
+<script type="math/tex">c\in\mathcal{C}</script>) the functor</p>
+
+<script type="math/tex; mode=display">[I,\mathcal{V}]\big(W,\mathcal{C}(c,F(-))\big)\colon\mathcal{C}^\mathrm{op}\to\mathcal{V}.</script>
+
+<p>In particular, if <script type="math/tex">\mathcal{C}=\mathcal{V}</script> then you can show that
+<script type="math/tex">\lim^W F\cong [I,\mathcal{V}](W,F)</script>.</p>
+
+<p><em>In the next post we’ll have a look at *why* this generalisation is of
+any interest, and how we can use it to define (co)ends.</em></p>
+
+
+    
+  </div>
+
+
+  <hr>
+
+
+  <div class="post-navigation">
+
+    <a href="/blog">&#8701; Back to all posts</a>
+
+    
+      <ul class="tag-list">
+
+        
+          <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
+        
+
+      </ul>
+    
+  
+  </div>
+
+  <div>
+
+    <h2>Comments</h2>
+
+    
+
+</div>
+
+  
+  <div id="comment-form">
+
+    <h2>Add a comment</h2>
+
+    <p><small>Your email details will not be shared with anyone. All fields <span>required</span>.</small></p>
+
+    <form name="comments" data-netlify="true" method="post" action="https://dev.staticman.net/v3/entry/github/thosgood/thosgood.github.io/master">
+
+        <input name="slug" hidden type="hidden" value="day-convolution-part-1">
+
+        <label for="name">Name</label>
+        <input name="name" id="name" type="text" spellcheck="false" required>
+
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" spellcheck="false" required>
+
+        <label for="message">Comment</label>
+        <textarea name="message" id="message" spellcheck="false" required></textarea>
+
+        <div hidden class="clip">
+
+            <label for="hp">Complete this if you <b>don't</b> want your comment to appear</label>
+            <input name="bot-field" id="hp" type="text">
+
+        </div>
+
+        <button type="submit">Submit comment</button>
+
+    </form>
+
+</div>
+
+
+</article>
+
+   
+      </div>
+   
+    </main>
+
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-3">
+
+        <ul class="contact-list">
+
+          <li>
+            
+              Tim Hosgood
+            
+          </li>
+
+          <li>Université d&rsquo;Aix-Marseille</li>
+          
+          
+            <li><a href="mailto:timhosgood@gmail.com">timhosgood@gmail.com</a></li>
+          
+
+          <li>
+            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+      
+        <ul class="social-media-list">
+      
+          
+            <li><a href="https://twitter.com/tjohnhos"><img class="icon" src="/assets/icons/twitter.png"><span class="backtick">Twitter</span></a></li>
+          
+
+          
+            <li><a href="https://matrix.to/#/@thosgood:matrix.org"><img class="icon" src="/assets/icons/matrix.png"><span class="backtick">Matrix</span></a></li>
+          
+
+        </ul>
+
+      </div>
+
+
+      <div class="footer-col footer-col-1">
+
+        <ul class="social-media-list">
+
+          
+            <li><a href="https://arxiv.com/a/hosgood_t_1"><img class="icon" src="/assets/icons/arxiv.png"><span class="backtick">arXiv</span></a></li>
+          
+
+          
+            <li><a href="https://orcid.org/0000-0003-4580-0741"><img class="icon" src="/assets/icons/orcid.png"><span class="backtick">Orcid</span></a></li>
+          
+
+          
+            <li><a href="https://github.com/thosgood"><img class="icon" src="/assets/icons/github.png"><span class="backtick">GitHub</span></a></li>
+          
+
+        </ul>
+
+      </div>
+      
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
