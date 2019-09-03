@@ -13,6 +13,6 @@ comments:
   name: "thosgood.com"
   
   path: "_data/comments/{options.slug}"
-  requiredFields: ["name", "email", "message"]
+  requiredFields: []
   transforms:
     email: md5
