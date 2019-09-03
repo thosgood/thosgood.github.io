@@ -190,7 +190,7 @@ ol.post-toc { list-style-type: upper-roman; }
 .rounded-image { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
 /** Page columns */
-.page-col-wrapper { margin-left: -15px; }
+.page-col-wrapper { margin-left: -15px; margin-bottom: 15px; }
 
 .page-col { float: left; padding-left: 15px; }
 
