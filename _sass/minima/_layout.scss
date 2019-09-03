@@ -407,6 +407,13 @@ ol.post-toc {
   width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+.page-col-c {
+  width: 80%;
+  float: none;
+  display: table;
+  margin: 0 auto;
+}
+
 @include media-query($on-palm) {
   .page-col {
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
