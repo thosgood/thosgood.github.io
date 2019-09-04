@@ -443,7 +443,7 @@ Here are some nice examples.</p>
     function(){
       var tex = $(this).text();
       return "<span class=\"inline-equation\">" + 
-             katex.renderToString(tex) +
+             katex.renderToString(tex, {throwOnError: false}) +
              "</span>";
   });
 
@@ -451,7 +451,7 @@ Here are some nice examples.</p>
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString(tex, {displayMode: true}) +
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
              "</div>";
   });
 </script>

@@ -609,7 +609,7 @@ However, after scanning through some papers by <a href="https://arxiv.org/abs/ma
     function(){
       var tex = $(this).text();
       return "<span class=\"inline-equation\">" + 
-             katex.renderToString(tex) +
+             katex.renderToString(tex, {throwOnError: false}) +
              "</span>";
   });
 
@@ -617,7 +617,7 @@ However, after scanning through some papers by <a href="https://arxiv.org/abs/ma
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString(tex, {displayMode: true}) +
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
              "</div>";
   });
 </script>

@@ -526,7 +526,7 @@ But the problem then arises that <script type="math/tex">(\gamma_1\cdot\gamma_2)
     function(){
       var tex = $(this).text();
       return "<span class=\"inline-equation\">" + 
-             katex.renderToString(tex) +
+             katex.renderToString(tex, {throwOnError: false}) +
              "</span>";
   });
 
@@ -534,7 +534,7 @@ But the problem then arises that <script type="math/tex">(\gamma_1\cdot\gamma_2)
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString(tex, {displayMode: true}) +
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
              "</div>";
   });
 </script>

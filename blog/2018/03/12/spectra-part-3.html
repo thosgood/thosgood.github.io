@@ -536,7 +536,7 @@ This all seems really nice, but I’m not entirely certain how complicated a pro
     function(){
       var tex = $(this).text();
       return "<span class=\"inline-equation\">" + 
-             katex.renderToString(tex) +
+             katex.renderToString(tex, {throwOnError: false}) +
              "</span>";
   });
 
@@ -544,7 +544,7 @@ This all seems really nice, but I’m not entirely certain how complicated a pro
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString(tex, {displayMode: true}) +
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
              "</div>";
   });
 </script>
