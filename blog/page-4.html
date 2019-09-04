@@ -613,7 +613,7 @@ However, after scanning through some papers by <a href="https://arxiv.org/abs/ma
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

@@ -610,7 +610,7 @@ I am even less knowledgeable about birds than I am about maths, but I do love th
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

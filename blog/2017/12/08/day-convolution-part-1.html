@@ -483,7 +483,7 @@ any interest, and how we can use it to define (co)ends.</em></p>
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

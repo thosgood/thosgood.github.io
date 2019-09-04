@@ -527,7 +527,7 @@ We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a hr
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

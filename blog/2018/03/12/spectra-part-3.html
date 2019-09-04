@@ -544,7 +544,7 @@ This all seems really nice, but I’m not entirely certain how complicated a pro
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

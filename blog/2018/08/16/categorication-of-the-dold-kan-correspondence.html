@@ -439,7 +439,7 @@ For <script type="math/tex">n=3</script> we embed the above cube as the face of 
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

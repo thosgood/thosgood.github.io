@@ -610,7 +610,7 @@ Lots of the talks have gone entirely above my head (reminding me how far behind 
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

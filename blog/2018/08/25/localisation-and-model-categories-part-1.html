@@ -526,7 +526,7 @@ The lemma that we’ll look at is the following (where we’ve yet to define the
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>

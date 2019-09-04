@@ -534,7 +534,7 @@ But the problem then arises that <script type="math/tex">(\gamma_1\cdot\gamma_2)
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
-             katex.renderToString("\\displaystyle "+tex) +
+             katex.renderToString(tex, {displayMode: true}) +
              "</div>";
   });
 </script>
