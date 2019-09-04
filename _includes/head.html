@@ -17,7 +17,9 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="{{ "/assets/jquery-3.4.1.slim.min.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
+  <script src="{{ "/assets/katex/katex.min.js" | relative_url }}"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -26,8 +28,5 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  {% include mathjax_support.html %}
   
 </head>

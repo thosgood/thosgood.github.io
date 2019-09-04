@@ -23,9 +23,9 @@
           {% endif %}
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -75,3 +75,21 @@
   </div>
 
 </footer>
+
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
