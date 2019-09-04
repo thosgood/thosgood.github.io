@@ -11,6 +11,7 @@ After some exceptionally enlightening discussions with Eduard Balzin recently, I
 There's nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.
 
 <!--more-->
+---
 
 _Notational note:_ we write $\mathcal{C}(x,y)$ instead of $\mathrm{Hom}_\mathcal{C}(x,y)$.
 

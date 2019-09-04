@@ -10,6 +10,7 @@ I haven't posted anything in a while, and rather than trying to write about math
 I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I'd actually seen a puffin in the flesh!
 
 <!--more-->
+---
 
 I am from North Devon, and just off the coast there is a small island called [Lundy](https://en.wikipedia.org/wiki/Lundy), which has a very interesting history, but is also famous for being the home to one of the few Atlantic puffin colonies in the British Isles.[^1]
 In the last few decades, sadly, the number of breeding pairs of puffins has been in sharp decline, and when I went over there about 10 years ago I didn't see a single one.

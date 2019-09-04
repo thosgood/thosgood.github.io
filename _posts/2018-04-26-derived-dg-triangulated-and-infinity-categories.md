@@ -12,6 +12,7 @@ Both of them seemed to be some sort of quotienting/equivalence-class-like action
 What different roles were played by each step?
 
 <!--more-->
+---
 
 _This post could have many errors, and I don't understand the proofs for many of the things I vaguely imply; I just mildly believe._
 _Please do let me know if there is anything grossly misleading or just plain wrong._

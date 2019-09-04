@@ -11,6 +11,7 @@ I managed (luckily) to get a chance to ask Mike Shulman a few questions about th
 What follows are some things that I learnt (mostly from \[BD86\]).
 
 <!--more-->
+---
 
 ## Bimodules
 

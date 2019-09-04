@@ -12,6 +12,7 @@ Due to my innate fear of all things differentially geometric, I often prefer wor
 Point is, I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that _'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation'_,[^4] which makes a nice short topic of discussion, whence this post.
 
 <!--more-->
+---
 
 We briefly[^2] recall the definition of a principal $G$-bundle over a space $X$, where $G$ is some _topological_ group.
 

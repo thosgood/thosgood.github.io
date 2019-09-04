@@ -9,6 +9,7 @@ comments: true
 I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.
 
 <!--more-->
+---
 
 These days, living abroad (away from friends and family), most of my social interactions take place with other mathematicians. This is great, because I do love talking about maths, but also has a rather negative effect. Namely, every single person in my office already has a PhD. Because of this, it's very easy to feel like I know absolutely nothing about maths. Combine this with the typical thésard problem of "my thesis just has trivial results but even so my proofs are incomplete and bad", reading things written by the geniuses of your field, and throw in a dash of "so much of academia is about trying to sell your maths as having either profitable (for the few) or military applications", and it can be hard to enjoy maths at times.
 

@@ -11,6 +11,7 @@ I am not at all a physicist, and my knowledge of quantum physics in particular c
 However, after scanning through some papers by [Bartlett](https://arxiv.org/abs/math/0512103), [Baez, Lauda](https://arxiv.org/abs/0908.2469), and [Lurie](https://arxiv.org/abs/0905.0465), my interest in quantum physics, and quantum computing especially, has come back with a vengeance.
 
 <!--more-->
+---
 
 _The following is aimed at people who have maybe read some things about quantum physics before and know some linear algebra._
 

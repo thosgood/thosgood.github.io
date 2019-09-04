@@ -10,6 +10,7 @@ So I'm currently at the Max Planck Institute for Mathematics in Bonn, Germany, f
 Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.
 
 <!--more-->
+---
 
 There was a talk yesterday on [$\mathbb{F}_1$ things](http://www.mpim-bonn.mpg.de/node/8635) by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on [moduli spaces of connections on open varieties](http://www.mpim-bonn.mpg.de/node/8633) as well as one by Damien Calaque (my co-supervisor) on [$\mathbb{E}_n$-algebras and vertex models](http://www.mpim-bonn.mpg.de/node/8617), all of which I managed to follow at least partially (take what you can get, I guess).
 Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a [categorified Dold-Kan correspondence](http://www.mpim-bonn.mpg.de/node/8648).

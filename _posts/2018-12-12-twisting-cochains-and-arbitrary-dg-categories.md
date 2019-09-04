@@ -11,6 +11,7 @@ Having recently been thinking about twisting cochains (a major part of my thesis
 This isn't a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.
 
 <!--more-->
+---
 
 First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),[^7] I will shamelessly refer the interested reader to ~~some notes I wrote a while back~~. (update: these notes have been subsumed into my PhD thesis)
 

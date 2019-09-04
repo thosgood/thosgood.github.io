@@ -14,6 +14,7 @@ The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\
 Dually, a motivation behind the **coend** is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that _forces_ the two actions to agree.
 
 <!--more-->
+---
 
 **Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
 I honestly don't think there is a better teaching of this anywhere else in the literature.

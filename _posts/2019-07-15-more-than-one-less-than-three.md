@@ -10,6 +10,7 @@ What with all the wild applications of, and progress in, the theory of $\infty$-
 But, as in many other ways, CT2019 opened my eyes somewhat, and now I'm trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.
 
 <!--more-->
+---
 
 ## Background and strictification
 
