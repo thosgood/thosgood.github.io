@@ -206,6 +206,8 @@ ol.post-toc { list-style-type: upper-roman; }
 
 .page-col-c { width: 80%; float: none; display: table; margin: 0 auto; }
 
+.page-col-c-xl { width: 90%; float: none; display: table; margin: 0 auto; }
+
 @media screen and (max-width: 600px) { .page-col { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 
 /** Fixed pages */
