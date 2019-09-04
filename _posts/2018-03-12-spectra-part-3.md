@@ -8,7 +8,7 @@ comments: true
 ---
 
 
-_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) and part 2 [here]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
+_[[Part 1]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}), [Part 2]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
 
 This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process.
 
@@ -32,10 +32,10 @@ Just to save you from finding his exact definition, I paraphrase it here.
 
 **Definition.** A **non-$$\Sigma$$-operad** is a $$\mathsf{Top}$$-enriched category $$\mathcal{A}$$ with objects in bijection with $$\mathbb{N}=\{0,1,\ldots\}$$, along with an associative continuous bifunctor $$\oplus\colon\mathcal{A}\times\mathcal{A}\to\mathcal{A}$$ given on objects by $$m\oplus n=m+n$$, and such that, for all $$k$$ and $$n$$, the morphism
 
-$$\begin{align*}
+$$\begin{aligned}
     \coprod_{n=\Sigma r_i} \mathcal{A}(r_1,1)\times\ldots\times\mathcal{A}(r_k,1) &\to \mathcal{A}(n,k)\\
     (f_1,\ldots,f_k) &\mapsto f_1\oplus\ldots\oplus f_k
-\end{align*}$$
+\end{aligned}$$
 
 is a homeomorphism.
 
@@ -90,7 +90,7 @@ If this is the case, then we call a $$\mathcal{B}$$-space an **$$A_\infty$$-spac
 **Warning.** _What follows is nothing more than a sketch of an elephant by a blind man._
 
 Again, there is an important note about names and notation.
-What is commonly known as the **associative operad** $$\mathrm{Assoc}$$ is referred to as $$\mathcal{A}$$ in Vogt, and what is now called $$\mathcal{A}\_\infty$$ is called $$\mathcal{W}\mathcal{A}$$ in Vogt, because he constructs it as a 'homotopy universal $$A_\infty$$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+What is commonly known as the **associative operad** $$\mathrm{Assoc}$$ is referred to as $$\mathcal{A}$$ in Vogt, and what is now called $$\mathcal{A}_\infty$$ is called $$\mathcal{W}\mathcal{A}$$ in Vogt, because he constructs it as a 'homotopy universal $$A_\infty$$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
 In fact, there is the idea of [Boardman-Vogt resolution](https://ncatlab.org/nlab/show/Boardman-Vogt+resolution), which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of $$\mathrm{Assoc}$$, i.e. a cofibrant replacement:
 
 $$\mathcal{A}_\infty\to\mathrm{Assoc}.$$

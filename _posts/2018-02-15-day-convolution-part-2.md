@@ -7,7 +7,7 @@ tags: "category-theory"
 comments: true
 ---
 
-_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %}) and]_
+_[[Part 1]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %}), [Part 3]({{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %})]_
 
 Using the idea of weighted limits, defined in the last post, we can now talk about **ends**.
 The idea of an end is that, given some functor $$F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$$, which we can think of as defining both a left and a right action on $$\prod_{c\in\mathcal{C}}F(c,c)$$, we wish to construct some sort of universal subobject[^1] where the two actions coincide.
@@ -77,10 +77,10 @@ In particular then, we see that the generalisation of limits to weighted limits 
 It's often useful to know the following fact: *continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)*.
 In particular,
 
-$$\begin{align*}
+$$\begin{aligned}
     \mathcal{D}\left( d,\int_\mathcal{C} F \right) &\cong \int_\mathcal{C} \mathcal{D}(d,F)\\
-    \mathcal{D}\left( \int^\mathcal{C} F, d \right) &\cong \int_\mathcal{C} \mathcal{D}(F,d).
-\end{align*}$$
+    \mathcal{D}\left( \int^\mathcal{C}\!\!F, d \right) &\cong \int_\mathcal{C} \mathcal{D}(F,d).
+\end{aligned}$$
 
 We can also rephrase the Yoneda lemma[^3] in terms of ends, as well as finding a **co-Yoneda lemma**.[^2]
 The Yoneda lemma (in the setting of $$\mathcal{V}$$-enriched categories) reads
@@ -109,7 +109,7 @@ Here are some papers and blog posts that I found interesting and really well wri
 
 # Footnotes
 
-[^1]: A subobject of an object $$y$$ is a (class of isomorphisms of) monomorphism(s) into $$y$$.
+[^1]: A subobject of an object $$y$$ is a class of isomorphisms of monomorphisms into $$y$$.
 [^2]: This presentation of the (co-)Yoneda lemma is [sometimes referred to](https://mathoverflow.net/a/20451) as the _ninja Yoneda lemma_.
 [^3]: When phrased in terms of ends, this is sometimes called _Yoneda reduction_.
 [^4]: One thing that I've learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to _accept_ that something is a triviality without really thinking about _why_ it's trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year's resolution is to always prove that trivialities are trivial.

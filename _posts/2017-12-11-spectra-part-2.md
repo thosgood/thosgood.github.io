@@ -7,7 +7,7 @@ tags: "category-theory spectra algebraic-topology operads"
 comments: true
 ---
 
-_[See part 1 [here]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) and part 3 [here]({{ site.baseurl }}{% post_url 2018-03-12-spectra-part-3 %})]_
+_[[Part 1]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}), [Part 3]({{ site.baseurl }}{% post_url 2018-03-12-spectra-part-3 %})]_
 
 In the [previous post of this series]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}) I talked a bit about basic loop space stuff and how this gave birth to the idea of 'homotopically-associative algebras'. I'm going to detour slightly from what I was going to delve into next and speak about **delooping** for a bit first. Then I'll introduce **spectra** as sort of a generalisation of infinite deloopings. I'll probably leave the stuff about $$E_\infty$$-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.
 
@@ -85,11 +85,11 @@ $$\vert \mathbb{B}^nA\vert \simeq K(A,n).$$
 
 This sequence 'is' (under the identification of connective spectra and strict abelian infinity-groups) the [Eilenberg-Mac Lane spectrum](https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+spectrum), whatever that might mean (considering that I've yet to even define spectra). Now comes the magic bit.
 
-Let $$X$$ be a pointed topological space[^13] and $$A$$ an abelian group. It is a classical fact[^5] that the group $$H^n(X,A)$$ can be identified with $$\pi\_0\mathsf{Top}\_*(X,K(A,n))$$, and so the fact that $$\vert\mathbb{B}^nA\vert \simeq K(A,n)$$ tells us that we could just as well _define_ singular cohomology as
+Let $$X$$ be a pointed topological space[^13] and $$A$$ an abelian group. It is a classical fact[^5] that the group $$H^n(X,A)$$ can be identified with $$\pi_0\mathsf{Top}_*(X,K(A,n))$$, and so the fact that $$\vert\mathbb{B}^nA\vert \simeq K(A,n)$$ tells us that we could just as well _define_ singular cohomology as
 
 $$H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)$$
 
-where $$\mathbb{H}$$ is some 'nice' category in which we have infinite deloopings of $$A$$, e.g. $$\mathsf{Top}\_*$$ or $$\infty\mathsf{Groupoid}$$. Even better, these two example choices of $$\mathbb{H}$$ give us homotopically equivalent objects, by the homotopy hypothesis.
+where $$\mathbb{H}$$ is some 'nice' category in which we have infinite deloopings of $$A$$, e.g. $$\mathsf{Top}_*$$ or $$\infty\mathsf{Groupoid}$$. Even better, these two example choices of $$\mathbb{H}$$ give us homotopically equivalent objects, by the homotopy hypothesis.
 
 This is really nice for many reasons, but one particularly nice one is that singular cohomology with coefficients in $$A$$ is _representable_, and it is pretty much represented exactly by $$A$$. There is a [theorem](https://ncatlab.org/nlab/show/Brown+representability+theorem) that tells us that, in particular, any sufficiently well-behaved cohomology theory is representable in this way.
 
@@ -99,19 +99,19 @@ So with all this talk around spectra, it's time to actually define them. Like ma
 
 ### The setting (infinity categories)
 
-First of all we work in $$\mathsf{Top}\_*$$ and keep our example of $$K(A,n)$$ in mind. Here, we define a **sequential pre-spectrum $$\mathcal{E}$$** to be a sequence $$(\mathcal{E}\_n)\_{n\in\mathbb{N}}$$ of pointed spaces, along with the data of **structure maps**, which are continuous maps $$\Sigma \mathcal{E}\_n\to \mathcal{E}\_{n+1}$$. Then, using the adjunction $$(\Sigma\dashv\Omega)$$, we can turn these structure maps into maps $$\mathcal{E}\_n\to\Omega \mathcal{E}\_{n+1}$$. If these are isomorphisms[^6] then we say that $$\mathcal{E}$$ is an **$$\Omega$$-spectrum**.
+First of all we work in $$\mathsf{Top}_*$$ and keep our example of $$K(A,n)$$ in mind. Here, we define a **sequential pre-spectrum $$\mathcal{E}$$** to be a sequence $$(\mathcal{E}_n)_{n\in\mathbb{N}}$$ of pointed spaces, along with the data of **structure maps**, which are continuous maps $$\Sigma \mathcal{E}_n\to \mathcal{E}_{n+1}$$. Then, using the adjunction $$(\Sigma\dashv\Omega)$$, we can turn these structure maps into maps $$\mathcal{E}_n\to\Omega \mathcal{E}_{n+1}$$. If these are isomorphisms[^6] then we say that $$\mathcal{E}$$ is an **$$\Omega$$-spectrum**.
 
-Our previous example of $$\mathcal{E}\_n=K(A,n)$$ then gives us an $$\Omega$$-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.
+Our previous example of $$\mathcal{E}_n=K(A,n)$$ then gives us an $$\Omega$$-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.
 
 In the bigger picture, every sequential pre-spectrum has a **spectrification**, which is an equivalent $$\Omega$$-spectrum given by a [certain filtered colimit](https://ncatlab.org/nlab/show/spectrum#OmegaSpectrum), and these $$\Omega$$-spectra are exactly the fibrant replacements in some model structure.
 
-Generally, we can define [$$\Omega$$-spectrum objects in any $$(\infty,1)$$-category](https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects), but when people talk about 'spectra' with no reference to a specific category, it's usually implicit that they are working in $$\mathsf{Top}\_*$$ with weak homotopy equivalences.
+Generally, we can define [$$\Omega$$-spectrum objects in any $$(\infty,1)$$-category](https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects), but when people talk about 'spectra' with no reference to a specific category, it's usually implicit that they are working in $$\mathsf{Top}_*$$ with weak homotopy equivalences.
 
 But the 'honest' setting for spectra is in a **stable $$(\infty,1)$$-category**: pointed[^7] $$(\infty,1)$$-categories $$\mathcal{C}$$ with finite limits, where the loop $$(\infty,1)$$-functor $$\Omega\colon\mathcal{C}\to\mathcal{C}$$ is an _equivalence_, with the inverse given by suspension $$\Sigma$$. Given some not-necessarily-stable pointed $$(\infty,1)$$-category $$\mathcal{C}$$ with finite limits, we can form its **stabilisation** by taking the limit[^8] of iterating the loop space functor on the category of **pointed objects of $$\mathcal{C}$$**:
 
 $$\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).$$
 
-The prototypical example of such a category is exactly what we've been looking at: _$$\mathsf{Stab}(\mathsf{Top})$$ is the category of $$\Omega$$-spectra in $$\mathsf{Top}\_*$$_. In general, we can construct $$\mathsf{Stab}(\mathcal{C})$$ [exactly by taking the category of spectrum objects](https://arxiv.org/abs/math/0608228) in $$(*\downarrow\mathcal{C})$$.
+The prototypical example of such a category is exactly what we've been looking at: _$$\mathsf{Stab}(\mathsf{Top})$$ is the category of $$\Omega$$-spectra in $$\mathsf{Top}_*$$_. In general, we can construct $$\mathsf{Stab}(\mathcal{C})$$ [exactly by taking the category of spectrum objects](https://arxiv.org/abs/math/0608228) in $$(*\downarrow\mathcal{C})$$.
 
 A really good introduction to all of this, and where I actually saw most of this for the first time, is [Moritz Groth's _A short course on $$\infty$$-categories_](https://arxiv.org/abs/1007.2925).
 
@@ -121,7 +121,7 @@ This is all understood much better when we bring operads into the picture. In th
 
 Before wrapping this post up, I'm just going to mention briefly something that always confused me about spectra that represent cohomology theories.
 
-We can define 'cohomology' in any $$(\infty,1)$$-category $$\mathbb{H}$$ by just setting $$H(X,A):=\pi_0\mathbb{H}(X,A)$$, but if we want this to behave like 'usual' cohomology then we have to impose some restrictions. First of all, if we want our 'cocycles' to classify something (namely principal bundles over $$X$$) then we have to be working in an _$$(\infty,1)$$-topos_. Secondly, if we want to obtain a $$\mathbb{Z}$$-graded cohomology then the simplest way[^10] of doing so is to ask that our coefficient object $$A$$ be a _component of a spectrum object_, i.e. $$A=\mathcal{E}\_n$$ for some spectrum object $$\mathcal{E}$$. Thirdly, if we want our cohomology to have a group structure then we need[^11] $$A$$ to be a _group object_, which is always the case if $$A$$ is a component of a spectrum object.[^12] Note that this is abelian if $$A$$ is at least an $$E\_2$$-object. Finally, if we want a ring structure then we can ask that the spectrum object $$\mathcal{E}$$ of which $$A$$ is a component be an $$E_\infty$$-ring, or a _ring spectra_.
+We can define 'cohomology' in any $$(\infty,1)$$-category $$\mathbb{H}$$ by just setting $$H(X,A):=\pi_0\mathbb{H}(X,A)$$, but if we want this to behave like 'usual' cohomology then we have to impose some restrictions. First of all, if we want our 'cocycles' to classify something (namely principal bundles over $$X$$) then we have to be working in an _$$(\infty,1)$$-topos_. Secondly, if we want to obtain a $$\mathbb{Z}$$-graded cohomology then the simplest way[^10] of doing so is to ask that our coefficient object $$A$$ be a _component of a spectrum object_, i.e. $$A=\mathcal{E}_n$$ for some spectrum object $$\mathcal{E}$$. Thirdly, if we want our cohomology to have a group structure then we need[^11] $$A$$ to be a _group object_, which is always the case if $$A$$ is a component of a spectrum object.[^12] Note that this is abelian if $$A$$ is at least an $$E_2$$-object. Finally, if we want a ring structure then we can ask that the spectrum object $$\mathcal{E}$$ of which $$A$$ is a component be an $$E_\infty$$-ring, or a _ring spectra_.
 
 The point here is that, cohomology can be defined very generally, but if we want to recover something that we really recognise from it then we can basically restrict ourselves to looking at **ring spectra in an $$(\infty,1)$$-topos**.
 
@@ -137,16 +137,16 @@ Then, by the [Hurewicz theorem](https://en.wikipedia.org/wiki/Hurewicz_theorem),
 
 $$H^n(K(A,n),A)\xrightarrow{\sim}\mathrm{Hom}_\mathbb{Z}(A,A).$$
 
-Now take the class of $$\mathrm{id}\_A$$ in $$\mathrm{Hom}\_\mathbb{Z}(A,A)$$ and look at its image $$[\iota\_n]$$ in $$H^n(K(A,n),A)$$. This gives us a natural (in $$X$$) transformation
+Now take the class of $$\mathrm{id}_A$$ in $$\mathrm{Hom}_\mathbb{Z}(A,A)$$ and look at its image $$[\iota_n]$$ in $$H^n(K(A,n),A)$$. This gives us a natural (in $$X$$) transformation
 
-$$\begin{align*}
+$$\begin{aligned}
 \eta_X\colon\pi_0\mathsf{Top}_*(X,K(A,n))&\to H^n(X,A)\\
 [\gamma]&\mapsto \gamma^*([\iota_n])
-\end{align*}$$
+\end{aligned}$$
 
 and we claim that it is a natural isomorphism when we restrict to the subcategory of pointed CW complexes.
 
-**Edit:** This 'classical fact' is really an example of [Eckmann-Hilton duality](https://ncatlab.org/nlab/show/Eckmann-Hilton+duality).
+**Edit:** This 'classical fact' is really a key example of the so-called [Eckmann-Hilton duality](https://ncatlab.org/nlab/show/Eckmann-Hilton+duality).
 
 ---
 

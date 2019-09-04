@@ -38,9 +38,9 @@ We say that two graphs $$G,H$$ are _$$n$$-homotopic_ if there exist graph homomo
 
 Then we can consider the category $$\mathsf{Grph}_n$$, which has objects being equivalence classes of $$n$$-homotopic graphs, and morphisms being equivalence classes of $$n$$-homotopic graph homomorphisms. This gives us the following structure:
 
-- $$\mathsf{Grph}\_0 = \mathsf{Grph}$$;
-- $$\mathsf{Grph}\_\infty = \mathrm{Ho}(\mathsf{Grph})$$;
-- functors $$\mathsf{Grph}\_n \to \mathsf{Grph}\_{n+1}$$ that are surjective on objects, where functoriality relies on the fact that $$n$$-homotopies can be considered as $$(n+1)$$-homotopies.
+- $$\mathsf{Grph}_0 = \mathsf{Grph}$$;
+- $$\mathsf{Grph}_\infty = \mathrm{Ho}(\mathsf{Grph})$$;
+- functors $$\mathsf{Grph}_n \to \mathsf{Grph}_{n+1}$$ that are surjective on objects, where functoriality relies on the fact that $$n$$-homotopies can be considered as $$(n+1)$$-homotopies.
 
 We can think of the number $$n$$ as some sort of "complexity" of the homotopy: small $$n$$ correspond to "homotopies that can be performed in a few steps" (here it is a good idea to see some of the examples in \[RH19\] to get an idea of how graph homotopies behave).
 

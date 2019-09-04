@@ -165,10 +165,10 @@ Finally for this post, we'll talk a bit about classical circuits.
 Let's take a single bit, which can be in one of two states: $$\vert0\rangle$$ (off) and $$\vert1\rangle$$ (on).
 Using the same notation as before, we can use a 2-vector to describe the state of this bit:
 
-$$\begin{align*}
+$$\begin{aligned}
     \begin{pmatrix}1\\0\end{pmatrix} \,\,\leftrightarrow\, &\vert0\rangle \leftrightarrow \text{off}\\
     \begin{pmatrix}0\\1\end{pmatrix} \,\,\leftrightarrow\, &\vert1\rangle \leftrightarrow \text{on}.
-\end{align*}$$
+\end{aligned}$$
 
 Then we can describe the four classical computations on a single bit by matrices:
 
