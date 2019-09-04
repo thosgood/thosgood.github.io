@@ -13,7 +13,7 @@
   <title>Tim Hosgood — Weighted limits, ends, and Day convolution (Part 2)</title>
 
 
-  <meta name="description" content="[See part 1 here] Using the idea of weighted limits, defined in the last post, we can now talk about ends. The idea of an end is that, given some functor $F\...">
+  <meta name="description" content="[See part 1 here and] Using the idea of weighted limits, defined in the last post, we can now talk about ends. The idea of an end is that, given some functor...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -293,11 +273,11 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p><em>[See part 1 <a href="/blog/2017/12/08/day-convolution-part-1.html">here</a>]</em></p>
+    <p><em>[See part 1 <a href="/blog/2017/12/08/day-convolution-part-1.html">here</a> and]</em></p>
 
 <p>Using the idea of weighted limits, defined in the last post, we can now talk about <strong>ends</strong>.
-The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$, which we can think of as defining both a left and a right action on $\prod_{c\in\mathcal{C}}F(c,c)$, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
-Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that <em>forces</em> the two actions to agree.</p>
+The idea of an end is that, given some functor <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script>, which we can think of as defining both a left and a right action on <script type="math/tex">\prod_{c\in\mathcal{C}}F(c,c)</script>, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
+Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of <script type="math/tex">\coprod_{c\in\mathcal{C}}F(c,c)</script> that <em>forces</em> the two actions to agree.</p>
 
 <!--more-->
 <hr />
@@ -311,18 +291,18 @@ I honestly don’t think there is a better teaching of this anywhere else in the
 
 <p>We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.</p>
 
-<p>First, let $\mathcal{C}$ and $\mathcal{D}$ be $\mathcal{V}$-enriched categories (with $\mathcal{V}$ a closed symmetric monoidal category) and $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ a $\mathcal{V}$-functor.
-Then the <strong>end</strong> of $F$, written $\int_\mathcal{C} F$ is (<em>if it exists!</em>) the $\mathrm{Hom}_\mathcal{C}$-weighted limit of $F$:</p>
+<p>First, let <script type="math/tex">\mathcal{C}</script> and <script type="math/tex">\mathcal{D}</script> be <script type="math/tex">\mathcal{V}</script>-enriched categories (with <script type="math/tex">\mathcal{V}</script> a closed symmetric monoidal category) and <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script> a <script type="math/tex">\mathcal{V}</script>-functor.
+Then the <strong>end</strong> of <script type="math/tex">F</script>, written <script type="math/tex">\int_\mathcal{C} F</script> is (<em>if it exists!</em>) the <script type="math/tex">\mathrm{Hom}_\mathcal{C}</script>-weighted limit of <script type="math/tex">F</script>:</p>
 
 <script type="math/tex; mode=display">\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.</script>
 
-<p>Dually, the <strong>coend</strong> of $F$, written $\int^\mathcal{C} F$, is</p>
+<p>Dually, the <strong>coend</strong> of <script type="math/tex">F</script>, written <script type="math/tex">\int^\mathcal{C} F</script>, is</p>
 
 <script type="math/tex; mode=display">\int^{c\in\mathcal{C}} F(c,c) := \mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.</script>
 
-<p>Alternatively now, suppose that we have some $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ between not-necessarily-enriched categories.
+<p>Alternatively now, suppose that we have some <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script> between not-necessarily-enriched categories.
 We can still define the end by using <strong>wedges</strong>.
-A <strong>wedge</strong> $e\colon w\to F$ is the data of an object $e\in\mathcal{D}$ and morphisms $e_c\colon w\to F(c,c)$ such that, for any $f\colon c\to c’$, the following diagram commutes:</p>
+A <strong>wedge</strong> <script type="math/tex">e\colon w\to F</script> is the data of an object <script type="math/tex">e\in\mathcal{D}</script> and morphisms <script type="math/tex">e_c\colon w\to F(c,c)</script> such that, for any <script type="math/tex">f\colon c\to c'</script>, the following diagram commutes:</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{array}{ccc}
@@ -331,7 +311,7 @@ w & \xrightarrow{e_{c'}} & F(c',c')\\
 F(c,c) & \xrightarrow{F(\mathrm{id},f)} & F(c,c')
 \end{array} %]]></script>
 
-<p>Then we can define the end as a <em>universal</em> wedge $w$ (if it exists), i.e. any other wedge $w’$ factors uniquely through $w’\to w$</p>
+<p>Then we can define the end as a <em>universal</em> wedge <script type="math/tex">w</script> (if it exists), i.e. any other wedge <script type="math/tex">w'</script> factors uniquely through <script type="math/tex">w'\to w</script></p>
 
 <h3 id="examples">Examples</h3>
 
@@ -344,18 +324,18 @@ It is pretty much a triviality (from the definitions)<sup id="fnref:4"><a href="
 
 <p>This is a nice way of saying it, because it means that we can get the enriched natural transformations of enriched functors “for free” by defining them in exactly this way.</p>
 
-<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from the nLab</a>) is when we take $\mathcal{V}=\mathbb{R}_{\geqslant0}\cup{\infty}$, with the monoidal product given by addition.
-Then a $\mathcal{V}$-enriched category is a metric space, and the hom objects tell us the distance between points.
-Further, given two maps $f,g\colon X\to Y$ between two metric spaces, the distance between the maps is exactly the enriched functor-category<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup> (given by the end)</p>
+<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from the nLab</a>) is when we take <script type="math/tex">\mathcal{V}=\mathbb{R}_{\geqslant0}\cup\{\infty\}</script>, with the monoidal product given by addition.
+Then a <script type="math/tex">\mathcal{V}</script>-enriched category is a metric space, and the hom objects tell us the distance between points.
+Further, given two maps <script type="math/tex">f,g\colon X\to Y</script> between two metric spaces, the distance between the maps is exactly the enriched functor-category<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup> (given by the end)</p>
 
 <script type="math/tex; mode=display">[X,Y](f,g) = \int _{x\in X} Y(f(x),g(x)) = \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.</script>
 
 <p>Finally, for the moment, there is the example of <strong>Kan extensions</strong>.
-If we have some $\mathcal{V}$-enriched category $\mathcal{D}$ that is tensored<sup id="fnref:6"><a href="#fn:6" class="footnote">4</a></sup> over $\mathcal{V}$, and some functors $F\colon\mathcal{C}\to\mathcal{D}$ and $p\colon\mathcal{C}\to\mathcal{B}$, then the <strong>left Kan extension</strong> of $F$ along $p$ is given by the coend:</p>
+If we have some <script type="math/tex">\mathcal{V}</script>-enriched category <script type="math/tex">\mathcal{D}</script> that is tensored<sup id="fnref:6"><a href="#fn:6" class="footnote">4</a></sup> over <script type="math/tex">\mathcal{V}</script>, and some functors <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script> and <script type="math/tex">p\colon\mathcal{C}\to\mathcal{B}</script>, then the <strong>left Kan extension</strong> of <script type="math/tex">F</script> along <script type="math/tex">p</script> is given by the coend:</p>
 
 <script type="math/tex; mode=display">\mathrm{Lan}F = \int^{c\in\mathcal{C}} \mathrm{Hom}(p(c),-)\odot F(c)</script>
 
-<p>where $\odot$ is the co-power.</p>
+<p>where <script type="math/tex">\odot</script> is the co-power.</p>
 
 <p>In particular then, we see that the generalisation of limits to weighted limits is ‘at least as general as’ the idea of Kan extensions.</p>
 
@@ -371,7 +351,7 @@ In particular,</p>
 \end{align*} %]]></script>
 
 <p>We can also rephrase the Yoneda lemma<sup id="fnref:3"><a href="#fn:3" class="footnote">5</a></sup> in terms of ends, as well as finding a <strong>co-Yoneda lemma</strong>.<sup id="fnref:2"><a href="#fn:2" class="footnote">6</a></sup>
-The Yoneda lemma (in the setting of $\mathcal{V}$-enriched categories) reads</p>
+The Yoneda lemma (in the setting of <script type="math/tex">\mathcal{V}</script>-enriched categories) reads</p>
 
 <script type="math/tex; mode=display">[\mathcal{C}^\mathrm{op},\mathcal{V}](\mathcal{C}(-,c),F) \cong F(c)</script>
 
@@ -402,16 +382,16 @@ Here are some papers and blog posts that I found interesting and really well wri
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>A subobject of an object $y$ is a (class of isomorphisms of) monomorphism(s) into $y$. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>A subobject of an object <script type="math/tex">y</script> is a (class of isomorphisms of) monomorphism(s) into <script type="math/tex">y</script>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
       <p>One thing that I’ve learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to <em>accept</em> that something is a triviality without really thinking about <em>why</em> it’s trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year’s resolution is to always prove that trivialities are trivial. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:5">
-      <p>I’m not sure if this should be ‘enriched functor-category’ or ‘enriched-functor category’. My first thought was the latter, because it’s the category of enriched functors, but I suppose that it’s clearer that our natural transformations are also enriched if we describe this as ‘the functor category enriched over $\mathcal{V}$’. But then, I tend to overuse hyphens when there’s more than one adjective, just to be extra safe. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+      <p>I’m not sure if this should be ‘enriched functor-category’ or ‘enriched-functor category’. My first thought was the latter, because it’s the category of enriched functors, but I suppose that it’s clearer that our natural transformations are also enriched if we describe this as ‘the functor category enriched over <script type="math/tex">\mathcal{V}</script>’. But then, I tend to overuse hyphens when there’s more than one adjective, just to be extra safe. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:6">
-      <p>‘Tensor’ is another name for ‘co-power’, i.e. a $\mathcal{V}$-category $\mathcal{E}$ is <strong>tensored over $\mathcal{V}$</strong> if all pairs of objects $(x,k)$, where $x\in\mathcal{E}$ and $k\in\mathcal{V}$, have a <strong>co-power</strong>: an object $k\odot x$ along with a natural isomorphism $\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k, \mathcal{C}(x,-))$, where $\mathcal{V}(-,-)$ is the internal hom in $\mathcal{V}$. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+      <p>‘Tensor’ is another name for ‘co-power’, i.e. a <script type="math/tex">\mathcal{V}</script>-category <script type="math/tex">\mathcal{E}</script> is <strong>tensored over <script type="math/tex">\mathcal{V}</script></strong> if all pairs of objects <script type="math/tex">(x,k)</script>, where <script type="math/tex">x\in\mathcal{E}</script> and <script type="math/tex">k\in\mathcal{V}</script>, have a <strong>co-power</strong>: an object <script type="math/tex">k\odot x</script> along with a natural isomorphism <script type="math/tex">\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k, \mathcal{C}(x,-))</script>, where <script type="math/tex">\mathcal{V}(-,-)</script> is the internal hom in <script type="math/tex">\mathcal{V}</script>. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
       <p>When phrased in terms of ends, this is sometimes called <em>Yoneda reduction</em>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
@@ -476,9 +456,9 @@ Here are some papers and blog posts that I found interesting and really well wri
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -529,6 +509,23 @@ Here are some papers and blog posts that I found interesting and really well wri
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

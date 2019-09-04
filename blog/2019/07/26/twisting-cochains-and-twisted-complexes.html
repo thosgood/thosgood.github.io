@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -289,7 +269,7 @@
 <!--more-->
 <hr />
 
-<p>One talk that I really liked was <a href="http://math.ucalgary.ca/math_unitis/profiles/1-7046986">Rachel Hardeman</a>’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, $C_n$ is only contractible for $n\leqslant4$. You can read more about this in <a href="https://arxiv.org/abs/1904.12065">her paper on the arXiv</a>.</p>
+<p>One talk that I really liked was <a href="http://math.ucalgary.ca/math_unitis/profiles/1-7046986">Rachel Hardeman</a>’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, <script type="math/tex">C_n</script> is only contractible for <script type="math/tex">n\leqslant4</script>. You can read more about this in <a href="https://arxiv.org/abs/1904.12065">her paper on the arXiv</a>.</p>
 
 <p>Also really great one was <a href="http://pi.math.cornell.edu/~maru/index.html">Maru Sarazola</a>’s talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don’t think she currently has notes for this stuff typed up anywhere, but (from what I gather) it’s in the works!</p>
 
@@ -355,9 +335,9 @@
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -408,6 +388,23 @@
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

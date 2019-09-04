@@ -13,7 +13,7 @@
   <title>Tim Hosgood — More-than-one-but-less-than-three-categories</title>
 
 
-  <meta name="description" content="What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category...">
+  <meta name="description" content="What with all the wild applications of, and progress in, the theory of -categories, I had really neglected studying any kind of lower higher-category theory....">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -304,7 +284,7 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p>What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category theory.
+    <p>What with all the wild applications of, and progress in, the theory of <script type="math/tex">\infty</script>-categories, I had really neglected studying any kind of lower higher-category theory.
 But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.</p>
 
 <!--more-->
@@ -314,20 +294,20 @@ But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying
 
 <p>Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>), I’ll just say a tiny bit about why I’m an idiot.</p>
 
-<p>In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, “they’re just $n$-categories with $n$=2”; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
+<p>In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, “they’re just <script type="math/tex">n</script>-categories with <script type="math/tex">n</script>=2”; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
 Both of these things are rather bad points of view to take.</p>
 
 <p>For the latter point, it’s important to note that, yes, weak 2-categories can be strictified, and every pseudofunctor is equivalent to a strict one, but it is <strong>not</strong> true that every pseudonatural transformation is equivalent to a (strict) natural transformation.</p>
 
-<p>As explained in <a href="http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf">Mike Shulman’s talk</a>, working in the $(2,1)$-topos $[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$, every pseudofunctor $X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}$ is equivalent to a strict one, but <strong>not</strong> every pseudonatural transformation $X\rightsquigarrow Y$ is equivalent to a strict one.
+<p>As explained in <a href="http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf">Mike Shulman’s talk</a>, working in the <script type="math/tex">(2,1)</script>-topos <script type="math/tex">[\mathbb{D}^{\text{op}},\mathsf{Gpd}]</script>, every pseudofunctor <script type="math/tex">X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}</script> is equivalent to a strict one, but <strong>not</strong> every pseudonatural transformation <script type="math/tex">X\rightsquigarrow Y</script> is equivalent to a strict one.
 But we do have the following lemma (from Mike’s talk).</p>
 
-<p><strong>Lemma.</strong> For any $Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$ there is a strict $\mathcal{C}^{\mathbb{D}}Y$ and a bijection between pseudonatural $X\rightsquigarrow Y$ and strict $X\to\mathcal{C}^{\mathbb{D}}Y$.</p>
+<p><strong>Lemma.</strong> For any <script type="math/tex">Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]</script> there is a strict <script type="math/tex">\mathcal{C}^{\mathbb{D}}Y</script> and a bijection between pseudonatural <script type="math/tex">X\rightsquigarrow Y</script> and strict <script type="math/tex">X\to\mathcal{C}^{\mathbb{D}}Y</script>.</p>
 
-<p><strong>Proof</strong>. Almost by definition: a pseudonatural $X\rightsquigarrow Y$ assigns to each $x\in X(d)$ some image $f_x(x)\in Y(d)$ along with an isomorphism $\gamma^*(f_x(x))\cong f_{x’}(\gamma^*(x))$ for all $\gamma\colon x\to x’$ in $\mathbb{D}$, and this isomorphism satisfies a coherence condition.
-So we just define $\mathcal{C}^{\mathbb{D}}Y(d)$ to consist of all this data.</p>
+<p><strong>Proof</strong>. Almost by definition: a pseudonatural <script type="math/tex">X\rightsquigarrow Y</script> assigns to each <script type="math/tex">x\in X(d)</script> some image <script type="math/tex">f_x(x)\in Y(d)</script> along with an isomorphism <script type="math/tex">\gamma^\*(f_x(x))\cong f_{x'}(\gamma^\*(x))</script> for all <script type="math/tex">\gamma\colon x\to x'</script> in <script type="math/tex">\mathbb{D}</script>, and this isomorphism satisfies a coherence condition.
+So we just define <script type="math/tex">\mathcal{C}^{\mathbb{D}}Y(d)</script> to consist of all this data.</p>
 
-<p>There is then a lovely theory of <em>coflexible</em> objects, which are those $Y$ such that the canonical morphism $Y\to\mathcal{C}^{\mathbb{D}}Y$ has a strict retraction.
+<p>There is then a lovely theory of <em>coflexible</em> objects, which are those <script type="math/tex">Y</script> such that the canonical morphism <script type="math/tex">Y\to\mathcal{C}^{\mathbb{D}}Y</script> has a strict retraction.
 These objects are such that <strong>all</strong> pseudonatural transformations <em>into</em> them are isomorphic to <em>strict</em> such ones.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
 
 <h2 id="the-idea">The idea</h2>
@@ -336,7 +316,7 @@ These objects are such that <strong>all</strong> pseudonatural transformations <
 
 <ul>
   <li>A 2-category should be something which has <em>objects</em>, <em>1-morphisms</em> between the objects, and <em>2-morphisms</em> between the morphisms.</li>
-  <li>We should be able to compose 1-morphisms ‘along objects’, in that, given 1-morphisms $f\colon x\to y$ and $g\colon y\to z$, we should get some 1-morphism $g\circ f\colon x\to z$.</li>
+  <li>We should be able to compose 1-morphisms ‘along objects’, in that, given 1-morphisms <script type="math/tex">f\colon x\to y</script> and <script type="math/tex">g\colon y\to z</script>, we should get some 1-morphism <script type="math/tex">g\circ f\colon x\to z</script>.</li>
   <li>We should be able to compose 2-morphisms ‘along objects’ (so-called <em>horizontally</em>)</li>
 </ul>
 
@@ -350,8 +330,8 @@ These objects are such that <strong>all</strong> pseudonatural transformations <
 
 <h3 id="categorification-and-monoidal-delooping">Categorification and monoidal delooping</h3>
 
-<p>An $(n=2)$-category can be thought of as the Oidification (or <a href="https://ncatlab.org/nlab/show/horizontal+categorification">horizontal categorification</a>) of a monoidal category: it is like a monoidal category with many objects.
-To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms ‘up one degree’) is exactly a one object $(n=2)$-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.</p>
+<p>An <script type="math/tex">(n=2)</script>-category can be thought of as the Oidification (or <a href="https://ncatlab.org/nlab/show/horizontal+categorification">horizontal categorification</a>) of a monoidal category: it is like a monoidal category with many objects.
+To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms ‘up one degree’) is exactly a one object <script type="math/tex">(n=2)</script>-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.</p>
 
 <h2 id="strict-vs-weak">Strict vs. weak</h2>
 
@@ -359,41 +339,41 @@ To see this, note that the delooping of a monoidal category (i.e. the category w
 
 <p>The general consensus is to call <em>strict</em> 2-categories “<strong>2-categories</strong>”, and the algebraic notion of <em>weak</em> 2-categories “<strong>bicategories</strong>”.
 This can be confusing, <a href="https://ncatlab.org/nlab/show/bicategory#terminology">for a few reasons</a>, but such is life.
-From now on, in this post, we will say <strong>$(n=2)$-categories</strong> to talk about both senses of 2-categories.</p>
+From now on, in this post, we will say <strong><script type="math/tex">(n=2)</script>-categories</strong> to talk about both senses of 2-categories.</p>
 
-<p>Specifically, a <em>2-category</em> is a category enriched over the cartesian monoidal category $\mathsf{Cat}$; a <em>bicategory</em> is a category <strong>weakly</strong> enriched over $\mathsf{Cat}$ (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).</p>
+<p>Specifically, a <em>2-category</em> is a category enriched over the cartesian monoidal category <script type="math/tex">\mathsf{Cat}</script>; a <em>bicategory</em> is a category <strong>weakly</strong> enriched over <script type="math/tex">\mathsf{Cat}</script> (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).</p>
 
 <h3 id="the-functors">The functors</h3>
 
-<p>Whether we take strict or weak $(n=2)$-categories, we can still choose whether we want our $(n=2)$-functors to be strict or weak.</p>
+<p>Whether we take strict or weak <script type="math/tex">(n=2)</script>-categories, we can still choose whether we want our <script type="math/tex">(n=2)</script>-functors to be strict or weak.</p>
 
-<p>A <em>2-functor</em> is a strict $(n=2)$-functor (which <a href="https://www.ncatlab.org/nlab/show/2-functor#fn:1">usually</a> only makes sense between 2-categories); a <em>pseudofunctor</em> is a weak $(n=2)$-functor (so the composition of 1-morphisms is preserved only up to coherent (specified) 2-isomorphisms, and similarly for the identity 1-morphisms) (which can be between strict or weak $(n=2)$-categories).</p>
+<p>A <em>2-functor</em> is a strict <script type="math/tex">(n=2)</script>-functor (which <a href="https://www.ncatlab.org/nlab/show/2-functor#fn:1">usually</a> only makes sense between 2-categories); a <em>pseudofunctor</em> is a weak <script type="math/tex">(n=2)</script>-functor (so the composition of 1-morphisms is preserved only up to coherent (specified) 2-isomorphisms, and similarly for the identity 1-morphisms) (which can be between strict or weak <script type="math/tex">(n=2)</script>-categories).</p>
 
-<p>If we forget the 2-structure of an $(n=2)$-category and consider the hom-categories as discrete, then both of these notions of $(n=2)$-functors reduce to 1-functors between 1-categories.
-There is, however, an even weaker type of $(n=2)$-functor for which this is <strong>not</strong> the case: a(n) <em>(op)lax 2-functor</em>: here the associator and compositor 2-cells are <strong>not</strong> required to even be coherent <em>isomorphisms</em>, but instead just coherent <em>morphisms</em>, in some direction (with one direction corresponding to lax and the other to oplax).
-This is exactly the idea of an (op)lax functor of monoidal categories, and so reassures us that $(n=2)$-categories can be thought of as monoidal categories with multiple objects, as mentioned above.</p>
+<p>If we forget the 2-structure of an <script type="math/tex">(n=2)</script>-category and consider the hom-categories as discrete, then both of these notions of <script type="math/tex">(n=2)</script>-functors reduce to 1-functors between 1-categories.
+There is, however, an even weaker type of <script type="math/tex">(n=2)</script>-functor for which this is <strong>not</strong> the case: a(n) <em>(op)lax 2-functor</em>: here the associator and compositor 2-cells are <strong>not</strong> required to even be coherent <em>isomorphisms</em>, but instead just coherent <em>morphisms</em>, in some direction (with one direction corresponding to lax and the other to oplax).
+This is exactly the idea of an (op)lax functor of monoidal categories, and so reassures us that <script type="math/tex">(n=2)</script>-categories can be thought of as monoidal categories with multiple objects, as mentioned above.</p>
 
 <p>That is,</p>
 
 <table class="bordered-table">
   <thead>
     <tr>
-      <th>$(n=2)$-functor</th>
+      <th><script type="math/tex">(n=2)</script>-functor</th>
       <th>compositor</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>2-functor</td>
-      <td>$F(g\circ f)=F(g)\circ F(f)$</td>
+      <td><script type="math/tex">F(g\circ f)=F(g)\circ F(f)</script></td>
     </tr>
     <tr>
       <td>pseudofunctor</td>
-      <td>$F(g\circ f)\cong F(g)\circ F(f)$</td>
+      <td><script type="math/tex">F(g\circ f)\cong F(g)\circ F(f)</script></td>
     </tr>
     <tr>
       <td>(op)lax 2-functor</td>
-      <td>$F(g\circ f)\Rightarrow F(g)\circ F(f)$</td>
+      <td><script type="math/tex">F(g\circ f)\Rightarrow F(g)\circ F(f)</script></td>
     </tr>
   </tbody>
 </table>
@@ -402,26 +382,26 @@ This is exactly the idea of an (op)lax functor of monoidal categories, and so re
 
 <h2 id="double-categories">Double categories</h2>
 
-<p>Something that looks a bit like an $(n=2)$-category when you unwrap the abstract definition is a <em>double category</em>: an internal category $\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)$ of $\mathsf{Cat}$.
+<p>Something that looks a bit like an <script type="math/tex">(n=2)</script>-category when you unwrap the abstract definition is a <em>double category</em>: an internal category <script type="math/tex">\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)</script> of <script type="math/tex">\mathsf{Cat}</script>.
 This means that it has</p>
 
 <ul>
-  <li><em>objects</em>, given by the objects of $\mathcal{C}_0$;</li>
-  <li><em>vertical morphisms</em>, given by the morphisms of $\mathcal{C}_0$;</li>
-  <li><em>horizontal morphisms</em>, given by the objects of $\mathcal{C}_1$; and</li>
-  <li><em>2-cells</em>, or <em>squares</em>, given by the morphisms of $\mathcal{C}_1$.</li>
+  <li><em>objects</em>, given by the objects of <script type="math/tex">\mathcal{C}_0</script>;</li>
+  <li><em>vertical morphisms</em>, given by the morphisms of <script type="math/tex">\mathcal{C}_0</script>;</li>
+  <li><em>horizontal morphisms</em>, given by the objects of <script type="math/tex">\mathcal{C}_1</script>; and</li>
+  <li><em>2-cells</em>, or <em>squares</em>, given by the morphisms of <script type="math/tex">\mathcal{C}_1</script>.</li>
 </ul>
 
 <p>We can picture the 2-cells as a square (hence the name), as</p>
 
 <p><img src="/assets/post-images/2019-07-15-double-square.png" alt="squares" class="centred" /></p>
 
-<p>where $x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$ are objects, $f,g\in\operatorname{ob}\mathcal{C}_1$ are horizontal morphisms, $\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$ are vertical morphisms, and $\phi\in\operatorname{Arr}\mathcal{C}_1$ is the 2-cell.</p>
+<p>where <script type="math/tex">x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0</script> are objects, <script type="math/tex">f,g\in\operatorname{ob}\mathcal{C}_1</script> are horizontal morphisms, <script type="math/tex">\alpha\beta\in\operatorname{Arr}\mathcal{C}_0</script> are vertical morphisms, and <script type="math/tex">\phi\in\operatorname{Arr}\mathcal{C}_1</script> is the 2-cell.</p>
 
-<p>Composition ‘horizontally’ of two squares, left and right of each other, is given by the usual composition in the categories $\mathcal{C}_0$ and $\mathcal{C}_1$; composition ‘vertically’ of two squares, one above the other, is given by the composition operation on $\mathcal{C}_1\rightrightarrows\mathcal{C}_0$, coming from the fact that $\mathscr{C}$ is an internal category.</p>
+<p>Composition ‘horizontally’ of two squares, left and right of each other, is given by the usual composition in the categories <script type="math/tex">\mathcal{C}_0</script> and <script type="math/tex">\mathcal{C}_1</script>; composition ‘vertically’ of two squares, one above the other, is given by the composition operation on <script type="math/tex">\mathcal{C}_1\rightrightarrows\mathcal{C}_0</script>, coming from the fact that <script type="math/tex">\mathscr{C}</script> is an internal category.</p>
 
-<p>There are two <em>edge categories</em> associated to $\mathscr{C}$, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
-If the two edge categories agree then we say that $\mathscr{C}$ is <em>edge-symmetric</em>.</p>
+<p>There are two <em>edge categories</em> associated to <script type="math/tex">\mathscr{C}</script>, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
+If the two edge categories agree then we say that <script type="math/tex">\mathscr{C}</script> is <em>edge-symmetric</em>.</p>
 
 <h3 id="examples">Examples</h3>
 
@@ -439,29 +419,29 @@ If the two edge categories agree then we say that $\mathscr{C}$ is <em>edge-symm
   </thead>
   <tbody>
     <tr>
-      <td>$\mathsf{Prof}$</td>
+      <td><script type="math/tex">\mathsf{Prof}</script></td>
       <td>small categories</td>
       <td>functors</td>
       <td>profunctors</td>
       <td>nat. trans.</td>
     </tr>
     <tr>
-      <td>$\mathsf{Mod}$</td>
+      <td><script type="math/tex">\mathsf{Mod}</script></td>
       <td>model categories</td>
       <td>left Quil. functors</td>
       <td>right Quil. functors</td>
       <td>nat. trans.</td>
     </tr>
     <tr>
-      <td>$\mathsf{MonCat}$</td>
+      <td><script type="math/tex">\mathsf{MonCat}</script></td>
       <td>monoidal categories</td>
       <td>colax mon. functors</td>
       <td>lax mon. functors</td>
       <td>mon. nat. trans.</td>
     </tr>
     <tr>
-      <td>$\mathsf{Dbl}\Pi(X)$</td>
-      <td>points of top. space $X$</td>
+      <td><script type="math/tex">\mathsf{Dbl}\Pi(X)</script></td>
+      <td>points of top. space <script type="math/tex">X</script></td>
       <td>paths</td>
       <td>paths</td>
       <td>homotopies</td>
@@ -469,15 +449,15 @@ If the two edge categories agree then we say that $\mathscr{C}$ is <em>edge-symm
   </tbody>
 </table>
 
-<p>For more details about why $\mathsf{Mod}$ is so interesting, see [S11].</p>
+<p>For more details about why <script type="math/tex">\mathsf{Mod}</script> is so interesting, see [S11].</p>
 
 <p>Note that we can also get weak versions of double categories, in many ways, as described <a href="https://ncatlab.org/nlab/show/double+category#weakenings">here</a>.</p>
 
 <h2 id="1-categories-as-2-categories-as-double-categories">1-categories as 2-categories as double categories</h2>
 
 <ul>
-  <li>We can consider any 1-category as an $(n=2)$-category by taking the 2-cells to just be identities.</li>
-  <li>We can consider any $(n=2)$-category as an edge-symmetric double category, its <em>double category of squares</em>, via the so-called <em>quintet construction</em>: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.
+  <li>We can consider any 1-category as an <script type="math/tex">(n=2)</script>-category by taking the 2-cells to just be identities.</li>
+  <li>We can consider any <script type="math/tex">(n=2)</script>-category as an edge-symmetric double category, its <em>double category of squares</em>, via the so-called <em>quintet construction</em>: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.
   We could also construct two other double categories: by taking either the vertical or the horizontal morphisms to be the 1-morphisms, and the other to be just the identity 1-morphisms.
   Finally, one last construction is the <em>mate construction</em>: the vertical arrows are adjunctions, the horizontal arrows are 1-morphisms, and the 2-cells are <a href="https://ncatlab.org/nlab/show/mate">mate-pairs of 2-morphisms</a>.</li>
   <li>In the opposite direction to the above, there are two underlying 2-categories of any double category, where we let 1-morphisms be just the vertical (resp. horizontal) morphisms, and the 2-morphisms are for commutative squares whose horizontal (resp. vertical) arrows are identities.
@@ -559,9 +539,9 @@ If the two edge categories agree then we say that $\mathscr{C}$ is <em>edge-symm
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -612,6 +592,23 @@ If the two edge categories agree then we say that $\mathscr{C}$ is <em>edge-symm
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

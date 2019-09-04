@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -291,24 +271,20 @@
 
 <p>Today, <a href="https://twitter.com/ququ7"><code class="highlighter-rouge">@ququ7</code></a> tweeted/twote/twut that, <a href="https://twitter.com/ququ7/status/1169048827703287814">a few years back, Tim Campion had told him how Stokes’ theorem is a result about coends</a>. All I want to do here is share this great little snippet, but I won’t be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!</p>
 
-<p>Here’s the idea. We look at $\mathbb{N}$ as a poset, the category $\mathsf{Vect}_\mathbb{R}$ of real-vector spaces, and fix some manifold $X$. Then we have two pretty standard functors.</p>
+<p>Here’s the idea. We look at <script type="math/tex">\mathbb{N}</script> as a poset, the category <script type="math/tex">\mathsf{Vect}_\mathbb{R}</script> of real-vector spaces, and fix some manifold <script type="math/tex">X</script>. Then we have two pretty standard functors.</p>
 
-<p>Firstly, we have $C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the free vector space $C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}$, where $\varphi\colon Y\to X$ are smooth maps from compact, $n$-dimensional, oriented manifolds $Y$ with boundary, and acts on morphisms by sending $n\to n+1$ to the map $\partial\colon C_{n+1}\to C_n$, given by taking the boundaries of our manifolds $Y$.</p>
+<p>Firstly, we have <script type="math/tex">C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}</script>, which sends <script type="math/tex">n\in\mathbb{N}</script> to the free vector space <script type="math/tex">C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}</script>, where <script type="math/tex">\varphi\colon Y\to X</script> are smooth maps from compact, <script type="math/tex">n</script>-dimensional, oriented manifolds <script type="math/tex">Y</script> with boundary, and acts on morphisms by sending <script type="math/tex">n\to n+1</script> to the map <script type="math/tex">\partial\colon C_{n+1}\to C_n</script>, given by taking the boundaries of our manifolds <script type="math/tex">Y</script>.</p>
 
-<p>Secondly, there is the de Rham functor $\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the space $\Omega_X^n$ of smooth $n$-forms on $X$, and sends $n\to n+1$ to the exterior derivative $\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}$.</p>
+<p>Secondly, there is the de Rham functor <script type="math/tex">\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}</script>, which sends <script type="math/tex">n\in\mathbb{N}</script> to the space <script type="math/tex">\Omega_X^n</script> of smooth <script type="math/tex">n</script>-forms on <script type="math/tex">X</script>, and sends <script type="math/tex">n\to n+1</script> to the exterior derivative <script type="math/tex">\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}</script>.</p>
 
-<p>Now we use the usual tensor product on $\mathsf{Vect}_\mathbb{R}$ to get a functor</p>
+<p>Now we use the usual tensor product on <script type="math/tex">\mathsf{Vect}_\mathbb{R}</script> to get a functor</p>
 
 <script type="math/tex; mode=display">C^X\otimes\Omega_X\colon\mathbb{N}\times\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}.</script>
 
-<p>We claim that we can make $C^X\otimes\Omega_X\to\mathbb{R}$ into a <strong>cowedge</strong>, i.e. that, for all $n\in\mathbb{N}$, we can find morphisms</p>
-
-<script type="math/tex; mode=display">w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}</script>
-
-<p>such that, for any $f\colon m\to n$ (and here we can restrict to $m\to m+1$, since these are the morphisms in $\mathbb{N}$ that generate all the others (that aren’t the identity)), the square</p>
+<p>We claim that we can make <script type="math/tex">C^X\otimes\Omega_X\to\mathbb{R}</script> into a <strong>cowedge</strong>, i.e. that, for all <script type="math/tex">n\in\mathbb{N}</script>, we can find morphisms <script type="math/tex">w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}</script> such that, for any <script type="math/tex">f\colon m\to n</script> (and here we can restrict to <script type="math/tex">m\to m+1</script>, since these are the morphisms in <script type="math/tex">\mathbb{N}</script> that generate all the others (that aren’t the identity)), the square</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
-\begin{array}{rcl}
+\begin{array}{ccc}
     C_{m+1}^X\otimes\Omega_X^m & \xrightarrow{\partial\,\otimes\,1} & C_m^X\otimes\Omega_X^m\\
     {\scriptstyle 1\,\otimes\,\mathrm{d}}\bigg\downarrow && \bigg\downarrow{\scriptstyle w_m}\\
     C_{m+1}^X\otimes\Omega_X^{m+1} & \xrightarrow{w_{m+1}} & \mathbb{R}
@@ -316,7 +292,7 @@
 
 <p>commutes.</p>
 
-<p>The surprising fact, then, is that Stokes’ theorem tells us that taking $w_n$ to be defined by</p>
+<p>The surprising fact, then, is that Stokes’ theorem tells us that taking <script type="math/tex">w_n</script> to be defined by</p>
 
 <script type="math/tex; mode=display">\int\colon(\varphi\colon Y\to X)\otimes\omega \mapsto \int_Y \varphi^*\omega</script>
 
@@ -324,15 +300,15 @@
 
 <script type="math/tex; mode=display">\int_{\partial Z}\tau=\int_Z \mathrm{d}\tau</script>
 
-<p>and, since pullbacks commute with $\mathrm{d}$, when we replace $\tau$ with $\varphi^*\omega$, we get that the above square commutes. Neat!</p>
+<p>and, since pullbacks commute with <script type="math/tex">\mathrm{d}</script>, when we replace <script type="math/tex">\tau</script> with <script type="math/tex">\varphi^*\omega</script>, we get that the above square commutes. Neat!</p>
 
 <p>What is not entirely clear to me, however, is if this is really a fact about <em>coends</em>, since then we would need to show that this cowedge is universal. This is something for me to think about the next time I’m bored on the tram.</p>
 
 <hr />
 
-<p>All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace $C_n$ by <em>singular</em> cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what <a href="https://twitter.com/littmath">Daniel Litt</a> pointed out <a href="https://twitter.com/littmath/status/1169081052100530177">in a reply</a>).</p>
+<p>All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace <script type="math/tex">C_n</script> by <em>singular</em> cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what <a href="https://twitter.com/littmath">Daniel Litt</a> pointed out <a href="https://twitter.com/littmath/status/1169081052100530177">in a reply</a>).</p>
 
-<p>One other question that I do have is the following: is there something to be gained by writing $C_X$ as the functor represented by $X$, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!</p>
+<p>One other question that I do have is the following: is there something to be gained by writing <script type="math/tex">C_X</script> as the functor represented by <script type="math/tex">X</script>, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!</p>
 
     
   </div>
@@ -388,9 +364,9 @@
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -441,6 +417,23 @@
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

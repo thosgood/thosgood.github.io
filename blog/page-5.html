@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -322,16 +302,16 @@
         </div>
 
 
-        <p><em>[See part 1 <a href="/blog/2017/12/08/day-convolution-part-1.html">here</a>]</em></p>
+        <p><em>[See part 1 <a href="/blog/2017/12/08/day-convolution-part-1.html">here</a> and]</em></p>
 
 <p>Using the idea of weighted limits, defined in the last post, we can now talk about <strong>ends</strong>.
-The idea of an end is that, given some functor $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$, which we can think of as defining both a left and a right action on $\prod_{c\in\mathcal{C}}F(c,c)$, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
-Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of $\coprod_{c\in\mathcal{C}}F(c,c)$ that <em>forces</em> the two actions to agree.</p>
+The idea of an end is that, given some functor <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script>, which we can think of as defining both a left and a right action on <script type="math/tex">\prod_{c\in\mathcal{C}}F(c,c)</script>, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
+Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of <script type="math/tex">\coprod_{c\in\mathcal{C}}F(c,c)</script> that <em>forces</em> the two actions to agree.</p>
 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>A subobject of an object $y$ is a (class of isomorphisms of) monomorphism(s) into $y$. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>A subobject of an object <script type="math/tex">y</script> is a (class of isomorphisms of) monomorphism(s) into <script type="math/tex">y</script>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -367,7 +347,7 @@ Dually, a motivation behind the <strong>coend</strong> is in asking for some uni
 
         <p><em>[See part 1 <a href="/blog/2017/12/08/spectra-part-1.html">here</a> and part 3 <a href="/blog/2018/03/12/spectra-part-3.html">here</a>]</em></p>
 
-<p>In the <a href="/blog/2017/12/08/spectra-part-1.html">previous post of this series</a> I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘homotopically-associative algebras’. I’m going to detour slightly from what I was going to delve into next and speak about <strong>delooping</strong> for a bit first. Then I’ll introduce <strong>spectra</strong> as sort of a generalisation of infinite deloopings. I’ll probably leave the stuff about $E_\infty$-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.</p>
+<p>In the <a href="/blog/2017/12/08/spectra-part-1.html">previous post of this series</a> I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘homotopically-associative algebras’. I’m going to detour slightly from what I was going to delve into next and speak about <strong>delooping</strong> for a bit first. Then I’ll introduce <strong>spectra</strong> as sort of a generalisation of infinite deloopings. I’ll probably leave the stuff about <script type="math/tex">E_\infty</script>-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.</p>
 
 
 
@@ -407,7 +387,7 @@ Dually, a motivation behind the <strong>coend</strong> is in asking for some uni
 
         <p><em>[See part 2 <a href="/blog/2017/12/11/spectra-part-2.html">here</a> and part 3 <a href="/blog/2018/03/12/spectra-part-3.html">here</a>]</em></p>
 
-<p>I have been reading recently about spectra and their use in defining cohomology theories. Something that came up quite a lot was the idea of <strong>$E_\infty$-algebras</strong>, which I knew roughly corresponded to some commutative version of $A_\infty$-algebras, but beyond that I knew nothing. After some enlightening discussions with one of my supervisors, I feel like I’m starting to see how the ideas of spectra, $E_\infty$-algebras, and operads all fit together. In an attempt to solidify this understanding and pinpoint any difficulties, I’m going to try to write up what I ‘understand’ so far.</p>
+<p>I have been reading recently about spectra and their use in defining cohomology theories. Something that came up quite a lot was the idea of <strong><script type="math/tex">E_\infty</script>-algebras</strong>, which I knew roughly corresponded to some commutative version of <script type="math/tex">A_\infty</script>-algebras, but beyond that I knew nothing. After some enlightening discussions with one of my supervisors, I feel like I’m starting to see how the ideas of spectra, <script type="math/tex">E_\infty</script>-algebras, and operads all fit together. In an attempt to solidify this understanding and pinpoint any difficulties, I’m going to try to write up what I ‘understand’ so far.</p>
 
 
 
@@ -595,9 +575,9 @@ Dually, a motivation behind the <strong>coend</strong> is in asking for some uni
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -648,6 +628,23 @@ Dually, a motivation behind the <strong>coend</strong> is in asking for some uni
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

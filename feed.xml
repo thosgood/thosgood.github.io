@@ -1,28 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-04T19:12:18+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Everything is Stokes’; everything is coend</title><link href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html" rel="alternate" type="text/html" title="Everything is Stokes'; everything is coend" /><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/04/stokes-coend</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">&lt;p&gt;For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-04T20:17:26+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Everything is Stokes’; everything is coend</title><link href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html" rel="alternate" type="text/html" title="Everything is Stokes'; everything is coend" /><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/04/stokes-coend</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">&lt;p&gt;For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;Today, &lt;a href=&quot;https://twitter.com/ququ7&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@ququ7&lt;/code&gt;&lt;/a&gt; tweeted/twote/twut that, &lt;a href=&quot;https://twitter.com/ququ7/status/1169048827703287814&quot;&gt;a few years back, Tim Campion had told him how Stokes’ theorem is a result about coends&lt;/a&gt;. All I want to do here is share this great little snippet, but I won’t be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!&lt;/p&gt;
 
-&lt;p&gt;Here’s the idea. We look at $\mathbb{N}$ as a poset, the category $\mathsf{Vect}_\mathbb{R}$ of real-vector spaces, and fix some manifold $X$. Then we have two pretty standard functors.&lt;/p&gt;
+&lt;p&gt;Here’s the idea. We look at &lt;script type=&quot;math/tex&quot;&gt;\mathbb{N}&lt;/script&gt; as a poset, the category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Vect}_\mathbb{R}&lt;/script&gt; of real-vector spaces, and fix some manifold &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;. Then we have two pretty standard functors.&lt;/p&gt;
 
-&lt;p&gt;Firstly, we have $C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the free vector space $C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}$, where $\varphi\colon Y\to X$ are smooth maps from compact, $n$-dimensional, oriented manifolds $Y$ with boundary, and acts on morphisms by sending $n\to n+1$ to the map $\partial\colon C_{n+1}\to C_n$, given by taking the boundaries of our manifolds $Y$.&lt;/p&gt;
+&lt;p&gt;Firstly, we have &lt;script type=&quot;math/tex&quot;&gt;C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}&lt;/script&gt;, which sends &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt; to the free vector space &lt;script type=&quot;math/tex&quot;&gt;C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon Y\to X&lt;/script&gt; are smooth maps from compact, &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-dimensional, oriented manifolds &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; with boundary, and acts on morphisms by sending &lt;script type=&quot;math/tex&quot;&gt;n\to n+1&lt;/script&gt; to the map &lt;script type=&quot;math/tex&quot;&gt;\partial\colon C_{n+1}\to C_n&lt;/script&gt;, given by taking the boundaries of our manifolds &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Secondly, there is the de Rham functor $\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the space $\Omega_X^n$ of smooth $n$-forms on $X$, and sends $n\to n+1$ to the exterior derivative $\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}$.&lt;/p&gt;
+&lt;p&gt;Secondly, there is the de Rham functor &lt;script type=&quot;math/tex&quot;&gt;\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}&lt;/script&gt;, which sends &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt; to the space &lt;script type=&quot;math/tex&quot;&gt;\Omega_X^n&lt;/script&gt; of smooth &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-forms on &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, and sends &lt;script type=&quot;math/tex&quot;&gt;n\to n+1&lt;/script&gt; to the exterior derivative &lt;script type=&quot;math/tex&quot;&gt;\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Now we use the usual tensor product on $\mathsf{Vect}_\mathbb{R}$ to get a functor&lt;/p&gt;
+&lt;p&gt;Now we use the usual tensor product on &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Vect}_\mathbb{R}&lt;/script&gt; to get a functor&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;C^X\otimes\Omega_X\colon\mathbb{N}\times\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}.&lt;/script&gt;
 
-&lt;p&gt;We claim that we can make $C^X\otimes\Omega_X\to\mathbb{R}$ into a &lt;strong&gt;cowedge&lt;/strong&gt;, i.e. that, for all $n\in\mathbb{N}$, we can find morphisms&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}&lt;/script&gt;
-
-&lt;p&gt;such that, for any $f\colon m\to n$ (and here we can restrict to $m\to m+1$, since these are the morphisms in $\mathbb{N}$ that generate all the others (that aren’t the identity)), the square&lt;/p&gt;
+&lt;p&gt;We claim that we can make &lt;script type=&quot;math/tex&quot;&gt;C^X\otimes\Omega_X\to\mathbb{R}&lt;/script&gt; into a &lt;strong&gt;cowedge&lt;/strong&gt;, i.e. that, for all &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt;, we can find morphisms &lt;script type=&quot;math/tex&quot;&gt;w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}&lt;/script&gt; such that, for any &lt;script type=&quot;math/tex&quot;&gt;f\colon m\to n&lt;/script&gt; (and here we can restrict to &lt;script type=&quot;math/tex&quot;&gt;m\to m+1&lt;/script&gt;, since these are the morphisms in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{N}&lt;/script&gt; that generate all the others (that aren’t the identity)), the square&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{array}{rcl}
+\begin{array}{ccc}
     C_{m+1}^X\otimes\Omega_X^m &amp; \xrightarrow{\partial\,\otimes\,1} &amp; C_m^X\otimes\Omega_X^m\\
     {\scriptstyle 1\,\otimes\,\mathrm{d}}\bigg\downarrow &amp;&amp; \bigg\downarrow{\scriptstyle w_m}\\
     C_{m+1}^X\otimes\Omega_X^{m+1} &amp; \xrightarrow{w_{m+1}} &amp; \mathbb{R}
@@ -30,7 +26,7 @@
 
 &lt;p&gt;commutes.&lt;/p&gt;
 
-&lt;p&gt;The surprising fact, then, is that Stokes’ theorem tells us that taking $w_n$ to be defined by&lt;/p&gt;
+&lt;p&gt;The surprising fact, then, is that Stokes’ theorem tells us that taking &lt;script type=&quot;math/tex&quot;&gt;w_n&lt;/script&gt; to be defined by&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\colon(\varphi\colon Y\to X)\otimes\omega \mapsto \int_Y \varphi^*\omega&lt;/script&gt;
 
@@ -38,15 +34,15 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_{\partial Z}\tau=\int_Z \mathrm{d}\tau&lt;/script&gt;
 
-&lt;p&gt;and, since pullbacks commute with $\mathrm{d}$, when we replace $\tau$ with $\varphi^*\omega$, we get that the above square commutes. Neat!&lt;/p&gt;
+&lt;p&gt;and, since pullbacks commute with &lt;script type=&quot;math/tex&quot;&gt;\mathrm{d}&lt;/script&gt;, when we replace &lt;script type=&quot;math/tex&quot;&gt;\tau&lt;/script&gt; with &lt;script type=&quot;math/tex&quot;&gt;\varphi^*\omega&lt;/script&gt;, we get that the above square commutes. Neat!&lt;/p&gt;
 
 &lt;p&gt;What is not entirely clear to me, however, is if this is really a fact about &lt;em&gt;coends&lt;/em&gt;, since then we would need to show that this cowedge is universal. This is something for me to think about the next time I’m bored on the tram.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace $C_n$ by &lt;em&gt;singular&lt;/em&gt; cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what &lt;a href=&quot;https://twitter.com/littmath&quot;&gt;Daniel Litt&lt;/a&gt; pointed out &lt;a href=&quot;https://twitter.com/littmath/status/1169081052100530177&quot;&gt;in a reply&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace &lt;script type=&quot;math/tex&quot;&gt;C_n&lt;/script&gt; by &lt;em&gt;singular&lt;/em&gt; cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what &lt;a href=&quot;https://twitter.com/littmath&quot;&gt;Daniel Litt&lt;/a&gt; pointed out &lt;a href=&quot;https://twitter.com/littmath/status/1169081052100530177&quot;&gt;in a reply&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;One other question that I do have is the following: is there something to be gained by writing $C_X$ as the functor represented by $X$, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.</summary></entry><entry><title type="html">Mathematical motivation and meagre contributions</title><link href="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html" rel="alternate" type="text/html" title="Mathematical motivation and meagre contributions" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html">&lt;p&gt;I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.&lt;/p&gt;
+&lt;p&gt;One other question that I do have is the following: is there something to be gained by writing &lt;script type=&quot;math/tex&quot;&gt;C_X&lt;/script&gt; as the functor represented by &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.</summary></entry><entry><title type="html">Mathematical motivation and meagre contributions</title><link href="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html" rel="alternate" type="text/html" title="Mathematical motivation and meagre contributions" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html">&lt;p&gt;I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;hr /&gt;
@@ -88,43 +84,43 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;preliminaries&quot;&gt;Preliminaries&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Graphs $G$ consist of &lt;em&gt;vertices&lt;/em&gt; $V(G)$ and &lt;em&gt;edges&lt;/em&gt; $E(G)$, where we write the edge between vertices $s$ and $t$ as $[s,t]$. All graphs are assumed to be &lt;em&gt;simple&lt;/em&gt; (no multiple edges between any two points or loops on a single point) and have a &lt;em&gt;distinguished vertex&lt;/em&gt; $x\in V(G)$. We write $(G,x)$ to mean the graph along with its distinguished vertex.&lt;/li&gt;
-  &lt;li&gt;A &lt;em&gt;(weak) graph homomorphism&lt;/em&gt; $\varphi\colon (G,x)\to(H,y)$ is a map of sets $V(G)\to V(H)$ such that, for all $[s,t]\in E(G)$, either $\varphi(s)=\varphi(t)$ or $[\varphi(s),\varphi(t)]\in E(H)$. It is said to be &lt;em&gt;based&lt;/em&gt; if $\varphi(x)=y$.&lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;cartesian product&lt;/em&gt; $G\mathbin{\square} H$ of the graphs $(G,x)$ and $(H,y)$ is the graph with vertex set $V(G)\times V(H)$, with distinguished vertex $(x,y)$, and with an edge between $(s,u)$ and $(t,v)$ whenever
+  &lt;li&gt;Graphs &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; consist of &lt;em&gt;vertices&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;V(G)&lt;/script&gt; and &lt;em&gt;edges&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;E(G)&lt;/script&gt;, where we write the edge between vertices &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;t&lt;/script&gt; as &lt;script type=&quot;math/tex&quot;&gt;[s,t]&lt;/script&gt;. All graphs are assumed to be &lt;em&gt;simple&lt;/em&gt; (no multiple edges between any two points or loops on a single point) and have a &lt;em&gt;distinguished vertex&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;x\in V(G)&lt;/script&gt;. We write &lt;script type=&quot;math/tex&quot;&gt;(G,x)&lt;/script&gt; to mean the graph along with its distinguished vertex.&lt;/li&gt;
+  &lt;li&gt;A &lt;em&gt;(weak) graph homomorphism&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon (G,x)\to(H,y)&lt;/script&gt; is a map of sets &lt;script type=&quot;math/tex&quot;&gt;V(G)\to V(H)&lt;/script&gt; such that, for all &lt;script type=&quot;math/tex&quot;&gt;[s,t]\in E(G)&lt;/script&gt;, either &lt;script type=&quot;math/tex&quot;&gt;\varphi(s)=\varphi(t)&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;[\varphi(s),\varphi(t)]\in E(H)&lt;/script&gt;. It is said to be &lt;em&gt;based&lt;/em&gt; if &lt;script type=&quot;math/tex&quot;&gt;\varphi(x)=y&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;em&gt;cartesian product&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;G\mathbin{\square} H&lt;/script&gt; of the graphs &lt;script type=&quot;math/tex&quot;&gt;(G,x)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;(H,y)&lt;/script&gt; is the graph with vertex set &lt;script type=&quot;math/tex&quot;&gt;V(G)\times V(H)&lt;/script&gt;, with distinguished vertex &lt;script type=&quot;math/tex&quot;&gt;(x,y)&lt;/script&gt;, and with an edge between &lt;script type=&quot;math/tex&quot;&gt;(s,u)&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;(t,v)&lt;/script&gt; whenever
     &lt;ul&gt;
-      &lt;li&gt;$s=t$ and $[u,v]\in E(H)$; or&lt;/li&gt;
-      &lt;li&gt;$u=v$ and $[s,t]\in E(G)$.&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;s=t&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;[u,v]\in E(H)&lt;/script&gt;; or&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;u=v&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;[s,t]\in E(G)&lt;/script&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;The &lt;em&gt;path of length $n$&lt;/em&gt;, denoted by $I_n$, is the graph with vertices labelled from $0$ to $n\in\mathbb{N}$, and edges $[i,i+1]$ for $i=0,\ldots,n-1$. The &lt;em&gt;path of infinite length&lt;/em&gt;, denoted by $I_\infty$, has vertices labelled by $\mathbb{Z}$.&lt;/li&gt;
-  &lt;li&gt;We say that two graphs homomorphisms $\varphi,\psi\colon(G,x)\to(H,y)$ are &lt;em&gt;A-homotopic&lt;/em&gt;, written $\varphi\simeq_A\psi$, if there exists some $n\in\mathbb{N}$ and a graph homomorphism $h\colon G\mathbin{\square} I_n\to H$ such that
+  &lt;li&gt;The &lt;em&gt;path of length &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;&lt;/em&gt;, denoted by &lt;script type=&quot;math/tex&quot;&gt;I_n&lt;/script&gt;, is the graph with vertices labelled from &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt;, and edges &lt;script type=&quot;math/tex&quot;&gt;[i,i+1]&lt;/script&gt; for &lt;script type=&quot;math/tex&quot;&gt;i=0,\ldots,n-1&lt;/script&gt;. The &lt;em&gt;path of infinite length&lt;/em&gt;, denoted by &lt;script type=&quot;math/tex&quot;&gt;I_\infty&lt;/script&gt;, has vertices labelled by &lt;script type=&quot;math/tex&quot;&gt;\mathbb{Z}&lt;/script&gt;.&lt;/li&gt;
+  &lt;li&gt;We say that two graphs homomorphisms &lt;script type=&quot;math/tex&quot;&gt;\varphi,\psi\colon(G,x)\to(H,y)&lt;/script&gt; are &lt;em&gt;A-homotopic&lt;/em&gt;, written &lt;script type=&quot;math/tex&quot;&gt;\varphi\simeq_A\psi&lt;/script&gt;, if there exists some &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt; and a graph homomorphism &lt;script type=&quot;math/tex&quot;&gt;h\colon G\mathbin{\square} I_n\to H&lt;/script&gt; such that
     &lt;ul&gt;
-      &lt;li&gt;$h(s,0) = \varphi(s)$ for all $s\in V(G)$;&lt;/li&gt;
-      &lt;li&gt;$h(s,n) = \psi(s)$ for all $s\in V(G)$; and&lt;/li&gt;
-      &lt;li&gt;$h(x,i)=y$ for all $0\leqslant i\leqslant n$.&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;h(s,0) = \varphi(s)&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;s\in V(G)&lt;/script&gt;;&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;h(s,n) = \psi(s)&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;s\in V(G)&lt;/script&gt;; and&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;h(x,i)=y&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;0\leqslant i\leqslant n&lt;/script&gt;.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;We say that two graphs $G$ and $H$ are &lt;em&gt;A-homotopic&lt;/em&gt; if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi\simeq_A\operatorname{id}_G$ and $\varphi\circ\psi\simeq_A\operatorname{id}_H$.&lt;/p&gt;
+    &lt;p&gt;We say that two graphs &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;H&lt;/script&gt; are &lt;em&gt;A-homotopic&lt;/em&gt; if there exist graph homomorphisms &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon G\to H&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\psi\colon H\to G&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\psi\circ\varphi\simeq_A\operatorname{id}_G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\varphi\circ\psi\simeq_A\operatorname{id}_H&lt;/script&gt;.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;N.B.&lt;/strong&gt; A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs $C_n$ and $C_m$ (for $m,n\geqslant 3$) are A-homotopic if and only if $m=n$, and $C_n$ is contractible (i.e. homotopic to the graph with a single point and no edges) for $n=3,4$, but not for any $n\geqslant 5$.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;N.B.&lt;/strong&gt; A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs &lt;script type=&quot;math/tex&quot;&gt;C_n&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;C_m&lt;/script&gt; (for &lt;script type=&quot;math/tex&quot;&gt;m,n\geqslant 3&lt;/script&gt;) are A-homotopic if and only if &lt;script type=&quot;math/tex&quot;&gt;m=n&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;C_n&lt;/script&gt; is contractible (i.e. homotopic to the graph with a single point and no edges) for &lt;script type=&quot;math/tex&quot;&gt;n=3,4&lt;/script&gt;, but not for any &lt;script type=&quot;math/tex&quot;&gt;n\geqslant 5&lt;/script&gt;.&lt;/li&gt;
   &lt;li&gt;The &lt;em&gt;A-homotopic fundamental group&lt;/em&gt; of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in [RH19].&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;graded-homotopy-structure&quot;&gt;“Graded homotopy” structure&lt;/h3&gt;
 
-&lt;p&gt;Given two A-homotopic graph homomorphisms $\varphi\simeq_A\psi$ we can ask for the &lt;em&gt;minimal&lt;/em&gt; such $n\in\mathbb{N}$ in the definition of the A-homotopy. We then say that the A-homotopy is an &lt;em&gt;$n$-homotopy&lt;/em&gt;, and we extend this definition slightly to allow for the fact that we can trivially consider an $n$-homotopy as an $(n+1)$-homotopy (in $n+1$ various ways, corresponding to the classical idea of simplicial (co)face/(co)degeneracy (depending on your choice of nomenclature) maps). That is, we say $n$-homotopic to mean “$m$-homotopic with $m\leqslant n$”.&lt;/p&gt;
+&lt;p&gt;Given two A-homotopic graph homomorphisms &lt;script type=&quot;math/tex&quot;&gt;\varphi\simeq_A\psi&lt;/script&gt; we can ask for the &lt;em&gt;minimal&lt;/em&gt; such &lt;script type=&quot;math/tex&quot;&gt;n\in\mathbb{N}&lt;/script&gt; in the definition of the A-homotopy. We then say that the A-homotopy is an &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopy&lt;/em&gt;, and we extend this definition slightly to allow for the fact that we can trivially consider an &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopy as an &lt;script type=&quot;math/tex&quot;&gt;(n+1)&lt;/script&gt;-homotopy (in &lt;script type=&quot;math/tex&quot;&gt;n+1&lt;/script&gt; various ways, corresponding to the classical idea of simplicial (co)face/(co)degeneracy (depending on your choice of nomenclature) maps). That is, we say &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic to mean “&lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt;-homotopic with &lt;script type=&quot;math/tex&quot;&gt;m\leqslant n&lt;/script&gt;”.&lt;/p&gt;
 
-&lt;p&gt;We say that two graphs $G,H$ are &lt;em&gt;$n$-homotopic&lt;/em&gt; if there exist graph homomorphisms $\varphi\colon G\to H$ and $\psi\colon H\to G$ such that $\psi\circ\varphi$ is $m_1$-homotopic to $\operatorname{id}_G$ and $\varphi\circ\psi$ is $m_2$-homotopic to $\operatorname{id}_H$, with $\operatorname{max}{m_1,m_2}=n$.&lt;/p&gt;
+&lt;p&gt;We say that two graphs &lt;script type=&quot;math/tex&quot;&gt;G,H&lt;/script&gt; are &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic&lt;/em&gt; if there exist graph homomorphisms &lt;script type=&quot;math/tex&quot;&gt;\varphi\colon G\to H&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\psi\colon H\to G&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\psi\circ\varphi&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;m_1&lt;/script&gt;-homotopic to &lt;script type=&quot;math/tex&quot;&gt;\operatorname{id}_G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\varphi\circ\psi&lt;/script&gt; is &lt;script type=&quot;math/tex&quot;&gt;m_2&lt;/script&gt;-homotopic to &lt;script type=&quot;math/tex&quot;&gt;\operatorname{id}_H&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;\operatorname{max}\{m_1,m_2\}=n&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Then we can consider the category $\mathsf{Grph}_n$, which has objects being equivalence classes of $n$-homotopic graphs, and morphisms being equivalence classes of $n$-homotopic graph homomorphisms. This gives us the following structure:&lt;/p&gt;
+&lt;p&gt;Then we can consider the category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}_n&lt;/script&gt;, which has objects being equivalence classes of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic graphs, and morphisms being equivalence classes of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic graph homomorphisms. This gives us the following structure:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;$\mathsf{Grph}_0 = \mathsf{Grph}$;&lt;/li&gt;
-  &lt;li&gt;$\mathsf{Grph}_\infty = \mathrm{Ho}(\mathsf{Grph})$;&lt;/li&gt;
-  &lt;li&gt;functors $\mathsf{Grph}_n \to \mathsf{Grph}_{n+1}$ that are surjective on objects, where functoriality relies on the fact that $n$-homotopies can be considered as $(n+1)$-homotopies.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_0 = \mathsf{Grph}&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_\infty = \mathrm{Ho}(\mathsf{Grph})&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;functors &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_n \to \mathsf{Grph}\_{n+1}&lt;/script&gt; that are surjective on objects, where functoriality relies on the fact that &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopies can be considered as &lt;script type=&quot;math/tex&quot;&gt;(n+1)&lt;/script&gt;-homotopies.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We can think of the number $n$ as some sort of “complexity” of the homotopy: small $n$ correspond to “homotopies that can be performed in a few steps” (here it is a good idea to see some of the examples in [RH19] to get an idea of how graph homotopies behave).&lt;/p&gt;
+&lt;p&gt;We can think of the number &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; as some sort of “complexity” of the homotopy: small &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; correspond to “homotopies that can be performed in a few steps” (here it is a good idea to see some of the examples in [RH19] to get an idea of how graph homotopies behave).&lt;/p&gt;
 
 &lt;h3 id=&quot;questions&quot;&gt;Questions&lt;/h3&gt;
 
@@ -133,16 +129,16 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;What is this structure? Some sort of enrichment? Does it already have a name?&lt;/li&gt;
   &lt;li&gt;What other examples exist? For example, it would be nice to get something similar for the category of chain complexes of an abelian category, but I see no way a priori of assigning “complexity” to a homotopy for an arbitrary choice of abelian category. If things are enriched over metric spaces, however, then this is a different story…&lt;/li&gt;
-  &lt;li&gt;It seems believable that we could define something analogous with $\mathbb{R}^{\geqslant0}$ instead of $\mathbb{N}$. Could we do so for arbitrary (bounded-below) posets?&lt;/li&gt;
+  &lt;li&gt;It seems believable that we could define something analogous with &lt;script type=&quot;math/tex&quot;&gt;\mathbb{R}^{\geqslant0}&lt;/script&gt; instead of &lt;script type=&quot;math/tex&quot;&gt;\mathbb{N}&lt;/script&gt;. Could we do so for arbitrary (bounded-below) posets?&lt;/li&gt;
   &lt;li&gt;Does this tie in to the idea of “approximate composition” (c.f. &lt;a href=&quot;http://www.cs.ox.ac.uk/ACT2019/preproceedings/Walter%20Tholen%20Approximate%20composition%20(revised).pdf&quot;&gt;Walter Tholen’s talk on metagories at ACT2019&lt;/a&gt;).&lt;/li&gt;
 &lt;/ol&gt;</content><author><name></name></author><category term="blog" /><category term="homotopy-theory" /><category term="category-theory" /><category term="questions" /><summary type="html">As I mentioned in the previous post, I recently saw a talk by Rachel Hardeman on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in #math.CT:matrix.org, I’ve decided to post it here, in the hope that I might be able to get some answers.</summary></entry><entry><title type="html">Twisting cochains and twisted complexes</title><link href="https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html" rel="alternate" type="text/html" title="Twisting cochains and twisted complexes" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html">&lt;p&gt;This week was the &lt;a href=&quot;https://ytm2019.epfl.ch&quot;&gt;Young Topologists Meeting&lt;/a&gt; at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub &lt;a href=&quot;https://github.com/thosgood/papers/blob/master/twisting-cochains-YTM19/twisting-cochains-YTM19-handout.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;One talk that I really liked was &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt;’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, $C_n$ is only contractible for $n\leqslant4$. You can read more about this in &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;her paper on the arXiv&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One talk that I really liked was &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt;’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, &lt;script type=&quot;math/tex&quot;&gt;C_n&lt;/script&gt; is only contractible for &lt;script type=&quot;math/tex&quot;&gt;n\leqslant4&lt;/script&gt;. You can read more about this in &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;her paper on the arXiv&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Also really great one was &lt;a href=&quot;http://pi.math.cornell.edu/~maru/index.html&quot;&gt;Maru Sarazola&lt;/a&gt;’s talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don’t think she currently has notes for this stuff typed up anywhere, but (from what I gather) it’s in the works!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="differential-geometry" /><category term="complex-geometry" /><category term="algebraic-topology" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">This week was the Young Topologists Meeting at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub here.</summary></entry><entry><title type="html">More-than-one-but-less-than-three-categories</title><link href="https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three.html" rel="alternate" type="text/html" title="More-than-one-but-less-than-three-categories" /><published>2019-07-15T00:00:00+00:00</published><updated>2019-07-15T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three.html">&lt;p&gt;What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category theory.
+&lt;p&gt;Also really great one was &lt;a href=&quot;http://pi.math.cornell.edu/~maru/index.html&quot;&gt;Maru Sarazola&lt;/a&gt;’s talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don’t think she currently has notes for this stuff typed up anywhere, but (from what I gather) it’s in the works!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="differential-geometry" /><category term="complex-geometry" /><category term="algebraic-topology" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">This week was the Young Topologists Meeting at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub here.</summary></entry><entry><title type="html">More-than-one-but-less-than-three-categories</title><link href="https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three.html" rel="alternate" type="text/html" title="More-than-one-but-less-than-three-categories" /><published>2019-07-15T00:00:00+00:00</published><updated>2019-07-15T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/15/more-than-one-less-than-three.html">&lt;p&gt;What with all the wild applications of, and progress in, the theory of &lt;script type=&quot;math/tex&quot;&gt;\infty&lt;/script&gt;-categories, I had really neglected studying any kind of lower higher-category theory.
 But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.&lt;/p&gt;
 
 &lt;!--more--&gt;
@@ -152,20 +148,20 @@ But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying
 
 &lt;p&gt;Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;), I’ll just say a tiny bit about why I’m an idiot.&lt;/p&gt;
 
-&lt;p&gt;In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, “they’re just $n$-categories with $n$=2”; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
+&lt;p&gt;In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, “they’re just &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-categories with &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;=2”; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
 Both of these things are rather bad points of view to take.&lt;/p&gt;
 
 &lt;p&gt;For the latter point, it’s important to note that, yes, weak 2-categories can be strictified, and every pseudofunctor is equivalent to a strict one, but it is &lt;strong&gt;not&lt;/strong&gt; true that every pseudonatural transformation is equivalent to a (strict) natural transformation.&lt;/p&gt;
 
-&lt;p&gt;As explained in &lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf&quot;&gt;Mike Shulman’s talk&lt;/a&gt;, working in the $(2,1)$-topos $[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$, every pseudofunctor $X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}$ is equivalent to a strict one, but &lt;strong&gt;not&lt;/strong&gt; every pseudonatural transformation $X\rightsquigarrow Y$ is equivalent to a strict one.
+&lt;p&gt;As explained in &lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf&quot;&gt;Mike Shulman’s talk&lt;/a&gt;, working in the &lt;script type=&quot;math/tex&quot;&gt;(2,1)&lt;/script&gt;-topos &lt;script type=&quot;math/tex&quot;&gt;[\mathbb{D}^{\text{op}},\mathsf{Gpd}]&lt;/script&gt;, every pseudofunctor &lt;script type=&quot;math/tex&quot;&gt;X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}&lt;/script&gt; is equivalent to a strict one, but &lt;strong&gt;not&lt;/strong&gt; every pseudonatural transformation &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; is equivalent to a strict one.
 But we do have the following lemma (from Mike’s talk).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For any $Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$ there is a strict $\mathcal{C}^{\mathbb{D}}Y$ and a bijection between pseudonatural $X\rightsquigarrow Y$ and strict $X\to\mathcal{C}^{\mathbb{D}}Y$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For any &lt;script type=&quot;math/tex&quot;&gt;Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]&lt;/script&gt; there is a strict &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt; and a bijection between pseudonatural &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; and strict &lt;script type=&quot;math/tex&quot;&gt;X\to\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;. Almost by definition: a pseudonatural $X\rightsquigarrow Y$ assigns to each $x\in X(d)$ some image $f_x(x)\in Y(d)$ along with an isomorphism $\gamma^*(f_x(x))\cong f_{x’}(\gamma^*(x))$ for all $\gamma\colon x\to x’$ in $\mathbb{D}$, and this isomorphism satisfies a coherence condition.
-So we just define $\mathcal{C}^{\mathbb{D}}Y(d)$ to consist of all this data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;. Almost by definition: a pseudonatural &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; assigns to each &lt;script type=&quot;math/tex&quot;&gt;x\in X(d)&lt;/script&gt; some image &lt;script type=&quot;math/tex&quot;&gt;f_x(x)\in Y(d)&lt;/script&gt; along with an isomorphism &lt;script type=&quot;math/tex&quot;&gt;\gamma^\*(f_x(x))\cong f_{x'}(\gamma^\*(x))&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\gamma\colon x\to x'&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{D}&lt;/script&gt;, and this isomorphism satisfies a coherence condition.
+So we just define &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\mathbb{D}}Y(d)&lt;/script&gt; to consist of all this data.&lt;/p&gt;
 
-&lt;p&gt;There is then a lovely theory of &lt;em&gt;coflexible&lt;/em&gt; objects, which are those $Y$ such that the canonical morphism $Y\to\mathcal{C}^{\mathbb{D}}Y$ has a strict retraction.
+&lt;p&gt;There is then a lovely theory of &lt;em&gt;coflexible&lt;/em&gt; objects, which are those &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that the canonical morphism &lt;script type=&quot;math/tex&quot;&gt;Y\to\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt; has a strict retraction.
 These objects are such that &lt;strong&gt;all&lt;/strong&gt; pseudonatural transformations &lt;em&gt;into&lt;/em&gt; them are isomorphic to &lt;em&gt;strict&lt;/em&gt; such ones.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;the-idea&quot;&gt;The idea&lt;/h2&gt;
@@ -174,7 +170,7 @@ These objects are such that &lt;strong&gt;all&lt;/strong&gt; pseudonatural trans
 
 &lt;ul&gt;
   &lt;li&gt;A 2-category should be something which has &lt;em&gt;objects&lt;/em&gt;, &lt;em&gt;1-morphisms&lt;/em&gt; between the objects, and &lt;em&gt;2-morphisms&lt;/em&gt; between the morphisms.&lt;/li&gt;
-  &lt;li&gt;We should be able to compose 1-morphisms ‘along objects’, in that, given 1-morphisms $f\colon x\to y$ and $g\colon y\to z$, we should get some 1-morphism $g\circ f\colon x\to z$.&lt;/li&gt;
+  &lt;li&gt;We should be able to compose 1-morphisms ‘along objects’, in that, given 1-morphisms &lt;script type=&quot;math/tex&quot;&gt;f\colon x\to y&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;g\colon y\to z&lt;/script&gt;, we should get some 1-morphism &lt;script type=&quot;math/tex&quot;&gt;g\circ f\colon x\to z&lt;/script&gt;.&lt;/li&gt;
   &lt;li&gt;We should be able to compose 2-morphisms ‘along objects’ (so-called &lt;em&gt;horizontally&lt;/em&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -188,8 +184,8 @@ These objects are such that &lt;strong&gt;all&lt;/strong&gt; pseudonatural trans
 
 &lt;h3 id=&quot;categorification-and-monoidal-delooping&quot;&gt;Categorification and monoidal delooping&lt;/h3&gt;
 
-&lt;p&gt;An $(n=2)$-category can be thought of as the Oidification (or &lt;a href=&quot;https://ncatlab.org/nlab/show/horizontal+categorification&quot;&gt;horizontal categorification&lt;/a&gt;) of a monoidal category: it is like a monoidal category with many objects.
-To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms ‘up one degree’) is exactly a one object $(n=2)$-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.&lt;/p&gt;
+&lt;p&gt;An &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category can be thought of as the Oidification (or &lt;a href=&quot;https://ncatlab.org/nlab/show/horizontal+categorification&quot;&gt;horizontal categorification&lt;/a&gt;) of a monoidal category: it is like a monoidal category with many objects.
+To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms ‘up one degree’) is exactly a one object &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.&lt;/p&gt;
 
 &lt;h2 id=&quot;strict-vs-weak&quot;&gt;Strict vs. weak&lt;/h2&gt;
 
@@ -197,41 +193,41 @@ To see this, note that the delooping of a monoidal category (i.e. the category w
 
 &lt;p&gt;The general consensus is to call &lt;em&gt;strict&lt;/em&gt; 2-categories “&lt;strong&gt;2-categories&lt;/strong&gt;”, and the algebraic notion of &lt;em&gt;weak&lt;/em&gt; 2-categories “&lt;strong&gt;bicategories&lt;/strong&gt;”.
 This can be confusing, &lt;a href=&quot;https://ncatlab.org/nlab/show/bicategory#terminology&quot;&gt;for a few reasons&lt;/a&gt;, but such is life.
-From now on, in this post, we will say &lt;strong&gt;$(n=2)$-categories&lt;/strong&gt; to talk about both senses of 2-categories.&lt;/p&gt;
+From now on, in this post, we will say &lt;strong&gt;&lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-categories&lt;/strong&gt; to talk about both senses of 2-categories.&lt;/p&gt;
 
-&lt;p&gt;Specifically, a &lt;em&gt;2-category&lt;/em&gt; is a category enriched over the cartesian monoidal category $\mathsf{Cat}$; a &lt;em&gt;bicategory&lt;/em&gt; is a category &lt;strong&gt;weakly&lt;/strong&gt; enriched over $\mathsf{Cat}$ (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).&lt;/p&gt;
+&lt;p&gt;Specifically, a &lt;em&gt;2-category&lt;/em&gt; is a category enriched over the cartesian monoidal category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Cat}&lt;/script&gt;; a &lt;em&gt;bicategory&lt;/em&gt; is a category &lt;strong&gt;weakly&lt;/strong&gt; enriched over &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Cat}&lt;/script&gt; (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).&lt;/p&gt;
 
 &lt;h3 id=&quot;the-functors&quot;&gt;The functors&lt;/h3&gt;
 
-&lt;p&gt;Whether we take strict or weak $(n=2)$-categories, we can still choose whether we want our $(n=2)$-functors to be strict or weak.&lt;/p&gt;
+&lt;p&gt;Whether we take strict or weak &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-categories, we can still choose whether we want our &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functors to be strict or weak.&lt;/p&gt;
 
-&lt;p&gt;A &lt;em&gt;2-functor&lt;/em&gt; is a strict $(n=2)$-functor (which &lt;a href=&quot;https://www.ncatlab.org/nlab/show/2-functor#fn:1&quot;&gt;usually&lt;/a&gt; only makes sense between 2-categories); a &lt;em&gt;pseudofunctor&lt;/em&gt; is a weak $(n=2)$-functor (so the composition of 1-morphisms is preserved only up to coherent (specified) 2-isomorphisms, and similarly for the identity 1-morphisms) (which can be between strict or weak $(n=2)$-categories).&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;2-functor&lt;/em&gt; is a strict &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functor (which &lt;a href=&quot;https://www.ncatlab.org/nlab/show/2-functor#fn:1&quot;&gt;usually&lt;/a&gt; only makes sense between 2-categories); a &lt;em&gt;pseudofunctor&lt;/em&gt; is a weak &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functor (so the composition of 1-morphisms is preserved only up to coherent (specified) 2-isomorphisms, and similarly for the identity 1-morphisms) (which can be between strict or weak &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-categories).&lt;/p&gt;
 
-&lt;p&gt;If we forget the 2-structure of an $(n=2)$-category and consider the hom-categories as discrete, then both of these notions of $(n=2)$-functors reduce to 1-functors between 1-categories.
-There is, however, an even weaker type of $(n=2)$-functor for which this is &lt;strong&gt;not&lt;/strong&gt; the case: a(n) &lt;em&gt;(op)lax 2-functor&lt;/em&gt;: here the associator and compositor 2-cells are &lt;strong&gt;not&lt;/strong&gt; required to even be coherent &lt;em&gt;isomorphisms&lt;/em&gt;, but instead just coherent &lt;em&gt;morphisms&lt;/em&gt;, in some direction (with one direction corresponding to lax and the other to oplax).
-This is exactly the idea of an (op)lax functor of monoidal categories, and so reassures us that $(n=2)$-categories can be thought of as monoidal categories with multiple objects, as mentioned above.&lt;/p&gt;
+&lt;p&gt;If we forget the 2-structure of an &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category and consider the hom-categories as discrete, then both of these notions of &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functors reduce to 1-functors between 1-categories.
+There is, however, an even weaker type of &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functor for which this is &lt;strong&gt;not&lt;/strong&gt; the case: a(n) &lt;em&gt;(op)lax 2-functor&lt;/em&gt;: here the associator and compositor 2-cells are &lt;strong&gt;not&lt;/strong&gt; required to even be coherent &lt;em&gt;isomorphisms&lt;/em&gt;, but instead just coherent &lt;em&gt;morphisms&lt;/em&gt;, in some direction (with one direction corresponding to lax and the other to oplax).
+This is exactly the idea of an (op)lax functor of monoidal categories, and so reassures us that &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-categories can be thought of as monoidal categories with multiple objects, as mentioned above.&lt;/p&gt;
 
 &lt;p&gt;That is,&lt;/p&gt;
 
 &lt;table class=&quot;bordered-table&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;$(n=2)$-functor&lt;/th&gt;
+      &lt;th&gt;&lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-functor&lt;/th&gt;
       &lt;th&gt;compositor&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;2-functor&lt;/td&gt;
-      &lt;td&gt;$F(g\circ f)=F(g)\circ F(f)$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;F(g\circ f)=F(g)\circ F(f)&lt;/script&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;pseudofunctor&lt;/td&gt;
-      &lt;td&gt;$F(g\circ f)\cong F(g)\circ F(f)$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;F(g\circ f)\cong F(g)\circ F(f)&lt;/script&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;(op)lax 2-functor&lt;/td&gt;
-      &lt;td&gt;$F(g\circ f)\Rightarrow F(g)\circ F(f)$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;F(g\circ f)\Rightarrow F(g)\circ F(f)&lt;/script&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -240,26 +236,26 @@ This is exactly the idea of an (op)lax functor of monoidal categories, and so re
 
 &lt;h2 id=&quot;double-categories&quot;&gt;Double categories&lt;/h2&gt;
 
-&lt;p&gt;Something that looks a bit like an $(n=2)$-category when you unwrap the abstract definition is a &lt;em&gt;double category&lt;/em&gt;: an internal category $\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)$ of $\mathsf{Cat}$.
+&lt;p&gt;Something that looks a bit like an &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category when you unwrap the abstract definition is a &lt;em&gt;double category&lt;/em&gt;: an internal category &lt;script type=&quot;math/tex&quot;&gt;\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Cat}&lt;/script&gt;.
 This means that it has&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;objects&lt;/em&gt;, given by the objects of $\mathcal{C}_0$;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;vertical morphisms&lt;/em&gt;, given by the morphisms of $\mathcal{C}_0$;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;horizontal morphisms&lt;/em&gt;, given by the objects of $\mathcal{C}_1$; and&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;2-cells&lt;/em&gt;, or &lt;em&gt;squares&lt;/em&gt;, given by the morphisms of $\mathcal{C}_1$.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;objects&lt;/em&gt;, given by the objects of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_0&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;vertical morphisms&lt;/em&gt;, given by the morphisms of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_0&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;horizontal morphisms&lt;/em&gt;, given by the objects of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_1&lt;/script&gt;; and&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;2-cells&lt;/em&gt;, or &lt;em&gt;squares&lt;/em&gt;, given by the morphisms of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_1&lt;/script&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;We can picture the 2-cells as a square (hence the name), as&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/post-images/2019-07-15-double-square.png&quot; alt=&quot;squares&quot; class=&quot;centred&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;where $x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$ are objects, $f,g\in\operatorname{ob}\mathcal{C}_1$ are horizontal morphisms, $\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$ are vertical morphisms, and $\phi\in\operatorname{Arr}\mathcal{C}_1$ is the 2-cell.&lt;/p&gt;
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0&lt;/script&gt; are objects, &lt;script type=&quot;math/tex&quot;&gt;f,g\in\operatorname{ob}\mathcal{C}_1&lt;/script&gt; are horizontal morphisms, &lt;script type=&quot;math/tex&quot;&gt;\alpha\beta\in\operatorname{Arr}\mathcal{C}_0&lt;/script&gt; are vertical morphisms, and &lt;script type=&quot;math/tex&quot;&gt;\phi\in\operatorname{Arr}\mathcal{C}_1&lt;/script&gt; is the 2-cell.&lt;/p&gt;
 
-&lt;p&gt;Composition ‘horizontally’ of two squares, left and right of each other, is given by the usual composition in the categories $\mathcal{C}_0$ and $\mathcal{C}_1$; composition ‘vertically’ of two squares, one above the other, is given by the composition operation on $\mathcal{C}_1\rightrightarrows\mathcal{C}_0$, coming from the fact that $\mathscr{C}$ is an internal category.&lt;/p&gt;
+&lt;p&gt;Composition ‘horizontally’ of two squares, left and right of each other, is given by the usual composition in the categories &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_0&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_1&lt;/script&gt;; composition ‘vertically’ of two squares, one above the other, is given by the composition operation on &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}_1\rightrightarrows\mathcal{C}_0&lt;/script&gt;, coming from the fact that &lt;script type=&quot;math/tex&quot;&gt;\mathscr{C}&lt;/script&gt; is an internal category.&lt;/p&gt;
 
-&lt;p&gt;There are two &lt;em&gt;edge categories&lt;/em&gt; associated to $\mathscr{C}$, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
-If the two edge categories agree then we say that $\mathscr{C}$ is &lt;em&gt;edge-symmetric&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;There are two &lt;em&gt;edge categories&lt;/em&gt; associated to &lt;script type=&quot;math/tex&quot;&gt;\mathscr{C}&lt;/script&gt;, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
+If the two edge categories agree then we say that &lt;script type=&quot;math/tex&quot;&gt;\mathscr{C}&lt;/script&gt; is &lt;em&gt;edge-symmetric&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
 
@@ -277,29 +273,29 @@ If the two edge categories agree then we say that $\mathscr{C}$ is &lt;em&gt;edg
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;$\mathsf{Prof}$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Prof}&lt;/script&gt;&lt;/td&gt;
       &lt;td&gt;small categories&lt;/td&gt;
       &lt;td&gt;functors&lt;/td&gt;
       &lt;td&gt;profunctors&lt;/td&gt;
       &lt;td&gt;nat. trans.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$\mathsf{Mod}$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Mod}&lt;/script&gt;&lt;/td&gt;
       &lt;td&gt;model categories&lt;/td&gt;
       &lt;td&gt;left Quil. functors&lt;/td&gt;
       &lt;td&gt;right Quil. functors&lt;/td&gt;
       &lt;td&gt;nat. trans.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$\mathsf{MonCat}$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{MonCat}&lt;/script&gt;&lt;/td&gt;
       &lt;td&gt;monoidal categories&lt;/td&gt;
       &lt;td&gt;colax mon. functors&lt;/td&gt;
       &lt;td&gt;lax mon. functors&lt;/td&gt;
       &lt;td&gt;mon. nat. trans.&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;$\mathsf{Dbl}\Pi(X)$&lt;/td&gt;
-      &lt;td&gt;points of top. space $X$&lt;/td&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Dbl}\Pi(X)&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;points of top. space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;&lt;/td&gt;
       &lt;td&gt;paths&lt;/td&gt;
       &lt;td&gt;paths&lt;/td&gt;
       &lt;td&gt;homotopies&lt;/td&gt;
@@ -307,15 +303,15 @@ If the two edge categories agree then we say that $\mathscr{C}$ is &lt;em&gt;edg
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;For more details about why $\mathsf{Mod}$ is so interesting, see [S11].&lt;/p&gt;
+&lt;p&gt;For more details about why &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Mod}&lt;/script&gt; is so interesting, see [S11].&lt;/p&gt;
 
 &lt;p&gt;Note that we can also get weak versions of double categories, in many ways, as described &lt;a href=&quot;https://ncatlab.org/nlab/show/double+category#weakenings&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;1-categories-as-2-categories-as-double-categories&quot;&gt;1-categories as 2-categories as double categories&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;We can consider any 1-category as an $(n=2)$-category by taking the 2-cells to just be identities.&lt;/li&gt;
-  &lt;li&gt;We can consider any $(n=2)$-category as an edge-symmetric double category, its &lt;em&gt;double category of squares&lt;/em&gt;, via the so-called &lt;em&gt;quintet construction&lt;/em&gt;: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.
+  &lt;li&gt;We can consider any 1-category as an &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category by taking the 2-cells to just be identities.&lt;/li&gt;
+  &lt;li&gt;We can consider any &lt;script type=&quot;math/tex&quot;&gt;(n=2)&lt;/script&gt;-category as an edge-symmetric double category, its &lt;em&gt;double category of squares&lt;/em&gt;, via the so-called &lt;em&gt;quintet construction&lt;/em&gt;: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.
   We could also construct two other double categories: by taking either the vertical or the horizontal morphisms to be the 1-morphisms, and the other to be just the identity 1-morphisms.
   Finally, one last construction is the &lt;em&gt;mate construction&lt;/em&gt;: the vertical arrows are adjunctions, the horizontal arrows are 1-morphisms, and the 2-cells are &lt;a href=&quot;https://ncatlab.org/nlab/show/mate&quot;&gt;mate-pairs of 2-morphisms&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;In the opposite direction to the above, there are two underlying 2-categories of any double category, where we let 1-morphisms be just the vertical (resp. horizontal) morphisms, and the 2-morphisms are for commutative squares whose horizontal (resp. vertical) arrows are identities.
@@ -341,7 +337,7 @@ If the two edge categories agree then we say that $\mathscr{C}$ is &lt;em&gt;edg
       &lt;p&gt;The reason that Mike talked about them was in the context of interpreting types as coflexible objects. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">What with all the wild applications of, and progress in, the theory of $\infty$-categories, I had really neglected studying any kind of lower higher-category theory. But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.</summary></entry><entry><title type="html">Cauchy completion and profunctors</title><link href="https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors.html" rel="alternate" type="text/html" title="Cauchy completion and profunctors" /><published>2019-07-14T00:00:00+00:00</published><updated>2019-07-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors.html">&lt;p&gt;An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’.
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">What with all the wild applications of, and progress in, the theory of -categories, I had really neglected studying any kind of lower higher-category theory. But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.</summary></entry><entry><title type="html">Cauchy completion and profunctors</title><link href="https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors.html" rel="alternate" type="text/html" title="Cauchy completion and profunctors" /><published>2019-07-14T00:00:00+00:00</published><updated>2019-07-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/14/cauchy-completion-and-profunctors.html">&lt;p&gt;An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’.
 I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;.
 What follows are some things that I learnt (mostly from [BD86]).&lt;/p&gt;
 
@@ -354,27 +350,27 @@ What follows are some things that I learnt (mostly from [BD86]).&lt;/p&gt;
 
 &lt;h3 id=&quot;classically&quot;&gt;Classically&lt;/h3&gt;
 
-&lt;p&gt;Given rings $R$ and $S$, we say that an abelian group $M$ is an &lt;em&gt;$(R,S)$-bimodule&lt;/em&gt; if it is a left $R$-module and a right $S$-module &lt;strong&gt;in a compatible way&lt;/strong&gt;: we ask that $(rm)s=r(ms)$.&lt;/p&gt;
+&lt;p&gt;Given rings &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt;, we say that an abelian group &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; is an &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;(R,S)&lt;/script&gt;-bimodule&lt;/em&gt; if it is a left &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module and a right &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt;-module &lt;strong&gt;in a compatible way&lt;/strong&gt;: we ask that &lt;script type=&quot;math/tex&quot;&gt;(rm)s=r(ms)&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that $M$ be a right module over $R^{\text{op}}\otimes_{\mathbb{Z}}S$ (or, equivalently, a left module over $R\otimes_{\mathbb{Z}}S^{\text{op}}$), where $R^{\text{op}}$ is the &lt;em&gt;opposite&lt;/em&gt; ring of $R$, given by just ‘turning the multiplication around’.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; be a right module over &lt;script type=&quot;math/tex&quot;&gt;R^{\text{op}}\otimes_{\mathbb{Z}}S&lt;/script&gt; (or, equivalently, a left module over &lt;script type=&quot;math/tex&quot;&gt;R\otimes_{\mathbb{Z}}S^{\text{op}}&lt;/script&gt;), where &lt;script type=&quot;math/tex&quot;&gt;R^{\text{op}}&lt;/script&gt; is the &lt;em&gt;opposite&lt;/em&gt; ring of &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;, given by just ‘turning the multiplication around’.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;categorically&quot;&gt;Categorically&lt;/h3&gt;
 
-&lt;p&gt;Modulo a bunch of technical conditions on the categories involved,&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; a &lt;em&gt;bimodule&lt;/em&gt; is a $\mathcal{V}$-functor (i.e. a functor of $\mathcal{V}$-enriched categories) $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$.&lt;/p&gt;
+&lt;p&gt;Modulo a bunch of technical conditions on the categories involved,&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; a &lt;em&gt;bimodule&lt;/em&gt; is a &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-functor (i.e. a functor of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-enriched categories) &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;We can recover the previous definition similar to how we can recover the definition of an $R$-module as an $\mathsf{Ab}$-enriched functor $R^{\text{op}}\to\mathsf{Ab}$. Or, taking $\mathcal{V}=\mathsf{Vect}$, and $\mathcal{C}=\mathbb{B}A$, $\mathcal{D}=\mathbb{B}B$, with $A$ and $B$ both vector spaces, we recover the notion of a vector space with a left $A$-action and a right $B$-action.&lt;/p&gt;
+&lt;p&gt;We can recover the previous definition similar to how we can recover the definition of an &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module as an &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Ab}&lt;/script&gt;-enriched functor &lt;script type=&quot;math/tex&quot;&gt;R^{\text{op}}\to\mathsf{Ab}&lt;/script&gt;. Or, taking &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}=\mathsf{Vect}&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}=\mathbb{B}A&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}=\mathbb{B}B&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; both vector spaces, we recover the notion of a vector space with a left &lt;script type=&quot;math/tex&quot;&gt;A&lt;/script&gt;-action and a right &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt;-action.&lt;/p&gt;
 
-&lt;p&gt;A fundamental example that seems a bit different from this algebraic one, however, arises when we take $\mathcal{V}=\mathsf{Set}$ and $\mathcal{C}=\mathcal{D}$ to be arbitrary (small) categories.
-Then the hom functor $\mathcal{C}(-,-)\colon\mathcal{C}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$ is a bimodule.
+&lt;p&gt;A fundamental example that seems a bit different from this algebraic one, however, arises when we take &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}=\mathsf{Set}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}=\mathcal{D}&lt;/script&gt; to be arbitrary (small) categories.
+Then the hom functor &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}(-,-)\colon\mathcal{C}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}&lt;/script&gt; is a bimodule.
 This suggests that we should maybe somehow think of bimodules as generalised hom functors, where the objects can live in a different category.&lt;/p&gt;
 
-&lt;p&gt;As a small aside, there is some hot debate about whether to use $\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$ or $\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}$, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors $\mathcal{C}\to\mathcal{D}$ give you profunctors by composition with the &lt;strong&gt;covariant&lt;/strong&gt; Yoneda embedding, as opposed to the contravariant one.
+&lt;p&gt;As a small aside, there is some hot debate about whether to use &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}&lt;/script&gt; or &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}&lt;/script&gt;, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}\to\mathcal{D}&lt;/script&gt; give you profunctors by composition with the &lt;strong&gt;covariant&lt;/strong&gt; Yoneda embedding, as opposed to the contravariant one.
 But the two are formally dual, so it’s really not the biggest of issues.&lt;/p&gt;
 
 &lt;h2 id=&quot;profunctors-distributors-bimodules-or-whatever&quot;&gt;Profunctors, distributors, bimodules, or whatever&lt;/h2&gt;
 
-&lt;p&gt;Of course, lots of people have different preferences for names, but a &lt;em&gt;profunctor&lt;/em&gt; is (using the convention of Borceux and Dejean) a functor $\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$.
-People often write such a thing as $\mathcal{C}\nrightarrow\mathcal{D}$.
+&lt;p&gt;Of course, lots of people have different preferences for names, but a &lt;em&gt;profunctor&lt;/em&gt; is (using the convention of Borceux and Dejean) a functor &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}&lt;/script&gt;.
+People often write such a thing as &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}\nrightarrow\mathcal{D}&lt;/script&gt;.
 We can define their compositions via colimits or coends:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)&lt;/script&gt;
@@ -383,27 +379,27 @@ We can define their compositions via colimits or coends:&lt;/p&gt;
 
 &lt;h3 id=&quot;yoneda&quot;&gt;Yoneda&lt;/h3&gt;
 
-&lt;p&gt;Every functor $F\colon\mathcal{C}\to\mathcal{D}$ gives a profunctor $F^*\colon\mathcal{C}\nrightarrow\mathcal{D}$ by setting&lt;/p&gt;
+&lt;p&gt;Every functor &lt;script type=&quot;math/tex&quot;&gt;F\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt; gives a profunctor &lt;script type=&quot;math/tex&quot;&gt;F^*\colon\mathcal{C}\nrightarrow\mathcal{D}&lt;/script&gt; by setting&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F^*(d,c) = \mathcal{D}(d,Fc),&lt;/script&gt;
 
-&lt;p&gt;and $F^*$ has a right adjoint $F_*\colon\mathcal{D}\nrightarrow\mathcal{C}$ given by&lt;/p&gt;
+&lt;p&gt;and &lt;script type=&quot;math/tex&quot;&gt;F^\*&lt;/script&gt; has a right adjoint &lt;script type=&quot;math/tex&quot;&gt;F_*\colon\mathcal{D}\nrightarrow\mathcal{C}&lt;/script&gt; given by&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F_*(c,d) = \mathcal{D}(Fc,d),&lt;/script&gt;
 
 &lt;p&gt;where we define adjunctions of profunctors using the classical notion of natural transformations.&lt;/p&gt;
 
-&lt;p&gt;If we write $\mathbb{1}$ to mean the category with one object and one (identity) (endo)morphism then any (small) category $\mathcal{C}$ can be identified with the functor category $\mathsf{Fun}(\mathbb{1},\mathcal{C})$, and the presheaf category $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ is just the category $\mathsf{Profun}(\mathbb{1},\mathcal{C})$.
+&lt;p&gt;If we write &lt;script type=&quot;math/tex&quot;&gt;\mathbb{1}&lt;/script&gt; to mean the category with one object and one (identity) (endo)morphism then any (small) category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; can be identified with the functor category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Fun}(\mathbb{1},\mathcal{C})&lt;/script&gt;, and the presheaf category &lt;script type=&quot;math/tex&quot;&gt;\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})&lt;/script&gt; is just the category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Profun}(\mathbb{1},\mathcal{C})&lt;/script&gt;.
 Then the Yoneda embedding is the inclusion&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})&lt;/script&gt;
 
-&lt;p&gt;given by $F\mapsto F^*$.&lt;/p&gt;
+&lt;p&gt;given by &lt;script type=&quot;math/tex&quot;&gt;F\mapsto F^\*&lt;/script&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;recovering-functors&quot;&gt;Recovering functors&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; A profunctor $\mathbb{1}\nrightarrow\mathcal{C}$ is a functor (via Yoneda&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) if and only if it admits a right adjoint.
-More generally, a profunctor $\mathcal{A}\nrightarrow\mathcal{C}$, for any small category $\mathcal{A}$, is a functor (via Yoneda) if and only if it admits a right adjoint.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theorem.&lt;/strong&gt; A profunctor &lt;script type=&quot;math/tex&quot;&gt;\mathbb{1}\nrightarrow\mathcal{C}&lt;/script&gt; is a functor (via Yoneda&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) if and only if it admits a right adjoint.
+More generally, a profunctor &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}\nrightarrow\mathcal{C}&lt;/script&gt;, for any small category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt;, is a functor (via Yoneda) if and only if it admits a right adjoint.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt; [Theorem 2, BD86].&lt;/p&gt;
 
@@ -411,21 +407,21 @@ More generally, a profunctor $\mathcal{A}\nrightarrow\mathcal{C}$, for any small
 
 &lt;h2 id=&quot;cauchy-completion&quot;&gt;Cauchy completion&lt;/h2&gt;
 
-&lt;p&gt;The &lt;em&gt;Cauchy completion&lt;/em&gt; of a (small) category $\mathcal{C}$ can be defined in many ways (as described in [BD86]), but we pick the following: the Cauchy completion of $\mathcal{C}$ is the full subcategory $\overline{\mathcal{C}}$ of $\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$ spanned by &lt;em&gt;absolutely presentable&lt;/em&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; presheaves.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Cauchy completion&lt;/em&gt; of a (small) category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; can be defined in many ways (as described in [BD86]), but we pick the following: the Cauchy completion of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; is the full subcategory &lt;script type=&quot;math/tex&quot;&gt;\overline{\mathcal{C}}&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})&lt;/script&gt; spanned by &lt;em&gt;absolutely presentable&lt;/em&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; presheaves.&lt;/p&gt;
 
 &lt;p&gt;The idea of Cauchy completeness for a category is in some sense meant to mirror that of Cauchy completeness of real numbers: if we think of a metric space as a category enriched over (the poset of) non-negative real numbers, then we recover this analytic notion (see [Example 3, BD86]).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; A presheaf $\mathcal{F}\in\hat{\mathcal{C}}$ is absolutely presentable if and only if it admits a right adjoint.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; A presheaf &lt;script type=&quot;math/tex&quot;&gt;\mathcal{F}\in\hat{\mathcal{C}}&lt;/script&gt; is absolutely presentable if and only if it admits a right adjoint.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Proof.&lt;/strong&gt; [Propositions 2 and 4, BD86].&lt;/p&gt;
 
 &lt;h2 id=&quot;internal-categories&quot;&gt;Internal categories&lt;/h2&gt;
 
-&lt;p&gt;Recall that [Theorem 2, BD86] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by [Propositions 2 and 4, BD86], are exactly those (in the case where $\mathcal{A}=\mathbb{1}$) that are in the Cauchy completion of $\mathcal{C}$).&lt;/p&gt;
+&lt;p&gt;Recall that [Theorem 2, BD86] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by [Propositions 2 and 4, BD86], are exactly those (in the case where &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}=\mathbb{1}&lt;/script&gt;) that are in the Cauchy completion of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt;).&lt;/p&gt;
 
 &lt;p&gt;Now for what motivated me to write this post: something I saw in &lt;a href=&quot;https://twitter.com/8ryceClarke&quot;&gt;Bryce Clarke&lt;/a&gt;’s talk &lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf&quot;&gt;Internal lenses as monad morphisms&lt;/a&gt; at CT2019.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-&lt;p&gt;Given some category $\mathcal{E}$ with pullbacks, we can define an &lt;em&gt;internal category of $\mathcal{E}$&lt;/em&gt; as a monad in the 2-category $\mathsf{Span}(\mathcal{E})$, but it is &lt;strong&gt;not&lt;/strong&gt; the case that internal functors are just (colax) morphisms of monads: &lt;strong&gt;we need to require that the 1-cell admits a right adjoint&lt;/strong&gt; (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).&lt;/p&gt;
+&lt;p&gt;Given some category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{E}&lt;/script&gt; with pullbacks, we can define an &lt;em&gt;internal category of &lt;script type=&quot;math/tex&quot;&gt;\mathcal{E}&lt;/script&gt;&lt;/em&gt; as a monad in the 2-category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Span}(\mathcal{E})&lt;/script&gt;, but it is &lt;strong&gt;not&lt;/strong&gt; the case that internal functors are just (colax) morphisms of monads: &lt;strong&gt;we need to require that the 1-cell admits a right adjoint&lt;/strong&gt; (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).&lt;/p&gt;
 
 &lt;p&gt;This is now not so much of a surprising condition, since we’ve already seen that this left-adjoint condition is what ensures that profunctors are actually functors!&lt;/p&gt;
 
@@ -448,13 +444,13 @@ We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;$x\cdot_{R^{\text{op}}}y:=y\cdot_R x$. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;x\cdot_{R^{\text{op}}}y:=y\cdot_R x&lt;/script&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;To construct $\mathcal{C}^{\text{op}}$ we need $V$ to be braided; to be able to compose bimodules we need cocompleteness of $V$, with $\otimes$ cocontinuous in both arguments, etc. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;To construct &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\text{op}}&lt;/script&gt; we need &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; to be braided; to be able to compose bimodules we need cocompleteness of &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;\otimes&lt;/script&gt; cocontinuous in both arguments, etc. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;That is, of the form $F^*$ for some functor $F\colon\mathcal{C}\to\mathcal{D}$. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;That is, of the form &lt;script type=&quot;math/tex&quot;&gt;F^\*&lt;/script&gt; for some functor &lt;script type=&quot;math/tex&quot;&gt;F\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
       &lt;p&gt;That is, preserves all (small) colimits. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -476,9 +472,9 @@ We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf&quot;&gt;Internal languages of higher toposes (Michael Shulman)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/sobocinski.pdf&quot;&gt;Graphical Linear Algebra (Pawel Sobocinski)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/riehl.pdf&quot;&gt;A formal category theory for $\infty$-categories (Emily Riehl)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/paoli.pdf&quot;&gt;Segal-type models of weak $n$-categories (Simona Paoli)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/3.pdf&quot;&gt;An Axiomatic Approach to Algebraic Topology: A Theory of Elementary $(\infty,1)$-Toposes (Nima Rasekh)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/riehl.pdf&quot;&gt;A formal category theory for &lt;script type=&quot;math/tex&quot;&gt;\infty&lt;/script&gt;-categories (Emily Riehl)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/paoli.pdf&quot;&gt;Segal-type models of weak &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-categories (Simona Paoli)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/3.pdf&quot;&gt;An Axiomatic Approach to Algebraic Topology: A Theory of Elementary &lt;script type=&quot;math/tex&quot;&gt;(\infty,1)&lt;/script&gt;-Toposes (Nima Rasekh)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf&quot;&gt;Internal lenses as monad morphisms (Bryce Clarke)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/54.pdf&quot;&gt;Dagger limits (Martti Karvonen)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://conferences.inf.ed.ac.uk/ct2019/slides/73.pdf&quot;&gt;Hopf-Frobenius Algebras (Joseph Collins)&lt;/a&gt;&lt;/li&gt;
@@ -526,7 +522,7 @@ It swims away from the shore and does not return to land for several years.&lt;/
       &lt;p&gt;No citation needed. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="life" /><category term="birds" /><summary type="html">I haven’t posted anything in a while, and rather than trying to write about maths, I wanted to just share some lovely photos of Skomer island (which I recently visited). I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I’d actually seen a puffin in the flesh!</summary></entry><entry><title type="html">Twisting cochains and arbitrary dg-categories</title><link href="https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html" rel="alternate" type="text/html" title="Twisting cochains and arbitrary dg-categories" /><published>2018-12-12T00:00:00+00:00</published><updated>2018-12-12T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html">&lt;p&gt;Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote &lt;a href=&quot;/blog/2018/04/26/derived-dg-triangulated-and-infinity-categories.html&quot;&gt;this post&lt;/a&gt; about derived, dg-, and $A_\infty$-categories and their role in ‘homotopy things’.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="life" /><category term="birds" /><summary type="html">I haven’t posted anything in a while, and rather than trying to write about maths, I wanted to just share some lovely photos of Skomer island (which I recently visited). I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I’d actually seen a puffin in the flesh!</summary></entry><entry><title type="html">Twisting cochains and arbitrary dg-categories</title><link href="https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html" rel="alternate" type="text/html" title="Twisting cochains and arbitrary dg-categories" /><published>2018-12-12T00:00:00+00:00</published><updated>2018-12-12T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/12/12/twisting-cochains-and-arbitrary-dg-categories.html">&lt;p&gt;Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote &lt;a href=&quot;/blog/2018/04/26/derived-dg-triangulated-and-infinity-categories.html&quot;&gt;this post&lt;/a&gt; about derived, dg-, and &lt;script type=&quot;math/tex&quot;&gt;A_\infty&lt;/script&gt;-categories and their role in ‘homotopy things’.&lt;/p&gt;
 
 &lt;p&gt;This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.&lt;/p&gt;
 
@@ -573,48 +569,48 @@ Any ideas?&lt;/p&gt;
       &lt;p&gt;A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, “Duality and Intersection Theory in Complex Manifolds. I.”, Math. Ann., 237 (1978), 41—77. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote this post about derived, dg-, and $A_\infty$-categories and their role in ‘homotopy things’. This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</summary></entry><entry><title type="html">Torsors and principal bundles</title><link href="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html" rel="alternate" type="text/html" title="Torsors and principal bundles" /><published>2018-10-31T00:00:00+00:00</published><updated>2018-10-31T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html">&lt;p&gt;In my thesis, switching between vector bundles and principal $\mathrm{GL}_r$-bundles has often made certain problems easier (or harder) to understand.
-Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book &lt;a href=&quot;https://www.springer.com/fr/book/9783319147642&quot;&gt;Principal Bundles — The Classical Case&lt;/a&gt;, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely $\mathbb{B}G$ and $\mathbb{E}G$ things therein&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that &lt;em&gt;‘affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation’&lt;/em&gt;,&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; which makes a nice short topic of discussion, whence this post.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote this post about derived, dg-, and -categories and their role in ‘homotopy things’. This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</summary></entry><entry><title type="html">Torsors and principal bundles</title><link href="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html" rel="alternate" type="text/html" title="Torsors and principal bundles" /><published>2018-10-31T00:00:00+00:00</published><updated>2018-10-31T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html">&lt;p&gt;In my thesis, switching between vector bundles and principal &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-bundles has often made certain problems easier (or harder) to understand.
+Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book &lt;a href=&quot;https://www.springer.com/fr/book/9783319147642&quot;&gt;Principal Bundles — The Classical Case&lt;/a&gt;, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely &lt;script type=&quot;math/tex&quot;&gt;\mathbb{B}G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathbb{E}G&lt;/script&gt; things therein&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
+Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that &lt;em&gt;‘affine vector spaces should be understood as &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors, where &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is the underlying vector space acting via translation’&lt;/em&gt;,&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; which makes a nice short topic of discussion, whence this post.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;We briefly&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; recall the definition of a principal $G$-bundle over a space $X$, where $G$ is some &lt;em&gt;topological&lt;/em&gt; group.&lt;/p&gt;
+&lt;p&gt;We briefly&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; recall the definition of a principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundle over a space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is some &lt;em&gt;topological&lt;/em&gt; group.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;principal $G$-bundle over $X$&lt;/em&gt; is a fibre bundle $P\xrightarrow{\pi}X$ with a continuous right action $P\times G\to P$ such that&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundle over &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;&lt;/em&gt; is a fibre bundle &lt;script type=&quot;math/tex&quot;&gt;P\xrightarrow{\pi}X&lt;/script&gt; with a continuous right action &lt;script type=&quot;math/tex&quot;&gt;P\times G\to P&lt;/script&gt; such that&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;$G$ acts &lt;em&gt;freely&lt;/em&gt;;&lt;/li&gt;
-  &lt;li&gt;$G$ acts &lt;em&gt;transitively&lt;/em&gt; on the orbits; and&lt;/li&gt;
-  &lt;li&gt;$G$ acts &lt;em&gt;properly&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;freely&lt;/em&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;transitively&lt;/em&gt; on the orbits; and&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;properly&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;It is maybe helpful to think of the following ‘dictionary’:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;free = injective (i.e. $\exists x$ s.t. $gx=hx\implies g=h$)&lt;/li&gt;
-  &lt;li&gt;transitively = surjective (i.e. $\forall x,y$ $\exists g$ s.t. $gx=y$)&lt;/li&gt;
-  &lt;li&gt;properly = something that you care about if you care about infinite sequences or Hausdorffness or things like that (i.e. the inverse image of $G\times X\to X\times X$ given by $(g,x)\mapsto(gx,x)$ preserves compactness)&lt;/li&gt;
+  &lt;li&gt;free = injective (i.e. &lt;script type=&quot;math/tex&quot;&gt;\exists x&lt;/script&gt; s.t. &lt;script type=&quot;math/tex&quot;&gt;gx=hx\implies g=h&lt;/script&gt;)&lt;/li&gt;
+  &lt;li&gt;transitively = surjective (i.e. &lt;script type=&quot;math/tex&quot;&gt;\forall x,y&lt;/script&gt; &lt;script type=&quot;math/tex&quot;&gt;\exists g&lt;/script&gt; s.t. &lt;script type=&quot;math/tex&quot;&gt;gx=y&lt;/script&gt;)&lt;/li&gt;
+  &lt;li&gt;properly = something that you care about if you care about infinite sequences or Hausdorffness or things like that (i.e. the inverse image of &lt;script type=&quot;math/tex&quot;&gt;G\times X\to X\times X&lt;/script&gt; given by &lt;script type=&quot;math/tex&quot;&gt;(g,x)\mapsto(gx,x)&lt;/script&gt; preserves compactness)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Thus the fibres $F$ are homeomorphic to $G$, and also give the orbits, and the orbit space $P/G$ is homeomorphic to $X$.&lt;/p&gt;
+&lt;p&gt;Thus the fibres &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; are homeomorphic to &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, and also give the orbits, and the orbit space &lt;script type=&quot;math/tex&quot;&gt;P/G&lt;/script&gt; is homeomorphic to &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;Another definition is now useful.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;$G$-torsor&lt;/em&gt; is a space upon which $G$ acts &lt;em&gt;freely&lt;/em&gt; and &lt;em&gt;transitively&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsor&lt;/em&gt; is a space upon which &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;freely&lt;/em&gt; and &lt;em&gt;transitively&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Motto.&lt;/strong&gt; $G$-torsors &lt;em&gt;are&lt;/em&gt; principal $G$-bundles over a point &lt;em&gt;are&lt;/em&gt; affine versions of $G$.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Motto.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors &lt;em&gt;are&lt;/em&gt; principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundles over a point &lt;em&gt;are&lt;/em&gt; affine versions of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
 
 &lt;p&gt;What do we mean by this last ‘equivalence’?
-Just that $G$-torsors retain all the structure of $G$, but don’t have some specified point that acts as the identity.
+Just that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors retain all the structure of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, but don’t have some specified point that acts as the identity.
 Here are some nice examples.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;$\mathrm{GL}_r$-torsors are vector spaces; $\mathrm{GL}_r$-bundles are vector bundles.&lt;/li&gt;
-  &lt;li&gt;$O(r)$-torsors are vector spaces with an inner product.&lt;/li&gt;
-  &lt;li&gt;$\mathrm{GL}_r^+$-torsors are oriented vector spaces (where $\mathrm{GL}_r^+$ is the connected component of $\mathrm{GL}_r$ consisting of matrices with determinant strictly positive).&lt;/li&gt;
-  &lt;li&gt;$\mathrm{SL}_r$-torsors are vector spaces with a specified isomorphism $\det V\xrightarrow{\sim} k$, where $\det V:=\wedge_{i=1}^r V$, and $k$ is our base field. Note that this is weaker than a choice of basis: it is a choice of an $\mathrm{SL}_r$-conjugacy class of bases.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-torsors are vector spaces; &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-bundles are vector bundles.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;O(r)&lt;/script&gt;-torsors are vector spaces with an inner product.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r^+&lt;/script&gt;-torsors are oriented vector spaces (where &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r^+&lt;/script&gt; is the connected component of &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt; consisting of matrices with determinant strictly positive).&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{SL}\_r&lt;/script&gt;-torsors are vector spaces with a specified isomorphism &lt;script type=&quot;math/tex&quot;&gt;\det V\xrightarrow{\sim} k&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\det V:=\wedge\_{i=1}^r V&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; is our base field. Note that this is weaker than a choice of basis: it is a choice of an &lt;script type=&quot;math/tex&quot;&gt;\mathrm{SL}\_r&lt;/script&gt;-conjugacy class of bases.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -630,10 +626,10 @@ Here are some nice examples.&lt;/p&gt;
       &lt;p&gt;(which I won’t talk about here because (a) I think there are many other places to read about this that are much better than something that I could write; and (b) I should be working on my thesis but I’m sort of using this post as a method of procrastination/searching for inspiration). &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;An earlier version of this post incorrectly said ‘$\mathrm{GL}_r$-torsor’; thanks to &lt;a href=&quot;https://twitter.com/BarbaraFantechi/status/1057701336291123200&quot;&gt;Barbara Fantechi for pointing this out!&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;An earlier version of this post incorrectly said ‘&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}_r&lt;/script&gt;-torsor’; thanks to &lt;a href=&quot;https://twitter.com/BarbaraFantechi/status/1057701336291123200&quot;&gt;Barbara Fantechi for pointing this out!&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can’t think of that means ‘self-containedness’ but is actually a real word/phrase?) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $$G$$-torsors, where $$G$$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry></feed>

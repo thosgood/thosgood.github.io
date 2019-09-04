@@ -13,7 +13,7 @@
   <title>Tim Hosgood — Derived, DG, triangulated, and infinity-categories</title>
 
 
-  <meta name="description" content="This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and $A_\infty$-categories, and wondered how they...">
+  <meta name="description" content="This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and -categories, and wondered how they all linke...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -288,7 +268,7 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p>This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and $A_\infty$-categories, and wondered how they all linked together.
+    <p>This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and <script type="math/tex">A_\infty</script>-categories, and wondered how they all linked together.
 In particular, as an undergraduate I was always confused as to what the difference was between the two steps of constructing the derived category of chain complexes was: taking equivalence classes of chain homotopic complexes; and then formally inverting all quasi-isomorphisms.
 Both of them seemed to be some sort of quotienting/equivalence-class-like action, so why not do them at the same time?
 What different roles were played by each step?</p>
@@ -304,11 +284,11 @@ What different roles were played by each step?</p>
 <p>First of all, there are two points that I want to make about choices of language that I think are really very confusing.</p>
 
 <ol>
-  <li>When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: a <strong>derived category</strong> is like a homotopy truncation (i.e. the $\pi_0$) of some thing with much higher homotopical data; a <strong>derived scheme/stack/whatever</strong> is something whose $\pi_0$ is the corresponding classical object.
+  <li>When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: a <strong>derived category</strong> is like a homotopy truncation (i.e. the <script type="math/tex">\pi_0</script>) of some thing with much higher homotopical data; a <strong>derived scheme/stack/whatever</strong> is something whose <script type="math/tex">\pi_0</script> is the corresponding classical object.
  Derived ‘algebraic/geometric objects’ <em>have</em> homotopy truncations; derived categories <em>are</em> homotopy truncations.</li>
-  <li>When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category $K(\mathcal{A})$ the <strong>homotopy category of chain complexes</strong>.
- This is maybe not the best nomenclature, in some sense, because the category that ‘truly’ deserves this name is the <em>actual</em> homotopy category of chain complexes $\mathrm{Ho}\mathsf{Ch}(\mathcal{A})$, which is, by definition, the derived category $D(\mathcal{A})$.
- Because of this, I won’t refer to $K(\mathcal{A})$ as anything but $K(\mathcal{A})$.</li>
+  <li>When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category <script type="math/tex">K(\mathcal{A})</script> the <strong>homotopy category of chain complexes</strong>.
+ This is maybe not the best nomenclature, in some sense, because the category that ‘truly’ deserves this name is the <em>actual</em> homotopy category of chain complexes <script type="math/tex">\mathrm{Ho}\mathsf{Ch}(\mathcal{A})</script>, which is, by definition, the derived category <script type="math/tex">D(\mathcal{A})</script>.
+ Because of this, I won’t refer to <script type="math/tex">K(\mathcal{A})</script> as anything but <script type="math/tex">K(\mathcal{A})</script>.</li>
 </ol>
 
 <h2 id="a-nice-diagram">A nice diagram</h2>
@@ -320,10 +300,10 @@ What different roles were played by each step?</p>
 <p>Here are a few words about the above diagram.</p>
 
 <ul>
-  <li>The structure of a <em>triangulated category</em> is essentially the structure that the category $\mathrm{Ho}(\mathcal{C})$ inherits from the fact that $\mathcal{C}$ is a <em>stable</em> $(\infty,1)$-category.
-  The equivalent notion in the more general case (the left-hand side of the diagram) is the structure inherent to $\mathrm{h}(\mathcal{C})$ from an $(\infty,1)$-category viewed as a quasi-category (and thus, in particular, simplicial set).</li>
+  <li>The structure of a <em>triangulated category</em> is essentially the structure that the category <script type="math/tex">\mathrm{Ho}(\mathcal{C})</script> inherits from the fact that <script type="math/tex">\mathcal{C}</script> is a <em>stable</em> <script type="math/tex">(\infty,1)</script>-category.
+  The equivalent notion in the more general case (the left-hand side of the diagram) is the structure inherent to <script type="math/tex">\mathrm{h}(\mathcal{C})</script> from an <script type="math/tex">(\infty,1)</script>-category viewed as a quasi-category (and thus, in particular, simplicial set).</li>
   <li>A <em>stable dg-category</em> is also known as an <em>enhanced triangulated category</em> or a <em>pretriangulated category</em>.</li>
-  <li>If we wanted to draw a column in the middle for <em>stable</em> $(\infty,1)$-categories that <em>aren’t necessarily linear</em>, then we’d arrive at the notion of a <em>spectral category</em> instead of a dg-category.</li>
+  <li>If we wanted to draw a column in the middle for <em>stable</em> <script type="math/tex">(\infty,1)</script>-categories that <em>aren’t necessarily linear</em>, then we’d arrive at the notion of a <em>spectral category</em> instead of a dg-category.</li>
 </ul>
 
 <p>Now here is a picture of where the derived category of chain complexes fits in to all this.</p>
@@ -335,17 +315,17 @@ What different roles were played by each step?</p>
 <ul>
   <li>We can understand the definition of <em>chain homotopies</em> much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval object in chain complexes</a>.</li>
   <li>
-    <p>As said at the beginning of this post, there <em>is</em> a difference between passing from $\mathsf{Ch}(\mathcal{A})$ to $K(\mathcal{A})$ and from $K(\mathcal{A})$ to $D(\mathcal{A})$, i.e. quotienting and localising have no reason to behave similarly<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.
-  <em>But</em>, there is a model structure that we can put on $\mathsf{Ch}(\mathcal{A})$, and so there <em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by Simon Henry</a>,
+    <p>As said at the beginning of this post, there <em>is</em> a difference between passing from <script type="math/tex">\mathsf{Ch}(\mathcal{A})</script> to <script type="math/tex">K(\mathcal{A})</script> and from <script type="math/tex">K(\mathcal{A})</script> to <script type="math/tex">D(\mathcal{A})</script>, i.e. quotienting and localising have no reason to behave similarly<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.
+  <em>But</em>, there is a model structure that we can put on <script type="math/tex">\mathsf{Ch}(\mathcal{A})</script>, and so there <em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by Simon Henry</a>,
   <em>“The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen’s “Homotopical Algebra” (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects.”</em></p>
 
-    <p>There is, however, the slightly confusing fact that the construction of $K(\mathcal{A})$ as a quotient <em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
+    <p>There is, however, the slightly confusing fact that the construction of <script type="math/tex">K(\mathcal{A})</script> as a quotient <em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
   </li>
 </ul>
 
 <h2 id="unresolved-confusions">Unresolved confusions</h2>
 
-<p>I still don’t fully see the link between the homotopy category $\mathrm{h}(\mathcal{C})$ and the homotopy category $\mathrm{Ho}(\mathcal{C})$ and localisation in general (e.g. I ‘know’ that $\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))$, where $\mathrm{L}$ is the simplicial localisation, but that’s about it).</p>
+<p>I still don’t fully see the link between the homotopy category <script type="math/tex">\mathrm{h}(\mathcal{C})</script> and the homotopy category <script type="math/tex">\mathrm{Ho}(\mathcal{C})</script> and localisation in general (e.g. I ‘know’ that <script type="math/tex">\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))</script>, where <script type="math/tex">\mathrm{L}</script> is the simplicial localisation, but that’s about it).</p>
 
 <p>You know what?
 There are a lot of things that I still don’t understand, but oh my goodness am I having fun trying to figure it all out.</p>
@@ -419,9 +399,9 @@ There are a lot of things that I still don’t understand, but oh my goodness am
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -472,6 +452,23 @@ There are a lot of things that I still don’t understand, but oh my goodness am
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>

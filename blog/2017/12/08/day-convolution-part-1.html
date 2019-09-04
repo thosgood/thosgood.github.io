@@ -13,7 +13,7 @@
   <title>Tim Hosgood — Weighted limits, ends, and Day convolution (Part 1)</title>
 
 
-  <meta name="description" content="A motto of category theory is that ‘Kan extensions are everywhere’. As a simplification of this, ‘(co)limits are in a lot of places’. By rephrasing the defin...">
+  <meta name="description" content="[See part 2 here and] A motto of category theory is that ‘Kan extensions are everywhere’. As a simplification of this, ‘(co)limits are in a lot of places’. B...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -22,7 +22,9 @@
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/assets/jquery-3.4.1.slim.min.js"></script>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+  <script src="/assets/katex/katex.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -31,28 +33,6 @@
       $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
     });
   </script>
-
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    },
-    "HTML-CSS" : {
-      fonts: ["Asana-Math"]
-    }
-  });
-</script>
-
   
 </head>
 
@@ -292,7 +272,9 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p>A motto of category theory is that ‘Kan extensions are everywhere’. As a
+    <p><em>[See part 2 <a href="/blog/2018/02/15/day-convolution-part-2.html">here</a> and]</em></p>
+
+<p>A motto of category theory is that ‘Kan extensions are everywhere’. As a
 simplification of this, ‘(co)limits are in a lot of places’. By rephrasing
 the definition of a limit we end up with something that looks invitingly
 generalisable. This is how we can stumble across the idea of a
@@ -435,9 +417,9 @@ any interest, and how we can use it to define (co)ends.</em></p>
           
 
           <li>
-            <a href="/assets/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
-            <a href="/assets/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
-            <a href="/assets/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
+            <a href="/assets/images/bird.jpg"><img src="/assets/icons/bird.png" height="14px"></a>
+            <a href="/assets/images/snail.jpg"><img src="/assets/icons/snail.png" height="21px"></a>
+            <a href="/assets/images/secret.jpg"><img src="/assets/icons/secret.png" height="21px"></a>
           </li>
 
         </ul>
@@ -488,6 +470,23 @@ any interest, and how we can use it to define (co)ends.</em></p>
 
 </footer>
 
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString("\\displaystyle "+tex) +
+             "</div>";
+  });
+</script>
 
 
   </body>
