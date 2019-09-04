@@ -1,6 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-04T16:20:21+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Mathematical motivation and meagre contributions</title><link href="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html" rel="alternate" type="text/html" title="Mathematical motivation and meagre contributions" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html">&lt;p&gt;I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-04T19:12:18+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Everything is Stokes’; everything is coend</title><link href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html" rel="alternate" type="text/html" title="Everything is Stokes'; everything is coend" /><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/04/stokes-coend</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">&lt;p&gt;For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Today, &lt;a href=&quot;https://twitter.com/ququ7&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@ququ7&lt;/code&gt;&lt;/a&gt; tweeted/twote/twut that, &lt;a href=&quot;https://twitter.com/ququ7/status/1169048827703287814&quot;&gt;a few years back, Tim Campion had told him how Stokes’ theorem is a result about coends&lt;/a&gt;. All I want to do here is share this great little snippet, but I won’t be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!&lt;/p&gt;
+
+&lt;p&gt;Here’s the idea. We look at $\mathbb{N}$ as a poset, the category $\mathsf{Vect}_\mathbb{R}$ of real-vector spaces, and fix some manifold $X$. Then we have two pretty standard functors.&lt;/p&gt;
+
+&lt;p&gt;Firstly, we have $C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the free vector space $C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}$, where $\varphi\colon Y\to X$ are smooth maps from compact, $n$-dimensional, oriented manifolds $Y$ with boundary, and acts on morphisms by sending $n\to n+1$ to the map $\partial\colon C_{n+1}\to C_n$, given by taking the boundaries of our manifolds $Y$.&lt;/p&gt;
+
+&lt;p&gt;Secondly, there is the de Rham functor $\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the space $\Omega_X^n$ of smooth $n$-forms on $X$, and sends $n\to n+1$ to the exterior derivative $\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}$.&lt;/p&gt;
+
+&lt;p&gt;Now we use the usual tensor product on $\mathsf{Vect}_\mathbb{R}$ to get a functor&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;C^X\otimes\Omega_X\colon\mathbb{N}\times\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}.&lt;/script&gt;
+
+&lt;p&gt;We claim that we can make $C^X\otimes\Omega_X\to\mathbb{R}$ into a &lt;strong&gt;cowedge&lt;/strong&gt;, i.e. that, for all $n\in\mathbb{N}$, we can find morphisms&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}&lt;/script&gt;
+
+&lt;p&gt;such that, for any $f\colon m\to n$ (and here we can restrict to $m\to m+1$, since these are the morphisms in $\mathbb{N}$ that generate all the others (that aren’t the identity)), the square&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{array}{rcl}
+    C_{m+1}^X\otimes\Omega_X^m &amp; \xrightarrow{\partial\,\otimes\,1} &amp; C_m^X\otimes\Omega_X^m\\
+    {\scriptstyle 1\,\otimes\,\mathrm{d}}\bigg\downarrow &amp;&amp; \bigg\downarrow{\scriptstyle w_m}\\
+    C_{m+1}^X\otimes\Omega_X^{m+1} &amp; \xrightarrow{w_{m+1}} &amp; \mathbb{R}
+\end{array} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;commutes.&lt;/p&gt;
+
+&lt;p&gt;The surprising fact, then, is that Stokes’ theorem tells us that taking $w_n$ to be defined by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int\colon(\varphi\colon Y\to X)\otimes\omega \mapsto \int_Y \varphi^*\omega&lt;/script&gt;
+
+&lt;p&gt;gives us exactly what we want. Indeed, Stokes’ theorem (in some form) says that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\int_{\partial Z}\tau=\int_Z \mathrm{d}\tau&lt;/script&gt;
+
+&lt;p&gt;and, since pullbacks commute with $\mathrm{d}$, when we replace $\tau$ with $\varphi^*\omega$, we get that the above square commutes. Neat!&lt;/p&gt;
+
+&lt;p&gt;What is not entirely clear to me, however, is if this is really a fact about &lt;em&gt;coends&lt;/em&gt;, since then we would need to show that this cowedge is universal. This is something for me to think about the next time I’m bored on the tram.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace $C_n$ by &lt;em&gt;singular&lt;/em&gt; cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what &lt;a href=&quot;https://twitter.com/littmath&quot;&gt;Daniel Litt&lt;/a&gt; pointed out &lt;a href=&quot;https://twitter.com/littmath/status/1169081052100530177&quot;&gt;in a reply&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;One other question that I do have is the following: is there something to be gained by writing $C_X$ as the functor represented by $X$, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!&lt;/p&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.</summary></entry><entry><title type="html">Mathematical motivation and meagre contributions</title><link href="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html" rel="alternate" type="text/html" title="Mathematical motivation and meagre contributions" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/08/14/mathematical-motivation-meagre-contributions.html">&lt;p&gt;I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;These days, living abroad (away from friends and family), most of my social interactions take place with other mathematicians. This is great, because I do love talking about maths, but also has a rather negative effect. Namely, every single person in my office already has a PhD. Because of this, it’s very easy to feel like I know absolutely nothing about maths. Combine this with the typical thésard problem of “my thesis just has trivial results but even so my proofs are incomplete and bad”, reading things written by the geniuses of your field, and throw in a dash of “so much of academia is about trying to sell your maths as having either profitable (for the few) or military applications”, and it can be hard to enjoy maths at times.&lt;/p&gt;
 
@@ -32,6 +81,7 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 &lt;/ol&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><category term="birds" /><summary type="html">I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.</summary></entry><entry><title type="html">Graded homotopy structures</title><link href="https://thosgood.github.io/blog/2019/07/29/graded-homotopy-structures.html" rel="alternate" type="text/html" title="Graded homotopy structures" /><published>2019-07-29T00:00:00+00:00</published><updated>2019-07-29T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/29/graded-homotopy-structures</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/29/graded-homotopy-structures.html">&lt;p&gt;As I mentioned in &lt;a href=&quot;/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html&quot;&gt;the previous post&lt;/a&gt;, I recently saw a talk by &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt; on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, I’ve decided to post it here, in the hope that I might be able to get some answers.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;The main reference is [RH19] Rachel Hardeman. &lt;em&gt;Computing A-homotopy groups using coverings and lifting properties&lt;/em&gt;. &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;arXiv: 1904.12065&lt;/a&gt;.&lt;/p&gt;
 
@@ -88,6 +138,7 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 &lt;/ol&gt;</content><author><name></name></author><category term="blog" /><category term="homotopy-theory" /><category term="category-theory" /><category term="questions" /><summary type="html">As I mentioned in the previous post, I recently saw a talk by Rachel Hardeman on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a “graded homotopy structure”, as I’ve been calling it in my head. Rather than trying to type out everything in #math.CT:matrix.org, I’ve decided to post it here, in the hope that I might be able to get some answers.</summary></entry><entry><title type="html">Twisting cochains and twisted complexes</title><link href="https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html" rel="alternate" type="text/html" title="Twisting cochains and twisted complexes" /><published>2019-07-26T00:00:00+00:00</published><updated>2019-07-26T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html">&lt;p&gt;This week was the &lt;a href=&quot;https://ytm2019.epfl.ch&quot;&gt;Young Topologists Meeting&lt;/a&gt; at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub &lt;a href=&quot;https://github.com/thosgood/papers/blob/master/twisting-cochains-YTM19/twisting-cochains-YTM19-handout.pdf&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;One talk that I really liked was &lt;a href=&quot;http://math.ucalgary.ca/math_unitis/profiles/1-7046986&quot;&gt;Rachel Hardeman&lt;/a&gt;’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, $C_n$ is only contractible for $n\leqslant4$. You can read more about this in &lt;a href=&quot;https://arxiv.org/abs/1904.12065&quot;&gt;her paper on the arXiv&lt;/a&gt;.&lt;/p&gt;
 
@@ -95,6 +146,7 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 But, as in many other ways, CT2019 opened my eyes somewhat, and now I’m trying to catch up on the theory of 2-categories, which have some really beautiful structure and examples.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;background-and-strictification&quot;&gt;Background and strictification&lt;/h2&gt;
 
@@ -294,6 +346,7 @@ I managed (luckily) to get a chance to ask Mike Shulman a few questions about th
 What follows are some things that I learnt (mostly from [BD86]).&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;h2 id=&quot;bimodules&quot;&gt;Bimodules&lt;/h2&gt;
 
@@ -416,6 +469,7 @@ We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=
 &lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’. I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in #math.CT:matrix.org. What follows are some things that I learnt (mostly from [BD86]).</summary></entry><entry><title type="html">CT2019</title><link href="https://thosgood.github.io/blog/2019/07/13/ct2019.html" rel="alternate" type="text/html" title="CT2019" /><published>2019-07-13T00:00:00+00:00</published><updated>2019-07-13T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/07/13/ct2019</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/07/13/ct2019.html">&lt;p&gt;I have just come back from CT2019 in Edinburgh, and it was a fantastic week. There were a bunch of really interesting talks, and I had a chance to meet some lovely people. I also got to tell people about &lt;a href=&quot;https://www.matrix.to/#/#math.CT:matrix.org&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#math.CT:matrix.org&lt;/code&gt;&lt;/a&gt;, and so hopefully that will start to pick up in the not-too-distant future.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;In no particular order, and with many glaring omissions, here are the slides from some of the talks that I really enjoyed:&lt;/p&gt;
 
@@ -432,6 +486,7 @@ We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=
 I am even less knowledgeable about birds than I am about maths, but I do love them, and this was the first time in my life that I’d actually seen a puffin in the flesh!&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;I am from North Devon, and just off the coast there is a small island called &lt;a href=&quot;https://en.wikipedia.org/wiki/Lundy&quot;&gt;Lundy&lt;/a&gt;, which has a very interesting history, but is also famous for being the home to one of the few Atlantic puffin colonies in the British Isles.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
 In the last few decades, sadly, the number of breeding pairs of puffins has been in sharp decline, and when I went over there about 10 years ago I didn’t see a single one.
@@ -476,6 +531,7 @@ It swims away from the shore and does not return to land for several years.&lt;/
 &lt;p&gt;This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; I will shamelessly refer the interested reader to &lt;del&gt;some notes I wrote a while back&lt;/del&gt;. (update: these notes have been subsumed into my PhD thesis)&lt;/p&gt;
 
@@ -522,6 +578,7 @@ Due to my innate fear of all things differentially geometric, I often prefer wor
 Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that &lt;em&gt;‘affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation’&lt;/em&gt;,&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; which makes a nice short topic of discussion, whence this post.&lt;/p&gt;
 
 &lt;!--more--&gt;
+&lt;hr /&gt;
 
 &lt;p&gt;We briefly&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; recall the definition of a principal $G$-bundle over a space $X$, where $G$ is some &lt;em&gt;topological&lt;/em&gt; group.&lt;/p&gt;
 
@@ -579,132 +636,4 @@ Here are some nice examples.&lt;/p&gt;
       &lt;p&gt;In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can’t think of that means ‘self-containedness’ but is actually a real word/phrase?) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry><entry><title type="html">Localisation and model categories</title><link href="https://thosgood.github.io/blog/2018/08/25/localisation-and-model-categories-part-1.html" rel="alternate" type="text/html" title="Localisation and model categories" /><published>2018-08-25T00:00:00+00:00</published><updated>2018-08-25T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/08/25/localisation-and-model-categories-part-1</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/08/25/localisation-and-model-categories-part-1.html">&lt;p&gt;After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together.
-There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;p&gt;&lt;em&gt;Notational note:&lt;/em&gt; we write $\mathcal{C}(x,y)$ instead of $\mathrm{Hom}_\mathcal{C}(x,y)$.&lt;/p&gt;
-
-&lt;h2 id=&quot;localisation-of-categories&quot;&gt;Localisation of categories&lt;/h2&gt;
-
-&lt;p&gt;Let $(\mathcal{C},\mathcal{W})$ be a pair, with $\mathcal{C}$ a category and $\mathcal{W}$ a wide subcategory (that is, a subcategory containing all the objects of $\mathcal{C}$, or, equivalently, a set of morphisms in $\mathcal{C}$).
-This data is known as a &lt;em&gt;relative category&lt;/em&gt;, which is a weaker version of a category with weak equivalences, or a homotopical category, or other such notions.&lt;/p&gt;
-
-&lt;p&gt;Often we want to &lt;em&gt;localise&lt;/em&gt; $\mathcal{C}$ along $\mathcal{W}$, i.e. ‘formally invert all morphisms in $\mathcal{W}$’.
-A nice way of making this rigorous is by defining the localisation $\mathcal{C}[\mathcal{W}^{-1}]$ (also written $\operatorname{Ho}(\mathcal{C})$ or $W^{-1}\mathcal{C}$)&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; by a universal property:&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{array}{lcr}
-    \mathcal{C} &amp; \xrightarrow{\mathcal{W}\,\mapsto\,\text{iso}_\mathcal{D}} &amp; \mathcal{D}\\
-    \quad\searrow &amp; &amp; \nearrow_{\exists!}\\
-    &amp; \mathcal{C}[\mathcal{W}^{-1}] &amp;
-\end{array} %]]&gt;&lt;/script&gt;
-
-&lt;p&gt;That is, any category (along with a functor into it) such that all morphisms in $\mathcal{W}$ become isomorphisms &lt;em&gt;must&lt;/em&gt; factor &lt;em&gt;uniquely&lt;/em&gt; through $\mathcal{C}[\mathcal{W}^{-1}]$.&lt;/p&gt;
-
-&lt;p&gt;Since our definition is in terms of a universal property, &lt;strong&gt;if&lt;/strong&gt; the localisation of a category exists then it is unique.&lt;/p&gt;
-
-&lt;h3 id=&quot;gabriel-zisman&quot;&gt;Gabriel-Zisman&lt;/h3&gt;
-
-&lt;p&gt;There is a reasonably concrete way of constructing the localisation that is called &lt;em&gt;Gabriel-Zisman&lt;/em&gt; (or sometimes &lt;em&gt;zigzag&lt;/em&gt;) &lt;em&gt;localisation&lt;/em&gt;.
-It has a few issues, which we discuss below, after giving a definition.
-This is the localisation that most people will first study in the case of constructing the derived category of complexes, or some other such example, in a course on homological algebra or algebraic geometry.&lt;/p&gt;
-
-&lt;p&gt;We define the objects of $\mathcal{C}[\mathcal{W}^{-1}]$ to be those of $\mathcal{C}$, and the morphisms to be &lt;em&gt;zigzags&lt;/em&gt; of morphisms: a morphism $x\to y$ is given by a directed graph whose vertices are objects of $\mathcal{C}$, and whose edges are labelled by arrows in $\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})$, &lt;strong&gt;modulo certain equivalence relations&lt;/strong&gt;.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
-That is, a morphism from $x=a_0$ to $y=a_{n+1}$ is given by a string of objects $a_1,\ldots,a_n\in\mathcal{C}$ with maps between them: either a map $a_i\to a_{i+1}$ in $\mathcal{C}$, or a map $a_i\leftarrow a_{i+1}$ in $\mathcal{W}$.&lt;/p&gt;
-
-&lt;p&gt;Note that, if $\mathcal{W}$ contains all identity maps (for example), then we can always insert identity maps in our zigzags to ensure that they are always of the form $f_1g_1\ldots f_ng_n$ with $f_i\in\operatorname{Arr}(\mathcal{C})$ and $g_i\in\operatorname{Arr}(\mathcal{W}^\text{op})$.&lt;/p&gt;
-
-&lt;p&gt;As you can see, arbitrary morphisms in this category can be unreasonably large (in terms of the data describing them), and so we might hope that, by placing some conditions on $\mathcal{W}$, we can globally bound the length of the zigzags.
-If fact, if $\mathcal{W}$ is a &lt;em&gt;&lt;a href=&quot;https://ncatlab.org/nlab/show/calculus+of+fractions#definition&quot;&gt;calculus of fractions&lt;/a&gt;&lt;/em&gt; then we can show that all the zigzags are actually just (co)roofs (depending on the handedness of the calculus of fractions):&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x\to a\xleftarrow{\small\mathcal{W}} y \quad\text{or}\quad x\xleftarrow{\small\mathcal{W}}a\to y.&lt;/script&gt;
-
-&lt;p&gt;Note that we &lt;strong&gt;still&lt;/strong&gt; have an equivalence relation: two morphisms $x\xleftarrow{\mathcal{W}}a\to y$ and $x\xleftarrow{\mathcal{W}}b\to y$ are equivalent if there exists some roof $a\xleftarrow{\mathcal{W}}e\to b$ such that ‘everything commutes’.&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-&lt;p&gt;One potential problem with this construction (depending on how much you care about these things) is that the localisation might live only in some bigger universe, and so you have to start worrying about that.&lt;/p&gt;
-
-&lt;h3 id=&quot;dwyer-kan&quot;&gt;Dwyer-Kan&lt;/h3&gt;
-
-&lt;p&gt;Of course, just constructing a category is not usually enough these days, and we instead want to give it some higher structure.
-Enter &lt;em&gt;Dwyer-Kan&lt;/em&gt; (or &lt;em&gt;simplicial&lt;/em&gt;) localisation.&lt;/p&gt;
-
-&lt;p&gt;This is a way of constructing an $(\infty,1)$-category $L_\mathcal{W}\mathcal{C}$, realised as a &lt;em&gt;simplicial category&lt;/em&gt;.
-We talk more about simplicial categories later on, but first we quote Julia E. Bergner from &lt;a href=&quot;https://arxiv.org/abs/math/0406507&quot;&gt;“A model category structure on the category of simplicial categories”&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets.&lt;/em&gt;
-&lt;em&gt;If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$.&lt;/em&gt;
-&lt;em&gt;This notion is more restrictive than that of a simplicial object in the category of categories.&lt;/em&gt;
-&lt;em&gt;Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;First of all, note that we now require that $(\mathcal{C},\mathcal{W})$ be a &lt;em&gt;category with weak equivalences&lt;/em&gt;: all isomorphisms are in $\mathcal{W}$, and if any two of ${f,g,g\circ f}$ are in $\mathcal{W}$ then so too is the third.
-For example, any model category or homotopical category is automatically a category with weak equivalences.&lt;/p&gt;
-
-&lt;p&gt;Now then, the definition by universal property is (modulo some technical $\infty$-details) what you would expect: $L_\mathcal{W}\mathcal{C}$ is an $(\infty,1)$-category such that $\mathcal{C}$ injects into $L_\mathcal{W}\mathcal{C}$ with every morphism in $\mathcal{W}$ becoming an equivalence (in the $(\infty,1)$-sense) in $L_\mathcal{W}\mathcal{C}$, and such that any other such $(\infty,1)$-category factors ‘uniquely’ through this.&lt;/p&gt;
-
-&lt;p&gt;One such way of constructing this localisation is by &lt;em&gt;hammock localisation&lt;/em&gt;.
-For any $x,y\in\mathcal{C}$ we define their $\mathrm{Hom}$ as the simplicial set $L^\mathrm{H}(x,y)$ given by&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;L^\mathrm{H}(x,y) := \coprod_{n\in\mathbb{N}}\mathcal{N}(\operatorname{H}_n(x,y))/\sim&lt;/script&gt;
-
-&lt;p&gt;where $\mathcal{N}$ is the nerve (which sends a category to a simplicial set), and both the categories $\operatorname{H}_n(x,y)$ and the equivalence relation $\sim$ remain to be defined.&lt;/p&gt;
-
-&lt;p&gt;For each $n\in\mathbb{N}$ the category $\operatorname{H}_n(x,y)$ has objects being length-$n$ zigzags, as in Gabriel-Zisman localisation&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;, and the morphisms are ‘hammocks’&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{array}{ccccccccc}
-    &amp;&amp;a_1&amp;\to&amp;a_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;a_n&amp;\\
-    &amp;^{\small\mathcal{W}}\swarrow&amp;&amp;&amp;&amp;&amp;&amp;\searrow\\
-    x&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;\ldots&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;y\\
-    &amp;_{\small\mathcal{W}}\nwarrow&amp;&amp;&amp;&amp;&amp;&amp;\nearrow\\
-    &amp;&amp;b_1&amp;\to&amp;b_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;b_n&amp;
-\end{array} %]]&gt;&lt;/script&gt;
-
-&lt;p&gt;i.e. commutative diagrams of zigzags, where the ‘linking’ arrows are all in $\mathcal{W}$.
-The equivalence relations are the ‘natural’ ones: we can insert or remove identity maps, and compose any composable morphisms.&lt;/p&gt;
-
-&lt;h3 id=&quot;comparison&quot;&gt;Comparison&lt;/h3&gt;
-
-&lt;p&gt;Now then, we can ask how this ‘new’ localisation is related to the ‘old’ one, and we can answer this question with the following lemma.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\pi_0(L_\mathcal{W}\mathcal{C}(x,y))\simeq\mathcal{C}[\mathcal{W}^{-1}]$.&lt;/p&gt;
-
-&lt;p&gt;For this post, that’s it, but my next post will talk about how we can extend these ideas to localise &lt;em&gt;quasi-categories&lt;/em&gt;, and how the Bergner model structure on simplicial categories comes into the story.
-This will, in particular, let us formalise the fact that taking the homotopy category of a category (whenever this makes sense, e.g. for quasi-categories) is somehow equivalent to localising the category along weak equivalences.
-The lemma that we’ll look at is the following (where we’ve yet to define the right-hand side).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; $\mathcal{C}[\mathcal{W}^{-1}]\simeq\mathrm{h}L\mathcal{C}$.&lt;/p&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Julia E. Bergner, “A model category structure on the category of simplicial categories”, &lt;a href=&quot;https://arxiv.org/abs/math/0406507&quot;&gt;arXiv:math/0406507&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;V. Hinich, “Dwyer-Kan localization revisited”, &lt;a href=&quot;https://arxiv.org/abs/1311.4128&quot;&gt;arXiv:1311.4128&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;W.G. Dwyer and D.M. Kan, “Calculating simplicial localizations”, &lt;a href=&quot;https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf&quot;&gt;&lt;em&gt;available online&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Pierre Gabriel, Michel Zisman, “Calculus of Fractions and Homotopy Theory”, &lt;a href=&quot;http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf&quot;&gt;&lt;em&gt;available online&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;There are so many things that ‘homotopy category’ or ‘$\operatorname{Ho}(\mathcal{C})$’ or ‘$\operatorname{h}(\mathcal{C})$’ can mean, so the context is always very important &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;This diagram is horribly formatted. I am lost without &lt;code class=&quot;highlighter-rouge&quot;&gt;tikz-cd&lt;/code&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;These are just to ensure that composition and the identity morphism behave as expected. See &lt;a href=&quot;https://ncatlab.org/nlab/show/localization#general_construction&quot;&gt;the nLab&lt;/a&gt; for details. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;I think of the diagram you want to show commutes as a tiny house of cards, two layers high. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot;&gt;
-      &lt;p&gt;But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><category term="homotopy-theory" /><summary type="html">After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together. There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $G$-torsors, where $G$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry></feed>

@@ -186,6 +186,8 @@ ol.post-toc { list-style-type: upper-roman; }
 
 .post-content img.centred { display: block; margin-left: auto; margin-right: auto; }
 
+.post-content hr { margin: 15px 0; }
+
 /** Images */
 .rounded-image { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 

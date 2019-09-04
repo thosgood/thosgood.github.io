@@ -10,15 +10,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Tim Hosgood — Twisting cochains and twisted complexes</title>
+  <title>Tim Hosgood — Everything is Stokes&#39;; everything is coend</title>
 
 
-  <meta name="description" content="This week was the Young Topologists Meeting at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology...">
+  <meta name="description" content="For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. ...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" >
-  <link rel="canonical" href="https://thosgood.github.io/blog/2019/07/26/twisting-cochains-and-twisted-complexes.html">
+  <link rel="canonical" href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">
   <link rel="alternate" type="application/rss+xml" title="Tim Hosgood" href="/feed.xml">
 
 
@@ -269,11 +269,11 @@
     <hr>
 
 
-    <h1 class="post-title" itemprop="name headline">Twisting cochains and twisted complexes</h1>
+    <h1 class="post-title" itemprop="name headline">Everything is Stokes&#39;; everything is coend</h1>
         
-    <p><time class="post-date" datetime="2019-07-26T00:00:00+00:00" itemprop="datePublished">
+    <p><time class="post-date" datetime="2019-09-04T00:00:00+00:00" itemprop="datePublished">
       
-      26 July, 2019
+       4 September, 2019
     </time></p>
 
   </header>
@@ -284,14 +284,55 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p>This week was the <a href="https://ytm2019.epfl.ch">Young Topologists Meeting</a> at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides on my GitHub <a href="https://github.com/thosgood/papers/blob/master/twisting-cochains-YTM19/twisting-cochains-YTM19-handout.pdf">here</a>.</p>
+    <p>For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.</p>
 
 <!--more-->
 <hr />
 
-<p>One talk that I really liked was <a href="http://math.ucalgary.ca/math_unitis/profiles/1-7046986">Rachel Hardeman</a>’s introduction to A-homotopy theory, which is a really interesting way of describing the homotopy of graphs — whereas, with classical homotopy theory, all cyclic graphs are equivalent, in A-homotopy theory, you can distinguish between them. In particular, $C_n$ is only contractible for $n\leqslant4$. You can read more about this in <a href="https://arxiv.org/abs/1904.12065">her paper on the arXiv</a>.</p>
+<p>Today, <a href="https://twitter.com/ququ7"><code class="highlighter-rouge">@ququ7</code></a> tweeted/twote/twut that, <a href="https://twitter.com/ququ7/status/1169048827703287814">a few years back, Tim Campion had told him how Stokes’ theorem is a result about coends</a>. All I want to do here is share this great little snippet, but I won’t be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!</p>
 
-<p>Also really great one was <a href="http://pi.math.cornell.edu/~maru/index.html">Maru Sarazola</a>’s talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don’t think she currently has notes for this stuff typed up anywhere, but (from what I gather) it’s in the works!</p>
+<p>Here’s the idea. We look at $\mathbb{N}$ as a poset, the category $\mathsf{Vect}_\mathbb{R}$ of real-vector spaces, and fix some manifold $X$. Then we have two pretty standard functors.</p>
+
+<p>Firstly, we have $C^X:\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the free vector space $C_n=\langle\varphi\colon Y\to X\rangle_\mathbb{R}$, where $\varphi\colon Y\to X$ are smooth maps from compact, $n$-dimensional, oriented manifolds $Y$ with boundary, and acts on morphisms by sending $n\to n+1$ to the map $\partial\colon C_{n+1}\to C_n$, given by taking the boundaries of our manifolds $Y$.</p>
+
+<p>Secondly, there is the de Rham functor $\Omega_X\colon\mathbb{N}\to\mathsf{Vect}_\mathbb{R}$, which sends $n\in\mathbb{N}$ to the space $\Omega_X^n$ of smooth $n$-forms on $X$, and sends $n\to n+1$ to the exterior derivative $\mathrm{d}\colon\Omega_X^n\to\Omega_X^{n+1}$.</p>
+
+<p>Now we use the usual tensor product on $\mathsf{Vect}_\mathbb{R}$ to get a functor</p>
+
+<script type="math/tex; mode=display">C^X\otimes\Omega_X\colon\mathbb{N}\times\mathbb{N}^\mathrm{op}\to\mathsf{Vect}_\mathbb{R}.</script>
+
+<p>We claim that we can make $C^X\otimes\Omega_X\to\mathbb{R}$ into a <strong>cowedge</strong>, i.e. that, for all $n\in\mathbb{N}$, we can find morphisms</p>
+
+<script type="math/tex; mode=display">w_n\colon C_n^X\otimes\Omega_X^n\to\mathbb{R}</script>
+
+<p>such that, for any $f\colon m\to n$ (and here we can restrict to $m\to m+1$, since these are the morphisms in $\mathbb{N}$ that generate all the others (that aren’t the identity)), the square</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{rcl}
+    C_{m+1}^X\otimes\Omega_X^m & \xrightarrow{\partial\,\otimes\,1} & C_m^X\otimes\Omega_X^m\\
+    {\scriptstyle 1\,\otimes\,\mathrm{d}}\bigg\downarrow && \bigg\downarrow{\scriptstyle w_m}\\
+    C_{m+1}^X\otimes\Omega_X^{m+1} & \xrightarrow{w_{m+1}} & \mathbb{R}
+\end{array} %]]></script>
+
+<p>commutes.</p>
+
+<p>The surprising fact, then, is that Stokes’ theorem tells us that taking $w_n$ to be defined by</p>
+
+<script type="math/tex; mode=display">\int\colon(\varphi\colon Y\to X)\otimes\omega \mapsto \int_Y \varphi^*\omega</script>
+
+<p>gives us exactly what we want. Indeed, Stokes’ theorem (in some form) says that</p>
+
+<script type="math/tex; mode=display">\int_{\partial Z}\tau=\int_Z \mathrm{d}\tau</script>
+
+<p>and, since pullbacks commute with $\mathrm{d}$, when we replace $\tau$ with $\varphi^*\omega$, we get that the above square commutes. Neat!</p>
+
+<p>What is not entirely clear to me, however, is if this is really a fact about <em>coends</em>, since then we would need to show that this cowedge is universal. This is something for me to think about the next time I’m bored on the tram.</p>
+
+<hr />
+
+<p>All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace $C_n$ by <em>singular</em> cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what <a href="https://twitter.com/littmath">Daniel Litt</a> pointed out <a href="https://twitter.com/littmath/status/1169081052100530177">in a reply</a>).</p>
+
+<p>One other question that I do have is the following: is there something to be gained by writing $C_X$ as the functor represented by $X$, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!</p>
 
     
   </div>
@@ -308,15 +349,7 @@
       <ul class="tag-list">
 
         
-          <li><a href="/tag/differential-geometry"><nobr>differential-geometry</nobr></a></li>
-        
-          <li><a href="/tag/complex-geometry"><nobr>complex-geometry</nobr></a></li>
-        
-          <li><a href="/tag/algebraic-topology"><nobr>algebraic-topology</nobr></a></li>
-        
           <li><a href="/tag/category-theory"><nobr>category-theory</nobr></a></li>
-        
-          <li><a href="/tag/homotopy-theory"><nobr>homotopy-theory</nobr></a></li>
         
 
       </ul>
