@@ -126,4 +126,4 @@ and this somehow looks like a coend, but I have no idea (nor, really, the time (
 # Footnotes
 
 [^1]: That is, a cocomplete monoidal category $$\mathcal{V}$$ such that $$\otimes\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}$$ is cocontinuous in each variable.
-[^2]: §4.1 in [_Under $$\mathrm{Spec}\mathbb{Z}$$. A reader's companion._](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!
+[^2]: §4.1 in [Under $$\operatorname{Spec}\mathbb{Z}$$. A reader's companion.](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!
