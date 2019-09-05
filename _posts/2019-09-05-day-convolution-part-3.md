@@ -70,7 +70,7 @@ or, if you _really_ like tensor-product notation more than coend notation, by
 
 $$(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(-\otimes-).$$
 
-As I already mentioned in my [post about profunctors]({{ site.baseurl }}{% post_url 2019-07-14-cauchy-completion-and-profunctors %}), there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category _itself_ is the 'free cocompletion' of the original category. There are a bunch of ways of explaining what this means, but my favourite 'proof' is using Day convolution, the co-Yoneda lemma, and the fact that the Yoneda embedding $$よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$$ is **monoidal**:
+As I already mentioned in my [post about profunctors]({{ site.baseurl }}{% post_url 2019-07-14-cauchy-completion-and-profunctors %}), there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category _itself_ is the 'free cocompletion' of the original category. There are a bunch of ways of explaining what this means, but my favourite 'proof' is using Day convolution and the co-Yoneda lemma, to show that the Yoneda embedding $$よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$$ is **monoidal**:
 
 $$\begin{aligned}
     &\big( \operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \big)(c)\\
@@ -83,7 +83,13 @@ where the first isomorphism is by definition, and the last two are by co-Yoneda.
 
 $$\operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \cong \operatorname{Hom}_\mathcal{C}(-,x\otimes x').$$
 
-Here we can think of $$\widehat{\mathcal{C}}$$ as being **enriched** if we want: we can work with $$\mathcal{V}$$-valued presheaves instead of $$\mathsf{Set}$$-valued ones.
+That is, _the Yoneda embedding is a (strong) monoidal functor_
+
+$$(\mathcal{C},\otimes_\mathcal{C},I)\hookrightarrow(\widehat{\mathcal{C}},*,よ(I)).$$
+
+Further, if $$\mathcal{C}$$ is small, then there is an internal hom on $$\widehat{\mathcal{C}}$$ which makes it _closed_.
+
+Finally, as a fun little fact, which I used at some point in one of my masters theses,[^2] whenever $$\mathcal{C}$$ is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from $$\mathcal{C}$$ to $$\mathcal{V}$$.
 
 ### Monoid algebra
 
@@ -120,3 +126,4 @@ and this somehow looks like a coend, but I have no idea (nor, really, the time (
 # Footnotes
 
 [^1]: That is, a cocomplete monoidal category $$\mathcal{V}$$ such that $$\otimes\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}$$ is cocontinuous in each variable.
+[^2]: §4.1 in [_Under $$\mathrm{Spec}\mathbb{Z}$$. A reader's companion._](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!
