@@ -46,13 +46,15 @@ $$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)$$
 
 (although we don't really care so much about this post).
 
+**Update: we talk about this a bit more in [this post]({{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %}).**
+
 ### Yoneda
 
 Every functor $$F\colon\mathcal{C}\to\mathcal{D}$$ gives a profunctor $$F^*\colon\mathcal{C}\nrightarrow\mathcal{D}$$ by setting
 
 $$F^*(d,c) = \mathcal{D}(d,Fc),$$
 
-and $$F^\*$$ has a right adjoint $$F_*\colon\mathcal{D}\nrightarrow\mathcal{C}$$ given by
+and $$F^*$$ has a right adjoint $$F_*\colon\mathcal{D}\nrightarrow\mathcal{C}$$ given by
 
 $$F_*(c,d) = \mathcal{D}(Fc,d),$$
 
@@ -63,7 +65,7 @@ Then the Yoneda embedding is the inclusion
 
 $$\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})$$
 
-given by $$F\mapsto F^\*$$.
+given by $$F\mapsto F^*$$.
 
 ### Recovering functors
 
@@ -111,6 +113,6 @@ We recover the idea of a **Mealy morphism**.[^6]
 [^1]: $$x\cdot_{R^{\text{op}}}y:=y\cdot_R x$$.
 [^2]: To construct $$\mathcal{C}^{\text{op}}$$ we need $$V$$ to be braided; to be able to compose bimodules we need cocompleteness of $$V$$, with $$\otimes$$ cocontinuous in both arguments, etc.
 [^3]: That is, preserves all (small) colimits.
-[^4]: That is, of the form $$F^\*$$ for some functor $$F\colon\mathcal{C}\to\mathcal{D}$$.
+[^4]: That is, of the form $$F^*$$ for some functor $$F\colon\mathcal{C}\to\mathcal{D}$$.
 [^5]: If you prefer more of an article-style thing to slides then take a look at the [pre-proceedings](http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf) from ACT2019.
 [^6]: Thanks again to Bryce Clarke for [answering this question](https://twitter.com/8ryceClarke/status/1150434205031161864).

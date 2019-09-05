@@ -26,7 +26,7 @@ But we do have the following lemma (from Mike's talk).
 
 **Lemma.** For any $$Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$$ there is a strict $$\mathcal{C}^{\mathbb{D}}Y$$ and a bijection between pseudonatural $$X\rightsquigarrow Y$$ and strict $$X\to\mathcal{C}^{\mathbb{D}}Y$$.
 
-**Proof**. Almost by definition: a pseudonatural $$X\rightsquigarrow Y$$ assigns to each $$x\in X(d)$$ some image $$f_x(x)\in Y(d)$$ along with an isomorphism $$\gamma^\*(f_x(x))\cong f_{x'}(\gamma^\*(x))$$ for all $$\gamma\colon x\to x'$$ in $$\mathbb{D}$$, and this isomorphism satisfies a coherence condition.
+**Proof**. Almost by definition: a pseudonatural $$X\rightsquigarrow Y$$ assigns to each $$x\in X(d)$$ some image $$f_x(x)\in Y(d)$$ along with an isomorphism $$\gamma^*(f_x(x))\cong f_{x'}(\gamma^*(x))$$ for all $$\gamma\colon x\to x'$$ in $$\mathbb{D}$$, and this isomorphism satisfies a coherence condition.
 So we just define $$\mathcal{C}^{\mathbb{D}}Y(d)$$ to consist of all this data.
 
 There is then a lovely theory of _coflexible_ objects, which are those $$Y$$ such that the canonical morphism $$Y\to\mathcal{C}^{\mathbb{D}}Y$$ has a strict retraction.

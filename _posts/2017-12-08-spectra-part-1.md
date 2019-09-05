@@ -55,7 +55,7 @@ It would be tantamount to a crime to not put in any pictures here, so below are 
 
 **INSERT PICTURES**
 
-In fact, $$\mathsf{Top}_\*$$ is a *closed* symmetric monoidal category:[^2] we have the adjunction $$(\wedge\dashv\mathsf{Top}_*)$$, and thus the natural isomorphism
+In fact, $$\mathsf{Top}_*$$ is a *closed* symmetric monoidal category:[^2] we have the adjunction $$(\wedge\dashv\mathsf{Top}_*)$$, and thus the natural isomorphism
 
 $$\mathsf{Top}_*(X\wedge Y, Z)\cong\mathsf{Top}_*(X,\mathsf{Top}_*(Y,Z)).$$
 
