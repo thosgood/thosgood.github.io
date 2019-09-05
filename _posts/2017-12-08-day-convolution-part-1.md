@@ -33,7 +33,7 @@ here, except any mistakes.*
 We start by rephrasing what it means for an object to be the limit of a functor
 in terms of representable presheaves.
 
-### Part 1
+### For sets
 
 Let $$F\colon I^\mathrm{op}\to\mathsf{Set}$$ be a presheaf on a small category
 $$I$$. Then the limit of $$F$$ over $$I$$ is the hom-set
@@ -49,7 +49,7 @@ $$\mathrm{Hom}_{\mathsf{Set}}(S,\lim_I F) \cong \lim_I\mathrm{Hom}_{\mathsf{Set}
 
 for any set $$S$$.
 
-### Part 2
+### For small categories
 
 If we now find ourselves in the more general case of having a functor 
 $$F\colon I^\mathrm{op}\to\mathcal{C}$$ for some arbitrary (small) category
