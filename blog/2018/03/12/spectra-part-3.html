@@ -13,7 +13,7 @@
   <title>Tim Hosgood — Loop spaces, spectra, and operads (Part 3)</title>
 
 
-  <meta name="description" content="[See part 1 here and part 2 here] This post is a weird one: it’s not really aimed at any one audience, but is more of a dump of a bunch of information that I...">
+  <meta name="description" content="[Part 1, Part 2] This post is a weird one: it’s not really aimed at any one audience, but is more of a dump of a bunch of information that I’m trying to proc...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -264,7 +264,7 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p><em>[See part 1 <a href="/blog/2017/12/08/spectra-part-1.html">here</a> and part 2 <a href="/blog/2017/12/11/spectra-part-2.html">here</a>]</em></p>
+    <p><em>[<a href="/blog/2017/12/08/spectra-part-1.html">Part 1</a>, <a href="/blog/2017/12/11/spectra-part-2.html">Part 2</a>]</em></p>
 
 <p>This post is a weird one: it’s not really aimed at any one audience, but is more of a dump of a bunch of information that I’m trying to process.</p>
 
@@ -291,10 +291,10 @@ Just to save you from finding his exact definition, I paraphrase it here.</p>
 <p><strong>Definition.</strong> A <strong>non-<script type="math/tex">\Sigma</script>-operad</strong> is a <script type="math/tex">\mathsf{Top}</script>-enriched category <script type="math/tex">\mathcal{A}</script> with objects in bijection with <script type="math/tex">\mathbb{N}=\{0,1,\ldots\}</script>, along with an associative continuous bifunctor <script type="math/tex">\oplus\colon\mathcal{A}\times\mathcal{A}\to\mathcal{A}</script> given on objects by <script type="math/tex">m\oplus n=m+n</script>, and such that, for all <script type="math/tex">k</script> and <script type="math/tex">n</script>, the morphism</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
+\begin{aligned}
     \coprod_{n=\Sigma r_i} \mathcal{A}(r_1,1)\times\ldots\times\mathcal{A}(r_k,1) &\to \mathcal{A}(n,k)\\
     (f_1,\ldots,f_k) &\mapsto f_1\oplus\ldots\oplus f_k
-\end{align*} %]]></script>
+\end{aligned} %]]></script>
 
 <p>is a homeomorphism.</p>
 
@@ -400,7 +400,7 @@ If this is the case, then we call a <script type="math/tex">\mathcal{B}</script>
 <p><strong>Warning.</strong> <em>What follows is nothing more than a sketch of an elephant by a blind man.</em></p>
 
 <p>Again, there is an important note about names and notation.
-What is commonly known as the <strong>associative operad</strong> <script type="math/tex">\mathrm{Assoc}</script> is referred to as <script type="math/tex">\mathcal{A}</script> in Vogt, and what is now called <script type="math/tex">\mathcal{A}\_\infty</script> is called <script type="math/tex">\mathcal{W}\mathcal{A}</script> in Vogt, because he constructs it as a ‘homotopy universal <script type="math/tex">A_\infty</script> operad’ from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+What is commonly known as the <strong>associative operad</strong> <script type="math/tex">\mathrm{Assoc}</script> is referred to as <script type="math/tex">\mathcal{A}</script> in Vogt, and what is now called <script type="math/tex">\mathcal{A}_\infty</script> is called <script type="math/tex">\mathcal{W}\mathcal{A}</script> in Vogt, because he constructs it as a ‘homotopy universal <script type="math/tex">A_\infty</script> operad’ from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
 In fact, there is the idea of <a href="https://ncatlab.org/nlab/show/Boardman-Vogt+resolution">Boardman-Vogt resolution</a>, which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of <script type="math/tex">\mathrm{Assoc}</script>, i.e. a cofibrant replacement:</p>
 
 <script type="math/tex; mode=display">\mathcal{A}_\infty\to\mathrm{Assoc}.</script>

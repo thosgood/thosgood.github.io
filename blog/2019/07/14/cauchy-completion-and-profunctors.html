@@ -320,13 +320,15 @@ We can define their compositions via colimits or coends:</p>
 
 <p>(although we don’t really care so much about this post).</p>
 
+<p><strong>Update: we talk about this a bit more in <a href="/blog/2019/09/05/day-convolution-part-3.html">this post</a>.</strong></p>
+
 <h3 id="yoneda">Yoneda</h3>
 
 <p>Every functor <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script> gives a profunctor <script type="math/tex">F^*\colon\mathcal{C}\nrightarrow\mathcal{D}</script> by setting</p>
 
 <script type="math/tex; mode=display">F^*(d,c) = \mathcal{D}(d,Fc),</script>
 
-<p>and <script type="math/tex">F^\*</script> has a right adjoint <script type="math/tex">F_*\colon\mathcal{D}\nrightarrow\mathcal{C}</script> given by</p>
+<p>and <script type="math/tex">F^*</script> has a right adjoint <script type="math/tex">F_*\colon\mathcal{D}\nrightarrow\mathcal{C}</script> given by</p>
 
 <script type="math/tex; mode=display">F_*(c,d) = \mathcal{D}(Fc,d),</script>
 
@@ -337,7 +339,7 @@ Then the Yoneda embedding is the inclusion</p>
 
 <script type="math/tex; mode=display">\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})</script>
 
-<p>given by <script type="math/tex">F\mapsto F^\*</script>.</p>
+<p>given by <script type="math/tex">F\mapsto F^*</script>.</p>
 
 <h3 id="recovering-functors">Recovering functors</h3>
 
@@ -393,7 +395,7 @@ We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a hr
       <p>To construct <script type="math/tex">\mathcal{C}^{\text{op}}</script> we need <script type="math/tex">V</script> to be braided; to be able to compose bimodules we need cocompleteness of <script type="math/tex">V</script>, with <script type="math/tex">\otimes</script> cocontinuous in both arguments, etc. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>That is, of the form <script type="math/tex">F^\*</script> for some functor <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>That is, of the form <script type="math/tex">F^*</script> for some functor <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
       <p>That is, preserves all (small) colimits. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>

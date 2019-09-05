@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-04T21:30:17+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Everything is Stokes’; everything is coend</title><link href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html" rel="alternate" type="text/html" title="Everything is Stokes'; everything is coend" /><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/04/stokes-coend</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">&lt;p&gt;For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-05T00:08:11+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Weighted limits, ends, and Day convolution</title><link href="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html" rel="alternate" type="text/html" title="Weighted limits, ends, and Day convolution" /><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html">&lt;p&gt;&lt;em&gt;[&lt;a href=&quot;/blog/2017/12/08/day-convolution-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;/blog/2018/02/15/day-convolution-part-2.html&quot;&gt;Part 2&lt;/a&gt;]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, I find myself with enough motivation to start writing the last part to this series. It’s been a while, but hopefully nobody has actually been waiting… This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I’ve got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes’ theorem, which I found pretty neat indeed — more details can be found in &lt;a href=&quot;/blog/2019/09/04/stokes-coend.html&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;For a refresher on all the definitions, you can check out the two previous parts in this series (the links are at the top), because we’re just going to dive right in.&lt;/p&gt;
+
+&lt;h2 id=&quot;tensor-products&quot;&gt;Tensor products&lt;/h2&gt;
+
+&lt;p&gt;Let &lt;script type=&quot;math/tex&quot;&gt;\colon\mathcal{C}^\mathrm{op}\to\mathcal{D}&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt; be &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-functors. Then we define their &lt;em&gt;tensor product&lt;/em&gt; to be, &lt;strong&gt;if it exists&lt;/strong&gt;, the coend&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F\otimes_\mathcal{C}G = \int^{c\in\mathcal{C}}F(c)\otimes G(c).&lt;/script&gt;
+
+&lt;p&gt;As before, we have a non-enriched definition: whenever &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; has &lt;strong&gt;all coproducts&lt;/strong&gt;, we can define&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F\otimes_\mathcal{C}G = \int^{c\in\mathcal{C}}F(c)\cdot G(c)&lt;/script&gt;
+
+&lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;S\cdot d=\coprod_{s\in S}d&lt;/script&gt; for any set &lt;script type=&quot;math/tex&quot;&gt;S&lt;/script&gt; and any object &lt;script type=&quot;math/tex&quot;&gt;d\in D&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Consider a ring &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt; as a one-object &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Ab}&lt;/script&gt;-enriched. Then a right &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module gives an additive functor &lt;script type=&quot;math/tex&quot;&gt;R^\mathrm{op}\to\mathsf{Ab}&lt;/script&gt;, and a left &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module gives an additive functor &lt;script type=&quot;math/tex&quot;&gt;R\to\mathsf{Ab}&lt;/script&gt;. Then their tensor product, as &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Ab}&lt;/script&gt;-enriched functors, coincides with their usual tensor product as &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-modules.&lt;/p&gt;
+
+    &lt;p&gt;This example is actually really linked to the theory of &lt;em&gt;profunctors&lt;/em&gt;, which we will talk about below, but have already talked about &lt;a href=&quot;/blog/2019/07/14/cauchy-completion-and-profunctors.html#categorically&quot;&gt;in a previous post&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The co-Yoneda lemma &lt;script type=&quot;math/tex&quot;&gt;F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c)&lt;/script&gt; can now just be written as&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;F\cong F\otimes_\mathcal{C}よ&lt;/script&gt;
+
+    &lt;p&gt;where &lt;script type=&quot;math/tex&quot;&gt;よ\colon\mathcal{C}\to\widehat{\mathcal{C}}&lt;/script&gt; is the Yoneda embedding.&lt;/p&gt;
+
+    &lt;p&gt;This lets us state the powerful adage, that “representable functors generalise free modules. To see what this might mean, we state the co-Yoneda lemma applied to a representable functor, as well as a basic theorem about tensor products of free modules, and leave the drawing of connections between the two to the interested reader:&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+      \operatorname{Hom}_\mathcal{C}(-,c)\otimes_\mathcal{C}F &amp;\cong F(c)\\
+      R^n\otimes_R M &amp;\cong M^n.
+  \end{aligned} %]]&gt;&lt;/script&gt;
+
+    &lt;p&gt;Suggestive, right?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Geometric realisation of a simplicial set &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; can also be expressed as a tensor product. If we write &lt;script type=&quot;math/tex&quot;&gt;\vert-\vert\colon\Delta\to\mathsf{Top}&lt;/script&gt; to mean the functor that sends &lt;script type=&quot;math/tex&quot;&gt;[n]&lt;/script&gt; to the topological &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-simplex, then we can write the geometric realisation &lt;script type=&quot;math/tex&quot;&gt;\vert X\vert&lt;/script&gt; of &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; as&lt;/p&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\vert X\vert\cong X\otimes_\Delta\vert-\vert.&lt;/script&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;day-convolution&quot;&gt;Day convolution&lt;/h2&gt;
+
+&lt;p&gt;As a motivation for the definition of Day convolution, we first recall the classical notion of convolution (albeit phrased in a more categorical language). Consider &lt;script type=&quot;math/tex&quot;&gt;\mathbb{N}&lt;/script&gt; as a &lt;strong&gt;discrete&lt;/strong&gt; category with addition as a monoidal product. Let &lt;script type=&quot;math/tex&quot;&gt;F,G\colon\mathbb{N}\to\mathsf{Set}&lt;/script&gt; be functors, which we can think of as &lt;em&gt;graded sets&lt;/em&gt;. Then their &lt;em&gt;convolution&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;(F*G)\colon\mathbb{N}\to\mathsf{Set}&lt;/script&gt; is defined by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+(F*G)(n) &amp;= \sum_{i+j=n} F(i)\otimes G(j)\\
+&amp;= \sum_{i,j=1}^n F(i)\otimes G(j)\otimes\operatorname{Hom}_\mathbb{N}(n,i+j)
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where the second equality follows from the fact that &lt;script type=&quot;math/tex&quot;&gt;\mathbb{N}&lt;/script&gt; is discrete. It might seem like an excessively abstract way of writing some Kronecker delta function, but it is exactly the thing that makes this definition easy to abstractify and generalise.&lt;/p&gt;
+
+&lt;p&gt;So now let &lt;script type=&quot;math/tex&quot;&gt;F,G\in\widehat{\mathcal{C}}=[\mathcal{C}^\mathrm{op},\mathcal{V}]=\mathsf{PrSh}_\mathcal{V}(\mathcal{C})&lt;/script&gt; (or whichever other notation you most like that says that &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; are &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-valued presheaves). Then we define their &lt;em&gt;Day convolution&lt;/em&gt; &lt;script type=&quot;math/tex&quot;&gt;(F*G)\in\widehat{\mathcal{C}}&lt;/script&gt; by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(F*G)(c) = \int^{x,x'\in\mathcal{C}} F(x)\otimes G(x')\otimes\operatorname{Hom}_\mathcal{C}(c,x\otimes x')&lt;/script&gt;
+
+&lt;p&gt;or, if you &lt;em&gt;really&lt;/em&gt; like tensor-product notation more than coend notation, by&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(-\otimes-).&lt;/script&gt;
+
+&lt;p&gt;As I already mentioned in my &lt;a href=&quot;/blog/2019/07/14/cauchy-completion-and-profunctors.html&quot;&gt;post about profunctors&lt;/a&gt;, there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category &lt;em&gt;itself&lt;/em&gt; is the ‘free cocompletion’ of the original category. There are a bunch of ways of explaining what this means, but my favourite ‘proof’ is using Day convolution, the co-Yoneda lemma, and the fact that the Yoneda embedding &lt;script type=&quot;math/tex&quot;&gt;よ\colon\mathcal{C}\to\widehat{\mathcal{C}}&lt;/script&gt; is &lt;strong&gt;monoidal&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+    &amp;\big( \operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \big)(c)\\
+    \cong &amp;\int^{y,y'\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(y',x')\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes y')\\
+    \cong &amp;\int^{y\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes x')\\
+    \cong &amp;\operatorname{Hom}_\mathcal{C}(c,x\otimes x')
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;where the first isomorphism is by definition, and the last two are by co-Yoneda. That is,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \cong \operatorname{Hom}_\mathcal{C}(-,x\otimes x').&lt;/script&gt;
+
+&lt;p&gt;Here we can think of &lt;script type=&quot;math/tex&quot;&gt;\widehat{\mathcal{C}}&lt;/script&gt; as being &lt;strong&gt;enriched&lt;/strong&gt; if we want: we can work with &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-valued presheaves instead of &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Set}&lt;/script&gt;-valued ones.&lt;/p&gt;
+
+&lt;h3 id=&quot;monoid-algebra&quot;&gt;Monoid algebra&lt;/h3&gt;
+
+&lt;p&gt;Remembering all that we’ve said above about free modules, and how Day convolution is basically the presheaf version of the tensor product from the original category, I would like to repeat some of what &lt;a href=&quot;http://web.science.mq.edu.au/~alexc/&quot;&gt;Alexander Campbell&lt;/a&gt; wrote in response to a &lt;a href=&quot;https://math.stackexchange.com/questions/1650786/day-convolution-intuition&quot;&gt;question I asked about Day convolution&lt;/a&gt; during the writing of my masters thesis.&lt;/p&gt;
+
+&lt;p&gt;There is a beautiful formal analogy between Day convolution and monoid algebra, which takes the following form:&lt;/p&gt;
+
+&lt;table class=&quot;bordered-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;monoid algebra&lt;/th&gt;
+      &lt;th&gt;Day convolution&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;set&lt;/td&gt;
+      &lt;td&gt;category&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;monoid&lt;/td&gt;
+      &lt;td&gt;monoidal category&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ring &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;monoidally cocomplete&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; category&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module&lt;/td&gt;
+      &lt;td&gt;cocomplete &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-category&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-algebra&lt;/td&gt;
+      &lt;td&gt;monoidally cocomplete &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-category&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;free &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module &lt;script type=&quot;math/tex&quot;&gt;R^{(X)}&lt;/script&gt; on a set &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;&lt;/td&gt;
+      &lt;td&gt;free cocomplete &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-category &lt;script type=&quot;math/tex&quot;&gt;\widehat{\mathcal{C}}&lt;/script&gt; on a category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;free &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module &lt;script type=&quot;math/tex&quot;&gt;R^{(X)}&lt;/script&gt; on a monoid &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; with the convolution product&lt;/td&gt;
+      &lt;td&gt;free monoidally cocomplete &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-category &lt;script type=&quot;math/tex&quot;&gt;\widehat{\mathcal{A}}&lt;/script&gt; on a monoidal category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; with Day convolution&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;profunctors&quot;&gt;Profunctors&lt;/h2&gt;
+
+&lt;p&gt;Just to have my obligatory “here is something that I don’t understand” that all of my posts seem to have, I wrote down in my notes (only a few weeks ago) the following sentence&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;profunctors! composition is via coends
+and this looks like ∃ for composition of relations
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I have a vague idea of what this means: when we compose relations we do it ‘by existence’, in that&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;SR(x,y)\iff\exists t\text{ s.t. }R(x,t)\wedge S(t,y)&lt;/script&gt;
+
+&lt;p&gt;and this somehow looks like a coend, but I have no idea (nor, really, the time (nor, really, the skill) to properly think about) how to make this formal. Any ideas?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;That is, a cocomplete monoidal category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\otimes\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}&lt;/script&gt; is cocontinuous in each variable. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">[Part 1, Part 2] Finally, I find myself with enough motivation to start writing the last part to this series. It’s been a while, but hopefully nobody has actually been waiting… This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I’ve got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes’ theorem, which I found pretty neat indeed — more details can be found in this post.</summary></entry><entry><title type="html">Everything is Stokes’; everything is coend</title><link href="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html" rel="alternate" type="text/html" title="Everything is Stokes'; everything is coend" /><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/04/stokes-coend</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/04/stokes-coend.html">&lt;p&gt;For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;hr /&gt;
@@ -115,9 +273,9 @@ About the human heart.&lt;br /&gt;&lt;/p&gt;
 &lt;p&gt;Then we can consider the category &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}_n&lt;/script&gt;, which has objects being equivalence classes of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic graphs, and morphisms being equivalence classes of &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopic graph homomorphisms. This gives us the following structure:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_0 = \mathsf{Grph}&lt;/script&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_\infty = \mathrm{Ho}(\mathsf{Grph})&lt;/script&gt;;&lt;/li&gt;
-  &lt;li&gt;functors &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}\_n \to \mathsf{Grph}\_{n+1}&lt;/script&gt; that are surjective on objects, where functoriality relies on the fact that &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopies can be considered as &lt;script type=&quot;math/tex&quot;&gt;(n+1)&lt;/script&gt;-homotopies.&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}_0 = \mathsf{Grph}&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}_\infty = \mathrm{Ho}(\mathsf{Grph})&lt;/script&gt;;&lt;/li&gt;
+  &lt;li&gt;functors &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Grph}_n \to \mathsf{Grph}_{n+1}&lt;/script&gt; that are surjective on objects, where functoriality relies on the fact that &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt;-homotopies can be considered as &lt;script type=&quot;math/tex&quot;&gt;(n+1)&lt;/script&gt;-homotopies.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;We can think of the number &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; as some sort of “complexity” of the homotopy: small &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; correspond to “homotopies that can be performed in a few steps” (here it is a good idea to see some of the examples in [RH19] to get an idea of how graph homotopies behave).&lt;/p&gt;
@@ -158,7 +316,7 @@ But we do have the following lemma (from Mike’s talk).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Lemma.&lt;/strong&gt; For any &lt;script type=&quot;math/tex&quot;&gt;Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]&lt;/script&gt; there is a strict &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt; and a bijection between pseudonatural &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; and strict &lt;script type=&quot;math/tex&quot;&gt;X\to\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;. Almost by definition: a pseudonatural &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; assigns to each &lt;script type=&quot;math/tex&quot;&gt;x\in X(d)&lt;/script&gt; some image &lt;script type=&quot;math/tex&quot;&gt;f_x(x)\in Y(d)&lt;/script&gt; along with an isomorphism &lt;script type=&quot;math/tex&quot;&gt;\gamma^\*(f_x(x))\cong f_{x'}(\gamma^\*(x))&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\gamma\colon x\to x'&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{D}&lt;/script&gt;, and this isomorphism satisfies a coherence condition.
+&lt;p&gt;&lt;strong&gt;Proof&lt;/strong&gt;. Almost by definition: a pseudonatural &lt;script type=&quot;math/tex&quot;&gt;X\rightsquigarrow Y&lt;/script&gt; assigns to each &lt;script type=&quot;math/tex&quot;&gt;x\in X(d)&lt;/script&gt; some image &lt;script type=&quot;math/tex&quot;&gt;f_x(x)\in Y(d)&lt;/script&gt; along with an isomorphism &lt;script type=&quot;math/tex&quot;&gt;\gamma^*(f_x(x))\cong f_{x'}(\gamma^*(x))&lt;/script&gt; for all &lt;script type=&quot;math/tex&quot;&gt;\gamma\colon x\to x'&lt;/script&gt; in &lt;script type=&quot;math/tex&quot;&gt;\mathbb{D}&lt;/script&gt;, and this isomorphism satisfies a coherence condition.
 So we just define &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\mathbb{D}}Y(d)&lt;/script&gt; to consist of all this data.&lt;/p&gt;
 
 &lt;p&gt;There is then a lovely theory of &lt;em&gt;coflexible&lt;/em&gt; objects, which are those &lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; such that the canonical morphism &lt;script type=&quot;math/tex&quot;&gt;Y\to\mathcal{C}^{\mathbb{D}}Y&lt;/script&gt; has a strict retraction.
@@ -377,13 +535,15 @@ We can define their compositions via colimits or coends:&lt;/p&gt;
 
 &lt;p&gt;(although we don’t really care so much about this post).&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Update: we talk about this a bit more in &lt;a href=&quot;/blog/2019/09/05/day-convolution-part-3.html&quot;&gt;this post&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;yoneda&quot;&gt;Yoneda&lt;/h3&gt;
 
 &lt;p&gt;Every functor &lt;script type=&quot;math/tex&quot;&gt;F\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt; gives a profunctor &lt;script type=&quot;math/tex&quot;&gt;F^*\colon\mathcal{C}\nrightarrow\mathcal{D}&lt;/script&gt; by setting&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F^*(d,c) = \mathcal{D}(d,Fc),&lt;/script&gt;
 
-&lt;p&gt;and &lt;script type=&quot;math/tex&quot;&gt;F^\*&lt;/script&gt; has a right adjoint &lt;script type=&quot;math/tex&quot;&gt;F_*\colon\mathcal{D}\nrightarrow\mathcal{C}&lt;/script&gt; given by&lt;/p&gt;
+&lt;p&gt;and &lt;script type=&quot;math/tex&quot;&gt;F^*&lt;/script&gt; has a right adjoint &lt;script type=&quot;math/tex&quot;&gt;F_*\colon\mathcal{D}\nrightarrow\mathcal{C}&lt;/script&gt; given by&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;F_*(c,d) = \mathcal{D}(Fc,d),&lt;/script&gt;
 
@@ -394,7 +554,7 @@ Then the Yoneda embedding is the inclusion&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})&lt;/script&gt;
 
-&lt;p&gt;given by &lt;script type=&quot;math/tex&quot;&gt;F\mapsto F^\*&lt;/script&gt;.&lt;/p&gt;
+&lt;p&gt;given by &lt;script type=&quot;math/tex&quot;&gt;F\mapsto F^*&lt;/script&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;recovering-functors&quot;&gt;Recovering functors&lt;/h3&gt;
 
@@ -450,7 +610,7 @@ We recover the idea of a &lt;strong&gt;Mealy morphism&lt;/strong&gt;.&lt;sup id=
       &lt;p&gt;To construct &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}^{\text{op}}&lt;/script&gt; we need &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; to be braided; to be able to compose bimodules we need cocompleteness of &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt;, with &lt;script type=&quot;math/tex&quot;&gt;\otimes&lt;/script&gt; cocontinuous in both arguments, etc. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;That is, of the form &lt;script type=&quot;math/tex&quot;&gt;F^\*&lt;/script&gt; for some functor &lt;script type=&quot;math/tex&quot;&gt;F\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;That is, of the form &lt;script type=&quot;math/tex&quot;&gt;F^*&lt;/script&gt; for some functor &lt;script type=&quot;math/tex&quot;&gt;F\colon\mathcal{C}\to\mathcal{D}&lt;/script&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
       &lt;p&gt;That is, preserves all (small) colimits. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
@@ -569,67 +729,4 @@ Any ideas?&lt;/p&gt;
       &lt;p&gt;A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, “Duality and Intersection Theory in Complex Manifolds. I.”, Math. Ann., 237 (1978), 41—77. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote this post about derived, dg-, and -categories and their role in ‘homotopy things’. This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</summary></entry><entry><title type="html">Torsors and principal bundles</title><link href="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html" rel="alternate" type="text/html" title="Torsors and principal bundles" /><published>2018-10-31T00:00:00+00:00</published><updated>2018-10-31T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles</id><content type="html" xml:base="https://thosgood.github.io/blog/2018/10/31/torsors-and-principal-bundles.html">&lt;p&gt;In my thesis, switching between vector bundles and principal &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-bundles has often made certain problems easier (or harder) to understand.
-Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book &lt;a href=&quot;https://www.springer.com/fr/book/9783319147642&quot;&gt;Principal Bundles — The Classical Case&lt;/a&gt;, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely &lt;script type=&quot;math/tex&quot;&gt;\mathbb{B}G&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;\mathbb{E}G&lt;/script&gt; things therein&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that &lt;em&gt;‘affine vector spaces should be understood as &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors, where &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is the underlying vector space acting via translation’&lt;/em&gt;,&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; which makes a nice short topic of discussion, whence this post.&lt;/p&gt;
-
-&lt;!--more--&gt;
-&lt;hr /&gt;
-
-&lt;p&gt;We briefly&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; recall the definition of a principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundle over a space &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is some &lt;em&gt;topological&lt;/em&gt; group.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundle over &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;&lt;/em&gt; is a fibre bundle &lt;script type=&quot;math/tex&quot;&gt;P\xrightarrow{\pi}X&lt;/script&gt; with a continuous right action &lt;script type=&quot;math/tex&quot;&gt;P\times G\to P&lt;/script&gt; such that&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;freely&lt;/em&gt;;&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;transitively&lt;/em&gt; on the orbits; and&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;properly&lt;/em&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;It is maybe helpful to think of the following ‘dictionary’:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;free = injective (i.e. &lt;script type=&quot;math/tex&quot;&gt;\exists x&lt;/script&gt; s.t. &lt;script type=&quot;math/tex&quot;&gt;gx=hx\implies g=h&lt;/script&gt;)&lt;/li&gt;
-  &lt;li&gt;transitively = surjective (i.e. &lt;script type=&quot;math/tex&quot;&gt;\forall x,y&lt;/script&gt; &lt;script type=&quot;math/tex&quot;&gt;\exists g&lt;/script&gt; s.t. &lt;script type=&quot;math/tex&quot;&gt;gx=y&lt;/script&gt;)&lt;/li&gt;
-  &lt;li&gt;properly = something that you care about if you care about infinite sequences or Hausdorffness or things like that (i.e. the inverse image of &lt;script type=&quot;math/tex&quot;&gt;G\times X\to X\times X&lt;/script&gt; given by &lt;script type=&quot;math/tex&quot;&gt;(g,x)\mapsto(gx,x)&lt;/script&gt; preserves compactness)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thus the fibres &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; are homeomorphic to &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, and also give the orbits, and the orbit space &lt;script type=&quot;math/tex&quot;&gt;P/G&lt;/script&gt; is homeomorphic to &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;Another definition is now useful.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Definition.&lt;/strong&gt; A &lt;em&gt;&lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsor&lt;/em&gt; is a space upon which &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; acts &lt;em&gt;freely&lt;/em&gt; and &lt;em&gt;transitively&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Motto.&lt;/strong&gt; &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors &lt;em&gt;are&lt;/em&gt; principal &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-bundles over a point &lt;em&gt;are&lt;/em&gt; affine versions of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;.&lt;/p&gt;
-
-&lt;p&gt;What do we mean by this last ‘equivalence’?
-Just that &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;-torsors retain all the structure of &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt;, but don’t have some specified point that acts as the identity.
-Here are some nice examples.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-torsors are vector spaces; &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt;-bundles are vector bundles.&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;O(r)&lt;/script&gt;-torsors are vector spaces with an inner product.&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r^+&lt;/script&gt;-torsors are oriented vector spaces (where &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r^+&lt;/script&gt; is the connected component of &lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}\_r&lt;/script&gt; consisting of matrices with determinant strictly positive).&lt;/li&gt;
-  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{SL}\_r&lt;/script&gt;-torsors are vector spaces with a specified isomorphism &lt;script type=&quot;math/tex&quot;&gt;\det V\xrightarrow{\sim} k&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;\det V:=\wedge\_{i=1}^r V&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; is our base field. Note that this is weaker than a choice of basis: it is a choice of an &lt;script type=&quot;math/tex&quot;&gt;\mathrm{SL}\_r&lt;/script&gt;-conjugacy class of bases.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h1&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;About which I recently had a nice little Twitter conversation with &lt;a href=&quot;https://twitter.com/johncarlosbaez&quot;&gt;John Baez&lt;/a&gt;; his replies starting &lt;a href=&quot;https://twitter.com/johncarlosbaez/status/1056999200125157376&quot;&gt;here&lt;/a&gt; are really quite nice. P.S. if you are not on Twitter then I would highly recommend it: the maths community is really friendly and interesting, and if you have a little question to ask then chances are you’ll get a bunch of nice responses. Also a chance to talk to people across the globe in a completely different time zone. Don’t get me wrong, Twitter has &lt;em&gt;many&lt;/em&gt; problems, but you can ignore most of them and just follow the people that you like. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;(which I won’t talk about here because (a) I think there are many other places to read about this that are much better than something that I could write; and (b) I should be working on my thesis but I’m sort of using this post as a method of procrastination/searching for inspiration). &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;An earlier version of this post incorrectly said ‘&lt;script type=&quot;math/tex&quot;&gt;\mathrm{GL}_r&lt;/script&gt;-torsor’; thanks to &lt;a href=&quot;https://twitter.com/BarbaraFantechi/status/1057701336291123200&quot;&gt;Barbara Fantechi for pointing this out!&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can’t think of that means ‘self-containedness’ but is actually a real word/phrase?) &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="algebraic-topology" /><summary type="html">I haven't posted anything in forever, and one of my supervisor's strong pedagogical beliefs is that 'affine vector spaces should be understood as $$G$$-torsors, where $$G$$ is the underlying vector space acting via translation', which makes a nice short topic of discussion, whence this post.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="blog" /><category term="category-theory" /><summary type="html">Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that’s in ‘fixing’ a small quirk about dg-categories that I didn’t quite understand way back when I wrote this post about derived, dg-, and -categories and their role in ‘homotopy things’. This isn’t a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.</summary></entry></feed>

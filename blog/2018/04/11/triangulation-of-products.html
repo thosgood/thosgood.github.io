@@ -291,12 +291,12 @@ But there is a ‘trick’, which works as follows: write your simplices as simp
 Define the simplicial set <script type="math/tex">X_\bullet</script> by</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
+\begin{aligned}
     X_0 &= \{[0], [1]\}\\
     X_1 &= \{[0,0],[0,1],[1,1]\}\\
     X_2 &= \{[0,0,0],[0,0,1],[0,1,1],[1,1,1]\}\\
     &\vdots
-\end{align*} %]]></script>
+\end{aligned} %]]></script>
 
 <p>that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points 0 and 1; and the 1-simplices correspond to the line from 0 to 1, as well as the two degenerate ‘lines’ from 0 to 0 and from 1 to 1_.</p>
 
@@ -304,11 +304,11 @@ Define the simplicial set <script type="math/tex">X_\bullet</script> by</p>
 There are nine 1-simplices in the product:</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
-   &[0,0]\times[0,0], [0,0]\times[0,1], [0,0]\times[1,1],\\
-   &[0,1]\times[0,0], [0,1]\times[0,1], [0,1]\times[1,1],\\
-   &[1,1]\times[0,0], [1,1]\times[0,1], [1,1]\times[1,1].
-\end{align*} %]]></script>
+\begin{aligned}
+   &[0,0]\times[0,0], \quad [0,0]\times[0,1], \quad [0,0]\times[1,1],\\
+   &[0,1]\times[0,0], \quad [0,1]\times[0,1], \quad [0,1]\times[1,1],\\
+   &[1,1]\times[0,0], \quad [1,1]\times[0,1], \quad [1,1]\times[1,1].
+\end{aligned} %]]></script>
 
 <p>Five of these are non-degenerate,<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> and the one that interests us is <script type="math/tex">[0,1]\times[0,1]</script>: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.</p>
 

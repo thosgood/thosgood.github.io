@@ -13,7 +13,7 @@
   <title>Tim Hosgood — Loop spaces, spectra, and operads (Part 2)</title>
 
 
-  <meta name="description" content="[See part 1 here and part 3 here] In the previous post of this series I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘hom...">
+  <meta name="description" content="[Part 1, Part 3] In the previous post of this series I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘homotopically-associ...">
 
 
   <link rel="stylesheet" href="/assets/main.css">
@@ -281,7 +281,7 @@
 
   <div class="post-content" itemprop="articleBody">
 
-    <p><em>[See part 1 <a href="/blog/2017/12/08/spectra-part-1.html">here</a> and part 3 <a href="/blog/2018/03/12/spectra-part-3.html">here</a>]</em></p>
+    <p><em>[<a href="/blog/2017/12/08/spectra-part-1.html">Part 1</a>, <a href="/blog/2018/03/12/spectra-part-3.html">Part 3</a>]</em></p>
 
 <p>In the <a href="/blog/2017/12/08/spectra-part-1.html">previous post of this series</a> I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘homotopically-associative algebras’. I’m going to detour slightly from what I was going to delve into next and speak about <strong>delooping</strong> for a bit first. Then I’ll introduce <strong>spectra</strong> as sort of a generalisation of infinite deloopings. I’ll probably leave the stuff about <script type="math/tex">E_\infty</script>-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.</p>
 
@@ -363,11 +363,11 @@ A &\to &*\\
 
 <p>This sequence ‘is’ (under the identification of connective spectra and strict abelian infinity-groups) the <a href="https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+spectrum">Eilenberg-Mac Lane spectrum</a>, whatever that might mean (considering that I’ve yet to even define spectra). Now comes the magic bit.</p>
 
-<p>Let <script type="math/tex">X</script> be a pointed topological space<sup id="fnref:13"><a href="#fn:13" class="footnote">5</a></sup> and <script type="math/tex">A</script> an abelian group. It is a classical fact<sup id="fnref:5"><a href="#fn:5" class="footnote">6</a></sup> that the group <script type="math/tex">H^n(X,A)</script> can be identified with <script type="math/tex">\pi\_0\mathsf{Top}\_*(X,K(A,n))</script>, and so the fact that <script type="math/tex">\vert\mathbb{B}^nA\vert \simeq K(A,n)</script> tells us that we could just as well <em>define</em> singular cohomology as</p>
+<p>Let <script type="math/tex">X</script> be a pointed topological space<sup id="fnref:13"><a href="#fn:13" class="footnote">5</a></sup> and <script type="math/tex">A</script> an abelian group. It is a classical fact<sup id="fnref:5"><a href="#fn:5" class="footnote">6</a></sup> that the group <script type="math/tex">H^n(X,A)</script> can be identified with <script type="math/tex">\pi_0\mathsf{Top}_*(X,K(A,n))</script>, and so the fact that <script type="math/tex">\vert\mathbb{B}^nA\vert \simeq K(A,n)</script> tells us that we could just as well <em>define</em> singular cohomology as</p>
 
 <script type="math/tex; mode=display">H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)</script>
 
-<p>where <script type="math/tex">\mathbb{H}</script> is some ‘nice’ category in which we have infinite deloopings of <script type="math/tex">A</script>, e.g. <script type="math/tex">\mathsf{Top}\_*</script> or <script type="math/tex">\infty\mathsf{Groupoid}</script>. Even better, these two example choices of <script type="math/tex">\mathbb{H}</script> give us homotopically equivalent objects, by the homotopy hypothesis.</p>
+<p>where <script type="math/tex">\mathbb{H}</script> is some ‘nice’ category in which we have infinite deloopings of <script type="math/tex">A</script>, e.g. <script type="math/tex">\mathsf{Top}_*</script> or <script type="math/tex">\infty\mathsf{Groupoid}</script>. Even better, these two example choices of <script type="math/tex">\mathbb{H}</script> give us homotopically equivalent objects, by the homotopy hypothesis.</p>
 
 <p>This is really nice for many reasons, but one particularly nice one is that singular cohomology with coefficients in <script type="math/tex">A</script> is <em>representable</em>, and it is pretty much represented exactly by <script type="math/tex">A</script>. There is a <a href="https://ncatlab.org/nlab/show/Brown+representability+theorem">theorem</a> that tells us that, in particular, any sufficiently well-behaved cohomology theory is representable in this way.</p>
 
@@ -377,19 +377,19 @@ A &\to &*\\
 
 <h3 id="the-setting-infinity-categories">The setting (infinity categories)</h3>
 
-<p>First of all we work in <script type="math/tex">\mathsf{Top}\_*</script> and keep our example of <script type="math/tex">K(A,n)</script> in mind. Here, we define a <strong>sequential pre-spectrum <script type="math/tex">\mathcal{E}</script></strong> to be a sequence <script type="math/tex">(\mathcal{E}\_n)\_{n\in\mathbb{N}}</script> of pointed spaces, along with the data of <strong>structure maps</strong>, which are continuous maps <script type="math/tex">\Sigma \mathcal{E}\_n\to \mathcal{E}\_{n+1}</script>. Then, using the adjunction <script type="math/tex">(\Sigma\dashv\Omega)</script>, we can turn these structure maps into maps <script type="math/tex">\mathcal{E}\_n\to\Omega \mathcal{E}\_{n+1}</script>. If these are isomorphisms<sup id="fnref:6"><a href="#fn:6" class="footnote">7</a></sup> then we say that <script type="math/tex">\mathcal{E}</script> is an <strong><script type="math/tex">\Omega</script>-spectrum</strong>.</p>
+<p>First of all we work in <script type="math/tex">\mathsf{Top}_*</script> and keep our example of <script type="math/tex">K(A,n)</script> in mind. Here, we define a <strong>sequential pre-spectrum <script type="math/tex">\mathcal{E}</script></strong> to be a sequence <script type="math/tex">(\mathcal{E}_n)_{n\in\mathbb{N}}</script> of pointed spaces, along with the data of <strong>structure maps</strong>, which are continuous maps <script type="math/tex">\Sigma \mathcal{E}_n\to \mathcal{E}_{n+1}</script>. Then, using the adjunction <script type="math/tex">(\Sigma\dashv\Omega)</script>, we can turn these structure maps into maps <script type="math/tex">\mathcal{E}_n\to\Omega \mathcal{E}_{n+1}</script>. If these are isomorphisms<sup id="fnref:6"><a href="#fn:6" class="footnote">7</a></sup> then we say that <script type="math/tex">\mathcal{E}</script> is an <strong><script type="math/tex">\Omega</script>-spectrum</strong>.</p>
 
-<p>Our previous example of <script type="math/tex">\mathcal{E}\_n=K(A,n)</script> then gives us an <script type="math/tex">\Omega</script>-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.</p>
+<p>Our previous example of <script type="math/tex">\mathcal{E}_n=K(A,n)</script> then gives us an <script type="math/tex">\Omega</script>-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.</p>
 
 <p>In the bigger picture, every sequential pre-spectrum has a <strong>spectrification</strong>, which is an equivalent <script type="math/tex">\Omega</script>-spectrum given by a <a href="https://ncatlab.org/nlab/show/spectrum#OmegaSpectrum">certain filtered colimit</a>, and these <script type="math/tex">\Omega</script>-spectra are exactly the fibrant replacements in some model structure.</p>
 
-<p>Generally, we can define <a href="https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects"><script type="math/tex">\Omega</script>-spectrum objects in any <script type="math/tex">(\infty,1)</script>-category</a>, but when people talk about ‘spectra’ with no reference to a specific category, it’s usually implicit that they are working in <script type="math/tex">\mathsf{Top}\_*</script> with weak homotopy equivalences.</p>
+<p>Generally, we can define <a href="https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects"><script type="math/tex">\Omega</script>-spectrum objects in any <script type="math/tex">(\infty,1)</script>-category</a>, but when people talk about ‘spectra’ with no reference to a specific category, it’s usually implicit that they are working in <script type="math/tex">\mathsf{Top}_*</script> with weak homotopy equivalences.</p>
 
 <p>But the ‘honest’ setting for spectra is in a <strong>stable <script type="math/tex">(\infty,1)</script>-category</strong>: pointed<sup id="fnref:7"><a href="#fn:7" class="footnote">8</a></sup> <script type="math/tex">(\infty,1)</script>-categories <script type="math/tex">\mathcal{C}</script> with finite limits, where the loop <script type="math/tex">(\infty,1)</script>-functor <script type="math/tex">\Omega\colon\mathcal{C}\to\mathcal{C}</script> is an <em>equivalence</em>, with the inverse given by suspension <script type="math/tex">\Sigma</script>. Given some not-necessarily-stable pointed <script type="math/tex">(\infty,1)</script>-category <script type="math/tex">\mathcal{C}</script> with finite limits, we can form its <strong>stabilisation</strong> by taking the limit<sup id="fnref:8"><a href="#fn:8" class="footnote">9</a></sup> of iterating the loop space functor on the category of <strong>pointed objects of <script type="math/tex">\mathcal{C}</script></strong>:</p>
 
 <script type="math/tex; mode=display">\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).</script>
 
-<p>The prototypical example of such a category is exactly what we’ve been looking at: <em><script type="math/tex">\mathsf{Stab}(\mathsf{Top})</script> is the category of <script type="math/tex">\Omega</script>-spectra in <script type="math/tex">\mathsf{Top}\_*</script></em>. In general, we can construct <script type="math/tex">\mathsf{Stab}(\mathcal{C})</script> <a href="https://arxiv.org/abs/math/0608228">exactly by taking the category of spectrum objects</a> in <script type="math/tex">(*\downarrow\mathcal{C})</script>.</p>
+<p>The prototypical example of such a category is exactly what we’ve been looking at: <em><script type="math/tex">\mathsf{Stab}(\mathsf{Top})</script> is the category of <script type="math/tex">\Omega</script>-spectra in <script type="math/tex">\mathsf{Top}_*</script></em>. In general, we can construct <script type="math/tex">\mathsf{Stab}(\mathcal{C})</script> <a href="https://arxiv.org/abs/math/0608228">exactly by taking the category of spectrum objects</a> in <script type="math/tex">(*\downarrow\mathcal{C})</script>.</p>
 
 <p>A really good introduction to all of this, and where I actually saw most of this for the first time, is <a href="https://arxiv.org/abs/1007.2925">Moritz Groth’s <em>A short course on <script type="math/tex">\infty</script>-categories</em></a>.</p>
 
@@ -399,7 +399,7 @@ A &\to &*\\
 
 <p>Before wrapping this post up, I’m just going to mention briefly something that always confused me about spectra that represent cohomology theories.</p>
 
-<p>We can define ‘cohomology’ in any <script type="math/tex">(\infty,1)</script>-category <script type="math/tex">\mathbb{H}</script> by just setting <script type="math/tex">H(X,A):=\pi_0\mathbb{H}(X,A)</script>, but if we want this to behave like ‘usual’ cohomology then we have to impose some restrictions. First of all, if we want our ‘cocycles’ to classify something (namely principal bundles over <script type="math/tex">X</script>) then we have to be working in an <em><script type="math/tex">(\infty,1)</script>-topos</em>. Secondly, if we want to obtain a <script type="math/tex">\mathbb{Z}</script>-graded cohomology then the simplest way<sup id="fnref:10"><a href="#fn:10" class="footnote">10</a></sup> of doing so is to ask that our coefficient object <script type="math/tex">A</script> be a <em>component of a spectrum object</em>, i.e. <script type="math/tex">A=\mathcal{E}\_n</script> for some spectrum object <script type="math/tex">\mathcal{E}</script>. Thirdly, if we want our cohomology to have a group structure then we need<sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup> <script type="math/tex">A</script> to be a <em>group object</em>, which is always the case if <script type="math/tex">A</script> is a component of a spectrum object.<sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup> Note that this is abelian if <script type="math/tex">A</script> is at least an <script type="math/tex">E\_2</script>-object. Finally, if we want a ring structure then we can ask that the spectrum object <script type="math/tex">\mathcal{E}</script> of which <script type="math/tex">A</script> is a component be an <script type="math/tex">E_\infty</script>-ring, or a <em>ring spectra</em>.</p>
+<p>We can define ‘cohomology’ in any <script type="math/tex">(\infty,1)</script>-category <script type="math/tex">\mathbb{H}</script> by just setting <script type="math/tex">H(X,A):=\pi_0\mathbb{H}(X,A)</script>, but if we want this to behave like ‘usual’ cohomology then we have to impose some restrictions. First of all, if we want our ‘cocycles’ to classify something (namely principal bundles over <script type="math/tex">X</script>) then we have to be working in an <em><script type="math/tex">(\infty,1)</script>-topos</em>. Secondly, if we want to obtain a <script type="math/tex">\mathbb{Z}</script>-graded cohomology then the simplest way<sup id="fnref:10"><a href="#fn:10" class="footnote">10</a></sup> of doing so is to ask that our coefficient object <script type="math/tex">A</script> be a <em>component of a spectrum object</em>, i.e. <script type="math/tex">A=\mathcal{E}_n</script> for some spectrum object <script type="math/tex">\mathcal{E}</script>. Thirdly, if we want our cohomology to have a group structure then we need<sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup> <script type="math/tex">A</script> to be a <em>group object</em>, which is always the case if <script type="math/tex">A</script> is a component of a spectrum object.<sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup> Note that this is abelian if <script type="math/tex">A</script> is at least an <script type="math/tex">E_2</script>-object. Finally, if we want a ring structure then we can ask that the spectrum object <script type="math/tex">\mathcal{E}</script> of which <script type="math/tex">A</script> is a component be an <script type="math/tex">E_\infty</script>-ring, or a <em>ring spectra</em>.</p>
 
 <p>The point here is that, cohomology can be defined very generally, but if we want to recover something that we really recognise from it then we can basically restrict ourselves to looking at <strong>ring spectra in an <script type="math/tex">(\infty,1)</script>-topos</strong>.</p>
 
@@ -415,17 +415,17 @@ A &\to &*\\
 
 <script type="math/tex; mode=display">H^n(K(A,n),A)\xrightarrow{\sim}\mathrm{Hom}_\mathbb{Z}(A,A).</script>
 
-<p>Now take the class of <script type="math/tex">\mathrm{id}\_A</script> in <script type="math/tex">\mathrm{Hom}\_\mathbb{Z}(A,A)</script> and look at its image <script type="math/tex">[\iota\_n]</script> in <script type="math/tex">H^n(K(A,n),A)</script>. This gives us a natural (in <script type="math/tex">X</script>) transformation</p>
+<p>Now take the class of <script type="math/tex">\mathrm{id}_A</script> in <script type="math/tex">\mathrm{Hom}_\mathbb{Z}(A,A)</script> and look at its image <script type="math/tex">[\iota_n]</script> in <script type="math/tex">H^n(K(A,n),A)</script>. This gives us a natural (in <script type="math/tex">X</script>) transformation</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
-\begin{align*}
+\begin{aligned}
 \eta_X\colon\pi_0\mathsf{Top}_*(X,K(A,n))&\to H^n(X,A)\\
 [\gamma]&\mapsto \gamma^*([\iota_n])
-\end{align*} %]]></script>
+\end{aligned} %]]></script>
 
 <p>and we claim that it is a natural isomorphism when we restrict to the subcategory of pointed CW complexes.</p>
 
-<p><strong>Edit:</strong> This ‘classical fact’ is really an example of <a href="https://ncatlab.org/nlab/show/Eckmann-Hilton+duality">Eckmann-Hilton duality</a>.</p>
+<p><strong>Edit:</strong> This ‘classical fact’ is really a key example of the so-called <a href="https://ncatlab.org/nlab/show/Eckmann-Hilton+duality">Eckmann-Hilton duality</a>.</p>
 
 <hr />
 
