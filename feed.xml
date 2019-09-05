@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-05T00:10:54+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Weighted limits, ends, and Day convolution</title><link href="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html" rel="alternate" type="text/html" title="Weighted limits, ends, and Day convolution" /><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html">&lt;p&gt;&lt;em&gt;[&lt;a href=&quot;/blog/2017/12/08/day-convolution-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;/blog/2018/02/15/day-convolution-part-2.html&quot;&gt;Part 2&lt;/a&gt;]&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://thosgood.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://thosgood.github.io/" rel="alternate" type="text/html" /><updated>2019-09-05T00:22:50+00:00</updated><id>https://thosgood.github.io/feed.xml</id><title type="html">Tim Hosgood</title><entry><title type="html">Weighted limits, ends, and Day convolution</title><link href="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html" rel="alternate" type="text/html" title="Weighted limits, ends, and Day convolution" /><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><id>https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3</id><content type="html" xml:base="https://thosgood.github.io/blog/2019/09/05/day-convolution-part-3.html">&lt;p&gt;&lt;em&gt;[&lt;a href=&quot;/blog/2017/12/08/day-convolution-part-1.html&quot;&gt;Part 1&lt;/a&gt;, &lt;a href=&quot;/blog/2018/02/15/day-convolution-part-2.html&quot;&gt;Part 2&lt;/a&gt;]&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, I find myself with enough motivation to start writing the last part to this series. It’s been a while, but hopefully nobody has actually been waiting… This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I’ve got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes’ theorem, which I found pretty neat indeed — more details can be found in &lt;a href=&quot;/blog/2019/09/04/stokes-coend.html&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
 
@@ -71,7 +71,7 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(-\otimes-).&lt;/script&gt;
 
-&lt;p&gt;As I already mentioned in my &lt;a href=&quot;/blog/2019/07/14/cauchy-completion-and-profunctors.html&quot;&gt;post about profunctors&lt;/a&gt;, there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category &lt;em&gt;itself&lt;/em&gt; is the ‘free cocompletion’ of the original category. There are a bunch of ways of explaining what this means, but my favourite ‘proof’ is using Day convolution, the co-Yoneda lemma, and the fact that the Yoneda embedding &lt;script type=&quot;math/tex&quot;&gt;よ\colon\mathcal{C}\to\widehat{\mathcal{C}}&lt;/script&gt; is &lt;strong&gt;monoidal&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;As I already mentioned in my &lt;a href=&quot;/blog/2019/07/14/cauchy-completion-and-profunctors.html&quot;&gt;post about profunctors&lt;/a&gt;, there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category &lt;em&gt;itself&lt;/em&gt; is the ‘free cocompletion’ of the original category. There are a bunch of ways of explaining what this means, but my favourite ‘proof’ is using Day convolution and the co-Yoneda lemma, to show that the Yoneda embedding &lt;script type=&quot;math/tex&quot;&gt;よ\colon\mathcal{C}\to\widehat{\mathcal{C}}&lt;/script&gt; is &lt;strong&gt;monoidal&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
 \begin{aligned}
@@ -85,7 +85,13 @@
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \cong \operatorname{Hom}_\mathcal{C}(-,x\otimes x').&lt;/script&gt;
 
-&lt;p&gt;Here we can think of &lt;script type=&quot;math/tex&quot;&gt;\widehat{\mathcal{C}}&lt;/script&gt; as being &lt;strong&gt;enriched&lt;/strong&gt; if we want: we can work with &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;-valued presheaves instead of &lt;script type=&quot;math/tex&quot;&gt;\mathsf{Set}&lt;/script&gt;-valued ones.&lt;/p&gt;
+&lt;p&gt;That is, &lt;em&gt;the Yoneda embedding is a (strong) monoidal functor&lt;/em&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;(\mathcal{C},\otimes_\mathcal{C},I)\hookrightarrow(\widehat{\mathcal{C}},*,よ(I)).&lt;/script&gt;
+
+&lt;p&gt;Further, if &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; is small, then there is an internal hom on &lt;script type=&quot;math/tex&quot;&gt;\widehat{\mathcal{C}}&lt;/script&gt; which makes it &lt;em&gt;closed&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Finally, as a fun little fact, which I used at some point in one of my masters theses,&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; whenever &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; to &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;monoid-algebra&quot;&gt;Monoid algebra&lt;/h3&gt;
 
@@ -111,7 +117,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;ring &lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;&lt;/td&gt;
-      &lt;td&gt;monoidally cocomplete&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; category&lt;/td&gt;
+      &lt;td&gt;monoidally cocomplete&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; category&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;script type=&quot;math/tex&quot;&gt;R&lt;/script&gt;-module&lt;/td&gt;
@@ -152,6 +158,9 @@ and this looks like ∃ for composition of relations
 
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;§4.1 in &lt;a href=&quot;https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf&quot;&gt;&lt;em&gt;Under &lt;script type=&quot;math/tex&quot;&gt;\mathrm{Spec}\mathbb{Z}&lt;/script&gt;. A reader’s companion.&lt;/em&gt;&lt;/a&gt;. It’s actually something that I’d love to come back to at some point! &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
       &lt;p&gt;That is, a cocomplete monoidal category &lt;script type=&quot;math/tex&quot;&gt;\mathcal{V}&lt;/script&gt; such that &lt;script type=&quot;math/tex&quot;&gt;\otimes\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}&lt;/script&gt; is cocontinuous in each variable. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;

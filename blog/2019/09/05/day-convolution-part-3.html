@@ -349,7 +349,7 @@
 
 <script type="math/tex; mode=display">(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(-\otimes-).</script>
 
-<p>As I already mentioned in my <a href="/blog/2019/07/14/cauchy-completion-and-profunctors.html">post about profunctors</a>, there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category <em>itself</em> is the ‘free cocompletion’ of the original category. There are a bunch of ways of explaining what this means, but my favourite ‘proof’ is using Day convolution, the co-Yoneda lemma, and the fact that the Yoneda embedding <script type="math/tex">よ\colon\mathcal{C}\to\widehat{\mathcal{C}}</script> is <strong>monoidal</strong>:</p>
+<p>As I already mentioned in my <a href="/blog/2019/07/14/cauchy-completion-and-profunctors.html">post about profunctors</a>, there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category <em>itself</em> is the ‘free cocompletion’ of the original category. There are a bunch of ways of explaining what this means, but my favourite ‘proof’ is using Day convolution and the co-Yoneda lemma, to show that the Yoneda embedding <script type="math/tex">よ\colon\mathcal{C}\to\widehat{\mathcal{C}}</script> is <strong>monoidal</strong>:</p>
 
 <script type="math/tex; mode=display">% <![CDATA[
 \begin{aligned}
@@ -363,7 +363,13 @@
 
 <script type="math/tex; mode=display">\operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \cong \operatorname{Hom}_\mathcal{C}(-,x\otimes x').</script>
 
-<p>Here we can think of <script type="math/tex">\widehat{\mathcal{C}}</script> as being <strong>enriched</strong> if we want: we can work with <script type="math/tex">\mathcal{V}</script>-valued presheaves instead of <script type="math/tex">\mathsf{Set}</script>-valued ones.</p>
+<p>That is, <em>the Yoneda embedding is a (strong) monoidal functor</em></p>
+
+<script type="math/tex; mode=display">(\mathcal{C},\otimes_\mathcal{C},I)\hookrightarrow(\widehat{\mathcal{C}},*,よ(I)).</script>
+
+<p>Further, if <script type="math/tex">\mathcal{C}</script> is small, then there is an internal hom on <script type="math/tex">\widehat{\mathcal{C}}</script> which makes it <em>closed</em>.</p>
+
+<p>Finally, as a fun little fact, which I used at some point in one of my masters theses,<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup> whenever <script type="math/tex">\mathcal{C}</script> is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from <script type="math/tex">\mathcal{C}</script> to <script type="math/tex">\mathcal{V}</script>.</p>
 
 <h3 id="monoid-algebra">Monoid algebra</h3>
 
@@ -389,7 +395,7 @@
     </tr>
     <tr>
       <td>ring <script type="math/tex">R</script></td>
-      <td>monoidally cocomplete<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> category</td>
+      <td>monoidally cocomplete<sup id="fnref:1"><a href="#fn:1" class="footnote">2</a></sup> category</td>
     </tr>
     <tr>
       <td><script type="math/tex">R</script>-module</td>
@@ -430,6 +436,9 @@ and this looks like ∃ for composition of relations
 
 <div class="footnotes">
   <ol>
+    <li id="fn:2">
+      <p>§4.1 in <a href="https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf"><em>Under <script type="math/tex">\mathrm{Spec}\mathbb{Z}</script>. A reader’s companion.</em></a>. It’s actually something that I’d love to come back to at some point! <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
     <li id="fn:1">
       <p>That is, a cocomplete monoidal category <script type="math/tex">\mathcal{V}</script> such that <script type="math/tex">\otimes\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}</script> is cocontinuous in each variable. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
