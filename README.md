@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/thosgood/thosgood.github.io.svg?branch=release)](https://travis-ci.org/thosgood/thosgood.github.io)
 
 # todo
+- make math rendering work on the blog index
 - switch from disqus to https://staticman.net/docs/ !
     + if this works, mailgun for notifications?
 - use Tachyons? https://www.leonpaternoster.com/posts/jekyll-tachyons/
