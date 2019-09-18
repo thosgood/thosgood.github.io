@@ -11,7 +11,7 @@ As I mentioned in [the previous post]({{ site.baseurl }}{% post_url 2019-07-26-t
 <!--more-->
 ---
 
-**16/9/19 EDIT:** _As one of my supervisors recently pointed out to me, the property of being an `$n$-homotopy' is not transitive, and so this example is really a non-example. I'll keep the post here for reference purposes, but the only useful/true bits are those quoted from \[\RH19]._
+**16/9/19 EDIT:** _As one of my supervisors recently pointed out to me, the property of being an `$$n$$-homotopy' is not transitive, and so this example is really a non-example. I'll keep the post here for reference purposes, but the only useful/true bits are those quoted from \[RH19\]._
 
 ---
 
