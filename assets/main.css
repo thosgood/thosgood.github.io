@@ -189,6 +189,10 @@ ol.post-toc { list-style-type: upper-roman; }
 .post-content hr { margin: 15px 0; }
 
 /** Images */
+#about-image-image { border: 2px solid #424242; padding: 2px; }
+
+@media screen and (max-width: 600px) { #about-image-image { width: 60%; } }
+
 .rounded-image { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
 
 /** Page columns */
