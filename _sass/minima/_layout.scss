@@ -366,6 +366,14 @@ ol.post-toc {
  * Images
  */
 
+#about-image-image {
+  border: 2px solid $grey-color-dark;
+  padding: 2px;
+  @include media-query($on-palm) {
+    width: 60%;
+  }
+}
+
 .rounded-image {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
