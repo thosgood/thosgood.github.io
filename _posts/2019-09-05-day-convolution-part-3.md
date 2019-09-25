@@ -3,7 +3,7 @@ layout: post
 title: Weighted limits, ends, and Day convolution
 part: Part 3
 category: "blog"
-tags: "category-theory"
+tags: "category-theory profunctors"
 comments: true
 ---
 
