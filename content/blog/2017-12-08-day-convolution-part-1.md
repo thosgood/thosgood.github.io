@@ -6,8 +6,6 @@ tags: "category-theory"
 created_at: 2017-12-08
 ---
 
-_[[Part 2]({{ site.baseurl }}{% post_url 2018-02-15-day-convolution-part-2 %}), [Part 3]({{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %})]_
-
 A motto of category theory is that 'Kan extensions are everywhere'. As a
 simplification of this, '(co)limits are in a lot of places'. By rephrasing
 the definition of a limit we end up with something that looks invitingly

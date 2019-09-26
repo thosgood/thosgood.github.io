@@ -6,8 +6,6 @@ tags: "category-theory"
 created_at: 2018-02-15
 ---
 
-_[[Part 1]({{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %}), [Part 3]({{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %})]_
-
 Using the idea of weighted limits, defined in the last post, we can now talk about **ends**.
 The idea of an end is that, given some functor $$F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$$, which we can think of as defining both a left and a right action on $$\prod_{c\in\mathcal{C}}F(c,c)$$, we wish to construct some sort of universal subobject[^1] where the two actions coincide.
 Dually, a motivation behind the **coend** is in asking for some universal quotient of $$\coprod_{c\in\mathcal{C}}F(c,c)$$ that _forces_ the two actions to agree.

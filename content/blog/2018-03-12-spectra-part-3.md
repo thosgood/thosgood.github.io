@@ -6,9 +6,6 @@ tags: "category-theory spectra algebraic-topology operads"
 created_at: 2018-03-12
 ---
 
-
-_[[Part 1]({{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}), [Part 2]({{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %})]_
-
 This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process.
 
 <!-- more -->
@@ -87,7 +84,7 @@ If this is the case, then we call a $$\mathcal{B}$$-space an **$$A_\infty$$-spac
 
 ---
 
-**Warning.** _What follows is nothing more than a sketch of an elephant by a blind man._
+**Warning.** _What follows is much less even than a sketch of an elephant by a blind man._
 
 Again, there is an important note about names and notation.
 What is commonly known as the **associative operad** $$\mathrm{Assoc}$$ is referred to as $$\mathcal{A}$$ in Vogt, and what is now called $$\mathcal{A}_\infty$$ is called $$\mathcal{W}\mathcal{A}$$ in Vogt, because he constructs it as a 'homotopy universal $$A_\infty$$ operad' from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
@@ -100,7 +97,7 @@ This generalises in section 6 to showing that $$n$$-fold loop spaces can be acte
 That is, we define $$E_n$$ to be the little $$n$$-discs operad[^1], and $$E_\infty$$ to be the colimit of the $$E_n$$, which is weakly equivalent to the commutative operad $$\mathrm{Comm}$$.
 As an interesting fact, we can see that $$E_n$$ is generally homotopically non-trivial (tiny picture below), but $$E_\infty$$ is contractible.
 
-![Proof that $$E_2(2)$$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg){:class="img-responsive"}
+![Proof that $$E_2(2)$$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg)
 
 &nbsp;
 

@@ -30,7 +30,7 @@ Any ideas?
 # Footnotes
 
 [^1]: Having hidden this part in the main post and not the excerpt makes me feel like I'm writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as _"Nine functors that you wouldn't believe have derived counterparts — number six will shock you!"_ and _"You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction"_. I apologise in advance.
-[^2]: [weasel words] [citation needed]
+[^2]: \[weasel words\] \[citation needed\]
 [^3]: which is, admittedly, best measured on the Planck scale.
 [^4]:  A. I. Bondal, M. M. Kapranov, “Enhanced triangulated categories”, Mat. Sb., 181:5 (1990), 669–683; Math. USSR-Sb., 70:1 (1991), 93–107.
 [^5]: [https://ncatlab.org/nlab/show/twisted+complex](https://ncatlab.org/nlab/show/twisted+complex)
