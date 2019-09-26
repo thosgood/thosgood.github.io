@@ -42,10 +42,14 @@ th {
 }
 
 tr {
+  background-color: #eee;
+}
+
+tbody > tr:nth-child(odd) {
   background-color: #fff;
 }
 
-tr:nth-child(odd) {
+thead > tr {
   background-color: #eee;
 }
 

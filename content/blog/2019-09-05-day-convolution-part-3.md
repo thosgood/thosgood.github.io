@@ -94,42 +94,15 @@ Remembering all that we've said above about free modules, and how Day convolutio
 
 There is a beautiful formal analogy between Day convolution and monoid algebra, which takes the following form:
 
-<table>
-  <tbody>
-    <tr>
-      <th>monoid algebra</th>
-      <th>Day convolution</th>
-    </tr>
-    <tr>
-      <td>set</td>
-      <td>category</td>
-    </tr>
-    <tr>
-      <td>monoid</td>
-      <td>monoidal category</td>
-    </tr>
-    <tr>
-      <td>ring <script type="math/tex">R</script></td>
-      <td>monoidally cocomplete category</td>
-    </tr>
-    <tr>
-      <td><script type="math/tex">R</script>-module</td>
-      <td>cocomplete <script type="math/tex">\mathcal{V}</script>-category</td>
-    </tr>
-    <tr>
-      <td><script type="math/tex">R</script>-algebra</td>
-      <td>monoidally cocomplete <script type="math/tex">\mathcal{V}</script>-category</td>
-    </tr>
-    <tr>
-      <td>free <script type="math/tex">R</script>-module <script type="math/tex">R^{(X)}</script> on a set <script type="math/tex">X</script></td>
-      <td>free cocomplete <script type="math/tex">\mathcal{V}</script>-category <script type="math/tex">\widehat{\mathcal{C}}</script> on a category <script type="math/tex">\mathcal{C}</script></td>
-    </tr>
-    <tr>
-      <td>free <script type="math/tex">R</script>-module <script type="math/tex">R^{(M)}</script> on a monoid <script type="math/tex">M</script> with the convolution product</td>
-      <td>free monoidally cocomplete <script type="math/tex">\mathcal{V}</script>-category <script type="math/tex">\widehat{\mathcal{A}}</script> on a monoidal category <script type="math/tex">\mathcal{A}</script> with Day convolution</td>
-    </tr>
-  </tbody>
-</table>
+| monoid algebra | Day convolution |
+| -------------- | --------------- |
+| set | category |
+| monoid | monoidal category |
+| ring $$R$$ | monoidally cocomplete[^1] category |
+| $$R$$-module | cocomplete $$\mathcal{V}$$-category |
+| $$R$$-algebra | monoidally cocomplete $$\mathcal{V}$$-category |
+| free $$R$$-module $$R^{(X)}$$ on a set $$X$$ | free cocomplete $$\mathcal{V}$$-category $$\widehat{\mathcal{C}}$$ on a category $$\mathcal{C}$$ |
+| free $$R$$-module $$R^{(X)}$$ on a monoid $$M$$ with the convolution product | free monoidally cocomplete $$\mathcal{V}$$-category $$\widehat{\mathcal{A}}$$ on a monoidal category $$\mathcal{A}$$ with Day convolution |
 
 where a _monoidally cocomplete_ category is a cocomplete monoidal category $$\mathcal{V}$$ such that $$(-\otimes-)\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}$$ is cocontinuous in each variable.
 

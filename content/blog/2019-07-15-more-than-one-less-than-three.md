@@ -80,7 +80,6 @@ That is,
 | 2-functor | $$F(g\circ f)=F(g)\circ F(f)$$ |
 | pseudofunctor | $$F(g\circ f)\cong F(g)\circ F(f)$$ |
 | (op)lax 2-functor| $$F(g\circ f)\Rightarrow F(g)\circ F(f)$$ |
-{:.bordered-table}
 
 At a first glance, (op)-lax functors seem like almost too weak to be useful, but there are [many nice examples](https://www.ncatlab.org/nlab/show/lax+functor#examples) of when they are good things to study.
 
@@ -115,7 +114,6 @@ From [the nLab](https://ncatlab.org/nlab/show/double+category#examples), we have
 | $$\mathsf{Mod}$$ | model categories | left Quil. functors | right Quil. functors | nat. trans. |
 | $$\mathsf{MonCat}$$ | monoidal categories | colax mon. functors | lax mon. functors | mon. nat. trans. |
 | $$\mathsf{Dbl}\Pi(X)$$ | points of top. space $$X$$ | paths | paths | homotopies |
-{:.bordered-table}
 
 For more details about why $$\mathsf{Mod}$$ is so interesting, see \[S11\].
 
