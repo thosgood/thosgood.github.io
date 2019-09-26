@@ -129,7 +129,10 @@ A full and good proof (of the fact in question but also much more besides) can b
 
 By the universal coefficient theorem, there is a short exact sequence
 
-$$0\to \mathrm{Ext}^1_\mathbb{Z}(H_{n-1}(K(A,n),A)) \to H^n(K(A,n),A) \to \mathrm{Hom}_\mathbb{Z}(H_n(K(A,n),A),A) \to0.$$
+$$\begin{aligned}
+    0 \longrightarrow& \mathrm{Ext}^1_\mathbb{Z}(H_{n-1}(K(A,n),A)) \longrightarrow H^n(K(A,n),A)\\
+    &\longrightarrow \mathrm{Hom}_\mathbb{Z}(H_n(K(A,n),A),A) \longrightarrow 0.
+\end{aligned}$$
 
 Then, by the [Hurewicz theorem](https://en.wikipedia.org/wiki/Hurewicz_theorem), we have an isomorphism
 

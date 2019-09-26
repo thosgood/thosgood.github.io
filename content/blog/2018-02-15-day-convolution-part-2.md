@@ -59,7 +59,10 @@ Another nice example ([from the nLab](https://ncatlab.org/nlab/show/end#enriched
 Then a $$\mathcal{V}$$-enriched category is a metric space, and the hom objects tell us the distance between points.
 Further, given two maps $$f,g\colon X\to Y$$ between two metric spaces, the distance between the maps is exactly the enriched functor-category[^5] (given by the end)
 
-$$[X,Y](f,g) = \int _{x\in X} Y(f(x),g(x)) = \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.$$
+$$\begin{aligned}
+    [X,Y](f,g) &= \int _{x\in X} Y(f(x),g(x))\\
+    &= \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.
+\end{aligned}$$
 
 Finally, for the moment, there is the example of **Kan extensions**.
 If we have some $$\mathcal{V}$$-enriched category $$\mathcal{D}$$ that is tensored[^6] over $$\mathcal{V}$$, and some functors $$F\colon\mathcal{C}\to\mathcal{D}$$ and $$p\colon\mathcal{C}\to\mathcal{B}$$, then the **left Kan extension** of $$F$$ along $$p$$ is given by the coend:

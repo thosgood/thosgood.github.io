@@ -91,6 +91,6 @@ $$[I,\mathcal{V}]\big(W,\mathcal{C}(c,F(-))\big)\colon\mathcal{C}^\mathrm{op}\to
 In particular, if $$\mathcal{C}=\mathcal{V}$$ then you can show that
 $$\lim^W F\cong [I,\mathcal{V}](W,F)$$.
 
-_In the next post we'll have a look at *why* this generalisation is of
+_In the next post we'll have a look at **why** this generalisation is of
 any interest, and how we can use it to define (co)ends._
 

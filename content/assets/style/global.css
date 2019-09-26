@@ -10,12 +10,21 @@ h4 {
 }
 
 code {
-  font-size: 1rem;
+  font-family: 'Courier Next', courier, monospace;
+  font-size: 0.9rem;
 }
 
 ul {
   margin-top: 0.25rem;
   padding-left: 1rem;
+}
+
+img {
+  border-radius: 0.5rem;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #aaa;
 }
 
 .katex {

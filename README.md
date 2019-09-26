@@ -11,8 +11,6 @@
     <% end %>
     ```
 - blog!
-    + turn footnotes into sidenotes à la Tufte?
-        * or scrolling TOC in the margin?
     + fix tables
     + tags
         * http://www.gamedesignstories.com/2017/04/28/adding-tags/
@@ -22,4 +20,7 @@
     + posts
         * auto TOCs
         * display date
+        * turn footnotes into sidenotes à la Tufte?
+            - or scrolling TOC in the margin?
+        * full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`
 - _eventually_, https://www.ctrl.blog/entry/nanoc-items-performance.html

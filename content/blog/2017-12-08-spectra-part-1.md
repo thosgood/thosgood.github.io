@@ -64,7 +64,11 @@ $$\mathsf{Top}_*(X\wedge S^1, Z)\cong\mathsf{Top}_*(X,\Omega(Z,z))$$
 naturally in both $$X$$ and $$Z$$, so defining the **(reduced)[^3] suspension** of $$X$$ as $$\Sigma X:=X\wedge S^1$$ gives us an adjunction $$(\Sigma\dashv\Omega)$$.
 But now we notice that _if we can show that $$\Sigma S^i\simeq S^{i+1}$$_ then
 
-$$\mathsf{Top}_*(S^i,(X,x))\cong\mathsf{Top}_*(S^{i-1},\Omega(X,x))\cong\ldots\cong\mathsf{Top}_*(S^1,\Omega^i(X,x))$$
+$$\begin{aligned}
+    \mathsf{Top}_*(S^i,(X,x)) &\cong \mathsf{Top}_*(S^{i-1},\Omega(X,x))\\
+    &\cong \ldots\\
+    &\cong \mathsf{Top}_*(S^1,\Omega^i(X,x))
+\end{aligned}$$
 
 whence the two possible definitions of higher loop spaces agree.
 
