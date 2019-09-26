@@ -17,7 +17,6 @@
             - links to other posts
             - tables
     + tags
-    + katex!
     + pagination
     + better 'posted at' date formatting
         * https://stackoverflow.com/questions/5891555/display-the-date-like-may-5th-using-pythons-strftime ?
@@ -26,7 +25,6 @@
     + posts
         * TOCs
         * display date
-        * smaller maths font!
 
 ## References
 
