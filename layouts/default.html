@@ -4,15 +4,14 @@
 
   <body class="athelas">
 
-    <%= render '/header.html' %>
-
-    <div id="main" class="cf w-100 pv3-ns lh-copy">
-      <div class="center ph3 mw7-ns">
+    <div class="mw7 flex flex-column center">
+      <%= render '/header.html' %>
+      <div id="main" class="w-100 flex flex-wrap items-center lh-copy">
         <%= yield %>
       </div>
+      <%= render '/footer.html' %>
     </div>
-  
-    <%= render '/footer.html' %>
+
     <%= render '/scripts.html' %>
 
   </body>
