@@ -20,7 +20,7 @@ checking:
 deploy:
   default:
     kind: git
-    branch: gh-pages
+    branch: master
     remote: git@github.com:thosgood/thosgood.github.io.git
 
 # Variables
