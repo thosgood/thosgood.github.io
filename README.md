@@ -10,6 +10,7 @@
     + colour schemes?
 - move `-ns` things to the _front_ of the list of classes
 - turn footnotes into sidenotes à la Tufte?
+    + or scrolling TOC in the margin?
 - blog!
     + transfer over posts
         * **TO FIX**
@@ -23,8 +24,8 @@
     + generally look more like current site
     + respect the `<!-- more -->`, or whatever it is
     + posts
+        * TOCs
         * display date
-        * how to make kramdown deal with generating e.g. `<a>` and `<code>` tags with whichever classes i want!
         * smaller maths font!
 
 ## References

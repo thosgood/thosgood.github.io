@@ -1,5 +1,5 @@
 {:	data{:
-edges[[iri{	:raw_contentT:attributesF:compiled_contentF:	pathF[ii{	;F;o:Set:
+edges[[i{i{	:raw_contentT:attributesF:compiled_contentF:	pathF[ii{	;F;o:Set:
 @hash}:	kindTF;	F;
 F[ii{	;F;o;;};TF;	F;
 F[i	i{	;F;o;;};T:created_atT:
@@ -104,194 +104,203 @@ F[iii{	;F;o;;};TF;	F;
 F[iji{	;F;o;;};TF;	F;
 F[iki{	;F;o;;};TF;	F;
 F[ili{	;F;o;;};TF;	F;
-F[ini{	;T;F;	F;
-F[isi{	;o;;}I"/head.html:ETTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[imi{	;F;o;;};TF;	F;
+F[ini{	;F;o;;};TF;	F;
+F[ioi{	;F;o;;};TF;	F;
+F[ipi{	;F;o;;};TF;	F;
+F[iqi{	;F;o;;};TF;	F;
+F[iri{	;F;o;;};TF;	F;
+F[isi{	;F;o;;};TF;	F;
+F[iti{	;F;o;;};TF;	F;
+F[iui{	;F;o;;};TF;	F;
+F[iwi{	;T;F;	F;
+F[i|i{	;o;;}I"/head.html:ETTI"/header.html;TTI"/footer.html;TTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 :
 emailT:arxiv_usernameT:github_usernameT:twitter_usernameT:matrix_usernameTF;	F;
-F[iti{	;F;o;;}
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[ini{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[ini{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[iwi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[iwi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi	{	;T;F;	F;
-F[isi	{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi	{	;T;F;	F;
-F[iqi	{	;T;F;	F;
-F[ipi	{	;T;F;	F;
-F[iti	{	;F;o;;}
+F[ivi	{	;T;F;	F;
+F[i|i	{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi	{	;T;F;	F;
+F[izi	{	;T;F;	F;
+F[iyi	{	;T;F;	F;
+F[i}i	{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi
+F[ivi
 {	;T;F;	F;
-F[isi
-{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi
+F[i|i
+{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi
 {	;T;F;	F;
-F[iqi
+F[izi
 {	;T;F;	F;
-F[ipi
+F[iyi
 {	;T;F;	F;
-F[iti
+F[i}i
 {	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}@£T@¤T@¥TF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[imi{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[ivi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F[ini{	;T;F;	F;
-F[isi{	;o;;}I"/head.html;TTI"/header.html;TTI"/footer.html;TTF;F;	F;
-F[ioi{	;T;F;	F;
-F[iqi{	;T;F;	F;
-F[ipi{	;T;F;	F;
-F[iti{	;F;o;;}
+F[iwi{	;T;F;	F;
+F[i|i{	;o;;}@ÇT@ÈT@ÉTF;F;	F;
+F[ixi{	;T;F;	F;
+F[izi{	;T;F;	F;
+F[iyi{	;T;F;	F;
+F[i}i{	;F;o;;}
 ;T;T;T;T;TF;	F;
-F:vertices[u0I"item:/blog.html;TI"item:/index.html;TI"item:/projects.html;TI"Fitem:/blog/2018-08-25-localisation-and-model-categories-part-1.md;TI",item:/blog/2017-12-11-spectra-part-2.md;TI"8item:/blog/2019-07-29-graded-homotopy-structures.md;TI"?item:/blog/2019-07-14-cauchy-completion-and-profunctors.md;TI"7item:/blog/2018-04-11-triangulation-of-products.md;TI"4item:/blog/2019-09-05-day-convolution-part-3.md;TI"Mitem:/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories.md;TI"$item:/blog/2019-07-13-ct2019.md;TI"Kitem:/blog/2018-08-16-categorication-of-the-dold-kan-correspondence.md;TI"Kitem:/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories.md;TI";item:/blog/2018-10-31-torsors-and-principal-bundles.md;TI"*item:/blog/2019-09-04-stokes-coend.md;TI",item:/blog/2018-03-12-spectra-part-3.md;TI"Eitem:/blog/2019-07-26-twisting-cochains-and-twisted-complexes.md;TI"5item:/blog/2018-03-31-quantum-circuits-part-1.md;TI"5item:/blog/2018-07-08-nothing-really-that-new.md;TI"4item:/blog/2017-12-08-day-convolution-part-1.md;TI",item:/blog/2017-12-08-spectra-part-1.md;TI"+item:/blog/2019-04-15-skomer-island.md;TI"4item:/blog/2018-02-15-day-convolution-part-2.md;TI"Jitem:/blog/2019-08-14-mathematical-motivation-meagre-contributions.md;TI";item:/blog/2019-07-15-more-than-one-less-than-three.md;TI"item:/papers.html;TI"*item:/assets/jquery-3.4.1.slim.min.js;TI"item:/assets/images/me.jpg;TI"!item:/assets/katex/katex.css;TI"%item:/assets/katex/katex.min.css;TI"$item:/assets/katex/katex.min.js;TI"<item:/assets/katex/fonts/KaTeX_Typewriter-Regular.woff2;TI";item:/assets/katex/fonts/KaTeX_Typewriter-Regular.woff;TI":item:/assets/katex/fonts/KaTeX_Typewriter-Regular.ttf;TI"5item:/assets/katex/fonts/KaTeX_Main-Regular.woff;TI"6item:/assets/katex/fonts/KaTeX_Main-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_Main-Regular.ttf;TI"3item:/assets/katex/fonts/KaTeX_AMS-Regular.ttf;TI"5item:/assets/katex/fonts/KaTeX_AMS-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_AMS-Regular.woff;TI"8item:/assets/katex/fonts/KaTeX_Main-BoldItalic.woff;TI"9item:/assets/katex/fonts/KaTeX_Main-BoldItalic.woff2;TI"7item:/assets/katex/fonts/KaTeX_Main-BoldItalic.ttf;TI"7item:/assets/katex/fonts/KaTeX_Size3-Regular.woff2;TI"5item:/assets/katex/fonts/KaTeX_Size3-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Size3-Regular.woff;TI"6item:/assets/katex/fonts/KaTeX_Script-Regular.ttf;TI"8item:/assets/katex/fonts/KaTeX_Script-Regular.woff2;TI"7item:/assets/katex/fonts/KaTeX_Script-Regular.woff;TI":item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff2;TI"8item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.ttf;TI"9item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff;TI"<item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff;TI";item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.ttf;TI"=item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_Main-Italic.woff;TI"3item:/assets/katex/fonts/KaTeX_Main-Italic.ttf;TI"5item:/assets/katex/fonts/KaTeX_Main-Italic.woff2;TI"8item:/assets/katex/fonts/KaTeX_SansSerif-Bold.woff2;TI"6item:/assets/katex/fonts/KaTeX_SansSerif-Bold.ttf;TI"7item:/assets/katex/fonts/KaTeX_SansSerif-Bold.woff;TI"5item:/assets/katex/fonts/KaTeX_Math-Italic.woff2;TI"3item:/assets/katex/fonts/KaTeX_Math-Italic.ttf;TI"4item:/assets/katex/fonts/KaTeX_Math-Italic.woff;TI"7item:/assets/katex/fonts/KaTeX_Size4-Regular.woff2;TI"6item:/assets/katex/fonts/KaTeX_Size4-Regular.woff;TI"5item:/assets/katex/fonts/KaTeX_Size4-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Fraktur-Bold.woff2;TI"4item:/assets/katex/fonts/KaTeX_Fraktur-Bold.ttf;TI"5item:/assets/katex/fonts/KaTeX_Fraktur-Bold.woff;TI"8item:/assets/katex/fonts/KaTeX_Fraktur-Regular.woff;TI"7item:/assets/katex/fonts/KaTeX_Fraktur-Regular.ttf;TI"9item:/assets/katex/fonts/KaTeX_Fraktur-Regular.woff2;TI"1item:/assets/katex/fonts/KaTeX_Main-Bold.ttf;TI"3item:/assets/katex/fonts/KaTeX_Main-Bold.woff2;TI"2item:/assets/katex/fonts/KaTeX_Main-Bold.woff;TI":item:/assets/katex/fonts/KaTeX_SansSerif-Italic.woff2;TI"8item:/assets/katex/fonts/KaTeX_SansSerif-Italic.ttf;TI"9item:/assets/katex/fonts/KaTeX_SansSerif-Italic.woff;TI";item:/assets/katex/fonts/KaTeX_SansSerif-Regular.woff2;TI":item:/assets/katex/fonts/KaTeX_SansSerif-Regular.woff;TI"9item:/assets/katex/fonts/KaTeX_SansSerif-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Size2-Regular.woff;TI"5item:/assets/katex/fonts/KaTeX_Size2-Regular.ttf;TI"7item:/assets/katex/fonts/KaTeX_Size2-Regular.woff2;TI"6item:/assets/katex/fonts/KaTeX_Size1-Regular.woff;TI"7item:/assets/katex/fonts/KaTeX_Size1-Regular.woff2;TI"5item:/assets/katex/fonts/KaTeX_Size1-Regular.ttf;TI"9item:/assets/katex/fonts/KaTeX_Math-BoldItalic.woff2;TI"8item:/assets/katex/fonts/KaTeX_Math-BoldItalic.woff;TI"7item:/assets/katex/fonts/KaTeX_Math-BoldItalic.ttf;TI"(item:/assets/style/tachyons.min.css;TI""item:/assets/style/global.css;TI",item:/assets/style/tachyons-verbose.css;TI"+item:/assets/backgrounds/geometry2.png;TI"+item:/assets/backgrounds/tree_bark.png;TI",item:/assets/backgrounds/pw_pattern.png;TI"-item:/assets/backgrounds/pixel_weave.png;TI"*item:/assets/backgrounds/geometry.png;TI",item:/assets/backgrounds/light_grey.png;TI"%item:/assets/backgrounds/sos.png;TI"(item:/assets/backgrounds/greyzz.png;TI"-item:/assets/files/cv-maths-long-eng.pdf;TI"layout:/post.html;TI"layout:/default.html;TI"layout:/head.html;TI"layout:/footer.html;TI"layout:/header.html;TI"
+F:vertices[~0I"item:/blog.html;TI"item:/index.html;TI"item:/projects.html;TI"Fitem:/blog/2018-08-25-localisation-and-model-categories-part-1.md;TI",item:/blog/2017-12-11-spectra-part-2.md;TI"8item:/blog/2019-07-29-graded-homotopy-structures.md;TI"?item:/blog/2019-07-14-cauchy-completion-and-profunctors.md;TI"7item:/blog/2018-04-11-triangulation-of-products.md;TI"4item:/blog/2019-09-05-day-convolution-part-3.md;TI"Mitem:/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories.md;TI"$item:/blog/2019-07-13-ct2019.md;TI"Kitem:/blog/2018-08-16-categorication-of-the-dold-kan-correspondence.md;TI"Kitem:/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories.md;TI";item:/blog/2018-10-31-torsors-and-principal-bundles.md;TI"*item:/blog/2019-09-04-stokes-coend.md;TI",item:/blog/2018-03-12-spectra-part-3.md;TI"Eitem:/blog/2019-07-26-twisting-cochains-and-twisted-complexes.md;TI"5item:/blog/2018-03-31-quantum-circuits-part-1.md;TI"5item:/blog/2018-07-08-nothing-really-that-new.md;TI"4item:/blog/2017-12-08-day-convolution-part-1.md;TI",item:/blog/2017-12-08-spectra-part-1.md;TI"+item:/blog/2019-04-15-skomer-island.md;TI"4item:/blog/2018-02-15-day-convolution-part-2.md;TI"Jitem:/blog/2019-08-14-mathematical-motivation-meagre-contributions.md;TI";item:/blog/2019-07-15-more-than-one-less-than-three.md;TI"item:/papers.html;TI"Eitem:/assets/post-images/2019-07-15-horizontal-2-composition.png;TI"Citem:/assets/post-images/2019-07-15-vertical-2-composition.png;TI"Qitem:/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg;TI">item:/assets/post-images/2018-3-12-spectra-part-3-E22.jpg;TI"Mitem:/assets/post-images/2018-04-11-triangulation-of-products-result.jpg;TI"_item:/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg;TI"^item:/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png;TI"^item:/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png;TI":item:/assets/post-images/2019-07-15-double-square.png;TI"*item:/assets/jquery-3.4.1.slim.min.js;TI"item:/assets/images/me.jpg;TI"!item:/assets/katex/katex.css;TI"%item:/assets/katex/katex.min.css;TI"$item:/assets/katex/katex.min.js;TI"<item:/assets/katex/fonts/KaTeX_Typewriter-Regular.woff2;TI";item:/assets/katex/fonts/KaTeX_Typewriter-Regular.woff;TI":item:/assets/katex/fonts/KaTeX_Typewriter-Regular.ttf;TI"5item:/assets/katex/fonts/KaTeX_Main-Regular.woff;TI"6item:/assets/katex/fonts/KaTeX_Main-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_Main-Regular.ttf;TI"3item:/assets/katex/fonts/KaTeX_AMS-Regular.ttf;TI"5item:/assets/katex/fonts/KaTeX_AMS-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_AMS-Regular.woff;TI"8item:/assets/katex/fonts/KaTeX_Main-BoldItalic.woff;TI"9item:/assets/katex/fonts/KaTeX_Main-BoldItalic.woff2;TI"7item:/assets/katex/fonts/KaTeX_Main-BoldItalic.ttf;TI"7item:/assets/katex/fonts/KaTeX_Size3-Regular.woff2;TI"5item:/assets/katex/fonts/KaTeX_Size3-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Size3-Regular.woff;TI"6item:/assets/katex/fonts/KaTeX_Script-Regular.ttf;TI"8item:/assets/katex/fonts/KaTeX_Script-Regular.woff2;TI"7item:/assets/katex/fonts/KaTeX_Script-Regular.woff;TI":item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff2;TI"8item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.ttf;TI"9item:/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff;TI"<item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff;TI";item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.ttf;TI"=item:/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff2;TI"4item:/assets/katex/fonts/KaTeX_Main-Italic.woff;TI"3item:/assets/katex/fonts/KaTeX_Main-Italic.ttf;TI"5item:/assets/katex/fonts/KaTeX_Main-Italic.woff2;TI"8item:/assets/katex/fonts/KaTeX_SansSerif-Bold.woff2;TI"6item:/assets/katex/fonts/KaTeX_SansSerif-Bold.ttf;TI"7item:/assets/katex/fonts/KaTeX_SansSerif-Bold.woff;TI"5item:/assets/katex/fonts/KaTeX_Math-Italic.woff2;TI"3item:/assets/katex/fonts/KaTeX_Math-Italic.ttf;TI"4item:/assets/katex/fonts/KaTeX_Math-Italic.woff;TI"7item:/assets/katex/fonts/KaTeX_Size4-Regular.woff2;TI"6item:/assets/katex/fonts/KaTeX_Size4-Regular.woff;TI"5item:/assets/katex/fonts/KaTeX_Size4-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Fraktur-Bold.woff2;TI"4item:/assets/katex/fonts/KaTeX_Fraktur-Bold.ttf;TI"5item:/assets/katex/fonts/KaTeX_Fraktur-Bold.woff;TI"8item:/assets/katex/fonts/KaTeX_Fraktur-Regular.woff;TI"7item:/assets/katex/fonts/KaTeX_Fraktur-Regular.ttf;TI"9item:/assets/katex/fonts/KaTeX_Fraktur-Regular.woff2;TI"1item:/assets/katex/fonts/KaTeX_Main-Bold.ttf;TI"3item:/assets/katex/fonts/KaTeX_Main-Bold.woff2;TI"2item:/assets/katex/fonts/KaTeX_Main-Bold.woff;TI":item:/assets/katex/fonts/KaTeX_SansSerif-Italic.woff2;TI"8item:/assets/katex/fonts/KaTeX_SansSerif-Italic.ttf;TI"9item:/assets/katex/fonts/KaTeX_SansSerif-Italic.woff;TI";item:/assets/katex/fonts/KaTeX_SansSerif-Regular.woff2;TI":item:/assets/katex/fonts/KaTeX_SansSerif-Regular.woff;TI"9item:/assets/katex/fonts/KaTeX_SansSerif-Regular.ttf;TI"6item:/assets/katex/fonts/KaTeX_Size2-Regular.woff;TI"5item:/assets/katex/fonts/KaTeX_Size2-Regular.ttf;TI"7item:/assets/katex/fonts/KaTeX_Size2-Regular.woff2;TI"6item:/assets/katex/fonts/KaTeX_Size1-Regular.woff;TI"7item:/assets/katex/fonts/KaTeX_Size1-Regular.woff2;TI"5item:/assets/katex/fonts/KaTeX_Size1-Regular.ttf;TI"9item:/assets/katex/fonts/KaTeX_Math-BoldItalic.woff2;TI"8item:/assets/katex/fonts/KaTeX_Math-BoldItalic.woff;TI"7item:/assets/katex/fonts/KaTeX_Math-BoldItalic.ttf;TI"(item:/assets/style/tachyons.min.css;TI""item:/assets/style/global.css;TI",item:/assets/style/tachyons-verbose.css;TI"+item:/assets/backgrounds/geometry2.png;TI"+item:/assets/backgrounds/tree_bark.png;TI",item:/assets/backgrounds/pw_pattern.png;TI"-item:/assets/backgrounds/pixel_weave.png;TI"*item:/assets/backgrounds/geometry.png;TI",item:/assets/backgrounds/light_grey.png;TI"%item:/assets/backgrounds/sos.png;TI"(item:/assets/backgrounds/greyzz.png;TI"-item:/assets/files/cv-maths-long-eng.pdf;TI"layout:/post.html;TI"layout:/default.html;TI"layout:/head.html;TI"layout:/footer.html;TI"layout:/header.html;TI"
 items;TI"layouts;TI"configuration;T:versioni

@@ -1,4 +1,4 @@
-{:	data{lo:Nanoc::Core::Identifier:
+{:	data{uo:Nanoc::Core::Identifier:
 @type:	full:@stringI"//blog/2019-09-05-day-convolution-part-3.md:ET{:default{
 :rawU: Nanoc::Core::TextualContent[I"]/Users/Tim/Websites/thosgood.github.io/content/blog/2019-09-05-day-convolution-part-3.md;
 TI"©!Finally, I find myself with enough motivation to start writing the last part to this series. It's been a while, but hopefully nobody has actually been waiting... This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I've got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes' theorem, which I found pretty neat indeed --- more details can be found in [this post](/blog/2019/09/04/stokes-coend.html).
@@ -288,7 +288,7 @@ and this looks like ‚àÉ for composition of relations
   </ol>
 </div>
 ;
-T:_0U;[0I"ã;<!DOCTYPE HTML>
+T:_0U;[0I"Ö;<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -491,9 +491,9 @@ and this looks like ‚àÉ for composition of relations
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -641,7 +641,7 @@ T;U;[0I"!<p>For category theorists, the idea that ‚Äúeverything is a Kan ex
 
 <p>One other question that I do have is the following: is there something to be gained by writing <script type="math/tex">C_X</script> as the functor represented by <script type="math/tex">X</script>, and using the coend version of the Yoneda lemma? I don‚Äôt know, but would love to find out!</p>
 ;
-T;U;[0I"x!<!DOCTYPE HTML>
+T;U;[0I"r!<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -723,9 +723,9 @@ T;U;[0I"x!<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -848,7 +848,7 @@ About the human heart.<br /></p>
 </ol>
 
 ;
-T;U;[0I"=<!DOCTYPE HTML>
+T;U;[0I"7<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -919,9 +919,9 @@ About the human heart.<br /></p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -1093,7 +1093,7 @@ T;U;[0I"Œ$<p>As I mentioned in a previous post, I recently saw a talk by <a 
   <li>Does this tie in to the idea of ‚Äúapproximate composition‚Äù (c.f. <a href="http://www.cs.ox.ac.uk/ACT2019/preproceedings/Walter%20Tholen%20Approximate%20composition%20(revised).pdf">Walter Tholen‚Äôs talk on metagories at ACT2019</a>).</li>
 </ol>
 ;
-T;U;[0I"1<!DOCTYPE HTML>
+T;U;[0I"ˇ0<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -1192,9 +1192,9 @@ T;U;[0I"1<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -1269,7 +1269,7 @@ T;U;[0I"©<p>This week was the <a href="https://ytm2019.epfl.ch">Young Topol
 
 <p>Also really great one was <a href="http://pi.math.cornell.edu/~maru/index.html">Maru Sarazola</a>‚Äôs talk on constructing model and Waldhausen category structures via cotorsion pairs: a method that lets you get model structures on abelian categories that play nicely with all the abelian structure, but where you have some freedom to choose the morphisms that you want to be weak equivalences. I don‚Äôt think she currently has notes for this stuff typed up anywhere, but (from what I gather) it‚Äôs in the works!</p>
 ;
-T;U;[0I"˙<!DOCTYPE HTML>
+T;U;[0I"Ù<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -1314,9 +1314,9 @@ T;U;[0I"˙<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -1709,7 +1709,7 @@ If the two edge categories agree then we say that <script type="math/tex">\maths
   </ol>
 </div>
 ;
-T;U;[0I"MD<!DOCTYPE HTML>
+T;U;[0I"GD<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -1946,9 +1946,9 @@ If the two edge categories agree then we say that <script type="math/tex">\maths
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -2245,7 +2245,7 @@ We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a hr
   </ol>
 </div>
 ;
-T;U;[0I"@:<!DOCTYPE HTML>
+T;U;[0I"::<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -2410,9 +2410,9 @@ We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a hr
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -2504,7 +2504,7 @@ T;U;[0I"ª<p>I have just come back from CT2019 in Edinburgh, and it was a fa
   <li><a href="http://conferences.inf.ed.ac.uk/ct2019/slides/73.pdf">Hopf-Frobenius Algebras (Joseph Collins)</a></li>
 </ul>
 ;
-T;U;[0I" <!DOCTYPE HTML>
+T;U;[0I"ƒ<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -2558,9 +2558,9 @@ T;U;[0I" <!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -2697,7 +2697,7 @@ It swims away from the shore and does not return to land for several years.</p>
   </ol>
 </div>
 ;
-T;U;[0I"<!DOCTYPE HTML>
+T;U;[0I"<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -2779,9 +2779,9 @@ It swims away from the shore and does not return to land for several years.</p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -2918,7 +2918,7 @@ Any ideas?</p>
   </ol>
 </div>
 ;
-T;U;[0I"ü<!DOCTYPE HTML>
+T;U;[0I"ô<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -3003,9 +3003,9 @@ Any ideas?</p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -3174,7 +3174,7 @@ Here are some nice examples.</p>
   </ol>
 </div>
 ;
-T;U;[0I"´&<!DOCTYPE HTML>
+T;U;[0I"•&<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -3275,9 +3275,9 @@ Here are some nice examples.</p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -3582,7 +3582,7 @@ The lemma that we‚Äôll look at is the following (where we‚Äôve yet to define the
   </ol>
 </div>
 ;
-T;U;[0I"CA<!DOCTYPE HTML>
+T;U;[0I"=A<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -3749,9 +3749,9 @@ The lemma that we‚Äôll look at is the following (where we‚Äôve yet to define the
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -3897,7 +3897,7 @@ For <script type="math/tex">n=3</script> we embed the above cube as the face of 
 
 <p><img src="/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg" alt="Defining Tot for length 3 complexes." class="img-responsive" /></p>
 ;
-T;U;[0I"[<!DOCTYPE HTML>
+T;U;[0I"U<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -3988,9 +3988,9 @@ For <script type="math/tex">n=3</script> we embed the above cube as the face of 
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -4084,7 +4084,7 @@ I‚Äôve been hard at work on thesis things, so haven‚Äôt been able to write up al
 
 <p>(In case you can‚Äôt tell, I am fascinated by simple game theory and ‚Äòmeta-riddles‚Äô.)</p>
 ;
-T;U;[0I"Ú<!DOCTYPE HTML>
+T;U;[0I"Ï<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -4139,9 +4139,9 @@ I‚Äôve been hard at work on thesis things, so haven‚Äôt been able to write up al
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -4336,7 +4336,7 @@ There are a lot of things that I still don‚Äôt understand, but oh my goodness am
   </ol>
 </div>
 ;
-T;U;[0I"†(<!DOCTYPE HTML>
+T;U;[0I"ö(<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -4449,9 +4449,9 @@ There are a lot of things that I still don‚Äôt understand, but oh my goodness am
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -4640,7 +4640,7 @@ There are nine 1-simplices in the product:</p>
   </ol>
 </div>
 ;
-T;U;[0I"$<!DOCTYPE HTML>
+T;U;[0I"$<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -4747,9 +4747,9 @@ There are nine 1-simplices in the product:</p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -5279,7 +5279,7 @@ For example,</p>
   </ol>
 </div>
 ;
-T;U;[0I"â<!DOCTYPE HTML>
+T;U;[0I"É<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -5570,9 +5570,9 @@ For example,</p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -5628,7 +5628,7 @@ For example,</p>
 T;@Ì;@Ìo;;;;	I"'/blog/2018-03-12-spectra-part-3.md;
 T{;{
 ;U;[I"U/Users/Tim/Websites/thosgood.github.io/content/blog/2018-03-12-spectra-part-3.md;
-TI"´This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process.
+TI"£This post is a weird one: it's not really aimed at any one audience, but is more of a dump of a bunch of information that I'm trying to process.
 
 <!-- more -->
 
@@ -5721,13 +5721,11 @@ As an interesting fact, we can see that $$E_n$$ is generally homotopically non-t
 
 ![Proof that $$E_2(2)$$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg)
 
-&nbsp;
-
 I haven't really talked much about spectra here, but the definition of an **infinite loop space** in Vogt is the same as the definition of an $$\Omega$$-spectrum in the previous post.
 Vogt mentions (5.2) that if $$X$$ is an infinite loop space then $$Y\mapsto[Y,X_n]^\bullet$$ defines a cohomology theory, and that any cohomology theory arises in this way.
 This all seems really nice, but I'm not entirely certain how complicated a proof of this is, or how trivial this statement is.
 ;
-T;U;[0I"*<p>This post is a weird one: it‚Äôs not really aimed at any one audience, but is more of a dump of a bunch of information that I‚Äôm trying to process.</p>
+T;U;[0I"*<p>This post is a weird one: it‚Äôs not really aimed at any one audience, but is more of a dump of a bunch of information that I‚Äôm trying to process.</p>
 
 <!-- more -->
 
@@ -5874,13 +5872,11 @@ As an interesting fact, we can see that <script type="math/tex">E_n</script> is 
 
 <p><img src="/assets/post-images/2018-3-12-spectra-part-3-E22.jpg" alt="Proof that $$E_2(2)$$ is homotopic to the circle" /></p>
 
-<p>¬†</p>
-
 <p>I haven‚Äôt really talked much about spectra here, but the definition of an <strong>infinite loop space</strong> in Vogt is the same as the definition of an <script type="math/tex">\Omega</script>-spectrum in the previous post.
 Vogt mentions (5.2) that if <script type="math/tex">X</script> is an infinite loop space then <script type="math/tex">Y\mapsto[Y,X_n]^\bullet</script> defines a cohomology theory, and that any cohomology theory arises in this way.
 This all seems really nice, but I‚Äôm not entirely certain how complicated a proof of this is, or how trivial this statement is.</p>
 ;
-T;U;[0I"t6<!DOCTYPE HTML>
+T;U;[0I"c6<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -6059,8 +6055,6 @@ As an interesting fact, we can see that <script type="math/tex">E_n</script> is 
 
 <p><img src="/assets/post-images/2018-3-12-spectra-part-3-E22.jpg" alt="Proof that $$E_2(2)$$ is homotopic to the circle" /></p>
 
-<p>¬†</p>
-
 <p>I haven‚Äôt really talked much about spectra here, but the definition of an <strong>infinite loop space</strong> in Vogt is the same as the definition of an <script type="math/tex">\Omega</script>-spectrum in the previous post.
 Vogt mentions (5.2) that if <script type="math/tex">X</script> is an infinite loop space then <script type="math/tex">Y\mapsto[Y,X_n]^\bullet</script> defines a cohomology theory, and that any cohomology theory arises in this way.
 This all seems really nice, but I‚Äôm not entirely certain how complicated a proof of this is, or how trivial this statement is.</p>
@@ -6068,9 +6062,9 @@ This all seems really nice, but I‚Äôm not entirely certain how complicated a pro
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -6361,7 +6355,7 @@ Here are some papers and blog posts that I found interesting and really well wri
   </ol>
 </div>
 ;
-T;U;[0I"¬6<!DOCTYPE HTML>
+T;U;[0I"º6<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -6524,9 +6518,9 @@ Here are some papers and blog posts that I found interesting and really well wri
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -6928,7 +6922,7 @@ A &\to &*\\
   </ol>
 </div>
 ;
-T;U;[0I"Vc<!DOCTYPE HTML>
+T;U;[0I"Pc<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -7153,9 +7147,9 @@ A &\to &*\\
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -7458,7 +7452,7 @@ But the problem then arises that <script type="math/tex">(\gamma_1\cdot\gamma_2)
   </ol>
 </div>
 ;
-T;U;[0I"B<!DOCTYPE HTML>
+T;U;[0I"B<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -7627,9 +7621,9 @@ But the problem then arises that <script type="math/tex">(\gamma_1\cdot\gamma_2)
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -7864,7 +7858,7 @@ is (if it exists) an object <script type="math/tex">\lim^W F\in\mathcal{C}</scri
 any interest, and how we can use it to define (co)ends.</em></p>
 
 ;
-T;U;[0I"©!<!DOCTYPE HTML>
+T;U;[0I"£!<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -7989,9 +7983,9 @@ any interest, and how we can use it to define (co)ends.</em></p>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -8322,7 +8316,7 @@ convinced of the usefulness and omnipresence of limits and not talk too much
 
 </div>
 ;
-T;U;[0I"c<!DOCTYPE HTML>
+T;U;[0I"c<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -8611,9 +8605,9 @@ convinced of the usefulness and omnipresence of limits and not talk too much
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -8731,7 +8725,7 @@ T;U;[0I"^<div class="fl w-100 ph4 pt3 tc w-third-ns">
   </ul>
 </div>
 ;
-T;U;[0I";<!DOCTYPE HTML>
+T;U;[0I"5<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -8796,9 +8790,9 @@ T;U;[0I";<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -8878,7 +8872,7 @@ T;U;[0I"‘<div class="center ph4 w-two-thirds-ns">
   </ul>
 </div>
 ;
-T;U;[0I"¥<!DOCTYPE HTML>
+T;U;[0I"Æ<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -8924,9 +8918,9 @@ T;U;[0I"¥<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -9098,7 +9092,7 @@ T;U;[0I"j<div class="fl w100 ph4 lh-title w-50-ns">
     </li>
   </ul>
 </div>;
-T;U;[0I"H<!DOCTYPE HTML>
+T;U;[0I"B<!DOCTYPE HTML>
 <html lang="en">
   <head>
   <meta charset="utf-8">
@@ -9190,9 +9184,9 @@ T;U;[0I"H<!DOCTYPE HTML>
       </div>
     </div>
   
-    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+    <div id="footer" class="w-100 pt2 bt courier f6">
   <div class="center pa3 mw7-ns">
-    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+    <div class="w-100 ph4 mb3 fl-ns ph0-ns w-two-thirds-ns">
       <ul class="list pl0 ma0">
         <li>Tim Hosgood</li>
         <li>Universit√© d'Aix-Marseille</li>
@@ -13585,7 +13579,7 @@ T;@:;@:;@:o;;;;	I"(/assets/files/cv-maths-long-eng.pdf;
 T{;{	;o;;I"V/Users/Tim/Websites/thosgood.github.io/content/assets/files/cv-maths-long-eng.pdf;
 T;@@;@@;@@o;;;;	I"/assets/style/global.css;
 T{;{	;U;[I"K/Users/Tim/Websites/thosgood.github.io/content/assets/style/global.css;
-TI"Va {
+TI"sa {
   text-decoration: underline;
   color: #333;
 }
@@ -13593,5 +13587,27 @@ TI"Va {
 h4 {
   font-size: 1.25rem;
 }
+
+code {
+  font-size: 1rem;
+}
 ;
-T;@F;@F;@F:versioni
+T;@F;@F;@Fo;;;;	I"@/assets/post-images/2019-07-15-horizontal-2-composition.png;
+T{;{	;o;;I"n/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2019-07-15-horizontal-2-composition.png;
+T;@N;@N;@No;;;;	I">/assets/post-images/2019-07-15-vertical-2-composition.png;
+T{;{	;o;;I"l/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2019-07-15-vertical-2-composition.png;
+T;@T;@T;@To;;;;	I"L/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg;
+T{;{	;o;;I"z/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg;
+T;@Z;@Z;@Zo;;;;	I"9/assets/post-images/2018-3-12-spectra-part-3-E22.jpg;
+T{;{	;o;;I"g/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-3-12-spectra-part-3-E22.jpg;
+T;@`;@`;@`o;;;;	I"H/assets/post-images/2018-04-11-triangulation-of-products-result.jpg;
+T{;{	;o;;I"v/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-04-11-triangulation-of-products-result.jpg;
+T;@f;@f;@fo;;;;	I"Z/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg;
+T{;{	;o;;I"É/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg;
+T;@l;@l;@lo;;;;	I"Y/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png;
+T{;{	;o;;I"Ç/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png;
+T;@r;@r;@ro;;;;	I"Y/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png;
+T{;{	;o;;I"Ç/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png;
+T;@x;@x;@xo;;;;	I"5/assets/post-images/2019-07-15-double-square.png;
+T{;{	;o;;I"c/Users/Tim/Websites/thosgood.github.io/content/assets/post-images/2019-07-15-double-square.png;
+T;@~;@~;@~:versioni
