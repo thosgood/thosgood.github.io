@@ -5,6 +5,9 @@ tags: "category-theory profunctors"
 created_at: 2019-09-05
 ---
 
+* TOC
+{:toc}
+
 Finally, I find myself with enough motivation to start writing the last part to this series. It's been a while, but hopefully nobody has actually been waiting... This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I've got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes' theorem, which I found pretty neat indeed --- more details can be found in [this post](/blog/2019/09/04/stokes-coend.html).
 
 <!-- more -->

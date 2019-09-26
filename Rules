@@ -13,7 +13,7 @@ compile '/**/*.html' do
 end
 
 compile '/blog/*.md' do
-  filter :kramdown, auto_ids: false, math_engine: 'mathjax'
+  filter :kramdown, auto_ids: true, math_engine: 'mathjax'
   layout '/post.*'
   y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
   write "/blog/#{y}/#{m}/#{d}/#{slug}.html"

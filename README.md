@@ -23,7 +23,7 @@
     + generally look more like current site
     + respect the `<!-- more -->`, or whatever it is
     + posts
-        * TOCs
+        * auto TOCs
         * display date
 
 ## References
