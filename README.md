@@ -10,9 +10,6 @@
     <li"><%= i[:title] %></li>
     <% end %>
     ```
-- move `-ns` things to the _front_ of the list of classes
-- deployment!
-    + https://about.gitlab.com/2016/12/07/building-a-new-gitlab-docs-site-with-nanoc-gitlab-ci-and-gitlab-pages/ ?
 - blog!
     + turn footnotes into sidenotes à la Tufte?
         * or scrolling TOC in the margin?
