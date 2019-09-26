@@ -5,8 +5,15 @@ a {
 
 h4 {
   font-size: 1.25rem;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 code {
   font-size: 1rem;
+}
+
+ul {
+  margin-top: 0.25rem;
+  padding-left: 1rem;
 }
