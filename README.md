@@ -25,6 +25,7 @@
     + posts
         * auto TOCs
         * display date
+- _eventually_, https://www.ctrl.blog/entry/nanoc-items-performance.html
 
 ## References
 
