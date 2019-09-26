@@ -1,5 +1,6 @@
 ## Todo
 
+- pick **one** background image
 - do we really need the post titles to have the date now that we use `created_at`?
 - generate the nav bar from `@items`
     + use `link_to_unless_current`, or whatever it is?
