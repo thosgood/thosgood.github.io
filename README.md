@@ -1,13 +1,32 @@
-[![Build Status](https://travis-ci.org/thosgood/thosgood.github.io.svg?branch=release)](https://travis-ci.org/thosgood/thosgood.github.io)
+## Todo
 
-# todo
-- make math rendering work on the blog index
-- switch from disqus to https://staticman.net/docs/ !
-    + if this works, mailgun for notifications?
-- use Tachyons? https://www.leonpaternoster.com/posts/jekyll-tachyons/
-- floating TOC?
-    + would have to disable on small enough screens
-    + or, instead/as well, that thing where the section headers glue to the top of the screen while scrolling? or is that just too flashy...
-    + maybe glue to the left margin?
-- rewrite CSS from scratch
-    + update the sass plugin too? keep on getting warnings that it's been deprecated
+- do we really need the post titles to have the date now that we use `created_at`?
+- generate the nav bar from `@items`
+    + use `link_to_unless_current`, or whatever it is?
+    + also make links in e.g. `index.html` not-static
+- make some things global!
+    + e.g. `class="f4 mb0 pb0"` for all `<h4>`, by default
+    + similarly for `<a>`
+    + colour schemes?
+- move `-ns` things to the _front_ of the list of classes
+- turn footnotes into sidenotes à la Tufte?
+- blog!
+    + transfer over posts
+        * **TO FIX**
+            - links to other posts
+            - tables
+    + tags
+    + katex!
+    + pagination
+    + better 'posted at' date formatting
+        * https://stackoverflow.com/questions/5891555/display-the-date-like-may-5th-using-pythons-strftime ?
+    + generally look more like current site
+    + respect the `<!-- more -->`, or whatever it is
+    + posts
+        * display date
+        * how to make kramdown deal with generating e.g. `<a>` and `<code>` tags with whichever classes i want!
+        * smaller maths font!
+
+## References
+
+- https://clarkdave.net/2012/02/building-a-static-blog-with-nanoc/
