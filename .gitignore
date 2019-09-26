@@ -1,2 +1,3 @@
-/public
-/tmp
+public/
+tmp/nanoc/
+crash.log
