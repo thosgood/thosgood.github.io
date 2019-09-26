@@ -17,6 +17,12 @@ checking:
     - internal_links
     - stale
 
+deploy:
+  default:
+    kind: git
+    branch: master
+    remote: git@github.com:thosgood/thosgood.github.io.git
+
 # Variables
 
 base_url: https://thosgood.github.io
