@@ -5,6 +5,8 @@
     + use `link_to_unless_current`, or whatever it is?
     + also make links in e.g. `index.html` not-static
 - move `-ns` things to the _front_ of the list of classes
+- deployment!
+    + https://about.gitlab.com/2016/12/07/building-a-new-gitlab-docs-site-with-nanoc-gitlab-ci-and-gitlab-pages/ ?
 - blog!
     + turn footnotes into sidenotes à la Tufte?
         * or scrolling TOC in the margin?
