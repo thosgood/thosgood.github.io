@@ -2,9 +2,14 @@
 
 - pick **one** background image
 - do we really need the post titles to have the date now that we use `created_at`?
-- generate the nav bar from `@items`
+- ~~generate the nav bar from `@items~~
     + use `link_to_unless_current`, or whatever it is?
     + also make links in e.g. `index.html` not-static
+    ```
+    <% @items.find_all("/*.html").each do |i| %>
+    <li"><%= i[:title] %></li>
+    <% end %>
+    ```
 - move `-ns` things to the _front_ of the list of classes
 - deployment!
     + https://about.gitlab.com/2016/12/07/building-a-new-gitlab-docs-site-with-nanoc-gitlab-ci-and-gitlab-pages/ ?
