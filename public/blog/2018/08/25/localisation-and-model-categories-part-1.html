@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Localisation and model categories (Part 1)</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Localisation and model categories (Part 1)</h4>
+        <p>After some exceptionally enlightening discussions with Eduard Balzin recently, I’ve made some notes on the links between model categories, homotopy categories, and localisation, and how they all tie in together.
+There’s nothing particularly riveting or original here, but hopefully these notes can help somebody else who was lost in this mire of ideas.</p>
+
+<!-- more -->
+
+<hr />
+
+<p><em>Notational note:</em> we write <script type="math/tex">\mathcal{C}(x,y)</script> instead of <script type="math/tex">\mathrm{Hom}_\mathcal{C}(x,y)</script>.</p>
+
+<h2>Localisation of categories</h2>
+
+<p>Let <script type="math/tex">(\mathcal{C},\mathcal{W})</script> be a pair, with <script type="math/tex">\mathcal{C}</script> a category and <script type="math/tex">\mathcal{W}</script> a wide subcategory (that is, a subcategory containing all the objects of <script type="math/tex">\mathcal{C}</script>, or, equivalently, a set of morphisms in <script type="math/tex">\mathcal{C}</script>).
+This data is known as a <em>relative category</em>, which is a weaker version of a category with weak equivalences, or a homotopical category, or other such notions.</p>
+
+<p>Often we want to <em>localise</em> <script type="math/tex">\mathcal{C}</script> along <script type="math/tex">\mathcal{W}</script>, i.e. ‘formally invert all morphisms in <script type="math/tex">\mathcal{W}</script>’.
+A nice way of making this rigorous is by defining the localisation <script type="math/tex">\mathcal{C}[\mathcal{W}^{-1}]</script> (also written <script type="math/tex">\operatorname{Ho}(\mathcal{C})</script> or <script type="math/tex">W^{-1}\mathcal{C}</script>)<sup id="fnref:3"><a href="#fn:3" class="footnote">1</a></sup> by a universal property:<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup></p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{lcr}
+    \mathcal{C} & \xrightarrow{\mathcal{W}\,\mapsto\,\text{iso}_\mathcal{D}} & \mathcal{D}\\
+    \quad\searrow & & \nearrow_{\exists!}\\
+    & \mathcal{C}[\mathcal{W}^{-1}] &
+\end{array} %]]></script>
+
+<p>That is, any category (along with a functor into it) such that all morphisms in <script type="math/tex">\mathcal{W}</script> become isomorphisms <em>must</em> factor <em>uniquely</em> through <script type="math/tex">\mathcal{C}[\mathcal{W}^{-1}]</script>.</p>
+
+<p>Since our definition is in terms of a universal property, <strong>if</strong> the localisation of a category exists then it is unique.</p>
+
+<h3>Gabriel-Zisman</h3>
+
+<p>There is a reasonably concrete way of constructing the localisation that is called <em>Gabriel-Zisman</em> (or sometimes <em>zigzag</em>) <em>localisation</em>.
+It has a few issues, which we discuss below, after giving a definition.
+This is the localisation that most people will first study in the case of constructing the derived category of complexes, or some other such example, in a course on homological algebra or algebraic geometry.</p>
+
+<p>We define the objects of <script type="math/tex">\mathcal{C}[\mathcal{W}^{-1}]</script> to be those of <script type="math/tex">\mathcal{C}</script>, and the morphisms to be <em>zigzags</em> of morphisms: a morphism <script type="math/tex">x\to y</script> is given by a directed graph whose vertices are objects of <script type="math/tex">\mathcal{C}</script>, and whose edges are labelled by arrows in <script type="math/tex">\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})</script>, <strong>modulo certain equivalence relations</strong>.<sup id="fnref:1"><a href="#fn:1" class="footnote">3</a></sup>
+That is, a morphism from <script type="math/tex">x=a_0</script> to <script type="math/tex">y=a_{n+1}</script> is given by a string of objects <script type="math/tex">a_1,\ldots,a_n\in\mathcal{C}</script> with maps between them: either a map <script type="math/tex">a_i\to a_{i+1}</script> in <script type="math/tex">\mathcal{C}</script>, or a map <script type="math/tex">a_i\leftarrow a_{i+1}</script> in <script type="math/tex">\mathcal{W}</script>.</p>
+
+<p>Note that, if <script type="math/tex">\mathcal{W}</script> contains all identity maps (for example), then we can always insert identity maps in our zigzags to ensure that they are always of the form <script type="math/tex">f_1g_1\ldots f_ng_n</script> with <script type="math/tex">f_i\in\operatorname{Arr}(\mathcal{C})</script> and <script type="math/tex">g_i\in\operatorname{Arr}(\mathcal{W}^\text{op})</script>.</p>
+
+<p>As you can see, arbitrary morphisms in this category can be unreasonably large (in terms of the data describing them), and so we might hope that, by placing some conditions on <script type="math/tex">\mathcal{W}</script>, we can globally bound the length of the zigzags.
+If fact, if <script type="math/tex">\mathcal{W}</script> is a <em><a href="https://ncatlab.org/nlab/show/calculus+of+fractions#definition">calculus of fractions</a></em> then we can show that all the zigzags are actually just (co)roofs (depending on the handedness of the calculus of fractions):</p>
+
+<script type="math/tex; mode=display">x\to a\xleftarrow{\small\mathcal{W}} y \quad\text{or}\quad x\xleftarrow{\small\mathcal{W}}a\to y.</script>
+
+<p>Note that we <strong>still</strong> have an equivalence relation: two morphisms <script type="math/tex">x\xleftarrow{\mathcal{W}}a\to y</script> and <script type="math/tex">x\xleftarrow{\mathcal{W}}b\to y</script> are equivalent if there exists some roof <script type="math/tex">a\xleftarrow{\mathcal{W}}e\to b</script> such that ‘everything commutes’.<sup id="fnref:2"><a href="#fn:2" class="footnote">4</a></sup></p>
+
+<p>One potential problem with this construction (depending on how much you care about these things) is that the localisation might live only in some bigger universe, and so you have to start worrying about that.</p>
+
+<h3>Dwyer-Kan</h3>
+
+<p>Of course, just constructing a category is not usually enough these days, and we instead want to give it some higher structure.
+Enter <em>Dwyer-Kan</em> (or <em>simplicial</em>) localisation.</p>
+
+<p>This is a way of constructing an <script type="math/tex">(\infty,1)</script>-category <script type="math/tex">L_\mathcal{W}\mathcal{C}</script>, realised as a <em>simplicial category</em>.
+We talk more about simplicial categories later on, but first we quote Julia E. Bergner from <a href="https://arxiv.org/abs/math/0406507">“A model category structure on the category of simplicial categories”</a>:</p>
+
+<p><em>Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets.</em>
+<em>If <script type="math/tex">a</script> and <script type="math/tex">b</script> are objects in a simplicial category <script type="math/tex">\mathcal{C}</script>, then we denote by <script type="math/tex">\mathrm{Hom}_\mathcal{C}(a,b)</script> the function complex, or simplicial set of maps <script type="math/tex">a\to b</script> in <script type="math/tex">\mathcal{C}</script>.</em>
+<em>This notion is more restrictive than that of a simplicial object in the category of categories.</em>
+<em>Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved.</em></p>
+
+<p>First of all, note that we now require that <script type="math/tex">(\mathcal{C},\mathcal{W})</script> be a <em>category with weak equivalences</em>: all isomorphisms are in <script type="math/tex">\mathcal{W}</script>, and if any two of <script type="math/tex">\{f,g,g\circ f\}</script> are in <script type="math/tex">\mathcal{W}</script> then so too is the third.
+For example, any model category or homotopical category is automatically a category with weak equivalences.</p>
+
+<p>Now then, the definition by universal property is (modulo some technical <script type="math/tex">\infty</script>-details) what you would expect: <script type="math/tex">L_\mathcal{W}\mathcal{C}</script> is an <script type="math/tex">(\infty,1)</script>-category such that <script type="math/tex">\mathcal{C}</script> injects into <script type="math/tex">L_\mathcal{W}\mathcal{C}</script> with every morphism in <script type="math/tex">\mathcal{W}</script> becoming an equivalence (in the <script type="math/tex">(\infty,1)</script>-sense) in <script type="math/tex">L_\mathcal{W}\mathcal{C}</script>, and such that any other such <script type="math/tex">(\infty,1)</script>-category factors ‘uniquely’ through this.</p>
+
+<p>One such way of constructing this localisation is by <em>hammock localisation</em>.
+For any <script type="math/tex">x,y\in\mathcal{C}</script> we define their <script type="math/tex">\mathrm{Hom}</script> as the simplicial set <script type="math/tex">L^\mathrm{H}(x,y)</script> given by</p>
+
+<script type="math/tex; mode=display">L^\mathrm{H}(x,y) := \coprod_{n\in\mathbb{N}}\mathcal{N}(\operatorname{H}_n(x,y))/\sim</script>
+
+<p>where <script type="math/tex">\mathcal{N}</script> is the nerve (which sends a category to a simplicial set), and both the categories <script type="math/tex">\operatorname{H}_n(x,y)</script> and the equivalence relation <script type="math/tex">\sim</script> remain to be defined.</p>
+
+<p>For each <script type="math/tex">n\in\mathbb{N}</script> the category <script type="math/tex">\operatorname{H}_n(x,y)</script> has objects being length-<script type="math/tex">n</script> zigzags, as in Gabriel-Zisman localisation<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>, and the morphisms are ‘hammocks’</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{ccccccccc}
+    &&a_1&\to&a_2\xleftarrow{\small\mathcal{W}}&\ldots&a_n&\\
+    &^{\small\mathcal{W}}\swarrow&&&&&&\searrow\\
+    x&&\downarrow_{\small\mathcal{W}}&&\downarrow_{\small\mathcal{W}}&\ldots&\downarrow_{\small\mathcal{W}}&&y\\
+    &_{\small\mathcal{W}}\nwarrow&&&&&&\nearrow\\
+    &&b_1&\to&b_2\xleftarrow{\small\mathcal{W}}&\ldots&b_n&
+\end{array} %]]></script>
+
+<p>i.e. commutative diagrams of zigzags, where the ‘linking’ arrows are all in <script type="math/tex">\mathcal{W}</script>.
+The equivalence relations are the ‘natural’ ones: we can insert or remove identity maps, and compose any composable morphisms.</p>
+
+<h3>Comparison</h3>
+
+<p>Now then, we can ask how this ‘new’ localisation is related to the ‘old’ one, and we can answer this question with the following lemma.</p>
+
+<p><strong>Lemma.</strong> <script type="math/tex">\pi_0(L_\mathcal{W}\mathcal{C}(x,y))\simeq\mathcal{C}[\mathcal{W}^{-1}]</script>.</p>
+
+<p>For this post, that’s it, but my next post will talk about how we can extend these ideas to localise <em>quasi-categories</em>, and how the Bergner model structure on simplicial categories comes into the story.
+This will, in particular, let us formalise the fact that taking the homotopy category of a category (whenever this makes sense, e.g. for quasi-categories) is somehow equivalent to localising the category along weak equivalences.
+The lemma that we’ll look at is the following (where we’ve yet to define the right-hand side).</p>
+
+<p><strong>Lemma.</strong> <script type="math/tex">\mathcal{C}[\mathcal{W}^{-1}]\simeq\mathrm{h}L\mathcal{C}</script>.</p>
+
+<h2>References</h2>
+
+<ul>
+  <li>Julia E. Bergner, “A model category structure on the category of simplicial categories”, <a href="https://arxiv.org/abs/math/0406507">arXiv:math/0406507</a>.</li>
+  <li>V. Hinich, “Dwyer-Kan localization revisited”, <a href="https://arxiv.org/abs/1311.4128">arXiv:1311.4128</a>.</li>
+  <li>W.G. Dwyer and D.M. Kan, “Calculating simplicial localizations”, <a href="https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf"><em>available online</em></a>.</li>
+  <li>Pierre Gabriel, Michel Zisman, “Calculus of Fractions and Homotopy Theory”, <a href="http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf"><em>available online</em></a>.</li>
+</ul>
+
+<hr />
+
+<h1>Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:3">
+      <p>There are so many things that ‘homotopy category’ or ‘<script type="math/tex">\operatorname{Ho}(\mathcal{C})</script>’ or ‘<script type="math/tex">\operatorname{h}(\mathcal{C})</script>’ can mean, so the context is always very important <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>This diagram is horribly formatted. I am lost without <code>tikz-cd</code>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p>These are just to ensure that composition and the identity morphism behave as expected. See <a href="https://ncatlab.org/nlab/show/localization#general_construction">the nLab</a> for details. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>I think of the diagram you want to show commutes as a tiny house of cards, two layers high. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>But, recalling what we said there, since <script type="math/tex">\mathcal{W}</script> contains all isomorphisms then we can assume that our zigzags always alternate between arrows in <script type="math/tex">\mathcal{C}</script> and arrows in <script type="math/tex">\mathcal{W}^\text{op}</script>. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

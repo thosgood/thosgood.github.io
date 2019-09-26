@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — About</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph3 mw7-ns">
+        <div class="fl w-100 ph4 pt3 tc w-third-ns">
+  <img src="/assets/images/me.jpg" class="pa1 mb2 br-100 ba b--black-70 mw4 mw-100-ns">
+  
+  <h4 class="f4 pa1 ma0">Research interests</h4>
+  <ul class="tl pa0 mt1">
+    <li>Homotopy theory</li>
+    <li>Derived algebraic geometry</li>
+    <li>Type theory</li>
+    <li>Quantum computing</li>
+    <li>FOSS</li>
+    <li>Birds</li>
+  </ul>
+</div>
+
+<div class="fl w-100 ph4 w-two-thirds-ns">
+  <h4 class="f4 mb0 pb0">What I'm doing</h4>
+  <p class="mt1">I&apos;m currently writing my PhD thesis with <a href="http://jgrivaux.perso.math.cnrs.fr" class="link underline black-80">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/" class="link underline black-80">Damien Calaque</a>, on the subject of <span class="i">twisting cochains in complex geometry</span> and <span class="i">Chern classes of coherent sheaves in Deligne cohomology</span>.</p>
+  <p>For other things I'm doing, have a look at the <a class="link underline black-80" href="/projects">projects</a> page.</p>
+
+  <h4 class="f4 mb0 pb0">What I've done</h4>
+  <p class="mt1">I graduated with an MMath (Mathematics) from the University of Oxford in 2016, after having finished my BA in Mathematics there. Whilst there I wrote two theses — both can be found on the <a href="/papers" class="link underline black-80">papers</a> page.</p>
+  <p>For more details see my <a href="/assets/files/cv-maths-long-eng.pdf" class="link underline black-80">[CV]</a>.</p>
+
+  <h4 class="f4 mb0 pb0">Contact me</h4>
+  <ul class="list pl0 mt1">
+    <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">Email</a></li>
+    <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+    <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

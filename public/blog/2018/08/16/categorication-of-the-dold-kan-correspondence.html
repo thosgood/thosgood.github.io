@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Categorication of the Dold-Kan correspondence</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Categorication of the Dold-Kan correspondence</h4>
+        <p>So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’.
+Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.</p>
+
+<!-- more -->
+
+<hr />
+
+<p>There was a talk yesterday on <a href="http://www.mpim-bonn.mpg.de/node/8635"><script type="math/tex">\mathbb{F}_1</script> things</a> by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on <a href="http://www.mpim-bonn.mpg.de/node/8633">moduli spaces of connections on open varieties</a> as well as one by Damien Calaque (my co-supervisor) on <a href="http://www.mpim-bonn.mpg.de/node/8617"><script type="math/tex">\mathbb{E}_n</script>-algebras and vertex models</a>, all of which I managed to follow at least partially (take what you can get, I guess).
+Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a <a href="http://www.mpim-bonn.mpg.de/node/8648">categorified Dold-Kan correspondence</a>.
+I don’t really want to talk about the details (because I’m not at all qualified to do so, and you’d be better served by going directly to the source), but something that I really enjoyed was a ‘dictionary’ that he presented.</p>
+
+<p>Historically, the first step towards ‘groupification’ was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
+Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable <script type="math/tex">\infty</script>-categories: we can turn homological algebra into <em>categorified homological algebra</em>, and, taking inspiration from Serge Lang’s famous ‘exercise’ in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.
+To do so, we need to know what the classical constructions become in this higher-category language, whence the dictionary.</p>
+
+<table class="bordered-table">
+  <thead>
+    <tr>
+      <th>classical</th>
+      <th>categorified</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>abelian group <script type="math/tex">A</script></td>
+      <td>stable <script type="math/tex">\infty</script>-category <script type="math/tex">\mathscr{A}</script></td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">x\in A</script></td>
+      <td><script type="math/tex">X\in\mathscr{A}</script></td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">y-x\in A</script></td>
+      <td><script type="math/tex">\operatorname{cone}(X\xrightarrow{f}Y)\in\mathscr{A}</script></td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">\sum_{i=0}^n(-1)^i x_i\in A</script></td>
+      <td><script type="math/tex">\operatorname{Tot}(X_0\xrightarrow{f_0}\ldots\xrightarrow{f_{n-1}}X_n)\in\mathscr{A}</script></td>
+    </tr>
+    <tr>
+      <td><script type="math/tex">C\cong A\oplus B</script></td>
+      <td><script type="math/tex">\mathscr{C}\simeq\langle\mathscr{A},\mathscr{B}\rangle</script></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that the difference of two elements <script type="math/tex">X,Y</script> in the categorified language depends on the choice of some morphism between them, so there are lots of ‘values’ of “<script type="math/tex">X-Y</script>”, one for each <script type="math/tex">f\colon X\to Y</script>.
+The last line (corresponding to a direct sum) is a semi-orthogonal decomposition.
+Finally, we need to define what <script type="math/tex">\mathrm{Tot}</script> is.</p>
+
+<p>For <script type="math/tex">n=1</script>, we have already defined that <script type="math/tex">\mathrm{Tot}</script> is given by <script type="math/tex">\mathrm{cone}</script>.
+For <script type="math/tex">n=2</script>, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_cartesian).
+For <script type="math/tex">n=3</script> we embed the above cube as the face of a 4-dimensional cube, and take a colimit, etc. etc.</p>
+
+<p><img src="/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg" alt="Defining Tot for length 3 complexes." class="img-responsive" /></p>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

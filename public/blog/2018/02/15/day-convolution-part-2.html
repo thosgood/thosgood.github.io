@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Weighted limits, ends, and Day convolution (Part 2)</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Weighted limits, ends, and Day convolution (Part 2)</h4>
+        <p><em>[<a href="{{ site.baseurl }}{% post_url 2017-12-08-day-convolution-part-1 %}">Part 1</a>, <a href="{{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %}">Part 3</a>]</em></p>
+
+<p>Using the idea of weighted limits, defined in the last post, we can now talk about <strong>ends</strong>.
+The idea of an end is that, given some functor <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script>, which we can think of as defining both a left and a right action on <script type="math/tex">\prod_{c\in\mathcal{C}}F(c,c)</script>, we wish to construct some sort of universal subobject<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> where the two actions coincide.
+Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of <script type="math/tex">\coprod_{c\in\mathcal{C}}F(c,c)</script> that <em>forces</em> the two actions to agree.</p>
+
+<!-- more -->
+
+<hr />
+
+<p><strong>Edit:</strong> If you actually want to learn this stuff then have a look at either of Emily Riehl’s books (<a href="http://www.math.jhu.edu/~eriehl/cathtpy.pdf">Categorical Homotopy Theory</a> and <a href="http://www.math.jhu.edu/~eriehl/context.pdf">Category Theory in Context</a>).
+I honestly don’t think there is a better teaching of this anywhere else in the literature.</p>
+
+<h2>Ends</h2>
+
+<h3>Definitions and settings</h3>
+
+<p>We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.</p>
+
+<p>First, let <script type="math/tex">\mathcal{C}</script> and <script type="math/tex">\mathcal{D}</script> be <script type="math/tex">\mathcal{V}</script>-enriched categories (with <script type="math/tex">\mathcal{V}</script> a closed symmetric monoidal category) and <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script> a <script type="math/tex">\mathcal{V}</script>-functor.
+Then the <strong>end</strong> of <script type="math/tex">F</script>, written <script type="math/tex">\int_\mathcal{C} F</script> is (<em>if it exists!</em>) the <script type="math/tex">\mathrm{Hom}_\mathcal{C}</script>-weighted limit of <script type="math/tex">F</script>:</p>
+
+<script type="math/tex; mode=display">\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.</script>
+
+<p>Dually, the <strong>coend</strong> of <script type="math/tex">F</script>, written <script type="math/tex">\int^\mathcal{C} F</script>, is</p>
+
+<script type="math/tex; mode=display">\int^{c\in\mathcal{C}} F(c,c) := \mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.</script>
+
+<p>Alternatively now, suppose that we have some <script type="math/tex">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</script> between not-necessarily-enriched categories.
+We can still define the end by using <strong>wedges</strong>.
+A <strong>wedge</strong> <script type="math/tex">e\colon w\to F</script> is the data of an object <script type="math/tex">e\in\mathcal{D}</script> and morphisms <script type="math/tex">e_c\colon w\to F(c,c)</script> such that, for any <script type="math/tex">f\colon c\to c'</script>, the following diagram commutes:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{array}{ccc}
+w & \xrightarrow{e_{c'}} & F(c',c')\\
+^{e_c}\Big\downarrow\,\,\,\, & & _{F(f,\mathrm{id})}\Big\downarrow\qquad\\
+F(c,c) & \xrightarrow{F(\mathrm{id},f)} & F(c,c')
+\end{array} %]]></script>
+
+<p>Then we can define the end as a <em>universal</em> wedge <script type="math/tex">w</script> (if it exists), i.e. any other wedge <script type="math/tex">w'</script> factors uniquely through <script type="math/tex">w'\to w</script></p>
+
+<h3>Examples</h3>
+
+<p>I’m going to talk more about the exciting examples and applications of ends (tensor products of categories, geometric realisation, and Day convolution) in the next post in this series, but I would feel awful if I didn’t mention at least a couple here.</p>
+
+<p>One application of ends is in defining <strong>natural transformations</strong>, which shows how overarching the concept is.
+It is pretty much a triviality (from the definitions)<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup> that</p>
+
+<script type="math/tex; mode=display">[\mathcal{C},\mathcal{D}](F,G) \cong \int_{c\in\mathcal{C}} \mathcal{D}\big(F(c),G(c)\big).</script>
+
+<p>This is a nice way of saying it, because it means that we can get the enriched natural transformations of enriched functors “for free” by defining them in exactly this way.</p>
+
+<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from the nLab</a>) is when we take <script type="math/tex">\mathcal{V}=\mathbb{R}_{\geqslant0}\cup\{\infty\}</script>, with the monoidal product given by addition.
+Then a <script type="math/tex">\mathcal{V}</script>-enriched category is a metric space, and the hom objects tell us the distance between points.
+Further, given two maps <script type="math/tex">f,g\colon X\to Y</script> between two metric spaces, the distance between the maps is exactly the enriched functor-category<sup id="fnref:5"><a href="#fn:5" class="footnote">3</a></sup> (given by the end)</p>
+
+<script type="math/tex; mode=display">[X,Y](f,g) = \int _{x\in X} Y(f(x),g(x)) = \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.</script>
+
+<p>Finally, for the moment, there is the example of <strong>Kan extensions</strong>.
+If we have some <script type="math/tex">\mathcal{V}</script>-enriched category <script type="math/tex">\mathcal{D}</script> that is tensored<sup id="fnref:6"><a href="#fn:6" class="footnote">4</a></sup> over <script type="math/tex">\mathcal{V}</script>, and some functors <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script> and <script type="math/tex">p\colon\mathcal{C}\to\mathcal{B}</script>, then the <strong>left Kan extension</strong> of <script type="math/tex">F</script> along <script type="math/tex">p</script> is given by the coend:</p>
+
+<script type="math/tex; mode=display">\mathrm{Lan}F = \int^{c\in\mathcal{C}} \mathrm{Hom}(p(c),-)\odot F(c)</script>
+
+<p>where <script type="math/tex">\odot</script> is the co-power.</p>
+
+<p>In particular then, we see that the generalisation of limits to weighted limits is ‘at least as general as’ the idea of Kan extensions.</p>
+
+<h2>Manipulation and ninja Yoneda</h2>
+
+<p>It’s often useful to know the following fact: <em>continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)</em>.
+In particular,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+    \mathcal{D}\left( d,\int_\mathcal{C} F \right) &\cong \int_\mathcal{C} \mathcal{D}(d,F)\\
+    \mathcal{D}\left( \int^\mathcal{C}\!\!F, d \right) &\cong \int_\mathcal{C} \mathcal{D}(F,d).
+\end{aligned} %]]></script>
+
+<p>We can also rephrase the Yoneda lemma<sup id="fnref:3"><a href="#fn:3" class="footnote">5</a></sup> in terms of ends, as well as finding a <strong>co-Yoneda lemma</strong>.<sup id="fnref:2"><a href="#fn:2" class="footnote">6</a></sup>
+The Yoneda lemma (in the setting of <script type="math/tex">\mathcal{V}</script>-enriched categories) reads</p>
+
+<script type="math/tex; mode=display">[\mathcal{C}^\mathrm{op},\mathcal{V}](\mathcal{C}(-,c),F) \cong F(c)</script>
+
+<p>and so can be rephrased as</p>
+
+<script type="math/tex; mode=display">F \cong \int_{c\in\mathcal{C}} \mathcal{C}(c,-)\otimes F(c)</script>
+
+<p>whence we find the co-Yoneda lemma:</p>
+
+<script type="math/tex; mode=display">F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c).</script>
+
+<h2>Much better references</h2>
+
+<p>If you really want to read about ends then you my friend are in the wrong place.
+Here are some papers and blog posts that I found interesting and really well written:</p>
+
+<ol>
+  <li><a href="https://arxiv.org/abs/1501.02503">This is the (co)end, my only (co)friend</a></li>
+  <li><a href="https://arxiv.org/abs/1604.01670">Coends in conformal field theory</a></li>
+  <li><a href="https://golem.ph.utexas.edu/category/2014/01/ends.html">Ends</a>, on the the n-Category Café</li>
+  <li><a href="https://bartoszmilewski.com/2017/03/29/ends-and-coends/">Ends and coends</a>, on Bartosz Milewski’s Programming Cafe</li>
+</ol>
+
+<hr />
+
+<h1>Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>A subobject of an object <script type="math/tex">y</script> is a class of isomorphisms of monomorphisms into <script type="math/tex">y</script>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>One thing that I’ve learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to <em>accept</em> that something is a triviality without really thinking about <em>why</em> it’s trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year’s resolution is to always prove that trivialities are trivial. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>I’m not sure if this should be ‘enriched functor-category’ or ‘enriched-functor category’. My first thought was the latter, because it’s the category of enriched functors, but I suppose that it’s clearer that our natural transformations are also enriched if we describe this as ‘the functor category enriched over <script type="math/tex">\mathcal{V}</script>’. But then, I tend to overuse hyphens when there’s more than one adjective, just to be extra safe. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>‘Tensor’ is another name for ‘co-power’, i.e. a <script type="math/tex">\mathcal{V}</script>-category <script type="math/tex">\mathcal{E}</script> is <strong>tensored over <script type="math/tex">\mathcal{V}</script></strong> if all pairs of objects <script type="math/tex">(x,k)</script>, where <script type="math/tex">x\in\mathcal{E}</script> and <script type="math/tex">k\in\mathcal{V}</script>, have a <strong>co-power</strong>: an object <script type="math/tex">k\odot x</script> along with a natural isomorphism <script type="math/tex">\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k, \mathcal{C}(x,-))</script>, where <script type="math/tex">\mathcal{V}(-,-)</script> is the internal hom in <script type="math/tex">\mathcal{V}</script>. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>When phrased in terms of ends, this is sometimes called <em>Yoneda reduction</em>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This presentation of the (co-)Yoneda lemma is <a href="https://mathoverflow.net/a/20451">sometimes referred to</a> as the <em>ninja Yoneda lemma</em>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

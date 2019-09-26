@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <%= render '/head.html' %>
+
+  <body class="athelas">
+
+    <%= render '/header.html' %>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph3 mw7-ns">
+        <%= yield %>
+      </div>
+    </div>
+  
+    <%= render '/footer.html' %>
+
+  </body>
+</html>

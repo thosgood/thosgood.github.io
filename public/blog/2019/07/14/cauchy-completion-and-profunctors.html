@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Cauchy completion and profunctors</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Cauchy completion and profunctors</h4>
+        <p>An idea that came up in a few talks at CT2019 was that of ‘spans whose left leg is a left adjoint’.
+I managed (luckily) to get a chance to ask Mike Shulman a few questions about this, as well as post in <a href="https://www.matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>.
+What follows are some things that I learnt (mostly from [BD86]).</p>
+
+<!-- more -->
+
+<hr />
+
+<h2>Bimodules</h2>
+
+<p>A good place to begin is with the definition of a <em>bimodule</em>.</p>
+
+<h3>Classically</h3>
+
+<p>Given rings <script type="math/tex">R</script> and <script type="math/tex">S</script>, we say that an abelian group <script type="math/tex">M</script> is an <em><script type="math/tex">(R,S)</script>-bimodule</em> if it is a left <script type="math/tex">R</script>-module and a right <script type="math/tex">S</script>-module <strong>in a compatible way</strong>: we ask that <script type="math/tex">(rm)s=r(ms)</script>.</p>
+
+<p>Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that <script type="math/tex">M</script> be a right module over <script type="math/tex">R^{\text{op}}\otimes_{\mathbb{Z}}S</script> (or, equivalently, a left module over <script type="math/tex">R\otimes_{\mathbb{Z}}S^{\text{op}}</script>), where <script type="math/tex">R^{\text{op}}</script> is the <em>opposite</em> ring of <script type="math/tex">R</script>, given by just ‘turning the multiplication around’.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h3>Categorically</h3>
+
+<p>Modulo a bunch of technical conditions on the categories involved,<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> a <em>bimodule</em> is a <script type="math/tex">\mathcal{V}</script>-functor (i.e. a functor of <script type="math/tex">\mathcal{V}</script>-enriched categories) <script type="math/tex">\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}</script>.</p>
+
+<p>We can recover the previous definition similar to how we can recover the definition of an <script type="math/tex">R</script>-module as an <script type="math/tex">\mathsf{Ab}</script>-enriched functor <script type="math/tex">R^{\text{op}}\to\mathsf{Ab}</script>. Or, taking <script type="math/tex">\mathcal{V}=\mathsf{Vect}</script>, and <script type="math/tex">\mathcal{C}=\mathbb{B}A</script>, <script type="math/tex">\mathcal{D}=\mathbb{B}B</script>, with <script type="math/tex">A</script> and <script type="math/tex">B</script> both vector spaces, we recover the notion of a vector space with a left <script type="math/tex">A</script>-action and a right <script type="math/tex">B</script>-action.</p>
+
+<p>A fundamental example that seems a bit different from this algebraic one, however, arises when we take <script type="math/tex">\mathcal{V}=\mathsf{Set}</script> and <script type="math/tex">\mathcal{C}=\mathcal{D}</script> to be arbitrary (small) categories.
+Then the hom functor <script type="math/tex">\mathcal{C}(-,-)\colon\mathcal{C}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}</script> is a bimodule.
+This suggests that we should maybe somehow think of bimodules as generalised hom functors, where the objects can live in a different category.</p>
+
+<p>As a small aside, there is some hot debate about whether to use <script type="math/tex">\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}</script> or <script type="math/tex">\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}</script>, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors <script type="math/tex">\mathcal{C}\to\mathcal{D}</script> give you profunctors by composition with the <strong>covariant</strong> Yoneda embedding, as opposed to the contravariant one.
+But the two are formally dual, so it’s really not the biggest of issues.</p>
+
+<h2>Profunctors, distributors, bimodules, or whatever</h2>
+
+<p>Of course, lots of people have different preferences for names, but a <em>profunctor</em> is (using the convention of Borceux and Dejean) a functor <script type="math/tex">\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}</script>.
+People often write such a thing as <script type="math/tex">\mathcal{C}\nrightarrow\mathcal{D}</script>.
+We can define their compositions via colimits or coends:</p>
+
+<script type="math/tex; mode=display">Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)</script>
+
+<p>(although we don’t really care so much about this post).</p>
+
+<p><strong>Update: we talk about this a bit more in <a href="{{ site.baseurl }}{% post_url 2019-09-05-day-convolution-part-3 %}">this post</a>.</strong></p>
+
+<h3>Yoneda</h3>
+
+<p>Every functor <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script> gives a profunctor <script type="math/tex">F^*\colon\mathcal{C}\nrightarrow\mathcal{D}</script> by setting</p>
+
+<script type="math/tex; mode=display">F^*(d,c) = \mathcal{D}(d,Fc),</script>
+
+<p>and <script type="math/tex">F^*</script> has a right adjoint <script type="math/tex">F_*\colon\mathcal{D}\nrightarrow\mathcal{C}</script> given by</p>
+
+<script type="math/tex; mode=display">F_*(c,d) = \mathcal{D}(Fc,d),</script>
+
+<p>where we define adjunctions of profunctors using the classical notion of natural transformations.</p>
+
+<p>If we write <script type="math/tex">\mathbb{1}</script> to mean the category with one object and one (identity) (endo)morphism then any (small) category <script type="math/tex">\mathcal{C}</script> can be identified with the functor category <script type="math/tex">\mathsf{Fun}(\mathbb{1},\mathcal{C})</script>, and the presheaf category <script type="math/tex">\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})</script> is just the category <script type="math/tex">\mathsf{Profun}(\mathbb{1},\mathcal{C})</script>.
+Then the Yoneda embedding is the inclusion</p>
+
+<script type="math/tex; mode=display">\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})</script>
+
+<p>given by <script type="math/tex">F\mapsto F^*</script>.</p>
+
+<h3>Recovering functors</h3>
+
+<p><strong>Theorem.</strong> A profunctor <script type="math/tex">\mathbb{1}\nrightarrow\mathcal{C}</script> is a functor (via Yoneda<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>) if and only if it admits a right adjoint.
+More generally, a profunctor <script type="math/tex">\mathcal{A}\nrightarrow\mathcal{C}</script>, for any small category <script type="math/tex">\mathcal{A}</script>, is a functor (via Yoneda) if and only if it admits a right adjoint.</p>
+
+<p><strong>Proof.</strong> [Theorem 2, BD86].</p>
+
+<p>We will come back to this fact later.</p>
+
+<h2>Cauchy completion</h2>
+
+<p>The <em>Cauchy completion</em> of a (small) category <script type="math/tex">\mathcal{C}</script> can be defined in many ways (as described in [BD86]), but we pick the following: the Cauchy completion of <script type="math/tex">\mathcal{C}</script> is the full subcategory <script type="math/tex">\overline{\mathcal{C}}</script> of <script type="math/tex">\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})</script> spanned by <em>absolutely presentable</em><sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> presheaves.</p>
+
+<p>The idea of Cauchy completeness for a category is in some sense meant to mirror that of Cauchy completeness of real numbers: if we think of a metric space as a category enriched over (the poset of) non-negative real numbers, then we recover this analytic notion (see [Example 3, BD86]).</p>
+
+<p><strong>Lemma.</strong> A presheaf <script type="math/tex">\mathcal{F}\in\hat{\mathcal{C}}</script> is absolutely presentable if and only if it admits a right adjoint.</p>
+
+<p><strong>Proof.</strong> [Propositions 2 and 4, BD86].</p>
+
+<h2>Internal categories</h2>
+
+<p>Recall that [Theorem 2, BD86] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by [Propositions 2 and 4, BD86], are exactly those (in the case where <script type="math/tex">\mathcal{A}=\mathbb{1}</script>) that are in the Cauchy completion of <script type="math/tex">\mathcal{C}</script>).</p>
+
+<p>Now for what motivated me to write this post: something I saw in <a href="https://twitter.com/8ryceClarke">Bryce Clarke</a>’s talk <a href="http://conferences.inf.ed.ac.uk/ct2019/slides/63.pdf">Internal lenses as monad morphisms</a> at CT2019.<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup></p>
+
+<p>Given some category <script type="math/tex">\mathcal{E}</script> with pullbacks, we can define an <em>internal category of <script type="math/tex">\mathcal{E}</script></em> as a monad in the 2-category <script type="math/tex">\mathsf{Span}(\mathcal{E})</script>, but it is <strong>not</strong> the case that internal functors are just (colax) morphisms of monads: <strong>we need to require that the 1-cell admits a right adjoint</strong> (which reduces to asking that the left leg of the corresponding span is an identity/isomorphism).</p>
+
+<p>This is now not so much of a surprising condition, since we’ve already seen that this left-adjoint condition is what ensures that profunctors are actually functors!</p>
+
+<p>What happens then, we may well ask, if we don’t ask for this condition?
+We recover the idea of a <strong>Mealy morphism</strong>.<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup></p>
+
+<h2>References</h2>
+
+<ul>
+  <li>[BD86] <a href="http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf">F. Borceux and D. Dejean. “Cauchy completion in category theory”. Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.</a></li>
+  <li><a href="https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html">J. Baez, <em>Bimodules Versus Spans</em>, n-Category Café</a></li>
+  <li><a href="https://arxiv.org/pdf/0706.1286.pdf">M. Shulman. <em>Framed bicategories and monoidal fibrations.</em> arXiv: 0706.1286v2 [math.CT].</a></li>
+  <li><a href="https://arxiv.org/pdf/1301.3191.pdf">R. Garner and M. Shulman. <em>Enriched categories as a free cocompletion.</em> arXiV: 1301.3191v2 [math.CT].</a></li>
+</ul>
+
+<hr />
+
+<h1>Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><script type="math/tex">x\cdot_{R^{\text{op}}}y:=y\cdot_R x</script>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>To construct <script type="math/tex">\mathcal{C}^{\text{op}}</script> we need <script type="math/tex">V</script> to be braided; to be able to compose bimodules we need cocompleteness of <script type="math/tex">V</script>, with <script type="math/tex">\otimes</script> cocontinuous in both arguments, etc. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>That is, of the form <script type="math/tex">F^*</script> for some functor <script type="math/tex">F\colon\mathcal{C}\to\mathcal{D}</script>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>That is, preserves all (small) colimits. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>If you prefer more of an article-style thing to slides then take a look at the <a href="http://www.cs.ox.ac.uk/ACT2019/preproceedings/Bryce%20Clarke.pdf">pre-proceedings</a> from ACT2019. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Thanks again to Bryce Clarke for <a href="https://twitter.com/8ryceClarke/status/1150434205031161864">answering this question</a>. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Loop spaces, spectra, and operads (Part 3)</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Loop spaces, spectra, and operads (Part 3)</h4>
+        
+<p><em>[<a href="{{ site.baseurl }}{% post_url 2017-12-08-spectra-part-1 %}">Part 1</a>, <a href="{{ site.baseurl }}{% post_url 2017-12-11-spectra-part-2 %}">Part 2</a>]</em></p>
+
+<p>This post is a weird one: it’s not really aimed at any one audience, but is more of a dump of a bunch of information that I’m trying to process.</p>
+
+<!-- more -->
+
+<hr />
+
+<p>Now would be a great time to talk about operads, but I really could not do a better job than <a href="https://twitter.com/math3ma">Tai-Danae Bradley</a> has already done over at her <a href="http://www.math3ma.com">blog</a> in the post <em>What is an Operad</em>, <a href="http://www.math3ma.com/mathema/2017/10/23/what-is-an-operad-part-1">part 1</a> and <a href="http://www.math3ma.com/mathema/2017/10/30/what-is-an-operad-part-2">part 2</a>.
+So throughout this post I’m going to assume that you’ve read this, and I’ll freely reference bits of it without necessarily saying so.</p>
+
+<p>One of the really important points that Tai-Danae makes is talking about the theorem by May that says that</p>
+
+<ol>
+  <li><script type="math/tex">1</script>-fold loop spaces are (weakly homotopy) equivalent to algebras over the associahedra operad; and</li>
+  <li><script type="math/tex">k</script>-fold loop spaces (for <script type="math/tex">k\geqslant2</script>) are (weakly homotopy) equivalent to algebras over the little <script type="math/tex">k</script>-cubes operad.</li>
+</ol>
+
+<p>But as well as algebras over an operad, we also have the notion of <strong>spaces</strong> over an operad, where we obtain similar looking equivalences.
+This idea is more in the language of <strong>brave new algebra</strong> – a phrase introduced by Waldhausen for topological spaces that have some algebraic structures up to coherent homotopies.
+There is a paper, <em>Introduction to Algebra over “Brave New Rings”</em>, by R.M. Vogt (Rendiconti del Circolo Matematico di Palermo, Serie II, Suppl. 59 (1999) pp. 49-82) that is a really great read, if you keep in mind the proviso of slightly different approach: he often works with <strong>non-<script type="math/tex">\Sigma</script>-operads</strong>, which are operads without necessarily having the datum of an action by the symmetric group.
+Just to save you from finding his exact definition, I paraphrase it here.</p>
+
+<hr />
+
+<p><strong>Definition.</strong> A <strong>non-<script type="math/tex">\Sigma</script>-operad</strong> is a <script type="math/tex">\mathsf{Top}</script>-enriched category <script type="math/tex">\mathcal{A}</script> with objects in bijection with <script type="math/tex">\mathbb{N}=\{0,1,\ldots\}</script>, along with an associative continuous bifunctor <script type="math/tex">\oplus\colon\mathcal{A}\times\mathcal{A}\to\mathcal{A}</script> given on objects by <script type="math/tex">m\oplus n=m+n</script>, and such that, for all <script type="math/tex">k</script> and <script type="math/tex">n</script>, the morphism</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+    \coprod_{n=\Sigma r_i} \mathcal{A}(r_1,1)\times\ldots\times\mathcal{A}(r_k,1) &\to \mathcal{A}(n,k)\\
+    (f_1,\ldots,f_k) &\mapsto f_1\oplus\ldots\oplus f_k
+\end{aligned} %]]></script>
+
+<p>is a homeomorphism.</p>
+
+<p>There is also the technical assumption that <script type="math/tex">\mathrm{id}_1\in\mathcal{A}(1,1)</script> is a closed fibration, which we will pass over.</p>
+
+<hr />
+
+<p> </p>
+
+<p>An important thing to note is how this corresponds to May’s definition of an operad.
+The property satisfied by <script type="math/tex">\oplus</script> on coproducts means that <script type="math/tex">\mathcal{A}</script> is actually uniquely determined by composition and the morphism spaces <script type="math/tex">\mathcal{A}(n,1)</script> for <script type="math/tex">n\geqslant0</script>, which is the data that May uses to define (non-<script type="math/tex">\Sigma</script>-)operads.</p>
+
+<p>The very first page of Vogt’s paper has a beautiful ‘dictionary’ that I’ll reproduce (in full, even though we won’t talk about some of the more complicated rows) here, as well as adding another column with references to the places where Vogt proves these equivalences.</p>
+
+<table class="bordered-table">
+  <thead>
+    <tr>
+      <th>classical algebra</th>
+      <th>ref.</th>
+      <th>brave new algebra</th>
+      <th>spectra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>monoid</td>
+      <td>4.3</td>
+      <td><script type="math/tex">A_\infty</script>-space</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>group</td>
+      <td>4.4</td>
+      <td>loop space</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>abelian monoid</td>
+      <td>5.5</td>
+      <td><script type="math/tex">E_\infty</script>-space</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>abelian group</td>
+      <td>6.5, 7.5</td>
+      <td>infinite loop space</td>
+      <td><script type="math/tex">\mathbb{S}</script>-module spectrum</td>
+    </tr>
+    <tr>
+      <td>ring</td>
+      <td> </td>
+      <td><script type="math/tex">A_\infty</script>-ring space</td>
+      <td>monoid in <script type="math/tex">\mathsf{Mod}_\mathbb{S}</script></td>
+    </tr>
+    <tr>
+      <td>commutative ring</td>
+      <td> </td>
+      <td><script type="math/tex">E_\infty</script>-ring space</td>
+      <td>commutative monoid in <script type="math/tex">\mathsf{Mod}_\mathbb{S}</script></td>
+    </tr>
+    <tr>
+      <td>ground ring <script type="math/tex">\mathbb{Z}</script></td>
+      <td> </td>
+      <td><script type="math/tex">E_\infty</script>-ring space <script type="math/tex">Q(S^0)</script></td>
+      <td>sphere spectrum <script type="math/tex">\mathbb{S}</script></td>
+    </tr>
+    <tr>
+      <td>tensor product <script type="math/tex">\otimes_\mathbb{Z}</script></td>
+      <td> </td>
+      <td>?</td>
+      <td>smash product <script type="math/tex">\wedge_\mathbb{S}</script></td>
+    </tr>
+  </tbody>
+</table>
+
+<p> </p>
+
+<p>Now, first of all, we need to define <em>what</em> exactly e.g. an <script type="math/tex">A_\infty</script>-space is, which means we need to define two things:</p>
+
+<ol>
+  <li>the operad <script type="math/tex">\mathcal{A}_\infty</script>, and</li>
+  <li>the notion of a space over an operad.</li>
+</ol>
+
+<p>For the second point, given some non-<script type="math/tex">\Sigma</script>-operad <script type="math/tex">\mathcal{A}</script>, we define an <strong><script type="math/tex">\mathcal{A}</script>-space</strong> to be a continuous functor <script type="math/tex">X\colon\mathcal{B}\to\mathsf{Top}</script> that sends <script type="math/tex">\oplus</script> to <script type="math/tex">\times</script>.
+In particular then, <script type="math/tex">X(n)=X(1)^n</script>, and so we often abuse notation and identify <script type="math/tex">X</script> with the space <script type="math/tex">X(1)</script>.</p>
+
+<p>For the first point, we let <script type="math/tex">\mathrm{Assoc}</script> be the terminal non-<script type="math/tex">\Sigma</script>-operad, so that each <script type="math/tex">\mathrm{Assoc}(n,1)</script> consists of just a single point which we will call {<script type="math/tex">\mu_n</script>}.
+This forces the composition to satisfy</p>
+
+<script type="math/tex; mode=display">\mu_k\circ(\mu_{r_1}\oplus\ldots\oplus\mu_{r_k}) = \mu_{r_1+\ldots+r_k}.</script>
+
+<p>It can be seen that an <script type="math/tex">\mathrm{Assoc}</script>-space is exactly a monoid (this is example 2.4 in Vogt).</p>
+
+<hr />
+
+<p><strong>Definition.</strong> Let <script type="math/tex">\mathcal{B}</script> be a non-<script type="math/tex">\Sigma</script>-operad.
+We say that it is an <strong><script type="math/tex">A_\infty</script>-operad</strong> if the unique functor <script type="math/tex">\mathcal{B}\to\mathcal{A}_\infty</script> is a homotopy equivalence of the underlying morphism spaces.
+If this is the case, then we call a <script type="math/tex">\mathcal{B}</script>-space an <strong><script type="math/tex">A_\infty</script>-space</strong>.</p>
+
+<hr />
+
+<p><strong>Warning.</strong> <em>What follows is nothing more than a sketch of an elephant by a blind man.</em></p>
+
+<p>Again, there is an important note about names and notation.
+What is commonly known as the <strong>associative operad</strong> <script type="math/tex">\mathrm{Assoc}</script> is referred to as <script type="math/tex">\mathcal{A}</script> in Vogt, and what is now called <script type="math/tex">\mathcal{A}_\infty</script> is called <script type="math/tex">\mathcal{W}\mathcal{A}</script> in Vogt, because he constructs it as a ‘homotopy universal <script type="math/tex">A_\infty</script> operad’ from taking some free operad and quotienting by certain relations (sections 2.6, 2.7).
+In fact, there is the idea of <a href="https://ncatlab.org/nlab/show/Boardman-Vogt+resolution">Boardman-Vogt resolution</a>, which is a specific choice of cofibrant resolution of operads, and the associahedra operad gives such a resolution of <script type="math/tex">\mathrm{Assoc}</script>, i.e. a cofibrant replacement:</p>
+
+<script type="math/tex; mode=display">\mathcal{A}_\infty\to\mathrm{Assoc}.</script>
+
+<p>As for the commutative case, section 3 of Vogt explains in detail how the little cubes operad (in one dimension) is an <script type="math/tex">A_\infty</script>-operad that acts on loop spaces.
+This generalises in section 6 to showing that <script type="math/tex">n</script>-fold loop spaces can be acted on by the little <script type="math/tex">n</script>-cubes operad, and taking a suitable colimit we find that infinite loop spaces are acted on by some ‘little <script type="math/tex">\infty</script>-cubes operad’.
+That is, we define <script type="math/tex">E_n</script> to be the little <script type="math/tex">n</script>-discs operad[^1], and <script type="math/tex">E_\infty</script> to be the colimit of the <script type="math/tex">E_n</script>, which is weakly equivalent to the commutative operad <script type="math/tex">\mathrm{Comm}</script>.
+As an interesting fact, we can see that <script type="math/tex">E_n</script> is generally homotopically non-trivial (tiny picture below), but <script type="math/tex">E_\infty</script> is contractible.</p>
+
+<p><img src="/assets/post-images/2018-3-12-spectra-part-3-E22.jpg" alt="Proof that $$E_2(2)$$ is homotopic to the circle" class="img-responsive" /></p>
+
+<p> </p>
+
+<p>I haven’t really talked much about spectra here, but the definition of an <strong>infinite loop space</strong> in Vogt is the same as the definition of an <script type="math/tex">\Omega</script>-spectrum in the previous post.
+Vogt mentions (5.2) that if <script type="math/tex">X</script> is an infinite loop space then <script type="math/tex">Y\mapsto[Y,X_n]^\bullet</script> defines a cohomology theory, and that any cohomology theory arises in this way.
+This all seems really nice, but I’m not entirely certain how complicated a proof of this is, or how trivial this statement is.</p>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

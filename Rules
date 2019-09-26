@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+compile '/index.html' do
+  filter :erb
+  layout '/default.*'
+  write '/index.html'
+end
+
+compile '/**/*.html' do
+  filter :erb
+  layout '/default.*'
+  write item.identifier.without_ext + '/index.html'
+end
+
+compile '/blog/*.md' do
+  filter :kramdown, auto_ids: false, math_engine: 'mathjax'
+  layout '/post.*'
+  y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
+  write "/blog/#{y}/#{m}/#{d}/#{slug}.html"
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*', :erb

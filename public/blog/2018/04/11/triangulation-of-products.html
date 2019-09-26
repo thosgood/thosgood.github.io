@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Triangulations of products of triangulations</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Triangulations of products of triangulations</h4>
+        <p>At a conference this week, I ended up having a conversation with Nicolas Vichery and Eduard Balzin about why simplices are the prevalent choice of geometric shape for higher structure, as opposed to e.g. cubes or globes.</p>
+
+<!-- more -->
+
+<hr />
+
+<p>I know there are a bunch of nice properties that simplices have that other shapes don’t have<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.<sup id="fnref:4"><a href="#fn:4" class="footnote">2</a></sup>
+Nicolas, however, showed me a great little calculation that solves this problem.
+Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.</p>
+
+<p>If we take the (geometric realisation of the) 1-cube (the interval <script type="math/tex">[0,1]</script>), then we can take the product with itself to get <script type="math/tex">[0,1]\times[0,1]</script>, which is automatically the 2-cube.
+More generally, any product of cubes will itself be a cube.
+For simplices, however, this is not at all immediate: think of the problem of trying to find a triangulation for a product of spaces when calculating simplicial homology in an undergraduate course, for example.
+Explicitly, if we take the product of the (geometric realisations of) two 1-simplices (the interval <script type="math/tex">[0,1]</script> again), then we, as above, get the space <script type="math/tex">[0,1]\times[0,1]</script>, which is not a <script type="math/tex">\Delta</script>-complex (in the language of Hatcher).
+To triangulate this space, we need to add a 1-simplex along the diagonal of the square.</p>
+
+<p><img src="/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg" alt="Cubes work, simplices don't" title="Cubes work, simplices don't" /></p>
+
+<p>This isn’t too hard to see, but for arbitrary triangulations of spaces, it’s much harder to see what extra simplices we need to add to their product to recover a triangulation.
+Even if we <em>can</em> figure out how to do it for hard examples, then we still would need a way to describe an algorithm for doing it to <em>any</em> product space.
+But there is a ‘trick’, which works as follows: write your simplices as simplicial sets, <strong>including degeneracies</strong>,<sup id="fnref:2"><a href="#fn:2" class="footnote">3</a></sup> and then take the product in the category of simplicial sets.</p>
+
+<p>Consider our example of <script type="math/tex">\Delta^1\times\Delta^1</script>, i.e. <script type="math/tex">[0,1]\times[0,1]</script>.
+Define the simplicial set <script type="math/tex">X_\bullet</script> by</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+    X_0 &= \{[0], [1]\}\\
+    X_1 &= \{[0,0],[0,1],[1,1]\}\\
+    X_2 &= \{[0,0,0],[0,0,1],[0,1,1],[1,1,1]\}\\
+    &\vdots
+\end{aligned} %]]></script>
+
+<p>that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points 0 and 1; and the 1-simplices correspond to the line from 0 to 1, as well as the two degenerate ‘lines’ from 0 to 0 and from 1 to 1_.</p>
+
+<p>When we apply geometric realisation, these degenerate simplices will ‘vanish’, and so we can just look at what the non-degenerate 1-simplices of <script type="math/tex">X_\bullet\times X_\bullet</script> are to see what happens in terms of triangulation.
+There are nine 1-simplices in the product:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+   &[0,0]\times[0,0], \quad [0,0]\times[0,1], \quad [0,0]\times[1,1],\\
+   &[0,1]\times[0,0], \quad [0,1]\times[0,1], \quad [0,1]\times[1,1],\\
+   &[1,1]\times[0,0], \quad [1,1]\times[0,1], \quad [1,1]\times[1,1].
+\end{aligned} %]]></script>
+
+<p>Five of these are non-degenerate,<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> and the one that interests us is <script type="math/tex">[0,1]\times[0,1]</script>: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.</p>
+
+<p><img src="/assets/post-images/2018-04-11-triangulation-of-products-result.jpg" alt="The final result" title="The final result" /></p>
+
+<p>In essence, the idea is simple, but it’s a trick that I’d never seen before, and it really makes me ‘believe’ in simplices.</p>
+
+<hr />
+
+<h1>Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is <em>not</em> strict, but becomes strict when we consider cubes with connections. See (as always) the <a href="https://ncatlab.org/nlab/show/test+category#examples">nLab page on test categories</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>I mean, what follows doesn’t really answer what we were actually discussing at all (why simplices are the ‘right’ choice, if they even are), but just assuaged one of my doubts about the niceness of simplices that originally led me to wonder about this problem in the first place. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Geometrically, this means we take ‘lines’ that are actually points, ‘triangles’ that are actually lines or points, etc. Algebraically, this means that we take simplices in the image of the degeneracy maps <script type="math/tex">s_i^p\colon\Delta_p\to\Delta_{p+1}</script> given by <script type="math/tex">s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]</script>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>

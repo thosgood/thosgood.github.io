@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Tim Hosgood — Derived, DG, triangulated, and infinity-categories</title>
+  <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body class="athelas">
+
+    <div id="header" class="w-100 bb h3-ns">
+  <div class="mw7 center pa3">
+      <div class="w-100 tc pb2 pa0-ns mh0-ns tl-ns fl-ns w-third-ns">
+        <a href="/index.html" class="f3 link black-80">Tim Hosgood</a>
+      </div>
+
+      <div class="w-100 tc mh0-ns tr-ns fl-ns w-two-thirds-ns">
+        <ul class="f4 list ph4 ma0 fr-ns">
+          <li class="dib pr2 pr3-ns"><a href="/" class="link underline black-80">About</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/papers" class="link underline black-80">Papers</a></li>
+          <li class="dib ph2 ph3-ns"><a href="/projects" class="link underline black-80">Projects</a></li>
+          <li class="dib pl2 pl3-ns"><a href="/blog" class="link underline black-80">Blog</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+    <div id="main" class="cf w-100 pv3-ns lh-copy">
+      <div class="center ph4 pl5-ns pr7-ns mw7-ns">
+        <h3 class="f3">Derived, DG, triangulated, and infinity-categories</h4>
+        <p>This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and <script type="math/tex">A_\infty</script>-categories, and wondered how they all linked together.
+In particular, as an undergraduate I was always confused as to what the difference was between the two steps of constructing the derived category of chain complexes was: taking equivalence classes of chain homotopic complexes; and then formally inverting all quasi-isomorphisms.
+Both of them seemed to be some sort of quotienting/equivalence-class-like action, so why not do them at the same time?
+What different roles were played by each step?</p>
+
+<!-- more -->
+
+<hr />
+
+<p><em>This post could have many errors, and I don’t understand the proofs for many of the things I vaguely imply; I just mildly believe.</em>
+<em>Please do let me know if there is anything grossly misleading or just plain wrong.</em></p>
+
+<h2>Warnings</h2>
+
+<p>First of all, there are two points that I want to make about choices of language that I think are really very confusing.</p>
+
+<ol>
+  <li>When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: a <strong>derived category</strong> is like a homotopy truncation (i.e. the <script type="math/tex">\pi_0</script>) of some thing with much higher homotopical data; a <strong>derived scheme/stack/whatever</strong> is something whose <script type="math/tex">\pi_0</script> is the corresponding classical object.
+ Derived ‘algebraic/geometric objects’ <em>have</em> homotopy truncations; derived categories <em>are</em> homotopy truncations.</li>
+  <li>When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category <script type="math/tex">K(\mathcal{A})</script> the <strong>homotopy category of chain complexes</strong>.
+ This is maybe not the best nomenclature, in some sense, because the category that ‘truly’ deserves this name is the <em>actual</em> homotopy category of chain complexes <script type="math/tex">\mathrm{Ho}\mathsf{Ch}(\mathcal{A})</script>, which is, by definition, the derived category <script type="math/tex">D(\mathcal{A})</script>.
+ Because of this, I won’t refer to <script type="math/tex">K(\mathcal{A})</script> as anything but <script type="math/tex">K(\mathcal{A})</script>.</li>
+</ol>
+
+<h2>A nice diagram</h2>
+
+<p>Without further ado, here is a diagram that attempts to explain the relationships between various things that you might have learnt about in various places.</p>
+
+<p><img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png" alt="How things all sort of fit together" title="How things all sort of fit together" /></p>
+
+<p>Here are a few words about the above diagram.</p>
+
+<ul>
+  <li>The structure of a <em>triangulated category</em> is essentially the structure that the category <script type="math/tex">\mathrm{Ho}(\mathcal{C})</script> inherits from the fact that <script type="math/tex">\mathcal{C}</script> is a <em>stable</em> <script type="math/tex">(\infty,1)</script>-category.
+  The equivalent notion in the more general case (the left-hand side of the diagram) is the structure inherent to <script type="math/tex">\mathrm{h}(\mathcal{C})</script> from an <script type="math/tex">(\infty,1)</script>-category viewed as a quasi-category (and thus, in particular, simplicial set).</li>
+  <li>A <em>stable dg-category</em> is also known as an <em>enhanced triangulated category</em> or a <em>pretriangulated category</em>.</li>
+  <li>If we wanted to draw a column in the middle for <em>stable</em> <script type="math/tex">(\infty,1)</script>-categories that <em>aren’t necessarily linear</em>, then we’d arrive at the notion of a <em>spectral category</em> instead of a dg-category.</li>
+</ul>
+
+<p>Now here is a picture of where the derived category of chain complexes fits in to all this.</p>
+
+<p><img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png" alt="Where does the derived category fit in?" title="Where does the derived category fit in?" /></p>
+
+<p>Here are a few words about the above diagram.</p>
+
+<ul>
+  <li>We can understand the definition of <em>chain homotopies</em> much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval object in chain complexes</a>.</li>
+  <li>
+    <p>As said at the beginning of this post, there <em>is</em> a difference between passing from <script type="math/tex">\mathsf{Ch}(\mathcal{A})</script> to <script type="math/tex">K(\mathcal{A})</script> and from <script type="math/tex">K(\mathcal{A})</script> to <script type="math/tex">D(\mathcal{A})</script>, i.e. quotienting and localising have no reason to behave similarly<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.
+  <em>But</em>, there is a model structure that we can put on <script type="math/tex">\mathsf{Ch}(\mathcal{A})</script>, and so there <em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by Simon Henry</a>,
+  <em>“The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen’s “Homotopical Algebra” (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects.”</em></p>
+
+    <p>There is, however, the slightly confusing fact that the construction of <script type="math/tex">K(\mathcal{A})</script> as a quotient <em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
+  </li>
+</ul>
+
+<h2>Unresolved confusions</h2>
+
+<p>I still don’t fully see the link between the homotopy category <script type="math/tex">\mathrm{h}(\mathcal{C})</script> and the homotopy category <script type="math/tex">\mathrm{Ho}(\mathcal{C})</script> and localisation in general (e.g. I ‘know’ that <script type="math/tex">\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))</script>, where <script type="math/tex">\mathrm{L}</script> is the simplicial localisation, but that’s about it).</p>
+
+<p>You know what?
+There are a lot of things that I still don’t understand, but oh my goodness am I having fun trying to figure it all out.</p>
+
+<hr />
+
+<h1>Footnotes</h1>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Namely <em>derived algebraic geometry</em>, and its siblings, and its cousins, and etc. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Think of rings (for some reason localisations and quotients of rings don’t look as confusingly similar to me as the categorical versions do). <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </div>
+  
+    <div id="footer" class="w-100 mb3 pv2 bt courier f6 h3-ns">
+  <div class="center pa3 mw7-ns">
+    <div class="w-100 ph4 fl-ns ph0-ns w-two-thirds-ns">
+      <ul class="list pl0 ma0">
+        <li>Tim Hosgood</li>
+        <li>Université d'Aix-Marseille</li>
+        <li><a href="mailto:thosgood@posteo.net" class="link underline black-80">thosgood@posteo.net</a></li>
+      </ul>
+    </div>
+
+    <div class="w-100 ph4 fl-ns w-third-ns">
+      <ul class="list ph0 mv2 ph2-ns ma0-ns fr-ns">
+        <li><a href="https://arxiv.org/a/hosgood_t_1" class="link underline black-80">arXiv</a></li>
+        <li><a href="https://github.com/thosgood" class="link underline black-80">GitHub</a></li>
+      </ul>
+      <ul class="list ph0 ma0 ph2-ns fr-ns">
+        <li><a href="https://twitter.com/tjohnhos" class="link underline black-80">Twitter</a></li>
+        <li><a href="https://matrix.to/#/@thosgood:matrix.org" class="link underline black-80">Matrix</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
+    var path = '/assets/backgrounds/';
+    $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+
+  </body>
+</html>
