@@ -11,7 +11,6 @@
     <% end %>
     ```
 - blog!
-    + fix tables
     + tags
         * http://www.gamedesignstories.com/2017/04/28/adding-tags/
     + pagination
@@ -19,7 +18,8 @@
         * https://stackoverflow.com/questions/5891555/display-the-date-like-may-5th-using-pythons-strftime ?
     + posts
         * auto TOCs
-        * display date
+            - probably from `Rules`, if we want them to live in a separate div
+            - i.e. **not** using Kramdown's TOCs
         * turn footnotes into sidenotes à la Tufte?
             - or scrolling TOC in the margin?
         * full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`

@@ -7,18 +7,9 @@
     <div class="mw7 flex flex-column center">
       <%= render '/header.html' %>
       <div id="main" class="w-100 ph4 flex flex-wrap lh-copy mb2">
-        <div class="w-third-ns w-100 ph4">
-          <div id="toc" class="sticky">
-            <!-- <h4>Contents</h4>
-            <ol class="list pl0 mt0">
-              <li>Test 1</li>
-              <li>Test 2</li>
-              <li>Test 3</li>
-            </ol> -->
-          </div>
-        </div>
         <div id="post-content" class="w-two-thirds-ns w-100 ph3">
-          <h3 class="f3 small-caps tc"><%= @item[:title] %></h3>
+          <h3 class="f3 small-caps tc mb2"><%= @item[:title] %></h3>
+          <h6 class="f6 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
           <%= yield %>
         </div>
       </div>
