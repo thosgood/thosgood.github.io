@@ -17,7 +17,7 @@ As I mentioned in a previous post, I recently saw a talk by [Rachel Hardeman](ht
 
 The main reference is \[RH19\] Rachel Hardeman. _Computing A-homotopy groups using coverings and lifting properties_. [arXiv: 1904.12065](https://arxiv.org/abs/1904.12065).
 
-### Preliminaries
+# Preliminaries
 
 - Graphs $$G$$ consist of _vertices_ $$V(G)$$ and _edges_ $$E(G)$$, where we write the edge between vertices $$s$$ and $$t$$ as $$[s,t]$$. All graphs are assumed to be _simple_ (no multiple edges between any two points or loops on a single point) and have a _distinguished vertex_ $$x\in V(G)$$. We write $$(G,x)$$ to mean the graph along with its distinguished vertex.
 - A _(weak) graph homomorphism_ $$\varphi\colon (G,x)\to(H,y)$$ is a map of sets $$V(G)\to V(H)$$ such that, for all $$[s,t]\in E(G)$$, either $$\varphi(s)=\varphi(t)$$ or $$[\varphi(s),\varphi(t)]\in E(H)$$. It is said to be _based_ if $$\varphi(x)=y$$.
@@ -34,7 +34,7 @@ The main reference is \[RH19\] Rachel Hardeman. _Computing A-homotopy groups usi
 - **N.B.** A-homotopy theory is possibly very different from what you might, at a quick first glance, expect. For example, any two cyclic graphs $$C_n$$ and $$C_m$$ (for $$m,n\geqslant 3$$) are A-homotopic if and only if $$m=n$$, and $$C_n$$ is contractible (i.e. homotopic to the graph with a single point and no edges) for $$n=3,4$$, but not for any $$n\geqslant 5$$.
 - The _A-homotopic fundamental group_ of a graph can be defined, as well as a simplicial structure on the group of cochains, and all this sort of stuff. This (amongst other nice formalisations that we would hope for) is done in \[RH19\].
 
-### "Graded homotopy" structure
+# "Graded homotopy" structure
 
 Given two A-homotopic graph homomorphisms $$\varphi\simeq_A\psi$$ we can ask for the _minimal_ such $$n\in\mathbb{N}$$ in the definition of the A-homotopy. We then say that the A-homotopy is an _$$n$$-homotopy_, and we extend this definition slightly to allow for the fact that we can trivially consider an $$n$$-homotopy as an $$(n+1)$$-homotopy (in $$n+1$$ various ways, corresponding to the classical idea of simplicial (co)face/(co)degeneracy (depending on your choice of nomenclature) maps). That is, we say $$n$$-homotopic to mean "$$m$$-homotopic with $$m\leqslant n$$".
 
@@ -48,7 +48,7 @@ Then we can consider the category $$\mathsf{Grph}_n$$, which has objects being e
 
 We can think of the number $$n$$ as some sort of "complexity" of the homotopy: small $$n$$ correspond to "homotopies that can be performed in a few steps" (here it is a good idea to see some of the examples in \[RH19\] to get an idea of how graph homotopies behave).
 
-### Questions
+# Questions
 
 If anybody has any answers to, or comments about, the following questions (or this post in general) then please don't hesitate to get in touch!
 

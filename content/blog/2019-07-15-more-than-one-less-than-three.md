@@ -12,7 +12,7 @@ But, as in many other ways, CT2019 opened my eyes somewhat, and now I'm trying t
 
 ---
 
-## Background and strictification
+# Background and strictification
 
 Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories[^1]), I'll just say a tiny bit about why I'm an idiot.
 
@@ -32,9 +32,9 @@ So we just define $$\mathcal{C}^{\mathbb{D}}Y(d)$$ to consist of all this data.
 There is then a lovely theory of _coflexible_ objects, which are those $$Y$$ such that the canonical morphism $$Y\to\mathcal{C}^{\mathbb{D}}Y$$ has a strict retraction.
 These objects are such that **all** pseudonatural transformations _into_ them are isomorphic to _strict_ such ones.[^2]
 
-## The idea
+# The idea
 
-### Roughly
+## Roughly
 
 - A 2-category should be something which has _objects_, _1-morphisms_ between the objects, and _2-morphisms_ between the morphisms.
 - We should be able to compose 1-morphisms 'along objects', in that, given 1-morphisms $$f\colon x\to y$$ and $$g\colon y\to z$$, we should get some 1-morphism $$g\circ f\colon x\to z$$.
@@ -48,14 +48,14 @@ but _also_ 'along 1-morphisms' (so-called _vertically_)
 
 and we ask that both senses of composition be associative _only up to coherent associator 2-morphisms_.
 
-### Categorification and monoidal delooping
+## Categorification and monoidal delooping
 
 An $$(n=2)$$-category can be thought of as the Oidification (or [horizontal categorification](https://ncatlab.org/nlab/show/horizontal+categorification)) of a monoidal category: it is like a monoidal category with many objects.
 To see this, note that the delooping of a monoidal category (i.e. the category where we shift all objects/morphisms 'up one degree') is exactly a one object $$(n=2)$$-category, with 1-morphisms corresponding to the objects of the monoidal category, and 2-morphisms corresponding to the morphisms of the monoidal category.
 
-## Strict vs. weak
+# Strict vs. weak
 
-### The categories
+## The categories
 
 The general consensus is to call _strict_ 2-categories "**2-categories**", and the algebraic notion of _weak_ 2-categories "**bicategories**".
 This can be confusing, [for a few reasons](https://ncatlab.org/nlab/show/bicategory#terminology), but such is life.
@@ -63,7 +63,7 @@ From now on, in this post, we will say **$$(n=2)$$-categories** to talk about bo
 
 Specifically, a _2-category_ is a category enriched over the cartesian monoidal category $$\mathsf{Cat}$$; a _bicategory_ is a category **weakly** enriched over $$\mathsf{Cat}$$ (so the hom-objects are categories but the associativity and unit laws only hold up to coherent isomorphism).
 
-### The functors
+## The functors
 
 Whether we take strict or weak $$(n=2)$$-categories, we can still choose whether we want our $$(n=2)$$-functors to be strict or weak.
 
@@ -83,7 +83,7 @@ That is,
 
 At a first glance, (op)-lax functors seem like almost too weak to be useful, but there are [many nice examples](https://www.ncatlab.org/nlab/show/lax+functor#examples) of when they are good things to study.
 
-## Double categories
+# Double categories
 
 Something that looks a bit like an $$(n=2)$$-category when you unwrap the abstract definition is a _double category_: an internal category $$\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)$$ of $$\mathsf{Cat}$$.
 This means that it has
@@ -104,7 +104,7 @@ Composition 'horizontally' of two squares, left and right of each other, is give
 There are two _edge categories_ associated to $$\mathscr{C}$$, given by taking the objects and either the vertical or the horizontal morphisms as morphisms.
 If the two edge categories agree then we say that $$\mathscr{C}$$ is _edge-symmetric_.
 
-### Examples
+## Examples
 
 From [the nLab](https://ncatlab.org/nlab/show/double+category#examples), we have some fun examples.
 
@@ -119,7 +119,7 @@ For more details about why $$\mathsf{Mod}$$ is so interesting, see \[S11\].
 
 Note that we can also get weak versions of double categories, in many ways, as described [here](https://ncatlab.org/nlab/show/double+category#weakenings).
 
-## 1-categories as 2-categories as double categories
+# 1-categories as 2-categories as double categories
 
 - We can consider any 1-category as an $$(n=2)$$-category by taking the 2-cells to just be identities.
 - We can consider any $$(n=2)$$-category as an edge-symmetric double category, its _double category of squares_, via the so-called _quintet construction_: by taking both vertical and horizontal morphisms to be the 1-morphisms, and the 2-cells to be the 2-morphisms.

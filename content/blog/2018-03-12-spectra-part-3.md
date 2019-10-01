@@ -57,7 +57,6 @@ The very first page of Vogt's paper has a beautiful 'dictionary' that I'll repro
 | commutative ring | | $$E_\infty$$-ring space | commutative monoid in $$\mathsf{Mod}_\mathbb{S}$$ |
 | ground ring $$\mathbb{Z}$$ | | $$E_\infty$$-ring space $$Q(S^0)$$ | sphere spectrum $$\mathbb{S}$$ |
 | tensor product $$\otimes_\mathbb{Z}$$ | | ? | smash product $$\wedge_\mathbb{S}$$ |
-{:.bordered-table}
 
 &nbsp;
 

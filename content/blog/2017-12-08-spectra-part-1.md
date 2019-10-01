@@ -19,9 +19,9 @@ After this, I might do a series on the uses of spectra, like 'nice' cohomology t
 
 _There probably won't be many references or pictures to begin with, but I will try to come back and add some at some point in the hopefully not-too-distant future._
 
-## Loop spaces
+# Loop spaces
 
-### Classical approach
+## Classical approach
 
 Given some topological space $$X$$, we have many good reasons to be interested in its fundamental group. That is, we are interested in what happens to **loops** (maps from $$S^1$$ to $$X$$) in our space when we consider everything up to homotopy. With this in mind, we define the **(pointed) loop space $$\Omega(X,x)$$ of $$X$$ at some point $$x\in X$$** as the mapping space
 
@@ -36,7 +36,7 @@ In fact, we can just iterate loop spaces to obtain such objects: we define the *
 
 $$\Omega^i(X,x):=\Omega\big(\Omega^{i-1}(X,x)\big).$$
 
-### Suspensions and smashing
+## Suspensions and smashing
 
 This definition of higher loop spaces might be a tad surprising in so far as one might have expected 'higher loops' to be defined as maps from 'higher spheres', and thus to have defined the $$i$$-fold loop space as
 
@@ -78,7 +78,7 @@ Then
 
 $$S^i\wedge S^j\simeq\frac{e^0\sqcup e^j\sqcup e^i\sqcup e^{i+j}}{e^0\sqcup e^i\sqcup e^j}\simeq e^0\sqcup e^{i+j}.$$
 
-### Homotopy pullbacks
+## Homotopy pullbacks
 
 We claim that the loop space construction can also be described as the homotopy pullback of $$X$$ along the base point $$x\colon*\to X$$. That is, we want to realise
 
@@ -101,7 +101,7 @@ $$\begin{array}{ccc}
 
 or, said in a different way,[^5] as the mapping cone of the terminal map $$X\to *$$.
 
-### Sneak peek at $$A_\infty$$-algebras
+## Sneak peek at $$A_\infty$$-algebras
 
 In one of Stasheff's theses, in the 60s, he formalised the idea of algebras that behave 'like loop spaces' in that they have a multiplication structure that is only associative _up to some higher homotopies_. These are called **$$A_\infty$$-algebras**, and there are plenty of classic introductions to them in their own right. The 'most classic' is probably _[Keller, Bernhard (2001). Introduction to A-infinity algebras and modules](https://arxiv.org/abs/math/9910179)_, which also describes (in §2.2) what I'm going to briefly sketch out below (and will cover in more detail in the future): how loop spaces are 'almost associative algebras'.
 

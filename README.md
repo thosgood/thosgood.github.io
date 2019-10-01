@@ -2,6 +2,7 @@
 
 - pick **one** background image
 - blog!
+    + dark mode
     + tags
         * http://www.gamedesignstories.com/2017/04/28/adding-tags/
     + pagination

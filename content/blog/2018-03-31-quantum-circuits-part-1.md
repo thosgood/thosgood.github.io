@@ -23,7 +23,7 @@ One of the reasons that I'm posting this, apart from to help me to not forget it
 As a naive guess, I would think that there is some `string diagram' approach to all this, but I'd need to sit down and have a think about what exactly that would be...
 So if anybody has any comments or references then I'd be more that interested to hear them!
 
-## Foundational ideas
+# Foundational ideas
 
 Before jumping in to the jacuzzi that is quantum circuitry, let's dip our toes in the vast ocean of **quantum physics axiomatisation**.
 First of all though, a note on quantum computers in practice.
@@ -38,7 +38,7 @@ Expecting a quantum computer to be able to run arbitrary programs quicker than a
 
 Anyway, with that aside, let's go get our feet wet.
 
-### Quantum interference
+## Quantum interference
 
 Here is an experimental fact that you can read about in who-knows-how-many places and find numerous videos of: if we send a particle through a barrier with two tiny (really really tiny) holes (or _slits_, to agree with the name **double-slit experiment**) and place a detector on the other side, it is _not necessarily_ true that the particle reaches the detector with probability $$p_1+p_2$$, where $$p_i$$ is the probability of the particle going through the $$i$$-th hole.
 In fact, the probability is given by
@@ -64,7 +64,7 @@ Decoherence, then, is when the external environment 'gets in the way' of our ver
 This also ties in with the fact that, given any 'quantum theorem' (i.e. formula or equation for a quantum system), if we make all the 'quantum terms' tend to zero then we should recover the corresponding 'classical theorem'.
 Later on we will talk about decoherence again, and look at what it means explicitly in terms of quantum circuits, but to begin with we just sort of ignore it and work in an ideal world where we can get rid of it entirely.
 
-### Axiomatics
+## Axiomatics
 
 In our discussion of the double-slit experiment we mentioned how there were 'extra' numbers $$\varphi_i$$ associated to the probabilities $$p_i$$, so let's try to formalise that now.
 Quantum theory suggests that we work with **probability amplitudes** instead of **probabilities**.
@@ -159,7 +159,7 @@ This seems to be a contradiction to our assumptions on quantum evolutions: this 
 There are many ways of dealing with this problem, but the important thing to note is that measurements can still be described in exactly the same way as all other quantum processes, and aren't subject to a different axiomatisation or something.[^8]
 However, for the moment, it's a convenient way of thinking that simplifies the maths (and conceptualisation) to just think of measurements as collapses.
 
-## Classical circuits
+# Classical circuits
 
 Finally for this post, we'll talk a bit about classical circuits.
 Let's take a single bit, which can be in one of two states: $$\vert0\rangle$$ (off) and $$\vert1\rangle$$ (on).

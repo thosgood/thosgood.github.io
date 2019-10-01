@@ -17,7 +17,7 @@ What different roles were played by each step?
 _This post could have many errors, and I don't understand the proofs for many of the things I vaguely imply; I just mildly believe._
 _Please do let me know if there is anything grossly misleading or just plain wrong._
 
-## Warnings
+# Warnings
 
 First of all, there are two points that I want to make about choices of language that I think are really very confusing.
 
@@ -27,7 +27,7 @@ First of all, there are two points that I want to make about choices of language
     This is maybe not the best nomenclature, in some sense, because the category that 'truly' deserves this name is the _actual_ homotopy category of chain complexes $$\mathrm{Ho}\mathsf{Ch}(\mathcal{A})$$, which is, by definition, the derived category $$D(\mathcal{A})$$.
     Because of this, I won't refer to $$K(\mathcal{A})$$ as anything but $$K(\mathcal{A})$$.
 
-## A nice diagram
+# A nice diagram
 
 Without further ado, here is a diagram that attempts to explain the relationships between various things that you might have learnt about in various places.
 
@@ -53,7 +53,7 @@ Here are a few words about the above diagram.
 
     There is, however, the slightly confusing fact that the construction of $$K(\mathcal{A})$$ as a quotient _does_ agree with a localisation construction (as explained [here](https://math.stackexchange.com/a/1128937/71510)).
 
-## Unresolved confusions
+# Unresolved confusions
 
 I still don't fully see the link between the homotopy category $$\mathrm{h}(\mathcal{C})$$ and the homotopy category $$\mathrm{Ho}(\mathcal{C})$$ and localisation in general (e.g. I 'know' that $$\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))$$, where $$\mathrm{L}$$ is the simplicial localisation, but that's about it).
 

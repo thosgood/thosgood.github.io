@@ -17,7 +17,7 @@ _Notational note:_ we write $$\mathcal{C}(x,y)$$ instead of $$\mathrm{Hom}_\math
 
 
 
-## Localisation of categories
+# Localisation of categories
 
 Let $$(\mathcal{C},\mathcal{W})$$ be a pair, with $$\mathcal{C}$$ a category and $$\mathcal{W}$$ a wide subcategory (that is, a subcategory containing all the objects of $$\mathcal{C}$$, or, equivalently, a set of morphisms in $$\mathcal{C}$$).
 This data is known as a _relative category_, which is a weaker version of a category with weak equivalences, or a homotopical category, or other such notions.
@@ -36,7 +36,7 @@ That is, any category (along with a functor into it) such that all morphisms in 
 Since our definition is in terms of a universal property, **if** the localisation of a category exists then it is unique.
 
 
-### Gabriel-Zisman
+## Gabriel-Zisman
 
 There is a reasonably concrete way of constructing the localisation that is called _Gabriel-Zisman_ (or sometimes _zigzag_) _localisation_.
 It has a few issues, which we discuss below, after giving a definition.
@@ -57,7 +57,7 @@ Note that we **still** have an equivalence relation: two morphisms $$x\xleftarro
 One potential problem with this construction (depending on how much you care about these things) is that the localisation might live only in some bigger universe, and so you have to start worrying about that.
 
 
-### Dwyer-Kan
+## Dwyer-Kan
 
 Of course, just constructing a category is not usually enough these days, and we instead want to give it some higher structure.
 Enter _Dwyer-Kan_ (or _simplicial_) localisation.
@@ -95,7 +95,7 @@ $$\begin{array}{ccccccccc}
 i.e. commutative diagrams of zigzags, where the 'linking' arrows are all in $$\mathcal{W}$$.
 The equivalence relations are the 'natural' ones: we can insert or remove identity maps, and compose any composable morphisms.
 
-### Comparison
+## Comparison
 
 Now then, we can ask how this 'new' localisation is related to the 'old' one, and we can answer this question with the following lemma.
 
@@ -107,7 +107,7 @@ The lemma that we'll look at is the following (where we've yet to define the rig
 
 **Lemma.** $$\mathcal{C}[\mathcal{W}^{-1}]\simeq\mathrm{h}L\mathcal{C}$$.
 
-## References
+# References
 
 - Julia E. Bergner, "A model category structure on the category of simplicial categories", [arXiv:math/0406507](https://arxiv.org/abs/math/0406507).
 - V. Hinich, "Dwyer-Kan localization revisited", [arXiv:1311.4128](https://arxiv.org/abs/1311.4128).

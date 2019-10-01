@@ -17,9 +17,9 @@ Dually, a motivation behind the **coend** is in asking for some universal quotie
 **Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
 I honestly don't think there is a better teaching of this anywhere else in the literature.
 
-## Ends
+# Ends
 
-### Definitions and settings
+## Definitions and settings
 
 We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.
 
@@ -44,7 +44,7 @@ F(c,c) & \xrightarrow{F(\mathrm{id},f)} & F(c,c')
 
 Then we can define the end as a _universal_ wedge $$w$$ (if it exists), i.e. any other wedge $$w'$$ factors uniquely through $$w'\to w$$
 
-### Examples
+## Examples
 
 I'm going to talk more about the exciting examples and applications of ends (tensor products of categories, geometric realisation, and Day convolution) in the next post in this series, but I would feel awful if I didn't mention at least a couple here.
 
@@ -73,7 +73,7 @@ where $$\odot$$ is the co-power.
 
 In particular then, we see that the generalisation of limits to weighted limits is 'at least as general as' the idea of Kan extensions.
 
-## Manipulation and ninja Yoneda
+# Manipulation and ninja Yoneda
 
 It's often useful to know the following fact: *continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)*.
 In particular,
@@ -96,7 +96,7 @@ whence we find the co-Yoneda lemma:
 
 $$F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c).$$
 
-## Much better references
+# Much better references
 
 If you really want to read about ends then you my friend are in the wrong place.
 Here are some papers and blog posts that I found interesting and really well written:

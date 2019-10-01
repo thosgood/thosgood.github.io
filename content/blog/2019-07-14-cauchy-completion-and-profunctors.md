@@ -13,17 +13,17 @@ What follows are some things that I learnt (mostly from \[BD86\]).
 
 ---
 
-## Bimodules
+# Bimodules
 
 A good place to begin is with the definition of a _bimodule_.
 
-### Classically
+## Classically
 
 Given rings $$R$$ and $$S$$, we say that an abelian group $$M$$ is an _$$(R,S)$$-bimodule_ if it is a left $$R$$-module and a right $$S$$-module **in a compatible way**: we ask that $$(rm)s=r(ms)$$.
 
 Thinking about this definition a bit (or maybe recalling an algebra class), we see that this is equivalent to asking that $$M$$ be a right module over $$R^{\text{op}}\otimes_{\mathbb{Z}}S$$ (or, equivalently, a left module over $$R\otimes_{\mathbb{Z}}S^{\text{op}}$$), where $$R^{\text{op}}$$ is the _opposite_ ring of $$R$$, given by just 'turning the multiplication around'.[^1]
 
-### Categorically
+## Categorically
 
 Modulo a bunch of technical conditions on the categories involved,[^2] a _bimodule_ is a $$\mathcal{V}$$-functor (i.e. a functor of $$\mathcal{V}$$-enriched categories) $$\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$$.
 
@@ -36,7 +36,7 @@ This suggests that we should maybe somehow think of bimodules as generalised hom
 As a small aside, there is some hot debate about whether to use $$\mathcal{C}^{\text{op}}\otimes\mathcal{D}\to\mathcal{V}$$ or $$\mathcal{C}\otimes\mathcal{D}^{\text{op}}\to\mathcal{V}$$, and although the first seems more natural (in that it corresponds to the way we write hom functors), the second is slightly nicer in that functors $$\mathcal{C}\to\mathcal{D}$$ give you profunctors by composition with the **covariant** Yoneda embedding, as opposed to the contravariant one.
 But the two are formally dual, so it's really not the biggest of issues.
 
-## Profunctors, distributors, bimodules, or whatever
+# Profunctors, distributors, bimodules, or whatever
 
 Of course, lots of people have different preferences for names, but a _profunctor_ is (using the convention of Borceux and Dejean) a functor $$\mathcal{D}^{\text{op}}\times\mathcal{C}\to\mathsf{Set}$$.
 People often write such a thing as $$\mathcal{C}\nrightarrow\mathcal{D}$$.
@@ -48,7 +48,7 @@ $$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)$$
 
 **Update: we talk about this a bit more in [Part 3 of the series on Day convolution](/blog/2019/09/05/day-convolution-part-3.html)**
 
-### Yoneda
+## Yoneda
 
 Every functor $$F\colon\mathcal{C}\to\mathcal{D}$$ gives a profunctor $$F^*\colon\mathcal{C}\nrightarrow\mathcal{D}$$ by setting
 
@@ -67,7 +67,7 @@ $$\mathsf{Fun}(\mathbb{1},\mathcal{C})\to\mathsf{Profun}(\mathbb{1},\mathcal{C})
 
 given by $$F\mapsto F^*$$.
 
-### Recovering functors
+## Recovering functors
 
 **Theorem.** A profunctor $$\mathbb{1}\nrightarrow\mathcal{C}$$ is a functor (via Yoneda[^4]) if and only if it admits a right adjoint.
 More generally, a profunctor $$\mathcal{A}\nrightarrow\mathcal{C}$$, for any small category $$\mathcal{A}$$, is a functor (via Yoneda) if and only if it admits a right adjoint.
@@ -76,7 +76,7 @@ More generally, a profunctor $$\mathcal{A}\nrightarrow\mathcal{C}$$, for any sma
 
 We will come back to this fact later.
 
-## Cauchy completion
+# Cauchy completion
 
 The _Cauchy completion_ of a (small) category $$\mathcal{C}$$ can be defined in many ways (as described in \[BD86\]), but we pick the following: the Cauchy completion of $$\mathcal{C}$$ is the full subcategory $$\overline{\mathcal{C}}$$ of $$\hat{\mathcal{C}}:=\mathsf{Fun}(\mathcal{C}^{\text{op}},\mathsf{Set})$$ spanned by _absolutely presentable_[^3] presheaves.
 
@@ -86,7 +86,7 @@ The idea of Cauchy completeness for a category is in some sense meant to mirror 
 
 **Proof.** \[Propositions 2 and 4, BD86\].
 
-## Internal categories
+# Internal categories
 
 Recall that \[Theorem 2, BD86\] tells us that the profunctors that are functors (via Yoneda) are exactly those that admit right adjoints (which, by \[Propositions 2 and 4, BD86\], are exactly those (in the case where $$\mathcal{A}=\mathbb{1}$$) that are in the Cauchy completion of $$\mathcal{C}$$).
 
@@ -99,7 +99,7 @@ This is now not so much of a surprising condition, since we've already seen that
 What happens then, we may well ask, if we don't ask for this condition?
 We recover the idea of a **Mealy morphism**.[^6]
 
-## References
+# References
 
 - \[BD86\] [F. Borceux and D. Dejean. "Cauchy completion in category theory". Cahiers de Topologie et Géométrie Différentielle Catégoriques, Volume 27 (1986) no. 2, pp. 133-146.](http://www.numdam.org/article/CTGDC_1986__27_2_133_0.pdf)
 - [J. Baez, _Bimodules Versus Spans_, n-Category Café](https://golem.ph.utexas.edu/category/2008/08/bimodules_versus_spans.html)
