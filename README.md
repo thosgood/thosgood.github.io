@@ -1,15 +1,6 @@
 ## Todo
 
 - pick **one** background image
-- do we really need the post titles to have the date now that we use `created_at`?
-- ~~generate the nav bar from `@items~~
-    + use `link_to_unless_current`, or whatever it is?
-    + also make links in e.g. `index.html` not-static
-    ```
-    <% @items.find_all("/*.html").each do |i| %>
-    <li"><%= i[:title] %></li>
-    <% end %>
-    ```
 - blog!
     + tags
         * http://www.gamedesignstories.com/2017/04/28/adding-tags/
