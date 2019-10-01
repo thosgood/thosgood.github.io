@@ -1,3 +1,9 @@
+/* Typography */
+
+body {
+  font-size: 1.08em;
+}
+
 a {
   text-decoration: underline;
   color: #333;
@@ -14,10 +20,24 @@ code {
   font-size: 0.9rem;
 }
 
+.katex {
+  font-size: 1em;
+}
+
+#post-content h1 {
+  font-size: 1.5rem;
+}
+
+
+/* Lists */
+
 ul {
   margin-top: 0.25rem;
   padding-left: 1rem;
 }
+
+
+/* Images */
 
 img {
   border-radius: 0.5rem;
@@ -27,9 +47,15 @@ img {
   border-color: #aaa;
 }
 
-.katex {
-  font-size: 1em;
+
+/* Sticky */
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
 }
+
 
 /* Tables */
 

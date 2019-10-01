@@ -13,7 +13,7 @@ Finally, I find myself with enough motivation to start writing the last part to 
 
 For a refresher on all the definitions, you can check out the two previous parts in this series (the links are at the top), because we're just going to dive right in.
 
-## Tensor products
+# Tensor products
 
 Let $$\colon\mathcal{C}^\mathrm{op}\to\mathcal{D}$$ and $$G\colon\mathcal{C}\to\mathcal{D}$$ be $$\mathcal{V}$$-functors. Then we define their _tensor product_ to be, **if it exists**, the coend
 
@@ -25,13 +25,13 @@ $$F\otimes_\mathcal{C}G = \int^{c\in\mathcal{C}}F(c)\cdot G(c)$$
 
 where $$S\cdot d=\coprod_{s\in S}d$$ for any set $$S$$ and any object $$d\in D$$.
 
-### Examples
+## Examples
 
 - Consider a ring $$R$$ as a one-object $$\mathsf{Ab}$$-enriched. Then a right $$R$$-module gives an additive functor $$R^\mathrm{op}\to\mathsf{Ab}$$, and a left $$R$$-module gives an additive functor $$R\to\mathsf{Ab}$$. Then their tensor product, as $$\mathsf{Ab}$$-enriched functors, coincides with their usual tensor product as $$R$$-modules.
 
     This example is actually really linked to the theory of _profunctors_, which we will talk about below, but have already talked about [in a previous post]({{ site.baseurl }}{% post_url 2019-07-14-cauchy-completion-and-profunctors %}#categorically).
 - The co-Yoneda lemma $$F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c)$$ can now just be written as
- 
+
     $$F\cong F\otimes_\mathcal{C}よ$$
 
     where $$よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$$ is the Yoneda embedding.
@@ -48,7 +48,7 @@ where $$S\cdot d=\coprod_{s\in S}d$$ for any set $$S$$ and any object $$d\in D$$
 
     $$\vert X\vert\cong X\otimes_\Delta\vert-\vert.$$
 
-## Day convolution
+# Day convolution
 
 As a motivation for the definition of Day convolution, we first recall the classical notion of convolution (albeit phrased in a more categorical language). Consider $$\mathbb{N}$$ as a **discrete** category with addition as a monoidal product. Let $$F,G\colon\mathbb{N}\to\mathsf{Set}$$ be functors, which we can think of as _graded sets_. Then their _convolution_ $$(F*G)\colon\mathbb{N}\to\mathsf{Set}$$ is defined by
 
@@ -88,7 +88,7 @@ Further, if $$\mathcal{C}$$ is small, then there is an internal hom on $$\wideha
 
 Finally, as a fun little fact, which I used at some point in one of my masters theses,[^2] whenever $$\mathcal{C}$$ is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from $$\mathcal{C}$$ to $$\mathcal{V}$$.
 
-### Monoid algebra
+## Monoid algebra
 
 Remembering all that we've said above about free modules, and how Day convolution is basically the presheaf version of the tensor product from the original category, I would like to repeat some of what [Alexander Campbell](http://web.science.mq.edu.au/~alexc/) wrote in response to a [question I asked about Day convolution](https://math.stackexchange.com/questions/1650786/day-convolution-intuition) during the writing of my masters thesis.
 
@@ -98,7 +98,7 @@ There is a beautiful formal analogy between Day convolution and monoid algebra, 
 | -------------- | --------------- |
 | set | category |
 | monoid | monoidal category |
-| ring $$R$$ | monoidally cocomplete[^1] category |
+| ring $$R$$ | monoidally cocomplete category |
 | $$R$$-module | cocomplete $$\mathcal{V}$$-category |
 | $$R$$-algebra | monoidally cocomplete $$\mathcal{V}$$-category |
 | free $$R$$-module $$R^{(X)}$$ on a set $$X$$ | free cocomplete $$\mathcal{V}$$-category $$\widehat{\mathcal{C}}$$ on a category $$\mathcal{C}$$ |
@@ -106,7 +106,7 @@ There is a beautiful formal analogy between Day convolution and monoid algebra, 
 
 where a _monoidally cocomplete_ category is a cocomplete monoidal category $$\mathcal{V}$$ such that $$(-\otimes-)\colon\mathcal{V}\times\mathcal{V}\to\mathcal{V}$$ is cocontinuous in each variable.
 
-## Profunctors
+# Profunctors
 
 Just to have my obligatory "here is something that I don't understand" that all of my posts seem to have, I wrote down in my notes (only a few weeks ago) the following sentence
 
@@ -131,3 +131,4 @@ and this somehow looks like a coend, but I have no idea (nor, really, the time (
 # Footnotes
 
 [^2]: §4.1 in [Under Spec Z. A reader's companion.](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!
+

@@ -6,9 +6,19 @@
 
     <div class="mw7 flex flex-column center">
       <%= render '/header.html' %>
-      <div id="main" class="w-100 flex flex-wrap items-center lh-copy mb2">
-        <div class="pl5-ns pr7-ns mw-100 center ph4">
-          <h3 class="f3"><%= @item[:title] %></h4>
+      <div id="main" class="w-100 ph4 flex flex-wrap lh-copy mb2">
+        <div class="w-third-ns w-100 ph4">
+          <div id="toc" class="sticky">
+            <!-- <h4>Contents</h4>
+            <ol class="list pl0 mt0">
+              <li>Test 1</li>
+              <li>Test 2</li>
+              <li>Test 3</li>
+            </ol> -->
+          </div>
+        </div>
+        <div id="post-content" class="w-two-thirds-ns w-100 ph3">
+          <h3 class="f3 small-caps tc"><%= @item[:title] %></h3>
           <%= yield %>
         </div>
       </div>
