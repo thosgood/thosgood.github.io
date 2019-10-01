@@ -8,7 +8,7 @@
       <%= render '/header.html' %>
       <div id="main" class="w-100 ph4 flex flex-wrap lh-copy mb2">
         <div id="post-content" class="w-two-thirds-ns w-100 ph3">
-          <h3 class="f3 small-caps tc mb2"><%= @item[:title] %></h3>
+          <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
           <h6 class="f6 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
           <%= yield %>
         </div>

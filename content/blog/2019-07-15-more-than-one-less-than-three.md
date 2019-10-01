@@ -95,7 +95,7 @@ This means that it has
 
 We can picture the 2-cells as a square (hence the name), as
 
-![squares](/assets/post-images/2019-07-15-double-square.png){:.center}
+![squares](/assets/post-images/2019-07-15-double-square.png){:class="pa3"}
 
 where $$x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$$ are objects, $$f,g\in\operatorname{ob}\mathcal{C}_1$$ are horizontal morphisms, $$\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$$ are vertical morphisms, and $$\phi\in\operatorname{Arr}\mathcal{C}_1$$ is the 2-cell.
 
