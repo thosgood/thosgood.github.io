@@ -5,8 +5,7 @@
     + tags
         * http://www.gamedesignstories.com/2017/04/28/adding-tags/
     + pagination
-    + slightly nicer 'posted at' date formatting
-        * https://stackoverflow.com/questions/5891555/display-the-date-like-may-5th-using-pythons-strftime ?
+        * OR just months in the margin? sticky ones?
     + posts
         * auto TOCs
             - probably from `Rules`, if we want them to live in a separate div
