@@ -40,11 +40,11 @@ These objects are such that **all** pseudonatural transformations _into_ them ar
 - We should be able to compose 1-morphisms 'along objects', in that, given 1-morphisms $$f\colon x\to y$$ and $$g\colon y\to z$$, we should get some 1-morphism $$g\circ f\colon x\to z$$.
 - We should be able to compose 2-morphisms 'along objects' (so-called _horizontally_)
 
-![horizontal composition](/assets/post-images/2019-07-15-horizontal-2-composition.png)
+![horizontal composition](/assets/post-images/2019-07-15-horizontal-2-composition.png){:class="pa3"}
 
 but _also_ 'along 1-morphisms' (so-called _vertically_)
 
-![vertical composition](/assets/post-images/2019-07-15-vertical-2-composition.png)
+![vertical composition](/assets/post-images/2019-07-15-vertical-2-composition.png){:class="pa3"}
 
 and we ask that both senses of composition be associative _only up to coherent associator 2-morphisms_.
 

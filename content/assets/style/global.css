@@ -35,6 +35,14 @@ code {
   font-size: 1.5rem;
 }
 
+#post-content h2 {
+  font-size: 1.25rem;
+}
+
+#post-content h3 {
+  font-size: 1.1rem;
+}
+
 
 /* Lists */
 
