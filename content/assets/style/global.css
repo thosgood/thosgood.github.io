@@ -7,13 +7,13 @@ body {
 a {
   text-decoration: underline;
   /* light green */
-  /*color: #19a974;*/
+  color: #19a974;
   /* dark green */
   /*color: #137752;*/
   /* light blue */
   /*color: #357edd;*/
   /* dark blue */
-  color: #00449e;
+  /*color: #00449e;*/
 }
 
 h4 {
