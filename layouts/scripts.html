@@ -1,4 +1,5 @@
 <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
 <script type="text/javascript" src="/assets/katex/katex.min.js"></script>
 <script type="text/javascript">
   $("script[type='math/tex']").replaceWith(
@@ -17,10 +18,20 @@
              "</div>";
   });
 </script>
+
 <script type="text/javascript">
   $(document).ready(function () {
     var images = ['geometry.png', 'geometry2.png', 'greyzz.png', 'light_grey.png', 'pixel_weave.png', 'pw_pattern.png', 'sos.png'];
     var path = '/assets/backgrounds/';
     $('body').css({'background-image': 'url(' + path + images[Math.floor(Math.random() * images.length)] + ')'});
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var colours = ['19a974', '137752', '357edd', '00449e', 'ff6300'];
+    $('a').css({
+      'color': '#' + colours[Math.floor(Math.random()*colours.length)]
+    });
   });
 </script>

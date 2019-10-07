@@ -36,15 +36,17 @@ where $$S\cdot d=\coprod_{s\in S}d$$ for any set $$S$$ and any object $$d\in D$$
 
     where $$よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$$ is the Yoneda embedding.
 
-    This lets us state the powerful adage, that "representable functors generalise free modules. To see what this might mean, we state the co-Yoneda lemma applied to a representable functor, as well as a basic theorem about tensor products of free modules, and leave the drawing of connections between the two to the interested reader:
+    This lets us state the powerful adage, that "representable functors generalise free modules". To see what this might mean, we state the co-Yoneda lemma applied to a representable functor, as well as a basic theorem about tensor products of free modules, and leave the drawing of connections between the two to the interested reader:
 
     $$\begin{aligned}
         \operatorname{Hom}_\mathcal{C}(-,c)\otimes_\mathcal{C}F &\cong F(c)\\
         R^n\otimes_R M &\cong M^n.
     \end{aligned}$$
+- Geometric realisation of a simplicial set $$X$$ can also be expressed as a tensor product. If we write
 
-    Suggestive, right?
-- Geometric realisation of a simplicial set $$X$$ can also be expressed as a tensor product. If we write $$\vert-\vert\colon\Delta\to\mathsf{Top}$$ to mean the functor that sends $$[n]$$ to the topological $$n$$-simplex, then we can write the geometric realisation $$\vert X\vert$$ of $$X$$ as
+    $$\vert-\vert\colon\Delta\to\mathsf{Top}$$
+
+    to mean the functor that sends $$[n]$$ to the topological $$n$$-simplex, then we can write the geometric realisation $$\vert X\vert$$ of $$X$$ as
 
     $$\vert X\vert\cong X\otimes_\Delta\vert-\vert.$$
 
@@ -53,7 +55,7 @@ where $$S\cdot d=\coprod_{s\in S}d$$ for any set $$S$$ and any object $$d\in D$$
 As a motivation for the definition of Day convolution, we first recall the classical notion of convolution (albeit phrased in a more categorical language). Consider $$\mathbb{N}$$ as a **discrete** category with addition as a monoidal product. Let $$F,G\colon\mathbb{N}\to\mathsf{Set}$$ be functors, which we can think of as _graded sets_. Then their _convolution_ $$(F*G)\colon\mathbb{N}\to\mathsf{Set}$$ is defined by
 
 $$\begin{aligned}
-(F*G)(n) &= \sum_{i+j=n} F(i)\otimes G(j)\\
+&(F*G)(n) = \sum_{i+j=n} F(i)\otimes G(j)\\
 &= \sum_{i,j=1}^n F(i)\otimes G(j)\otimes\operatorname{Hom}_\mathbb{N}(n,i+j)
 \end{aligned}$$
 
@@ -69,12 +71,12 @@ $$(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom
 
 As I already mentioned in my [post about profunctors]({{ site.baseurl }}{% post_url 2019-07-14-cauchy-completion-and-profunctors %}), there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category _itself_ is the 'free cocompletion' of the original category. There are a bunch of ways of explaining what this means, but my favourite 'proof' is using Day convolution and the co-Yoneda lemma, to show that the Yoneda embedding $$よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$$ is **monoidal**:
 
-$$\begin{aligned}
-    &\big( \operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \big)(c)\\
-    \cong &\int^{y,y'\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(y',x')\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes y')\\
-    \cong &\int^{y\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes x')\\
-    \cong &\operatorname{Hom}_\mathcal{C}(c,x\otimes x')
-\end{aligned}$$
+$$\begin{gathered}
+    \big( \operatorname{Hom}_\mathcal{C}(-,x)*\operatorname{Hom}_\mathcal{C}(-,x') \big)(c)\\
+    \cong \int^{y,y'\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(y',x')\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes y')\\
+    \cong \int^{y\in\mathcal{C}}\operatorname{Hom}_\mathcal{C}(y,x)\otimes\operatorname{Hom}_\mathcal{C}(c,y\otimes x')\\
+    \cong \operatorname{Hom}_\mathcal{C}(c,x\otimes x')
+\end{gathered}$$
 
 where the first isomorphism is by definition, and the last two are by co-Yoneda. That is,
 
@@ -108,14 +110,17 @@ where a _monoidally cocomplete_ category is a cocomplete monoidal category $$\ma
 
 # Profunctors
 
-Just to have my obligatory "here is something that I don't understand" that all of my posts seem to have, I wrote down in my notes (only a few weeks ago) the following sentence
+Just to have my obligatory "here is something that I don't understand" that all of my posts seem to have, I wrote down in my notes (only a few weeks ago) the following sentence:
 
-    profunctors! composition is via coends
-    and this looks like ∃ for composition of relations
+_"profunctors! composition is via coends, and this looks like ∃ for composition of relations"_
 
 I have a vague idea of what this means: when we compose relations we do it 'by existence', in that
 
-$$SR(x,y)\iff\exists t\text{ s.t. }R(x,t)\wedge S(t,y)$$
+$$\begin{gathered}
+SR(x,y)\\
+\iff\\
+\exists t\text{ s.t. }R(x,t)\wedge S(t,y)
+\end{gathered}$$
 
 and this somehow looks like a coend, but I have no idea (nor, really, the time (nor, really, the skill) to properly think about) how to make this formal. Any ideas?
 
