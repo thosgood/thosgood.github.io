@@ -21,7 +21,7 @@ deploy:
   default:
     kind: git
     branch: master
-    remote: git@github.com:thosgood/thosgood.github.io.git
+    remote: origin
 
 # Variables
 

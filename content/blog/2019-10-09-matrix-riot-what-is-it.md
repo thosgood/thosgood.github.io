@@ -5,7 +5,7 @@ tags: [matrix, general]
 created_at: 2019-10-09
 ---
 
-Anybody who follows me on Twitter will have heard me go on about Matrix, and Riot, and all these chat app things. I understand that most people probably won't really care much about it all, but I thought that I'd try to explain a bit why I'm quite so passionate about this stuff, and why I'm bothering to try to work on 'LaTeX' support (with scare quotes for good reason).
+Anybody who follows me on Twitter will have heard me go on about Matrix, and Riot, and maybe a whole host of other such things. I understand that most people probably won't really care much about it all, but I thought that I'd try to explain a bit why I'm quite so passionate about this stuff, and why I'm bothering to try to work on 'LaTeX' support (with scare quotes for good reason, as explained later).
 
 Coincidentally, I took a sleeping pill just before writing this. The pill was to make me sleep, but deciding to write this just after was more of an experiment into brain activity and cohesiveness and also just seemed like a bit of a funny idea to me.
 
