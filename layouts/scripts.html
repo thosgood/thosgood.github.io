@@ -2,7 +2,7 @@
 
 <script type="text/javascript" src="/assets/katex/katex.min.js"></script>
 <script type="text/javascript">
-  $("script[type='math/tex']").replaceWith(
+  $("span[class='math inline']").replaceWith(
     function(){
       var tex = $(this).text();
       return "<span class=\"inline-equation\">" + 
@@ -10,7 +10,7 @@
              "</span>";
   });
 
-  $("script[type='math/tex; mode=display']").replaceWith(
+  $("span[class='math display']").replaceWith(
     function(){
       var tex = $(this).text();
       return "<div class=\"equation\">" + 
@@ -29,7 +29,7 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    var colours = ['19a974', '137752', '357edd', '00449e', 'ff6300'];
+    var colours = ['19a974', '137752', '357edd', '00449e'];
     $('a').css({
       'color': '#' + colours[Math.floor(Math.random()*colours.length)]
     });

@@ -33,39 +33,39 @@ in terms of representable presheaves.
 
 ## For sets
 
-Let $$F\colon I^\mathrm{op}\to\mathsf{Set}$$ be a presheaf on a small category
-$$I$$. Then the limit of $$F$$ over $$I$$ is the hom-set
+Let $F\colon I^\mathrm{op}\to\mathsf{Set}$ be a presheaf on a small category
+$I$. Then the limit of $F$ over $I$ is the hom-set
 
 $$\lim_I F := [I,\mathsf{Set}] (\underline{\{*\}},F)$$
 
-where $$[I,\mathsf{Set}]$$ is the functor category, and $$\underline{\{*\}}$$ is the
+where $[I,\mathsf{Set}]$ is the functor category, and $\underline{\{*\}}$ is the
 constant functor to a singleton set. Since the covariant hom functor commutes
 with set-valued limits, we can use the Yoneda lemma, as always, to work with
-$$\hat{Y}(\lim_I F) = \mathrm{Hom}_{\mathsf{Set}}(-,\lim_I F)$$ and see that
+$\hat{Y}(\lim_I F) = \mathrm{Hom}_{\mathsf{Set}}(-,\lim_I F)$ and see that
 
 $$\mathrm{Hom}_{\mathsf{Set}}(S,\lim_I F) \cong \lim_I\mathrm{Hom}_{\mathsf{Set}}(S,F(-))$$
 
-for any set $$S$$.
+for any set $S$.
 
 ## For small categories
 
 If we now find ourselves in the more general case of having a functor 
-$$F\colon I^\mathrm{op}\to\mathcal{C}$$ for some arbitrary (small) category
-$$\mathcal{C}$$ then we can use the above trick: we define the presheaf
-$$\widehat{\lim}_I F$$ by using the set-valued limit above, i.e.
+$F\colon I^\mathrm{op}\to\mathcal{C}$ for some arbitrary (small) category
+$\mathcal{C}$ then we can use the above trick: we define the presheaf
+$\widehat{\lim}_I F$ by using the set-valued limit above, i.e.
 
 $$(\widehat{\lim}_I F)(c) \cong \hat{\mathcal{C}}(\hat{Y}(c), \widehat{\lim}_I F) := \lim_I\mathsf{Set}(\hat{Y}(c),F(-))$$
 
-where $$\hat{\mathcal{C}}$$ is the presheaf category
-$$[\mathcal{C}^\mathrm{op},\mathsf{Set}]$$, and we write $$\mathcal{D}(x,y)$$ to
-mean $$\mathrm{Hom}_\mathcal{D}(x,y)$$. But by the definition of the limit given
+where $\hat{\mathcal{C}}$ is the presheaf category
+$[\mathcal{C}^\mathrm{op},\mathsf{Set}]$, and we write $\mathcal{D}(x,y)$ to
+mean $\mathrm{Hom}_\mathcal{D}(x,y)$. But by the definition of the limit given
 at the start, this can be rewritten (''setting
-$$F = \mathsf{Set}(\hat{Y}(c),F(-))$$'') as
+$F = \mathsf{Set}(\hat{Y}(c),F(-))$'') as
 
 $$(\widehat{\lim}_I F)(c) \cong \hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big).$$
 
-It can then be shown that the limit of $$F$$, as defined in any other classical
-way, is exactly an object representing the presheaf $$\widehat{\lim}_I F$$, i.e.
+It can then be shown that the limit of $F$, as defined in any other classical
+way, is exactly an object representing the presheaf $\widehat{\lim}_I F$, i.e.
 
 $$\mathcal{C}(c, \lim_I F)\cong\hat{I}\big(\underline{\{*\}},\mathsf{Set}(\hat{Y}(c),F(-))\big)$$
 
@@ -75,21 +75,21 @@ There are two things in the above that look interesting to try to
 generalise:
 
 1.  Consider something more complicated than terminal cones: replace
-    $$\underline{\{*\}}$$ with some arbitrary functor $$W\in\hat{I}$$ (that will be
+    $\underline{\{*\}}$ with some arbitrary functor $W\in\hat{I}$ (that will be
     called the **weight**);
-2.  Work in $$\mathcal{V}$$-enriched categories rather than just
-    $$\mathsf{Set}$$-enriched (i.e small) ones.
+2.  Work in $\mathcal{V}$-enriched categories rather than just
+    $\mathsf{Set}$-enriched (i.e small) ones.
 
-This leads to the following definition. Let $$\mathcal{C}$$ be a
-$$\mathcal{V}$$-enriched category, and $$W\colon I^\mathrm{op}\to\mathcal{V}$$ and
-$$F\colon I^\mathrm{op}\to\mathcal{C}$$ functors. The **$$W$$-weighted limit of $$F$$**
-is (if it exists) an object $$\lim^W F\in\mathcal{C}$$ that represents (for
-$$c\in\mathcal{C}$$) the functor
+This leads to the following definition. Let $\mathcal{C}$ be a
+$\mathcal{V}$-enriched category, and $W\colon I^\mathrm{op}\to\mathcal{V}$ and
+$F\colon I^\mathrm{op}\to\mathcal{C}$ functors. The **$W$-weighted limit of $F$**
+is (if it exists) an object $\lim^W F\in\mathcal{C}$ that represents (for
+$c\in\mathcal{C}$) the functor
 
 $$[I,\mathcal{V}]\big(W,\mathcal{C}(c,F(-))\big)\colon\mathcal{C}^\mathrm{op}\to\mathcal{V}.$$
 
-In particular, if $$\mathcal{C}=\mathcal{V}$$ then you can show that
-$$\lim^W F\cong [I,\mathcal{V}](W,F)$$.
+In particular, if $\mathcal{C}=\mathcal{V}$ then you can show that
+$\lim^W F\cong [I,\mathcal{V}](W,F)$.
 
 _In the next post we'll have a look at **why** this generalisation is of
 any interest, and how we can use it to define (co)ends._

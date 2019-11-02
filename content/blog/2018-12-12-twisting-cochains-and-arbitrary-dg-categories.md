@@ -5,7 +5,7 @@ tags: "category-theory"
 created_at: 2018-12-12
 ---
 
-Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that's in 'fixing' a small quirk about dg-categories that I didn't quite understand way back when I wrote [this post]({{ site.baseurl }}{% post_url 2018-04-26-derived-dg-triangulated-and-infinity-categories %}) about derived, dg-, and $$A_\infty$$-categories and their role in 'homotopy things'.
+Having recently been thinking about twisting cochains (a major part of my thesis) a bit more, I think I better understand one reason why they are very useful (and why they were first introduced by Bondal and Kapranov), and that's in 'fixing' a small quirk about dg-categories that I didn't quite understand way back when I wrote [this post]({{ site.baseurl }}{% post_url 2018-04-26-derived-dg-triangulated-and-infinity-categories %}) about derived, dg-, and $A_\infty$-categories and their role in 'homotopy things'.
 
 This isn't a long post and could probably instead be a tweet but then this blog would be a veritable ghost town.
 

@@ -25,6 +25,16 @@ code {
   font-size: 0.9rem;
 }
 
+.footnote-ref sup {
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0px 3px;
+}
+
+span.math {
+  font-family: monospace;
+}
+
 .katex {
   font-size: 1em;
 }
