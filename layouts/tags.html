@@ -14,7 +14,7 @@
           </p>
         </div>
 
-        <% items_with_tag(@item[:tag]).each do |post| %>
+        <% items_with_tag(@item[:tag]).sort_by {|i| Time.parse(i[:created_at].to_s)}.reverse.each do |post| %>
           <div class="center bl bb bw1 pl3 mb4 mb3-ns w-80-ns">
             <h4 class="mt0 mb2"><%= link_to post[:title], post.path %></h1>
             <span class="f6 courier black-50"><%= get_pretty_date(post) %></span>
