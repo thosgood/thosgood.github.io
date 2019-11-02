@@ -1,7 +1,7 @@
 ---
 title: More-than-one-but-less-than-three-categories
 kind: article
-tags: "category-theory"
+tags: ['category-theory']
 created_at: 2019-07-15
 ---
 

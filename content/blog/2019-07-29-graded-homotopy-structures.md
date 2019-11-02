@@ -1,7 +1,7 @@
 ---
 title: Graded homotopy structures
 kind: article
-tags: "homotopy-theory category-theory questions"
+tags: ['homotopy-theory', 'category-theory', 'questions']
 created_at: 2019-07-29
 ---
 

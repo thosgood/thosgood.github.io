@@ -2,7 +2,7 @@
 title: Quantum circuits (Part 1)
 part: Part 1
 kind: article
-tags: "quantum-physics quantum-computing"
+tags: ['quantum-physics', 'quantum-computing']
 created_at: 2018-03-31
 ---
 

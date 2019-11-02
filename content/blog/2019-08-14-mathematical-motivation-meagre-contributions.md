@@ -1,7 +1,7 @@
 ---
 title: Mathematical motivation and meagre contributions
 kind: article
-tags: "category-theory birds"
+tags: ['category-theory', 'birds']
 created_at: 2019-08-14
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Everything is Stokes'; everything is coend
 kind: article
-tags: "category-theory"
+tags: ['category-theory']
 created_at: 2019-09-04
 ---
 

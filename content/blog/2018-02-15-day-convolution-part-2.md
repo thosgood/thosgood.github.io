@@ -2,7 +2,7 @@
 title: Weighted limits, ends, and Day convolution (Part 2)
 part: Part 2
 kind: article
-tags: "category-theory"
+tags: ['category-theory']
 created_at: 2018-02-15
 ---
 

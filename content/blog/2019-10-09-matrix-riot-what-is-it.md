@@ -1,7 +1,7 @@
 ---
 title: 'Matrix: open, secure, and decentralised'
 kind: article
-tags: [matrix, general]
+tags: ['matrix', 'general']
 created_at: 2019-10-09
 ---
 

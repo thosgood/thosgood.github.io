@@ -2,7 +2,7 @@
 title: Localisation and model categories (Part 1)
 part: Part 1
 kind: article
-tags: "category-theory homotopy-theory"
+tags: ['category-theory', 'homotopy-theory']
 created_at: 2018-08-25
 ---
 

@@ -10,6 +10,9 @@
         <div id="post-content" class="w-70-ns w-100 ph3 center">
           <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
           <h6 class="f6 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
+          <div class="tag-list pt2 tc">
+            <%= tags_for(@item, base_url: '/blog/tags/', separator: " ") %>
+          </div>
           <%= yield %>
         </div>
       </div>

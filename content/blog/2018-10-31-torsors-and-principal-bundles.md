@@ -1,7 +1,7 @@
 ---
 title: Torsors and principal bundles
 kind: article
-tags: "algebraic-topology"
+tags: ['algebraic-topology']
 created_at: 2018-10-31
 ---
 

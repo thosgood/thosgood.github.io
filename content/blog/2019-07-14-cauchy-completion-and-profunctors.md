@@ -1,7 +1,7 @@
 ---
 title: Cauchy completion and profunctors
 kind: article
-tags: "category-theory profunctors"
+tags: ['category-theory', 'profunctors']
 created_at: 2019-07-14
 ---
 
