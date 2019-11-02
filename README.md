@@ -7,8 +7,8 @@
             - using some fake calendar layout? like a square with the number big and the month below smaller?
     + posts
         * auto TOCs
-            - probably from `Rules`, if we want them to live in a separate div
-            - i.e. **not** using Kramdown's TOCs
+            - probably from `Rules`, if we want them to live in a separate div?
+                + i.e. **not** using Kramdown's TOCs
         * turn footnotes into sidenotes à la Tufte?
             - or scrolling TOC in the margin?
         * full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`
