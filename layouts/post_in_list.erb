@@ -1,0 +1,14 @@
+<div class="calendar di-ns w-10 fl tc dn">
+  <span class="f2 b"><%= get_day(post) %></span>
+  </br><hr class="mt1 mb0">
+  <span class="f4 db w-100 bg-black-10"><%= get_month(post) %> <%= get_year(post) %></span>
+</div>
+<div class="w-80-ns center bl bb bw1 pl3 mb4">
+  <h4 class="mv2 f3-ns"><%= link_to post[:title], post.path %></h4>
+  <article class="mb3">
+    <%= get_post_before_fold(post) %>
+  </article>
+  <div class="tag-list pb3">
+    <%= tags_for(post, base_url: '/blog/tags/', separator: ", ") %>
+  </div>
+</div>

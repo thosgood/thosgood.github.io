@@ -2,7 +2,7 @@
 title: Blog
 ---
 
-<div class="w100 ph4">
+<div class="w-100">
   <p class="mb1 black-50">
     This blog is mainly a collection of notes of things that I'm trying to understand. The posts are often nothing more than summaries of various textbooks, papers, and nLab pages, but collated, (over)simplified, and reordered to be more easily understood by e.g. me.
   </p>
@@ -11,21 +11,7 @@ title: Blog
   </p>
 
   <% sorted_articles.each do |post| %>
-    <div class="calendar di-ns w-10 fl tc dn">
-      <span class="f2 b"><%= get_day(post) %></span>
-      </br><hr class="mt1 mb0">
-      <span class="f4 db w-100 bg-black-20"><%= get_month(post) %> <%= get_year(post) %></span>
-    </div>
-    <div class="w-80-ns center bl bb bw1 pl3 mb4">
-      <h4 class="mv2"><%= link_to post[:title], post.path %></h4>
-      <!-- <span class="f6 courier black-50"><%= get_pretty_date(post) %></span> -->
-      <article class="mb3">
-        <%= get_post_before_fold(post) %>
-      </article>
-      <div class="tag-list pb3">
-        <%= tags_for(post, base_url: '/blog/tags/', separator: ", ") %>
-      </div>
-    </div>
+    <%= render '/post_in_list.erb', :post => post %>
   <% end %>
 
 </div>
