@@ -16,6 +16,21 @@ module PostHelper
     end
   end
 
+  def get_day(post)
+    attribute_to_time(post[:created_at])
+      .strftime('%d')
+  end
+
+  def get_month(post)
+    attribute_to_time(post[:created_at])
+      .strftime('%b')
+  end
+
+  def get_year(post)
+    attribute_to_time(post[:created_at])
+      .strftime('%y')
+  end
+
   def get_pretty_date(post)
     attribute_to_time(post[:created_at])
       .strftime('{%-d} %B, %Y')

@@ -57,6 +57,23 @@ span.math {
   font-size: 0.9rem;
 }
 
+/* Tiny calendars */
+
+.calendar {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.calendar span.day {
+}
+
+.calendar span.month {
+}
+
+.calendar span.year {
+}
+
 
 /* Lists */
 
@@ -129,11 +146,4 @@ thead > tr {
 
 td {
   padding: 0.75rem;
-}
-
-/* Dark mode */
-
-.dark, .dark * {
-    background-color: #222;
-    color: #e6e6e6;
 }

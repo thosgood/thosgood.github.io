@@ -11,5 +11,5 @@
                 + i.e. **not** using Kramdown's TOCs
         * turn footnotes into sidenotes à la Tufte?
             - or scrolling TOC in the margin?
-        * full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`
+        * ~~full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`~~ (ish)
 - _eventually_, https://www.ctrl.blog/entry/nanoc-items-performance.html
