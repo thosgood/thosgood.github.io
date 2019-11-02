@@ -11,7 +11,7 @@ At a conference this week, I ended up having a conversation with Nicolas Vichery
 
 ---
 
-I know there are a bunch of nice properties that simplices have that other shapes don't have[^1], and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.[^4]
+I know there are a bunch of nice properties that simplices have that other shapes don't have^[Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is _not_ strict, but becomes strict when we consider cubes with connections. See (as always) the [nLab page on test categories](https://ncatlab.org/nlab/show/test+category#examples).], and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.^[I mean, what follows doesn't really answer what we were actually discussing at all (why simplices are the 'right' choice, if they even are), but just assuaged one of my doubts about the niceness of simplices that originally led me to wonder about this problem in the first place.]
 Nicolas, however, showed me a great little calculation that solves this problem.
 Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.
 
@@ -25,7 +25,7 @@ To triangulate this space, we need to add a 1-simplex along the diagonal of the 
 
 This isn't too hard to see, but for arbitrary triangulations of spaces, it's much harder to see what extra simplices we need to add to their product to recover a triangulation.
 Even if we _can_ figure out how to do it for hard examples, then we still would need a way to describe an algorithm for doing it to _any_ product space.
-But there is a 'trick', which works as follows: write your simplices as simplicial sets, **including degeneracies**,[^2] and then take the product in the category of simplicial sets.
+But there is a 'trick', which works as follows: write your simplices as simplicial sets, **including degeneracies**^[Geometrically, this means we take 'lines' that are actually points, 'triangles' that are actually lines or points, etc. Algebraically, this means that we take simplices in the image of the degeneracy maps $s_i^p\colon\Delta_p\to\Delta_{p+1}$ given by $s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]$.], and then take the product in the category of simplicial sets.
 
 Consider our example of $\Delta^1\times\Delta^1$, i.e. $[0,1]\times[0,1]$.
 Define the simplicial set $X_\bullet$ by
@@ -52,17 +52,8 @@ $
 \end{aligned}
 $
 
-Five of these are non-degenerate,[^3] and the one that interests us is $[0,1]\times[0,1]$: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.
+Five of these are non-degenerate,^[The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate.] and the one that interests us is $[0,1]\times[0,1]$: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.
 
 ![The final result](/assets/post-images/2018-04-11-triangulation-of-products-result.jpg "The final result")
 
 In essence, the idea is simple, but it's a trick that I'd never seen before, and it really makes me 'believe' in simplices.
-
----
-
-# Footnotes
-
-[^1]: Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is _not_ strict, but becomes strict when we consider cubes with connections. See (as always) the [nLab page on test categories](https://ncatlab.org/nlab/show/test+category#examples).
-[^2]: Geometrically, this means we take 'lines' that are actually points, 'triangles' that are actually lines or points, etc. Algebraically, this means that we take simplices in the image of the degeneracy maps $s_i^p\colon\Delta_p\to\Delta_{p+1}$ given by $s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]$.
-[^3]: The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate.
-[^4]: I mean, what follows doesn't really answer what we were actually discussing at all (why simplices are the 'right' choice, if they even are), but just assuaged one of my doubts about the niceness of simplices that originally led me to wonder about this problem in the first place.

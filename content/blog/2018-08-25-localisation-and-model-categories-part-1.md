@@ -22,7 +22,7 @@ Let $(\mathcal{C},\mathcal{W})$ be a pair, with $\mathcal{C}$ a category and $\m
 This data is known as a _relative category_, which is a weaker version of a category with weak equivalences, or a homotopical category, or other such notions.
 
 Often we want to _localise_ $\mathcal{C}$ along $\mathcal{W}$, i.e. 'formally invert all morphisms in $\mathcal{W}$'.
-A nice way of making this rigorous is by defining the localisation $\mathcal{C}[\mathcal{W}^{-1}]$ (also written $\operatorname{Ho}(\mathcal{C})$ or $W^{-1}\mathcal{C}$)[^3] by a universal property:[^4]
+A nice way of making this rigorous is by defining the localisation $\mathcal{C}[\mathcal{W}^{-1}]$ (also written $\operatorname{Ho}(\mathcal{C})$ or $W^{-1}\mathcal{C}$)^[There are so many things that 'homotopy category' or '$\operatorname{Ho}(\mathcal{C})$' or '$\operatorname{h}(\mathcal{C})$' can mean, so the context is always very important.] by a universal property:^[This diagram is horribly formatted. I am lost without `tikz-cd`.]
 
 $$\begin{array}{lcr}
     \mathcal{C} & \xrightarrow{\mathcal{W}\,\mapsto\,\text{iso}_\mathcal{D}} & \mathcal{D}\\
@@ -41,7 +41,7 @@ There is a reasonably concrete way of constructing the localisation that is call
 It has a few issues, which we discuss below, after giving a definition.
 This is the localisation that most people will first study in the case of constructing the derived category of complexes, or some other such example, in a course on homological algebra or algebraic geometry.
 
-We define the objects of $\mathcal{C}[\mathcal{W}^{-1}]$ to be those of $\mathcal{C}$, and the morphisms to be _zigzags_ of morphisms: a morphism $x\to y$ is given by a directed graph whose vertices are objects of $\mathcal{C}$, and whose edges are labelled by arrows in $\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})$, **modulo certain equivalence relations**.[^1]
+We define the objects of $\mathcal{C}[\mathcal{W}^{-1}]$ to be those of $\mathcal{C}$, and the morphisms to be _zigzags_ of morphisms: a morphism $x\to y$ is given by a directed graph whose vertices are objects of $\mathcal{C}$, and whose edges are labelled by arrows in $\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})$, **modulo certain equivalence relations**.^[These are just to ensure that composition and the identity morphism behave as expected. See [the nLab](https://ncatlab.org/nlab/show/localization#general_construction) for details.]
 That is, a morphism from $x=a_0$ to $y=a_{n+1}$ is given by a string of objects $a_1,\ldots,a_n\in\mathcal{C}$ with maps between them: either a map $a_i\to a_{i+1}$ in $\mathcal{C}$, or a map $a_i\leftarrow a_{i+1}$ in $\mathcal{W}$.
 
 Note that, if $\mathcal{W}$ contains all identity maps (for example), then we can always insert identity maps in our zigzags to ensure that they are always of the form $f_1g_1\ldots f_ng_n$ with $f_i\in\operatorname{Arr}(\mathcal{C})$ and $g_i\in\operatorname{Arr}(\mathcal{W}^\text{op})$.
@@ -51,7 +51,7 @@ If fact, if $\mathcal{W}$ is a _[calculus of fractions](https://ncatlab.org/nlab
 
 $$x\to a\xleftarrow{\small\mathcal{W}} y \quad\text{or}\quad x\xleftarrow{\small\mathcal{W}}a\to y.$$
 
-Note that we **still** have an equivalence relation: two morphisms $x\xleftarrow{\mathcal{W}}a\to y$ and $x\xleftarrow{\mathcal{W}}b\to y$ are equivalent if there exists some roof $a\xleftarrow{\mathcal{W}}e\to b$ such that 'everything commutes'.[^2]
+Note that we **still** have an equivalence relation: two morphisms $x\xleftarrow{\mathcal{W}}a\to y$ and $x\xleftarrow{\mathcal{W}}b\to y$ are equivalent if there exists some roof $a\xleftarrow{\mathcal{W}}e\to b$ such that 'everything commutes'.^[I think of the diagram you want to show commutes as a tiny house of cards, two layers high.]
 
 One potential problem with this construction (depending on how much you care about these things) is that the localisation might live only in some bigger universe, and so you have to start worrying about that.
 
@@ -81,7 +81,7 @@ $$L^\mathrm{H}(x,y) := \coprod_{n\in\mathbb{N}}\mathcal{N}(\operatorname{H}_n(x,
 
 where $\mathcal{N}$ is the nerve (which sends a category to a simplicial set), and both the categories $\operatorname{H}_n(x,y)$ and the equivalence relation $\sim$ remain to be defined.
 
-For each $n\in\mathbb{N}$ the category $\operatorname{H}_n(x,y)$ has objects being length-$n$ zigzags, as in Gabriel-Zisman localisation[^5], and the morphisms are 'hammocks'
+For each $n\in\mathbb{N}$ the category $\operatorname{H}_n(x,y)$ has objects being length-$n$ zigzags, as in Gabriel-Zisman localisation^[But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$.], and the morphisms are 'hammocks'
 
 $$\begin{array}{ccccccccc}
     &&a_1&\to&a_2\xleftarrow{\small\mathcal{W}}&\ldots&a_n&\\
@@ -112,13 +112,3 @@ The lemma that we'll look at is the following (where we've yet to define the rig
 - V. Hinich, [_Dwyer-Kan localization revisited_](https://arxiv.org/abs/1311.4128), arXiv: `1311.4128` \[math.QA\].
 - W.G. Dwyer and D.M. Kan. "[Calculating simplicial localizations](https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf)". Journal of Pure and Applied Algebra, Volume 18 (1980), pp. 17-35.
 - Pierre Gabriel, Michel Zisman, "[Calculus of Fractions and Homotopy Theory](http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf)", Springer-Verlag, 1967.
-
----
-
-# Footnotes
-
-[^1]: These are just to ensure that composition and the identity morphism behave as expected. See [the nLab](https://ncatlab.org/nlab/show/localization#general_construction) for details.
-[^2]: I think of the diagram you want to show commutes as a tiny house of cards, two layers high.
-[^3]: There are so many things that 'homotopy category' or '$\operatorname{Ho}(\mathcal{C})$' or '$\operatorname{h}(\mathcal{C})$' can mean, so the context is always very important.
-[^4]: This diagram is horribly formatted. I am lost without `tikz-cd`.
-[^5]: But, recalling what we said there, since $\mathcal{W}$ contains all isomorphisms then we can assume that our zigzags always alternate between arrows in $\mathcal{C}$ and arrows in $\mathcal{W}^\text{op}$.
