@@ -1,5 +1,6 @@
 ## Todo
 
+- use `post_entry_in_list.html` in both `blog.html` and `tags.html`
 - blog!
     + pagination
         * OR just months in the margin? sticky ones?
