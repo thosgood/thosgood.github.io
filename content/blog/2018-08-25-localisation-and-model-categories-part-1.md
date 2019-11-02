@@ -64,10 +64,10 @@ Enter _Dwyer-Kan_ (or _simplicial_) localisation.
 This is a way of constructing an $(\infty,1)$-category $L_\mathcal{W}\mathcal{C}$, realised as a _simplicial category_.
 We talk more about simplicial categories later on, but first we quote Julia E. Bergner from ["A model category structure on the category of simplicial categories"](https://arxiv.org/abs/math/0406507):
 
-_Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets._
-_If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$._
-_This notion is more restrictive than that of a simplicial object in the category of categories._
-_Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved._
+> _Note that the term “simplicial category” is potentially confusing. As we have already stated, by a simplicial category we mean a category enriched over simplicial sets._
+> _If $a$ and $b$ are objects in a simplicial category $\mathcal{C}$, then we denote by $\mathrm{Hom}_\mathcal{C}(a,b)$ the function complex, or simplicial set of maps $a\to b$ in $\mathcal{C}$._
+> _This notion is more restrictive than that of a simplicial object in the category of categories._
+> _Using our definition, a simplicial category is essentially a simplicial object in the category of categories which satisfies the additional condition that all the simplicial operators induce the identity map on the objects of the categories involved._
 
 First of all, note that we now require that $(\mathcal{C},\mathcal{W})$ be a _category with weak equivalences_: all isomorphisms are in $\mathcal{W}$, and if any two of $\{f,g,g\circ f\}$ are in $\mathcal{W}$ then so too is the third.
 For example, any model category or homotopical category is automatically a category with weak equivalences.

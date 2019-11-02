@@ -16,7 +16,7 @@ There was a talk yesterday on [$\mathbb{F}_1$ things](http://www.mpim-bonn.mpg.d
 Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a [categorified Dold-Kan correspondence](http://www.mpim-bonn.mpg.de/node/8648).
 I don't really want to talk about the details (because I'm not at all qualified to do so, and you'd be better served by going directly to the source), but something that I really enjoyed was a 'dictionary' that he presented.
 
-Historically, the first step towards 'groupification' was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology — the Betti numbers are just the ranks of the groups.
+Historically, the first step towards 'groupification' was the idea of enriching Betti numbers to abelian groups, which gave birth to what we now know as homology --- the Betti numbers are just the ranks of the groups.
 Similarly, we now have the language to be able to ask that our abelian groups can actually be replaced by stable $\infty$-categories: we can turn homological algebra into _categorified homological algebra_, and, taking inspiration from Serge Lang's famous 'exercise' in homological algebra, we can pick up any textbook on homological algebra and try to categorify (and then prove) all the theorems.
 To do so, we need to know what the classical constructions become in this higher-category language, whence the dictionary.
 

@@ -29,10 +29,10 @@ Any ideas?
 
 # Footnotes
 
-[^1]: Having hidden this part in the main post and not the excerpt makes me feel like I'm writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as _"Nine functors that you wouldn't believe have derived counterparts — number six will shock you!"_ and _"You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction"_. I apologise in advance.
+[^1]: Having hidden this part in the main post and not the excerpt makes me feel like I'm writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as _"Nine functors that you wouldn't believe have derived counterparts --- number six will shock you!"_ and _"You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction"_. I apologise in advance.
 [^2]: \[weasel words\] \[citation needed\]
 [^3]: which is, admittedly, best measured on the Planck scale.
 [^4]:  A. I. Bondal, M. M. Kapranov, “Enhanced triangulated categories”, Mat. Sb., 181:5 (1990), 669–683; Math. USSR-Sb., 70:1 (1991), 93–107.
 [^5]: [https://ncatlab.org/nlab/show/twisted+complex](https://ncatlab.org/nlab/show/twisted+complex)
-[^6]: A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, "Duality and Intersection Theory in Complex Manifolds. I.", Math. Ann., 237 (1978), 41—77.
+[^6]: A bunch of papers, but in particular e.g. D. Toledo and Y. L. L. Tong, "Duality and Intersection Theory in Complex Manifolds. I.", Math. Ann., 237 (1978), 41---77.
 [^7]: Although for me, at least, I (tend to) use _twisted complex_ to refer to the concept of Bondal and Kapranov, and _twisting cochain_ to refer to the concept of (O'Brian), Toledo, and Tong.
