@@ -7,7 +7,7 @@
     <div class="mw7 flex flex-column center">
       <%= render '/header.html' %>
       <div id="main" class="w-100 ph4 flex flex-wrap lh-copy mb2">
-        <div id="post-content" class="w-two-thirds-ns w-100 ph3">
+        <div id="post-content" class="w-70-ns w-100 ph3 center">
           <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
           <h6 class="f6 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
           <%= yield %>

@@ -14,7 +14,7 @@ But, as in many other ways, CT2019 opened my eyes somewhat, and now I'm trying t
 
 # Background and strictification
 
-Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories[^1]), I'll just say a tiny bit about why I'm an idiot.
+Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories^[For some reason this reminds me of the confusion I always have when trying to remember what 'biannual' means.]), I'll just say a tiny bit about why I'm an idiot.
 
 In some sense I had just assumed that 2-categories were kind of uninteresting, for two reasons: firstly, "they're just $n$-categories with $n$=2"; and secondly, every weak 2-category can be strictified, so we can just always take strict models and everything works out just nicely.
 Both of these things are rather bad points of view to take.
@@ -30,7 +30,7 @@ But we do have the following lemma (from Mike's talk).
 So we just define $\mathcal{C}^{\mathbb{D}}Y(d)$ to consist of all this data.
 
 There is then a lovely theory of _coflexible_ objects, which are those $Y$ such that the canonical morphism $Y\to\mathcal{C}^{\mathbb{D}}Y$ has a strict retraction.
-These objects are such that **all** pseudonatural transformations _into_ them are isomorphic to _strict_ such ones.[^2]
+These objects are such that **all** pseudonatural transformations _into_ them are isomorphic to _strict_ such ones.^[The reason that Mike talked about them was in the context of interpreting types as coflexible objects.]
 
 # The idea
 
@@ -131,10 +131,3 @@ Note that we can also get weak versions of double categories, in many ways, as d
 # References
 
 - \[S11\] Michael Shulman, [_Comparing composites of left and right derived functors._](https://arxiv.org/pdf/0706.2868.pdf) arXiv: `0706.2868v2` \[math.CT\].
-
----
-
-# Footnotes
-
-[^1]: For some reason this reminds me of the confusion I always have when trying to remember what 'biannual' means.
-[^2]: The reason that Mike talked about them was in the context of interpreting types as coflexible objects.

@@ -21,7 +21,7 @@ _Please do let me know if there is anything grossly misleading or just plain wro
 
 First of all, there are two points that I want to make about choices of language that I think are really very confusing.
 
-1. When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics[^1]: a **derived category** is like a homotopy truncation (i.e. the $\pi_0$) of some thing with much higher homotopical data; a **derived scheme/stack/whatever** is something whose $\pi_0$ is the corresponding classical object.
+1. When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics^[Namely _derived algebraic geometry_, and its siblings, and its cousins, and... etc.]: a **derived category** is like a homotopy truncation (i.e. the $\pi_0$) of some thing with much higher homotopical data; a **derived scheme/stack/whatever** is something whose $\pi_0$ is the corresponding classical object.
     Derived 'algebraic/geometric objects' _have_ homotopy truncations; derived categories _are_ homotopy truncations.
 2. When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category $K(\mathcal{A})$ the **homotopy category of chain complexes**.
     This is maybe not the best nomenclature, in some sense, because the category that 'truly' deserves this name is the _actual_ homotopy category of chain complexes $\mathrm{Ho}\mathsf{Ch}(\mathcal{A})$, which is, by definition, the derived category $D(\mathcal{A})$.
@@ -47,7 +47,7 @@ Now here is a picture of where the derived category of chain complexes fits in t
 Here are a few words about the above diagram.
 
 - We can understand the definition of _chain homotopies_ much better if we understand the idea of the [interval object in chain complexes](https://ncatlab.org/nlab/show/interval+object+in+chain+complexes).
-- As said at the beginning of this post, there _is_ a difference between passing from $\mathsf{Ch}(\mathcal{A})$ to $K(\mathcal{A})$ and from $K(\mathcal{A})$ to $D(\mathcal{A})$, i.e. quotienting and localising have no reason to behave similarly[^2].
+- As said at the beginning of this post, there _is_ a difference between passing from $\mathsf{Ch}(\mathcal{A})$ to $K(\mathcal{A})$ and from $K(\mathcal{A})$ to $D(\mathcal{A})$, i.e. quotienting and localising have no reason to behave similarly^[Think of rings (for some reason localisations and quotients of rings don't look as confusingly similar to me as the categorical versions do).].
     _But_, there is a model structure that we can put on $\mathsf{Ch}(\mathcal{A})$, and so there _is_ some link between the two: to quote from [a mathoverflow answer by Simon Henry](https://mathoverflow.net/a/188199/73622),
     _"The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen's "Homotopical Algebra" (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects."_
 
@@ -59,10 +59,3 @@ I still don't fully see the link between the homotopy category $\mathrm{h}(\math
 
 You know what?
 There are a lot of things that I still don't understand, but oh my goodness am I having fun trying to figure it all out.
-
----
-
-# Footnotes
-
-[^1]: Namely _derived algebraic geometry_, and its siblings, and its cousins, and etc.
-[^2]: Think of rings (for some reason localisations and quotients of rings don't look as confusingly similar to me as the categorical versions do).

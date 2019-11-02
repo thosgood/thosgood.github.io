@@ -88,7 +88,7 @@ $$(\mathcal{C},\otimes_\mathcal{C},I)\hookrightarrow(\widehat{\mathcal{C}},*,よ
 
 Further, if $\mathcal{C}$ is small, then there is an internal hom on $\widehat{\mathcal{C}}$ which makes it _closed_.
 
-Finally, as a fun little fact, which I used at some point in one of my masters theses,[^2] whenever $\mathcal{C}$ is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from $\mathcal{C}$ to $\mathcal{V}$.
+Finally, as a fun little fact, which I used at some point in one of my masters theses,^[§4.1 in [Under Spec Z. A reader's companion.](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!] whenever $\mathcal{C}$ is small and symmetric, (commutative) monoid objects in the enriched-presheaf category (with Day convolution) are equivalent to (symmetric) lax monoidal functors from $\mathcal{C}$ to $\mathcal{V}$.
 
 ## Monoid algebra
 
@@ -130,10 +130,3 @@ and this somehow looks like a coend, but I have no idea (nor, really, the time (
 ![emi1ypi](/assets/post-images/2019-09-05-day-convolution-part-3-emi1ypi.png)
 
 (the article linked to is [this one](https://bartoszmilewski.com/2019/03/27/promonads-arrows-and-einstein-notation-for-profunctors/), and it is, indeed, great.)
-
----
-
-# Footnotes
-
-[^2]: §4.1 in [Under Spec Z. A reader's companion.](https://github.com/thosgood/papers/blob/master/under-spec-z-readers-companion/under-spec-z.pdf). It's actually something that I'd love to come back to at some point!
-
