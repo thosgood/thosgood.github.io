@@ -18,7 +18,7 @@ title: Blog
         <%= get_post_before_fold(post) %>
       </article>
       <div class="tag-list pb3">
-        <%= tags_for(post, base_url: '/blog/tags/', separator: " ") %>
+        <%= tags_for(post, base_url: '/blog/tags/', separator: ", ") %>
       </div>
     </div>
   <% end %>

@@ -3,6 +3,7 @@
 - blog!
     + pagination
         * OR just months in the margin? sticky ones?
+            - using some fake calendar layout? like a square with the number big and the month below smaller?
     + posts
         * auto TOCs
             - probably from `Rules`, if we want them to live in a separate div
