@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <%= render '/head.html.erb' %>
+  <%= render '/components/head.html.erb' %>
 
   <body class="avenir">
 
     <div class="mw7 flex flex-column center">
-      <%= render '/header.html.erb' %>
+      <%= render '/components/header.html.erb' %>
       <div id="main" class="w-100 flex flex-wrap lh-copy mb2 ph4">
         <div id="post-content" class="w-80-ns tj-ns ph3-ns w-100 center">
           <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
@@ -16,10 +16,10 @@
           <%= yield %>
         </div>
       </div>
-      <%= render '/footer.html.erb' %>
+      <%= render '/components/footer.html.erb' %>
     </div>
 
-    <%= render '/scripts.html.erb' %>
+    <%= render '/components/scripts.html.erb' %>
 
   </body>
 </html>

@@ -12,7 +12,7 @@ katex: true
   </p>
 
   <% sorted_articles.each do |post| %>
-    <%= render '/post_in_list.html.erb', :post => post %>
+    <%= render '/components/post_in_list.html.erb', :post => post %>
   <% end %>
 
 </div>

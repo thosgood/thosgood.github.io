@@ -121,8 +121,8 @@ ul {
       font-family: monospace;
     }
 
-    .katex {
-      font-size: 1em;
+    #post-content .katex {
+      font-size: 1.1em;
     }
 
     /* Images */
