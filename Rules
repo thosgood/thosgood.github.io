@@ -20,20 +20,21 @@ compile '/blog/tags/*' do
   write "/blog/tags/#{item.identifier.to_s.split('/')[-1]}/index.html"
 end
 
-# take the /content/index.hmtl file and filter it with erb (passing it through
-# /layouts/default.*) and make a file /index.html in the output directory
+# take the /content/index.hmtl file and filter it with erubis (passing it
+# through /layouts/default.*) and make a file /index.html in the output
+# directory
 compile '/index.html' do
-  filter :erb
+  filter :erubis
   layout '/Default.*'
   write '/index.html'
 end
 
-# take all other other .html files in /content and filter them with erb (passing
-# them through /layouts/default.*) and make a file /filename/index.html in the
-# output directory (so that we can go to e.g. website.com/projects instead of
-# having to go to website.com/projects.html)
+# take all other other .html files in /content and filter them with erubis
+# (passing them through /layouts/default.*) and make a file /filename/index.html
+# in the output directory (so that we can go to e.g. website.com/projects
+# instead of having to go to website.com/projects.html)
 compile '/**/*.html' do
-  filter :erb
+  filter :erubis
   layout '/Default.*'
   write item.identifier.without_ext + '/index.html'
 end
@@ -47,7 +48,8 @@ compile '/blog/*.md' do
     :katex,
   ]
   layout '/Post.*'
-  y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
+  y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/
+               .match(item.identifier).captures
   write "/blog/#{y}/#{m}/#{d}/#{slug}.html"
 end
 
@@ -56,5 +58,5 @@ end
 passthrough '/**/*'
 
 # any layout that we haven't explicitly mentioned above should also be parsed
-# with erb (assuming that all our layouts are erb files!)
-layout '/**/*', :erb
+# with erubis (assuming that all our layouts are erubis files!)
+layout '/**/*', :erubis
