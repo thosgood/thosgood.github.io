@@ -29,10 +29,10 @@ Just to save you from finding his exact definition, I paraphrase it here.
 
 **Definition.** A **non-$\Sigma$-operad** is a $\mathsf{Top}$-enriched category $\mathcal{A}$ with objects in bijection with $\mathbb{N}=\{0,1,\ldots\}$, along with an associative continuous bifunctor $\oplus\colon\mathcal{A}\times\mathcal{A}\to\mathcal{A}$ given on objects by $m\oplus n=m+n$, and such that, for all $k$ and $n$, the morphism
 
-$\begin{aligned}
+$$\begin{aligned}
     \coprod_{n=\Sigma r_i} \mathcal{A}(r_1,1)\times\ldots\times\mathcal{A}(r_k,1) &\to \mathcal{A}(n,k)\\
     (f_1,\ldots,f_k) &\mapsto f_1\oplus\ldots\oplus f_k
-\end{aligned}$
+\end{aligned}$$
 
 is a homeomorphism.
 

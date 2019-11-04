@@ -1,6 +1,8 @@
 ## Todo
 
 - someway to say 'don't render scripts' in the yaml at the top of papers and projects pages
+- current page link in header bold?
+    + also then ideally dead
 - use `default.html` layout for `tags.html`
     + and `post.html`?
 - blog!

@@ -33,7 +33,7 @@ If $A$ is some topological group then we have (at least) two ways of describing 
 
 As the choice of notation suggests, these two 'associated objects' are (we claim) both deloopings of $A$ in the relevant category, and, in fact, under the [homotopy hypothesis](https://ncatlab.org/nlab/show/homotopy+hypothesis), these two are equivalent via geometric realisation (of the nerve):^[The nerve functor is often omitted in notation and is implicitly considered as part of the geometric realisation.]
 
-$\vert N(\mathbb{B}A)\vert\simeq\mathcal{B}A.$
+$$\vert N(\mathbb{B}A)\vert\simeq\mathcal{B}A.$$
 
 This is all closely linked to the [bar construction](https://ncatlab.org/nlab/show/bar+construction), but I'm still trying to get my head around the 'good' order in which to understand these things, so maybe I'll come back to this point in a future post.^[In fact, there's the important point that we can _prove_ that classifying spaces for principal $A$-bundles exist by showing exactly that $\vert N(\mathbb{B}A)\vert$ satisfies all the required properties.]
 
@@ -43,21 +43,21 @@ Before going any further, we are actually going to look at a concrete example (s
 
 Let $A$ be some group, _which we think of as a discrete groupoid_, and define $\mathbb{B}A$ to be the one-object groupoid with morphisms given by $A$, as above. We're going to show that this really _is_ a delooping of $A$, in that the homotopy square below homotopy-commutes and is homotopy-universal:
 
-$\begin{array}{ccc}
+$$\begin{array}{ccc}
 A &\to &*\\
 \downarrow & &\downarrow\\
 * &\to &\mathbb{B}A\tag{1}
-\end{array}$
+\end{array}$$
 
 Now the map $A\to *\to\mathbb{B}A$ is the constant functor $\Lambda$ to the single object of $\mathbb{B}A$, and there is a natural transformation $\eta$ from this functor to itself given by the identity. Let's unwrap what that says.
 
 First of all, since $A$ is a discrete groupoid, the only morphisms are of the form $\mathrm{id}\colon x\to x$, so any natural transformation $\eta\colon\Lambda\implies\Lambda$ is composed of morphisms $\eta_x\colon\Lambda(x)\to\Lambda(x)$, for all $x\in A$, such that
 
-$\begin{array}{ccc}
+$$\begin{array}{ccc}
 \Lambda(x) &\xrightarrow{\Lambda(\mathrm{id})} &\Lambda(x)\\
 \eta_x\downarrow & &\eta_x\downarrow\\
 \Lambda(x) &\xrightarrow{\Lambda(\mathrm{id})} &\Lambda(x)
-\end{array}$
+\end{array}$$
 
 commutes. But by the definition of $\Lambda$, this just means that $\eta_x$ is any morphism in $\mathbb{B}A$, so we can pick the morphism $x$ (we're really just using that $\mathrm{Ob}(A)=\mathrm{Mor}(\mathbb{B}A)$).
 
@@ -71,7 +71,7 @@ What we showed above is really that every _group_ has a delooping (at least, in 
 
 As I'll 'explain' in a bit, if our category is a stable $(\infty,1)$-category then all deloopings exist and are given by suspension. Before I do this though, I'm going to give one important example of objects that are **infinitely-deloopable**, i.e. their deloopings can be delooped, and so can _their_ deloopings, and etc., so we have an infinite sequence of objects
 
-$A, \mathbb{B}A, \mathbb{B}^2A, \ldots.$
+$$A, \mathbb{B}A, \mathbb{B}^2A, \ldots.$$
 
 ## Singular cohomology and the associated infinite delooping
 
@@ -79,13 +79,13 @@ I claim that any _abelian_ group can be infinitely delooped by setting $\mathbb{
 
 Again, under the homotopy hypothesis, this sequence of deloopings maps to the sequence of [Eilenberg-Mac Lane spaces](https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+space):
 
-$\vert \mathbb{B}^nA\vert \simeq K(A,n).$
+$$\vert \mathbb{B}^nA\vert \simeq K(A,n).$$
 
 This sequence 'is' (under the identification of connective spectra and strict abelian infinity-groups) the [Eilenberg-Mac Lane spectrum](https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+spectrum), whatever that might mean (considering that I've yet to even define spectra). Now comes the magic bit.
 
 Let $X$ be a pointed topological space^[Although for the following theorem to be true it really needs $X$ to be a e.g. CW complex.] and $A$ an abelian group. It is a classical fact^[My use of this phrase almost always means 'everybody says it's true but doesn't give a proof so I guess it must be true', but I will actually discuss this proof at the end of the post because it is so integral to this whole discussion (and because it's not entirely obvious (at least, not to me)).] that the group $H^n(X,A)$ can be identified with $\pi_0\mathsf{Top}_*(X,K(A,n))$, and so the fact that $\vert\mathbb{B}^nA\vert \simeq K(A,n)$ tells us that we could just as well _define_ singular cohomology as
 
-$H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)$
+$$H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)$$
 
 where $\mathbb{H}$ is some 'nice' category in which we have infinite deloopings of $A$, e.g. $\mathsf{Top}_*$ or $\infty\mathsf{Groupoid}$. Even better, these two example choices of $\mathbb{H}$ give us homotopically equivalent objects, by the homotopy hypothesis.
 
@@ -107,7 +107,7 @@ Generally, we can define [$\Omega$-spectrum objects in any $(\infty,1)$-category
 
 But the 'honest' setting for spectra is in a **stable $(\infty,1)$-category**: pointed^[That is, it has a zero object.] $(\infty,1)$-categories $\mathcal{C}$ with finite limits, where the loop $(\infty,1)$-functor $\Omega\colon\mathcal{C}\to\mathcal{C}$ is an _equivalence_, with the inverse given by suspension $\Sigma$. Given some not-necessarily-stable pointed $(\infty,1)$-category $\mathcal{C}$ with finite limits, we can form its **stabilisation** by taking the limit^[Really, taking the $(\infty,1)$-limit in the $(\infty,1)$-category of $(\infty,1)$-categories...] of iterating the loop space functor on the category of **pointed objects of $\mathcal{C}$**:
 
-$\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).$
+$$\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).$$
 
 The prototypical example of such a category is exactly what we've been looking at: _$\mathsf{Stab}(\mathsf{Top})$ is the category of $\Omega$-spectra in $\mathsf{Top}_*$_. In general, we can construct $\mathsf{Stab}(\mathcal{C})$ [exactly by taking the category of spectrum objects](https://arxiv.org/abs/math/0608228) in $(*\downarrow\mathcal{C})$.
 
@@ -129,21 +129,21 @@ A full and good proof (of the fact in question but also much more besides) can b
 
 By the universal coefficient theorem, there is a short exact sequence
 
-$\begin{aligned}
+$$\begin{aligned}
     0 \longrightarrow& \mathrm{Ext}^1_\mathbb{Z}(H_{n-1}(K(A,n),A)) \longrightarrow H^n(K(A,n),A)\\
     &\longrightarrow \mathrm{Hom}_\mathbb{Z}(H_n(K(A,n),A),A) \longrightarrow 0.
-\end{aligned}$
+\end{aligned}$$
 
 Then, by the [Hurewicz theorem](https://en.wikipedia.org/wiki/Hurewicz_theorem), we have an isomorphism
 
-$H^n(K(A,n),A)\xrightarrow{\sim}\mathrm{Hom}_\mathbb{Z}(A,A).$
+$$H^n(K(A,n),A)\xrightarrow{\sim}\mathrm{Hom}_\mathbb{Z}(A,A).$$
 
 Now take the class of $\mathrm{id}_A$ in $\mathrm{Hom}_\mathbb{Z}(A,A)$ and look at its image $[\iota_n]$ in $H^n(K(A,n),A)$. This gives us a natural (in $X$) transformation
 
-$\begin{aligned}
+$$\begin{aligned}
 \eta_X\colon\pi_0\mathsf{Top}_*(X,K(A,n))&\to H^n(X,A)\\
 [\gamma]&\mapsto \gamma^*([\iota_n])
-\end{aligned}$
+\end{aligned}$$
 
 and we claim that it is a natural isomorphism when we restrict to the subcategory of pointed CW complexes.
 

@@ -9,7 +9,7 @@
       <div id="main" class="w-100 flex flex-wrap lh-copy mb2 ph4">
         <div id="post-content" class="w-80-ns w-100 ph3 center tj">
           <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
-          <h6 class="f6 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
+          <h6 class="f5 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
           <div class="tag-list pt2 tc">
             <%= tags_for(@item, base_url: '/blog/tags/', separator: " ") %>
           </div>

@@ -9,6 +9,17 @@ a {
   color: #137752;
 }
 
+a:hover {
+  color: #fff;
+  background: #137752;
+}
+
+.link:hover {
+  color: #137752;
+  background: none;
+  text-decoration: underline overline wavy;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-weight: 550;
 }
@@ -28,11 +39,6 @@ strong {
   font-weight: 600;
 }
 
-.tag-list {
-  font-family: 'Courier Next', courier, monospace;
-  font-size: 0.9rem;
-}
-
 
 
 /* Lists */
@@ -42,104 +48,114 @@ ul {
   padding-left: 1rem;
 }
 
+.tag-list {
+  font-family: 'Courier Next', courier, monospace;
+  font-size: 0.9rem;
+}
+
 
 
 /* In posts */
 
-  /* Typography */
+    /* Footnotes */
 
-  .footnote-ref{
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .footnote-ref{
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .footnote-ref sup {
-    border: 1px solid #137752;
-    padding: 0px 3px;
-  }
+    .footnote-ref sup {
+      border: 1px solid #137752;
+      border-radius: 1rem;
+      padding: 0px 3px;
+    }
 
-  #post-content h1 {
-    font-size: 1.5rem;
-    font-weight: 550;
-  }
+    /* Headings */
 
-  #post-content h2 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
+    #post-content h1 {
+      font-size: 1.5rem;
+      font-weight: 550;
+    }
 
-  #post-content h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
+    #post-content h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
 
-  /* Maths */
+    #post-content h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
 
-  span.math {
-    font-family: monospace;
-  }
+    /* Maths */
 
-  .katex {
-    font-size: 1em;
-  }
+    span.math {
+      font-family: monospace;
+    }
 
-  /* Images */
+    .katex {
+      font-size: 1em;
+    }
 
-  figure {
-    margin-left: -10%;
-    width: 120%;
-  }
+    /* Images */
 
-  figure img {
-    border-radius: 0.5rem;
-    padding: 1px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #aaa;
-  }
+    figure {
+      text-align: center;
+      width: 100%;
+      margin: 0;
+    }
 
-  figure figcaption {
-    text-align: center;
-    font-style: italic;
-  }
+    figure img {
+      border-radius: 0.5rem;
+      padding: 1px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #aaa;
+    }
 
-  /* Tables */
+    figure figcaption {
+      text-align: center;
+      font-style: italic;
+    }
 
-  table {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #aaa;
-    border-radius: 1rem;
-  }
+    /* Tables */
 
-  th {
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: left;
-    padding: 0.75rem;
+    table {
+      width: 100%;
+      /*margin-left: auto;
+      margin-right: auto;*/
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #aaa;
+      border-radius: 1rem;
+    }
 
-  }
+    th {
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.75rem;
 
-  tr {
-    background-color: #eee;
-  }
+    }
 
-  tr.header {
-    background-color: #fff;
-  }
+    tr {
+      text-align: left;
+      background-color: #eee;
+    }
 
-  tbody > tr:nth-child(even) {
-    background-color: #fff;
-  }
+    tr.header {
+      background-color: #fff;
+    }
 
-  td {
-    padding: 0.75rem;
-  }
+    tbody > tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    td {
+      padding: 0.75rem;
+    }
 
 
 
