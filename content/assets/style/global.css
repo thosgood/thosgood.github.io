@@ -1,18 +1,16 @@
 /* Typography */
 
 body {
-  /*font-size: 1.08em;*/
   background-image: url(/assets/backgrounds/geometry.png);
 }
 
 a {
   text-decoration: underline;
-  /* light green #19a974
-     dark green  #137752
-     light blue  #357edd
-     dark blue   #00449e
-     orange      #ff6300 */
   color: #137752;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 550;
 }
 
 h4 {
@@ -26,30 +24,8 @@ code {
   font-size: 0.9rem;
 }
 
-.footnote-ref sup {
-  font-weight: bold;
-  font-size: 1em;
-  padding: 0px 3px;
-}
-
-span.math {
-  font-family: monospace;
-}
-
-.katex {
-  font-size: 1em;
-}
-
-#post-content h1 {
-  font-size: 1.5rem;
-}
-
-#post-content h2 {
-  font-size: 1.25rem;
-}
-
-#post-content h3 {
-  font-size: 1.1rem;
+strong {
+  font-weight: 600;
 }
 
 .tag-list {
@@ -57,22 +33,6 @@ span.math {
   font-size: 0.9rem;
 }
 
-/* Tiny calendars */
-
-.calendar {
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
-
-.calendar span.day {
-}
-
-.calendar span.month {
-}
-
-.calendar span.year {
-}
 
 
 /* Lists */
@@ -83,64 +43,114 @@ ul {
 }
 
 
-/* Images */
 
-figure {
-  margin-left: -10%;
-  width: 120%;
+/* In posts */
+
+  /* Typography */
+
+  .footnote-ref{
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .footnote-ref sup {
+    border: 1px solid #137752;
+    padding: 0px 3px;
+  }
+
+  #post-content h1 {
+    font-size: 1.5rem;
+    font-weight: 550;
+  }
+
+  #post-content h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  #post-content h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  /* Maths */
+
+  span.math {
+    font-family: monospace;
+  }
+
+  .katex {
+    font-size: 1em;
+  }
+
+  /* Images */
+
+  figure {
+    margin-left: -10%;
+    width: 120%;
+  }
+
+  figure img {
+    border-radius: 0.5rem;
+    padding: 1px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+  }
+
+  figure figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Tables */
+
+  table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #aaa;
+    border-radius: 1rem;
+  }
+
+  th {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 0.75rem;
+
+  }
+
+  tr {
+    background-color: #eee;
+  }
+
+  tr.header {
+    background-color: #fff;
+  }
+
+  tbody > tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  td {
+    padding: 0.75rem;
+  }
+
+
+
+/* Tiny calendars */
+
+.calendar {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
-figure img {
-  border-radius: 0.5rem;
-  padding: 1px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #aaa;
-}
-
-figure figcaption {
-  text-align: center;
-  font-style: italic;
-}
-
-
-/* Tables */
-
-table {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #aaa;
-  border-radius: 1rem;
-}
-
-th {
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: left;
-  padding: 0.75rem;
-
-}
-
-tr {
-  background-color: #eee;
-}
-
-tr.header {
-  background-color: #fff;
-}
-
-tbody > tr:nth-child(even) {
-  background-color: #fff;
-}
-
-td {
-  padding: 0.75rem;
-}
 
 
 /* Sticky */
