@@ -80,6 +80,24 @@ ul {
       background: #137752;
     }
 
+    .footnotes ol li {
+      color: #137752;
+      font-weight: 550;
+    }
+
+    .footnotes ol li p {
+      color: #000;
+      font-weight: 400;
+    }
+
+    .footnote-back {
+      text-decoration: none;
+      border: 1px solid #137752;
+      border-radius: 1rem;
+      padding: 0 3px;
+      margin-left: 5px;
+    }
+
     /* Headings */
 
     #post-content h1 {
