@@ -1,17 +1,15 @@
 ## Todo
 
-- horrible bold font
 - someway to say 'don't render scripts' in the yaml at the top of papers and projects pages
 - use `default.html` layout for `tags.html`
+    + and `post.html`?
 - blog!
     + pagination
-        * OR just months in the margin? sticky ones?
-            - using some fake calendar layout? like a square with the number big and the month below smaller?
     + posts
         * auto TOCs
             - probably from `Rules`, if we want them to live in a separate div?
                 + i.e. **not** using Kramdown's TOCs
         * turn footnotes into sidenotes à la Tufte?
             - or scrolling TOC in the margin?
-        * ~~full-width images? e.g. `derived-dg-triangulated-and-infinity-categories`~~ (ish)
+        * full-width images
 - _eventually_, https://www.ctrl.blog/entry/nanoc-items-performance.html

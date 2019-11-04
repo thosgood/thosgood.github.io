@@ -104,23 +104,17 @@ figure figcaption {
 }
 
 
-/* Sticky */
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 1rem;
-}
-
-
 /* Tables */
 
 table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
   border-spacing: 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #ddd;
+  border-color: #aaa;
   border-radius: 1rem;
 }
 
@@ -136,14 +130,23 @@ tr {
   background-color: #eee;
 }
 
-tbody > tr:nth-child(odd) {
+tr.header {
   background-color: #fff;
 }
 
-thead > tr {
-  background-color: #eee;
+tbody > tr:nth-child(even) {
+  background-color: #fff;
 }
 
 td {
   padding: 0.75rem;
 }
+
+
+/* Sticky */
+
+/*.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+}*/
