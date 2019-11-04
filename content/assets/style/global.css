@@ -35,10 +35,6 @@ code {
   font-size: 0.9rem;
 }
 
-strong {
-  font-weight: 600;
-}
-
 
 
 /* Lists */
@@ -56,6 +52,10 @@ ul {
 
 
 /* In posts */
+
+    #post-content strong {
+      font-weight: 600;
+    }
 
     /* Footnotes */
 

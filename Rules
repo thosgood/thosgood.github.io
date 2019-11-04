@@ -16,7 +16,7 @@ end
 
 # make pages for each 'imaginary tag file' that we made in the preprocessing
 compile '/blog/tags/*' do
-  layout '/tags.*'
+  layout '/Tags.*'
   write "/blog/tags/#{item.identifier.to_s.split('/')[-1]}/index.html"
 end
 
@@ -24,7 +24,7 @@ end
 # /layouts/default.*) and make a file /index.html in the output directory
 compile '/index.html' do
   filter :erb
-  layout '/default.*'
+  layout '/Default.*'
   write '/index.html'
 end
 
@@ -34,7 +34,7 @@ end
 # having to go to website.com/projects.html)
 compile '/**/*.html' do
   filter :erb
-  layout '/default.*'
+  layout '/Default.*'
   write item.identifier.without_ext + '/index.html'
 end
 
@@ -46,7 +46,7 @@ compile '/blog/*.md' do
   filter :pandoc, args: [
     :katex,
   ]
-  layout '/post.*'
+  layout '/Post.*'
   y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
   write "/blog/#{y}/#{m}/#{d}/#{slug}.html"
 end
@@ -55,6 +55,6 @@ end
 # directory exactly as they are
 passthrough '/**/*'
 
-# all of our layouts are written in erb, so we can write this rather than
-# annotating each 'layout '/default.*' etc. with this information
+# any layout that we haven't explicitly mentioned above should also be parsed
+# with erb (assuming that all our layouts are erb files!)
 layout '/**/*', :erb
