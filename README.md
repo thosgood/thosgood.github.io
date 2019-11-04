@@ -1,5 +1,7 @@
 ## Todo
 
+- horrible bold font
+- someway to say 'don't render scripts' in the yaml at the top of papers and projects pages
 - use `default.html` layout for `tags.html`
 - blog!
     + pagination

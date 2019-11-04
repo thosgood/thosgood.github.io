@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <%= render '/head.html' %>
+  <%= render '/head.html.erb' %>
 
   <body class="athelas">
 
     <div class="mw7 flex flex-column center">
-      <%= render '/header.html' %>
+      <%= render '/header.html.erb' %>
       <div id="main" class="w-100 flex flex-wrap items-center lh-copy mb2 ph4">
         <div class="w-100">
           <div class="w-80-ns w-100 center mv3">
@@ -15,11 +15,11 @@
             </p>
           </div>
           <% items_with_tag(@item[:tag]).sort_by {|i| Time.parse(i[:created_at].to_s)}.reverse.each do |post| %>
-            <%= render '/post_in_list.erb', :post => post %>
+            <%= render '/post_in_list.html.erb', :post => post %>
           <% end %>
         </div>
       </div>
-      <%= render '/footer.html' %>
+      <%= render '/footer.html.erb' %>
     </div>
 
     <%= render '/scripts.html' %>

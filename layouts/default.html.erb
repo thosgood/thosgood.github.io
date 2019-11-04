@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <%= render '/head.html' %>
+  <%= render '/head.html.erb' %>
 
-  <body class="athelas">
+  <body class="avenir">
 
     <div class="mw7 flex flex-column center">
-      <%= render '/header.html' %>
+      <%= render '/header.html.erb' %>
       <div id="main" class="w-100 flex flex-wrap items-center lh-copy mb2 ph4">
         <%= yield %>
       </div>
-      <%= render '/footer.html' %>
+      <%= render '/footer.html.erb' %>
     </div>
 
     <%= render '/scripts.html' %>
