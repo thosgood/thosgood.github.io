@@ -59,15 +59,25 @@ ul {
 
     /* Footnotes */
 
-    .footnote-ref{
+    .footnote-ref {
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .footnote-ref:hover {
+      color: #137752;
+      background: none;
     }
 
     .footnote-ref sup {
       border: 1px solid #137752;
       border-radius: 1rem;
       padding: 0px 3px;
+    }
+
+    .footnote-ref sup:hover {
+      color: #fff;
+      background: #137752;
     }
 
     /* Headings */
