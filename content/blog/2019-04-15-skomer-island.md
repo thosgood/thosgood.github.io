@@ -1,7 +1,7 @@
 ---
 title: Skomer island
 kind: article
-tags: ['birds']
+tags: ['birds', 'general']
 created_at: 2019-04-15
 ---
 
