@@ -224,6 +224,9 @@ I've tried to unearth them myself, and this post is a semi-lucid stream-of-consc
 
 I have no idea what my future holds in terms of postdocs (or lack thereof), but I hope to also get a chance to make the dictionary itself public and easy to contribute to.^[I have no idea how to rewrite that sentence so that it doesn't end with a preposition, but I'm going to leave it like that anyway because I like to show now and again that I am not a prescriptivist, but instead 'punk rock'.]
 
+My dream implementation of this software would be that one could write something in the language of their choice, run some command on the source file, and be told how much of it can be translated into any given target language, and detail which sentences it can't recognise.
+A bonus feature would be some sort of 'did you mean ...' suggestion, or an autocomplete, to save people from having to go consult the dictionary to see how exactly they 'should' have phrased what they wanted to say to fit within the confines of the limited language.
+
 If anybody has read any of this and wants to talk to me about it, then please do! (Although if it's just to point out all the flaws and mistakes, please at least also send a cute or funny picture of a bird or something, so that I don't have to only read negative things. I am very sensitive.)
 You can talk to me on Twitter, by email, on Matrix, or any other way that you want.
 I love it when people actually want to talk to me.
