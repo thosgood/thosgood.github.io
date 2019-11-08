@@ -26,7 +26,7 @@ deploy:
 # Variables
 
 base_url: https://thosgood.github.io
-site_name: Tim H
+site_name: Tim Hosgood
 
 full_name: Tim Hosgood
 affiliation: Université d'Aix-Marseille
