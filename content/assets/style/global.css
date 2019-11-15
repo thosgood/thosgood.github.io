@@ -30,9 +30,9 @@ h4 {
   padding-bottom: 0px;
 }
 
-code {
+a code {
   font-family: 'Courier Next', courier, monospace;
-  font-size: 0.9rem;
+  font-size: 1em;
 }
 
 
