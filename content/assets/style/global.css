@@ -32,7 +32,7 @@ h4 {
 
 a code {
   font-family: 'Courier Next', courier, monospace;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 
@@ -55,6 +55,10 @@ ul {
 
     #post-content strong {
       font-weight: 600;
+    }
+
+    #post-content code {
+      font-size: 0.9em;
     }
 
     /* Footnotes */
@@ -123,6 +127,10 @@ ul {
 
     #post-content .katex {
       font-size: 1.1em;
+    }
+
+    #post-content .fleqn {
+      padding-left: 3em;
     }
 
     /* Images */

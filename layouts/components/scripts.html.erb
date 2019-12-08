@@ -14,7 +14,7 @@ $("span[class='math display']").replaceWith(
   function(){
     var tex = $(this).text();
     return "<div class=\"equation\">" + 
-           katex.renderToString(tex, {displayMode: true, throwOnError: false}) +
+           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
            "</div>";
 });
 </script>

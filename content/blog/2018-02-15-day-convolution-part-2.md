@@ -24,7 +24,7 @@ I honestly don't think there is a better teaching of this anywhere else in the l
 We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.
 
 First, let $\mathcal{C}$ and $\mathcal{D}$ be $\mathcal{V}$-enriched categories (with $\mathcal{V}$ a closed symmetric monoidal category) and $F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}$ a $\mathcal{V}$-functor.
-Then the **end** of $F$, written $\int_\mathcal{C} F$ is (_if it exists!_) the $\mathrm{Hom}_\mathcal{C}$-weighted limit of $F$:
+Then the **end** $\int_\mathcal{C} F$ of $F$ is (_if it exists!_) the $\mathrm{Hom}_\mathcal{C}$-weighted limit of $F$:
 
 $$\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.$$
 
