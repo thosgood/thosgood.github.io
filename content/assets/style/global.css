@@ -35,6 +35,11 @@ a code {
   font-size: 0.9em;
 }
 
+.title {
+  font-weight: 500;
+  font-style: italic;
+}
+
 
 
 /* Lists */
