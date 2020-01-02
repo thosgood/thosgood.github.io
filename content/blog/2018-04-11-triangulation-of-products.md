@@ -30,27 +30,27 @@ But there is a 'trick', which works as follows: write your simplices as simplici
 Consider our example of $\Delta^1\times\Delta^1$, i.e. $[0,1]\times[0,1]$.
 Define the simplicial set $X_\bullet$ by
 
-$
+$$
 \begin{aligned}
     X_0 &= \{[0], [1]\}\\
     X_1 &= \{[0,0],[0,1],[1,1]\}\\
     X_2 &= \{[0,0,0],[0,0,1],[0,1,1],[1,1,1]\}\\
     &\vdots
 \end{aligned}
-$
+$$
 
 that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points 0 and 1; and the 1-simplices correspond to the line from 0 to 1, as well as the two degenerate 'lines' from 0 to 0 and from 1 to 1_.
 
 When we apply geometric realisation, these degenerate simplices will 'vanish', and so we can just look at what the non-degenerate 1-simplices of $X_\bullet\times X_\bullet$ are to see what happens in terms of triangulation.
 There are nine 1-simplices in the product:
 
-$
+$$
 \begin{aligned}
    &[0,0]\times[0,0], \quad [0,0]\times[0,1], \quad [0,0]\times[1,1],\\
    &[0,1]\times[0,0], \quad [0,1]\times[0,1], \quad [0,1]\times[1,1],\\
    &[1,1]\times[0,0], \quad [1,1]\times[0,1], \quad [1,1]\times[1,1].
 \end{aligned}
-$
+$$
 
 Five of these are non-degenerate,^[The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate.] and the one that interests us is $[0,1]\times[0,1]$: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.
 
