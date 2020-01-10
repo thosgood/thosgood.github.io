@@ -97,6 +97,7 @@ This is something which I think is quite neat, if not seemingly inefficient: to 
 Why?
 I think it's not that hard to believe that, although in English the word 'normal' can describe a group or a scheme, in some other language there might be a distinction, i.e. a different word used in each case.
 Because of this, it seems a lot nicer to make sure that adjectives really do 'belong' to the noun, in some sense.
+Not only that, but it also ensures that adjectives will always^[There are some weird edge cases that I know of (in French, for example) where the gender of a noun depends on its number, but if we deal with pluralisation of nouns in some sufficiently sensitive way, then we should still be able to not worry so much about adjectives. For example, the most blunt approach (that is somehow still quite sensitive) would be to record the pluralisation of each noun (and its adjectives) in the entry for the noun itself --- it's hard (for me right now) to imagine anything better, given how wild some languages can get when it comes to number.] agree (in gender, for example) with the noun that they modify, which means we have one less thing to worry about.
 
 The thing that I haven't explained is the key for this entry: what is '0677022e'?
 Well, as we'll soon see, this whole system is built on the idea of some sort of underlying 'base' language, and most of this is vaguely like the idea that you can write notation instead of words, such as writing '∃' instead of 'there exists', but there isn't a notation for _every_ single mathematical object.
