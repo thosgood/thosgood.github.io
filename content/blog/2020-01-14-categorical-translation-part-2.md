@@ -29,8 +29,8 @@ As Jade pointed out to me, this is somewhat reminiscent of dependent types in Ho
 Before talking about dependent types, I first wanted to mention something that I realised when rereading my last post.
 I said that every language comes with a projection down to the base category, and so we want to look at fibres over this category.
 But when I then gave the JSON dictionary I had been writing, things weren't organised this way, but somehow transpose to this.
-That is, I didn't have a French dictionary, a Spanish dictionary, and so on, but instead a $\mathrm{schemes}$ dictionary, which consisted of all the translations and adjectives and information about the word $\mathrm{scheme}$.
-In other words, the JSON file looks more like something fibred over a very boring category: the set whose elements are just the names of the languages, so that $\mathrm{scheme}^{-1}(\mathsf{Fr})$ was the French entry for the word (containing all the adjectives and so on).
+That is, I didn't have a French dictionary, a Spanish dictionary, and so on, but instead a $\mathrm{schemes}$ 'dictionary', which consisted of all the translations and adjectives and information about the word $\mathrm{scheme}$.
+In other words, the JSON file looks more like something fibred over a very boring category: the set whose elements are just the names of the languages, so that $\mathrm{scheme}^{-1}(\mathsf{Fr})$ was the French entry for the word (containing all the adjectives and so on), instead of what I had described, which looked more like $\mathsf{Fr}^{-1}(\mathrm{08b50276})$.
 
 This reminds me of a part from Fong and Spivak's ''An introduction to applied category theory'' (or ''Seven Sketches''), where they talk about databases whose information is given in rows or in columns.
 (Actually, now I think about it, it might not have been from this book, but instead a tweet that I read around the same time that I got the book... If I remember to go and check, then I'll update this.)
@@ -51,7 +51,7 @@ I am not overly familiar with what they've been doing, but I know that one goal 
 
 # Translation as a change of trivialisation
 
-One final thing that came to me yesterday is that, given this fibration point of view, translation seems more like the change of trivialisation of a bundle: translation from Japanese to Russian, say, is given by $\pi_{\mathsf{RU}}^_{-1}\pi_{\mathsf{JA}}$, and all our fibres (i.e. all our languages) are glued together along entries living over the same point, so things really kind of do look like a bundle of some sort.
+One final thing that came to me yesterday is that, given this fibration point of view, translation seems more like the change of trivialisation of a bundle: translation from Japanese to Russian, say, is given by $\pi^{-1}_{\mathsf{Ru}}\circ\pi_{\mathsf{Ja}}$, and all our fibres (i.e. all our languages) are glued together along entries living over the same point, so things really kind of do look like a bundle of some sort.
 But here I have no idea how this formalism would look, and whether or not it would be equivalent to what I've vaguely sketched so far or not (is there such a thing as the 'Grothendieck construction bundle'? something you get by applying the Grothendieck construction of different functors but then gluing them along their images?), but there ya go.
 
 # Summary
