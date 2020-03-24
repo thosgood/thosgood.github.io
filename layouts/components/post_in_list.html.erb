@@ -4,7 +4,7 @@
   <span class="f5 db w-100 bg-black-10"><%= get_month(post) %> <%= get_year(post) %></span>
 </div>
 <div class="w-80-ns center bl bb bw1 pl3 mb4">
-  <h4 class="mv2 f3-ns"><%= link_to post[:title], post.path %></h4>
+  <h4 class="mv2"><%= link_to post[:title], post.path %></h4>
   <article class="tj-ns mb3">
     <%= get_post_before_fold(post) %>
   </article>

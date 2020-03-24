@@ -2,6 +2,7 @@
 
 body {
   background-image: url(/assets/backgrounds/geometry.png);
+  font-size: 0.9rem;
 }
 
 a {
@@ -44,9 +45,17 @@ a code {
 
 /* Lists */
 
-ul {
-  margin-top: 0.25rem;
+#main ul {
+  margin-top: 0.5rem;
   padding-left: 1rem;
+}
+
+#main ol {
+  margin-top: 0.5rem;
+}
+
+#main li {
+  padding-bottom: 0.5rem;
 }
 
 .tag-list {
