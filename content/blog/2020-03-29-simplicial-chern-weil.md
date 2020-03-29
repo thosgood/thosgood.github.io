@@ -20,7 +20,7 @@ And why is it split into two parts?
 
 # The main goal
 
-In 1980, H.I. Green wrote their thesis [``Chern classes for coherent sheaves''](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1), which, as the title so succinctly implies, gave a construction of Chern classes of coherent (analytic) sheaves.
+In 1980, H.I. Green wrote their thesis [''Chern classes for coherent sheaves''](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1), which, as the title so succinctly implies, gave a construction of Chern classes of coherent (analytic) sheaves.
 What was special about this construction, however, was that it used simplicial methods to mirror the classical Chern-Weil construction of characteristic classes, which shouldn't really be possible, at a first glance.
 
 As a brief recap, for anybody who doesn't know what some of these words mean:
@@ -73,7 +73,7 @@ This is pretty fiddly work, since Green's construction is somehow not functorial
 We also need to be super careful by what we mean when we say 'a complex of coherent sheaves', since, in the _algebraic_ world, this can mean one of two equivalent things: a (cochain) complex in the category of coherent sheaves, or a complex in the category of sheaves such that its internal cohomology (i.e. the cohomology of the cochain complex) consists of coherent sheaves.
 In the analytic world, however, these two things are not necessarily equivalent: we know that they are in low dimensions, but have no general results (as far as I can tell).
 Annoyingly, Green's construction works on complexes of actually coherent sheaves, but the category that is really of interest (even in the analytic world) is the category of complexes with coherent cohomology.
-But we can get around this by using some clever argument found in Toën and Vezzosi's [HAG~II](https://hal.archives-ouvertes.fr/hal-00772955/document), amongst other technical results.
+But we can get around this by using some clever argument found in Toën and Vezzosi's [HAG II](https://hal.archives-ouvertes.fr/hal-00772955/document), amongst other technical results.
 
 In the end, we can construct an equivalence of $(\infty,1)$-categories that reassures us that, yes, indeed, coherent sheaves (meaning complexes with coherent cohomology) are indeed equivalent to sufficiently nice complexes of locally free sheaves on the nerve endowed with sufficiently nice simplicial connections, and so we really can apply Chern-Weil.
 
