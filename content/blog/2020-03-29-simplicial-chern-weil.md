@@ -76,3 +76,8 @@ Annoyingly, Green's construction works on complexes of actually coherent sheaves
 But we can get around this by using some clever argument found in Toën and Vezzosi's [HAG~II](https://hal.archives-ouvertes.fr/hal-00772955/document), amongst other technical results.
 
 In the end, we can construct an equivalence of $(\infty,1)$-categories that reassures us that, yes, indeed, coherent sheaves (meaning complexes with coherent cohomology) are indeed equivalent to sufficiently nice complexes of locally free sheaves on the nerve endowed with sufficiently nice simplicial connections, and so we really can apply Chern-Weil.
+
+# The rest
+
+There are some other results and points of view in my thesis that I'd like to talk about, but I figured that the shorter I keep this post, the more chance of people actually reading it!
+Anyway, it's nice to take a break from this subject for a little while, and spend some time thinking about another side project...
