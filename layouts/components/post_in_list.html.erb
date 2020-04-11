@@ -1,7 +1,8 @@
-<div class="calendar di-ns w-10 fl tc dn">
-  <span class="f3 fw5"><%= get_day(post) %></span>
+<div class="calendar w-10 fl tc">
+  <span class="f4 fw5"><%= get_pretty_day(post) %></span>
+  <span class="f4 fw5 pt0"><%= get_month(post) %></span>
   </br><hr class="mv0">
-  <span class="f5 db w-100 bg-black-10"><%= get_month(post) %> <%= get_year(post) %></span>
+  <span class="f5 db w-100 bg-black-10"><%= get_year(post) %></span>
 </div>
 <div class="w-80-ns center bl bb bw1 pl3 mb4">
   <h4 class="mv2"><%= link_to post[:title], post.path %></h4>

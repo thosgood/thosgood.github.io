@@ -20,7 +20,7 @@ And why is it split into two parts?
 
 # The main goal
 
-In 1980, H.I. Green wrote their thesis [''Chern classes for coherent sheaves''](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1), which, as the title so succinctly implies, gave a construction of Chern classes of coherent (analytic) sheaves.
+In 1980, H.I. Green wrote their thesis ["Chern classes for coherent sheaves"](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1), which, as the title so succinctly implies, gave a construction of Chern classes of coherent (analytic) sheaves.
 What was special about this construction, however, was that it used simplicial methods to mirror the classical Chern-Weil construction of characteristic classes, which shouldn't really be possible, at a first glance.
 
 As a brief recap, for anybody who doesn't know what some of these words mean:
