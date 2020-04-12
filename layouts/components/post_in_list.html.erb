@@ -1,4 +1,4 @@
-<div class="calendar w-10 fl tc">
+<div class="calendar di-ns w-10 fl tc dn">
   <span class="f4 fw5"><%= get_pretty_day(post) %></span>
   <span class="f4 fw5 pt0"><%= get_month(post) %></span>
   </br><hr class="mv0">
@@ -6,6 +6,7 @@
 </div>
 <div class="w-80-ns center bl bb bw1 pl3 mb4">
   <h4 class="mv2"><%= link_to post[:title], post.path %></h4>
+  <span class="f5 dn-ns di i"><%= get_pretty_date(post) %></span>
   <article class="tj-ns mb3">
     <%= get_post_before_fold(post) %>
   </article>
