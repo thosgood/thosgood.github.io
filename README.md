@@ -2,8 +2,6 @@
 
 - HTML title for e.g. tags pages
 - actually use the `katex: false` YAML metadata in e.g. `papers.html`
-- current page link in header bold?
-    + also then ideally dead
 - use `default.html` layout for `tags.html`
     + and `post.html`?
 - blog!
