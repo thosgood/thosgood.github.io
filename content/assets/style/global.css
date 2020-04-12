@@ -15,6 +15,12 @@ a:hover {
   background: #137752;
 }
 
+#header span.active {
+  color: #137752;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #137752;
+}
+
 .link:hover {
   color: #137752;
   background: none;
@@ -33,7 +39,7 @@ h4 {
 
 a code {
   font-family: 'Courier Next', courier, monospace;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .title {
