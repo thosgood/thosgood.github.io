@@ -12,7 +12,7 @@ Anyway, there's a lovely quote from this book about how confusing the terminolog
 
 First, the quote in question.
 
-> In my opinion, the word ''connection'' is overused in this corner of differential geometry. I believe an Ehresmann connection is well named since it gives a way to connect tangent spaces (and other fibres of vector bundles) at distinct points. On the other hand, a Koszul connection $\nabla_X$ is a differential operator since it satisfies Leibniz's rule. That makes it an object in analysis. But these names are set in stone even though no one knows where that stone is to be found.
+> _In my opinion, the word ''connection'' is overused in this corner of differential geometry. I believe an Ehresmann connection is well named since it gives a way to connect tangent spaces (and other fibres of vector bundles) at distinct points. On the other hand, a Koszul connection $\nabla_X$ is a differential operator since it satisfies Leibniz's rule. That makes it an object in analysis. But these names are set in stone even though no one knows where that stone is to be found._
 
 I'm in full agreement with this paragraph. There's a nice little family tree you can draw that helps:
 ![](/assets/post-images/2020-05-29-connection-confusion-family-tree.png)
@@ -27,7 +27,7 @@ Let $E\xrightarrow{p}X$ be a vector bundle, and write $TE\xrightarrow{\pi}E$ to 
 
 But how can we make sense of having three seemingly different definitions? I mean, the second two are even about vector bundles really, but instead sheaves of $\mathbb{R}_X$-vector spaces. Indeed, we would call $\nabla$ in the first definition a _strong morphism of vector bundles_, the $\nabla$ in second definition a _differential operator of order $0$ in $TX$ and order $1$ in $E$_, and the $\nabla$ in the third definition a _differential operator of order $1$_.
 
-Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though.
+Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though:
 
 |             Relation | Name                                 | Description                                                                                                                                      |Notes|
 |---------------------:|:-------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:-|

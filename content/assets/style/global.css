@@ -1,8 +1,8 @@
 /* Typography */
 
 body {
-  background-image: url(/assets/backgrounds/geometry.png);
-  font-size: 0.9rem;
+  /*background-image: url(/assets/backgrounds/geometry.png);*/
+  font-size: 0.95rem;
 }
 
 a {
@@ -24,11 +24,11 @@ a:hover {
 .link:hover {
   color: #137752;
   background: none;
-  text-decoration: underline overline wavy;
+  border-bottom: 2px dashed #137752;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-weight: 550;
+  font-weight: 500;
 }
 
 h4 {
@@ -44,7 +44,6 @@ a code {
 
 .title {
   font-weight: 500;
-  font-style: italic;
 }
 
 
@@ -53,11 +52,15 @@ a code {
 
 #main ul {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding-left: 1rem;
+  list-style-type: circle;
 }
 
 #main ol {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
 }
 
 #main li {
@@ -74,7 +77,7 @@ a code {
 /* In posts */
 
     #post-content strong {
-      font-weight: 600;
+      font-weight: 550;
     }
 
     #post-content code {

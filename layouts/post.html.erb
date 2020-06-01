@@ -2,12 +2,12 @@
 <html lang="en">
   <%= render '/components/head.html.erb' %>
 
-  <body class="courier">
+  <body class="avenir">
 
     <div class="mw7 flex flex-column center">
       <%= render '/components/header.html.erb' %>
       <div id="main" class="w-100 flex flex-wrap lh-copy mb2 ph4">
-        <div id="post-content" class="w-80-ns tj-ns ph3-ns w-100 center">
+        <div id="post-content" class="w-80-ns ph3-ns w-100 center">
           <h1 class="small-caps tc mb2"><%= @item[:title] %></h1>
           <h6 class="f5 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
           <div class="tag-list pt2 tc">
