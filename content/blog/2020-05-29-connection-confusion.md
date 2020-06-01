@@ -29,11 +29,4 @@ But how can we make sense of having three seemingly different definitions? I mea
 
 Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though:
 
-|             Relation | Name                                 | Description                                                                                                                                      |Notes|
-|---------------------:|:-------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:-|
-|                      | strong morphism of vector bundles    | $\varphi_x\colon E_x\to F_x$ linear and of constant rank                                                                                         |the first definition of $\nabla$ lives here|
-|    $\hookrightarrow$ | morphisms of vector bundles          | $\varphi_x\colon E_x\to F_x$ linear                                                                                                              ||
-|             $\simeq$ | morphisms of locally free sheaves    | $\varphi\colon\mathcal{E}\to\mathcal{F}$ $\mathscr{C}^\infty$-linear                                                                             ||
-| $=$ (by a nice thm.) | differential operators of degree $0$ | $\varphi\colon\mathcal{E}\to\mathcal{F}$ $\mathbb{C}_X$-linear and locally given by multiplication                                               ||
-|    $\hookrightarrow$ | differential operators               | $\varphi\colon\mathcal{E}\to\mathcal{F}$ $\mathcal{O}_X$-linear and locally given by $(s_i)\mapsto\sum_jg_{ij}\frac{\partial^ms_i}{\partial?}$ |the second and third definitions of $\nabla$ live here|
-|$\hookrightarrow$|${\mathscr{H}\kern -1.9pt om}_{\mathbb{C}_X}(E,F)$|||
+![](/assets/post-images/2020-05-29-connection-confusion-hierarchy.jpg)
