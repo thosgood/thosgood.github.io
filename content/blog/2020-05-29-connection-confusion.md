@@ -1,7 +1,7 @@
 ---
 title: Confusion about connections
 kind: article
-tags: ['algebraic-geometry']
+tags: ['algebraic-geometry', 'differential-geometry']
 created_at: 2020-05-29
 ---
 
