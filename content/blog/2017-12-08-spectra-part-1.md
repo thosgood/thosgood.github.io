@@ -99,7 +99,7 @@ $$\begin{array}{ccc}
     * &\to &B
 \end{array}$$
 
-or, said in a different way,^[See [here](https://ncatlab.org/nlab/show/mapping+cone#idea) for a nice picture as well as some clever words] as the mapping cone of the terminal map $X\to *$.
+or, in other words,^[See [here](https://ncatlab.org/nlab/show/mapping+cone#idea) for a nice picture as well as some clever words] as the mapping cone of the terminal map $X\to *$.
 
 ## Sneak peek at $A_\infty$-algebras
 

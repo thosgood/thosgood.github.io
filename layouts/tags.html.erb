@@ -1,28 +1,12 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <%= render '/components/head.html.erb' %>
-
-  <body class="avenir">
-
-    <div class="mw7 flex flex-column center">
-      <%= render '/components/header.html.erb' %>
-      <div id="main" class="w-100 flex flex-wrap items-center lh-copy mv4 ph4">
-        <div class="w-100">
-          <div class="w-80-ns w-100 center mv3">
-            <p class="ma0">
-              <span class="b f4">Posts tagged with </span> <span class="code f5"><%= @item[:tag] %></span>
-              <a href="/blog" class="fr f4">&larr; Return to all posts</a>
-            </p>
-          </div>
-          <% items_with_tag(@item[:tag]).sort_by {|i| Time.parse(i[:created_at].to_s)}.reverse.each do |post| %>
-            <%= render '/components/post_in_list.html.erb', :post => post %>
-          <% end %>
-        </div>
-      </div>
-      <%= render '/components/footer.html.erb' %>
+<% render '/**/Default.*' do %>
+  <div class="w-100">
+    <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
+      <span class="f5">Posts tagged </span> <span class="code f6"><%= @item[:tag] %></span>
+      <br class="dn-ns">
+      <a href="/blog" class="fr-ns f5">&larr; Return to all posts</a>
     </div>
-
-    <%= render '/components/scripts.html.erb' %>
-
-  </body>
-</html>
+    <% items_with_tag(@item[:tag]).sort_by {|i| Time.parse(i[:created_at].to_s)}.reverse.each do |post| %>
+      <%= render '/components/post_in_list.html.erb', :post => post %>
+    <% end %>
+  </div>
+<% end %>

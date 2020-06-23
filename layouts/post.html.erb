@@ -1,25 +1,13 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <%= render '/components/head.html.erb' %>
-
-  <body class="avenir">
-
-    <div class="mw7 flex flex-column center">
-      <%= render '/components/header.html.erb' %>
-      <div id="main" class="w-100 flex flex-wrap items-center lh-copy mv4 ph4">
-        <div id="post-content" class="w-80-ns ph3-ns w-100 center">
-          <h1 class="small-caps tc mb2 mt0"><%= @item[:title] %></h1>
-          <h6 class="f5 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
-          <div class="tag-list pt2 tc">
-            <%= tags_for(@item, base_url: '/blog/tags/', separator: " ") %>
-          </div>
-          <%= yield %>
-        </div>
-      </div>
-      <%= render '/components/footer.html.erb' %>
+<% render '/**/Default.*' do %>
+  <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
+    <a href="/blog" class="fr-ns f5">&larr; Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100 center">
+    <h1 class="small-caps tc mb2 mt0"><%= @item[:title] %></h1>
+    <h6 class="f5 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
+    <div class="tag-list pt2 tc">
+      <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
     </div>
-
-    <%= render '/components/scripts.html.erb' %>
-
-  </body>
-</html>
+    <%= yield %>
+  </div>
+<% end %>

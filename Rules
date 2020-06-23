@@ -7,7 +7,7 @@ preprocess do
   tags.each do |tag|
     next unless tag
     content = ''
-    attributes = { tag: tag }
+    attributes = { tag: tag, title: "#{tag} posts" }
     identifier = "/blog/tags/#{tag}"
 
     @items.create(content, attributes, identifier)
