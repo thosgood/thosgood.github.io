@@ -29,12 +29,12 @@ a:hover {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
 }
 
 h4 {
   font-size: 1.25rem;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
 }
 
 a code {
@@ -115,6 +115,7 @@ a code {
     .footnotes ol li p {
       color: #000;
       font-weight: 400;
+      margin: 0px;
     }
 
     .footnote-back {
