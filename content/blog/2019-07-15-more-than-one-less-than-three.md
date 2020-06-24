@@ -10,8 +10,6 @@ But, as in many other ways, CT2019 opened my eyes somewhat, and now I'm trying t
 
 <!-- more -->
 
----
-
 # Background and strictification
 
 Before I get to the point of this post (which is to help me to remember the differences between 2-categories, bicategories, and double categories^[For some reason this reminds me of the confusion I always have when trying to remember what 'biannual' means.]), I'll just say a tiny bit about why I'm an idiot.

@@ -11,8 +11,6 @@ However, after scanning through some papers by [Bartlett](https://arxiv.org/abs/
 
 <!-- more -->
 
----
-
 _The following is aimed at people who have maybe read some things about quantum physics before and know some linear algebra._
 
 Quantum computing has fascinated me ever since  I first studied it at university, despite being a self-proclaimed 'non-physicist', swearing to do only 'mathematical maths' and none of this applied stuff (a shameful phase that I am really glad I outgrew).

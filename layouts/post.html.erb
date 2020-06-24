@@ -1,6 +1,6 @@
 <% render '/**/Default.*' do %>
   <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
-    <a href="/blog" class="fr-ns f5">&larr; Return to all posts</a>
+    <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr-ns f5">&larr; Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100 center">
     <h1 id="post-title" class="small-caps tc mb2 mt0"><%= @item[:title] %></h1>

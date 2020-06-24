@@ -9,8 +9,6 @@ Finally, I find myself with enough motivation to start writing the last part to 
 
 <!-- more -->
 
----
-
 For a refresher on all the definitions, you can check out the two previous parts in this series, because we're just going to dive right in.
 
 # Tensor products

@@ -9,8 +9,6 @@ For category theorists, the idea that "everything is a Kan extension" is a famil
 
 <!-- more -->
 
----
-
 Today, [`@ququ7`](https://twitter.com/ququ7) tweeted/twote/twut that, [a few years back, Tim Campion had told him how Stokes' theorem is a result about coends](https://twitter.com/ququ7/status/1169048827703287814). All I want to do here is share this great little snippet, but I won't be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!
 
 Here's the idea. We look at $\mathbb{N}$ as a poset, the category $\mathsf{Vect}_\mathbb{R}$ of real-vector spaces, and fix some manifold $X$. Then we have two pretty standard functors.

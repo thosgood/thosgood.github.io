@@ -11,8 +11,6 @@ What follows are some things that I learnt (mostly from \[BD86\]).
 
 <!-- more -->
 
----
-
 # Bimodules
 
 A good place to begin is with the definition of a _bimodule_.

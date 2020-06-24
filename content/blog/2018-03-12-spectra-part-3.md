@@ -10,8 +10,6 @@ This post is a weird one: it's not really aimed at any one audience, but is more
 
 <!-- more -->
 
----
-
 Now would be a great time to talk about operads, but I really could not do a better job than [Tai-Danae Bradley](https://twitter.com/math3ma) has already done over at her [blog](http://www.math3ma.com) in the post _What is an Operad_, [part 1](http://www.math3ma.com/mathema/2017/10/23/what-is-an-operad-part-1) and [part 2](http://www.math3ma.com/mathema/2017/10/30/what-is-an-operad-part-2).
 So throughout this post I'm going to assume that you've read this, and I'll freely reference bits of it without necessarily saying so.
 

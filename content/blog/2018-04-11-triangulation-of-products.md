@@ -9,8 +9,6 @@ At a conference this week, I ended up having a conversation with Nicolas Vichery
 
 <!-- more -->
 
----
-
 I know there are a bunch of nice properties that simplices have that other shapes don't have^[Or, at least, not a priori. This is sort of exampled by the fact that the cube category is a test category that is _not_ strict, but becomes strict when we consider cubes with connections. See (as always) the [nLab page on test categories](https://ncatlab.org/nlab/show/test+category#examples).], and they seem to be the natural choice when you start thinking about higher categories as quasi-categories and filling of horns etc., but I always thought that simplices were badly behaved with respect to taking products.^[I mean, what follows doesn't really answer what we were actually discussing at all (why simplices are the 'right' choice, if they even are), but just assuaged one of my doubts about the niceness of simplices that originally led me to wonder about this problem in the first place.]
 Nicolas, however, showed me a great little calculation that solves this problem.
 Neither I nor some of the other people I spoke to had seen this before, so I thought it would be worth spreading the word.

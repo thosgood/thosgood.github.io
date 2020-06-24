@@ -11,8 +11,6 @@ This isn't a long post and could probably instead be a tweet but then this blog 
 
 <!-- more -->
 
----
-
 First of all, for the actual definitions of twisting/twisted cochains/complexes (the nomenclature varies wildly and seemingly inconsistently),^[Although for me, at least, I (tend to) use _twisted complex_ to refer to the concept of Bondal and Kapranov, and _twisting cochain_ to refer to the concept of (O'Brian), Toledo, and Tong.] I will shamelessly refer the interested reader to ~~some notes I wrote a while back~~. (update: these notes have been subsumed into my PhD thesis)
 
 Secondly, the 'quirk' of dg-categories about which I'm talking^[Having hidden this part in the main post and not the excerpt makes me feel like I'm writing the mathematical equivalent of click-bait journalism. Next will come posts with titles such as _"Nine functors that you wouldn't believe have derived counterparts --- number six will shock you!"_ and _"You Will Laugh And Then Cry When You See What This Child Did With The Grothendieck Construction"_. I apologise in advance.] is that, for a lot of people^[\[weasel words\] \[citation needed\]], it is the (pre-)triangulated structure that is interesting.

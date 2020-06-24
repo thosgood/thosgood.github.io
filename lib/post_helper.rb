@@ -51,6 +51,10 @@ module PostHelper
     end
     return preview
   end
+
+  def generate_post_link_id(post)
+    return post.path.gsub(/\/blog\//, '').gsub(/.html/, '').gsub(/\//, '-')
+  end
 end
 
 include PostHelper

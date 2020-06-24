@@ -8,7 +8,9 @@ class AddTocFilter < Nanoc::Filter
     headers = doc.css('#post-content h1').drop(1)
     tag_list = doc.css('.tag-list')[0]
     toc_items = headers.map { |header| "<li><a href=\"\##{header["id"]}\">#{header.text}</a></li>" }
+    tag_list.add_next_sibling(Nokogiri::HTML.fragment("<hr>"))
     tag_list.add_next_sibling(Nokogiri::HTML.fragment("<ol id=\"toc\"></ol>"))
+    tag_list.add_next_sibling(Nokogiri::HTML.fragment("<hr>"))
     toc_items.each do |item|
       doc.at_css('#toc').add_child(Nokogiri::HTML.fragment(item))
     end

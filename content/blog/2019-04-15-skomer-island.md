@@ -10,8 +10,6 @@ I am even less knowledgeable about birds than I am about maths, but I do love th
 
 <!-- more -->
 
----
-
 I am from North Devon, and just off the coast there is a small island called [Lundy](https://en.wikipedia.org/wiki/Lundy), which has a very interesting history, but is also famous for being the home to one of the few Atlantic puffin colonies in the British Isles.^[Indeed, it seems to be the case that the name _Lundy_ comes from the Old Norse word for puffin (c.f. [Lundey](https://en.wikipedia.org/wiki/Lundey), off the coast of Reykjavík).]
 In the last few decades, sadly, the number of breeding pairs of puffins has been in sharp decline, and when I went over there about 10 years ago I didn't see a single one.
 Thanks to lots of work by dedicated volunteers, it seems like the puffin population of Lundy is slowly on the rise again, and so hopefully the future will see the return of Lundy as a puffin sanctuary.

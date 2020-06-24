@@ -11,8 +11,6 @@ Point is, I haven't posted anything in forever, and one of my supervisor's stron
 
 <!-- more -->
 
----
-
 We briefly^[In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can't think of that means 'self-containedness' but is actually a real word/phrase?)] recall the definition of a principal $G$-bundle over a space $X$, where $G$ is some _topological_ group.
 
 **Definition.** A _principal $G$-bundle over $X$_ is a fibre bundle $P\xrightarrow{\pi}X$ with a continuous right action $P\times G\to P$ such that
