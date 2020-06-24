@@ -12,7 +12,9 @@
       <%= render '/components/footer.html.erb' %>
     </div>
 
-    <%= render '/components/scripts.html.erb' %>
+    <% if @item[:katex] != false %>
+      <%= render '/components/scripts.html.erb' %>
+    <% end %>
 
   </body>
 </html>
