@@ -30,7 +30,7 @@ This, I said to myself, in the last soliloquy of this introduction, might mean t
 Not only that, but when you restrict your mathematical writing even further to somewhat-boring sentences of the form 'If $A$ then $B$. Let $x$ be a $T$. Then $C$ implies $B$.' then you work on each little logical sub-part and glue them all together to get the whole sentence.
 Compositionality!
 
-## Implementation before theory
+# Implementation before theory
 
 In case I hadn't made it clear already, I am neither an applied category theorist nor a linguist (nor a polyglot, nor a programmer, actually), so my approach to this was to write some proof-of-concept software that at least half worked before trying to figure out any theoretical details.
 I wanted to come up with something that could be interacted with in a browser, so I made the absolutely terrible decision of coming up with a prototype in JavaScript.
@@ -49,7 +49,7 @@ What it actually does is the following:
 
 Steps 1 and 3 are much easier here than elsewhere because we've restricted ourselves to mathematical language, but still, they were far beyond my Javascript capabilities; Step 2, which is the actual bit that I was trying to figure out, is actually, computationally, pretty trivial.
 
-## The dictionary and its structure
+# The dictionary and its structure
 
 Even if the category theory behind all this turns out to be uninteresting, or just plain wrong, my hope is that the multilingual dictionary of mathematical terminology will be of at least some use, and I'm planning on making a way of contributing to it publicly available, so we can all have one nice resource, instead of having to go on Wikipedia and hope that some person has been nice enough to write an article on the object whose name you want to translate in the language that you want it translated into.
 At the moment the dictionary is very (_very_) small, but that's mostly because I am at the time in my life where my thesis is going to be very unhappy if it goes any longer without being finished.
@@ -129,12 +129,12 @@ The types of the entries for English and French might seem more familiar to thos
 Sorry.
 Finally, there's the 'vari' entry, which will help us to deal with the fact that different languages like to put words in different orders.
 
-## The main theoretical input
+# The main theoretical input
 
 To summarise my one 'contribution' to this translation problem, I can say the following: 'words have meanings, and since, in mathematics, sentences are compositional, we can do translation by thinking of words as being fibres over some fundamental base meaning, and translate them by just ensuring that the image of the fibre is a fibre over the same basepoint.'
 Of course, I now need to justify and explain this...
 
-## The categorical setting
+# The categorical setting
 
 The paper that I've been reading to try to help me understand what I want to say is the brilliant [Translating and Evolving: Towards a Model of Language Change in DisCoCat](https://arxiv.org/abs/1811.11041), by Tai-Danae Bradley (Graduate Center, CUNY), Martha Lewis (ILLC, University of Amsterdam), Jade Master (Dept. Mathematics, UC Riverside), and Brad Theilman (Gentner Lab, UC San Diego).
 For the sake of not making this already-too-long post any longer, I will assume some familiarity with this paper.
@@ -143,7 +143,7 @@ Before going any further though, I would like to point out that the flow of math
 And I really do mean 'ramblings', because, again, lest I never actually write this all up, I'm making things easier for myself by assuming that everybody reading this is imagining giant scare quotes around every single sentence that now follows.
 _If you are not yet doing so, then please now do so._
 
-## The underlying type theory
+# The underlying type theory
 
 Let $T$ be some set of types, say $T=\{n,v,s,...\}$, where $n$ stands for 'noun', 'v' for variable (think $X$, $f_{12}$, $\widehat{\mathcal{C}}$, etc.), and $s$ for 'sentence'.
 
@@ -167,7 +167,7 @@ In our setting, its type should be $s((v←)⊠(n←))$, which does indeed have 
 
 So then, it almost looks like $\mathsf{EN}$ comes from some sort of Grothendieck construction!
 
-## Languages as Grothendieck constructions
+# Languages as Grothendieck constructions
 
 As we have just said, an object of $\mathsf{EN}$ is a triple $(a,b,t)$, where $a\in\mathsf{FormStr}$, $b\in\mathcal{B}$, and $t\in\mathcal{T}|_{\operatorname{type}(b)}$, so we might be able to realise $\mathsf{EN}$ as the Grothendieck construction of some functor $\mathsf{FormStr}\times\mathcal{B}^{\mathrm{op}} \to \widehat{\mathcal{T}}$, where $\widehat{\mathcal{T}}$ is the category of all pregroups $\mathcal{T}'$ freely generated on some $T'\subset T$.
 We know how this functor should act on objects: $(a,b) \mapsto \mathcal{T}|_{\operatorname{type}(b)}$, but we need to think about how it acts on morphisms too.
@@ -176,7 +176,7 @@ This is something that I'm really not too sure about, but something that might w
 
 I really don't know about this bit, and maybe there isn't actually a good functorial construction that makes this a Grothendieck construction, but I really hope there is, because that gives me some hope that there might actually be some truth hidden behind all this wild gesticulation.
 
-## Sentences as trees
+# Sentences as trees
 
 Assuming we know how to deal with 'words' (which I continue to write in scare quotes because, by this I mean things of arbitrary type, not just of type $n$), the next step is how to deal with sentences.
 This is something that, as I said above, I'm pretty sure has been well understood by people for a while now: we think of a sentence as a tree.
@@ -199,7 +199,7 @@ There are two ways (_that I can think of_) of dealing with order:
 
 The first sounds like an administrative nightmare; the second sounds 'evil', but seems to work, and is thus the one for which I opted.
 
-## Compositional translation
+# Compositional translation
 
 What _is_ translation then?
 Well, on sentences, it's given compositionally (I'm literally trying to wave my hands as I type that), and on sentences it's given by the profunctor^[Thanks to John Baez for reminding me about indicator functions and profunctors and the like.] $\mathrm{Tr}_{\mathsf{L}_1,\mathsf{L}_2} \colon \mathsf{L}_1 \nrightarrow \mathsf{L}_2$ defined by 
@@ -209,14 +209,14 @@ Well, on sentences, it's given compositionally (I'm literally trying to wave my 
 That is, translating words is just given by finding a word in the target language with the same base.
 "But what if there are synonyms?" I hear you cry, to which I defensively respond "well just pick any of them then, because if they really are synonyms then it doesn't matter which one we use".
 
-## Nonsensical sentences
+# Nonsensical sentences
 
 Of course, at the moment we could conceivably translate entirely (mathematically) nonsensical sentences, like 'If $X$ is the group and let $z$ be the complex triangle then $P$ does not hold false.'
 An interesting question, I think, is whether or not we could introduce some sort of logic on our base language $\mathcal{B}$ to _prevent such sentences from even existing_.
 That is, think of our base language as some sort of proof assistant, like Lean or Coq or whatever, instead of just arbitrary symbols.
 This is perhaps a more interesting question, since we're describing a sort of translation from proof assistant to natural language, and this is something that's already been studied (see the references at the end of this post).
 
-## What's next?
+# What's next?
 
 Wow.
 This ended up being much longer than I intended it on being, but I got a bit carried away.
@@ -232,7 +232,7 @@ If anybody has read any of this and wants to talk to me about it, then please do
 You can talk to me on Twitter, by email, on Matrix, or any other way that you want.
 I love it when people actually want to talk to me.
 
-## Assorted references
+# Assorted references
 
 Here, in no particular order (really, no order at all), are some references that I've put on my reading list for this project.
 
