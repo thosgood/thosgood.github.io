@@ -3,7 +3,6 @@
 - make bold (e.g. on the blog page) a smaller weight
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
-    + need any CSS changes?
     + h2 level?
 - blog!
     + **pagination**

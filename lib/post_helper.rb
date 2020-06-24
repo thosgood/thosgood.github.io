@@ -47,7 +47,7 @@ module PostHelper
     content = post.compiled_content
     if content =~ /\s#{fold_indicator}\s/
       preview = content.partition(fold_indicator).first +
-      "<a href='#{post.path}' class='link f5 ph1 ba fr'>Continue reading &rarr;</a>"
+      "<a href='#{post.path}' class='f5 ph1 ba fr'>Continue reading &rarr;</a>"
     end
     return preview
   end
