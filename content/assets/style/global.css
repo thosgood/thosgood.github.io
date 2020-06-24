@@ -81,7 +81,12 @@ a code {
     }
 
     #post-content code {
-      font-size: 0.9em;
+      font-size: 0.95em;
+    }
+
+    #post-content li p {
+      margin-top: 0px;
+      margin-bottom: 0.5rem;
     }
 
     /* Footnotes */
