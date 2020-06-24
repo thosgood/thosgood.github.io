@@ -1,5 +1,7 @@
 ## Todo
 
+- make bold (e.g. on the blog page) a smaller weight
+- fix footnote return link arrows (vertically centred?)
 - blog!
     + **pagination**
         * see /lib/pagination_helper.rb

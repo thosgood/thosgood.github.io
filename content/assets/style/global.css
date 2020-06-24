@@ -89,6 +89,20 @@ a code {
       margin-bottom: 0.5rem;
     }
 
+    /* Table of contents */
+
+    .toc-back {
+      font-size: 1.5rem;
+      text-decoration: none;
+      border: 1px solid #137752;
+      padding: 0px 5px;
+      margin-right: -30px;
+      float: left;
+      position: relative;
+      top: -62px;
+      right: 30px;
+    }
+
     /* Footnotes */
 
     .footnote-ref {
@@ -124,9 +138,10 @@ a code {
     }
 
     .footnote-back {
+      font-size: 0.8rem;
       text-decoration: none;
       border: 1px solid #137752;
-      border-radius: 1rem;
+      /*border-radius: 1rem;*/
       padding: 0 3px;
       margin-left: 5px;
     }
