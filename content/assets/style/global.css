@@ -189,6 +189,7 @@ a code {
       width: 100%;
       /*margin-left: auto;
       margin-right: auto;*/
+      font-size: 0.9rem;
       border-collapse: collapse;
       border-spacing: 0;
       border-style: solid;
@@ -199,7 +200,7 @@ a code {
 
     th {
       font-weight: 600;
-      text-transform: uppercase;
+      /*text-transform: uppercase;*/
       text-align: center;
       padding: 0.75rem;
 
@@ -212,6 +213,7 @@ a code {
 
     tr.header {
       background-color: #fff;
+      border-bottom: 2px #333 solid;
     }
 
     tbody > tr:nth-child(even) {
