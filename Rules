@@ -8,7 +8,6 @@ preprocess do
     content = ''
     attributes = { tag: tag, title: "#{tag} posts" }
     identifier = "/blog/tags/#{tag}"
-
     @items.create(content, attributes, identifier)
   end
 end
@@ -43,9 +42,10 @@ end
 # name all come from the title of the file
 compile '/blog/*.md' do
   filter :pandoc, args: [
-    :katex,
+    :katex
   ]
   layout '/Post.*'
+  filter :add_toc
   y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
   write "/blog/#{y}/#{m}/#{d}/#{slug}.html"
 end
