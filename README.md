@@ -4,7 +4,7 @@
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + need any CSS changes?
-    + shouldn't display the two hr if the TOC is empty
+    + h2 level?
 - blog!
     + **pagination**
         * see /lib/pagination_helper.rb

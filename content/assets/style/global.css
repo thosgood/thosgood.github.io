@@ -91,8 +91,11 @@ a code {
 
     /* Table of contents */
 
-    #toc {
-      
+    ol#toc {
+      width: 80%;
+      position: relative;
+      left: 10%;
+      margin-bottom: -0.4rem;
     }
 
     .toc-back {
@@ -110,7 +113,7 @@ a code {
     /* Footnotes */
 
     .footnote-ref {
-      text-decoration: none;
+      text-decoration: underline;
       font-weight: bold;
     }
 
@@ -120,14 +123,18 @@ a code {
     }
 
     .footnote-ref sup {
-      border: 1px solid #137752;
-      border-radius: 1rem;
       padding: 0px 3px;
+      margin-right: -2px;
     }
 
     .footnote-ref sup:hover {
       color: #fff;
       background: #137752;
+    }
+
+    .footnotes {
+      font-size: 0.85rem;
+      margin-top: 30px;
     }
 
     .footnotes ol li {
@@ -143,9 +150,7 @@ a code {
 
     .footnote-back {
       font-size: 0.8rem;
-      text-decoration: none;
-      border: 1px solid #137752;
-      /*border-radius: 1rem;*/
+      text-decoration: underline;
       padding: 0 3px;
       margin-left: 5px;
     }
