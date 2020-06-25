@@ -15,6 +15,10 @@ a:hover {
   background: #137752;
 }
 
+#main strong {
+  font-weight: 550;
+}
+
 #header span.active {
   color: #137752;
   font-size: 1.25rem;
@@ -87,6 +91,13 @@ a code {
     #post-content li p {
       margin-top: 0px;
       margin-bottom: 0.5rem;
+    }
+
+    /* Colour select */
+
+    ul#colour-select {
+      padding-left: 0px;
+      margin: 0px;
     }
 
     /* Table of contents */

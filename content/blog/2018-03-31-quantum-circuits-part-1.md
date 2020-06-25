@@ -27,8 +27,8 @@ Before jumping in to the jacuzzi that is quantum circuitry, let's dip our toes i
 First of all though, a note on quantum computers in practice.
 There are a bunch of companies that make 'quantum computers' (for example the [D-Wave](https://www.dwavesys.com)) but these are of a completely different species to those that we're going to have a look at.
 These computers work using [quantum annealing](https://en.wikipedia.org/wiki/Quantum_annealing) – a sort of quantum version of [thermal annealing](http://www.wikiwand.com/en/Simulated_annealing); what I'm going to talk about are [universal quantum computers](http://www.wikiwand.com/en/Quantum_Turing_machine).
-Quantum annealing lets you implement so-called hill-climbing algorithms, but many of the famous quantum algorithms, like Shor's, cannot be implemented in this way.Quantum annealing lets you implement so-called hill-climbing algorithms, but many of the more well-known quantum algorithms, such as [Shor's](https://en.wikipedia.org/wiki/Shor%27s_algorithm?oldformat=true), cannot be implemented in this way.
-I hate to be a cynic about something in which I am far from an expert, but it seems to me that calling systems like the D-Wave 'quantum computers' is a way to boost sales by using not-entirely-false-but-definitely-misleading buzzwords.^[In general, it seems that quantum physics shares the fate of Gödel's incompleteness theorems – to be misquoted and misapplied for the purpose of sensationalism.]
+Quantum annealing lets you implement so-called _hill-climbing algorithms_, but many of the more well-known quantum algorithms, such as [Shor's](https://en.wikipedia.org/wiki/Shor%27s_algorithm?oldformat=true), cannot be implemented in this way.
+I hate to be a cynic about something in which I am far from an expert, but it seems to me that calling systems like the D-Wave 'quantum computers' is a way to boost sales by using not-entirely-false-but-definitely-misleading buzzwords.^[In general, it seems that quantum physics shares the fate of Gödel's incompleteness theorems: to be misquoted and misapplied for the purpose of sensationalism.]
 
 Another very important point is that **quantum algorithm complexity** is by no means trivial.
 Said in another way, there are some things that quantum computers can do so much better than classical ones (e.g. prime factorisation), but they are neither 'better' nor 'faster' overall: there are some things that they are much _worse_ at than classical computers.
@@ -171,15 +171,15 @@ $$\begin{aligned}
 Then we can describe the four classical computations on a single bit by matrices:
 
 $$\begin{array}{cccc}
-    \begin{pmatrix}1&0\\0&1\end{pmatrix} & \begin{pmatrix}0&1\\1&0\end{pmatrix} & \begin{pmatrix}1&1\\0&0\end{pmatrix} & \begin{pmatrix}0&0\\1&1\end{pmatrix}\\[1em]
-    \text{IDENTITY} & \text{NOT} & \text{CONSTANT-0} & \text{CONSTANT-1}
+    \begin{pmatrix}1&0\\0&1\end{pmatrix} & \begin{pmatrix}0&1\\1&0\end{pmatrix} & \begin{pmatrix}1&1\\0&0\end{pmatrix} & \begin{pmatrix}0&0\\1&1\end{pmatrix}\\[1.5em]
+    \text{Identity} & \text{Not} & \text{Constant-0} & \text{Constant-1}
 \end{array}$$
 
 If we have two bits, we can use that $\mathbb{R}^2\otimes\mathbb{R}^2\cong\mathbb{R}^4$ to write state vectors in the form
 
 $$\begin{pmatrix}\delta_a\\1-\delta_a\end{pmatrix}\otimes \begin{pmatrix}\delta_b\\1-\delta_b\end{pmatrix} \longleftrightarrow \begin{pmatrix}\delta_a\otimes\delta_b\\\delta_a\otimes(1-\delta_b)\\(1-\delta_a)\otimes\delta_b\\(1-\delta_a)\otimes(1-\delta_b)\end{pmatrix}$$
 
-for $$\delta_a,\delta_b\in\{0,1\}$$.
+for $$\delta_a,\delta_b\in\{0,1\}.$$
 
 Then, for example, a gate that acts as NOT on the first bit and as the CONSTANT1 gate on the second bit would be given by^[The tensor product of matrices is given by the [Kronecker product](https://en.wikipedia.org/wiki/Kronecker_product).] the matrix
 

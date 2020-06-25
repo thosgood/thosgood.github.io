@@ -1,5 +1,17 @@
 <% render '/**/Default.*' do %>
   <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
+    <ul id="colour-select" class="fl-ns">
+      <li class="di">
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li class="di">
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
     <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr-ns f5">&larr; Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100 center">
@@ -11,3 +23,20 @@
     <%= yield %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+function lightStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = 'white';
+  body.style.color = 'black';
+}
+function darkStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = '#333';
+  body.style.color = '#eee';
+  // var links = document.getElementsByTagName('a');
+  // for (var i = 0; i < links.length; i++) {
+  //   links[i].style.color = "red";
+  // }
+}
+</script>

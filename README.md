@@ -1,6 +1,9 @@
 ## Todo
 
-- make bold (e.g. on the blog page) a smaller weight
+- colour schemes on blog posts
+    + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
+    + make sure footnotes are affected!
+    + use sass or something for "brand colour"?
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?
