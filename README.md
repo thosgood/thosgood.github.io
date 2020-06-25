@@ -2,8 +2,9 @@
 
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
-    + make sure footnotes are affected!
+        * this would fix the link hover problem...
     + use sass or something for "brand colour"?
+- change date colour from rgba to rgb
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?

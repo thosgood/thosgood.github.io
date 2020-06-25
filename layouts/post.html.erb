@@ -1,5 +1,5 @@
 <% render '/**/Default.*' do %>
-  <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
+  <div id="post-menu" class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
     <ul id="colour-select" class="fl-ns">
       <li class="di">
         <button type="button" onclick="lightStyle()">
@@ -16,7 +16,7 @@
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100 center">
     <h1 id="post-title" class="small-caps tc mb2 mt0"><%= @item[:title] %></h1>
-    <h6 class="f5 courier black-50 normal mv0 tc"><%= get_pretty_date(item) %></h6>
+    <h6 id="post-date" class="f5 courier silver normal mv0 tc"><%= get_pretty_date(item) %></h6>
     <div class="tag-list pv2 tc">
       <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
     </div>
@@ -29,14 +29,20 @@ function lightStyle() {
   var body = document.getElementsByTagName('body')[0];
   body.style.background = 'white';
   body.style.color = 'black';
+  document.getElementById('post-menu').style.background = '#eee'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#137752';
+  }
 }
 function darkStyle() {
   var body = document.getElementsByTagName('body')[0];
   body.style.background = '#333';
   body.style.color = '#eee';
-  // var links = document.getElementsByTagName('a');
-  // for (var i = 0; i < links.length; i++) {
-  //   links[i].style.color = "red";
-  // }
+  document.getElementById('post-menu').style.background = '#555'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#9eebcf';
+  }
 }
 </script>

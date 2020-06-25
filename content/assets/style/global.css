@@ -11,8 +11,9 @@ a {
 }
 
 a:hover {
-  color: #fff;
-  background: #137752;
+  /*color: #fff;*/
+  /*background: #137752;*/
+  background: #999;
 }
 
 #main strong {
@@ -149,12 +150,12 @@ a code {
     }
 
     .footnotes ol li {
-      color: #137752;
+      /*color: #137752;*/
       font-weight: 550;
     }
 
     .footnotes ol li p {
-      color: #000;
+      /*color: #000;*/
       font-weight: 400;
       margin: 0px;
     }
