@@ -4,7 +4,7 @@
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
         * this would fix the link hover problem...
     + use sass or something for "brand colour"?
-- change date colour from rgba to rgb
+    + make buttons look nicer
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?
