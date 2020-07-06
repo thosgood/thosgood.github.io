@@ -5,6 +5,7 @@
         * this would fix the link hover problem...
     + use sass or something for "brand colour"?
     + make buttons look nicer
+    + fix tables in dark mode
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?

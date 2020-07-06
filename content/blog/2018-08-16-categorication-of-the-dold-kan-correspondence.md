@@ -31,7 +31,7 @@ The last line (corresponding to a direct sum) is a semi-orthogonal decomposition
 Finally, we need to define what $\mathrm{Tot}$ is.
 
 For $n=1$, we have already defined that $\mathrm{Tot}$ is given by $\mathrm{cone}$.
-For $n=2$, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_cartesian).
+For $n=2$, we draw some punctured (i.e. missing one vertex) cube (see below) and take the colimit (which, thanks to stability, makes the cube actually _bi_-cartesian).
 For $n=3$ we embed the above cube as the face of a 4-dimensional cube, and take a colimit, etc. etc.
 
 ![Defining Tot for length 3 complexes.](/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg "Defining Tot for length 3 complexes")
