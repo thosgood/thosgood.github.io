@@ -1,5 +1,5 @@
 ---
-title: Categorication of the Dold-Kan correspondence
+title: Categorification of the Dold-Kan correspondence
 kind: article
 tags: ['category-theory']
 created_at: 2018-08-16
