@@ -3,9 +3,7 @@
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
         * this would fix the link hover problem...
-    + use sass or something for "brand colour"?
     + make buttons look nicer
-    + fix tables in dark mode
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?
