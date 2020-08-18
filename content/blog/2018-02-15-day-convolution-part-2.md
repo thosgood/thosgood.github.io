@@ -1,5 +1,5 @@
 ---
-title: Weighted limits, ends, and Day convolution (Part 2)
+title: Weighted limits, ends, and Day convolution
 part: Part 2
 kind: article
 tags: ['category-theory']

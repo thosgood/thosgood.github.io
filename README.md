@@ -13,8 +13,6 @@
     + posts
         * turn footnotes into sidenotes à la Tufte?
             - or scrolling TOC in the margin?
-        * full-width images 
-        * make the `part` tag mean something
-            - automatically link posts of the same title with different parts?
+        * full-width images
     + strip any footnotes from the previews
 - _eventually_, https://www.ctrl.blog/entry/nanoc-items-performance.html

@@ -1,5 +1,5 @@
 ---
-title: Loop spaces, spectra, and operads (Part 1)
+title: Loop spaces, spectra, and operads
 part: Part 1
 kind: article
 tags: ['category-theory', 'spectra', 'algebraic-topology', 'operads']
@@ -99,7 +99,7 @@ $$\begin{array}{ccc}
 
 or, in other words,^[See [here](https://ncatlab.org/nlab/show/mapping+cone#idea) for a nice picture as well as some clever words] as the mapping cone of the terminal map $X\to *$.
 
-## Sneak peek at $A_\infty$-algebras
+# Sneak peek at $A_\infty$-algebras
 
 In one of Stasheff's theses, in the 60s, he formalised the idea of algebras that behave 'like loop spaces' in that they have a multiplication structure that is only associative _up to some higher homotopies_. These are called **$A_\infty$-algebras**, and there are plenty of classic introductions to them in their own right. The 'most classic' is probably _[Keller, Bernhard (2001). Introduction to A-infinity algebras and modules](https://arxiv.org/abs/math/9910179)_, which also describes (in §2.2) what I'm going to briefly sketch out below (and will cover in more detail in the future): how loop spaces are 'almost associative algebras'.
 

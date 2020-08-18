@@ -1,5 +1,6 @@
 ---
-title: Categorical translation for mathematical language (Part 2)
+title: Categorical translation for mathematical language
+part: Part 2
 kind: article
 tags: ['category-theory', 'translation', 'software']
 created_at: 2020-01-14

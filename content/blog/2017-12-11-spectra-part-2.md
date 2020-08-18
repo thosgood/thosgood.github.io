@@ -1,5 +1,5 @@
 ---
-title: Loop spaces, spectra, and operads (Part 2)
+title: Loop spaces, spectra, and operads
 part: Part 2
 kind: article
 tags: ['category-theory', 'spectra', 'algebraic-topology', 'operads']

@@ -1,5 +1,5 @@
 ---
-title: Localisation and model categories (Part 1)
+title: Localisation and model categories
 part: Part 1
 kind: article
 tags: ['category-theory', 'homotopy-theory']

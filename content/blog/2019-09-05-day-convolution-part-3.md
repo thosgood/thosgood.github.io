@@ -1,5 +1,6 @@
 ---
-title: Weighted limits, ends, and Day convolution (Part 3)
+title: Weighted limits, ends, and Day convolution
+part: Part 3
 kind: article
 tags: ['category-theory', 'profunctors']
 created_at: 2019-09-05

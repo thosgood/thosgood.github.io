@@ -16,11 +16,24 @@
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100 center">
     <h1 id="post-title" class="small-caps tc mb2 mt0"><%= @item[:title] %></h1>
+    <h2 id="post-part" class="tc mb2 mt0"><%= @item[:part] %></h2>
     <h6 id="post-date" class="f5 courier silver normal mv0 tc"><%= get_pretty_date(item) %></h6>
     <div class="tag-list pv2 tc">
       <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
     </div>
+    <% if @item[:part] != nil %>
+      <div id="post-other-parts" class="mt4">
+        <span class="i">See all parts of this series:</span>
+        <% sorted_articles.reverse.each do |otherpost| %>
+          <% if otherpost[:title] == @item[:title] %>
+            <%= link_to_unless_current "#{otherpost[:part]}", otherpost.path, :class => 'i mh1' %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
     <%= yield %>
+
   </div>
 <% end %>
 
