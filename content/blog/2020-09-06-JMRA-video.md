@@ -1,7 +1,7 @@
 ---
 title: JMRA Video
 kind: article
-tags: ['general', 'algebraic-geometry', 'differential-geometry']
+tags: ['general', 'algebraic-geometry', 'complex-geometry', 'homotopy-theory']
 created_at: 2020-09-06
 ---
 
