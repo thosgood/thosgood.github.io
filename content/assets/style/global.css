@@ -2,7 +2,7 @@
 
 body {
   /*background-image: url(/assets/backgrounds/geometry.png);*/
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 a {
@@ -80,6 +80,9 @@ a code {
 
 
 /* In posts */
+    #post-content {
+      font-size: 1.1rem;
+    }
 
     #post-content strong {
       font-weight: 550;
