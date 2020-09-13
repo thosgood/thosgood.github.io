@@ -5,7 +5,7 @@ tags: ['general', 'algebraic-geometry', 'complex-geometry', 'homotopy-theory']
 created_at: 2020-09-06
 ---
 
-I recently submitted a video to the [Junior Mathematician Research Archive](https://sites.google.com/view/jmra/home) that gives a brief overview of the work in my PhD thesis. You can watch the video [here](https://www.youtube.com/watch?v=l_eXElGTCzo) but, be warned, it's really probably not the most cohesive (ha ha) narrative.
+I recently submitted a video to the [Junior Mathematician Research Archive](https://sites.google.com/view/jmra/home) that gives a brief overview of the work in my PhD thesis. You can watch the video [here](https://www.youtube.com/watch?v=l_eXElGTCzo) but, be warned, it's really probably not the most coherent (ha ha) narrative.
 
 For the sake of it, or in case you're the sort of person who prefers to read instead of watch, I've included the transcript of the whole video below.
 
