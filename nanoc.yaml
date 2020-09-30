@@ -25,7 +25,7 @@ deploy:
 
 # Variables
 
-base_url: https://thosgood.github.io
+base_url: https://thosgood.com
 site_name: Tim Hosgood
 
 full_name: Tim Hosgood
