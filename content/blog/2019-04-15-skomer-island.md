@@ -15,7 +15,7 @@ In the last few decades, sadly, the number of breeding pairs of puffins has been
 Thanks to lots of work by dedicated volunteers, it seems like the puffin population of Lundy is slowly on the rise again, and so hopefully the future will see the return of Lundy as a puffin sanctuary.
 
 Just off the west coast of Wales, in Pembrokeshire, there is another island famous for its fauna: [Skomer](https://en.wikipedia.org/wiki/Skomer).
-As well as housing about half of the world's population of [Manx shearwaters](https://en.wikipedia.org/wiki/Manx_shearwater)^[Interestingly, the Latin name for which is _Puffinus puffinus_., being the unique home of the [Skomer vole](https://en.wikipedia.org/wiki/Skomer_vole), and having numerous other species of birds, seals, and rabbits, it also has the largest puffin colony in southern Britain.
+As well as housing about half of the world's population of [Manx shearwaters](https://en.wikipedia.org/wiki/Manx_shearwater)^[Interestingly, the Latin name for which is _Puffinus puffinus_.], being the unique home of the [Skomer vole](https://en.wikipedia.org/wiki/Skomer_vole), and having numerous other species of birds, seals, and rabbits, it also has the largest puffin colony in southern Britain.
 
 Puffins are extremely cute^[No citation needed.] birds who mate for life, returning to the same burrows each year in order to find their partner, mate, and then leave (flying solo to the northern seas) for six or seven months, before coming back the next April.
 To quote from the [Wikipedia article](https://en.wikipedia.org/wiki/Atlantic_puffin),
