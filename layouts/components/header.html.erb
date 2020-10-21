@@ -1,13 +1,15 @@
-<div id="header" class="h3-ns w-100 pv3 ph4 flex flex-wrap items-end bb">
-  <div class="w-third-ns tl-ns pb0-ns pb2 w-100">
-    <span class="f4 fw6"><%= @config[:full_name] %></span>
-  </div>
-  <div class="w-two-thirds-ns tc w-100">
-    <ol class="fr-ns list ma0 pl0">
-      <li class="pr3-ns pr2 dib"><%= link_to_unless_current('About', '/', :class => 'link f4') %></li>
-      <li class="ph3-ns ph2 dib"><%= link_to_unless_current('Papers', '/papers/', :class => 'link f4') %></li>
-      <li class="ph3-ns ph2 dib"><%= link_to_unless_current('Blog', '/blog/', :class => 'link f4') %></li>
-      <li class="pl3-ns pl2 dib"><%= link_to_unless_current('CV', '/cv/', :class => 'link f4') %></li>
-    </ol>
+<div id="header-wrapper" class="h3-ns w-100 bb b--light-silver flex items-center justify-center">
+  <div id="header" class="w-70 flex flex-wrap items-end">
+    <div class="w-third-ns tl-ns pb0-ns pb2 w-100">
+      <span class="f4 fw6"><%= @config[:full_name] %></span>
+    </div>
+    <div class="w-two-thirds-ns tc w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="pr3-ns pr2 dib"><%= link_to_unless_current('About', '/', :class => 'link f4') %></li>
+        <li class="ph3-ns ph2 dib"><%= link_to_unless_current('Papers', '/papers/', :class => 'link f4') %></li>
+        <li class="ph3-ns ph2 dib"><%= link_to_unless_current('Blog', '/blog/', :class => 'link f4') %></li>
+        <li class="pl3-ns pl2 dib"><%= link_to_unless_current('CV', '/cv/', :class => 'link f4') %></li>
+      </ol>
+    </div>
   </div>
 </div>

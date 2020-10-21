@@ -1,10 +1,10 @@
- @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* Typography */
 
 body {
   /*background-image: url(/assets/backgrounds/geometry.png);*/
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -84,7 +84,7 @@ a code {
 
 /* In posts */
     #post-content {
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
     #post-content strong {
