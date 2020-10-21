@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tim Hosgood | matrix posts</title>
+
+    <link rel="stylesheet" href="/assets/style/global.css">
+    <link rel="stylesheet" href="/assets/style/tachyons.min.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <!-- <body class="avenir"> -->
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 bb b--light-silver flex items-center justify-center">
+  <div id="header" class="w-70 pa3 flex flex-wrap items-center">
+    <div class="w-third-ns tl-ns pb0-ns pb2 w-100">
+      <span class="f3">Tim(othy) Hosgood</span>
+    </div>
+    <div class="w-two-thirds-ns tc w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="pr3-ns pr2 dib"><a class="link f4" href="/">About</a></li>
+        <li class="ph3-ns ph2 dib"><a class="link f4" href="/papers/">Papers</a></li>
+        <li class="ph3-ns ph2 dib"><a class="link f4" href="/blog/">Blog</a></li>
+        <li class="pl3-ns pl2 dib"><a class="link f4" href="/cv/">CV</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-center lh-copy mv4 ph4">
+        
+  <div class="w-100">
+    <div class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
+      <span class="f5">Posts tagged </span> <span class="code f6">matrix</span>
+      <br class="dn-ns">
+      <a href="/blog" class="fr-ns f5">&larr; Return to all posts</a>
+    </div>
+    
+      <div class="calendar di-ns w-10 fl tc dn">
+  <span class="f4 fw5">9th</span>
+  </br>
+  <span class="f4 fw5 pt0">Oct</span>
+  </br><hr class="mv0">
+  <span class="f5 db w-100 bg-black-10">2019</span>
+</div>
+<div class="w-80-ns center bl bb bw1 pl3 mb4">
+  <h4 id="2019-10-09-matrix-riot-what-is-it" class="mv2">
+    
+      <a href="/blog/2019/10/09/matrix-riot-what-is-it.html">Matrix: open, secure, and decentralised</a>
+    
+  </h4>
+  <span class="f5 dn-ns di i">9th October, 2019</span>
+  <article class="tj-ns mb3">
+    <p>Anybody who follows me on Twitter will have heard me go on about Matrix, and Riot, and maybe a whole host of other such things. I understand that most people probably won’t really care much about it all, but I thought that I’d try to explain a bit why I’m quite so passionate about this stuff, and why I’m bothering to try to work on ‘LaTeX’ support (with scare quotes for good reason, as explained later).</p>
+<a href='/blog/2019/10/09/matrix-riot-what-is-it.html' class='f5 ph1 ba fr no-underline'>Continue reading &rarr;</a>
+  </article>
+  <div class="tag-list pb3">
+    <a href="/blog/tags/matrix" rel="tag">matrix</a>, <a href="/blog/tags/general" rel="tag">general</a>
+  </div>
+</div>
+    
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 bt b--light-silver flex items-center justify-center">
+  <div id="footer" class="w-70 pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim(othy) Hosgood</li> -->
+        <!-- <li>Université de Montpellier</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net" >tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns w-100">
+      <ul class="ph2-ns ma0-ns fr-ns list ph0 mt3">
+        <li class="pl2-ns pl3 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="pl2-ns pl3 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="pl2-ns pl3 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2-ns pl3 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+$("span[class='math inline']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex, {throwOnError: false}) +
+           "</span>";
+});
+
+$("span[class='math display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+           "</div>";
+});
+</script>
+
+    
+
+  </body>
+</html>
