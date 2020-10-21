@@ -1,6 +1,6 @@
 ## Todo
 
-- font size selection on blog posts (next to colour selection)
+- nicer a:hover behaviour
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
         * this would fix the link hover problem...
