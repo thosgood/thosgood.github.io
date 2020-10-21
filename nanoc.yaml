@@ -22,6 +22,7 @@ deploy:
     kind: git
     branch: master
     remote: origin
+    forced: true
 
 # Variables
 

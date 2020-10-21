@@ -1,5 +1,6 @@
 ## Todo
 
+- fix the massive amounts of blank lines inserted before the automated "see all parts" thing?
 - nicer a:hover behaviour
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
