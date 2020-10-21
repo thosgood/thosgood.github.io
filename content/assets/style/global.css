@@ -10,12 +10,12 @@ body {
 
 a {
   text-decoration: underline;
-  color: #137752;
+  color: #2a7ae2;;
 }
 
 a:hover {
   /*color: #fff;*/
-  /*background: #137752;*/
+  /*background: #2a7ae2;;*/
   background: #999;
 }
 
@@ -24,15 +24,15 @@ a:hover {
 }
 
 #header span.active {
-  color: #137752;
+  color: #2a7ae2;;
   font-size: 1.25rem;
-  border-bottom: 2px solid #137752;
+  border-bottom: 2px solid #2a7ae2;;
 }
 
 .link:hover {
-  color: #137752;
+  color: #2a7ae2;;
   background: none;
-  border-bottom: 2px dashed #137752;
+  border-bottom: 2px dashed #2a7ae2;;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -123,7 +123,7 @@ a code {
     .toc-back {
       font-size: 1.5rem;
       text-decoration: none;
-      border-bottom: 1px solid #137752;
+      border-bottom: 1px solid #2a7ae2;;
       padding: 0px 5px;
       margin-right: -30px;
       float: left;
@@ -140,7 +140,7 @@ a code {
     }
 
     .footnote-ref:hover {
-      color: #137752;
+      color: #2a7ae2;;
       background: none;
     }
 
@@ -151,7 +151,7 @@ a code {
 
     .footnote-ref sup:hover {
       color: #fff;
-      background: #137752;
+      background: #2a7ae2;;
     }
 
     .footnotes {
@@ -160,7 +160,7 @@ a code {
     }
 
     .footnotes ol li {
-      /*color: #137752;*/
+      /*color: #2a7ae2;;*/
       font-weight: 550;
     }
 
