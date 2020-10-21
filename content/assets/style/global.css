@@ -100,6 +100,10 @@ a code {
       margin-bottom: 0.5rem;
     }
 
+    #post-content blockquote {
+      font-style: italic;
+    }
+
     /* Colour select */
 
     ul#colour-select {
