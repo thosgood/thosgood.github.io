@@ -111,6 +111,20 @@ a code {
       margin: 0px;
     }
 
+    /* Other parts */
+
+    #post-other-parts {
+      font-style: italic;
+    }
+
+    #post-other-parts a {
+      padding: 0 3px;
+    }
+
+    #post-other-parts span {
+      padding: 0 3px;
+    }
+
     /* Table of contents */
 
     ol#toc {
