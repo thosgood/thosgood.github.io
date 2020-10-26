@@ -114,14 +114,15 @@ a code {
     /* Table of contents */
 
     ol#toc {
-      width: 80%;
-      position: relative;
-      left: 10%;
+      /*width: 100%;*/
+      /*position: relative;*/
+      /*left: 10%;*/
       margin: 2em 0;
       border-top: 1px solid black;
       border-bottom: 1px solid black;
       padding-top: 1em;
       padding-bottom: 0.5em;
+      padding-left: 10%;
     }
 
     .toc-back {
