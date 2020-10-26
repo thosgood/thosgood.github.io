@@ -26,7 +26,7 @@
         <span class="i">See all parts of this series:</span>
         <% sorted_articles.reverse.each do |otherpost| %>
           <% if otherpost[:title] == @item[:title] %>
-            <%= link_to_unless_current "#{otherpost[:part]}", otherpost.path, :class => 'i mh1' %>
+            <%= link_to_unless_current "#{otherpost[:part]}", otherpost.path %>
           <% end %>
         <% end %>
       </div>
