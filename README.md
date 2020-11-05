@@ -1,11 +1,11 @@
 ## Todo
 
 - fix the massive amounts of blank lines inserted before the automated "see all parts" thing?
-- nicer a:hover behaviour
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
         * this would fix the link hover problem...
     + make buttons look nicer
+    + actually, have a dark mode/colour scheme thing in the header, or somewhere that works globally (**i.e. for every page on the site**)
 - fix footnote return link arrows (vertically centred?)
 - finish TOC in posts
     + h2 level?
