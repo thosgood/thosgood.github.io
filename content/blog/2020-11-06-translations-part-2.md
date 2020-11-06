@@ -15,8 +15,8 @@ Here's a quick summary of what I've uploaded to [thosgood.com/translations](http
     1. "Théorème de dualité pour les faisceaux algébriques cohérents". _Séminaire Bourbaki_ **9** (1956--57), Talk no. 149.
     2. "Géométrie formelle et géométrie algébrique". _Séminaire Bourbaki_ **11** (1958--59), Talk no. 182.
 - There are two more articles that I'd seen somebody ask to be translated:
-    1. Deligne, P. "A quoi servent les motifs?". _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
-    2. Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion". _Acta Math._ **48** (1926), 305--317.
+    + Deligne, P. "A quoi servent les motifs?". _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
+    + Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion". _Acta Math._ **48** (1926), 305--317.
 
 Finally, at the [bottom of the site](https://thosgood.com/translations/#in-progress) I've made available any "works in progress", with the idea that (a) people can at least hopefully profit from what I've done, and (b) people can let me know if there's anything there that they'd really like to see finished.
 Most of these are either quite long, or in German (or some other language that I don't speak), and so will be very much a long-term project.
