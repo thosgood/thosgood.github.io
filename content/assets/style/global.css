@@ -22,6 +22,22 @@ a:hover {
   font-weight: 550;
 }
 
+#header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#name_in_header {
+  color: black;
+  text-decoration: none;
+}
+
+#name_in_header:hover {
+  border: none;
+}
+
 #header span.active {
   color: #2a7ae2;;
   font-size: 1.25rem;
