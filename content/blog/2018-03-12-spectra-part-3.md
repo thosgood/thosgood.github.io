@@ -63,7 +63,7 @@ Now, first of all, we need to define _what_ exactly e.g. an $A_\infty$-space is,
 1. the operad $\mathcal{A}_\infty$, and
 2. the notion of a space over an operad.
 
-For the second point, given some non-$\Sigma$-operad $\mathcal{A}$, we define an **$\mathcal{A}$-space** to be a continuous functor $X\colon\mathcal{B}\to\mathsf{Top}$ that sends $\oplus$ to $\times$.
+For the second point, given some non-$\Sigma$-operad $\mathcal{A}$, we define an **$\mathcal{A}$-space** to be a continuous functor $X\colon\mathcal{A}\to\mathsf{Top}$ that sends $\oplus$ to $\times$.
 In particular then, $X(n)=X(1)^n$, and so we often abuse notation and identify $X$ with the space $X(1)$.
 
 For the first point, we let $\mathrm{Assoc}$ be the terminal non-$\Sigma$-operad, so that each $\mathrm{Assoc}(n,1)$ consists of just a single point which we will call {$\mu_n$}.
