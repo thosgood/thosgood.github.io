@@ -1,5 +1,9 @@
 ## Todo
 
+- **big blog overhaul**
+    + no calenders, just title and date (à la jekyll's default)
+    + MAYBE expandable "see more"
+        * would show the excerpt that currently shows
 - fix the massive amounts of blank lines inserted before the automated "see all parts" thing?
 - colour schemes on blog posts
     + rather than changing individual style values, instead activate/deactivate a .css file? that way we don't have to worry about how to change things back to how they originally were?
