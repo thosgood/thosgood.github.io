@@ -1,0 +1,52 @@
+/* Citations */
+
+.citation .author:after {
+  content: '.';
+}
+
+
+.citation .title {
+  font-weight: 300;
+}
+.citation .title:before {
+  content: '"';
+}
+.citation .title:after {
+  content: '".';
+}
+
+
+.citation .journal {
+  font-style: italic;
+}
+
+
+.citation .volume {
+  font-weight: 500;
+}
+
+
+.citation .year:before {
+  content: '(';
+}
+.citation .year:after {
+  content: '),';
+}
+
+
+.citation .pages:after {
+  content: '.';
+}
+
+
+.citation .doi:before{
+  content: 'DOI: ';
+}
+.citation .doi:after{
+  content: '.';
+}
+.citation .doi a {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}

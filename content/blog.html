@@ -3,16 +3,15 @@ title: Blog
 katex: true
 ---
 
-<div class="w-100">
-  <p class="mt0 mb1 black-50">
-    This blog is mainly a collection of notes of things that I'm trying to understand. The posts are often nothing more than summaries of various textbooks, papers, and nLab pages, but collated, (over)simplified, and reordered to be more easily understood by e.g. me.
-  </p>
-  <p class="mt1 mb4 black-50">
+<div class="w-80-ns w-100 center tj">
+  <p class="mt0">
+    This blog is mainly a collection of notes of things that I'm trying to understand.
     There will almost certainly be mistakes and bad points of view, so <span class="i">caveat lector</span>.
   </p>
+</div>
 
+<div class="w-100 mt3">
   <% sorted_articles.each do |post| %>
     <%= render '/components/post_in_list.html.erb', :post => post %>
   <% end %>
-
 </div>
