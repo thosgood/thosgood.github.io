@@ -1,0 +1,207 @@
+/* In posts */
+
+#post-content {
+  font-size: 0.95rem;
+}
+
+#post-content strong {
+  font-weight: 550;
+}
+
+#post-content code {
+  font-size: 0.95em;
+}
+
+#post-content li p {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+}
+
+#post-content blockquote {
+  font-style: italic;
+}
+
+/* Colour select */
+
+ul#colour-select {
+  padding-left: 0px;
+  margin: 0px;
+}
+
+/* Other parts */
+
+#post-other-parts {
+  font-style: italic;
+}
+
+#post-other-parts a {
+  padding: 0 3px;
+}
+
+#post-other-parts span {
+  padding: 0 3px;
+}
+
+/* Table of contents */
+
+ol#toc {
+  /*width: 100%;*/
+  /*position: relative;*/
+  /*left: 10%;*/
+  margin: 2em 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 10%;
+}
+
+.toc-back {
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-bottom: 1px solid #2a7ae2;;
+  padding: 0px 5px;
+  margin-right: -30px;
+  float: left;
+  position: relative;
+  top: -58px;
+  right: 30px;
+}
+
+/* Footnotes */
+
+.footnote-ref {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footnote-ref:hover {
+  color: #2a7ae2;;
+  background: none;
+}
+
+.footnote-ref sup {
+  padding: 0px 3px;
+  margin-right: -2px;
+}
+
+.footnote-ref sup:hover {
+  color: #fff;
+  background: #2a7ae2;;
+}
+
+.footnotes {
+  font-size: 0.85rem;
+  margin-top: 30px;
+}
+
+.footnotes ol li {
+  /*color: #2a7ae2;;*/
+  font-weight: 550;
+}
+
+.footnotes ol li p {
+  /*color: #000;*/
+  font-weight: 400;
+  margin: 0px;
+}
+
+.footnote-back {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  padding: 0 3px;
+  margin-left: 5px;
+}
+
+/* Headings */
+
+#post-content h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#post-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+#post-content h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Maths */
+
+span.math {
+  font-family: monospace;
+}
+
+#post-content .katex {
+  font-size: 1.1em;
+}
+
+#post-content .fleqn {
+  padding-left: 3em;
+}
+
+/* Images */
+
+figure {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+figure img {
+  border-radius: 0.5rem;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #aaa;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Tables */
+
+table {
+  width: 100%;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #aaa;
+  border-radius: 1rem;
+}
+
+th {
+  font-weight: 600;
+  /*text-transform: uppercase;*/
+  text-align: center;
+  padding: 0.75rem;
+
+}
+
+tr {
+  text-align: left;
+  background-color: #eee;
+}
+
+tr.header {
+  background-color: #fff;
+  border-bottom: 2px #333 solid;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: #fff;
+}
+
+td {
+  padding: 0.75rem;
+}
