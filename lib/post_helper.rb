@@ -16,6 +16,11 @@ module PostHelper
     end
   end
 
+  def get_short_date(post)
+    attribute_to_time(post[:created_at])
+      .strftime('%d/%m/%y')
+  end
+
   def get_day(post)
     attribute_to_time(post[:created_at])
       .strftime('%d')
@@ -47,7 +52,7 @@ module PostHelper
     content = post.compiled_content
     if content =~ /\s#{fold_indicator}\s/
       preview = content.partition(fold_indicator).first +
-      "<a href='#{post.path}' class='f5 ph1 ba fr no-underline'>Continue reading &rarr;</a>"
+      "<a href='#{post.path}' class='f5 ph1 fr no-underline'>Continue reading &rarr;</a>"
     end
     return preview
   end

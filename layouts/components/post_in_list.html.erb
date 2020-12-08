@@ -1,23 +1,25 @@
-<div class="calendar di-ns w-10 fl tc dn">
-  <span class="f4 fw5"><%= get_pretty_day(post) %></span>
-  </br>
-  <span class="f4 fw5 pt0"><%= get_month(post) %></span>
-  </br><hr class="mv0">
-  <span class="f5 db w-100 bg-black-10"><%= get_year(post) %></span>
-</div>
-<div class="w-80-ns center bl bb bw1 pl3 mb4">
-  <h4 id="<%= generate_post_link_id(post) %>" class="mv2">
-    <% if post[:part] != nil %>
-      <%= link_to "#{post[:title]} (#{post[:part]})", post.path %>
-    <% else %>
-      <%= link_to post[:title], post.path %>
-    <% end %>
-  </h4>
-  <span class="f5 dn-ns di i"><%= get_pretty_date(post) %></span>
-  <article class="tj-ns mb3">
+<div class="w-80-ns center mb4">
+  <div class="w-100 relative bb b--gray">
+    <span class="w-80 dib">
+      <h4 id="<%= generate_post_link_id(post) %>" class="mv0 f5 fw5">
+        <% if post[:part] != nil %>
+          <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
+        <% else %>
+          <%= link_to post[:title], post.path, :class => "no-underline" %>
+        <% end %>
+      </h4>
+    </span>
+
+    <span class="absolute right-0 bottom-0 gray courier f5">
+      <%= get_short_date(post) %>
+    </span>
+  </div>
+
+  <article class="tj-ns mb3 dn">
     <%= get_post_before_fold(post) %>
   </article>
-  <div class="tag-list pb3">
+
+  <div class="tag-list mv2 dn">
     <%= tags_for(post, base_url: '/blog/tags/', separator: ", ") %>
   </div>
 </div>
