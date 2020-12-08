@@ -7,19 +7,19 @@ body {
 
 a {
   text-decoration: underline;
-  color: #1f73e0;;
+  color: #357edd;;
   border: 1px solid transparent;
 }
 
 a:hover {
   /*color: #fff;*/
-  /*background: #1f73e0;;*/
+  /*background: #357edd;;*/
   /*background: #999;*/
-  border: 1px dashed #1f73e0;
+  border: 1px dashed #357edd;
 }
 
 #main strong {
-  font-weight: 550;
+  font-weight: 500;
 }
 
 #header {
@@ -39,10 +39,10 @@ a:hover {
 }
 
 #header span.active {
-  color: #1f73e0;;
+  color: #357edd;;
   font-size: 1.25rem;
   border: 2px solid transparent;
-  border-bottom: 2px solid #1f73e0;;
+  border-bottom: 2px solid #357edd;;
 }
 
 .link {
@@ -50,10 +50,10 @@ a:hover {
 }
 
 .link:hover {
-  color: #1f73e0;;
+  color: #357edd;;
   background: none;
   border: 2px solid transparent;
-  border-bottom: 2px dashed #1f73e0;;
+  border-bottom: 2px dashed #357edd;;
 }
 
 p {
@@ -85,6 +85,10 @@ a code {
   font-weight: 400;
 }
 
+article .katex {
+  font-size: 1.1em;
+}
+
 
 
 /* Lists */
@@ -111,12 +115,6 @@ a code {
   font-size: 0.9rem;
 }
 
-
-
-/* Tiny calendars */
-
-.calendar {
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
+.tag-list a {
+  text-decoration: none;
 }
