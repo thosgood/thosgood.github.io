@@ -34,6 +34,10 @@ a:hover {
   text-decoration: none;
 }
 
+#nav_bar {
+  font-size: 0;
+}
+
 #name_in_header:hover {
   border: none;
 }
@@ -98,6 +102,7 @@ article .katex {
   margin-bottom: 1rem;
   padding-left: 1rem;
   list-style-type: circle;
+  text-align: left;
 }
 
 #main ol {
