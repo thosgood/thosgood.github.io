@@ -15,6 +15,7 @@ First, the quote in question.
 > _In my opinion, the word ''connection'' is overused in this corner of differential geometry. I believe an Ehresmann connection is well named since it gives a way to connect tangent spaces (and other fibres of vector bundles) at distinct points. On the other hand, a Koszul connection $\nabla_X$ is a differential operator since it satisfies Leibniz's rule. That makes it an object in analysis. But these names are set in stone even though no one knows where that stone is to be found._
 
 I'm in full agreement with this paragraph. There's a nice little family tree you can draw that helps:
+
 ![](/assets/post-images/2020-05-29-connection-confusion-family-tree.png)
 
 But even when working with just Koszul connections (also known as _linear_ connections), there can be some subtleties between different definitions that are not really always signposted very clearly. Let's see if I can justify this and explain what I mean a bit better.
