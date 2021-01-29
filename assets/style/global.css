@@ -1,8 +1,20 @@
 /* Typography */
 
 body {
-  /*background-image: url(/assets/backgrounds/geometry.png);*/
   font: 300 1rem -apple-system, Avenir, Helvetica, Arial, sans-serif;
+}
+
+div.content {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%
+}
+
+@media screen and (min-width: 30em) {
+  div.content {
+    width: 90%;
+    padding: 0 2rem;
+  }
 }
 
 a {
@@ -18,37 +30,6 @@ a:hover {
   border: 1px dashed #357edd;
 }
 
-#main strong {
-  font-weight: 500;
-}
-
-#header {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#name_in_header {
-  color: black;
-  text-decoration: none;
-}
-
-#nav_bar {
-  font-size: 0;
-}
-
-#name_in_header:hover {
-  border: none;
-}
-
-#header span.active {
-  color: #357edd;;
-  font-size: 1.25rem;
-  border: 2px solid transparent;
-  border-bottom: 2px solid #357edd;;
-}
-
 .link {
   border: 2px solid transparent;
 }
@@ -58,6 +39,10 @@ a:hover {
   background: none;
   border: 2px solid transparent;
   border-bottom: 2px dashed #357edd;;
+}
+
+#main strong {
+  font-weight: 500;
 }
 
 p {
@@ -73,6 +58,7 @@ h1,h2,h3,h4,h5,h6 {
 
 h4 {
   font-size: 1.25rem;
+  border-bottom: 1px solid #aaa;
 }
 
 h5 {
@@ -91,6 +77,42 @@ a code {
 
 article .katex {
   font-size: 1.1em;
+}
+
+
+/* Header */
+
+#header {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#name_in_header {
+  color: black;
+  text-decoration: none;
+}
+
+#name_in_header:hover {
+  border: none;
+}
+
+#nav_bar {
+  font-size: 0;
+}
+
+#header span.active {
+  color: #357edd;;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #357edd;;
+}
+
+@media screen and (min-width: 30em) {
+  #header span.active {
+    font-size: 1.25rem;
+  }
 }
 
 
