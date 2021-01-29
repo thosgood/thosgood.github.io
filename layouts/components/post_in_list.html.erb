@@ -1,13 +1,13 @@
 <div class="w-80-ns center mb4">
   <div class="w-100 relative bb b--gray">
     <span class="w-80 dib">
-      <h4 id="<%= generate_post_link_id(post) %>" class="mv0 f5 fw5">
+      <h6 id="<%= generate_post_link_id(post) %>" class="mv0 fw5">
         <% if post[:part] != nil %>
           <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
         <% else %>
           <%= link_to post[:title], post.path, :class => "no-underline" %>
         <% end %>
-      </h4>
+      </h6>
     </span>
 
     <span class="absolute right-0 bottom-0 gray courier f5">
