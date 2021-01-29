@@ -66,6 +66,10 @@ h5 {
   font-style: italic;
 }
 
+h6 {
+  font-size: 1rem;
+}
+
 a code {
   font-family: 'Courier Next', courier, monospace;
   font-size: 1em;
