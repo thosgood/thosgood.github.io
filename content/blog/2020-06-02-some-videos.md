@@ -5,7 +5,7 @@ tags: ['general', 'algebraic-geometry', 'differential-geometry']
 created_at: 2020-06-02
 ---
 
-**Edit.** _(3rd May, 2021)_
+**Edit.** _(3/5/21)_
 I'm in the process of moving over from YouTube to Vimeo (no ads, less tracking, and no Google), so you can find my videos [there](https://vimeo.com/thosgood) now instead.
 
 ---
