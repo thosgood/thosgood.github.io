@@ -87,7 +87,7 @@ $$\begin{array}{ccc}
 \end{array}$$
 
 as the loop space $\Omega(X,x)$ we defined previously.
-But now we use a 'simple' trick:^[This trick will turn up again in a future part of this series, when we talk about the **little discs operad**.] replace the point with the contractible space $\\\{\gamma\colon[0,1]\to X \mid \gamma(0)=x\\\}$, and map this into $X$ by sending $\gamma$ to $\gamma(1)$. Then $A$ is exactly the space of maps $D^1\to X$ based at $x$ (i.e with $\gamma(0)=x$) such that $\gamma(1)=x$ as well, and this is exactly $\Omega(X,x)$.
+But now we use a 'simple' trick:^[This trick will turn up again in a future part of this series, when we talk about the **little discs operad**.] replace the point with the contractible space $\{\gamma\colon[0,1]\to X \mid \gamma(0)=x\}$, and map this into $X$ by sending $\gamma$ to $\gamma(1)$. Then $A$ is exactly the space of maps $D^1\to X$ based at $x$ (i.e with $\gamma(0)=x$) such that $\gamma(1)=x$ as well, and this is exactly $\Omega(X,x)$.
 
 Dually, the (reduced) suspension can be realised as the homotopy pushout
 
