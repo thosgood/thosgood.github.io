@@ -42,7 +42,7 @@ We can define their compositions via colimits or coends:
 
 $$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)$$
 
-(although we don't really care so much about this post).
+(although we don't really care so much about this in this post).
 
 **Update: we talk about this a bit more in [Part 3 of the series on Day convolution](/blog/2019/09/05/day-convolution-part-3.html)**
 
