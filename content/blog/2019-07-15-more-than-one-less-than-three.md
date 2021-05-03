@@ -19,7 +19,7 @@ Both of these things are rather bad points of view to take.
 
 For the latter point, it's important to note that, yes, weak 2-categories can be strictified, and every pseudofunctor is equivalent to a strict one, but it is **not** true that every pseudonatural transformation is equivalent to a (strict) natural transformation.
 
-As explained in [Mike Shulman's talk](http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf), working in the $(2,1)$-topos $[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$, every pseudofunctor $X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}$ is equivalent to a strict one, but **not** every pseudonatural transformation $X\rightsquigarrow Y$ is equivalent to a strict one.
+As explained in [Mike Shulman's talk](http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf), working in the $(2,1)$-topos $[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$ for some small $2$-category $\mathbb{D}$, every pseudofunctor $X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}$ is equivalent to a strict one, but **not** every pseudonatural transformation $X\rightsquigarrow Y$ is equivalent to a strict one.
 But we do have the following lemma (from Mike's talk).
 
 **Lemma.** For any $Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]$ there is a strict $\mathcal{C}^{\mathbb{D}}Y$ and a bijection between pseudonatural $X\rightsquigarrow Y$ and strict $X\to\mathcal{C}^{\mathbb{D}}Y$.
