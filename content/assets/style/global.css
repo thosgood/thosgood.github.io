@@ -93,15 +93,6 @@ article .katex {
   user-select: none;
 }
 
-#name_in_header {
-  color: black;
-  text-decoration: none;
-}
-
-#name_in_header:hover {
-  border: none;
-}
-
 #nav_bar {
   font-size: 0;
 }

@@ -1,13 +1,10 @@
 <div id="header-wrapper" class="h3-ns w-100 bb b--light-silver flex items-center justify-center">
   <div id="header" class="w-75-ns pa3 flex flex-wrap items-center">
     <div class="w-third-ns tc pb0-ns pb2 w-100">
-      <span class="f3"><%= link_to(@config[:full_name], '/', :id => 'name_in_header') %></span>
+      <span class="f3"><%= link_to(@config[:full_name], '/', :class => 'link') %></span>
     </div>
     <div id="nav_bar" class="w-two-thirds-ns tc w-100">
       <ol class="fr-ns list ma0 pl0">
-        <li class="pr2-ns pr1 dib">
-          <%= link_to_unless_current('About', '/', :class => 'link f4-ns f5') %>
-        </li>
         <li class="ph2-ns ph1 dib">
           <%= link_to_unless_current('Work', '/work/', :class => 'link f4-ns f5') %>
         </li>
