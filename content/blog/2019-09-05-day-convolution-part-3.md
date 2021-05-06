@@ -123,7 +123,7 @@ SR(x,y)\\
 
 and this somehow looks like a coend, but I have no idea (nor, really, the time (nor, really, the skill) to properly think about) how to make this formal. Any ideas?
 
-**UPDATE 27/09/19.** As always, I asked the lovely people of Twitter whether they could shed any light on what I meant here. As always, I got some great replies:
+**Edit.** _(27/09/19)_ As always, I asked the lovely people of Twitter whether they could shed any light on what I meant here. As always, I got some great replies:
 
 ![sclv](/assets/post-images/2019-09-05-day-convolution-part-3-sclv.png)
 ![emi1ypi](/assets/post-images/2019-09-05-day-convolution-part-3-emi1ypi.png)
