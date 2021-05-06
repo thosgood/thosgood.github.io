@@ -66,7 +66,7 @@ $$(F*G)(c) = \int^{x,x'\in\mathcal{C}} F(x)\otimes G(x')\otimes\operatorname{Hom
 
 or, if you _really_ like tensor-product notation more than coend notation, by
 
-$$(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(-\otimes-).$$
+$$(F*G)(c) = (F\otimes G)\otimes_{\mathcal{C}\times\mathcal{C}}\operatorname{Hom}_\mathcal{C}(c,-\otimes-).$$
 
 As I already mentioned in my [post about profunctors]({{ site.baseurl }}{% post_url 2019-07-14-cauchy-completion-and-profunctors %}), there is a notion of Cauchy completion for presheaves. Something that I often heard say is that the presheaf category _itself_ is the 'free cocompletion' of the original category. There are a bunch of ways of explaining what this means, but my favourite 'proof' is using Day convolution and the co-Yoneda lemma, to show that the Yoneda embedding $よ\colon\mathcal{C}\to\widehat{\mathcal{C}}$ is **monoidal**:
 
