@@ -44,7 +44,7 @@ $$Q\circ P=\int^{d\in\mathcal{D}}P(d,-)\otimes Q(-,d)$$
 
 (although we don't really care so much about this in this post).
 
-**Edit.** _(5/9/19)_ We talk about this a bit more in [Part 3 of the series on Day convolution](/blog/2019/09/05/day-convolution-part-3.html).
+**Edit (05/09/19).** We talk about this a bit more in [Part 3 of the series on Day convolution](/blog/2019/09/05/day-convolution-part-3.html).
 
 ## Yoneda
 

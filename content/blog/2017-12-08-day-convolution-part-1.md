@@ -16,7 +16,7 @@ convinced of the usefulness and omnipresence of limits and not talk too much
 
 <!-- more -->
 
-**Edit:** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
+**Edit.** If you actually want to learn this stuff then have a look at either of Emily Riehl's books ([Categorical Homotopy Theory](http://www.math.jhu.edu/~eriehl/cathtpy.pdf) and [Category Theory in Context](http://www.math.jhu.edu/~eriehl/context.pdf)).
 I honestly don't think there is a better teaching of this anywhere else in the literature.
 
 *This is the first in a series of notes that are basically summaries of various

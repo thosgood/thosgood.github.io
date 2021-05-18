@@ -5,8 +5,9 @@ tags: ['general', 'algebraic-geometry', 'differential-geometry']
 created_at: 2020-06-02
 ---
 
-**Edit.** _(3/5/21)_
+**Edit (3/5/21).**
 I'm in the process of moving over from YouTube to Vimeo (no ads, less tracking, and no Google), so you can find my videos [there](https://vimeo.com/thosgood) now instead.
+In particular, [the connections and curvature videos can be found here](https://vimeo.com/showcase/8466090).
 
 ---
 
