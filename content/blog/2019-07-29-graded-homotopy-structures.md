@@ -7,9 +7,9 @@ created_at: 2019-07-29
 
 As I mentioned in a previous post, I recently saw a talk by [Rachel Hardeman](http://math.ucalgary.ca/math_unitis/profiles/1-7046986) on the A-homotopy theory of graphs, and it really intrigued me. In particular, it seemed to me that there was some nice structure that could be abstractified: that of a "graded homotopy structure", as I've been calling it in my head. Rather than trying to type out everything in [`#math.CT:matrix.org`](https://www.matrix.to/#/#math.CT:matrix.org), I've decided to post it here, in the hope that I might be able to get some answers.
 
-**Edit (16/09/19).** _**As one of my supervisors recently pointed out to me, the property of being an `$n$-homotopy' is not transitive, and so this example is really a non-example. I'll keep the post here for reference purposes, but the only useful/true bits are those quoted from \[RH19\].**_
-
 <!-- more -->
+
+**Edit.** _**As one of my supervisors recently pointed out to me, the property of being an `$n$-homotopy' is not transitive, and so this example is really a non-example. I'll keep the post here for reference purposes, but the only useful/true bits are those quoted from \[RH19\].**_
 
 ---
 

@@ -1,7 +1,34 @@
-/* In posts */
+/* In blog posts */
 
 #post-content {
   font-size: 0.95rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#post-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#post-part {
+  text-align: center;
+  margin-top: 0;
+}
+
+#post-date {
+  font-family: Courier Next, courier, monospace;
+  color: #999;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.tag-list {
+  text-align: center;
 }
 
 #post-content strong {
@@ -21,12 +48,27 @@
   font-style: italic;
 }
 
-/* Colour select */
+
+
+/* Post navigation */
+
+#post-nav {
+  background-color: #eee;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
 
 ul#colour-select {
   padding-left: 0px;
   margin: 0px;
 }
+
+ul#colour-select > li {
+  display: inline;
+}
+
+
 
 /* Other parts */
 
@@ -42,12 +84,46 @@ ul#colour-select {
   padding: 0 3px;
 }
 
+
+
+/* Headings */
+
+#post-content h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+#post-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+#post-content h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+
+
+/* Maths */
+
+span.math {
+  font-family: monospace;
+}
+
+#post-content .katex {
+  font-size: 1.1em;
+}
+
+#post-content .fleqn {
+  padding-left: 3em;
+}
+
+
+
 /* Table of contents */
 
 ol#toc {
-  /*width: 100%;*/
-  /*position: relative;*/
-  /*left: 10%;*/
   margin: 2em 0;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -67,6 +143,31 @@ ol#toc {
   top: -58px;
   right: 30px;
 }
+
+
+
+/* Images */
+
+figure {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+figure img {
+  border-radius: 0.5rem;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #aaa;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
+
 
 /* Footnotes */
 
@@ -96,12 +197,10 @@ ol#toc {
 }
 
 .footnotes ol li {
-  /*color: #2a7ae2;;*/
   font-weight: 550;
 }
 
 .footnotes ol li p {
-  /*color: #000;*/
   font-weight: 400;
   margin: 0px;
 }
@@ -113,64 +212,12 @@ ol#toc {
   margin-left: 5px;
 }
 
-/* Headings */
 
-#post-content h1 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-#post-content h2 {
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-
-#post-content h3 {
-  font-size: 1.1rem;
-  font-weight: 400;
-}
-
-/* Maths */
-
-span.math {
-  font-family: monospace;
-}
-
-#post-content .katex {
-  font-size: 1.1em;
-}
-
-#post-content .fleqn {
-  padding-left: 3em;
-}
-
-/* Images */
-
-figure {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-}
-
-figure img {
-  border-radius: 0.5rem;
-  padding: 1px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #aaa;
-}
-
-figure figcaption {
-  text-align: center;
-  font-style: italic;
-}
 
 /* Tables */
 
 table {
   width: 100%;
-  /*margin-left: auto;
-  margin-right: auto;*/
   font-size: 0.9rem;
   border-collapse: collapse;
   border-spacing: 0;
@@ -182,7 +229,6 @@ table {
 
 th {
   font-weight: 600;
-  /*text-transform: uppercase;*/
   text-align: center;
   padding: 0.75rem;
 

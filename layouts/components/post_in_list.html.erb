@@ -1,7 +1,7 @@
-<div class="w-80-ns center mb4">
+<div class="w-80-ns center pb4">
   <div class="w-100 relative bb b--gray">
     <span class="w-80 dib">
-      <h6 id="<%= generate_post_link_id(post) %>" class="mv0 fw5">
+      <h6 id="<%= generate_post_link_id(post) %>" class="mv0 fw5 f4">
         <% if post[:part] != nil %>
           <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
         <% else %>
@@ -15,7 +15,7 @@
     </span>
   </div>
 
-  <article class="tj-ns mb3 dn">
+  <article class="tj-ns mb3">
     <%= get_post_before_fold(post) %>
   </article>
 

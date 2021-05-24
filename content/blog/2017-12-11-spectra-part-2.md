@@ -12,7 +12,7 @@ In the previous post of this series, I talked a bit about basic loop space stuff
 
 As a warning: I am far (oh so very far) from being an expert in this stuff, so it's very possible that there are mistakes. If you spot any then please do give me a shout.
 
-**Edit (21/04/18).** [This paper by Clark Barwick](http://www.maths.ed.ac.uk/~cbarwick/papers/salamanca.pdf) starts off with a really nice explanation of all this spectra/cohomology stuff.
+**Edit.** [This paper by Clark Barwick](http://www.maths.ed.ac.uk/~cbarwick/papers/salamanca.pdf) starts off with a really nice explanation of all this spectra/cohomology stuff.
 
 # Delooping
 

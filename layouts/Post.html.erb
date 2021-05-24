@@ -1,28 +1,28 @@
 <% render '/**/Default.*' do %>
-  <div id="post-menu" class="w-80-ns w-100 mb4 pa2 center bg-light-gray">
-    <ul id="colour-select" class="fl-ns">
-      <li class="di">
+  <div id="post-nav" class="w-80-ns w-100 mb4">
+    <ul id="colour-select" class="fl">
+      <li>
         <button type="button" onclick="lightStyle()">
           Light
         </button>
       </li>
-      <li class="di">
+      <li>
         <button type="button" onclick="darkStyle()">
           Dark
         </button>
       </li>
     </ul>
-    <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr-ns f5">&larr; Return to all posts</a>
+    <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr f5">&larr; Return to all posts</a>
   </div>
-  <div id="post-content" class="w-80-ns ph3-ns w-100 center lh-copy tj">
-    <h1 id="post-title" class="tc mb2 mt0"><%= @item[:title] %></h1>
-    <h2 id="post-part" class="tc mb2 mt0"><%= @item[:part] %></h2>
-    <h6 id="post-date" class="f5 courier silver normal mv0 tc"><%= get_pretty_date(item) %></h6>
-    <div class="tag-list pv2 tc">
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title"><%= @item[:title] %></h1>
+    <h2 id="post-part"><%= @item[:part] %></h2>
+    <h6 id="post-date"><%= get_pretty_date(item) %></h6>
+    <div class="tag-list">
       <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
     </div>
     <% if @item[:part] != nil %>
-      <div id="post-other-parts" class="mt4">
+      <div id="post-other-parts" class="mt3">
         <span class="i">See all parts of this series:</span>
         <% sorted_articles.reverse.each do |otherpost| %>
           <% if otherpost[:title] == @item[:title] %>
@@ -42,7 +42,7 @@ function lightStyle() {
   var body = document.getElementsByTagName('body')[0];
   body.style.background = '#f0f8ff';
   body.style.color = 'black';
-  document.getElementById('post-menu').style.background = '#eee'
+  document.getElementById('post-nav').style.background = '#eee'
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
     links[i].style.color = '#2a7ae2';
@@ -52,7 +52,7 @@ function darkStyle() {
   var body = document.getElementsByTagName('body')[0];
   body.style.background = '#333';
   body.style.color = '#eee';
-  document.getElementById('post-menu').style.background = '#555'
+  document.getElementById('post-nav').style.background = '#555'
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
     links[i].style.color = '#82b2ee';
