@@ -4,13 +4,13 @@ katex: true
 ---
 
 <div class="content tj">
-  <p>
-    This blog is mainly a collection of notes of things that I'm trying to understand.
-    There will almost certainly be mistakes, so <span class="i">caveat lector</span>.
+  <p class="fw5">
+    This blog is mainly a haphazard collection of notes about things that I'm in the process of learning.
+    There will certainly be mistakes, so <span class="i">caveat lector</span>.
   </p>
 </div>
 
-<div class="w-100 mt3">
+<div id="blog-archive" class="w-100 mt3">
   <% sorted_articles.each do |post| %>
     <%= render '/components/post_in_list.html.erb', :post => post %>
   <% end %>

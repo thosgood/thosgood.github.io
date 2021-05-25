@@ -1,21 +1,19 @@
-<div class="w-80-ns center pb4">
-  <div class="w-100 relative bb b--gray">
-    <span class="w-80 dib">
-      <h6 id="<%= generate_post_link_id(post) %>" class="mv0 fw5 f4">
-        <% if post[:part] != nil %>
-          <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
-        <% else %>
-          <%= link_to post[:title], post.path, :class => "no-underline" %>
-        <% end %>
-      </h6>
-    </span>
+<div class="w-80-ns post-in-list">
+  <div class="w-100 post-in-list-header">
+    <h3 id="<%= generate_post_link_id(post) %>" class="post-in-list-title">
+      <% if post[:part] != nil %>
+        <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
+      <% else %>
+        <%= link_to post[:title], post.path, :class => "no-underline" %>
+      <% end %>
+    </h3>
 
-    <span class="absolute right-0 bottom-0 gray courier f5">
+    <span class="post-in-list-date">
       <%= get_short_date(post) %>
     </span>
   </div>
 
-  <article class="tj-ns mb3">
+  <article class="post-in-list-summary">
     <%= get_post_before_fold(post) %>
   </article>
 
