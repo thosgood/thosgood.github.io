@@ -23,7 +23,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          bundle exec nanoc compile
+          bundle exec nanoc
           bundle exec nanoc check internal_links mixed_content stale
           
       - name: Deploy 🚀
@@ -31,5 +31,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: .
+          FOLDER: public
           CLEAN: true
