@@ -1,0 +1,12 @@
+# For projects using Nanoc (http://nanoc.ws/)
+
+# Default location for output (needs to match output_dir's value found in nanoc.yaml)
+public/
+
+# Temporary file directory
+tmp/nanoc/
+
+# Crash Log
+crash.log
+.DS_Store
+content/.DS_Store

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <%= render '/components/head.html.erb' %>
+
+  <!-- <body class="avenir"> -->
+  <body>
+
+    <%= render '/components/header.html.erb' %>
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render '/components/footer.html.erb' %>
+
+    <% if @item[:katex] != false %>
+      <%= render '/components/scripts.html.erb' %>
+    <% end %>
+
+  </body>
+</html>

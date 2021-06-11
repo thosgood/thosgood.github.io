@@ -1,0 +1,23 @@
+<div class="w-80-ns post-in-list">
+  <div class="w-100 post-in-list-header">
+    <h3 id="<%= generate_post_link_id(post) %>" class="post-in-list-title">
+      <% if post[:part] != nil %>
+        <%= link_to "#{post[:title]} (#{post[:part]})", post.path, :class => "no-underline" %>
+      <% else %>
+        <%= link_to post[:title], post.path, :class => "no-underline" %>
+      <% end %>
+    </h3>
+
+    <span class="post-in-list-date">
+      <%= get_short_date(post) %>
+    </span>
+  </div>
+
+  <article class="post-in-list-summary">
+    <%= get_post_before_fold(post) %>
+  </article>
+
+  <div class="tag-list mv2 dn">
+    <%= tags_for(post, base_url: '/blog/tags/', separator: ", ") %>
+  </div>
+</div>
