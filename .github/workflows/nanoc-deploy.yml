@@ -28,6 +28,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          gem install bundle
           bundle install
           bundle exec nanoc
           
