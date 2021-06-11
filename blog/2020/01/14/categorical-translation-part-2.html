@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tim Hosgood | Categorical translation for mathematical language</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <!-- <body class="avenir"> -->
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 bb b--light-silver flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f3"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <a href="/blog/#2020-01-14-categorical-translation-part-2" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">Categorical translation for mathematical language</h1>
+    <h2 id="post-part">Part 2</h2>
+    <h6 id="post-date">14th January, 2020</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/translation" rel="tag">translation</a>, <a href="/blog/tags/software" rel="tag">software</a>
+    </div>
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/blog/2019/11/07/categorical-translation-part-1.html">Part 1</a>
+          
+        
+          
+        
+          
+            <span class="active">Part 2</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
+
+    <ol id="toc">
+<li><a href="#the-base-category">The base category</a></li>
+<li><a href="#fibrations-and-dependent-types">Fibrations and dependent types</a></li>
+<li><a href="#translation-as-a-change-of-trivialisation">Translation as a change of trivialisation</a></li>
+<li><a href="#summary">Summary</a></li>
+</ol>
+<p>After my <a href="https://thosgood.com/blog/2019/11/07/categorical-translation-part-1.html">previous post</a>, I got the chance to <em>(a)</em> spend a bit of time thinking about things, and <em>(b)</em> talk to <a href="https://sites.google.com/view/jadeedenstarmaster/home">Jade Master</a> on Twitter. Rather than going back to edit my original post, I decided to turn this into more of a series. Here are some new thoughts (but not really any <em>visible</em> progress) on the whole kit and caboodle.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<!-- more -->
+<h1 id="the-base-category">The base category</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>The first thing that Jade said to me was something that I only very briefly touched upon originally, and it was about the choice of ‘base’ language. That is, if we’re talking about mathematical sentences, then it really does make sense to have at least some sort of first order logic already baked in to our base category, or to make it a boolean topos, or something similar. One problem with this is that I have never taken a course on logic, so I have no real idea what ‘first order logic’ actually means, and I have (shamefully) only ever used my copy of Mac Lane &amp; Moerdijk’s ‘’Sheaves in geometry and logic’’ as a reference book on sheaves in <em>geometry</em>, and have never really sat down to give it a proper read.</p>
+<p>So, for me, the first step in the formalisation of this stuff is to sit down and actually learn some logic. This would hopefully answer one question I sort of skirted around: ‘’how simple can our language be whilst still being able to express complex theorems and (more difficult-ly) proofs?’’</p>
+<p>Indeed, the pregroup formalism that I worked with last time doesn’t seem to be intrinsic to the approach: once <em>any</em> base language category is chosen, everything is given by ‘’just’’ applying the Grothendieck construction (where here the scare quotes allude to the fact that I couldn’t quite figure out the details for the morphisms in the case of pregroups). In fact, taking this one step further, I realise that my only ‘contribution’ so far has been the very simple idea that <em>languages are fibred over some universal language</em>. As Jade pointed out to me, this is somewhat reminiscent of dependent types in HoTT.</p>
+<h1 id="fibrations-and-dependent-types">Fibrations and dependent types</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Before talking about dependent types, I first wanted to mention something that I realised when rereading my last post. I said that every language comes with a projection down to the base category, and so we want to look at fibres over this category. But when I then gave the JSON dictionary I had been writing, things weren’t organised this way, but somehow transpose to this. That is, I didn’t have a French dictionary, a Spanish dictionary, and so on, but instead a <span class="math inline">\mathrm{schemes}</span> ‘dictionary’, which consisted of all the translations and adjectives and information about the word <span class="math inline">\mathrm{scheme}</span>. In other words, the JSON file looks more like something fibred over a very boring category: the set whose elements are just the names of the languages, so that <span class="math inline">\mathrm{scheme}^{-1}(\mathsf{Fr})</span> was the French entry for the word (containing all the adjectives and so on), instead of what I had described, which looked more like <span class="math inline">\mathsf{Fr}^{-1}(\mathrm{08b50276})</span>.</p>
+<p>This reminds me of a part from Fong and Spivak’s ‘’An introduction to applied category theory’’ (or ‘’Seven Sketches’‘), where they talk about databases whose information is given in rows or in columns. (Actually, now I think about it, it might not have been from this book, but instead a tweet that I read around the same time that I got the book… If I remember to go and check, then I’ll update this.) A nice image is given by pretending that we have a bunch of things labelled by a letter and a number: <span class="math inline">A1</span>, <span class="math inline">A2</span>, …, <span class="math inline">B1</span>, <span class="math inline">B2</span>, …, etc. We can think of these as being grouped by letter (so we have the set <span class="math inline">A=\{An\mid n\in\mathbb{N}\}</span>) or by number (so we have the set <span class="math inline">1=\{\alpha1\mid\alpha\in\{A,B,\ldots\}\}</span>), but it doesn’t change what data we have. What it <em>can</em> change, however, is how we <em>think</em> of the data. I’ve been imagining the above example (where we assume that we only have <span class="math inline">\alpha i</span> for <span class="math inline">i\in\{1,2,3,4\}</span>) as like a <a href="https://en.wikipedia.org/wiki/Battenberg_cake">battenberg</a>: slices correspond to grouping by letter, and each coloured ’tube’ corresponding to grouping by number. When we group by slice, we just have some set of objects; when we group by tube, all our objects lie on a <em>line</em>, and so somehow seem to have a more natural group structure, or are just somehow more nicely ordered.</p>
+<p>Obviously, I am not suggesting that a battenberg cake has a natural group structure, and this example is not to be taken as being too deep, but it’s just the image I have in my mind when it comes to this idea of rows vs. columns, slices vs. tubes, letters vs. numbers, or (the reason I’m talking about this) ‘choice of language’ vs. ‘meaning of word’.</p>
+<p>Anyway, back to dependent types. This is something that I accidentally thought about when originally compiling the JSON dictionary, because I tried to write it in <a href="https://dhall-lang.org/">Dhall</a>. Wanting to be as ‘type safe’ as possible, although I couldn’t get it to work, and although I didn’t ever realise that it was what I was doing at the time (and, indeed, didn’t realise until Jade mentioned them), I tried recording all the entries as <em>dependent types</em>. Finally, Jade pointed out that, if we say things like this, then somebody probably already has formulated/is formulating the sort of thing that I’m trying to formulate, but for <em>programming languages</em> instead of human ones. I am not overly familiar with what they’ve been doing, but I know that one goal of the <a href="https://statebox.org/">Statebox</a> team is to do something like this with their <a href="https://typedefs.com/">Typedefs</a> project, so I should probably have a read of what they’ve been doing. (Incidentally, this also leads back to the fun idea of using this project as a way to ‘compile’ proof-assistant code (e.g. in Lean) to a human-readable version.)</p>
+<h1 id="translation-as-a-change-of-trivialisation">Translation as a change of trivialisation</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>One final thing that came to me yesterday is that, given this fibration point of view, translation seems more like the change of trivialisation of a bundle: translation from Japanese to Russian, say, is given by <span class="math inline">\pi^{-1}_{\mathsf{Ru}}\circ\pi_{\mathsf{Ja}}</span>, and all our fibres (i.e. all our languages) are glued together along entries living over the same point, so things really kind of do look like a bundle of some sort. But here I have no idea how this formalism would look, and whether or not it would be equivalent to what I’ve vaguely sketched so far or not (is there such a thing as the ‘Grothendieck construction bundle’? something you get by applying the Grothendieck construction of different functors but then gluing them along their images?), but there ya go.</p>
+<h1 id="summary">Summary</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>There isn’t really much content to this post, I’ll admit, but I haven’t been working on this project at all really, thanks to PhD writing and postdoc applications. Either way, this little update shows me (at least) that I haven’t given up on it, and serves as a good way for me to try to get my thoughts (all three of them) in order. Thanks for reading! (If you didn’t read, but just scrolled to the end and saw this, then hey, thanks anyway.)</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>I realise that, despite writing about how to write mathematics in a language-independent way, I use a lot of little phrases that maybe aren’t very easy to understand for foreign speakers. I understand the irony of this, but, living abroad, I do miss such words, because they’re quite fun to say, and so I do go somewhat over the top when it comes to these blog posts. Sorry.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 bt b--light-silver flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Topos Institute</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+$("span[class='math inline']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex, {throwOnError: false}) +
+           "</span>";
+});
+
+$("span[class='math display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+           "</div>";
+});
+</script>
+
+    
+
+  </body>
+</html><html><script type="text/javascript">
+function lightStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = '#f0f8ff';
+  body.style.color = 'black';
+  document.getElementById('post-nav').style.background = '#eee'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#2a7ae2';
+  }
+}
+function darkStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = '#333';
+  body.style.color = '#eee';
+  document.getElementById('post-nav').style.background = '#555'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#82b2ee';
+  }
+  var tables = document.getElementsByTagName('table');
+  for (var i = 0; i < tables.length; i++) {
+    tables[i].style.color = 'black';
+  }
+}
+</script></html>

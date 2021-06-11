@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tim Hosgood | Torsors and principal bundles</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <!-- <body class="avenir"> -->
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 bb b--light-silver flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f3"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <a href="/blog/#2018-10-31-torsors-and-principal-bundles" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">Torsors and principal bundles</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">31st October, 2018</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>
+    </div>
+    
+
+    <p>In my thesis, switching between vector bundles and principal <span class="math inline">\mathrm{GL}_r</span>-bundles has often made certain problems easier (or harder) to understand. Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book <a href="https://www.springer.com/fr/book/9783319147642">Principal Bundles — The Classical Case</a>, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely <span class="math inline">\mathbb{B}G</span> and <span class="math inline">\mathbb{E}G</span> things therein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that <em>‘affine vector spaces should be understood as <span class="math inline">G</span>-torsors, where <span class="math inline">G</span> is the underlying vector space acting via translation’</em>,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> which makes a nice short topic of discussion, whence this post.</p>
+<!-- more -->
+<p>We briefly<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> recall the definition of a principal <span class="math inline">G</span>-bundle over a space <span class="math inline">X</span>, where <span class="math inline">G</span> is some <em>topological</em> group.</p>
+<p><strong>Definition.</strong> A <em>principal <span class="math inline">G</span>-bundle over <span class="math inline">X</span></em> is a fibre bundle <span class="math inline">P\xrightarrow{\pi}X</span> with a continuous right action <span class="math inline">P\times G\to P</span> such that</p>
+<ol type="1">
+<li>
+<span class="math inline">G</span> acts <em>freely</em>;</li>
+<li>
+<span class="math inline">G</span> acts <em>transitively</em> on the orbits; and</li>
+<li>
+<span class="math inline">G</span> acts <em>properly</em>.</li>
+</ol>
+<p>It is maybe helpful to think of the following ‘dictionary’:</p>
+<ul>
+<li>free = injective (i.e. <span class="math inline">\exists x</span> s.t. <span class="math inline">gx=hx\implies g=h</span>)</li>
+<li>transitively = surjective (i.e. <span class="math inline">\forall x,y</span> <span class="math inline">\exists g</span> s.t. <span class="math inline">gx=y</span>)</li>
+<li>properly = something that you care about if you care about infinite sequences or Hausdorffness or things like that (i.e. the inverse image of <span class="math inline">G\times X\to X\times X</span> given by <span class="math inline">(g,x)\mapsto(gx,x)</span> preserves compactness)</li>
+</ul>
+<p>Thus the fibres <span class="math inline">F</span> are homeomorphic to <span class="math inline">G</span>, and also give the orbits, and the orbit space <span class="math inline">P/G</span> is homeomorphic to <span class="math inline">X</span>.</p>
+<p>Another definition is now useful.</p>
+<p><strong>Definition.</strong> A <em><span class="math inline">G</span>-torsor</em> is a space upon which <span class="math inline">G</span> acts <em>freely</em> and <em>transitively</em>.</p>
+<p><strong>Motto.</strong> <span class="math inline">G</span>-torsors <em>are</em> principal <span class="math inline">G</span>-bundles over a point <em>are</em> affine versions of <span class="math inline">G</span>.</p>
+<p>What do we mean by this last ‘equivalence’? Just that <span class="math inline">G</span>-torsors retain all the structure of <span class="math inline">G</span>, but don’t have some specified point that acts as the identity. Here are some nice examples.</p>
+<ul>
+<li>
+<span class="math inline">\mathrm{GL}_r</span>-torsors are vector spaces; <span class="math inline">\mathrm{GL}_r</span>-bundles are vector bundles.</li>
+<li>
+<span class="math inline">O(r)</span>-torsors are vector spaces with an inner product.</li>
+<li>
+<span class="math inline">\mathrm{GL}_r^+</span>-torsors are oriented vector spaces (where <span class="math inline">\mathrm{GL}_r^+</span> is the connected component of <span class="math inline">\mathrm{GL}_r</span> consisting of matrices with determinant strictly positive).</li>
+<li>
+<span class="math inline">\mathrm{SL}_r</span>-torsors are vector spaces with a specified isomorphism <span class="math inline">\det V\xrightarrow{\sim} k</span>, where <span class="math inline">\det V:=\wedge_{i=1}^r V</span>, and <span class="math inline">k</span> is our base field. Note that this is weaker than a choice of basis: it is a choice of an <span class="math inline">\mathrm{SL}_r</span>-conjugacy class of bases.</li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>About which I recently had a nice little Twitter conversation with <a href="https://twitter.com/johncarlosbaez">John Baez</a>; his replies starting <a href="https://twitter.com/johncarlosbaez/status/1056999200125157376">here</a> are really quite nice. P.S. if you are not on Twitter then I would highly recommend it: the maths community is really friendly and interesting, and if you have a little question to ask then chances are you’ll get a bunch of nice responses. Also a chance to talk to people across the globe in a completely different time zone. Don’t get me wrong, Twitter has <em>many</em> problems, but you can ignore most of them and just follow the people that you like.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>An earlier version of this post incorrectly said ‘<span class="math inline">\mathrm{GL}_r</span>-torsor’; thanks to <a href="https://twitter.com/BarbaraFantechi/status/1057701336291123200">Barbara Fantechi for pointing this out!</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>In particular we really sort of assume that the reader already knows what one of these is and are just writing this for some mild effort towards self-containedness. (Bonus question for anybody actually reading this: what is the word/phrase I can’t think of that means ‘self-containedness’ but is actually a real word/phrase?)<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 bt b--light-silver flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Topos Institute</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+$("span[class='math inline']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex, {throwOnError: false}) +
+           "</span>";
+});
+
+$("span[class='math display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+           "</div>";
+});
+</script>
+
+    
+
+  </body>
+</html><html><script type="text/javascript">
+function lightStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = '#f0f8ff';
+  body.style.color = 'black';
+  document.getElementById('post-nav').style.background = '#eee'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#2a7ae2';
+  }
+}
+function darkStyle() {
+  var body = document.getElementsByTagName('body')[0];
+  body.style.background = '#333';
+  body.style.color = '#eee';
+  document.getElementById('post-nav').style.background = '#555'
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.color = '#82b2ee';
+  }
+  var tables = document.getElementsByTagName('table');
+  for (var i = 0; i < tables.length; i++) {
+    tables[i].style.color = 'black';
+  }
+}
+</script></html>
