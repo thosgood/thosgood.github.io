@@ -17,13 +17,6 @@ checking:
     - internal_links
     - stale
 
-# deploy:
-  # default:
-    # kind: git
-    # branch: master
-    # remote: origin
-    # forced: true
-
 # Variables
 
 base_url: https://thosgood.com
