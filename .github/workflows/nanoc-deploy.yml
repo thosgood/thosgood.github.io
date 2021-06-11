@@ -23,14 +23,13 @@ jobs:
       - name: Setup Ruby ✨
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 2.6
           bundler-cache: true
 
       - name: Install and Build 🔧
         run: |
-          gem install bundle
-          bundle install
-          bundle exec nanoc
+          bundle exec nanoc compile
+          bundle exec nanoc check internal_links mixed_content stale
           
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
