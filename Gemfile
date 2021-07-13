@@ -10,7 +10,6 @@ group 'nanoc' do
 end
 
 gem "webrick", "~> 1.7"
-
 gem "nokogiri", "~> 1.11"
-
 gem "pandoc-ruby", "~> 2.1"
+gem "addressable", ">= 2.8.0"
