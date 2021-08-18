@@ -1,7 +1,18 @@
 /* Typography */
 
+@font-face {
+  font-family: WorkSans;
+  src: url(../fonts/WorkSans-VariableFont_wght.ttf) format('truetype');
+}
+@font-face {
+  font-family: WorkSans;
+  src: url(../fonts/WorkSans-Italic-VariableFont_wght.ttf) format('truetype');
+  font-style: italic;
+}
+
+
 body {
-  font: 300 1rem -apple-system, Avenir, Helvetica, Arial, sans-serif;
+  font: 330 1rem WorkSans, Avenir, Helvetica, Arial, sans-serif;
   background-color: #f0f8ff;
 }
 
@@ -43,7 +54,7 @@ a:hover {
 }
 
 #main strong {
-  font-weight: 500;
+  font-weight: 450;
 }
 
 p {
