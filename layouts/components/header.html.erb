@@ -1,7 +1,7 @@
 <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
   <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
     <div class="w-third-ns tl pb0-ns pb2 w-100">
-      <span class="f3"><%= link_to(@config[:full_name], '/', :class => 'link') %></span>
+      <span class="f4-ns f5"><%= link_to_unless_current(@config[:full_name], '/', :class => 'link') %></span>
     </div>
     <div id="nav_bar" class="w-two-thirds-ns tr w-100">
       <ol class="fr-ns list ma0 pl0">
