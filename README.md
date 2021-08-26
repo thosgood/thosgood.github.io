@@ -1,5 +1,6 @@
 ## Todo
 
-- footnotes in posts should also display on hover
+- display tags (inline with "Continue reading ->") in blog
+- font +/- button next to light/dark (in posts)
+- footnotes should also display on hover (in posts)
 - pagination for blog
-- ... try nav bar on the left?
