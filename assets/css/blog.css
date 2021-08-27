@@ -26,7 +26,6 @@
   font-family: Courier Next, courier, monospace;
   color: #aaa;
 }
-
 @media screen and (min-width: 30em) {
   .post-in-list-date {
     position: absolute;
@@ -49,4 +48,16 @@
   text-decoration: none;
   float: right;
   margin-top: 0.5rem;
+}
+
+.post-in-list .tag-list {
+  display: none;
+}
+@media screen and (min-width: 30em) {
+  .post-in-list .tag-list {
+    display: block;
+    width: 70%;
+    margin-top: -1.3rem;
+    text-align: left;
+  }
 }

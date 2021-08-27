@@ -58,6 +58,18 @@
         </button>
       </li>
     </ul>
+    <ul id="font-select" class="fl">
+      <li>
+        <button type="button" onclick="sansStyle()">
+          Sans
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="serifStyle()">
+          Serif
+        </button>
+      </li>
+    </ul>
     <a href="/blog/#2020-11-06-translations-part-2" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -223,28 +235,36 @@ $("span[class='math display']").replaceWith(
 
   </body>
 </html><html><script type="text/javascript">
-function lightStyle() {
-  var body = document.getElementsByTagName('body')[0];
-  body.style.background = '#f0f8ff';
-  body.style.color = 'black';
-  document.getElementById('post-nav').style.background = '#eee'
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    links[i].style.color = '#2a7ae2';
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
   }
-}
-function darkStyle() {
-  var body = document.getElementsByTagName('body')[0];
-  body.style.background = '#333';
-  body.style.color = '#eee';
-  document.getElementById('post-nav').style.background = '#555'
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    links[i].style.color = '#82b2ee';
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
   }
-  var tables = document.getElementsByTagName('table');
-  for (var i = 0; i < tables.length; i++) {
-    tables[i].style.color = 'black';
+
+  function sansStyle() {
+    content.style.fontFamily = 'WorkSans';
   }
-}
+  function serifStyle() {
+    content.style.fontFamily = 'Domine';
+  }
 </script></html>
