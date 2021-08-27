@@ -62,8 +62,15 @@ ul#colour-select {
   padding-left: 0px;
   margin: 0px;
 }
-
 ul#colour-select > li {
+  display: inline;
+}
+
+ul#font-select {
+  /*padding-left: 0px;*/
+  margin: 0px;
+}
+ul#font-select > li {
   display: inline;
 }
 
