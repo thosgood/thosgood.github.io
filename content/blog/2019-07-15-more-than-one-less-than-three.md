@@ -117,7 +117,7 @@ For more details about why $\mathsf{Mod}$ is so interesting, see \[S11\].
 
 Note that we can also get weak versions of double categories, in many ways, as described [here](https://ncatlab.org/nlab/show/double+category#weakenings).
 
-Something that I won't talk about, but simply mention instead, is the fact that double categories are exactly [_2-fold categories_](https://ncatlab.org/nlab/show/n-fold+category#fold_categories].
+Something that I won't talk about, but simply mention instead, is the fact that double categories are exactly [_2-fold categories_](https://ncatlab.org/nlab/show/n-fold+category#fold_categories).
 
 # 1-categories as 2-categories as double categories
 
