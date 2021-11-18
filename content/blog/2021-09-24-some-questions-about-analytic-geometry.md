@@ -83,6 +83,6 @@ Here are my "precise" questions:
 1. How can I fill in this analytic dictionary?
 2. In fact, what even is $\operatorname{Spec}$ in the analytic setting?
 3. Is *Fréchet* quasi-coherent the good thing to put in the analytic dictionary? That is, what analogous properties does Fréchet quasi-coherence satisfy to make it the "right" notion? e.g. does it arise as the right Kan extension of the pseudofunctor from commutative rings to categories which sends a ring to the category of modules over that ring?
-4. More specifically, is it true that Fréchet quasi-coherent sheaves can be recovered as filtered colimits of their 
+4. More specifically, is it true that Fréchet quasi-coherent sheaves can be recovered as filtered colimits of their coherent subsheaves?
 
 Sadly I still haven't set up comments on this blog (it's on my (ever-growing) to-do list), so having a conversation might be a bit tricky, but Twitter might be a good place to do this (on [this thread](https://twitter.com/tim_hosgood/status/1441413679367532544), for example), or you can just drop me an email --- I'd love to hear from anybody!
