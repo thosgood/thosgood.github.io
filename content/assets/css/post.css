@@ -257,3 +257,45 @@ tbody > tr:nth-child(even) {
 td {
   padding: 0.75rem;
 }
+
+
+/* Custom environments */
+
+.itenv,
+.rmenv {
+  margin: 1em 0;
+  padding: 0 1em;
+  text-align: justify;
+  border-left: 1px dashed black;
+}
+
+.itenv {
+  font-style: italic;
+}
+.itenv em {
+  font-style: normal !important;
+}
+
+.rmenv {
+  font-style: normal;
+}
+
+.itenv:before,
+.rmenv:before {
+  content: attr(title)".";
+  font-style: normal;
+  font-weight: bold;
+  padding-right: 0.5em;
+  display: inline;
+}
+
+.itenv > p:first-of-type,
+.rmenv > p:first-of-type {
+  margin-top: 0 !important;
+  display: inline;
+}
+
+.itenv > :last-child,
+.rmenv > :last-child {
+  margin-bottom: 0 !important;
+}
