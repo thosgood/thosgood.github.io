@@ -163,6 +163,10 @@
             <span class="active">Part 1</span>
           
         
+          
+            <a href="/blog/2021/11/24/lie-algebra-cohomology-part-2.html">Part 2</a>
+          
+        
       </div>
     
 
@@ -308,7 +312,8 @@
 </div>
 <p>This Chevalley–Eilenberg complex deserves a whole blog post to itself, because there’s a beautiful story about how it links to deformation theory and Maurer–Cartan elements, but to tell this we would need to pass to the more general theory of <em>differential graded Lie algebras</em>, which we don’t have time for today, alas.</p>
 <p>As a small side note, we don’t assume <span class="math inline">M</span> to be finite dimensional, but we <em>do</em> require <span class="math inline">\mathfrak{g}</span> to be finite dimensional, otherwise the cohomology groups are just “too big” to be of much use. In the case where <span class="math inline">\mathfrak{g}</span> <em>is</em> infinite dimensional, we can still get something useful if we have some sort of topological structure on <span class="math inline">\mathfrak{g}</span> and <span class="math inline">M</span>, because we can replace the tensor product in the definition of <span class="math inline">\wedge^p\mathfrak{g}</span> with the <em>topological</em> tensor product <span class="math inline">\otimes^\pi</span>, resulting in so-called <a href="https://en.wikipedia.org/wiki/Gelfand%E2%80%93Fuks_cohomology">Gelfand–Fuks cohomology</a>. But we’re not going to worry about that here!</p>
-<p>Now let’s finish up by asking how this definition recovers the idea of deriving the functor of invariants. As we’ve already mentioned, the fact that the universal enveloping algebra construction is left adjoint to the underlying Lie algebra construction implies that <em>representations of <span class="math inline">\mathfrak{g}</span> give us representations of <span class="math inline">U(\mathfrak{g})</span></em>; the Poincaré–Birkhoff–Witt theorem gives us a converse to this, telling us that <em>representations of <span class="math inline">U(\mathfrak{g})</span> give us representations of <span class="math inline">\mathfrak{g}</span></em> (since <span class="math inline">\mathfrak{g}</span> embeds into <span class="math inline">U(\mathfrak{g})</span>). Using this, we can prove a result analogous to what we had for group cohomology, namely that <span class="math display">
+<p>Now let’s finish up by asking how this definition recovers the idea of deriving the functor of invariants. As we’ve already mentioned, the fact that the universal enveloping algebra construction is left adjoint to the underlying Lie algebra construction implies that <em>representations of <span class="math inline">\mathfrak{g}</span> give us representations of <span class="math inline">U(\mathfrak{g})</span></em>; the Poincaré–Birkhoff–Witt theorem gives us a converse to this, telling us that <em>representations of <span class="math inline">U(\mathfrak{g})</span> give us representations of <span class="math inline">\mathfrak{g}</span></em> (since <span class="math inline">\mathfrak{g}</span> embeds into <span class="math inline">U(\mathfrak{g})</span>). In fact, these two correspondences are inverse, and so <em>there is a bijective correspondence between <span class="math inline">\mathfrak{g}</span>-modules and <span class="math inline">U(\mathfrak{g})</span>-modules</em>.</p>
+<p>Using this, we can prove a result analogous to what we had for group cohomology, namely that <span class="math display">
   M^\mathfrak{g}\cong \operatorname{Hom}_{U(\mathfrak{g})}(k^\mathrm{triv},M).
 </span> So, if we want to show that the derived functor of invariants is “the same” as the notion Lie algebra cohomology that we defined above, we need to show that <span class="math display">
   \operatorname{Ext}_{U(\mathfrak{g})}^\bullet(k^\mathrm{triv},M) \simeq \operatorname{H}^\bullet(\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)).
@@ -316,7 +321,7 @@
   \operatorname{Hom}_k(\wedge^p\mathfrak{g},M) \cong \operatorname{Hom}_{U(\mathfrak{g})}(P^\bullet,M)
 </span> for some projective resolution <span class="math inline">P^\bullet</span> of <span class="math inline">k^\mathrm{triv}</span>. We won’t give the details here, but this is indeed true, and comes from the projective resolution <span class="math display">
   U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow k^\mathrm{triv}
-</span> where we choose some “clever” definition of differential for the complex <span class="math inline">U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}</span> (namely that of the <a href="https://en.wikipedia.org/wiki/Koszul_complex">Koszul complex</a>).</p>
+</span> where we choose some “clever” definition of differential for the complex <span class="math inline">U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}</span> (namely that of the <a href="https://en.wikipedia.org/wiki/Koszul_complex">Koszul complex</a>), which looks as similar as possible to the differential in the Chevalley-Eilenberg complex.</p>
 
 
   </div>
