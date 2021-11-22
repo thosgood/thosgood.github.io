@@ -242,6 +242,8 @@ But we're not going to worry about that here!
 Now let's finish up by asking how this definition recovers the idea of deriving the functor of invariants.
 As we've already mentioned, the fact that the universal enveloping algebra construction is left adjoint to the underlying Lie algebra construction implies that *representations of $\gg$ give us representations of $U(\gg)$*;
 the Poincaré--Birkhoff--Witt theorem gives us a converse to this, telling us that *representations of $U(\gg)$ give us representations of $\gg$* (since $\gg$ embeds into $U(\gg)$).
+In fact, these two correspondences are inverse, and so *there is a bijective correspondence between $\gg$-modules and $U(\gg)$-modules*.
+
 Using this, we can prove a result analogous to what we had for group cohomology, namely that
 $$
   M^\gg \cong \Hom_{U(\gg)}(k^\triv,M).
@@ -259,4 +261,4 @@ We won't give the details here, but this is indeed true, and comes from the proj
 $$
   U(\gg)\otimes_k\wedge^p\gg \twoheadrightarrow k^\triv
 $$
-where we choose some "clever" definition of differential for the complex $U(\gg)\otimes_k\wedge^p\gg$ (namely that of the [Koszul complex](https://en.wikipedia.org/wiki/Koszul_complex)).
+where we choose some "clever" definition of differential for the complex $U(\gg)\otimes_k\wedge^p\gg$ (namely that of the [Koszul complex](https://en.wikipedia.org/wiki/Koszul_complex)), which looks as similar as possible to the differential in the Chevalley-Eilenberg complex.
