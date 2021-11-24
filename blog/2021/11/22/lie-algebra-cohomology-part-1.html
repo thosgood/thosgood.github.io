@@ -163,13 +163,17 @@
             <span class="active">Part 1</span>
           
         
+          
+            <a href="/blog/2021/11/24/lie-algebra-cohomology-part-2.html">Part 2</a>
+          
+        
       </div>
     
 
     <ol id="toc">
 <li><a href="#first-motivation-group-cohomology">First motivation: group cohomology</a></li>
 <li><a href="#generalising-to-lie-algebras">Generalising to Lie algebras</a></li>
-<li><a href="#the-universal-enveloping-algebra-and-pbw">The universal enveloping algebra and PBW</a></li>
+<li><a href="#the-universal-enveloping-algebra-and-poincar%C3%A9birkhoff-witt">The universal enveloping algebra and Poincaré–Birkhoff-Witt</a></li>
 <li><a href="#actual-definitions">Actual definitions</a></li>
 </ol>
 <p>As part of a reading group I’m in on Kac–Moody groups (something I know nothing about), I had to give a talk introducing the basics of Lie algebra cohomology (something I know very little about), along with some sort of motivation and intuition, and some worked examples. Since I’ve written these notes anyway, I figured I might as well put them up on this blog, and then, when I inevitably forget all I ever once knew, I can refer back to here.</p>
@@ -188,7 +192,7 @@
   \operatorname{H}^n(G,A) \coloneqq \operatorname{Ext}_{\mathbb{Z}[G]}^\bullet(\mathbb{Z}^\mathrm{triv},-).
 </span></p>
 <p>To actually compute this, then, it suffices to find a projective resolution of <span class="math inline">\mathbb{Z}^\mathrm{triv}</span> as a <span class="math inline">\mathbb{Z}[G]</span>-module, and there is a canonical way of doing this, via the so-called <em>bar construction</em>.</p>
-<p>We define <span class="math inline">B_0</span> to be the <span class="math inline">\mathbb{Z}[G]</span>-module <span class="math inline">\mathbb{Z}[G]</span>; for <span class="math inline">n\geq1</span>, we define <span class="math inline">B_n</span> to be the free <span class="math inline">\mathbb{Z}[G]</span>-module on the set <span class="math inline">G^{\times(n+1)}</span>, and write its elements as symbols of the form <span class="math inline">(g_0|\ldots|g_n)</span> for <span class="math inline">g_i\in G</span>. Then we define <span class="math inline">d_0\colon B_0\to\mathbb{Z}^\mathrm{triv}</span> by <span class="math display">
+<p>We define <span class="math inline">B_0</span> to be the <span class="math inline">\mathbb{Z}[G]</span>-module <span class="math inline">\mathbb{Z}[G]</span>; for <span class="math inline">n\geqslant 1</span>, we define <span class="math inline">B_n</span> to be the free <span class="math inline">\mathbb{Z}[G]</span>-module on the set <span class="math inline">G^{\times(n+1)}</span>, and write its elements as symbols of the form <span class="math inline">(g_0|\ldots|g_n)</span> for <span class="math inline">g_i\in G</span>. Then we define <span class="math inline">d_0\colon B_0\to\mathbb{Z}^\mathrm{triv}</span> by <span class="math display">
   d_0\left(\sum_i m_i g_i\right) = \sum_i m_i
 </span> and <span class="math inline">d_n\colon B_n \to B_{n-1}</span> by <span class="math display">
   \begin{aligned}
@@ -237,7 +241,7 @@
   \operatorname{H}_\mathrm{dR}^\bullet(G) \cong \operatorname{H}^\bullet(\mathfrak{g},\mathbb{R}) \cong \operatorname{Inv}_G(\wedge^\bullet\mathfrak{g}^*).
 </span></p>
 </div>
-<h1 id="the-universal-enveloping-algebra-and-pbw">The universal enveloping algebra and PBW</h1>
+<h1 id="the-universal-enveloping-algebra-and-poincarébirkhoff-witt">The universal enveloping algebra and Poincaré–Birkhoff-Witt</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <p>One key ingredient in giving a useful definition of Lie algebra cohomology is the <em>universal enveloping algebra</em> of a Lie algebra, so let’s talk about this for a bit.</p>
 <p>Any (associative) algebra <span class="math inline">A</span> has an “underlying” Lie algebra <span class="math inline">A_-</span>, whose set of elements is the same, and is endowed with the Lie bracket defined by <span class="math display">
@@ -299,7 +303,7 @@
 </span> (i.e. the set of <span class="math inline">p</span>-linear alternating maps <span class="math inline">\mathfrak{g}^{\times p}\to M</span>) with differential <span class="math inline">d\colon\operatorname{CE}(\mathfrak{g},M)^p\to\operatorname{CE}(\mathfrak{g},M)^{p+1}</span> given by <span class="math display">
   \begin{aligned}
     (dc)(x_1,\ldots,x_{p+1}) \coloneqq
-    \,\,&amp;\sum_{1\leq i&lt;j\leq p+1} (-1)^{i+j}c([x_i,x_j],x_1,\ldots,\widehat{x_i},\ldots,\widehat{x_j},\ldots,x_{p+1})
+    \,\,&amp;\sum_{1\leqslant i&lt;j\leqslant p+1} (-1)^{i+j}c([x_i,x_j],x_1,\ldots,\widehat{x_i},\ldots,\widehat{x_j},\ldots,x_{p+1})
   \\+&amp;\sum_{i=1}^{p+1} (-1)^{i+1} x_i c(x_1,\ldots,\widehat{x_i},\ldots,x_{p+1}).
   \end{aligned}
 </span> We then define the <em>Lie algebra cohomology of <span class="math inline">\mathfrak{g}</span></em> (<em>with coefficients in <span class="math inline">M</span></em>) to be the internal cohomology of this complex, i.e. <span class="math display">

@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tim Hosgood | The basics of Lie algebra cohomology</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f4-ns f5"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <ul id="font-select" class="fl">
+      <li>
+        <button type="button" onclick="sansStyle()">
+          Sans
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="serifStyle()">
+          Serif
+        </button>
+      </li>
+    </ul>
+    <a href="/blog/#2021-11-24-lie-algebra-cohomology-part-2" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">The basics of Lie algebra cohomology</h1>
+    <h2 id="post-part">Part 2</h2>
+    <h6 id="post-date">24th November, 2021</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/lie-algebras" rel="tag">lie-algebras</a>, <a href="/blog/tags/cohomology" rel="tag">cohomology</a>
+    </div>
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/blog/2021/11/22/lie-algebra-cohomology-part-1.html">Part 1</a>
+          
+        
+          
+            <span class="active">Part 2</span>
+          
+        
+      </div>
+    
+
+    <ol id="toc">
+<li><a href="#decompositions-for-computation">Decompositions for computation</a></li>
+<li><a href="#semisimple-and-nilpotent-lie-algebras">Semisimple and nilpotent Lie algebras</a></li>
+<li><a href="#kostant-and-borelweilbott">Kostant and Borel–Weil–Bott</a></li>
+</ol>
+<p>Continuing on from last time, let’s now take a look at some actual computational methods for Lie algebra cohomology, as well as some applications and important results. We’ll study the cohomology of semisimple Lie algebras, finite dimensional nilpotent Lie algebras, and then take a little detour to talk about the Borel–Weil–Bott theorem.</p>
+<!-- more -->
+<h1 id="decompositions-for-computation">Decompositions for computation</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Explicitly calculating the Lie algebra cohomology for some specific <span class="math inline">\mathfrak{g}</span> and <span class="math inline">M</span> can be difficult, but there are some useful results (as is normally the case for (co)homology) that tell us how to split <span class="math inline">\operatorname{H}^\bullet(\mathfrak{g},M)</span> up into smaller parts if we know some sort of decomposition of <span class="math inline">\mathfrak{g}</span> or of <span class="math inline">M</span>. The idea is then to apply these decomposition results until we can reduce down to the case where e.g. <span class="math inline">\mathfrak{g}</span> is semisimple and <span class="math inline">M</span> is finite dimensional (since then we have very strict vanishing results, as we will see in the next section).</p>
+<p>We first consider the case where we know how to decompose <span class="math inline">M</span>.</p>
+<div class="itenv" title="Lemma (Long exact sequence in cohomology)">
+<p>Let <span class="math display">
+  0\to M'\to M\to M''\to0
+</span> be a short exact sequence of <span class="math inline">\mathfrak{g}</span>-modules. Then <span class="math display">
+  \ldots \to \operatorname{H}^{i-1}(\mathfrak{g},M'') \to \operatorname{H}^i(\mathfrak{g},M') \to \operatorname{H}^i(\mathfrak{g},M) \to \operatorname{H}^i(\mathfrak{g},M'') \to \ldots
+</span> is a long exact sequence.</p>
+</div>
+<p>This is exactly the cohomology long exact sequence associated to a short exact sequence that we always expect any nice cohomology theory to give us.</p>
+<p>We also have the following useful result for when we know how to decompose <span class="math inline">\mathfrak{g}</span>.</p>
+<div class="itenv" title="Theorem (Hochschild–Serre spectral sequence)">
+<p>Let <span class="math display">
+  0\to\mathfrak{g}'\to\mathfrak{g}\to\mathfrak{g}''\to0
+</span> be a short exact sequence of Lie algebras, and let <span class="math inline">M</span> be a <span class="math inline">\mathfrak{g}</span>-module. Then there exists a spectral sequence <span class="math inline">E_r^{p,q}</span> such that</p>
+<ol type="i">
+<li><span class="math inline">E_1^{p,q}\cong\operatorname{H}^p(\mathfrak{g}',\operatorname{CE}^q(\mathfrak{g}'',M))</span></li>
+<li><span class="math inline">E_2^{p,q}\cong\operatorname{H}^p(\mathfrak{g}'',\operatorname{CE}^q(\mathfrak{g}',M))</span></li>
+</ol>
+<p>and such that <span class="math inline">E_r^{p,q}\Rightarrow\operatorname{H}^\bullet(\mathfrak{g},M)</span>.</p>
+</div>
+<p>One final result, which is useful for studying the <a href="https://en.wikipedia.org/wiki/Virasoro_algebra">Virasoro algebra</a> (arising as the unique <span class="math inline">1</span>-dimensional central extension of the Lie algebra of vector fields on the circle), pertains to the case where <span class="math inline">\mathfrak{g}</span> has a <em>grading element</em>.</p>
+<div class="rmenv" title="Definition">
+<p>If there exists an element <span class="math inline">e_0\in\mathfrak{g}</span> such that <span class="math display">
+  \mathfrak{g}\cong \bigoplus_{n\in\mathbb{Z}}\mathfrak{g}_n
+</span> where <span class="math display">
+  \mathfrak{g}_n \coloneqq \{x\in\mathfrak{g}\mid [e_0,x]=nx\}
+</span> then we call <span class="math inline">e_0</span> a <em>grading element</em> of <span class="math inline">\mathfrak{g}</span>.</p>
+</div>
+<div class="itenv" title="Theorem">
+<p>Suppose that <span class="math inline">\mathfrak{g}</span> has a grading element <span class="math inline">e_0</span>. Then all the cochain spaces <span class="math inline">\operatorname{CE}^p(\mathfrak{g},M)</span> are graded, and the inclusion <span class="math inline">\operatorname{CE}_0^\bullet(\mathfrak{g},M)\hookrightarrow\operatorname{CE}^\bullet(\mathfrak{g},M)</span> induces an isomorphism in cohomology.</p>
+</div>
+<h1 id="semisimple-and-nilpotent-lie-algebras">Semisimple and nilpotent Lie algebras</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>As mentioned above, the case where <span class="math inline">\mathfrak{g}</span> is semisimple (over <span class="math inline">\mathbb{C}</span>) and <span class="math inline">M</span> finite dimensional gives particularly nice vanishing results.</p>
+<div class="itenv" title="Lemma (Whitehead's Lemmas)">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a complex semisimple Lie algebra, and <span class="math inline">M</span> a finite dimensional <span class="math inline">\mathfrak{g}</span>-module. Then</p>
+<ol type="i">
+<li>
+<span class="math inline">\operatorname{H}^1(\mathfrak{g},M)=0</span>,</li>
+<li>
+<span class="math inline">\operatorname{H}^2(\mathfrak{g},M)=0</span>.</li>
+</ol>
+</div>
+<div class="itenv" title="Corollary (Weyl's Theorem)">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a semisimple Lie algebra over a field of characteristic <span class="math inline">0</span>. Then every finite dimensional <span class="math inline">\mathfrak{g}</span>-module is semisimple.</p>
+</div>
+<p><em>Proof.</em> For a contradiction, suppose that <span class="math inline">M</span> is not a direct sum of simple modules. Since <span class="math inline">\dim(M)</span> is finite, there exists some submodule <span class="math inline">M_1</span> which is minimal with respect to this property. In particular, <span class="math inline">M_1</span> is not simple, and thus contains a proper submodule <span class="math inline">M_0</span>. This submodule <span class="math inline">M_0</span> must be a direct sum of simple modules, otherwise it would contradict the minimality of <span class="math inline">M_1</span>; similarly, <span class="math inline">M_2\coloneqq M_1/M_0</span> must also be a direct sum of simple modules. This means that the short exact sequence <span class="math inline">0\to M_0\to M_1\to M_2\to0</span> is not split (otherwise the semisimplicity of <span class="math inline">M_0</span> and <span class="math inline">M_2</span> would imply the semisimplicity of <span class="math inline">M_1</span>), and so this gives a non-zero extension class in <span class="math inline">\operatorname{Ext}_{U(\mathfrak{g})}^1(M_2,M_0)</span>. But then <span class="math inline">\operatorname{H}^1(\mathfrak{g},\operatorname{Hom}_k(M_2,M_0))\cong\operatorname{Ext}_{U(\mathfrak{g})}^1(M_2,M_0)</span> is non-zero, which contradicts Whitehead’s first lemma.</p>
+<p>Whitehead’s second lemma also gives us a classical result: <em>Levi’s Theorem</em>, which states that every Lie algebra is a split extension of a semisimple algebra by a solvable algebra. This follows from the fact that <span class="math inline">\operatorname{H}^2(\mathfrak{g},M)</span> classifies extensions of <span class="math inline">\mathfrak{g}</span> by <span class="math inline">M</span> with some specified action of <span class="math inline">\mathfrak{g}</span> on <span class="math inline">M</span>, but we won’t delve into this here.</p>
+<p>The next obvious question, following Whitehead’s lemmas, is <em>“what about the cohomology in degree <span class="math inline">0</span> and degrees <span class="math inline">\geqslant 3</span>?”</em>. Happily, there are some nice results about this. Firstly, if we can apply Whitehead’s Lemmas, then the vanishing of <span class="math inline">\operatorname{H}^0</span> ensures the vanishing of <em>all</em> cohomology, <em>as long as <span class="math inline">M</span> is semisimple</em>:</p>
+<div class="itenv" title="Theorem">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a complex semisimple Lie algebra, and <span class="math inline">M</span> a finite dimensional <span class="math inline">\mathfrak{g}</span>-module (so that Whitehead’s Lemmas apply). If <span class="math inline">M</span> is further semisimple, and such that <span class="math inline">M^\mathfrak{g}=0</span>, then <span class="math display">
+  \operatorname{H}^i(\mathfrak{g},M)=0
+</span> for all <span class="math inline">i\geqslant 0</span>.</p>
+</div>
+<p>In general, however, it is not the case that <span class="math inline">\operatorname{H}^3</span> vanishes; indeed, we have the following result:</p>
+<div class="itenv" title="Theorem">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a complex semisimple Lie algebra, and <span class="math inline">M</span> a (not necessarily finite dimensional) <span class="math inline">\mathfrak{g}</span>-module. Then <span class="math display">
+  \operatorname{H}^3(\mathfrak{g},M)\cong\mathbb{C}^s
+</span> where <span class="math inline">s</span> is the number of simple factors contained in <span class="math inline">\mathfrak{g}</span>.</p>
+</div>
+<p>(We can actually give a more constructive statement than the above: for each simple factor with Killing form <span class="math inline">\langle-,-\rangle</span>, the <span class="math inline">3</span>-cocycle <span class="math inline">\langle[-,-],-\rangle</span> generates the corresponding factor in <span class="math inline">\mathbb{C}^s</span>.)</p>
+<p>As mentioned in the previous post, we are often interested in the case where <span class="math inline">M=k</span>, and we can say something about this in the complex case as well, namely that the cohomology vanishes in all <em>even</em> degrees:</p>
+<div class="itenv" title="Theorem">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a complex semisimple Lie algebra. Then <span class="math inline">\operatorname{H}^\bullet(\mathfrak{g},\mathbb{C})</span> is an exterior algebra in odd generators.</p>
+</div>
+<p>Contrary to the case of semisimple Lie algebras (which have “not much” cohomology), nilpotent Lie algebras have “a lot of” cohomology, even when finite dimensional, as evidenced by the following theorem:</p>
+<div class="itenv" title="Theorem">
+<p>Let <span class="math inline">\mathfrak{g}</span> be an <span class="math inline">n</span>-dimensional nilpotent Lie algebra. Then <span class="math display">
+  \dim\operatorname{H}^i(\mathfrak{g},k)\geqslant 2
+</span> for all <span class="math inline">i\in\{1,\ldots,n-1\}</span>.</p>
+</div>
+<p>In fact, this suggests a conjecture:</p>
+<div class="itenv" title="Conjecture (Halperin's total rank conjecture)">
+<p>Let <span class="math inline">\mathfrak{g}</span> be an <span class="math inline">n</span>-dimensional nilpotent Lie algebra. Then <span class="math display">
+  \sum_{i\in\mathbb{N}}\dim\operatorname{H}^i(\mathfrak{g},k)\geqslant 2^{\dim Z(\mathfrak{g})}
+</span> where <span class="math inline">Z(\mathfrak{g})</span> is the centre of <span class="math inline">\mathfrak{g}</span>.</p>
+</div>
+<h1 id="kostant-and-borelweilbott">Kostant and Borel–Weil–Bott</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>As I mentioned in the first post in this series, the real context for me studying all this stuff is to better understand Kac–Moody algebras. Two key notions in this area are that of <em>root decompositions</em> and <em>highest weight modules</em>, both of which I will now recklessly assume that we have prior knowledge of (if this isn’t the case, then I highly recommend <a href="https://ahilado.wordpress.com/2021/06/12/reductive-groups-part-i-over-algebraically-closed-fields/">Anton Hilado’s blog</a> as a learning resource).</p>
+<p>I’m only going to scratch the surface when talking about these two theorems, so if you want to learn more then I would turn to <a href="https://www.math.ias.edu/~lurie/papers/bwb.pdf">Lurie’s notes on the Borel–Weil-Bott Theorem</a> and <a href="https://faculty.math.illinois.edu/~mim2/KostantTheorem.pdf">the UGA VIGRE Algebra Group’s notes on Kostant’s Theorem</a>, both of which are thorough and include concrete calculations.</p>
+<div class="itenv" title="Theorem (Kostant's Theorem)">
+<p>Let <span class="math inline">\mathfrak{g}</span> be a semisimple Lie algebra, and <span class="math inline">\mathfrak{g}=\mathfrak{n}_+\oplus\mathfrak{h}\oplus\mathfrak{n}_-</span> a root decomposition. Let <span class="math inline">M</span> be a finite dimensional, irreducible, highest weight <span class="math inline">\mathfrak{g}</span>-module of highest weight <span class="math inline">\lambda</span>.</p>
+<p>Then each <span class="math inline">\operatorname{H}^i(\mathfrak{n}_+,M)</span> splits (as a <span class="math inline">\mathfrak{g}</span>-module) into a direct sum of <span class="math inline">1</span>-dimensional modules of multiplicity <span class="math inline">1</span>. Further, the corresponding weights are exactly the elements of the form <span class="math inline">w(\lambda+\rho)-\rho</span>, where <span class="math inline">w</span> is any element of the Weyl group of length <span class="math inline">k</span>, and <span class="math inline">\rho</span> denotes the half sum of the positive roots.</p>
+</div>
+<p>An nice application of this theorem is that it gives an algebraic proof of the <a href="https://en.wikipedia.org/wiki/Borel%E2%80%93Weil%E2%80%93Bott_theorem"><em>Borel–Weil–Bott Theorem</em></a>. We won’t state (let alone prove) the theorem here, but simply content ourselves with saying that it somehow relates so-called <em>dominant weights</em> of semisimple complex Lie algebras with the sheaf cohomology of certain line bundles. Or, to quote from <a href="https://en.wikipedia.org/wiki/Borel%E2%80%93Weil%E2%80%93Bott_theorem#Borel%E2%80%93Weil_theorem">the Wikipedia article</a>,</p>
+<blockquote>
+<p>The Borel–Weil theorem provides a concrete model for irreducible representations of compact Lie groups and irreducible holomorphic representations of complex semisimple Lie groups. These representations are realized in the spaces of global sections of holomorphic line bundles on the flag manifold of the group. The Borel–Weil–Bott theorem is its generalization to higher cohomology spaces.</p>
+</blockquote>
+<p>To further add to the sense of mystery, we will vaguely discuss an example. Let <span class="math inline">G=\operatorname{SL}_2(\mathbb{C})</span>, which has the Borel subgroup consisting of upper-triangular matrices (of determinant <span class="math inline">1</span>); the flag variety <span class="math inline">G/B</span> is the Riemann sphere <span class="math inline">\mathbb{P}_\mathbb{C}^1</span>, and we write its coordinates as <span class="math inline">x</span> and <span class="math inline">y</span>.. The integral weights of <span class="math inline">G</span> are exactly the integers <span class="math inline">n\in\mathbb{Z}</span>, with <em>dominant</em> weights corresponding to <em>non-negative</em> integers. Here are some observations that we can make, which happen to be those coming from the Borel–Weil Theorem:</p>
+<ul>
+<li>There exists a line bundle <span class="math inline">L_n\coloneqq\mathscr{O}(n)</span> on <span class="math inline">G/B</span> for each integral weight <span class="math inline">n</span>.</li>
+<li>The line bundle <span class="math inline">L_n</span> has global sections if and only if <span class="math inline">n</span> is a dominant weight.</li>
+<li>When <span class="math inline">n</span> is a dominant weight (i.e. when <span class="math inline">n\geqslant 0</span>), the space <span class="math inline">\Gamma(L_n)</span> of global sections of <span class="math inline">L_n</span> is exactly the <span class="math inline">(n+1)</span>-dimensional space of homogeneous polynomials of degree <span class="math inline">n</span> in <span class="math inline">\mathbb{C}[x,y]</span>.</li>
+<li>The global sections of <span class="math inline">L_n</span> (when <span class="math inline">n</span> is a dominant weight) form an irreducible representation of <span class="math inline">G</span> on <span class="math inline">\mathbb{C}[x,y]</span>, which is further a highest weight representation of highest weight <span class="math inline">n</span>, with weight vectors <span class="math inline">x^iy^{n-i}</span> (for <span class="math inline">0\leqslant i\leqslant n</span>) of weight <span class="math inline">2i-n</span>, and highest weight vector <span class="math inline">x^n</span>.</li>
+</ul>
+<p>The Borel–Weil–Bott Theorem further explains the representation theory of <span class="math inline">\mathfrak{g}=\operatorname{\mathfrak{sl}}_2(\mathbb{C})</span>, in that <span class="math inline">\Gamma(L_1)=\Gamma(\mathscr{O}(1))</span> corresponds to the standard representation, and <span class="math inline">\Gamma(L_n)=\Gamma(\mathscr{O}(n))</span> corresponds to the <span class="math inline">n</span>-th symmetric power of the standard representation. Explicitly, we can even write down a description of this standard action of the Lie algebra on <span class="math inline">\mathbb{C}[x,y]</span> as follows: take the usual generators <span class="math inline">X=\left(\begin{smallmatrix}0&amp;1\\0&amp;0\end{smallmatrix}\right)</span>, <span class="math inline">Y=\left(\begin{smallmatrix}0&amp;0\\1&amp;0\end{smallmatrix}\right)</span>, and <span class="math inline">H=\left(\begin{smallmatrix}1&amp;0\\0&amp;-1\end{smallmatrix}\right)</span> of <span class="math inline">\operatorname{\mathfrak{sl}}_2(\mathbb{C})</span>; then <span class="math display">
+  \begin{aligned}
+    X &amp;\leadsto x\frac{\mathrm{d}}{\mathrm{d}y}
+  \\Y &amp;\leadsto y\frac{\mathrm{d}}{\mathrm{d}x}
+  \\H &amp;\leadsto x\frac{\mathrm{d}}{\mathrm{d}x} - y\frac{\mathrm{d}}{\mathrm{d}y}
+  \end{aligned}
+</span> (which could (but won’t, today) lead us very neatly into a discussion on the <a href="https://en.wikipedia.org/wiki/Jordan_map">Jordan–Schwinger map</a>, and how we can understand quantum angular momentum via quantum harmonic oscillators).</p>
+
+
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Topos Institute</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+$("span[class='math inline']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex, {throwOnError: false}) +
+           "</span>";
+});
+
+$("span[class='math display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+           "</div>";
+});
+</script>
+
+    
+
+  </body>
+</html><html><script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+
+  function sansStyle() {
+    content.style.fontFamily = 'WorkSans';
+  }
+  function serifStyle() {
+    content.style.fontFamily = 'Domine';
+  }
+</script></html>
