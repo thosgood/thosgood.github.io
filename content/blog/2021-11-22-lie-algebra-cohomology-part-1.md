@@ -18,6 +18,9 @@ created_at: 2021-11-22
 \providecommand{\PDer}{\operatorname{PDer}}
 \providecommand{\CE}{\operatorname{CE}}
 
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+
 As part of a reading group I'm in on Kac--Moody groups (something I know nothing about), I had to give a talk introducing the basics of Lie algebra cohomology (something I know very little about), along with some sort of motivation and intuition, and some worked examples.
 Since I've written these notes anyway, I figured I might as well put them up on this blog, and then, when I inevitably forget all I ever once knew, I can refer back to here.
 
@@ -116,7 +119,7 @@ $$
 :::
 
 
-# The universal enveloping algebra and PBW
+# The universal enveloping algebra and Poincaré--Birkhoff-Witt
 
 One key ingredient in giving a useful definition of Lie algebra cohomology is the *universal enveloping algebra* of a Lie algebra, so let's talk about this for a bit.
 
