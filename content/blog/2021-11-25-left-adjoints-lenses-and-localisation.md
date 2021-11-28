@@ -7,6 +7,7 @@ created_at: 2021-11-26
 
 This is really just a cross-post announcement: I wrote [a post over on the Topos blog](https://topos.site/blog/2021/11/left-adjoints-lenses-and-localisation/), but it's something I've been thinking about a lot, so I wanted to share a link to it here as well.
 It's basically the result of me, knowing a bit about derived categories and model categories, trying to digest this lovely bit of Australian category theory by [Bryce Clarke](https://bryceclarke.github.io/) concerning [internal lenses](https://arxiv.org/abs/2009.06835v1).
+In fact, it's really a fermented and distilled version of an old blog post from here, namely [*Cauchy completion and profunctors*](https://thosgood.com/blog/2019/07/14/cauchy-completion-and-profunctors.html).
 
 <!-- more -->
 
