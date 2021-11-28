@@ -209,9 +209,9 @@
 <p>As we did for cohomology, we can construct a chain complex that computes the Lie algebra homology: we define <span class="math display">
   \wedge_p = \wedge_p(\mathfrak{g},M) \coloneqq \wedge^p(\mathfrak{g})\otimes_k M
 </span> (so that <span class="math inline">\wedge_0=M</span>), with differential <span class="math inline">\partial\colon\wedge_p\to\wedge_{p-1}</span> given by <span class="math display">
-  \partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
   \begin{aligned}
-    \,\,&amp;\sum_{1\leqslant i&lt;j\leqslant p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
+    \partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
+    \,&amp;\sum_{1\leqslant i&lt;j\leqslant p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
   \\+&amp;\sum_{i=1}^p (-1)^i x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
   \end{aligned}
 </span> The claim (which we won’t prove) is then that <span class="math display">
@@ -239,7 +239,7 @@
 </div>
 <h1 id="relative-lie-algebra-cohomology-some-definitions">Relative Lie algebra (co)homology: some definitions</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>As before, we will first give a complex whose internal cohomology computes relative Lie algebra cohomology, and then construct a projective resolution of <span class="math inline">k^\mathrm{triv}</span> so that we can show how we can recover the derived functor definition.</p>
+<p>As before, we will first give a complex whose internal cohomology computes relative Lie algebra cohomology, and then construct a projective resolution of <span class="math inline">k^\mathrm{triv}</span> so that we can show how to recover the derived functor definition.</p>
 <div class="rmenv" title="Definition">
 <p>The <em>relative Chevalley–Eilenberg complex <span class="math inline">\operatorname{CE}^\bullet(\mathfrak{g},\mathfrak{h};M)</span></em> is defined by <span class="math display">
   \operatorname{CE}^p(\mathfrak{g},\mathfrak{h};M) \coloneqq \big( (\wedge^p(\mathfrak{g}/\mathfrak{h})^*)\otimes_k M \big)^\mathfrak{h}
