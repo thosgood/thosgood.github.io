@@ -22,6 +22,7 @@ created_at: 2021-11-29
 \providecommand{\SL}{\operatorname{SL}}
 \providecommand{\sl}{\operatorname{\mathfrak{sl}}}
 \providecommand{\dd}{\mathrm{d}}
+\providecommand{\triv}{\mathrm{triv}}
 
 \renewcommand{\geq}{\geqslant}
 \renewcommand{\leq}{\leqslant}
