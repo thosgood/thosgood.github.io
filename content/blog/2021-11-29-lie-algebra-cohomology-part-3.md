@@ -149,7 +149,7 @@ Being finitely semisimple is preserved under quotients, taking submodules, and t
 
 ::: {.itenv title="Lemma"}
 Let $(\gg,\hh)$ be a Lie algebra pair such that $\gg$ is finitely semisimple under the adjoint action of $\hh$.
-Write $\Ugg$ (resp. $\Uhh$) to mean $U(\gg)$ (resp. $U(\hh)$).
+Write $\Ugg\coloneqq U(\gg)$, and $\Uhh\coloneqq U(\hh)$.
 Then the complex
 $$
   \ldots \to D_2 \to D_1 \to D_0
