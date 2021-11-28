@@ -71,9 +71,9 @@ $$
 $$
 (so that $\wedge_0=M$), with differential $\partial\colon\wedge_p\to\wedge_{p-1}$ given by
 $$
-  \partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
   \begin{aligned}
-    \,\,&\sum_{1\leq i<j\leq p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
+    \partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
+    \,&\sum_{1\leq i<j\leq p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
   \\+&\sum_{i=1}^p (-1)^i x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
   \end{aligned}
 $$
@@ -116,7 +116,7 @@ $$
 
 # Relative Lie algebra (co)homology: some definitions
 
-As before, we will first give a complex whose internal cohomology computes relative Lie algebra cohomology, and then construct a projective resolution of $k^\triv$ so that we can show how we can recover the derived functor definition.
+As before, we will first give a complex whose internal cohomology computes relative Lie algebra cohomology, and then construct a projective resolution of $k^\triv$ so that we can show how to recover the derived functor definition.
 
 ::: {.rmenv title="Definition"}
 The *relative Chevalley--Eilenberg complex $\CE^\bullet(\gg,\hh;M)$* is defined by
