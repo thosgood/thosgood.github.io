@@ -136,7 +136,7 @@ As for relative homology, we define the complex
 $$
   \wedge_p = \wedge_p(\gg,\hh;M) \coloneqq \frac{\wedge^p(\gg/\hh)\otimes_k M}{\hh\cdot(\wedge^p(\gg/\hh)\otimes_k M)}
 $$
-where $\hh\cdot V$, for an $\hh$-module $V$, means the span of $x\cdot v$ for $x\in\hh$ and $v\in V$.
+where $\hh\cdot V$, for an $\hh$-module $V$, denotes the span of elements of the form $x\cdot v$ for $x\in\hh$ and $v\in V$.
 
 So far, we have not really been making any assumptions about whether or not $M$ is finite dimensional.
 It turns out that we don't have to, but we do need to impose at least some sort of condition relating to its dimension, whence the following definition.
