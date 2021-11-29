@@ -121,12 +121,15 @@ Firstly, if we can apply Whitehead's Lemmas, then the vanishing of $\HH^0$ ensur
 
 ::: {.itenv title="Theorem"}
 Let $\gg$ be a complex semisimple Lie algebra, and $M$ a finite dimensional $\gg$-module (so that Whitehead's Lemmas apply).
-If $M$ is further semisimple, and such that $M^\gg=0$, then
+If $M$ (which must be semisimple, by Weyl's theorem) is such that $M^\gg=0$, then
 $$
   \HH^i(\gg,M)=0
 $$
 for all $i\geq0$.
 :::
+
+This theorem holds more generally, for reductive Lie algebras over fields of characteristic zero, and finite-dimensional semisimple modules.
+Indeed, Whitehead's lemmas *also* hold over arbitrary fields of characteristic zero, since semisimplicity is preserved by field extensions, as is cohomology, and so we can always pass to the algebraic closure.
 
 In general, however, it is not the case that $\HH^3$ vanishes; indeed, we have the following result:
 
@@ -136,7 +139,7 @@ Then
 $$
   \HH^3(\gg,M)\cong\CC^s
 $$
-where $s$ is the number of simple factors contained in $\gg$.
+where $s$ is the number of simple factors of $M$ contained in $\gg$.
 :::
 
 (We can actually give a more constructive statement than the above: for each simple factor with Killing form $\langle-,-\rangle$, the $3$-cocycle $\langle[-,-],-\rangle$ generates the corresponding factor in $\CC^s$.)
