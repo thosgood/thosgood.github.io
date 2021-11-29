@@ -104,8 +104,7 @@ Then every finite dimensional $\gg$-module is semisimple.
 :::
 
 *Proof.*
-For a contradiction, suppose that $M$ is not a direct sum of simple modules.
-Since $\dim(M)$ is finite, there exists some submodule $M_1$ which is minimal with respect to this property.
+For a contradiction, suppose that $M_1$ is not a direct sum of simple modules, and take it to be of smallest dimension (so $M_1$ is not necessarily unique, but we just pick any non-semisimple module of smallest dimension!).
 In particular, $M_1$ is not simple, and thus contains a proper submodule $M_0$.
 This submodule $M_0$ must be a direct sum of simple modules, otherwise it would contradict the minimality of $M_1$;
 similarly, $M_2\coloneqq M_1/M_0$ must also be a direct sum of simple modules.
