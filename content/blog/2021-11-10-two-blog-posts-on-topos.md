@@ -10,6 +10,13 @@ I blogged about them over on the [Topos blog](https://topos.site/blog/), but I'l
 
 <!-- more -->
 
+If you just want links to the two articles, then here they are:
+
+1. "Dirichlet polynomials and entropy". *Entropy* **23** (2021), 1085. DOI: [10.3390/e23081085](https://doi.org/10.3390/e23081085). arXiv: [2107.04832](https://arxiv.org/abs/2107.04832) [cs.IT].
+2. "Deep neural networks as nested dynamical systems". Published on *SIAM News Blog* (2021-12-02), [available here](https://sinews.siam.org/Details-Page/deeply-interactive-learning-systems). arXiv: [2111.01297](https://arxiv.org/abs/2111.01297) [cs.LG].
+
+---
+
 Back over the summer, David explained some things about Dirichlet polynomials to me, how they could be visualised as set-theoretic bundles, and what this might have to do with Shannon entropy.
 After a month or so of thinking, I wrote up what I understood, and then David and I fleshed it out into a pretty self-contained short story, which I think turned out very nicely!
 I like this kind of maths a lot, even though it's not normally what I do;
