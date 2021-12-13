@@ -174,7 +174,7 @@ $$
 $$
 (where $M^t$ is the right $\gg$-module with the same underlying space as $M$, but with $m\cdot x\coloneqq -xm$ for $m\in M$ and $x\in\gg$), and
 $$
-  \HH^\bullet(\gg,\hh;M) \simeq \Ext_{(\Ugg,\Uhh)}^\bullet(k,V).
+  \HH^\bullet(\gg,\hh;M) \simeq \Ext_{(\Ugg,\Uhh)}^\bullet(k,M).
 $$
 :::
 
