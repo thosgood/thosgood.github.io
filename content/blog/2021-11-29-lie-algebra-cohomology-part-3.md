@@ -95,7 +95,7 @@ But before giving the definition, it's maybe also helpful to see another theorem
 
 ::: {.rmenv title="Definition"}
 Let $(\gg,\hh)$ be a Lie algebra pair.
-We say that it is *reductive* if the adjoint Lie algebra representation of $\hh$ on $\gg$ is reducible.
+We say that it is *reductive* if the adjoint Lie algebra representation of $\hh$ on $\gg$ is completely reducible.
 :::
 
 ::: {.itenv title="Theorem"}
