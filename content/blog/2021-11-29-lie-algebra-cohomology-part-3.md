@@ -72,8 +72,8 @@ $$
 (so that $\wedge_0=M$), with differential $\partial\colon\wedge_p\to\wedge_{p-1}$ given by
 $$
   \begin{aligned}
-    \partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
-    \,&\sum_{1\leq i<j\leq p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
+    &\partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
+  \\\,&\sum_{1\leq i<j\leq p} (-1)^{i+j} [x_i,x_j]\wedge x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge x_p \otimes m
   \\+&\sum_{i=1}^p (-1)^i x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
   \end{aligned}
 $$
