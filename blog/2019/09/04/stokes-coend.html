@@ -115,7 +115,7 @@
 
     <hr>
 
-    <script defer src="https://commento.thosgood.com/js/commento.js" onload="showComments()"></script>
+    <script defer src="https://commento.thosgood.com/js/commento.js" onload="commentMaths()"></script>
     <div id="commento"></div>
 
   </div>
@@ -172,18 +172,15 @@ $("span[class='math display']").replaceWith(
   </body>
 </html><html>
 <script type="text/javascript">
-function showComments() {
+function commentMaths() {
   commento.main((() => {
-    renderMathInElement(document.body, {
-      // customised options
-      // • auto-render specific keys, e.g.:
+    renderMathInElement(document.getElementById('commento'), {
       delimiters: [
         {left: '$$', right: '$$', display: true},
         {left: '$', right: '$', display: false},
         {left: '\\[', right: '\\]', display: true},
         {left: '\\(', right: '\\)', display: false}
       ],
-      // • rendering keys, e.g.:
       throwOnError : false,
       fleqn: true
     });
