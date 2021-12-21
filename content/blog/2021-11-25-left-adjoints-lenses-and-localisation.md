@@ -14,8 +14,8 @@ In fact, it's really a fermented and distilled version of an old blog post from 
 I won't copy the contents of the entire post here, but I will just repeat the question that I ask at the end (and will refer anybody interested in more context over to [my post](https://topos.site/blog/2021/11/left-adjoints-lenses-and-localisation/)).
 
 > Is there some setting in which I could say something like (maybe swapping “projective” for “injective”) the following:
-> - cofunctors are the morphisms in some “derived” category;
-> - weak equivalences are bijective-on-objects functors;
-> - fibrations are discrete opfibrations;
-> - the category does not have enough projectives;
-> - lenses correspond (via looking at their domain) to K-projective objects.
+> cofunctors are the morphisms in some “derived” category;
+> weak equivalences are bijective-on-objects functors;
+> fibrations are discrete opfibrations;
+> the category does not have enough projectives;
+> lenses correspond (via looking at their domain) to K-projective objects.
