@@ -48,11 +48,31 @@
 
     <hr>
 
-    <script defer src="https://commento.thosgood.com/js/commento.js"></script>
+    <script defer src="https://commento.thosgood.com/js/commento.js" onload="showComments()"></script>
     <div id="commento"></div>
 
   </div>
 <% end %>
+
+<script type="text/javascript">
+function showComments() {
+  commento.main((() => {
+    renderMathInElement(document.body, {
+      // customised options
+      // • auto-render specific keys, e.g.:
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\[', right: '\\]', display: true},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      // • rendering keys, e.g.:
+      throwOnError : false,
+      fleqn: true
+    });
+  }));
+}
+</script>
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
