@@ -55,23 +55,6 @@
 <% end %>
 
 <script type="text/javascript">
-function commentMaths() {
-  commento.main((() => {
-    renderMathInElement(document.getElementById('commento'), {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\[', right: '\\]', display: true},
-        {left: '\\(', right: '\\)', display: false}
-      ],
-      throwOnError : false,
-      fleqn: true
-    });
-  }));
-}
-</script>
-
-<script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
   const content = document.getElementById('post-content');
 
