@@ -50,27 +50,16 @@
     <%= yield %>
     <!-- Comments -->
     <hr>
-    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
     <script defer
       src="https://commento.thosgood.com/js/commento.js"
-      data-css-override="https://thosgood.com/assets/css/commento.css"
-      data-auto-init="false">
+      data-css-override="https://thosgood.com/assets/css/commento.css">
     </script>
     <div id="commento"></div>
   </div>
 <% end %>
-
-
-<!-- Load Commento and render any new maths -->
-
-<script type="text/javascript">
-  function loadCommento() {
-    const event = new Event('CommentoLoaded');
-    window.commento.main();
-    // this event is listened to in scripts.html.erb
-    document.dispatchEvent(event);
-  };
-</script>
 
 
 <!-- Display settings (dark mode, font, etc) -->
