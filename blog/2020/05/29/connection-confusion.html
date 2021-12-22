@@ -112,7 +112,8 @@
 
     <hr>
 
-    <script defer src="https://commento.thosgood.com/js/commento.js"></script>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="assets/css/commento.css" onload="renderMathsInComments()">
+    </script>
     <div id="commento"></div>
 
   </div>
@@ -165,21 +166,19 @@ $("span[class='math display']").replaceWith(
 </script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          // • rendering keys, e.g.:
-          throwOnError : false
-        });
-    });
+<script type="text/javascript">
+function renderMathsInComments() {
+  const comments = document.getElementById('commento');
+  renderMathInElement(comments, {
+    delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+    ],
+    throwOnError : false
+  });
+}
 </script>
 
     
