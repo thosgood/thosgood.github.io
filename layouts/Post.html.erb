@@ -1,5 +1,6 @@
 <% render '/**/Default.*' do %>
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -24,6 +25,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr f5">&larr; Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -33,6 +35,7 @@
     <div class="tag-list">
       <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
     </div>
+    <!-- Other posts in the same series -->
     <% if @item[:part] != nil %>
       <div id="post-other-parts" class="mt3">
         <span class="i">See all parts of this series:</span>
@@ -43,27 +46,34 @@
         <% end %>
       </div>
     <% end %>
-
+    <!-- Content -->
     <%= yield %>
-
+    <!-- Comments -->
     <hr>
-
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
     <script defer
       src="https://commento.thosgood.com/js/commento.js"
       data-css-override="https://thosgood.com/assets/css/commento.css"
-      onload="renderMathsInComments()">
+      data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 <% end %>
 
+
+<!-- Load Commento and render any new maths -->
+
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
