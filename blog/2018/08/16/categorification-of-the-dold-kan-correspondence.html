@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2018-08-16-categorification-of-the-dold-kan-correspondence" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/category-theory" rel="tag">category-theory</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>So I’m currently at the Max Planck Institute for Mathematics in Bonn, Germany, for a conference on ‘Higher algebra and mathematical physics’. Lots of the talks have gone entirely above my head (reminding me how far behind my physics education has fallen), but have still been very interesting.</p>
 <!-- more -->
 <p>There was a talk yesterday on <a href="http://www.mpim-bonn.mpg.de/node/8635"><span class="math inline">\mathbb{F}_1</span> things</a> by Matilde Marcolli, and on Tuesday a talk by Bertrand Toën on <a href="http://www.mpim-bonn.mpg.de/node/8633">moduli spaces of connections on open varieties</a> as well as one by Damien Calaque (my co-supervisor) on <a href="http://www.mpim-bonn.mpg.de/node/8617"><span class="math inline">\mathbb{E}_n</span>-algebras and vertex models</a>, all of which I managed to follow at least partially (take what you can get, I guess). Today, however, was a particularly interesting talk by Tobias Dyckerhoff on a <a href="http://www.mpim-bonn.mpg.de/node/8648">categorified Dold-Kan correspondence</a>. I don’t really want to talk about the details (because I’m not at all qualified to do so, and you’d be better served by going directly to the source), but something that I really enjoyed was a ‘dictionary’ that he presented.</p>
@@ -133,13 +136,12 @@
 <img src="/assets/post-images/2018-08-16-categorication-of-the-dold-kan-correspondence-cube.jpg" title="Defining Tot for length 3 complexes" alt="Defining Tot for length 3 complexes."><figcaption aria-hidden="true">Defining Tot for length 3 complexes.</figcaption>
 </figure>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -206,7 +208,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -214,13 +217,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

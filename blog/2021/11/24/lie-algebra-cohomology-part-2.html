@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2021-11-24-lie-algebra-cohomology-part-2" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,6 +87,7 @@
     <div class="tag-list">
       <a href="/blog/tags/lie-algebras" rel="tag">lie-algebras</a>, <a href="/blog/tags/cohomology" rel="tag">cohomology</a>
     </div>
+    <!-- Other posts in the same series -->
     
       <div id="post-other-parts" class="mt3">
         <span class="i">See all parts of this series:</span>
@@ -181,7 +184,7 @@
         
       </div>
     
-
+    <!-- Content -->
     <ol id="toc">
 <li><a href="#decompositions-for-computation">Decompositions for computation</a></li>
 <li><a href="#semisimple-and-nilpotent-lie-algebras">Semisimple and nilpotent Lie algebras</a></li>
@@ -297,13 +300,12 @@
   \end{aligned}
 </span> (which could (but won’t, today) lead us very neatly into a discussion on the <a href="https://en.wikipedia.org/wiki/Jordan_map">Jordan–Schwinger map</a>, and how we can understand quantum angular momentum via quantum harmonic oscillators).</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -370,7 +372,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -378,13 +381,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

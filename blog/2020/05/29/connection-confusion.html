@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2020-05-29-connection-confusion" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/algebraic-geometry" rel="tag">algebraic-geometry</a>, <a href="/blog/tags/differential-geometry" rel="tag">differential-geometry</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>I am a big fan of Stephen Bruce Sontz’s book <a href="https://www.springer.com/gp/book/9783319147642"><em>Principal bundles: The Classical Case</em></a>, and cannot recommend it enough, as somebody who usually finds differential geometry (a) dull, and (b) incomprehensible. Anyway, there’s a lovely quote from this book about how confusing the terminology surrounding connections can be, so let’s try to clear some of that up today.</p>
 <!-- more -->
 <p>First, the quote in question.</p>
@@ -109,13 +112,12 @@
 <p>Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though:</p>
 <p><img src="/assets/post-images/2020-05-29-connection-confusion-hierarchy.jpg"></p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -182,7 +184,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -190,13 +193,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

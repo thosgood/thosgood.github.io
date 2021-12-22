@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2020-08-18-translations-part-1" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,6 +87,7 @@
     <div class="tag-list">
       <a href="/blog/tags/translation" rel="tag">translation</a>, <a href="/blog/tags/general" rel="tag">general</a>
     </div>
+    <!-- Other posts in the same series -->
     
       <div id="post-other-parts" class="mt3">
         <span class="i">See all parts of this series:</span>
@@ -179,7 +182,7 @@
         
       </div>
     
-
+    <!-- Content -->
     <p>I’ve been having quite a bit of fun translating some maths papers into English recently. Of course, I’m still chugging away at the <a href="https://github.com/ryankeleti/ega">EGA translation project</a>, having just finished another section of EGA II, leaving “only” about 60 pages left before that chapter will be done as well! However, I’ve started putting some of my other translations all together, and they can now be found at <a href="https://thosgood.com/translations" class="uri">https://thosgood.com/translations</a>. There are a lot still in progress, but here’s a summary of what I’ve done so far.</p>
 <!-- more -->
 <p>There are two nice articles:</p>
@@ -203,13 +206,12 @@
 </ul>
 <p>There is still a lot more to come, and I usually manage to put something out at least once every 10 days or so, so keep your eyes on the site (or <a href="https://twitter.com/tjohnhos">my Twitter</a>) for more updates (though I’ll also post here every once in a while with a summary of the latest translations). My current plan is to start working through the FGA (slowly); to finish EGA II; to do some of Grothendieck’s functional analysis work; and to start a few longer-term translations…</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -276,7 +278,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -284,13 +287,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

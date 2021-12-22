@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2020-09-06-JMRA-video" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/general" rel="tag">general</a>, <a href="/blog/tags/algebraic-geometry" rel="tag">algebraic-geometry</a>, <a href="/blog/tags/complex-geometry" rel="tag">complex-geometry</a>, <a href="/blog/tags/homotopy-theory" rel="tag">homotopy-theory</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>I recently submitted a video to the <a href="https://sites.google.com/view/jmra/home">Junior Mathematician Research Archive</a> that gives a brief overview of the work in my PhD thesis. You can watch the video <a href="https://www.youtube.com/watch?v=l_eXElGTCzo">here</a> but, be warned, it’s really probably not the most coherent (ha ha) narrative.</p>
 <p>For the sake of it, or in case you’re the sort of person who prefers to read instead of watch, I’ve included the transcript of the whole video below.</p>
 <!-- more -->
@@ -147,13 +150,12 @@
 <p>Well, up until now, everything has been nice, but we haven’t really made things much more useful; we’ve just given everything a much fancier, more longwinded name. It would be much better if we could actually say things in the language of category theory, and, indeed, in the language of <span class="math inline">(\infty,1)</span>-categories. This would tell us that the construction is somehow “a good one”, in that it respects the inherent structures between all these objects.</p>
 <p>It turns out that there are some technical difficulties with even deciding what exactly “a complex of coherent analytic sheaves” should be, but we can get around this somehow, and end up with the following result: there is an equivalence of <span class="math inline">(\infty,1)</span>-categories between complexes of coherent analytic sheaves and the homotopy colimit (over refinements of covers) of Green complexes (which are exactly these complexes of vector bundles on the nerve arising from Green’s resolution, satisfying this “injective-coface” property, amongst others). As a bonus fact, since <span class="math inline">X</span> is assumed to be paracompact, for any complex of coherent analytic sheaves, this homotopy colimit will be finite, i.e. we can actually <em>do</em> calculations and write down resolutions. All of what we discussed above amounts to a proof that “simplicial Chern-Weil theory works on Green complexes”, and so this equivalence tells us that it also works on complexes of coherent analytic sheaves, which is exactly what we started out wanting to show!</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -220,7 +222,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -228,13 +231,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

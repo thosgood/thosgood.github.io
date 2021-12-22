@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2020-03-29-simplicial-chern-weil" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/algebraic-geometry" rel="tag">algebraic-geometry</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <ol id="toc">
 <li><a href="#the-main-goal">The main goal</a></li>
 <li><a href="#part-i-and-part-ii">Part I and Part II</a></li>
@@ -137,13 +140,12 @@
 <a href="#post-title" class="toc-back">↟</a>
 <p>There are some other results and points of view in my thesis that I’d like to talk about, but I figured that the shorter I keep this post, the more chance of people actually reading it! Anyway, it’s nice to take a break from this subject for a little while, and spend some time thinking about another side project…</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -210,7 +212,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -218,13 +221,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

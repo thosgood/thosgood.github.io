@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2019-08-14-mathematical-motivation-meagre-contributions" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/birds" rel="tag">birds</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>I find myself in a mathematical rut more often than I would like. It is very easy, especially as a PhD student, I think, to become disillusioned with maths, the work that one can do, and academia as a whole. I realised only the other day, after talking to my family, some of the things that can contribute towards this. Hopefully this post can serve as a reminder to myself that I am human being who is trying to be a mathematician, and not the other way around.</p>
 <!-- more -->
 <p>These days, living abroad (away from friends and family), most of my social interactions take place with other mathematicians. This is great, because I do love talking about maths, but also has a rather negative effect. Namely, every single person in my office already has a PhD. Because of this, it’s very easy to feel like I know absolutely nothing about maths. Combine this with the typical thésard problem of “my thesis just has trivial results but even so my proofs are incomplete and bad”, reading things written by the geniuses of your field, and throw in a dash of “so much of academia is about trying to sell your maths as having either profitable (for the few) or military applications”, and it can be hard to enjoy maths at times.</p>
@@ -106,13 +109,12 @@
 <li><p>As the above poem also suggests, spend time growing and learning as a human being. It’s said so often that it’s become cliché, but being a human being can be very hard. Poetry, music, books, and so on, are all ways that other human beings have tried to convey what they have themselves wanted to hear at one point or another, so listen to what they have to say. But don’t get so tied up in listening to artists that you forget to listen to everybody else.</p></li>
 </ol>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -179,7 +181,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -187,13 +190,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

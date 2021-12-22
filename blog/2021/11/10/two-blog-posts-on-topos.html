@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2021-11-10-two-blog-posts-on-topos" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/general" rel="tag">general</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>Over the past couple of months, between moving countries, teaching, and a bunch of administrative faff, I’ve managed to write two short preprints with <a href="http://www.dspivak.net/">David Spivak</a>. I blogged about them over on the <a href="https://topos.site/blog/">Topos blog</a>, but I’ll just write a little crossover post here with some links (so that people don’t think that this blog is entirely dead).</p>
 <!-- more -->
 <p>If you just want links to the two articles, then here they are:</p>
@@ -104,13 +107,12 @@
 <p>Lastly, yes, I am still doing work on simplicial things in complex geometry, but the projects I’m working on in this area are slow going, and I’m trying to balance that with teaching (which has required me to finally learn all the commutative algebra that I failed to learn as a masters student myself), so I don’t have any exciting things to share on that front yet.</p>
 <p>Anyway, as always, I don’t have commenting on this blog, but feel free to say hi <a href="https://twitter.com/tim_hosgood">on Twitter</a>, via email, or (preferably) by training a pigeon to fly to my apartment, tap on my window, and deliver me your message on a small piece of paper wrapped around its ankle, before staying to rest at my place for a few days while I feed it and engage it in fruitful discussions on environmental activism, and then wave it on its merry way back out into the wide wild world.</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -177,7 +179,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -185,13 +188,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

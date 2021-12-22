@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2019-09-04-stokes-coend" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/category-theory" rel="tag">category-theory</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>For category theorists, the idea that “everything is a Kan extension” is a familiar one, as is the slightly more abstract version “everything is a (co)end”. For differential geometers, the idea that “everything is Stokes’ theorem” is sort of the equivalent adage. In an entirely typical turn of events, it seems that these two seemingly unrelated aphorisms can be linked together, as I found out today on Twitter.</p>
 <!-- more -->
 <p>Today, <a href="https://twitter.com/ququ7"><code>@ququ7</code></a> tweeted/twote/twut that, <a href="https://twitter.com/ququ7/status/1169048827703287814">a few years back, Tim Campion had told him how Stokes’ theorem is a result about coends</a>. All I want to do here is share this great little snippet, but I won’t be doing much more than just repeating exactly the contents of the above tweet, so you might as well just go check it out there!</p>
@@ -112,13 +115,12 @@
 <p>All in all, this is a bit similar to an abstract version of de Rham’s theorem, which says that the above integration map (when we replace <span class="math inline">C_n</span> by <em>singular</em> cochains) is a quasi-isomorphism, and the commuting square sort of encodes the fact that integration respects the differentials of the two complexes. (This is what <a href="https://twitter.com/littmath">Daniel Litt</a> pointed out <a href="https://twitter.com/littmath/status/1169081052100530177">in a reply</a>).</p>
 <p>One other question that I do have is the following: is there something to be gained by writing <span class="math inline">C_X</span> as the functor represented by <span class="math inline">X</span>, and using the coend version of the Yoneda lemma? I don’t know, but would love to find out!</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -185,7 +187,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -193,13 +196,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

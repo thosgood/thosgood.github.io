@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2020-07-15-hochschild-and-cyclic" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>, <a href="/blog/tags/homotopy-theory" rel="tag">homotopy-theory</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <ol id="toc">
 <li><a href="#unmotivated-definitions">Unmotivated definitions</a></li>
 <li><a href="#some-motivation">Some motivation</a></li>
@@ -130,13 +133,12 @@
 <p>Jones’ theorem told us about the cohomology of the free loop space of <span class="math inline">X</span>, bu can we say anything about the <em>cyclic</em> loop space of <span class="math inline">X</span>? This is the homotopy quotient <span class="math inline">\mathcal{L}X/^hS^1</span> by the <a href="https://ncatlab.org/nlab/show/free+loop+space+object#CircleAction">canonical action</a> of <span class="math inline">S^1</span> on <span class="math inline">\mathcal{L}X</span>. Then <span class="math display">\mathrm{H}^\bullet(\mathcal{L}X/^hS^1)\simeq\mathrm{HC}_\bullet(C^\bullet(X))</span> where, again, <span class="math inline">C^\bullet(X)</span> is the complex of singular chains, and <span class="math inline">\mathrm{HC}_\bullet</span> is the <em>cyclic homology</em>. But how do we define cyclic homology?</p>
 <p>Let <span class="math inline">\lambda\colon C_n(A,A)\to C_n(A,A)</span> be the automorphism of the Hochschild complex given by cyclic permutation (and a sign), i.e. <span class="math display">\lambda\colon a_0\otimes a_1\otimes\ldots\otimes a \mapsto (-1)^n a_n\otimes a_0\otimes\ldots\otimes a_{n-1}.</span> Then we define the <em>cyclic homology complex</em> <span class="math inline">C_\bullet^\lambda(A,A)=C_\bullet(A,A)/\operatorname{Im}(\operatorname{id}-\lambda)</span>, and the <em>cyclic homology</em> <span class="math inline">\mathrm{HC}_\bullet(A)=\mathrm{H}_\bullet(C_\bullet^\lambda(A))</span>.</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -203,7 +205,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -211,13 +214,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

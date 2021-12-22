@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2019-12-08-det-omega-p2" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/algebraic-geometry" rel="tag">algebraic-geometry</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>As always, when I haven’t written anything on here in a while, I’m going to write about something entirely irrelevant to anything I’ve written about before (instead of continuing any of the many series of posts I’ve started or planned to start). Today we’re going to look at a ‘fun’ little calculation, which might be the most algebraic-geometry-like calculation I’ve done in a long time: we’re going to compute the determinant of the cotangent sheaf of the complex projective sphere. Note that even the statement of this problem makes me uneasy: I am nowhere near as comfortable with classical algebraic geometry as I should be!</p>
 <!-- more -->
 <p>Let’s dive right in: I won’t explain much at all about why we would care about this calculation, nor how the objects are really defined; I’m writing this because sometimes it’s satisfying to just <em>do</em> a calculation or exercise that you might find in a textbook.</p>
@@ -128,13 +131,12 @@
 \end{pmatrix}</span> and, for line bundles, the determinant is just given locally by the determinant of the transition matrices, and here <span class="math inline">\det A=-s^{-3}</span>. Thus <span class="math display">\det\Omega_X^1 \cong \mathcal{O}(-3).</span></p>
 <p>In general, we can similarly show that <span class="math inline">\det\Omega_{\mathbb{P}^n}^1 \cong \mathcal{O}(-(n+1))</span>.</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -201,7 +203,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -209,13 +212,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

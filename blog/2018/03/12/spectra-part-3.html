@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2018-03-12-spectra-part-3" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,6 +87,7 @@
     <div class="tag-list">
       <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/spectra" rel="tag">spectra</a>, <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>, <a href="/blog/tags/operads" rel="tag">operads</a>
     </div>
+    <!-- Other posts in the same series -->
     
       <div id="post-other-parts" class="mt3">
         <span class="i">See all parts of this series:</span>
@@ -181,7 +184,7 @@
         
       </div>
     
-
+    <!-- Content -->
     <p>This post is a weird one: it’s not really aimed at any one audience, but is more of a dump of a bunch of information that I’m trying to process.</p>
 <!-- more -->
 <p>Now would be a great time to talk about operads, but I really could not do a better job than <a href="https://twitter.com/math3ma">Tai-Danae Bradley</a> has already done over at her <a href="http://www.math3ma.com">blog</a> in the post <em>What is an Operad</em>, <a href="http://www.math3ma.com/mathema/2017/10/23/what-is-an-operad-part-1">part 1</a> and <a href="http://www.math3ma.com/mathema/2017/10/30/what-is-an-operad-part-2">part 2</a>. So throughout this post I’m going to assume that you’ve read this, and I’ll freely reference bits of it without necessarily saying so.</p>
@@ -306,13 +309,12 @@
 </figure>
 <p>I haven’t really talked much about spectra here, but the definition of an <strong>infinite loop space</strong> in Vogt is the same as the definition of an <span class="math inline">\Omega</span>-spectrum in the previous post. Vogt mentions (5.2) that if <span class="math inline">X</span> is an infinite loop space then <span class="math inline">Y\mapsto[Y,X_n]^\bullet</span> defines a cohomology theory, and that any cohomology theory arises in this way. This all seems really nice, but I’m not entirely certain how complicated a proof of this is, or how trivial this statement is.</p>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -379,7 +381,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -387,13 +390,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];

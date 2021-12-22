@@ -52,6 +52,7 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         
   <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
@@ -76,6 +77,7 @@
         </button>
       </li>
     </ul>
+    <!-- Navigation -->
     <a href="/blog/#2018-10-31-torsors-and-principal-bundles" class="fr f5">← Return to all posts</a>
   </div>
   <div id="post-content" class="w-80-ns ph3-ns w-100">
@@ -85,8 +87,9 @@
     <div class="tag-list">
       <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>
     </div>
+    <!-- Other posts in the same series -->
     
-
+    <!-- Content -->
     <p>In my thesis, switching between vector bundles and principal <span class="math inline">\mathrm{GL}_r</span>-bundles has often made certain problems easier (or harder) to understand. Due to my innate fear of all things differentially geometric, I often prefer working with principal bundles, and since reading Stephen Sontz’s (absolutely fantastic) book <a href="https://www.springer.com/fr/book/9783319147642">Principal Bundles — The Classical Case</a>, I’ve really grown quite fond of bundles, especially when you start talking about all the lovely <span class="math inline">\mathbb{B}G</span> and <span class="math inline">\mathbb{E}G</span> things therein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Point is, I haven’t posted anything in forever, and one of my supervisor’s strong pedagogical beliefs is that <em>‘affine vector spaces should be understood as <span class="math inline">G</span>-torsors, where <span class="math inline">G</span> is the underlying vector space acting via translation’</em>,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> which makes a nice short topic of discussion, whence this post.</p>
 <!-- more -->
 <p>We briefly<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> recall the definition of a principal <span class="math inline">G</span>-bundle over a space <span class="math inline">X</span>, where <span class="math inline">G</span> is some <em>topological</em> group.</p>
@@ -129,13 +132,12 @@
 </ol>
 </section>
 
-
+    <!-- Comments -->
     <hr>
-
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" onload="renderMathsInComments()">
+    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
     </script>
     <div id="commento"></div>
-
   </div>
 
       </div>
@@ -202,7 +204,8 @@
           {left: '\\(', right: '\\)', display: false},
           {left: '\\[', right: '\\]', display: true}
       ],
-      throwOnError : false
+      throwOnError: false,
+      fleqn: true
     });
   });
 </script>
@@ -210,13 +213,18 @@
     
 
   </body>
-</html><html>
+</html><!-- Load Commento and render any new maths --><html>
 <script type="text/javascript">
-  function renderMathsInComments() {
+  function loadCommento() {
     const event = new Event('CommentoLoaded');
+    window.commento.main();
+    // this event is listened to in scripts.html.erb
     document.dispatchEvent(event);
   };
 </script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
 
 <script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
