@@ -206,7 +206,7 @@
 
     <hr>
 
-    <script defer src="https://commento.thosgood.com/js/commento.js" onload="commentMaths()"></script>
+    <script defer src="https://commento.thosgood.com/js/commento.js"></script>
     <div id="commento"></div>
 
   </div>
@@ -256,23 +256,6 @@ $("span[class='math display']").replaceWith(
            katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
            "</div>";
 });
-</script>
-
-<script type="text/javascript">
-function commentMaths() {
-  commento.main((() => {
-    renderMathInElement(document.getElementById('commento'), {
-      delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\[', right: '\\]', display: true},
-        {left: '\\(', right: '\\)', display: false}
-      ],
-      throwOnError : false,
-      fleqn: true
-    });
-  }));
-}
 </script>
 
     
