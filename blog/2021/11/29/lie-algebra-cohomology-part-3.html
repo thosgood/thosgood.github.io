@@ -289,8 +289,10 @@
 
     <!-- Comments -->
     <hr>
-    <button type="button" class="black-70 i" onclick="loadCommento()">Click here if you wish to see the comments on this post.</button>
-    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css" data-auto-init="false">
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css">
     </script>
     <div id="commento"></div>
   </div>
@@ -345,43 +347,10 @@
   });
 </script>
 
-
-<!-- Use auto-render for Commento comments -->
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener("CommentoLoaded", function() {
-    const comments = document.getElementById('commento');
-    renderMathInElement(comments, {
-      delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
-          {left: '\\(', right: '\\)', display: false},
-          {left: '\\[', right: '\\]', display: true}
-      ],
-      throwOnError: false,
-      fleqn: true
-    });
-  });
-</script>
-
     
 
   </body>
-</html><!-- Load Commento and render any new maths --><html>
-<script type="text/javascript">
-  function loadCommento() {
-    const event = new Event('CommentoLoaded');
-    window.commento.main();
-    // this event is listened to in scripts.html.erb
-    document.dispatchEvent(event);
-  };
-</script>
-
-
-<!-- Display settings (dark mode, font, etc) -->
-
-<script type="text/javascript">
+</html><!-- Display settings (dark mode, font, etc) --><html><script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
   const content = document.getElementById('post-content');
 
@@ -414,5 +383,4 @@
   function serifStyle() {
     content.style.fontFamily = 'Domine';
   }
-</script>
-</html>
+</script></html>

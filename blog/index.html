@@ -1212,26 +1212,6 @@
   });
 </script>
 
-
-<!-- Use auto-render for Commento comments -->
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
-<script>
-  document.addEventListener("CommentoLoaded", function() {
-    const comments = document.getElementById('commento');
-    renderMathInElement(comments, {
-      delimiters: [
-          {left: '$$', right: '$$', display: true},
-          {left: '$', right: '$', display: false},
-          {left: '\\(', right: '\\)', display: false},
-          {left: '\\[', right: '\\]', display: true}
-      ],
-      throwOnError: false,
-      fleqn: true
-    });
-  });
-</script>
-
     
 
   </body>
