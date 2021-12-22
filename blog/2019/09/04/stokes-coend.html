@@ -149,43 +149,56 @@
     
       <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
 
+
+<!-- Use KaTeX rendering for all static page content -->
+
 <script type="text/javascript" src="/assets/katex/katex.min.js"></script>
 <script type="text/javascript">
-$("span[class='math inline']").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<span class=\"inline-equation\">" + 
-           katex.renderToString(tex, {throwOnError: false}) +
-           "</span>";
-});
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
 
-$("span[class='math display']").replaceWith(
-  function(){
-    var tex = $(this).text();
-    return "<div class=\"equation\">" + 
-           katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
-           "</div>";
-});
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+
+<!-- Use auto-render for Commento comments -->
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("CommentoLoaded", function() {
+    const comments = document.getElementById('commento');
+    renderMathInElement(comments, {
+      delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+      ],
+      throwOnError : false
+    });
+  });
 </script>
 
     
 
   </body>
 </html><html>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script type="text/javascript">
-function renderMathsInComments() {
-  const comments = document.getElementById('commento');
-  renderMathInElement(comments, {
-    delimiters: [
-        {left: '$$', right: '$$', display: true},
-        {left: '$', right: '$', display: false},
-        {left: '\\(', right: '\\)', display: false},
-        {left: '\\[', right: '\\]', display: true}
-    ],
-    throwOnError : false
-  });
-}
+  function renderMathsInComments() {
+    const event = new Event('CommentoLoaded');
+    document.dispatchEvent(event);
+  };
 </script>
 
 <script type="text/javascript">
