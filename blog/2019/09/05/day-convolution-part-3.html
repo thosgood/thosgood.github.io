@@ -388,7 +388,7 @@ SR(x,y)\\
 </html><!-- Render maths in comments --><html>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script type="text/javascript">
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  $(window).ajaxComplete(function() {
     renderMathInElement(document.getElementById('commento'), {
           delimiters: [
               {left: '$$', right: '$$', display: true},
