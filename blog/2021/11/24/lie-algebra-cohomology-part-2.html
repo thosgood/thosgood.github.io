@@ -365,7 +365,30 @@
     
 
   </body>
-</html><!-- Display settings (dark mode, font, etc) --><html><script type="text/javascript">
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.getElementById('commento'));"></script>
+<script type="text/javascript">
+  const comments = document.getElementById('commento');
+  $(document).ready(function(e) {
+    renderMathInElement(comments, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
   const body = document.getElementsByTagName('body')[0];
   const content = document.getElementById('post-content');
 
@@ -398,4 +421,5 @@
   function serifStyle() {
     content.style.fontFamily = 'Domine';
   }
-</script></html>
+</script>
+</html>
