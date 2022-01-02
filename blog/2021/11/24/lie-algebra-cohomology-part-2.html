@@ -368,9 +368,8 @@
 </html><!-- Render maths in comments --><html>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.getElementById('commento'));"></script>
 <script type="text/javascript">
-  const comments = document.getElementById('commento');
   $(document).ready(function(e) {
-    renderMathInElement(comments, {
+    renderMathInElement(document.getElementById('commento'), {
           // customised options
           // • auto-render specific keys, e.g.:
           delimiters: [
