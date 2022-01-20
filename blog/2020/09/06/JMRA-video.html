@@ -90,65 +90,375 @@
     <!-- Other posts in the same series -->
     
     <!-- Content -->
-    <p>I recently submitted a video to the <a href="https://sites.google.com/view/jmra/home">Junior Mathematician Research Archive</a> that gives a brief overview of the work in my PhD thesis. You can watch the video <a href="https://www.youtube.com/watch?v=l_eXElGTCzo">here</a> but, be warned, it’s really probably not the most coherent (ha ha) narrative.</p>
-<p>For the sake of it, or in case you’re the sort of person who prefers to read instead of watch, I’ve included the transcript of the whole video below.</p>
+    <p>I recently submitted a video to the <a href="https://sites.google.com/view/jmra/home">Junior Mathematician
+Research Archive</a> that gives a brief overview of the work in my PhD
+thesis. You can watch the video <a href="https://www.youtube.com/watch?v=l_eXElGTCzo">here</a> but, be
+warned, it’s really probably not the most coherent (ha ha)
+narrative.</p>
+<p>For the sake of it, or in case you’re the sort of person who prefers
+to read instead of watch, I’ve included the transcript of the whole
+video below.</p>
 <!-- more -->
 <hr>
-<p>Hi, my name is Tim Hosgood, and I’m a PhD student at the University of Aix-Marseille, currently finishing a year-long position as part of the DerSympApp team at the University of Montpellier.</p>
-<p>This video, made for the Junior Mathematician Research Archive, aims to explain the work of my thesis, which was split into two papers, preprints of which can be found on the arXiv under the titles “Simplicial Chern-Weil theory for coherent analytic sheaves”, Parts I and II. For this video though, I’m going to be working from my thesis, just because then everything is in one place instead of two.</p>
-<p>I’m going to assume that you have at least a passing familiarity with most of the following ideas: manifolds, vector bundles, connections and their curvatures, sheaves, some homological algebra, and an example or two of simplicial objects (that is, contravariant functors from the abstract simplex category into some target category). The intended audience is really anybody who cares about either Chern-Weil theory or coherent analytic sheaves.</p>
+<p>Hi, my name is Tim Hosgood, and I’m a PhD student at the University
+of Aix-Marseille, currently finishing a year-long position as part of
+the DerSympApp team at the University of Montpellier.</p>
+<p>This video, made for the Junior Mathematician Research Archive, aims
+to explain the work of my thesis, which was split into two papers,
+preprints of which can be found on the arXiv under the titles
+“Simplicial Chern-Weil theory for coherent analytic sheaves”, Parts I
+and II. For this video though, I’m going to be working from my thesis,
+just because then everything is in one place instead of two.</p>
+<p>I’m going to assume that you have at least a passing familiarity with
+most of the following ideas: manifolds, vector bundles, connections and
+their curvatures, sheaves, some homological algebra, and an example or
+two of simplicial objects (that is, contravariant functors from the
+abstract simplex category into some target category). The intended
+audience is really anybody who cares about either Chern-Weil theory or
+coherent analytic sheaves.</p>
 <hr>
 <p>Let’s start with some historical context.</p>
-<p>In 1980, H.I. Green wrote his thesis on the subject of Chern classes of coherent sheaves on complex-analytic manifolds. It was never published, but an exposition was written by Toledo and Tong, whose work on twisting cochains with O’Brian (one of Green’s supervisors) formed the backbone of Green’s thesis, alongside Dupont’s fibre integration. The construction, which gives classes in <span class="math inline">\mathrm{H}^{2k}(X,\Omega_X^{\bullet\geqslant k})</span>, agrees with the classical construction by Atiyah-Hirzebruch in <span class="math inline">\mathrm{H}^{2k}(X,\mathbb{Z})</span>.</p>
-<p>Then, nearly 30 years later, in Grivaux’s thesis, this construction was mentioned as one that <em>should</em> fit into an axiomatisation of Chern classes on (compact) complex-analytic manifolds that ensures uniqueness, but the details still hadn’t quite been worked out.</p>
-<p>Finally (for now, at least, but hopefully not forever), this year we figured out how to fit the pieces together, by showing that Green’s construction is a specific (and prototypical) example of a more abstract construction, and, furthermore, satisfies the axioms of Grivaux in the compact case.</p>
+<p>In 1980, H.I. Green wrote his thesis on the subject of Chern classes
+of coherent sheaves on complex-analytic manifolds. It was never
+published, but an exposition was written by Toledo and Tong, whose work
+on twisting cochains with O’Brian (one of Green’s supervisors) formed
+the backbone of Green’s thesis, alongside Dupont’s fibre integration.
+The construction, which gives classes in <span class="math inline">\mathrm{H}^{2k}(X,\Omega_X^{\bullet\geqslant
+k})</span>, agrees with the classical construction by Atiyah-Hirzebruch
+in <span class="math inline">\mathrm{H}^{2k}(X,\mathbb{Z})</span>.</p>
+<p>Then, nearly 30 years later, in Grivaux’s thesis, this construction
+was mentioned as one that <em>should</em> fit into an axiomatisation of
+Chern classes on (compact) complex-analytic manifolds that ensures
+uniqueness, but the details still hadn’t quite been worked out.</p>
+<p>Finally (for now, at least, but hopefully not forever), this year we
+figured out how to fit the pieces together, by showing that Green’s
+construction is a specific (and prototypical) example of a more abstract
+construction, and, furthermore, satisfies the axioms of Grivaux in the
+compact case.</p>
 <hr>
-<p>For those who work with Chern classes in algebraic geometry, this might all seem rather odd. Indeed, in the complex <em>algebraic</em> world, the construction of Chern classes has been very well understood since work by Grothendieck (amongst others). But there are two problems with using Chern-Weil theory in the complex <em>analytic</em> world:</p>
+<p>For those who work with Chern classes in algebraic geometry, this
+might all seem rather odd. Indeed, in the complex <em>algebraic</em>
+world, the construction of Chern classes has been very well understood
+since work by Grothendieck (amongst others). But there are two problems
+with using Chern-Weil theory in the complex <em>analytic</em> world:</p>
 <ol type="1">
-<li>coherent sheaves often do <em>not</em> admit global resolutions by locally-free sheaves;</li>
-<li>global holomorphic connections on holomorphic vector bundles very rarely exist.</li>
+<li>coherent sheaves often do <em>not</em> admit global resolutions by
+locally-free sheaves;</li>
+<li>global holomorphic connections on holomorphic vector bundles very
+rarely exist.</li>
 </ol>
-<p>This means that the classical method (take a locally-free resolution, take connections on each vector bundle, use Chern-Weil on the curvature of each connection, and then take an alternating product) breaks down in two ways. Luckily though, both of these problems are sort of the same: they result from the non-existence of a global object, even though <em>local</em> objects always exist.</p>
-<p>That is, we always have <em>local</em> resolutions of coherent analytic sheaves by locally-free sheaves, and <em>local</em> holomorphic connections always exist on holomorphic vector bundles. This is where <em>simplicial methods</em> become incredibly powerful: we actually <em>can</em> obtain some global object if we slightly weaken what we mean by “global object”. But then, using Dupont’s fibre integration, we can actually turn these “quasi-global” (i.e. simplicial) objects back into strictly global ones.</p>
+<p>This means that the classical method (take a locally-free resolution,
+take connections on each vector bundle, use Chern-Weil on the curvature
+of each connection, and then take an alternating product) breaks down in
+two ways. Luckily though, both of these problems are sort of the same:
+they result from the non-existence of a global object, even though
+<em>local</em> objects always exist.</p>
+<p>That is, we always have <em>local</em> resolutions of coherent
+analytic sheaves by locally-free sheaves, and <em>local</em> holomorphic
+connections always exist on holomorphic vector bundles. This is where
+<em>simplicial methods</em> become incredibly powerful: we actually
+<em>can</em> obtain some global object if we slightly weaken what we
+mean by “global object”. But then, using Dupont’s fibre integration, we
+can actually turn these “quasi-global” (i.e. simplicial) objects back
+into strictly global ones.</p>
 <p>So here’s the plan:</p>
 <ol type="1">
-<li>figure out how to do Chern-Weil theory for vector bundles, i.e. look at <em>simplicial connections</em>;</li>
-<li>try to understand how coherent analytic sheaves are resolved by so-called “vector bundles on the nerve” (which are somehow the “good” notion of “simplicial vector bundles”, even though they are slightly different from what this name may suggest);</li>
-<li>prove that everything fits together well homotopically, i.e. on the level of <span class="math inline">(\infty,1)</span>-categories, and that we recover all the classical calculations.</li>
+<li>figure out how to do Chern-Weil theory for vector bundles, i.e. look
+at <em>simplicial connections</em>;</li>
+<li>try to understand how coherent analytic sheaves are resolved by
+so-called “vector bundles on the nerve” (which are somehow the “good”
+notion of “simplicial vector bundles”, even though they are slightly
+different from what this name may suggest);</li>
+<li>prove that everything fits together well homotopically, i.e. on the
+level of <span class="math inline">(\infty,1)</span>-categories, and
+that we recover all the classical calculations.</li>
 </ol>
 <hr>
-<p>So let’s start with some maths. One fundamental construction is that of the <em>Čech nerve</em> of a cover, which is a simplicial space, i.e. a collection of spaces, one for each <span class="math inline">p\in\mathbb{N}</span>, along with face and degeneracy maps between them. This is something that we will be using a lot in what follows, and we can think of it as a sort of “exploded version” our a space.</p>
-<p>For what follows, let’s fix some paracompact complex-analytic manifold <span class="math inline">X</span> with a finite Stein cover <span class="math inline">\mathcal{U}=\{U_\alpha\}</span>, and take some locally free sheaf <span class="math inline">E</span> (which we can also think of as a holomorphic vector bundle) of rank <span class="math inline">\mathfrak{r}</span>. For simplicity, we assume that <span class="math inline">\mathcal{U}</span> trivialises <span class="math inline">E</span>. So we have transition maps <span class="math inline">M_{\alpha\beta}</span>, which can be realised, if we take some local connections <span class="math inline">s_\alpha</span>, as an <span class="math inline">(\mathfrak{r}\times\mathfrak{r})</span>-matrix.</p>
-<p>We then consider the <em>Atiyah exact sequence</em> of <span class="math inline">\mathcal{O}_X</span>-modules (containing the first jet bundle) and the corresponding <span class="math inline">\mathrm{Ext}</span>-class, which is called the <em>Atiyah class</em>. It is a nice classical fact that <em>the trace of</em> this class somehow “is the same as” the first Chern class, but this class <em>also</em> describes the obstruction towards <span class="math inline">E</span> admitting a global holomorphic connection. Indeed, a connection is exactly a the data of a splitting of this short exact sequence.</p>
-<p>So already we see how Chern-Weil theory “breaks down”: the moment our vector bundle has a non-trivial first Chern class, it <em>cannot</em> admit a global holomorphic connection, so we can’t take the curvature and evaluate some invariant polynomial on it. That is, the moment there is a first Chern class worth calculating, we can’t calculate it with Chern-Weil theory!</p>
-<p>But let’s be a bit more explicit about this Atiyah class: assuming that we have <em>local</em> holomorphic connections (which is always the case if, e.g. we have a basis of local sections), we can actually write down the Čech cocycle in terms of the transition functions of <span class="math inline">E</span>, and the trace of this is de Rham closed (and, by definition as a Čech <em>cocycle</em>, also Čech closed), which means that it gives us a closed class in the total complex of the Čech-de Rham bicomplex. Since we are working in a nice enough setting, this means that we get a class in de Rham cohomology (or even <em>truncated</em> de Rham cohomology).</p>
-<p>Before introducing any of the formalism of simplicial constructions (i.e. these “sheaves on the nerve”), we can think about the more computational problem: can we lift the <span class="math inline">k</span>th Atiyah class (which is just the wedge product of <span class="math inline">k</span> copies of the Atiyah class) to give a closed element in the Čech-de Rham total complex when <span class="math inline">k&gt;1</span>?</p>
-<p>The answer is yes! For the second Atiyah class, by calculating the image under the de Rham differential, and considering all possible polynomials in one formal variable and <em>their</em> images under the Čech differential, and working with polynomials in two formal variables up to cyclic permutation (under which the trace is invariant), we can brute-force equate coefficients, and find a Čech 1-cocycle of 3-forms such that we get a closed element in the total complex.</p>
-<p>We can do the exact same process, but twice, to compute the analogous “correction terms” for the third Atiyah class, but already we see that things start to get a bit messy. By the time we reach the fourth Atiyah class, the polynomials are already too large to be able to spot a pattern by just looking at them, and so we see that we need a slightly fancier approach if we want any hope of getting classes in de Rham cohomology for further Atiyah classes.</p>
+<p>So let’s start with some maths. One fundamental construction is that
+of the <em>Čech nerve</em> of a cover, which is a simplicial space,
+i.e. a collection of spaces, one for each <span class="math inline">p\in\mathbb{N}</span>, along with face and
+degeneracy maps between them. This is something that we will be using a
+lot in what follows, and we can think of it as a sort of “exploded
+version” our a space.</p>
+<p>For what follows, let’s fix some paracompact complex-analytic
+manifold <span class="math inline">X</span> with a finite Stein cover
+<span class="math inline">\mathcal{U}=\{U_\alpha\}</span>, and take some
+locally free sheaf <span class="math inline">E</span> (which we can also
+think of as a holomorphic vector bundle) of rank <span class="math inline">\mathfrak{r}</span>. For simplicity, we assume that
+<span class="math inline">\mathcal{U}</span> trivialises <span class="math inline">E</span>. So we have transition maps <span class="math inline">M_{\alpha\beta}</span>, which can be realised, if we
+take some local connections <span class="math inline">s_\alpha</span>,
+as an <span class="math inline">(\mathfrak{r}\times\mathfrak{r})</span>-matrix.</p>
+<p>We then consider the <em>Atiyah exact sequence</em> of <span class="math inline">\mathcal{O}_X</span>-modules (containing the first
+jet bundle) and the corresponding <span class="math inline">\mathrm{Ext}</span>-class, which is called the
+<em>Atiyah class</em>. It is a nice classical fact that <em>the trace
+of</em> this class somehow “is the same as” the first Chern class, but
+this class <em>also</em> describes the obstruction towards <span class="math inline">E</span> admitting a global holomorphic connection.
+Indeed, a connection is exactly a the data of a splitting of this short
+exact sequence.</p>
+<p>So already we see how Chern-Weil theory “breaks down”: the moment our
+vector bundle has a non-trivial first Chern class, it <em>cannot</em>
+admit a global holomorphic connection, so we can’t take the curvature
+and evaluate some invariant polynomial on it. That is, the moment there
+is a first Chern class worth calculating, we can’t calculate it with
+Chern-Weil theory!</p>
+<p>But let’s be a bit more explicit about this Atiyah class: assuming
+that we have <em>local</em> holomorphic connections (which is always the
+case if, e.g. we have a basis of local sections), we can actually write
+down the Čech cocycle in terms of the transition functions of <span class="math inline">E</span>, and the trace of this is de Rham closed
+(and, by definition as a Čech <em>cocycle</em>, also Čech closed), which
+means that it gives us a closed class in the total complex of the
+Čech-de Rham bicomplex. Since we are working in a nice enough setting,
+this means that we get a class in de Rham cohomology (or even
+<em>truncated</em> de Rham cohomology).</p>
+<p>Before introducing any of the formalism of simplicial constructions
+(i.e. these “sheaves on the nerve”), we can think about the more
+computational problem: can we lift the <span class="math inline">k</span>th Atiyah class (which is just the wedge
+product of <span class="math inline">k</span> copies of the Atiyah
+class) to give a closed element in the Čech-de Rham total complex when
+<span class="math inline">k&gt;1</span>?</p>
+<p>The answer is yes! For the second Atiyah class, by calculating the
+image under the de Rham differential, and considering all possible
+polynomials in one formal variable and <em>their</em> images under the
+Čech differential, and working with polynomials in two formal variables
+up to cyclic permutation (under which the trace is invariant), we can
+brute-force equate coefficients, and find a Čech 1-cocycle of 3-forms
+such that we get a closed element in the total complex.</p>
+<p>We can do the exact same process, but twice, to compute the analogous
+“correction terms” for the third Atiyah class, but already we see that
+things start to get a bit messy. By the time we reach the fourth Atiyah
+class, the polynomials are already too large to be able to spot a
+pattern by just looking at them, and so we see that we need a slightly
+fancier approach if we want any hope of getting classes in de Rham
+cohomology for further Atiyah classes.</p>
 <hr>
-<p>This is where we now turn to the simplicial construction. First we need to know what the “good” notion of a simplicial vector bundle (or, more generally, a simplicial sheaf) is. This is something that was described by Green, but hasn’t seen much use since. In fact, these objects are interesting enough in their own right that they deserve a more thorough treatment, since they can actually be realised by an abstract (but concrete) construction of Bergner, as a lax homotopy limit of model categories. But that’s a story for another time; here we’ll just give the definition, as well as a vague motivation. A sheaf on the nerve is a collection of sheaves, indexed by <span class="math inline">p\in\mathbb{N}</span>, with each <span class="math inline">\mathcal{E}_p</span> being a sheaf on the <span class="math inline">p</span>th level of the Čech nerve, such that, for any morphism in the abstract simplex category, we get (covariantly) a functorial morphism of sheaves. Here, “functorial” means that it respects composition, and when we say “sheaves” we can mean just topological sheaves, or (what we’re more interested in) sheaves of <span class="math inline">\mathcal{O}_X</span>-modules, but really each <span class="math inline">\mathcal{E}_p</span> will be a sheaf of <span class="math inline">\mathcal{O}_{X_p}</span>-modules. These sheaves on the nerve have sometimes been called “simplicial sheaves”, but this is a misleading name, since they’re really not simplicial objects in some category of sheaves (in fact, they’re not even simplicial, but instead cosimplicial, and even then they’re not just cosimplicial objects in some category!), so we stick to saying “sheaves on the nerve”, even if it is a bit longwinded.</p>
-<p>An important, and even prototypical, example of a sheaf on the nerve is given by pulling back a sheaf on <span class="math inline">X</span> along the map from the Čech nerve to <span class="math inline">X</span>. So now we can state our current goal a bit more explicitly: if we take a holomorphic vector bundle with non-trivial Chern class (and thus does <em>not</em> admit a <em>global</em> holomorphic connection), pull it back to the nerve to get a vector bundle on the nerve (i.e. a locally free sheaf on the nerve), is there some good notion of “simplicial connection” such that <em>(a)</em> these things always exist, and <em>(b)</em> we can take their curvatures, evaluate them under invariant polynomials, and get some class in de Rham cohomology?</p>
-<p>The answer to this question is, luckily, yes, and this was exactly one of the two main things that Green showed in his thesis (the other being the existence of very nice simplicial resolutions of coherent sheaves, which we will come to later). But Green’s construction, while perfectly functional, does not really give any indication as to <em>why</em> this method works, nor how we could generalise it to give a general definition of a simplicial connection. That is the aim of this chapter of my thesis.</p>
-<p>Although there are a lot of very technical (and seemingly uninviting) proofs, the main motivation, which can be found in Green’s thesis, is really quite simple and beautiful. It goes as follows. Locally, we always have homolorphic connections, say <span class="math inline">\nabla_\alpha</span> on each <span class="math inline">U_\alpha</span>. We know that we cannot glue them together if we have a non-trivial first Chern class, i.e. that, on intersections <span class="math inline">U_{\alpha\beta}</span>, it will not be the case that <span class="math inline">\nabla_\alpha</span> and <span class="math inline">\nabla_\beta</span> agree. But what we can do then is just take <em>both</em> of them, in a barycentric average, if you will. That is, we consider <span class="math inline">(\lambda-1)\nabla_\alpha+\lambda\nabla_\beta</span> for <span class="math inline">\lambda\in[0,1]</span>. When <span class="math inline">\lambda=0</span> we recover <span class="math inline">\nabla_\alpha</span> and when <span class="math inline">\lambda=1</span> we recover <span class="math inline">\nabla_\beta</span>, and for any other value of <span class="math inline">\lambda</span> we get some weighted average of the two. So what we’ve constructed on double intersections is a connection parametrised by <span class="math inline">[0,1]</span>, i.e. by the 1-simplex! We can do the same on triple intersections: take some linear combination of <span class="math inline">\nabla_\alpha</span>, <span class="math inline">\nabla_\beta</span>, and <span class="math inline">\nabla_\gamma</span>, where we parametrise by the 2-simplex. We can think of this as a triangle, and then any point on the boundary corresponds to forgetting one of the local connections, and any vertex corresponds to forgetting two of them, and just remembering one. Proceeding like this, we can build, on each level of the Čech nerve (i.e. on each <span class="math inline">p</span>-intersection), a connection that is parametrised by the <span class="math inline">p</span>-simplex.</p>
-<p>Using this construction, we can explicitly calculate the curvature, which gives us what we call the first <em>simplicial</em> Atiyah class, since we can show that, working over <span class="math inline">U_{\alpha_0}</span> on any <span class="math inline">p</span>-intersection <span class="math inline">U_{\alpha_0\ldots\alpha_p}</span>, it contains the Čech cocycle representing the Atiyah class that we’ve already calculated. If we then take the trace of this, we get what is called a <em>simplicial differential form</em>, i.e. a bunch of differential forms on the simplex times the Čech nerve that satisfy some gluing condition resembling that for the fat geometric realisation. But this is where Dupont’s fibre integration comes into play: there is a quasi-isomorphism between the simplicial de Rham complex and the usual de Rham complex. So we can go through and write down what we get when we follow this whole procedure, and we see that the fibre integral of the trace of the first simplicial Atiyah class is exactly the trace of the first Atiyah class! In fact, the same is true for the second Atiyah class too, and for the third (although now the equality only holds in cohomology, and not directly on the level of cocycles). More generally, as one might hope, we can show that the result is true for all the Atiyah classes.</p>
+<p>This is where we now turn to the simplicial construction. First we
+need to know what the “good” notion of a simplicial vector bundle (or,
+more generally, a simplicial sheaf) is. This is something that was
+described by Green, but hasn’t seen much use since. In fact, these
+objects are interesting enough in their own right that they deserve a
+more thorough treatment, since they can actually be realised by an
+abstract (but concrete) construction of Bergner, as a lax homotopy limit
+of model categories. But that’s a story for another time; here we’ll
+just give the definition, as well as a vague motivation. A sheaf on the
+nerve is a collection of sheaves, indexed by <span class="math inline">p\in\mathbb{N}</span>, with each <span class="math inline">\mathcal{E}_p</span> being a sheaf on the <span class="math inline">p</span>th level of the Čech nerve, such that, for
+any morphism in the abstract simplex category, we get (covariantly) a
+functorial morphism of sheaves. Here, “functorial” means that it
+respects composition, and when we say “sheaves” we can mean just
+topological sheaves, or (what we’re more interested in) sheaves of <span class="math inline">\mathcal{O}_X</span>-modules, but really each <span class="math inline">\mathcal{E}_p</span> will be a sheaf of <span class="math inline">\mathcal{O}_{X_p}</span>-modules. These sheaves on
+the nerve have sometimes been called “simplicial sheaves”, but this is a
+misleading name, since they’re really not simplicial objects in some
+category of sheaves (in fact, they’re not even simplicial, but instead
+cosimplicial, and even then they’re not just cosimplicial objects in
+some category!), so we stick to saying “sheaves on the nerve”, even if
+it is a bit longwinded.</p>
+<p>An important, and even prototypical, example of a sheaf on the nerve
+is given by pulling back a sheaf on <span class="math inline">X</span>
+along the map from the Čech nerve to <span class="math inline">X</span>.
+So now we can state our current goal a bit more explicitly: if we take a
+holomorphic vector bundle with non-trivial Chern class (and thus does
+<em>not</em> admit a <em>global</em> holomorphic connection), pull it
+back to the nerve to get a vector bundle on the nerve (i.e. a locally
+free sheaf on the nerve), is there some good notion of “simplicial
+connection” such that <em>(a)</em> these things always exist, and
+<em>(b)</em> we can take their curvatures, evaluate them under invariant
+polynomials, and get some class in de Rham cohomology?</p>
+<p>The answer to this question is, luckily, yes, and this was exactly
+one of the two main things that Green showed in his thesis (the other
+being the existence of very nice simplicial resolutions of coherent
+sheaves, which we will come to later). But Green’s construction, while
+perfectly functional, does not really give any indication as to
+<em>why</em> this method works, nor how we could generalise it to give a
+general definition of a simplicial connection. That is the aim of this
+chapter of my thesis.</p>
+<p>Although there are a lot of very technical (and seemingly uninviting)
+proofs, the main motivation, which can be found in Green’s thesis, is
+really quite simple and beautiful. It goes as follows. Locally, we
+always have homolorphic connections, say <span class="math inline">\nabla_\alpha</span> on each <span class="math inline">U_\alpha</span>. We know that we cannot glue them
+together if we have a non-trivial first Chern class, i.e. that, on
+intersections <span class="math inline">U_{\alpha\beta}</span>, it will
+not be the case that <span class="math inline">\nabla_\alpha</span> and
+<span class="math inline">\nabla_\beta</span> agree. But what we can do
+then is just take <em>both</em> of them, in a barycentric average, if
+you will. That is, we consider <span class="math inline">(\lambda-1)\nabla_\alpha+\lambda\nabla_\beta</span>
+for <span class="math inline">\lambda\in[0,1]</span>. When <span class="math inline">\lambda=0</span> we recover <span class="math inline">\nabla_\alpha</span> and when <span class="math inline">\lambda=1</span> we recover <span class="math inline">\nabla_\beta</span>, and for any other value of
+<span class="math inline">\lambda</span> we get some weighted average of
+the two. So what we’ve constructed on double intersections is a
+connection parametrised by <span class="math inline">[0,1]</span>,
+i.e. by the 1-simplex! We can do the same on triple intersections: take
+some linear combination of <span class="math inline">\nabla_\alpha</span>, <span class="math inline">\nabla_\beta</span>, and <span class="math inline">\nabla_\gamma</span>, where we parametrise by the
+2-simplex. We can think of this as a triangle, and then any point on the
+boundary corresponds to forgetting one of the local connections, and any
+vertex corresponds to forgetting two of them, and just remembering one.
+Proceeding like this, we can build, on each level of the Čech nerve
+(i.e. on each <span class="math inline">p</span>-intersection), a
+connection that is parametrised by the <span class="math inline">p</span>-simplex.</p>
+<p>Using this construction, we can explicitly calculate the curvature,
+which gives us what we call the first <em>simplicial</em> Atiyah class,
+since we can show that, working over <span class="math inline">U_{\alpha_0}</span> on any <span class="math inline">p</span>-intersection <span class="math inline">U_{\alpha_0\ldots\alpha_p}</span>, it contains the
+Čech cocycle representing the Atiyah class that we’ve already
+calculated. If we then take the trace of this, we get what is called a
+<em>simplicial differential form</em>, i.e. a bunch of differential
+forms on the simplex times the Čech nerve that satisfy some gluing
+condition resembling that for the fat geometric realisation. But this is
+where Dupont’s fibre integration comes into play: there is a
+quasi-isomorphism between the simplicial de Rham complex and the usual
+de Rham complex. So we can go through and write down what we get when we
+follow this whole procedure, and we see that the fibre integral of the
+trace of the first simplicial Atiyah class is exactly the trace of the
+first Atiyah class! In fact, the same is true for the second Atiyah
+class too, and for the third (although now the equality only holds in
+cohomology, and not directly on the level of cocycles). More generally,
+as one might hope, we can show that the result is true for all the
+Atiyah classes.</p>
 <hr>
-<p>The above is really just a nice way of explaining in more detail what Green did in his thesis, but we said that we were going to do something a bit more general, and give abstract definitions for simplicial connections, so let’s do that now.</p>
-<p>We already have a vague idea of what a simplicial connection should be: it should be a bunch of connections, each one on a <span class="math inline">p</span>th level of the Čech nerve times the <span class="math inline">p</span>-simplex. But we will probably need to be a little bit more strict with what we call a simplicial connection, since this object seems pretty general.</p>
+<p>The above is really just a nice way of explaining in more detail what
+Green did in his thesis, but we said that we were going to do something
+a bit more general, and give abstract definitions for simplicial
+connections, so let’s do that now.</p>
+<p>We already have a vague idea of what a simplicial connection should
+be: it should be a bunch of connections, each one on a <span class="math inline">p</span>th level of the Čech nerve times the <span class="math inline">p</span>-simplex. But we will probably need to be a
+little bit more strict with what we call a simplicial connection, since
+this object seems pretty general.</p>
 <p>Indeed, let’s think about what we need the connection to satisfy.</p>
-<p>First, we want to get a simplicial differential form when we take the trace of the curvature, so that we can apply Dupont’s fibre integration. This means that the simplicial connection should satisfy some sort of compatibility between different simplicial levels, akin to the equation satisfied by simplicial differential forms. This can be guaranteed by asking for a certain condition on what we call the <em>comparison maps</em>. That is, we say that such a collection of connections is a simplicial connection if the comparison maps are <em>true morphisms</em>, which means that they commute with the connections. Again, this seemingly arbitrary condition is actually exactly what we need to ensure that the resulting differential forms will satisfy the simplicial condition needed to be able to apply Dupont’s fibre integration quasi-isomorphism.</p>
-<p>Next, we need to worry about the fact that we have a bunch of connections, and so, when we take their curvatures and evaluate them under some invariant polynomials (such as the trace, after taking a wedge product), there is no reason a priori that we will get the same result at each simplicial level, i.e. we might get a bunch of different characteristic classes. We can solve this problem by asking for the comparison maps to be <em>admissible</em>, which is a purely formal property motivated by the following simple (but entirely arbitrary-seeming, at this point) definition: given pairs <span class="math inline">(V,\varphi)</span> of finite-dimensional vector spaces and endomorphisms on those spaces, we say that a morphism <span class="math inline">f\colon(V,\varphi)\to(W,\psi)</span> (assumed a priori to commute with the endomorphisms) is <em>admissible</em> if there exists subbundles <span class="math inline">V_1\hookrightarrow V</span> and <span class="math inline">W_1\hookrightarrow W</span> such that <span class="math inline">f</span> restricts to a morphism <span class="math inline">V_1\to W_1</span> and further descends to an isomorphism <span class="math inline">V/V_1\xrightarrow{\sim}W/W_1</span>. In some sense (which we can make much more precise), a morphism is admissible if it is an isomorphism away from some “flat” subbundles.</p>
-<p>If all this sounds a bit hand-wavy, then it’s probably best to go and read this in some more detail, because I don’t want to get lost in all the technical details here, and there really isn’t anything that fancy going on. But I promise that this simple idea of “admissibility of a simplicial connection is exactly the condition needed to ensure that the characteristic classes are well defined” is all that’s going on behind the scenes.</p>
-<p>Finally, we might worry about our initial data, i.e. if we started off with some different choices of local sections and local connections, then would we still end up with the same characteristic classes? The answer is, a priori, <em>no</em>, so we need to ask for another condition. We say that a set of (admissible) simplicial connections is <em>compatible</em> if the difference between any two of them is itself an <em>admissible</em> endormorphism-valued simplicial 1-form. We haven’t defined here what exactly such an object is, but it’s written down in full detail, and, again, the idea is exactly the same as above: it’s something that is somehow isomorphic between different simplicial levels, if you quotient out by some sub-part that is, in some sense, “flat”.</p>
-<p>Note also that we haven’t really said what an invariant polynomial is, since we actually need to modify the classical definition slightly, because we need a bunch of invariant polynomials: one for each simplicial level. Again, there are some small technical conditions that we impose on them, but they aren’t very restrictive, and all the things that you would hope to be invariant polynomials (such as the trace precomposed with the wedge product (or composition)) are indeed “generalised” invariant polynomials.</p>
-<p>The last, very reassuring result, of this section is the following: Green’s “barycentric” connection, whose construction we described earlier, is indeed an admissible simplicial connection. In fact, an even stronger result holds: given a sufficiently nice complex of vector bundles on the nerve (where here “sufficiently nice” will be explained when we talk about Green’s resolution), we can endow each vector bundle on the nerve with an admissible simplicial connection, and the family of all such connections arising from different initial data is a compatible family. That is, if we have a nice enough complex of vector bundles on the nerve, then we can do Chern-Weil theory to calculate Chern classes of each of them. To prove this, we introduce the idea of a simplicial connection being “generated in degree zero”, which, very loosely, but very accurately, means “looking exactly like Green’s barycentric connection”.</p>
+<p>First, we want to get a simplicial differential form when we take the
+trace of the curvature, so that we can apply Dupont’s fibre integration.
+This means that the simplicial connection should satisfy some sort of
+compatibility between different simplicial levels, akin to the equation
+satisfied by simplicial differential forms. This can be guaranteed by
+asking for a certain condition on what we call the <em>comparison
+maps</em>. That is, we say that such a collection of connections is a
+simplicial connection if the comparison maps are <em>true
+morphisms</em>, which means that they commute with the connections.
+Again, this seemingly arbitrary condition is actually exactly what we
+need to ensure that the resulting differential forms will satisfy the
+simplicial condition needed to be able to apply Dupont’s fibre
+integration quasi-isomorphism.</p>
+<p>Next, we need to worry about the fact that we have a bunch of
+connections, and so, when we take their curvatures and evaluate them
+under some invariant polynomials (such as the trace, after taking a
+wedge product), there is no reason a priori that we will get the same
+result at each simplicial level, i.e. we might get a bunch of different
+characteristic classes. We can solve this problem by asking for the
+comparison maps to be <em>admissible</em>, which is a purely formal
+property motivated by the following simple (but entirely
+arbitrary-seeming, at this point) definition: given pairs <span class="math inline">(V,\varphi)</span> of finite-dimensional vector
+spaces and endomorphisms on those spaces, we say that a morphism <span class="math inline">f\colon(V,\varphi)\to(W,\psi)</span> (assumed a
+priori to commute with the endomorphisms) is <em>admissible</em> if
+there exists subbundles <span class="math inline">V_1\hookrightarrow
+V</span> and <span class="math inline">W_1\hookrightarrow W</span> such
+that <span class="math inline">f</span> restricts to a morphism <span class="math inline">V_1\to W_1</span> and further descends to an
+isomorphism <span class="math inline">V/V_1\xrightarrow{\sim}W/W_1</span>. In some sense
+(which we can make much more precise), a morphism is admissible if it is
+an isomorphism away from some “flat” subbundles.</p>
+<p>If all this sounds a bit hand-wavy, then it’s probably best to go and
+read this in some more detail, because I don’t want to get lost in all
+the technical details here, and there really isn’t anything that fancy
+going on. But I promise that this simple idea of “admissibility of a
+simplicial connection is exactly the condition needed to ensure that the
+characteristic classes are well defined” is all that’s going on behind
+the scenes.</p>
+<p>Finally, we might worry about our initial data, i.e. if we started
+off with some different choices of local sections and local connections,
+then would we still end up with the same characteristic classes? The
+answer is, a priori, <em>no</em>, so we need to ask for another
+condition. We say that a set of (admissible) simplicial connections is
+<em>compatible</em> if the difference between any two of them is itself
+an <em>admissible</em> endormorphism-valued simplicial 1-form. We
+haven’t defined here what exactly such an object is, but it’s written
+down in full detail, and, again, the idea is exactly the same as above:
+it’s something that is somehow isomorphic between different simplicial
+levels, if you quotient out by some sub-part that is, in some sense,
+“flat”.</p>
+<p>Note also that we haven’t really said what an invariant polynomial
+is, since we actually need to modify the classical definition slightly,
+because we need a bunch of invariant polynomials: one for each
+simplicial level. Again, there are some small technical conditions that
+we impose on them, but they aren’t very restrictive, and all the things
+that you would hope to be invariant polynomials (such as the trace
+precomposed with the wedge product (or composition)) are indeed
+“generalised” invariant polynomials.</p>
+<p>The last, very reassuring result, of this section is the following:
+Green’s “barycentric” connection, whose construction we described
+earlier, is indeed an admissible simplicial connection. In fact, an even
+stronger result holds: given a sufficiently nice complex of vector
+bundles on the nerve (where here “sufficiently nice” will be explained
+when we talk about Green’s resolution), we can endow each vector bundle
+on the nerve with an admissible simplicial connection, and the family of
+all such connections arising from different initial data is a compatible
+family. That is, if we have a nice enough complex of vector bundles on
+the nerve, then we can do Chern-Weil theory to calculate Chern classes
+of each of them. To prove this, we introduce the idea of a simplicial
+connection being “generated in degree zero”, which, very loosely, but
+very accurately, means “looking exactly like Green’s barycentric
+connection”.</p>
 <hr>
-<p>The second piece of the construction that we’ve been skirting around is how to bring this construction up to the level of coherent sheaves, i.e. how to get around the problem of coherent analytic sheaves not having global resolutions by locally free sheaves. This is something else that Green solved in his thesis, by using the <em>twisting cochains</em> of Toledo and Tong (very linked to, but not quite the same as, the <em>twisting complexes</em> of Bondal and Kapranov) to prove the following result: any coherent analytic sheaf, when pulled back to the nerve, has a resolution by vector bundles on the nerve, and these vector bundles satisfy some nice properties. What are the nice properties satisfied by these vector bundles? Well, one way of saying it is the following: they are exactly the nice properties that we said we would need to prove our previous theorem, about being able to endow a complex of vector bundles on the nerve with admissible simplicial connections in a “compatible family” way. Another way of describing them is the following: on any intersection <span class="math inline">U_{\alpha\beta}</span>, these vector bundles on the nerve look like the part over <span class="math inline">U_\alpha</span> direct summed with something that is “homotopically trivial” (formally speaking, something that is <em>elementary</em>, i.e. a direct sum of (possibly shifted) identity morphisms). This means that the coface maps are injections, and that the codegenacy maps are surjections. Recalling what we said quite a few minutes ago, although sheaves on the nerve are <em>not</em> cosimplicial objects in some category of sheaves, when they satisfy this property, they look a lot closer to such things, since they have injective coface maps, which is something that cosimplicial objects always have!</p>
-<p>Twisting cochains, and, indeed, Green’s resolution, come with a <em>lot</em> of very long-winded matrix calculations, so we really won’t talk about them here, but there are some nice details written down that show how Green’s resolution can be understood as a sort of “semi-strictification” of twisting cochains.</p>
-<p>We also go through the example given in Green’s thesis in a bit more detail, showing how you can calculate the first Chern class of a skyscraper sheaf using all the formalisms that we’ve developed. This method is so nice because you actually end up with explicit Čech-de Rham representatives for the cohomology class, whereas a calculation of the Chern class using, say, short exact sequences and the Whitney sum formula will “only” give you the cohomology class itself.</p>
+<p>The second piece of the construction that we’ve been skirting around
+is how to bring this construction up to the level of coherent sheaves,
+i.e. how to get around the problem of coherent analytic sheaves not
+having global resolutions by locally free sheaves. This is something
+else that Green solved in his thesis, by using the <em>twisting
+cochains</em> of Toledo and Tong (very linked to, but not quite the same
+as, the <em>twisting complexes</em> of Bondal and Kapranov) to prove the
+following result: any coherent analytic sheaf, when pulled back to the
+nerve, has a resolution by vector bundles on the nerve, and these vector
+bundles satisfy some nice properties. What are the nice properties
+satisfied by these vector bundles? Well, one way of saying it is the
+following: they are exactly the nice properties that we said we would
+need to prove our previous theorem, about being able to endow a complex
+of vector bundles on the nerve with admissible simplicial connections in
+a “compatible family” way. Another way of describing them is the
+following: on any intersection <span class="math inline">U_{\alpha\beta}</span>, these vector bundles on the
+nerve look like the part over <span class="math inline">U_\alpha</span>
+direct summed with something that is “homotopically trivial” (formally
+speaking, something that is <em>elementary</em>, i.e. a direct sum of
+(possibly shifted) identity morphisms). This means that the coface maps
+are injections, and that the codegenacy maps are surjections. Recalling
+what we said quite a few minutes ago, although sheaves on the nerve are
+<em>not</em> cosimplicial objects in some category of sheaves, when they
+satisfy this property, they look a lot closer to such things, since they
+have injective coface maps, which is something that cosimplicial objects
+always have!</p>
+<p>Twisting cochains, and, indeed, Green’s resolution, come with a
+<em>lot</em> of very long-winded matrix calculations, so we really won’t
+talk about them here, but there are some nice details written down that
+show how Green’s resolution can be understood as a sort of
+“semi-strictification” of twisting cochains.</p>
+<p>We also go through the example given in Green’s thesis in a bit more
+detail, showing how you can calculate the first Chern class of a
+skyscraper sheaf using all the formalisms that we’ve developed. This
+method is so nice because you actually end up with explicit Čech-de Rham
+representatives for the cohomology class, whereas a calculation of the
+Chern class using, say, short exact sequences and the Whitney sum
+formula will “only” give you the cohomology class itself.</p>
 <hr>
-<p>So what’s left to do? We’ve discussed Green’s construction and shown how it fits into a more general, more abstract framework. We’ve also shown that it agrees with this manual lifting that you can do by equating coefficients of polynomials in cyclic-permutative variables. What more could we hope for?</p>
-<p>Well, up until now, everything has been nice, but we haven’t really made things much more useful; we’ve just given everything a much fancier, more longwinded name. It would be much better if we could actually say things in the language of category theory, and, indeed, in the language of <span class="math inline">(\infty,1)</span>-categories. This would tell us that the construction is somehow “a good one”, in that it respects the inherent structures between all these objects.</p>
-<p>It turns out that there are some technical difficulties with even deciding what exactly “a complex of coherent analytic sheaves” should be, but we can get around this somehow, and end up with the following result: there is an equivalence of <span class="math inline">(\infty,1)</span>-categories between complexes of coherent analytic sheaves and the homotopy colimit (over refinements of covers) of Green complexes (which are exactly these complexes of vector bundles on the nerve arising from Green’s resolution, satisfying this “injective-coface” property, amongst others). As a bonus fact, since <span class="math inline">X</span> is assumed to be paracompact, for any complex of coherent analytic sheaves, this homotopy colimit will be finite, i.e. we can actually <em>do</em> calculations and write down resolutions. All of what we discussed above amounts to a proof that “simplicial Chern-Weil theory works on Green complexes”, and so this equivalence tells us that it also works on complexes of coherent analytic sheaves, which is exactly what we started out wanting to show!</p>
+<p>So what’s left to do? We’ve discussed Green’s construction and shown
+how it fits into a more general, more abstract framework. We’ve also
+shown that it agrees with this manual lifting that you can do by
+equating coefficients of polynomials in cyclic-permutative variables.
+What more could we hope for?</p>
+<p>Well, up until now, everything has been nice, but we haven’t really
+made things much more useful; we’ve just given everything a much
+fancier, more longwinded name. It would be much better if we could
+actually say things in the language of category theory, and, indeed, in
+the language of <span class="math inline">(\infty,1)</span>-categories.
+This would tell us that the construction is somehow “a good one”, in
+that it respects the inherent structures between all these objects.</p>
+<p>It turns out that there are some technical difficulties with even
+deciding what exactly “a complex of coherent analytic sheaves” should
+be, but we can get around this somehow, and end up with the following
+result: there is an equivalence of <span class="math inline">(\infty,1)</span>-categories between complexes of
+coherent analytic sheaves and the homotopy colimit (over refinements of
+covers) of Green complexes (which are exactly these complexes of vector
+bundles on the nerve arising from Green’s resolution, satisfying this
+“injective-coface” property, amongst others). As a bonus fact, since
+<span class="math inline">X</span> is assumed to be paracompact, for any
+complex of coherent analytic sheaves, this homotopy colimit will be
+finite, i.e. we can actually <em>do</em> calculations and write down
+resolutions. All of what we discussed above amounts to a proof that
+“simplicial Chern-Weil theory works on Green complexes”, and so this
+equivalence tells us that it also works on complexes of coherent
+analytic sheaves, which is exactly what we started out wanting to
+show!</p>
 
     <!-- Comments -->
     <hr>

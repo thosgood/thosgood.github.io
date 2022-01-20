@@ -95,52 +95,122 @@
 <li><a href="#a-nice-diagram">A nice diagram</a></li>
 <li><a href="#unresolved-confusions">Unresolved confusions</a></li>
 </ol>
-<p>This post assumes that you have seen the construction of derived categories and maybe the definitions of dg- and <span class="math inline">A_\infty</span>-categories, and wondered how they all linked together. In particular, as an undergraduate I was always confused as to what the difference was between the two steps of constructing the derived category of chain complexes was: taking equivalence classes of chain homotopic complexes; and then formally inverting all quasi-isomorphisms. Both of them seemed to be some sort of quotienting/equivalence-class-like action, so why not do them at the same time? What different roles were played by each step?</p>
+<p>This post assumes that you have seen the construction of derived
+categories and maybe the definitions of dg- and <span class="math inline">A_\infty</span>-categories, and wondered how they
+all linked together. In particular, as an undergraduate I was always
+confused as to what the difference was between the two steps of
+constructing the derived category of chain complexes was: taking
+equivalence classes of chain homotopic complexes; and then formally
+inverting all quasi-isomorphisms. Both of them seemed to be some sort of
+quotienting/equivalence-class-like action, so why not do them at the
+same time? What different roles were played by each step?</p>
 <!-- more -->
-<p><em>This post could have many errors, and I don’t understand the proofs for many of the things I vaguely imply; I just mildly believe.</em> <em>Please do let me know if there is anything grossly misleading or just plain wrong.</em></p>
+<p><em>This post could have many errors, and I don’t understand the
+proofs for many of the things I vaguely imply; I just mildly
+believe.</em> <em>Please do let me know if there is anything grossly
+misleading or just plain wrong.</em></p>
 <h1 id="warnings">Warnings</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>First of all, there are two points that I want to make about choices of language that I think are really very confusing.</p>
+<p>First of all, there are two points that I want to make about choices
+of language that I think are really very confusing.</p>
 <ol type="1">
-<li>When we talk about derived categories, we are using this word in the opposite sense to pretty much every other usage of the word in modern mathematics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: a <strong>derived category</strong> is like a homotopy truncation (i.e. the <span class="math inline">\pi_0</span>) of some thing with much higher homotopical data; a <strong>derived scheme/stack/whatever</strong> is something whose <span class="math inline">\pi_0</span> is the corresponding classical object. Derived ‘algebraic/geometric objects’ <em>have</em> homotopy truncations; derived categories <em>are</em> homotopy truncations.</li>
-<li>When we quotient the category of chain complexes by the equivalence relation given by chain homotopy, we usually call the resulting category <span class="math inline">K(\mathcal{A})</span> the <strong>homotopy category of chain complexes</strong>. This is maybe not the best nomenclature, in some sense, because the category that ‘truly’ deserves this name is the <em>actual</em> homotopy category of chain complexes <span class="math inline">\mathrm{Ho}\mathsf{Ch}(\mathcal{A})</span>, which is, by definition, the derived category <span class="math inline">D(\mathcal{A})</span>. Because of this, I won’t refer to <span class="math inline">K(\mathcal{A})</span> as anything but <span class="math inline">K(\mathcal{A})</span>.</li>
+<li>When we talk about derived categories, we are using this word in the
+opposite sense to pretty much every other usage of the word in modern
+mathematics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: a <strong>derived category</strong>
+is like a homotopy truncation (i.e. the <span class="math inline">\pi_0</span>) of some thing with much higher
+homotopical data; a <strong>derived scheme/stack/whatever</strong> is
+something whose <span class="math inline">\pi_0</span> is the
+corresponding classical object. Derived ‘algebraic/geometric objects’
+<em>have</em> homotopy truncations; derived categories <em>are</em>
+homotopy truncations.</li>
+<li>When we quotient the category of chain complexes by the equivalence
+relation given by chain homotopy, we usually call the resulting category
+<span class="math inline">K(\mathcal{A})</span> the <strong>homotopy
+category of chain complexes</strong>. This is maybe not the best
+nomenclature, in some sense, because the category that ‘truly’ deserves
+this name is the <em>actual</em> homotopy category of chain complexes
+<span class="math inline">\mathrm{Ho}\mathsf{Ch}(\mathcal{A})</span>,
+which is, by definition, the derived category <span class="math inline">D(\mathcal{A})</span>. Because of this, I won’t
+refer to <span class="math inline">K(\mathcal{A})</span> as anything but
+<span class="math inline">K(\mathcal{A})</span>.</li>
 </ol>
 <h1 id="a-nice-diagram">A nice diagram</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>Without further ado, here is a diagram that attempts to explain the relationships between various things that you might have learnt about in various places.</p>
+<p>Without further ado, here is a diagram that attempts to explain the
+relationships between various things that you might have learnt about in
+various places.</p>
 <figure>
-<img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png" title="How things all sort of fit together" alt="How things all sort of fit together"><figcaption aria-hidden="true">How things all sort of fit together</figcaption>
+<img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png" title="How things all sort of fit together" alt="How things all sort of fit together">
+<figcaption aria-hidden="true">How things all sort of fit
+together</figcaption>
 </figure>
 <p>Here are a few words about the above diagram.</p>
 <ul>
-<li>The structure of a <em>triangulated category</em> is essentially the structure that the category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> inherits from the fact that <span class="math inline">\mathcal{C}</span> is a <em>stable</em> <span class="math inline">(\infty,1)</span>-category. The equivalent notion in the more general case (the left-hand side of the diagram) is the structure inherent to <span class="math inline">\mathrm{h}(\mathcal{C})</span> from an <span class="math inline">(\infty,1)</span>-category viewed as a quasi-category (and thus, in particular, simplicial set).</li>
-<li>A <em>stable dg-category</em> is also known as an <em>enhanced triangulated category</em> or a <em>pretriangulated category</em>.</li>
-<li>If we wanted to draw a column in the middle for <em>stable</em> <span class="math inline">(\infty,1)</span>-categories that <em>aren’t necessarily linear</em>, then we’d arrive at the notion of a <em>spectral category</em> instead of a dg-category.</li>
+<li>The structure of a <em>triangulated category</em> is essentially the
+structure that the category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> inherits from the
+fact that <span class="math inline">\mathcal{C}</span> is a
+<em>stable</em> <span class="math inline">(\infty,1)</span>-category.
+The equivalent notion in the more general case (the left-hand side of
+the diagram) is the structure inherent to <span class="math inline">\mathrm{h}(\mathcal{C})</span> from an <span class="math inline">(\infty,1)</span>-category viewed as a
+quasi-category (and thus, in particular, simplicial set).</li>
+<li>A <em>stable dg-category</em> is also known as an <em>enhanced
+triangulated category</em> or a <em>pretriangulated category</em>.</li>
+<li>If we wanted to draw a column in the middle for <em>stable</em>
+<span class="math inline">(\infty,1)</span>-categories that <em>aren’t
+necessarily linear</em>, then we’d arrive at the notion of a
+<em>spectral category</em> instead of a dg-category.</li>
 </ul>
-<p>Now here is a picture of where the derived category of chain complexes fits in to all this.</p>
+<p>Now here is a picture of where the derived category of chain
+complexes fits in to all this.</p>
 <figure>
-<img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png" title="Where does the derived category fit in?" alt="Where does the derived category fit in?"><figcaption aria-hidden="true">Where does the derived category fit in?</figcaption>
+<img src="/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png" title="Where does the derived category fit in?" alt="Where does the derived category fit in?">
+<figcaption aria-hidden="true">Where does the derived category fit
+in?</figcaption>
 </figure>
 <p>Here are a few words about the above diagram.</p>
 <ul>
-<li><p>We can understand the definition of <em>chain homotopies</em> much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval object in chain complexes</a>.</p></li>
+<li><p>We can understand the definition of <em>chain homotopies</em>
+much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval
+object in chain complexes</a>.</p></li>
 <li>
-<p>As said at the beginning of this post, there <em>is</em> a difference between passing from <span class="math inline">\mathsf{Ch}(\mathcal{A})</span> to <span class="math inline">K(\mathcal{A})</span> and from <span class="math inline">K(\mathcal{A})</span> to <span class="math inline">D(\mathcal{A})</span>, i.e. quotienting and localising have no reason to behave similarly<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. <em>But</em>, there is a model structure that we can put on <span class="math inline">\mathsf{Ch}(\mathcal{A})</span>, and so there <em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by Simon Henry</a>,</p>
+<p>As said at the beginning of this post, there <em>is</em> a
+difference between passing from <span class="math inline">\mathsf{Ch}(\mathcal{A})</span> to <span class="math inline">K(\mathcal{A})</span> and from <span class="math inline">K(\mathcal{A})</span> to <span class="math inline">D(\mathcal{A})</span>, i.e. quotienting and
+localising have no reason to behave similarly<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.
+<em>But</em>, there is a model structure that we can put on <span class="math inline">\mathsf{Ch}(\mathcal{A})</span>, and so there
+<em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by
+Simon Henry</a>,</p>
 <blockquote>
-<p><em>The reason why they give the same things in a lot of example (including chain complexes), giving the idea that they should be related, is because these examples are Quillen model categories and that it is the main result of Quillen’s “Homotopical Algebra” (where he defined model categories) that for Quillen model category the localization by weak equialence can be constructed as a quotient of the full subcategory of fibrant-cofibrant objects.</em></p>
+<p><em>The reason why they give the same things in a lot of example
+(including chain complexes), giving the idea that they should be
+related, is because these examples are Quillen model categories and that
+it is the main result of Quillen’s “Homotopical Algebra” (where he
+defined model categories) that for Quillen model category the
+localization by weak equialence can be constructed as a quotient of the
+full subcategory of fibrant-cofibrant objects.</em></p>
 </blockquote>
-<p>There is, however, the slightly confusing fact that the construction of <span class="math inline">K(\mathcal{A})</span> as a quotient <em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
+<p>There is, however, the slightly confusing fact that the construction
+of <span class="math inline">K(\mathcal{A})</span> as a quotient
+<em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
 </li>
 </ul>
 <h1 id="unresolved-confusions">Unresolved confusions</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>I still don’t fully see the link between the homotopy category <span class="math inline">\mathrm{h}(\mathcal{C})</span> and the homotopy category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> and localisation in general (e.g. I ‘know’ that <span class="math inline">\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))</span>, where <span class="math inline">\mathrm{L}</span> is the simplicial localisation, but that’s about it).</p>
-<p>You know what? There are a lot of things that I still don’t understand, but oh my goodness am I having fun trying to figure it all out.</p>
+<p>I still don’t fully see the link between the homotopy category <span class="math inline">\mathrm{h}(\mathcal{C})</span> and the homotopy
+category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> and
+localisation in general (e.g. I ‘know’ that <span class="math inline">\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))</span>,
+where <span class="math inline">\mathrm{L}</span> is the simplicial
+localisation, but that’s about it).</p>
+<p>You know what? There are a lot of things that I still don’t
+understand, but oh my goodness am I having fun trying to figure it all
+out.</p>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>Namely <em>derived algebraic geometry</em>, and its siblings, and its cousins, and… etc.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>Think of rings (for some reason localisations and quotients of rings don’t look as confusingly similar to me as the categorical versions do).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Namely <em>derived algebraic
+geometry</em>, and its siblings, and its cousins, and… etc.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Think of rings (for some reason
+localisations and quotients of rings don’t look as confusingly similar
+to me as the categorical versions do).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

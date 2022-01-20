@@ -90,26 +90,59 @@
     <!-- Other posts in the same series -->
     
     <!-- Content -->
-    <p>I am a big fan of Stephen Bruce Sontz’s book <a href="https://www.springer.com/gp/book/9783319147642"><em>Principal bundles: The Classical Case</em></a>, and cannot recommend it enough, as somebody who usually finds differential geometry (a) dull, and (b) incomprehensible. Anyway, there’s a lovely quote from this book about how confusing the terminology surrounding connections can be, so let’s try to clear some of that up today.</p>
+    <p>I am a big fan of Stephen Bruce Sontz’s book <a href="https://www.springer.com/gp/book/9783319147642"><em>Principal
+bundles: The Classical Case</em></a>, and cannot recommend it enough, as
+somebody who usually finds differential geometry (a) dull, and (b)
+incomprehensible. Anyway, there’s a lovely quote from this book about
+how confusing the terminology surrounding connections can be, so let’s
+try to clear some of that up today.</p>
 <!-- more -->
 <p>First, the quote in question.</p>
 <blockquote>
-<p><em>In my opinion, the word ‘’connection’’ is overused in this corner of differential geometry. I believe an Ehresmann connection is well named since it gives a way to connect tangent spaces (and other fibres of vector bundles) at distinct points. On the other hand, a Koszul connection <span class="math inline">\nabla_X</span> is a differential operator since it satisfies Leibniz’s rule. That makes it an object in analysis. But these names are set in stone even though no one knows where that stone is to be found.</em></p>
+<p><em>In my opinion, the word ‘’connection’’ is overused in this corner
+of differential geometry. I believe an Ehresmann connection is well
+named since it gives a way to connect tangent spaces (and other fibres
+of vector bundles) at distinct points. On the other hand, a Koszul
+connection <span class="math inline">\nabla_X</span> is a differential
+operator since it satisfies Leibniz’s rule. That makes it an object in
+analysis. But these names are set in stone even though no one knows
+where that stone is to be found.</em></p>
 </blockquote>
-<p>I’m in full agreement with this paragraph. There’s a nice little family tree you can draw that helps:</p>
+<p>I’m in full agreement with this paragraph. There’s a nice little
+family tree you can draw that helps:</p>
 <p><img src="/assets/post-images/2020-05-29-connection-confusion-family-tree.png"></p>
-<p>But even when working with just Koszul connections (also known as <em>linear</em> connections), there can be some subtleties between different definitions that are not really always signposted very clearly. Let’s see if I can justify this and explain what I mean a bit better.</p>
-<p>Let <span class="math inline">E\xrightarrow{p}X</span> be a vector bundle, and write <span class="math inline">TE\xrightarrow{\pi}E</span> to mean the tangent bundle of <span class="math inline">E</span>. There are now three definitions of a connection on <span class="math inline">E</span> that we could give:</p>
+<p>But even when working with just Koszul connections (also known as
+<em>linear</em> connections), there can be some subtleties between
+different definitions that are not really always signposted very
+clearly. Let’s see if I can justify this and explain what I mean a bit
+better.</p>
+<p>Let <span class="math inline">E\xrightarrow{p}X</span> be a vector
+bundle, and write <span class="math inline">TE\xrightarrow{\pi}E</span>
+to mean the tangent bundle of <span class="math inline">E</span>. There
+are now three definitions of a connection on <span class="math inline">E</span> that we could give:</p>
 <ol type="1">
 <li>
-<span class="math inline">\nabla\colon TE\to p^*E</span> that splits;</li>
+<span class="math inline">\nabla\colon TE\to p^*E</span> that
+splits;</li>
 <li>
-<span class="math inline">\nabla\colon TX\otimes_{\mathbb{R}}E\to E</span> that is <span class="math inline">\mathscr{C}_X^\infty</span>-linear in the <span class="math inline">TX</span> factor (so that <span class="math inline">\nabla_{fz}s=f\nabla_zs</span>) and such that <span class="math inline">\nabla_z(fs)=f\nabla_zs+(zf)s</span>;</li>
+<span class="math inline">\nabla\colon TX\otimes_{\mathbb{R}}E\to
+E</span> that is <span class="math inline">\mathscr{C}_X^\infty</span>-linear in the <span class="math inline">TX</span> factor (so that <span class="math inline">\nabla_{fz}s=f\nabla_zs</span>) and such that <span class="math inline">\nabla_z(fs)=f\nabla_zs+(zf)s</span>;</li>
 <li>
-<span class="math inline">\nabla\colon E\to\Omega_X^1\otimes_{\mathscr{C}_X^\infty}E</span> such that <span class="math inline">\nabla(fs)=f\nabla s+\mathrm{d}f\otimes s</span>.</li>
+<span class="math inline">\nabla\colon
+E\to\Omega_X^1\otimes_{\mathscr{C}_X^\infty}E</span> such that <span class="math inline">\nabla(fs)=f\nabla s+\mathrm{d}f\otimes
+s</span>.</li>
 </ol>
-<p>But how can we make sense of having three seemingly different definitions? I mean, the second two are even about vector bundles really, but instead sheaves of <span class="math inline">\mathbb{R}_X</span>-vector spaces. Indeed, we would call <span class="math inline">\nabla</span> in the first definition a <em>strong morphism of vector bundles</em>, the <span class="math inline">\nabla</span> in second definition a <em>differential operator of order <span class="math inline">0</span> in <span class="math inline">TX</span> and order <span class="math inline">1</span> in <span class="math inline">E</span></em>, and the <span class="math inline">\nabla</span> in the third definition a <em>differential operator of order <span class="math inline">1</span></em>.</p>
-<p>Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though:</p>
+<p>But how can we make sense of having three seemingly different
+definitions? I mean, the second two are even about vector bundles
+really, but instead sheaves of <span class="math inline">\mathbb{R}_X</span>-vector spaces. Indeed, we would
+call <span class="math inline">\nabla</span> in the first definition a
+<em>strong morphism of vector bundles</em>, the <span class="math inline">\nabla</span> in second definition a
+<em>differential operator of order <span class="math inline">0</span> in
+<span class="math inline">TX</span> and order <span class="math inline">1</span> in <span class="math inline">E</span></em>,
+and the <span class="math inline">\nabla</span> in the third definition
+a <em>differential operator of order <span class="math inline">1</span></em>.</p>
+<p>Things become a little bit clearer when we look at the following nice
+hierarchy of notions of morphisms though:</p>
 <p><img src="/assets/post-images/2020-05-29-connection-confusion-hierarchy.jpg"></p>
 
     <!-- Comments -->

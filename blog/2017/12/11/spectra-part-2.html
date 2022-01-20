@@ -192,104 +192,276 @@
 <li><a href="#spectra">Spectra</a></li>
 <li><a href="#that-classical-fact">That ‘classical fact’</a></li>
 </ol>
-<p>In the previous post of this series, I talked a bit about basic loop space stuff and how this gave birth to the idea of ‘homotopically-associative algebras’. I’m going to detour slightly from what I was going to delve into next and speak about <strong>delooping</strong> for a bit first. Then I’ll introduce <strong>spectra</strong> as sort of a generalisation of infinite deloopings. I’ll probably leave the stuff about <span class="math inline">E_\infty</span>-algebras for another post, but will definitely at least mention about how it ties in to all this stuff.</p>
+<p>In the previous post of this series, I talked a bit about basic loop
+space stuff and how this gave birth to the idea of
+‘homotopically-associative algebras’. I’m going to detour slightly from
+what I was going to delve into next and speak about
+<strong>delooping</strong> for a bit first. Then I’ll introduce
+<strong>spectra</strong> as sort of a generalisation of infinite
+deloopings. I’ll probably leave the stuff about <span class="math inline">E_\infty</span>-algebras for another post, but will
+definitely at least mention about how it ties in to all this stuff.</p>
 <!-- more -->
-<p>As a warning: I am far (oh so very far) from being an expert in this stuff, so it’s very possible that there are mistakes. If you spot any then please do give me a shout.</p>
-<p><strong>Edit.</strong> <a href="http://www.maths.ed.ac.uk/~cbarwick/papers/salamanca.pdf">This paper by Clark Barwick</a> starts off with a really nice explanation of all this spectra/cohomology stuff.</p>
+<p>As a warning: I am far (oh so very far) from being an expert in this
+stuff, so it’s very possible that there are mistakes. If you spot any
+then please do give me a shout.</p>
+<p><strong>Edit.</strong> <a href="http://www.maths.ed.ac.uk/~cbarwick/papers/salamanca.pdf">This
+paper by Clark Barwick</a> starts off with a really nice explanation of
+all this spectra/cohomology stuff.</p>
 <h1 id="delooping">Delooping</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <h2 id="the-basic-idea">The basic idea</h2>
-<p>The basic idea of delooping is exactly what the name suggests: given some object <span class="math inline">A</span>, if we can find another object <span class="math inline">B</span> such that <span class="math inline">A\simeq\Omega B</span> then we say that <span class="math inline">B</span> is the <strong>delooping of <span class="math inline">A</span></strong>. We often write <span class="math inline">\mathbb{B}A</span> or <span class="math inline">\mathcal{B}A</span> to mean the delooping, depending on the context (‘groupoidal’ or ‘topological’), though these are, of course, linked.</p>
-<p>As an important note, by looking at the homotopy pullback diagram of a delooping, we see that in some sense a delooping is the same as a suspension. We will come back to this later.</p>
-<h2 id="groupoids-and-nerves-and-geometric-realisation">Groupoids and nerves and geometric realisation</h2>
-<p>If <span class="math inline">A</span> is some topological group then we have (at least) two ways of describing it:</p>
+<p>The basic idea of delooping is exactly what the name suggests: given
+some object <span class="math inline">A</span>, if we can find another
+object <span class="math inline">B</span> such that <span class="math inline">A\simeq\Omega B</span> then we say that <span class="math inline">B</span> is the <strong>delooping of <span class="math inline">A</span></strong>. We often write <span class="math inline">\mathbb{B}A</span> or <span class="math inline">\mathcal{B}A</span> to mean the delooping, depending
+on the context (‘groupoidal’ or ‘topological’), though these are, of
+course, linked.</p>
+<p>As an important note, by looking at the homotopy pullback diagram of
+a delooping, we see that in some sense a delooping is the same as a
+suspension. We will come back to this later.</p>
+<h2 id="groupoids-and-nerves-and-geometric-realisation">Groupoids and
+nerves and geometric realisation</h2>
+<p>If <span class="math inline">A</span> is some topological group then
+we have (at least) two ways of describing it:</p>
 <ol type="1">
-<li>‘topological’: we can study principal <span class="math inline">A</span>-bundles, and then we have a classifying space <span class="math inline">\mathcal{B}A\in\mathsf{Top}</span>;</li>
-<li>‘groupoidal’: we can consider <span class="math inline">A</span> as the one-object groupoid <span class="math inline">\mathbb{B}A\in\infty\mathsf{Grpd}</span> whose morphisms are given by <span class="math inline">A</span>.</li>
+<li>‘topological’: we can study principal <span class="math inline">A</span>-bundles, and then we have a classifying
+space <span class="math inline">\mathcal{B}A\in\mathsf{Top}</span>;</li>
+<li>‘groupoidal’: we can consider <span class="math inline">A</span> as
+the one-object groupoid <span class="math inline">\mathbb{B}A\in\infty\mathsf{Grpd}</span> whose
+morphisms are given by <span class="math inline">A</span>.</li>
 </ol>
-<p>As the choice of notation suggests, these two ‘associated objects’ are (we claim) both deloopings of <span class="math inline">A</span> in the relevant category, and, in fact, under the <a href="https://ncatlab.org/nlab/show/homotopy+hypothesis">homotopy hypothesis</a>, these two are equivalent via geometric realisation (of the nerve):<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p><span class="math display">\vert N(\mathbb{B}A)\vert\simeq\mathcal{B}A.</span></p>
-<p>This is all closely linked to the <a href="https://ncatlab.org/nlab/show/bar+construction">bar construction</a>, but I’m still trying to get my head around the ‘good’ order in which to understand these things, so maybe I’ll come back to this point in a future post.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>Before going any further, we are actually going to look at a concrete example (something that I often forget to do when working in this more abstract setting).</p>
+<p>As the choice of notation suggests, these two ‘associated objects’
+are (we claim) both deloopings of <span class="math inline">A</span> in
+the relevant category, and, in fact, under the <a href="https://ncatlab.org/nlab/show/homotopy+hypothesis">homotopy
+hypothesis</a>, these two are equivalent via geometric realisation (of
+the nerve):<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><span class="math display">\vert
+N(\mathbb{B}A)\vert\simeq\mathcal{B}A.</span></p>
+<p>This is all closely linked to the <a href="https://ncatlab.org/nlab/show/bar+construction">bar
+construction</a>, but I’m still trying to get my head around the ‘good’
+order in which to understand these things, so maybe I’ll come back to
+this point in a future post.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Before going any further, we are actually going to look at a concrete
+example (something that I often forget to do when working in this more
+abstract setting).</p>
 <h2 id="an-example">An example</h2>
-<p>Let <span class="math inline">A</span> be some group, <em>which we think of as a discrete groupoid</em>, and define <span class="math inline">\mathbb{B}A</span> to be the one-object groupoid with morphisms given by <span class="math inline">A</span>, as above. We’re going to show that this really <em>is</em> a delooping of <span class="math inline">A</span>, in that the homotopy square below homotopy-commutes and is homotopy-universal:</p>
+<p>Let <span class="math inline">A</span> be some group, <em>which we
+think of as a discrete groupoid</em>, and define <span class="math inline">\mathbb{B}A</span> to be the one-object groupoid
+with morphisms given by <span class="math inline">A</span>, as above.
+We’re going to show that this really <em>is</em> a delooping of <span class="math inline">A</span>, in that the homotopy square below
+homotopy-commutes and is homotopy-universal:</p>
 <p><span class="math display">\begin{array}{ccc}
 A &amp;\to &amp;*\\
 \downarrow &amp; &amp;\downarrow\\
 * &amp;\to &amp;\mathbb{B}A\tag{1}
 \end{array}</span></p>
-<p>Now the map <span class="math inline">A\to *\to\mathbb{B}A</span> is the constant functor <span class="math inline">\Lambda</span> to the single object of <span class="math inline">\mathbb{B}A</span>, and there is a natural transformation <span class="math inline">\eta</span> from this functor to itself given by the identity. Let’s unwrap what that says.</p>
-<p>First of all, since <span class="math inline">A</span> is a discrete groupoid, the only morphisms are of the form <span class="math inline">\mathrm{id}\colon x\to x</span>, so any natural transformation <span class="math inline">\eta\colon\Lambda\implies\Lambda</span> is composed of morphisms <span class="math inline">\eta_x\colon\Lambda(x)\to\Lambda(x)</span>, for all <span class="math inline">x\in A</span>, such that</p>
+<p>Now the map <span class="math inline">A\to *\to\mathbb{B}A</span> is
+the constant functor <span class="math inline">\Lambda</span> to the
+single object of <span class="math inline">\mathbb{B}A</span>, and there
+is a natural transformation <span class="math inline">\eta</span> from
+this functor to itself given by the identity. Let’s unwrap what that
+says.</p>
+<p>First of all, since <span class="math inline">A</span> is a discrete
+groupoid, the only morphisms are of the form <span class="math inline">\mathrm{id}\colon x\to x</span>, so any natural
+transformation <span class="math inline">\eta\colon\Lambda\implies\Lambda</span> is composed
+of morphisms <span class="math inline">\eta_x\colon\Lambda(x)\to\Lambda(x)</span>, for all
+<span class="math inline">x\in A</span>, such that</p>
 <p><span class="math display">\begin{array}{ccc}
 \Lambda(x) &amp;\xrightarrow{\Lambda(\mathrm{id})} &amp;\Lambda(x)\\
 \eta_x\downarrow &amp; &amp;\eta_x\downarrow\\
 \Lambda(x) &amp;\xrightarrow{\Lambda(\mathrm{id})} &amp;\Lambda(x)
 \end{array}</span></p>
-<p>commutes. But by the definition of <span class="math inline">\Lambda</span>, this just means that <span class="math inline">\eta_x</span> is any morphism in <span class="math inline">\mathbb{B}A</span>, so we can pick the morphism <span class="math inline">x</span> (we’re really just using that <span class="math inline">\mathrm{Ob}(A)=\mathrm{Mor}(\mathbb{B}A)</span>).</p>
-<p>Now we see that <span class="math inline">\eta</span> (defined by the identity) is, as one would hope, a natural isomorphism, which tells us that the square (1) commutes up to homotopy.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>As for showing universality, we cheat:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> if we have some other <span class="math inline">A'</span> with a natural isomorphism <span class="math inline">\eta'\colon\Lambda\implies\Lambda</span> then it must map objects in <span class="math inline">A'</span> to isomorphisms (i.e. morphisms) in <span class="math inline">\mathbb{B}A</span>. But say that it maps an object <span class="math inline">x'</span> in <span class="math inline">A'</span> to the morphism <span class="math inline">x</span> in <span class="math inline">\mathbb{B}A</span>. Then we can factor through <span class="math inline">A</span> by sending the object <span class="math inline">x'</span> in <span class="math inline">A'</span> to the object <span class="math inline">x</span> in <span class="math inline">A</span>.</p>
+<p>commutes. But by the definition of <span class="math inline">\Lambda</span>, this just means that <span class="math inline">\eta_x</span> is any morphism in <span class="math inline">\mathbb{B}A</span>, so we can pick the morphism
+<span class="math inline">x</span> (we’re really just using that <span class="math inline">\mathrm{Ob}(A)=\mathrm{Mor}(\mathbb{B}A)</span>).</p>
+<p>Now we see that <span class="math inline">\eta</span> (defined by the
+identity) is, as one would hope, a natural isomorphism, which tells us
+that the square (1) commutes up to homotopy.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>As for showing universality, we cheat:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> if
+we have some other <span class="math inline">A'</span> with a
+natural isomorphism <span class="math inline">\eta'\colon\Lambda\implies\Lambda</span> then it
+must map objects in <span class="math inline">A'</span> to
+isomorphisms (i.e. morphisms) in <span class="math inline">\mathbb{B}A</span>. But say that it maps an object
+<span class="math inline">x'</span> in <span class="math inline">A'</span> to the morphism <span class="math inline">x</span> in <span class="math inline">\mathbb{B}A</span>. Then we can factor through <span class="math inline">A</span> by sending the object <span class="math inline">x'</span> in <span class="math inline">A'</span> to the object <span class="math inline">x</span> in <span class="math inline">A</span>.</p>
 <h2 id="infinite-delooping">Infinite delooping</h2>
-<p>What we showed above is really that every <em>group</em> has a delooping (at least, in the groupoidal sense). A natural question to pose now is, <em>can we always deloop things</em>? There is a theorem that states that, when working in the <span class="math inline">(\infty,1)</span>-category of topological spaces, we can deloop a space whenever it is an <span class="math inline">A_\infty</span>-space, and thus homotopy equivalent to loop space (in the classical sense).</p>
-<p>As I’ll ‘explain’ in a bit, if our category is a stable <span class="math inline">(\infty,1)</span>-category then all deloopings exist and are given by suspension. Before I do this though, I’m going to give one important example of objects that are <strong>infinitely-deloopable</strong>, i.e. their deloopings can be delooped, and so can <em>their</em> deloopings, and etc., so we have an infinite sequence of objects</p>
-<p><span class="math display">A, \mathbb{B}A, \mathbb{B}^2A, \ldots.</span></p>
-<h2 id="singular-cohomology-and-the-associated-infinite-delooping">Singular cohomology and the associated infinite delooping</h2>
-<p>I claim that any <em>abelian</em> group can be infinitely delooped by setting <span class="math inline">\mathbb{B}^nA</span> to be the (<a href="https://ncatlab.org/nlab/show/strict+omega-groupoid">strict omega</a>) groupoid that has one object; only identity <span class="math inline">k</span>-morphisms for <span class="math inline">k\neq n</span>; and <span class="math inline">\mathrm{Mor}_n(\mathbb{B}^nA)=A</span>. So we just take our usual construction of <span class="math inline">\mathbb{B}A</span> and ‘shift the morphisms up in degree’.</p>
-<p>Again, under the homotopy hypothesis, this sequence of deloopings maps to the sequence of <a href="https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+space">Eilenberg-Mac Lane spaces</a>:</p>
-<p><span class="math display">\vert \mathbb{B}^nA\vert \simeq K(A,n).</span></p>
-<p>This sequence ‘is’ (under the identification of connective spectra and strict abelian infinity-groups) the <a href="https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+spectrum">Eilenberg-Mac Lane spectrum</a>, whatever that might mean (considering that I’ve yet to even define spectra). Now comes the magic bit.</p>
-<p>Let <span class="math inline">X</span> be a pointed topological space<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> and <span class="math inline">A</span> an abelian group. It is a classical fact<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> that the group <span class="math inline">H^n(X,A)</span> can be identified with <span class="math inline">\pi_0\mathsf{Top}_*(X,K(A,n))</span>, and so the fact that <span class="math inline">\vert\mathbb{B}^nA\vert \simeq K(A,n)</span> tells us that we could just as well <em>define</em> singular cohomology as</p>
-<p><span class="math display">H^n(X,A) := \pi_0\mathbb{H}(X,\mathbb{B}^nA)</span></p>
-<p>where <span class="math inline">\mathbb{H}</span> is some ‘nice’ category in which we have infinite deloopings of <span class="math inline">A</span>, e.g. <span class="math inline">\mathsf{Top}_*</span> or <span class="math inline">\infty\mathsf{Groupoid}</span>. Even better, these two example choices of <span class="math inline">\mathbb{H}</span> give us homotopically equivalent objects, by the homotopy hypothesis.</p>
-<p>This is really nice for many reasons, but one particularly nice one is that singular cohomology with coefficients in <span class="math inline">A</span> is <em>representable</em>, and it is pretty much represented exactly by <span class="math inline">A</span>. There is a <a href="https://ncatlab.org/nlab/show/Brown+representability+theorem">theorem</a> that tells us that, in particular, any sufficiently well-behaved cohomology theory is representable in this way.</p>
+<p>What we showed above is really that every <em>group</em> has a
+delooping (at least, in the groupoidal sense). A natural question to
+pose now is, <em>can we always deloop things</em>? There is a theorem
+that states that, when working in the <span class="math inline">(\infty,1)</span>-category of topological spaces, we
+can deloop a space whenever it is an <span class="math inline">A_\infty</span>-space, and thus homotopy equivalent
+to loop space (in the classical sense).</p>
+<p>As I’ll ‘explain’ in a bit, if our category is a stable <span class="math inline">(\infty,1)</span>-category then all deloopings exist
+and are given by suspension. Before I do this though, I’m going to give
+one important example of objects that are
+<strong>infinitely-deloopable</strong>, i.e. their deloopings can be
+delooped, and so can <em>their</em> deloopings, and etc., so we have an
+infinite sequence of objects</p>
+<p><span class="math display">A, \mathbb{B}A, \mathbb{B}^2A,
+\ldots.</span></p>
+<h2 id="singular-cohomology-and-the-associated-infinite-delooping">Singular
+cohomology and the associated infinite delooping</h2>
+<p>I claim that any <em>abelian</em> group can be infinitely delooped by
+setting <span class="math inline">\mathbb{B}^nA</span> to be the (<a href="https://ncatlab.org/nlab/show/strict+omega-groupoid">strict
+omega</a>) groupoid that has one object; only identity <span class="math inline">k</span>-morphisms for <span class="math inline">k\neq n</span>; and <span class="math inline">\mathrm{Mor}_n(\mathbb{B}^nA)=A</span>. So we just
+take our usual construction of <span class="math inline">\mathbb{B}A</span> and ‘shift the morphisms up in
+degree’.</p>
+<p>Again, under the homotopy hypothesis, this sequence of deloopings
+maps to the sequence of <a href="https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+space">Eilenberg-Mac
+Lane spaces</a>:</p>
+<p><span class="math display">\vert \mathbb{B}^nA\vert \simeq
+K(A,n).</span></p>
+<p>This sequence ‘is’ (under the identification of connective spectra
+and strict abelian infinity-groups) the <a href="https://ncatlab.org/nlab/show/Eilenberg-Mac+Lane+spectrum">Eilenberg-Mac
+Lane spectrum</a>, whatever that might mean (considering that I’ve yet
+to even define spectra). Now comes the magic bit.</p>
+<p>Let <span class="math inline">X</span> be a pointed topological
+space<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> and <span class="math inline">A</span> an abelian group. It is a classical fact<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> that the group <span class="math inline">H^n(X,A)</span> can be identified with <span class="math inline">\pi_0\mathsf{Top}_*(X,K(A,n))</span>, and so the
+fact that <span class="math inline">\vert\mathbb{B}^nA\vert \simeq
+K(A,n)</span> tells us that we could just as well <em>define</em>
+singular cohomology as</p>
+<p><span class="math display">H^n(X,A) :=
+\pi_0\mathbb{H}(X,\mathbb{B}^nA)</span></p>
+<p>where <span class="math inline">\mathbb{H}</span> is some ‘nice’
+category in which we have infinite deloopings of <span class="math inline">A</span>, e.g. <span class="math inline">\mathsf{Top}_*</span> or <span class="math inline">\infty\mathsf{Groupoid}</span>. Even better, these
+two example choices of <span class="math inline">\mathbb{H}</span> give
+us homotopically equivalent objects, by the homotopy hypothesis.</p>
+<p>This is really nice for many reasons, but one particularly nice one
+is that singular cohomology with coefficients in <span class="math inline">A</span> is <em>representable</em>, and it is pretty
+much represented exactly by <span class="math inline">A</span>. There is
+a <a href="https://ncatlab.org/nlab/show/Brown+representability+theorem">theorem</a>
+that tells us that, in particular, any sufficiently well-behaved
+cohomology theory is representable in this way.</p>
 <h1 id="spectra">Spectra</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>So with all this talk around spectra, it’s time to actually define them. Like many concepts, there are a bunch of different models and settings, and we’re not going to explore most of them, but instead focus on <strong>sequential pre-spectra</strong> and <strong><span class="math inline">\Omega</span>-spectra</strong>.</p>
-<h2 id="the-setting-infinity-categories">The setting (infinity categories)</h2>
-<p>First of all we work in <span class="math inline">\mathsf{Top}_*</span> and keep our example of <span class="math inline">K(A,n)</span> in mind. Here, we define a <strong>sequential pre-spectrum <span class="math inline">\mathcal{E}</span></strong> to be a sequence <span class="math inline">(\mathcal{E}_n)_{n\in\mathbb{N}}</span> of pointed spaces, along with the data of <strong>structure maps</strong>, which are continuous maps <span class="math inline">\Sigma \mathcal{E}_n\to \mathcal{E}_{n+1}</span>. Then, using the adjunction <span class="math inline">(\Sigma\dashv\Omega)</span>, we can turn these structure maps into maps <span class="math inline">\mathcal{E}_n\to\Omega \mathcal{E}_{n+1}</span>. If these are isomorphisms<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> then we say that <span class="math inline">\mathcal{E}</span> is an <strong><span class="math inline">\Omega</span>-spectrum</strong>.</p>
-<p>Our previous example of <span class="math inline">\mathcal{E}_n=K(A,n)</span> then gives us an <span class="math inline">\Omega</span>-spectrum. And we see that spectra can be viewed as a generalisation of infinitely-deloopable objects.</p>
-<p>In the bigger picture, every sequential pre-spectrum has a <strong>spectrification</strong>, which is an equivalent <span class="math inline">\Omega</span>-spectrum given by a <a href="https://ncatlab.org/nlab/show/spectrum#OmegaSpectrum">certain filtered colimit</a>, and these <span class="math inline">\Omega</span>-spectra are exactly the fibrant replacements in some model structure.</p>
-<p>Generally, we can define <a href="https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects"><span class="math inline">\Omega</span>-spectrum objects in any <span class="math inline">(\infty,1)</span>-category</a>, but when people talk about ‘spectra’ with no reference to a specific category, it’s usually implicit that they are working in <span class="math inline">\mathsf{Top}_*</span> with weak homotopy equivalences.</p>
-<p>But the ‘honest’ setting for spectra is in a <strong>stable <span class="math inline">(\infty,1)</span>-category</strong>: pointed<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> <span class="math inline">(\infty,1)</span>-categories <span class="math inline">\mathcal{C}</span> with finite limits, where the loop <span class="math inline">(\infty,1)</span>-functor <span class="math inline">\Omega\colon\mathcal{C}\to\mathcal{C}</span> is an <em>equivalence</em>, with the inverse given by suspension <span class="math inline">\Sigma</span>. Given some not-necessarily-stable pointed <span class="math inline">(\infty,1)</span>-category <span class="math inline">\mathcal{C}</span> with finite limits, we can form its <strong>stabilisation</strong> by taking the limit<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> of iterating the loop space functor on the category of <strong>pointed objects of <span class="math inline">\mathcal{C}</span></strong>:</p>
-<p><span class="math display">\mathsf{Stab}(\mathcal{C}) := \lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).</span></p>
-<p>The prototypical example of such a category is exactly what we’ve been looking at: <em><span class="math inline">\mathsf{Stab}(\mathsf{Top})</span> is the category of <span class="math inline">\Omega</span>-spectra in <span class="math inline">\mathsf{Top}_*</span></em>. In general, we can construct <span class="math inline">\mathsf{Stab}(\mathcal{C})</span> <a href="https://arxiv.org/abs/math/0608228">exactly by taking the category of spectrum objects</a> in <span class="math inline">(*\downarrow\mathcal{C})</span>.</p>
-<p>A really good introduction to all of this, and where I actually saw most of this for the first time, is <a href="https://arxiv.org/abs/1007.2925">Moritz Groth’s <em>A short course on <span class="math inline">\infty</span>-categories</em></a>.</p>
-<p>This is all understood much better when we bring operads into the picture. In the next post in this series I’ll try to show how certain spectra are ‘just commutative monoids’, and that commutative monoids in an <span class="math inline">(\infty,1)</span>-category are ‘just <span class="math inline">E_\infty</span>-algebras’.</p>
+<p>So with all this talk around spectra, it’s time to actually define
+them. Like many concepts, there are a bunch of different models and
+settings, and we’re not going to explore most of them, but instead focus
+on <strong>sequential pre-spectra</strong> and <strong><span class="math inline">\Omega</span>-spectra</strong>.</p>
+<h2 id="the-setting-infinity-categories">The setting (infinity
+categories)</h2>
+<p>First of all we work in <span class="math inline">\mathsf{Top}_*</span> and keep our example of <span class="math inline">K(A,n)</span> in mind. Here, we define a
+<strong>sequential pre-spectrum <span class="math inline">\mathcal{E}</span></strong> to be a sequence <span class="math inline">(\mathcal{E}_n)_{n\in\mathbb{N}}</span> of pointed
+spaces, along with the data of <strong>structure maps</strong>, which
+are continuous maps <span class="math inline">\Sigma \mathcal{E}_n\to
+\mathcal{E}_{n+1}</span>. Then, using the adjunction <span class="math inline">(\Sigma\dashv\Omega)</span>, we can turn these
+structure maps into maps <span class="math inline">\mathcal{E}_n\to\Omega \mathcal{E}_{n+1}</span>. If
+these are isomorphisms<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> then we say that <span class="math inline">\mathcal{E}</span> is an <strong><span class="math inline">\Omega</span>-spectrum</strong>.</p>
+<p>Our previous example of <span class="math inline">\mathcal{E}_n=K(A,n)</span> then gives us an <span class="math inline">\Omega</span>-spectrum. And we see that spectra can
+be viewed as a generalisation of infinitely-deloopable objects.</p>
+<p>In the bigger picture, every sequential pre-spectrum has a
+<strong>spectrification</strong>, which is an equivalent <span class="math inline">\Omega</span>-spectrum given by a <a href="https://ncatlab.org/nlab/show/spectrum#OmegaSpectrum">certain
+filtered colimit</a>, and these <span class="math inline">\Omega</span>-spectra are exactly the fibrant
+replacements in some model structure.</p>
+<p>Generally, we can define <a href="https://ncatlab.org/nlab/show/spectrum+object#via_spectrum_objects"><span class="math inline">\Omega</span>-spectrum objects in any <span class="math inline">(\infty,1)</span>-category</a>, but when people talk
+about ‘spectra’ with no reference to a specific category, it’s usually
+implicit that they are working in <span class="math inline">\mathsf{Top}_*</span> with weak homotopy
+equivalences.</p>
+<p>But the ‘honest’ setting for spectra is in a <strong>stable <span class="math inline">(\infty,1)</span>-category</strong>: pointed<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> <span class="math inline">(\infty,1)</span>-categories <span class="math inline">\mathcal{C}</span> with finite limits, where the
+loop <span class="math inline">(\infty,1)</span>-functor <span class="math inline">\Omega\colon\mathcal{C}\to\mathcal{C}</span> is an
+<em>equivalence</em>, with the inverse given by suspension <span class="math inline">\Sigma</span>. Given some not-necessarily-stable
+pointed <span class="math inline">(\infty,1)</span>-category <span class="math inline">\mathcal{C}</span> with finite limits, we can form
+its <strong>stabilisation</strong> by taking the limit<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> of
+iterating the loop space functor on the category of <strong>pointed
+objects of <span class="math inline">\mathcal{C}</span></strong>:</p>
+<p><span class="math display">\mathsf{Stab}(\mathcal{C}) :=
+\lim_{\leftarrow}\big(\ldots\to(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\xrightarrow{\Omega}(*\downarrow\mathcal{C})\big).</span></p>
+<p>The prototypical example of such a category is exactly what we’ve
+been looking at: <em><span class="math inline">\mathsf{Stab}(\mathsf{Top})</span> is the category
+of <span class="math inline">\Omega</span>-spectra in <span class="math inline">\mathsf{Top}_*</span></em>. In general, we can
+construct <span class="math inline">\mathsf{Stab}(\mathcal{C})</span> <a href="https://arxiv.org/abs/math/0608228">exactly by taking the category
+of spectrum objects</a> in <span class="math inline">(*\downarrow\mathcal{C})</span>.</p>
+<p>A really good introduction to all of this, and where I actually saw
+most of this for the first time, is <a href="https://arxiv.org/abs/1007.2925">Moritz Groth’s <em>A short course
+on <span class="math inline">\infty</span>-categories</em></a>.</p>
+<p>This is all understood much better when we bring operads into the
+picture. In the next post in this series I’ll try to show how certain
+spectra are ‘just commutative monoids’, and that commutative monoids in
+an <span class="math inline">(\infty,1)</span>-category are ‘just <span class="math inline">E_\infty</span>-algebras’.</p>
 <h2 id="nice-properties">Nice properties</h2>
-<p>Before wrapping this post up, I’m just going to mention briefly something that always confused me about spectra that represent cohomology theories.</p>
-<p>We can define ‘cohomology’ in any <span class="math inline">(\infty,1)</span>-category <span class="math inline">\mathbb{H}</span> by just setting <span class="math inline">H(X,A):=\pi_0\mathbb{H}(X,A)</span>, but if we want this to behave like ‘usual’ cohomology then we have to impose some restrictions. First of all, if we want our ‘cocycles’ to classify something (namely principal bundles over <span class="math inline">X</span>) then we have to be working in an <em><span class="math inline">(\infty,1)</span>-topos</em>. Secondly, if we want to obtain a <span class="math inline">\mathbb{Z}</span>-graded cohomology then the simplest way<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> of doing so is to ask that our coefficient object <span class="math inline">A</span> be a <em>component of a spectrum object</em>, i.e. <span class="math inline">A=\mathcal{E}_n</span> for some spectrum object <span class="math inline">\mathcal{E}</span>. Thirdly, if we want our cohomology to have a group structure then we need<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> <span class="math inline">A</span> to be a <em>group object</em>, which is always the case if <span class="math inline">A</span> is a component of a spectrum object.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> Note that this is abelian if <span class="math inline">A</span> is at least an <span class="math inline">E_2</span>-object. Finally, if we want a ring structure then we can ask that the spectrum object <span class="math inline">\mathcal{E}</span> of which <span class="math inline">A</span> is a component be an <span class="math inline">E_\infty</span>-ring, or a <em>ring spectra</em>.</p>
-<p>The point here is that, cohomology can be defined very generally, but if we want to recover something that we really recognise from it then we can basically restrict ourselves to looking at <strong>ring spectra in an <span class="math inline">(\infty,1)</span>-topos</strong>.</p>
+<p>Before wrapping this post up, I’m just going to mention briefly
+something that always confused me about spectra that represent
+cohomology theories.</p>
+<p>We can define ‘cohomology’ in any <span class="math inline">(\infty,1)</span>-category <span class="math inline">\mathbb{H}</span> by just setting <span class="math inline">H(X,A):=\pi_0\mathbb{H}(X,A)</span>, but if we want
+this to behave like ‘usual’ cohomology then we have to impose some
+restrictions. First of all, if we want our ‘cocycles’ to classify
+something (namely principal bundles over <span class="math inline">X</span>) then we have to be working in an <em><span class="math inline">(\infty,1)</span>-topos</em>. Secondly, if we want
+to obtain a <span class="math inline">\mathbb{Z}</span>-graded
+cohomology then the simplest way<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> of doing so is to ask
+that our coefficient object <span class="math inline">A</span> be a
+<em>component of a spectrum object</em>, i.e. <span class="math inline">A=\mathcal{E}_n</span> for some spectrum object
+<span class="math inline">\mathcal{E}</span>. Thirdly, if we want our
+cohomology to have a group structure then we need<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>
+<span class="math inline">A</span> to be a <em>group object</em>, which
+is always the case if <span class="math inline">A</span> is a component
+of a spectrum object.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> Note that this is abelian if <span class="math inline">A</span> is at least an <span class="math inline">E_2</span>-object. Finally, if we want a ring
+structure then we can ask that the spectrum object <span class="math inline">\mathcal{E}</span> of which <span class="math inline">A</span> is a component be an <span class="math inline">E_\infty</span>-ring, or a <em>ring
+spectra</em>.</p>
+<p>The point here is that, cohomology can be defined very generally, but
+if we want to recover something that we really recognise from it then we
+can basically restrict ourselves to looking at <strong>ring spectra in
+an <span class="math inline">(\infty,1)</span>-topos</strong>.</p>
 <h1 id="that-classical-fact">That ‘classical fact’</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>A full and good proof (of the fact in question but also much more besides) can be found in Chapter 4.3 of <a href="https://www.math.cornell.edu/~hatcher/AT/AT.pdf">Hatcher’s <em>Algebraic Topology</em></a>. I’ll be content here to give a small sketch, as found in e.g. <a href="http://math.mit.edu/~mbehrens/18.906/notes/lec15.pdf">these lecture notes</a>.</p>
-<p>By the universal coefficient theorem, there is a short exact sequence</p>
+<p>A full and good proof (of the fact in question but also much more
+besides) can be found in Chapter 4.3 of <a href="https://www.math.cornell.edu/~hatcher/AT/AT.pdf">Hatcher’s
+<em>Algebraic Topology</em></a>. I’ll be content here to give a small
+sketch, as found in e.g. <a href="http://math.mit.edu/~mbehrens/18.906/notes/lec15.pdf">these
+lecture notes</a>.</p>
+<p>By the universal coefficient theorem, there is a short exact
+sequence</p>
 <p><span class="math display">\begin{aligned}
-    0 \longrightarrow&amp; \mathrm{Ext}^1_\mathbb{Z}(H_{n-1}(K(A,n),A)) \longrightarrow H^n(K(A,n),A)\\
-    &amp;\longrightarrow \mathrm{Hom}_\mathbb{Z}(H_n(K(A,n),A),A) \longrightarrow 0.
+    0 \longrightarrow&amp; \mathrm{Ext}^1_\mathbb{Z}(H_{n-1}(K(A,n),A))
+\longrightarrow H^n(K(A,n),A)\\
+    &amp;\longrightarrow \mathrm{Hom}_\mathbb{Z}(H_n(K(A,n),A),A)
+\longrightarrow 0.
 \end{aligned}</span></p>
-<p>Then, by the <a href="https://en.wikipedia.org/wiki/Hurewicz_theorem">Hurewicz theorem</a>, we have an isomorphism</p>
+<p>Then, by the <a href="https://en.wikipedia.org/wiki/Hurewicz_theorem">Hurewicz
+theorem</a>, we have an isomorphism</p>
 <p><span class="math display">H^n(K(A,n),A)\xrightarrow{\sim}\mathrm{Hom}_\mathbb{Z}(A,A).</span></p>
-<p>Now take the class of <span class="math inline">\mathrm{id}_A</span> in <span class="math inline">\mathrm{Hom}_\mathbb{Z}(A,A)</span> and look at its image <span class="math inline">[\iota_n]</span> in <span class="math inline">H^n(K(A,n),A)</span>. This gives us a natural (in <span class="math inline">X</span>) transformation</p>
+<p>Now take the class of <span class="math inline">\mathrm{id}_A</span>
+in <span class="math inline">\mathrm{Hom}_\mathbb{Z}(A,A)</span> and
+look at its image <span class="math inline">[\iota_n]</span> in <span class="math inline">H^n(K(A,n),A)</span>. This gives us a natural (in
+<span class="math inline">X</span>) transformation</p>
 <p><span class="math display">\begin{aligned}
 \eta_X\colon\pi_0\mathsf{Top}_*(X,K(A,n))&amp;\to H^n(X,A)\\
 [\gamma]&amp;\mapsto \gamma^*([\iota_n])
 \end{aligned}</span></p>
-<p>and we claim that it is a natural isomorphism when we restrict to the subcategory of pointed CW complexes.</p>
-<p><strong>Edit.</strong> This ‘classical fact’ is really a key example of the so-called <a href="https://ncatlab.org/nlab/show/Eckmann-Hilton+duality">Eckmann-Hilton duality</a>.</p>
+<p>and we claim that it is a natural isomorphism when we restrict to the
+subcategory of pointed CW complexes.</p>
+<p><strong>Edit.</strong> This ‘classical fact’ is really a key example
+of the so-called <a href="https://ncatlab.org/nlab/show/Eckmann-Hilton+duality">Eckmann-Hilton
+duality</a>.</p>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>The nerve functor is often omitted in notation and is implicitly considered as part of the geometric realisation.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>In fact, there’s the important point that we can <em>prove</em> that classifying spaces for principal <span class="math inline">A</span>-bundles exist by showing exactly that <span class="math inline">\vert N(\mathbb{B}A)\vert</span> satisfies all the required properties.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>The nerve functor is often omitted in
+notation and is implicitly considered as part of the geometric
+realisation.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>In fact, there’s the important point
+that we can <em>prove</em> that classifying spaces for principal <span class="math inline">A</span>-bundles exist by showing exactly that <span class="math inline">\vert N(\mathbb{B}A)\vert</span> satisfies all the
+required properties.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3" role="doc-endnote"><p>Maybe have a look <a href="https://ncatlab.org/nlab/show/groupoid+object+in+an+(infinity%2C1)-category#Delooping">here</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>Really I’m cheating because this is all still a bit fuzzy for me, and pinning down the details is something that I’m still working on.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>Although for the following theorem to be true it really needs <span class="math inline">X</span> to be a e.g. CW complex.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6" role="doc-endnote"><p>My use of this phrase almost always means ‘everybody says it’s true but doesn’t give a proof so I guess it must be true’, but I will actually discuss this proof at the end of the post because it is so integral to this whole discussion (and because it’s not entirely obvious (at least, not to me)).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7" role="doc-endnote"><p>Depending on the setting, this could mean homeomorphisms, or weak homotopy equivalences, or something similar.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>Really I’m cheating because this is
+all still a bit fuzzy for me, and pinning down the details is something
+that I’m still working on.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>Although for the following theorem to
+be true it really needs <span class="math inline">X</span> to be a
+e.g. CW complex.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>My use of this phrase almost always
+means ‘everybody says it’s true but doesn’t give a proof so I guess it
+must be true’, but I will actually discuss this proof at the end of the
+post because it is so integral to this whole discussion (and because
+it’s not entirely obvious (at least, not to me)).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>Depending on the setting, this could
+mean homeomorphisms, or weak homotopy equivalences, or something
+similar.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8" role="doc-endnote"><p>That is, it has a zero object.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9" role="doc-endnote"><p>Really, taking the <span class="math inline">(\infty,1)</span>-limit in the <span class="math inline">(\infty,1)</span>-category of <span class="math inline">(\infty,1)</span>-categories…<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10" role="doc-endnote"><p>I have no idea if this is the <em>only</em> way though.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11" role="doc-endnote"><p>Again, this is sufficient but I don’t know if it’s necessary.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn12" role="doc-endnote"><p>Since the loop space gives an equivalence between <span class="math inline">0</span>-connected pointed objects and group objects (this is Lemma 7.2.2.11 (1) in <a href="https://arxiv.org/abs/math/0608040">Higher Topos Theory</a>).<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10" role="doc-endnote"><p>I have no idea if this is the
+<em>only</em> way though.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11" role="doc-endnote"><p>Again, this is sufficient but I
+don’t know if it’s necessary.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12" role="doc-endnote"><p>Since the loop space gives an
+equivalence between <span class="math inline">0</span>-connected pointed
+objects and group objects (this is Lemma 7.2.2.11 (1) in <a href="https://arxiv.org/abs/math/0608040">Higher Topos Theory</a>).<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

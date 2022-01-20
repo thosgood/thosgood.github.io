@@ -95,12 +95,25 @@
 <li><a href="#the-analytic-dictionary">The analytic dictionary</a></li>
 <li><a href="#questions">Questions</a></li>
 </ol>
-<p>Despite being an analytic/algebraic geometer by name (and title, and qualification, and academic upbringing, and …), there are so many gaps in my knowledge, even when it comes to simple foundational things. One thing which I have always tried to do during my academic “career”, however, is to be the person who asks the first stupid question, so that others can feel less nervous about asking their (certainly less stupid) questions. Thus: this blog post.</p>
-<p>I am going to explain what I do know, talk about what I don’t, and then ask some semi-concrete questions that I’m hoping people will be able to help me out with!</p>
+<p>Despite being an analytic/algebraic geometer by name (and title, and
+qualification, and academic upbringing, and …), there are so many gaps
+in my knowledge, even when it comes to simple foundational things. One
+thing which I have always tried to do during my academic “career”,
+however, is to be the person who asks the first stupid question, so that
+others can feel less nervous about asking their (certainly less stupid)
+questions. Thus: this blog post.</p>
+<p>I am going to explain what I do know, talk about what I don’t, and
+then ask some semi-concrete questions that I’m hoping people will be
+able to help me out with!</p>
 <!-- more -->
 <h1 id="the-algebraic-dictionary">The algebraic dictionary</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>In the case of algebraic geometry, we have a nice dictionary which lets us translate between the language of <em>sheaves</em>, of <em>bundles</em>, and of <em>modules</em>. I’m sure that many of you will have seen at least the first and last column of this table before; the middle one talks about what sort of <em>resolutions</em> we can find.</p>
+<p>In the case of algebraic geometry, we have a nice dictionary which
+lets us translate between the language of <em>sheaves</em>, of
+<em>bundles</em>, and of <em>modules</em>. I’m sure that many of you
+will have seen at least the first and last column of this table before;
+the middle one talks about what sort of <em>resolutions</em> we can
+find.</p>
 <table>
 <thead>
 <tr class="header">
@@ -129,11 +142,18 @@
 </table>
 <p>¹ <em>For quasi-projective Noetherian schemes.</em></p>
 <p>² <em>For Noetherian affine schemes.</em></p>
-<p>Of course, there are some very important caveats here, noted above (i.e. we need to be working over sufficiently nice spaces in order for these correspondences to hold).</p>
-<p>Note that here we can write a quasi-coherent sheaf as a (filtered) colimit of its coherent subsheaves, hence the fact that it can also be resolved by a complex of vector bundles (just maybe a really really big and unwieldy one).</p>
+<p>Of course, there are some very important caveats here, noted above
+(i.e. we need to be working over sufficiently nice spaces in order for
+these correspondences to hold).</p>
+<p>Note that here we can write a quasi-coherent sheaf as a (filtered)
+colimit of its coherent subsheaves, hence the fact that it can also be
+resolved by a complex of vector bundles (just maybe a really really big
+and unwieldy one).</p>
 <h1 id="the-analytic-dictionary">The analytic dictionary</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>Now, I don’t really work very much in the algebraic setting: I’m more interested in the case of holomorphic things on Stein spaces, and so on. So here’s my attempt at filling in the analogous table.</p>
+<p>Now, I don’t really work very much in the algebraic setting: I’m more
+interested in the case of holomorphic things on Stein spaces, and so on.
+So here’s my attempt at filling in the analogous table.</p>
 <table>
 <thead>
 <tr class="header">
@@ -150,7 +170,8 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;">coherent</td>
-<td style="text-align: left;">complexes of vector bundles on the Čech nerve</td>
+<td style="text-align: left;">complexes of vector bundles on the Čech
+nerve</td>
 <td style="text-align: left;">???</td>
 </tr>
 <tr class="odd">
@@ -160,28 +181,93 @@
 </tr>
 </tbody>
 </table>
-<p>As you can see, it is far from complete, but let’s start with the things that I <em>do</em> know (since this won’t take very long to talk about).</p>
-<p>It is still the case that locally free sheaves on a complex-analytic manifold correspond to vector bundles, and, by the results of <a href="http://wrap.warwick.ac.uk/40592/">Green’s 1980 thesis</a> (or <a href="https://tel.archives-ouvertes.fr/tel-02882140/">mine</a>), we can show that coherent (analytic) sheaves (on a complex-analytic manifold) can be resolved, not quite by complexes of vector bundles, but by a sort of up-to-homotopy version of this, namely <em>Green complexes</em>, or <em>complexes of vector bundles on the Čech nerve</em>.</p>
-<p>For the last row of the “Bundles” column, things get a bit complicated. Indeed, it’s not really universally accepted (as far as I know) what “the” “good” definition of quasi-coherent even <em>is</em> in the complex-analytic case. The reason why we don’t really want to use the same definition as in the algebraic case (i.e. having a local presentation) is that such objects are not very well behaved at all. For example, as mentioned above, we know that any quasi-coherent algebraic sheaf is the filtered colimit of its coherent subsheaves, but the analogous statement in the analytic setting is <em>very much not true</em>. In particular, <a href="https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087">there exist quasi-coherent (in the sense of the algebraic definition) analytic sheaves on Stein spaces that have non-zero first sheaf cohomology</a>. This is bad, because any coherent analytic sheaf on a Stein space has zero higher sheaf cohomology, and so there is absolutely no hope of recovering such quasi-coherent sheaves as colimits of their coherent subsheaves. (Indeed, it’s <em>really</em> bad, because it’s not just that we don’t <em>quite</em> recover the quasi-coherent sheaf from the colimit, but we’re <em>really</em> far away from doing so, because we’re trying to get something non-zero from a bunch of things that are zero!)</p>
-<p>There is the notion of <em>Fréchet</em> quasi-coherence, which I have read is a good substitute, but I don’t fully understand <em>why</em>, nor if it is somehow “<em>the</em>” good substitute (indeed, I haven’t even fully internalised the definition, since it really is something quite analytic). Theorem 4.3.6 in <em>Spectral Decompositions and Analytic Sheaves</em> tells us the following:</p>
-<p><em>Let <span class="math inline">X</span> be a finite-dimensional Stein space, and let <span class="math inline">\mathscr{F}</span> be a Fréchet <span class="math inline">\mathscr{O}_X</span>-module. The following conditions are equivalent:</em></p>
+<p>As you can see, it is far from complete, but let’s start with the
+things that I <em>do</em> know (since this won’t take very long to talk
+about).</p>
+<p>It is still the case that locally free sheaves on a complex-analytic
+manifold correspond to vector bundles, and, by the results of <a href="http://wrap.warwick.ac.uk/40592/">Green’s 1980 thesis</a> (or <a href="https://tel.archives-ouvertes.fr/tel-02882140/">mine</a>), we can
+show that coherent (analytic) sheaves (on a complex-analytic manifold)
+can be resolved, not quite by complexes of vector bundles, but by a sort
+of up-to-homotopy version of this, namely <em>Green complexes</em>, or
+<em>complexes of vector bundles on the Čech nerve</em>.</p>
+<p>For the last row of the “Bundles” column, things get a bit
+complicated. Indeed, it’s not really universally accepted (as far as I
+know) what “the” “good” definition of quasi-coherent even <em>is</em> in
+the complex-analytic case. The reason why we don’t really want to use
+the same definition as in the algebraic case (i.e. having a local
+presentation) is that such objects are not very well behaved at all. For
+example, as mentioned above, we know that any quasi-coherent algebraic
+sheaf is the filtered colimit of its coherent subsheaves, but the
+analogous statement in the analytic setting is <em>very much not
+true</em>. In particular, <a href="https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087">there
+exist quasi-coherent (in the sense of the algebraic definition) analytic
+sheaves on Stein spaces that have non-zero first sheaf cohomology</a>.
+This is bad, because any coherent analytic sheaf on a Stein space has
+zero higher sheaf cohomology, and so there is absolutely no hope of
+recovering such quasi-coherent sheaves as colimits of their coherent
+subsheaves. (Indeed, it’s <em>really</em> bad, because it’s not just
+that we don’t <em>quite</em> recover the quasi-coherent sheaf from the
+colimit, but we’re <em>really</em> far away from doing so, because we’re
+trying to get something non-zero from a bunch of things that are
+zero!)</p>
+<p>There is the notion of <em>Fréchet</em> quasi-coherence, which I have
+read is a good substitute, but I don’t fully understand <em>why</em>,
+nor if it is somehow “<em>the</em>” good substitute (indeed, I haven’t
+even fully internalised the definition, since it really is something
+quite analytic). Theorem 4.3.6 in <em>Spectral Decompositions and
+Analytic Sheaves</em> tells us the following:</p>
+<p><em>Let <span class="math inline">X</span> be a finite-dimensional
+Stein space, and let <span class="math inline">\mathscr{F}</span> be a
+Fréchet <span class="math inline">\mathscr{O}_X</span>-module. The
+following conditions are equivalent:</em></p>
 <ol type="1">
-<li><em><span class="math inline">\mathscr{F}</span> is quasi-coherent;</em></li>
-<li><em><span class="math inline">\mathscr{F}</span> admits globally topologically free resolutions on the left;</em></li>
-<li><em><span class="math inline">\mathscr{F}</span> is acyclic on <span class="math inline">X</span> and admits, locally on <span class="math inline">X</span>, topologically free resolutions to the left.</em></li>
+<li><em><span class="math inline">\mathscr{F}</span> is
+quasi-coherent;</em></li>
+<li><em><span class="math inline">\mathscr{F}</span> admits globally
+topologically free resolutions on the left;</em></li>
+<li><em><span class="math inline">\mathscr{F}</span> is acyclic on <span class="math inline">X</span> and admits, locally on <span class="math inline">X</span>, topologically free resolutions to the
+left.</em></li>
 </ol>
-<p>Here, when they write “quasi-coherent”, they mean “Fréchet quasi-coherent”. So maybe this is useful somehow, because it characterises this notion of quasi-coherence in terms of a resolution property, but I’m not sure if that answers my question or not. Indeed, I’m (yet again) still not entirely sure what these “globally topologically free resolutions” look like, and how they might relate to things that I already know.</p>
-<p>Then, of course, there’s the elephant in the room (or dictionary, I suppose): what goes in the right-hand column? That is, what even <em>is</em> <span class="math inline">\operatorname{Spec}</span> in the analytic setting? I know that this can be sort of understood through the framework of analytic spaces, in the sense of Grauert et al, but I can’t quite complete the whole story in my head from what I’ve read. I’ve been meaning to read Brian Conrad’s “<a href="https://aif.centre-mersenne.org/item/?id=AIF_2006__56_4_1049_0">Relative ampleness in rigid geometry</a>”, since I think this might hold some answers, but I’ve been too scared by the appearance of the word “rigid” in the title to actually properly dive in…</p>
+<p>Here, when they write “quasi-coherent”, they mean “Fréchet
+quasi-coherent”. So maybe this is useful somehow, because it
+characterises this notion of quasi-coherence in terms of a resolution
+property, but I’m not sure if that answers my question or not. Indeed,
+I’m (yet again) still not entirely sure what these “globally
+topologically free resolutions” look like, and how they might relate to
+things that I already know.</p>
+<p>Then, of course, there’s the elephant in the room (or dictionary, I
+suppose): what goes in the right-hand column? That is, what even
+<em>is</em> <span class="math inline">\operatorname{Spec}</span> in the
+analytic setting? I know that this can be sort of understood through the
+framework of analytic spaces, in the sense of Grauert et al, but I can’t
+quite complete the whole story in my head from what I’ve read. I’ve been
+meaning to read Brian Conrad’s “<a href="https://aif.centre-mersenne.org/item/?id=AIF_2006__56_4_1049_0">Relative
+ampleness in rigid geometry</a>”, since I think this might hold some
+answers, but I’ve been too scared by the appearance of the word “rigid”
+in the title to actually properly dive in…</p>
 <h1 id="questions">Questions</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>Anyway, there you go: there are lots of things that I, having a PhD in complex-analytic geometry stuff, really should know the answer to, but don’t. Here are my “precise” questions:</p>
+<p>Anyway, there you go: there are lots of things that I, having a PhD
+in complex-analytic geometry stuff, really should know the answer to,
+but don’t. Here are my “precise” questions:</p>
 <ol type="1">
 <li>How can I fill in this analytic dictionary?</li>
-<li>In fact, what even is <span class="math inline">\operatorname{Spec}</span> in the analytic setting?</li>
-<li>Is <em>Fréchet</em> quasi-coherent the good thing to put in the analytic dictionary? That is, what analogous properties does Fréchet quasi-coherence satisfy to make it the “right” notion? e.g. does it arise as the right Kan extension of the pseudofunctor from commutative rings to categories which sends a ring to the category of modules over that ring?</li>
-<li>More specifically, is it true that Fréchet quasi-coherent sheaves can be recovered as filtered colimits of their coherent subsheaves?</li>
+<li>In fact, what even is <span class="math inline">\operatorname{Spec}</span> in the analytic
+setting?</li>
+<li>Is <em>Fréchet</em> quasi-coherent the good thing to put in the
+analytic dictionary? That is, what analogous properties does Fréchet
+quasi-coherence satisfy to make it the “right” notion? e.g. does it
+arise as the right Kan extension of the pseudofunctor from commutative
+rings to categories which sends a ring to the category of modules over
+that ring?</li>
+<li>More specifically, is it true that Fréchet quasi-coherent sheaves
+can be recovered as filtered colimits of their coherent subsheaves?</li>
 </ol>
-<p>Sadly I still haven’t set up comments on this blog (it’s on my (ever-growing) to-do list), so having a conversation might be a bit tricky, but Twitter might be a good place to do this (on <a href="https://twitter.com/tim_hosgood/status/1441413679367532544">this thread</a>, for example), or you can just drop me an email — I’d love to hear from anybody!</p>
+<p>Sadly I still haven’t set up comments on this blog (it’s on my
+(ever-growing) to-do list), so having a conversation might be a bit
+tricky, but Twitter might be a good place to do this (on <a href="https://twitter.com/tim_hosgood/status/1441413679367532544">this
+thread</a>, for example), or you can just drop me an email — I’d love to
+hear from anybody!</p>
 
     <!-- Comments -->
     <hr>

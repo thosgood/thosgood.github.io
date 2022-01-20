@@ -191,73 +191,188 @@
 <li><a href="#loop-spaces">Loop spaces</a></li>
 <li><a href="#sneak-peek-at-a_infty-algebras">Sneak peek at A_\infty-algebras</a></li>
 </ol>
-<p>I have been reading recently about spectra and their use in defining cohomology theories. Something that came up quite a lot was the idea of <strong><span class="math inline">E_\infty</span>-algebras</strong>, which I knew roughly corresponded to some commutative version of <span class="math inline">A_\infty</span>-algebras, but beyond that I knew nothing. After some enlightening discussions with one of my supervisors, I feel like I’m starting to see how the ideas of spectra, <span class="math inline">E_\infty</span>-algebras, and operads all fit together. In an attempt to solidify this understanding and pinpoint any difficulties, I’m going to try to write up what I ‘understand’ so far.</p>
+<p>I have been reading recently about spectra and their use in defining
+cohomology theories. Something that came up quite a lot was the idea of
+<strong><span class="math inline">E_\infty</span>-algebras</strong>,
+which I knew roughly corresponded to some commutative version of <span class="math inline">A_\infty</span>-algebras, but beyond that I knew
+nothing. After some enlightening discussions with one of my supervisors,
+I feel like I’m starting to see how the ideas of spectra, <span class="math inline">E_\infty</span>-algebras, and operads all fit
+together. In an attempt to solidify this understanding and pinpoint any
+difficulties, I’m going to try to write up what I ‘understand’ so
+far.</p>
 <!-- more -->
-<p>The rough idea is to study loop spaces and consider their ‘generalisation’ as homotopy pullbacks, then to define <strong>spectrum objects</strong> in stable <span class="math inline">(\infty,1)</span>-categories. We also consider why we can call <span class="math inline">A_\infty</span>-algebras ‘generalised loop spaces’. Then we will have a look at the <span class="math inline">E_\infty</span> and <span class="math inline">A_\infty</span> operads and try to describe the algebras over them, before seeing how this is linked to the idea of <strong>spectra</strong> (spectrum objects in the category of topological spaces).</p>
-<p>After this, I might do a series on the uses of spectra, like ‘nice’ cohomology theories in <span class="math inline">(\infty,1)</span>-topoi, and ‘brave new geometry’ in the framework of Toën and Vezzosi’s homotopical algebraic geometry.</p>
-<p><em>There probably won’t be many references or pictures to begin with, but I will try to come back and add some at some point in the hopefully not-too-distant future.</em></p>
+<p>The rough idea is to study loop spaces and consider their
+‘generalisation’ as homotopy pullbacks, then to define <strong>spectrum
+objects</strong> in stable <span class="math inline">(\infty,1)</span>-categories. We also consider why
+we can call <span class="math inline">A_\infty</span>-algebras
+‘generalised loop spaces’. Then we will have a look at the <span class="math inline">E_\infty</span> and <span class="math inline">A_\infty</span> operads and try to describe the
+algebras over them, before seeing how this is linked to the idea of
+<strong>spectra</strong> (spectrum objects in the category of
+topological spaces).</p>
+<p>After this, I might do a series on the uses of spectra, like ‘nice’
+cohomology theories in <span class="math inline">(\infty,1)</span>-topoi, and ‘brave new geometry’ in
+the framework of Toën and Vezzosi’s homotopical algebraic geometry.</p>
+<p><em>There probably won’t be many references or pictures to begin
+with, but I will try to come back and add some at some point in the
+hopefully not-too-distant future.</em></p>
 <h1 id="loop-spaces">Loop spaces</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <h2 id="classical-approach">Classical approach</h2>
-<p>Given some topological space <span class="math inline">X</span>, we have many good reasons to be interested in its fundamental group. That is, we are interested in what happens to <strong>loops</strong> (maps from <span class="math inline">S^1</span> to <span class="math inline">X</span>) in our space when we consider everything up to homotopy. With this in mind, we define the <strong>(pointed) loop space <span class="math inline">\Omega(X,x)</span> of <span class="math inline">X</span> at some point <span class="math inline">x\in X</span></strong> as the mapping space</p>
+<p>Given some topological space <span class="math inline">X</span>, we
+have many good reasons to be interested in its fundamental group. That
+is, we are interested in what happens to <strong>loops</strong> (maps
+from <span class="math inline">S^1</span> to <span class="math inline">X</span>) in our space when we consider everything
+up to homotopy. With this in mind, we define the <strong>(pointed) loop
+space <span class="math inline">\Omega(X,x)</span> of <span class="math inline">X</span> at some point <span class="math inline">x\in X</span></strong> as the mapping space</p>
 <p><span class="math display">\Omega(X,x):=\mathrm{Map}_*\big(S^1,(X,x)\big)</span></p>
-<p>which has a base point given by the constant map to <span class="math inline">x</span>, and where we consider <span class="math inline">S^1</span> as a pointed space with some (fixed) base point <span class="math inline">s\in S^1</span> (e.g. embed <span class="math inline">S^1</span> into <span class="math inline">\mathbb{R}^2</span> and let <span class="math inline">s=(1,0)</span>).</p>
-<p>Now, by definition, we have an isomorphism of groups <span class="math inline">\pi_0\Omega(X,x)\cong\pi_1(X,x)</span>, since elements of the latter are classes of homotopy-equivalent paths, which are the same as classes of points of the former, where we identify points if there is a path between them. This suggestive isomorphism makes us wonder if there are ‘higher’ loop spaces <span class="math inline">\Omega^i(X,x)</span> such that <span class="math inline">\pi_i(X,x)\cong\pi_0\Omega^i(X,x)</span>. The answer is, as you would hope, yes. In fact, we can just iterate loop spaces to obtain such objects: we define the <strong><span class="math inline">i</span>-fold loop space</strong> as</p>
+<p>which has a base point given by the constant map to <span class="math inline">x</span>, and where we consider <span class="math inline">S^1</span> as a pointed space with some (fixed) base
+point <span class="math inline">s\in S^1</span> (e.g. embed <span class="math inline">S^1</span> into <span class="math inline">\mathbb{R}^2</span> and let <span class="math inline">s=(1,0)</span>).</p>
+<p>Now, by definition, we have an isomorphism of groups <span class="math inline">\pi_0\Omega(X,x)\cong\pi_1(X,x)</span>, since
+elements of the latter are classes of homotopy-equivalent paths, which
+are the same as classes of points of the former, where we identify
+points if there is a path between them. This suggestive isomorphism
+makes us wonder if there are ‘higher’ loop spaces <span class="math inline">\Omega^i(X,x)</span> such that <span class="math inline">\pi_i(X,x)\cong\pi_0\Omega^i(X,x)</span>. The answer
+is, as you would hope, yes. In fact, we can just iterate loop spaces to
+obtain such objects: we define the <strong><span class="math inline">i</span>-fold loop space</strong> as</p>
 <p><span class="math display">\Omega^i(X,x):=\Omega\big(\Omega^{i-1}(X,x)\big).</span></p>
 <h2 id="suspensions-and-smashing">Suspensions and smashing</h2>
-<p>This definition of higher loop spaces might be a tad surprising in so far as one might have expected ‘higher loops’ to be defined as maps from ‘higher spheres’, and thus to have defined the <span class="math inline">i</span>-fold loop space as</p>
+<p>This definition of higher loop spaces might be a tad surprising in so
+far as one might have expected ‘higher loops’ to be defined as maps from
+‘higher spheres’, and thus to have defined the <span class="math inline">i</span>-fold loop space as</p>
 <p><span class="math display">\Omega^i(X,x):=\mathrm{Map}_*\big(S^i,(X,x)\big).</span></p>
-<p>It is a beautiful convenience that these two proposed definitions agree, and the story goes as follows.</p>
-<p>The category <span class="math inline">\mathsf{Top}_*</span> of pointed topological spaces admits the structure of a symmetric monoidal category,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> where the product is the <strong>smash product</strong>, given by</p>
-<p><span class="math display">X\wedge Y:=\frac{X\times Y}{X\vee Y}</span></p>
-<p>and where <span class="math inline">X\vee Y</span> is the <strong>wedge sum</strong>, given by identifying base points. It would be tantamount to a crime to not put in any pictures here, so below are some examples.</p>
+<p>It is a beautiful convenience that these two proposed definitions
+agree, and the story goes as follows.</p>
+<p>The category <span class="math inline">\mathsf{Top}_*</span> of
+pointed topological spaces admits the structure of a symmetric monoidal
+category,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> where the product is the
+<strong>smash product</strong>, given by</p>
+<p><span class="math display">X\wedge Y:=\frac{X\times Y}{X\vee
+Y}</span></p>
+<p>and where <span class="math inline">X\vee Y</span> is the
+<strong>wedge sum</strong>, given by identifying base points. It would
+be tantamount to a crime to not put in any pictures here, so below are
+some examples.</p>
 <p><strong>INSERT PICTURES</strong></p>
-<p>In fact, <span class="math inline">\mathsf{Top}_*</span> is a <em>closed</em> symmetric monoidal category:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> we have the adjunction <span class="math inline">(\wedge\dashv\mathsf{Top}_*)</span>, and thus the natural isomorphism</p>
-<p><span class="math display">\mathsf{Top}_*(X\wedge Y, Z)\cong\mathsf{Top}_*(X,\mathsf{Top}_*(Y,Z)).</span></p>
-<p>In particular then, taking <span class="math inline">Y=S^1</span>, we see that</p>
-<p><span class="math display">\mathsf{Top}_*(X\wedge S^1, Z)\cong\mathsf{Top}_*(X,\Omega(Z,z))</span></p>
-<p>naturally in both <span class="math inline">X</span> and <span class="math inline">Z</span>, so defining the <strong>(reduced)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> suspension</strong> of <span class="math inline">X</span> as <span class="math inline">\Sigma X:=X\wedge S^1</span> gives us an adjunction <span class="math inline">(\Sigma\dashv\Omega)</span>. But now we notice that <em>if we can show that <span class="math inline">\Sigma S^i\simeq S^{i+1}</span></em> then</p>
+<p>In fact, <span class="math inline">\mathsf{Top}_*</span> is a
+<em>closed</em> symmetric monoidal category:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> we
+have the adjunction <span class="math inline">(\wedge\dashv\mathsf{Top}_*)</span>, and thus the
+natural isomorphism</p>
+<p><span class="math display">\mathsf{Top}_*(X\wedge Y,
+Z)\cong\mathsf{Top}_*(X,\mathsf{Top}_*(Y,Z)).</span></p>
+<p>In particular then, taking <span class="math inline">Y=S^1</span>, we
+see that</p>
+<p><span class="math display">\mathsf{Top}_*(X\wedge S^1,
+Z)\cong\mathsf{Top}_*(X,\Omega(Z,z))</span></p>
+<p>naturally in both <span class="math inline">X</span> and <span class="math inline">Z</span>, so defining the <strong>(reduced)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> suspension</strong> of <span class="math inline">X</span> as <span class="math inline">\Sigma
+X:=X\wedge S^1</span> gives us an adjunction <span class="math inline">(\Sigma\dashv\Omega)</span>. But now we notice that
+<em>if we can show that <span class="math inline">\Sigma S^i\simeq
+S^{i+1}</span></em> then</p>
 <p><span class="math display">\begin{aligned}
-    \mathsf{Top}_*(S^i,(X,x)) &amp;\cong \mathsf{Top}_*(S^{i-1},\Omega(X,x))\\
+    \mathsf{Top}_*(S^i,(X,x)) &amp;\cong
+\mathsf{Top}_*(S^{i-1},\Omega(X,x))\\
     &amp;\cong \ldots\\
     &amp;\cong \mathsf{Top}_*(S^1,\Omega^i(X,x))
 \end{aligned}</span></p>
 <p>whence the two possible definitions of higher loop spaces agree.</p>
-<p>We can actually prove a stronger statement: <span class="math inline">S^i\wedge S^j\simeq S^{i+j}</span>. To ‘see’ this, we consider <span class="math inline">S^i</span> as a cell complex with cells <span class="math inline">e^0\sqcup e^i</span>. Then</p>
-<p><span class="math display">S^i\wedge S^j\simeq\frac{e^0\sqcup e^j\sqcup e^i\sqcup e^{i+j}}{e^0\sqcup e^i\sqcup e^j}\simeq e^0\sqcup e^{i+j}.</span></p>
+<p>We can actually prove a stronger statement: <span class="math inline">S^i\wedge S^j\simeq S^{i+j}</span>. To ‘see’ this,
+we consider <span class="math inline">S^i</span> as a cell complex with
+cells <span class="math inline">e^0\sqcup e^i</span>. Then</p>
+<p><span class="math display">S^i\wedge S^j\simeq\frac{e^0\sqcup
+e^j\sqcup e^i\sqcup e^{i+j}}{e^0\sqcup e^i\sqcup e^j}\simeq e^0\sqcup
+e^{i+j}.</span></p>
 <h2 id="homotopy-pullbacks">Homotopy pullbacks</h2>
-<p>We claim that the loop space construction can also be described as the homotopy pullback of <span class="math inline">X</span> along the base point <span class="math inline">x\colon*\to X</span>. That is, we want to realise</p>
+<p>We claim that the loop space construction can also be described as
+the homotopy pullback of <span class="math inline">X</span> along the
+base point <span class="math inline">x\colon*\to X</span>. That is, we
+want to realise</p>
 <p><span class="math display">\begin{array}{ccc}
     A &amp;\to &amp;* \\
     \downarrow &amp; \lrcorner&amp;\downarrow \\
     * &amp;\to &amp;X
 \end{array}</span></p>
-<p>as the loop space <span class="math inline">\Omega(X,x)</span> we defined previously. But now we use a ‘simple’ trick:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> replace the point <span class="math inline">*</span> with the contractible space</p>
-<p><span class="math display">\{\gamma\colon[0,1]\to X \mid \gamma(0)=x\}</span></p>
-<p>and then map this into <span class="math inline">X</span> by sending <span class="math inline">\gamma</span> to <span class="math inline">\gamma(1)</span>. Then <span class="math inline">A</span> is exactly the space of maps <span class="math inline">D^1=[0,1]\to X</span> based at <span class="math inline">x</span> (i.e with <span class="math inline">\gamma(0)=x</span>) such that <span class="math inline">\gamma(1)=x</span> as well, and this is exactly <span class="math inline">\Omega(X,x)</span>.</p>
-<p>Dually, the (reduced) suspension can be realised as the homotopy pushout</p>
+<p>as the loop space <span class="math inline">\Omega(X,x)</span> we
+defined previously. But now we use a ‘simple’ trick:<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+replace the point <span class="math inline">*</span> with the
+contractible space</p>
+<p><span class="math display">\{\gamma\colon[0,1]\to X \mid
+\gamma(0)=x\}</span></p>
+<p>and then map this into <span class="math inline">X</span> by sending
+<span class="math inline">\gamma</span> to <span class="math inline">\gamma(1)</span>. Then <span class="math inline">A</span> is exactly the space of maps <span class="math inline">D^1=[0,1]\to X</span> based at <span class="math inline">x</span> (i.e with <span class="math inline">\gamma(0)=x</span>) such that <span class="math inline">\gamma(1)=x</span> as well, and this is exactly
+<span class="math inline">\Omega(X,x)</span>.</p>
+<p>Dually, the (reduced) suspension can be realised as the homotopy
+pushout</p>
 <p><span class="math display">\begin{array}{ccc}
     X &amp;\to &amp;* \\
     \downarrow &amp; \ulcorner&amp;\downarrow \\
     * &amp;\to &amp;B
 \end{array}</span></p>
-<p>or, in other words,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> as the mapping cone of the terminal map <span class="math inline">X\to *</span>.</p>
+<p>or, in other words,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> as the mapping cone of the terminal
+map <span class="math inline">X\to *</span>.</p>
 <h1 id="sneak-peek-at-a_infty-algebras">Sneak peek at <span class="math inline">A_\infty</span>-algebras</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>In one of Stasheff’s theses, in the 60s, he formalised the idea of algebras that behave ‘like loop spaces’ in that they have a multiplication structure that is only associative <em>up to some higher homotopies</em>. These are called <strong><span class="math inline">A_\infty</span>-algebras</strong>, and there are plenty of classic introductions to them in their own right. The ‘most classic’ is probably <em><a href="https://arxiv.org/abs/math/9910179">Keller, Bernhard (2001). Introduction to A-infinity algebras and modules</a></em>, which also describes (in §2.2) what I’m going to briefly sketch out below (and will cover in more detail in the future): how loop spaces are ‘almost associative algebras’.</p>
-<p>Given two loops, <span class="math inline">\gamma_1</span> and <span class="math inline">\gamma_2</span> in <span class="math inline">X</span>, we can define their ‘product’ <span class="math inline">\gamma_1\cdot\gamma_2</span> as their composition: we ‘do/follow/trace out’ the loop <span class="math inline">\gamma_1</span> followed immediately by the loop <span class="math inline">\gamma_2</span>. Clearly we have some identity element under this product, as well as inverses, and associativity is ‘obvious’ because following the first loop then the second, and <em>then</em> the third is the same as following the first, and <em>then</em> the second and the third, right?</p>
-<p>I mean, obviously here there is some caveat so that the actual answer is <em>no</em>, but I think that making this mistake is in some way a good thing, because it means that we’re thinking homotopically without maybe even realising it.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> The problem with associativity comes from the fact that we have picked some model of <span class="math inline">S^1</span>, namely <span class="math inline">[0,1]</span>, and so our composed loops have to respect this. That is, we can’t just define <span class="math inline">\gamma_1\cdot\gamma_2</span> as the obvious map <span class="math inline">[0,2]\to X</span>; we have to scale the paths so that <span class="math inline">\gamma_1\cdot\gamma_2\colon[0,1]\to X</span>. This is easy enough: we do <span class="math inline">\gamma_1(t/2)</span> for <span class="math inline">0\leqslant t\leqslant\frac12</span> and <span class="math inline">\gamma_2((t+1)/2)</span> for <span class="math inline">\frac12\leqslant t\leqslant1</span>. But the problem then arises that <span class="math inline">(\gamma_1\cdot\gamma_2)\cdot\gamma_3\neq\gamma_1\cdot(\gamma_2\cdot\gamma_2)</span> (this might be better explained in the pictures below), although they are clearly homotopic. Then, however, we have a similar problem when we want to look at <span class="math inline">\gamma_1\cdot\gamma_2\cdot\gamma_3\cdot\gamma_4</span>, but now we have many<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> ways of bracketing this. All possible ways will be homotopic, of course, but there is a lot of structure contained in this information of <em>how</em> the different choices are homotopic, and if we can somehow remember all of this then maybe we will gain something from it.</p>
+<p>In one of Stasheff’s theses, in the 60s, he formalised the idea of
+algebras that behave ‘like loop spaces’ in that they have a
+multiplication structure that is only associative <em>up to some higher
+homotopies</em>. These are called <strong><span class="math inline">A_\infty</span>-algebras</strong>, and there are
+plenty of classic introductions to them in their own right. The ‘most
+classic’ is probably <em><a href="https://arxiv.org/abs/math/9910179">Keller, Bernhard (2001).
+Introduction to A-infinity algebras and modules</a></em>, which also
+describes (in §2.2) what I’m going to briefly sketch out below (and will
+cover in more detail in the future): how loop spaces are ‘almost
+associative algebras’.</p>
+<p>Given two loops, <span class="math inline">\gamma_1</span> and <span class="math inline">\gamma_2</span> in <span class="math inline">X</span>, we can define their ‘product’ <span class="math inline">\gamma_1\cdot\gamma_2</span> as their composition:
+we ‘do/follow/trace out’ the loop <span class="math inline">\gamma_1</span> followed immediately by the loop
+<span class="math inline">\gamma_2</span>. Clearly we have some identity
+element under this product, as well as inverses, and associativity is
+‘obvious’ because following the first loop then the second, and
+<em>then</em> the third is the same as following the first, and
+<em>then</em> the second and the third, right?</p>
+<p>I mean, obviously here there is some caveat so that the actual answer
+is <em>no</em>, but I think that making this mistake is in some way a
+good thing, because it means that we’re thinking homotopically without
+maybe even realising it.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> The problem with associativity comes
+from the fact that we have picked some model of <span class="math inline">S^1</span>, namely <span class="math inline">[0,1]</span>, and so our composed loops have to
+respect this. That is, we can’t just define <span class="math inline">\gamma_1\cdot\gamma_2</span> as the obvious map
+<span class="math inline">[0,2]\to X</span>; we have to scale the paths
+so that <span class="math inline">\gamma_1\cdot\gamma_2\colon[0,1]\to
+X</span>. This is easy enough: we do <span class="math inline">\gamma_1(t/2)</span> for <span class="math inline">0\leqslant t\leqslant\frac12</span> and <span class="math inline">\gamma_2((t+1)/2)</span> for <span class="math inline">\frac12\leqslant t\leqslant1</span>. But the problem
+then arises that <span class="math inline">(\gamma_1\cdot\gamma_2)\cdot\gamma_3\neq\gamma_1\cdot(\gamma_2\cdot\gamma_2)</span>
+(this might be better explained in the pictures below), although they
+are clearly homotopic. Then, however, we have a similar problem when we
+want to look at <span class="math inline">\gamma_1\cdot\gamma_2\cdot\gamma_3\cdot\gamma_4</span>,
+but now we have many<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> ways of bracketing this. All
+possible ways will be homotopic, of course, but there is a lot of
+structure contained in this information of <em>how</em> the different
+choices are homotopic, and if we can somehow remember all of this then
+maybe we will gain something from it.</p>
 <p><strong>INSERT PICTURES</strong></p>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>Careful here: we need to be working with ‘<a href="https://ncatlab.org/nlab/show/convenient+category+of+topological+spaces">nice enough</a>’ spaces, otherwise this product <a href="https://mathoverflow.net/a/76594/73622">isn’t associative (not even weakly)</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>This needs proving, but I’m not gonna do that here because half of the fun of writing these posts is that I can just talk about the ideas themselves, and not repeat proofs that I don’t want to have to type out. It’s also nice to escape from the usual ‘definition, theorem, proof’ format. But for a proof of this particular claim see e.g. <a href="https://ncatlab.org/nlab/show/pointed+object#ClosedMonoidalStructure">the nLab</a> (although they also refer elsewhere for a proof so I feel less bad for doing so).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>There is also the notion of a <strong>non-reduced suspension</strong>, but in a lot of cases these two constructions give objects that are weakly homotopic to one another.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>This trick will turn up again in a future part of this series, when we talk about the <strong>little discs operad</strong>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>See <a href="https://ncatlab.org/nlab/show/mapping+cone#idea">here</a> for a nice picture as well as some clever words<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6" role="doc-endnote"><p>You always have to find some positive way of saying ‘I got that wrong’.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7" role="doc-endnote"><p>Sometimes 5 can seem like a really big number.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Careful here: we need to be working
+with ‘<a href="https://ncatlab.org/nlab/show/convenient+category+of+topological+spaces">nice
+enough</a>’ spaces, otherwise this product <a href="https://mathoverflow.net/a/76594/73622">isn’t associative (not
+even weakly)</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>This needs proving, but I’m not gonna
+do that here because half of the fun of writing these posts is that I
+can just talk about the ideas themselves, and not repeat proofs that I
+don’t want to have to type out. It’s also nice to escape from the usual
+‘definition, theorem, proof’ format. But for a proof of this particular
+claim see e.g. <a href="https://ncatlab.org/nlab/show/pointed+object#ClosedMonoidalStructure">the
+nLab</a> (although they also refer elsewhere for a proof so I feel less
+bad for doing so).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>There is also the notion of a
+<strong>non-reduced suspension</strong>, but in a lot of cases these two
+constructions give objects that are weakly homotopic to one another.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>This trick will turn up again in a
+future part of this series, when we talk about the <strong>little discs
+operad</strong>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>See <a href="https://ncatlab.org/nlab/show/mapping+cone#idea">here</a> for a
+nice picture as well as some clever words<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>You always have to find some positive
+way of saying ‘I got that wrong’.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7" role="doc-endnote"><p>Sometimes 5 can seem like a really
+big number.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

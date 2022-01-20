@@ -189,74 +189,168 @@
     <!-- Content -->
     <ol id="toc">
 <li><a href="#ends">Ends</a></li>
-<li><a href="#manipulation-and-ninja-yoneda">Manipulation and ninja Yoneda</a></li>
+<li><a href="#manipulation-and-ninja-yoneda">Manipulation and ninja
+Yoneda</a></li>
 <li><a href="#much-better-references">Much better references</a></li>
 </ol>
-<p>Using the idea of weighted limits, defined in the last post, we can now talk about <strong>ends</strong>. The idea of an end is that, given some functor <span class="math inline">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span>, which we can think of as defining both a left and a right action on <span class="math inline">\prod_{c\in\mathcal{C}}F(c,c)</span>, we wish to construct some sort of universal subobject<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> where the two actions coincide. Dually, a motivation behind the <strong>coend</strong> is in asking for some universal quotient of <span class="math inline">\coprod_{c\in\mathcal{C}}F(c,c)</span> that <em>forces</em> the two actions to agree.</p>
+<p>Using the idea of weighted limits, defined in the last post, we can
+now talk about <strong>ends</strong>. The idea of an end is that, given
+some functor <span class="math inline">F\colon
+\mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span>, which we
+can think of as defining both a left and a right action on <span class="math inline">\prod_{c\in\mathcal{C}}F(c,c)</span>, we wish to
+construct some sort of universal subobject<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+where the two actions coincide. Dually, a motivation behind the
+<strong>coend</strong> is in asking for some universal quotient of <span class="math inline">\coprod_{c\in\mathcal{C}}F(c,c)</span> that
+<em>forces</em> the two actions to agree.</p>
 <!-- more -->
-<p><strong>Edit.</strong> If you actually want to learn this stuff then have a look at either of Emily Riehl’s books (<a href="http://www.math.jhu.edu/~eriehl/cathtpy.pdf">Categorical Homotopy Theory</a> and <a href="http://www.math.jhu.edu/~eriehl/context.pdf">Category Theory in Context</a>). I honestly don’t think there is a better teaching of this anywhere else in the literature.</p>
+<p><strong>Edit.</strong> If you actually want to learn this stuff then
+have a look at either of Emily Riehl’s books (<a href="http://www.math.jhu.edu/~eriehl/cathtpy.pdf">Categorical Homotopy
+Theory</a> and <a href="http://www.math.jhu.edu/~eriehl/context.pdf">Category Theory in
+Context</a>). I honestly don’t think there is a better teaching of this
+anywhere else in the literature.</p>
 <h1 id="ends">Ends</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <h2 id="definitions-and-settings">Definitions and settings</h2>
-<p>We can define ends in enriched categories in a pretty slick manner, and in not-necessarily-enriched categories in a still-not-too-messy way.</p>
-<p>First, let <span class="math inline">\mathcal{C}</span> and <span class="math inline">\mathcal{D}</span> be <span class="math inline">\mathcal{V}</span>-enriched categories (with <span class="math inline">\mathcal{V}</span> a closed symmetric monoidal category) and <span class="math inline">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span> a <span class="math inline">\mathcal{V}</span>-functor. Then the <strong>end</strong> <span class="math inline">\int_\mathcal{C} F</span> of <span class="math inline">F</span> is (<em>if it exists!</em>) the <span class="math inline">\mathrm{Hom}_\mathcal{C}</span>-weighted limit of <span class="math inline">F</span>:</p>
-<p><span class="math display">\int_{c\in\mathcal{C}} F(c,c) := \mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.</span></p>
+<p>We can define ends in enriched categories in a pretty slick manner,
+and in not-necessarily-enriched categories in a still-not-too-messy
+way.</p>
+<p>First, let <span class="math inline">\mathcal{C}</span> and <span class="math inline">\mathcal{D}</span> be <span class="math inline">\mathcal{V}</span>-enriched categories (with <span class="math inline">\mathcal{V}</span> a closed symmetric monoidal
+category) and <span class="math inline">F\colon
+\mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span> a <span class="math inline">\mathcal{V}</span>-functor. Then the
+<strong>end</strong> <span class="math inline">\int_\mathcal{C} F</span>
+of <span class="math inline">F</span> is (<em>if it exists!</em>) the
+<span class="math inline">\mathrm{Hom}_\mathcal{C}</span>-weighted limit
+of <span class="math inline">F</span>:</p>
+<p><span class="math display">\int_{c\in\mathcal{C}} F(c,c) :=
+\mathrm{lim}^{\mathrm{Hom}_\mathcal{C}} F.</span></p>
 <p>Dually, the <strong>coend</strong> of <span class="math inline">F</span>, written <span class="math inline">\int^\mathcal{C} F</span>, is</p>
-<p><span class="math display">\int^{c\in\mathcal{C}} F(c,c) := \mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.</span></p>
-<p>Alternatively now, suppose that we have some <span class="math inline">F\colon \mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span> between not-necessarily-enriched categories. We can still define the end by using <strong>wedges</strong>. A <strong>wedge</strong> <span class="math inline">e\colon w\to F</span> is the data of an object <span class="math inline">e\in\mathcal{D}</span> and morphisms <span class="math inline">e_c\colon w\to F(c,c)</span> such that, for any <span class="math inline">f\colon c\to c'</span>, the following diagram commutes:</p>
+<p><span class="math display">\int^{c\in\mathcal{C}} F(c,c) :=
+\mathrm{colim}^{\mathrm{Hom}_{\mathcal{C}^\mathrm{op}}} F.</span></p>
+<p>Alternatively now, suppose that we have some <span class="math inline">F\colon
+\mathcal{C}^\mathrm{op}\times\mathcal{C}\to\mathcal{D}</span> between
+not-necessarily-enriched categories. We can still define the end by
+using <strong>wedges</strong>. A <strong>wedge</strong> <span class="math inline">e\colon w\to F</span> is the data of an object <span class="math inline">e\in\mathcal{D}</span> and morphisms <span class="math inline">e_c\colon w\to F(c,c)</span> such that, for any
+<span class="math inline">f\colon c\to c'</span>, the following
+diagram commutes:</p>
 <p><span class="math display">\begin{array}{ccc}
 w &amp; \xrightarrow{e_{c'}} &amp; F(c',c')\\
-^{e_c}\Big\downarrow\,\,\,\, &amp; &amp; _{F(f,\mathrm{id})}\Big\downarrow\qquad\\
+^{e_c}\Big\downarrow\,\,\,\, &amp; &amp;
+_{F(f,\mathrm{id})}\Big\downarrow\qquad\\
 F(c,c) &amp; \xrightarrow{F(\mathrm{id},f)} &amp; F(c,c')
 \end{array}</span></p>
 <p>Then we can define the end as a <em>universal</em> wedge <span class="math inline">w</span> (if it exists), i.e. any other wedge <span class="math inline">w'</span> factors uniquely through <span class="math inline">w'\to w</span></p>
 <h2 id="examples">Examples</h2>
-<p>I’m going to talk more about the exciting examples and applications of ends (tensor products of categories, geometric realisation, and Day convolution) in the next post in this series, but I would feel awful if I didn’t mention at least a couple here.</p>
-<p>One application of ends is in defining <strong>natural transformations</strong>, which shows how overarching the concept is. It is pretty much a triviality (from the definitions)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> that</p>
-<p><span class="math display">[\mathcal{C},\mathcal{D}](F,G) \cong \int_{c\in\mathcal{C}} \mathcal{D}\big(F(c),G(c)\big).</span></p>
-<p>This is a nice way of saying it, because it means that we can get the enriched natural transformations of enriched functors “for free” by defining them in exactly this way.</p>
-<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from the nLab</a>) is when we take <span class="math inline">\mathcal{V}=\mathbb{R}_{\geqslant0}\cup\{\infty\}</span>, with the monoidal product given by addition. Then a <span class="math inline">\mathcal{V}</span>-enriched category is a metric space, and the hom objects tell us the distance between points. Further, given two maps <span class="math inline">f,g\colon X\to Y</span> between two metric spaces, the distance between the maps is exactly the enriched functor-category<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> given by the end</p>
+<p>I’m going to talk more about the exciting examples and applications
+of ends (tensor products of categories, geometric realisation, and Day
+convolution) in the next post in this series, but I would feel awful if
+I didn’t mention at least a couple here.</p>
+<p>One application of ends is in defining <strong>natural
+transformations</strong>, which shows how overarching the concept is. It
+is pretty much a triviality (from the definitions)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+that</p>
+<p><span class="math display">[\mathcal{C},\mathcal{D}](F,G) \cong
+\int_{c\in\mathcal{C}} \mathcal{D}\big(F(c),G(c)\big).</span></p>
+<p>This is a nice way of saying it, because it means that we can get the
+enriched natural transformations of enriched functors “for free” by
+defining them in exactly this way.</p>
+<p>Another nice example (<a href="https://ncatlab.org/nlab/show/end#enriched_functor_categories">from
+the nLab</a>) is when we take <span class="math inline">\mathcal{V}=\mathbb{R}_{\geqslant0}\cup\{\infty\}</span>,
+with the monoidal product given by addition. Then a <span class="math inline">\mathcal{V}</span>-enriched category is a metric
+space, and the hom objects tell us the distance between points. Further,
+given two maps <span class="math inline">f,g\colon X\to Y</span> between
+two metric spaces, the distance between the maps is exactly the enriched
+functor-category<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> given by the end</p>
 <p><span class="math display">\begin{aligned}
     [X,Y](f,g) &amp;= \int _{x\in X} Y(f(x),g(x))\\
     &amp;= \sup_{x\in X} Y(f(x),g(x)) = \sup_{x\in X} \|f(x),g(x)\|_Y.
 \end{aligned}</span></p>
-<p>Finally, for the moment, there is the example of <strong>Kan extensions</strong>. If we have some <span class="math inline">\mathcal{V}</span>-enriched category <span class="math inline">\mathcal{D}</span> that is tensored<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> over <span class="math inline">\mathcal{V}</span>, and some functors <span class="math inline">F\colon\mathcal{C}\to\mathcal{D}</span> and <span class="math inline">p\colon\mathcal{C}\to\mathcal{B}</span>, then the <strong>left Kan extension</strong> of <span class="math inline">F</span> along <span class="math inline">p</span> is given by the coend:</p>
-<p><span class="math display">\mathrm{Lan}F = \int^{c\in\mathcal{C}} \mathrm{Hom}(p(c),-)\odot F(c)</span></p>
+<p>Finally, for the moment, there is the example of <strong>Kan
+extensions</strong>. If we have some <span class="math inline">\mathcal{V}</span>-enriched category <span class="math inline">\mathcal{D}</span> that is tensored<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+over <span class="math inline">\mathcal{V}</span>, and some functors
+<span class="math inline">F\colon\mathcal{C}\to\mathcal{D}</span> and
+<span class="math inline">p\colon\mathcal{C}\to\mathcal{B}</span>, then
+the <strong>left Kan extension</strong> of <span class="math inline">F</span> along <span class="math inline">p</span> is
+given by the coend:</p>
+<p><span class="math display">\mathrm{Lan}F = \int^{c\in\mathcal{C}}
+\mathrm{Hom}(p(c),-)\odot F(c)</span></p>
 <p>where <span class="math inline">\odot</span> is the co-power.</p>
-<p>In particular then, we see that the generalisation of limits to weighted limits is ‘at least as general as’ the idea of Kan extensions.</p>
-<h1 id="manipulation-and-ninja-yoneda">Manipulation and ninja Yoneda</h1>
+<p>In particular then, we see that the generalisation of limits to
+weighted limits is ‘at least as general as’ the idea of Kan
+extensions.</p>
+<h1 id="manipulation-and-ninja-yoneda">Manipulation and ninja
+Yoneda</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>It’s often useful to know the following fact: <em>continuous functors preserve ends (and, dually, cocontinuous functors preserve coends)</em>. In particular,</p>
+<p>It’s often useful to know the following fact: <em>continuous functors
+preserve ends (and, dually, cocontinuous functors preserve coends)</em>.
+In particular,</p>
 <p><span class="math display">\begin{aligned}
-    \mathcal{D}\left( d,\int_\mathcal{C} F \right) &amp;\cong \int_\mathcal{C} \mathcal{D}(d,F)\\
-    \mathcal{D}\left( \int^\mathcal{C}\!\!F, d \right) &amp;\cong \int_\mathcal{C} \mathcal{D}(F,d).
+    \mathcal{D}\left( d,\int_\mathcal{C} F \right) &amp;\cong
+\int_\mathcal{C} \mathcal{D}(d,F)\\
+    \mathcal{D}\left( \int^\mathcal{C}\!\!F, d \right) &amp;\cong
+\int_\mathcal{C} \mathcal{D}(F,d).
 \end{aligned}</span></p>
-<p>We can also rephrase the Yoneda lemma<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> in terms of ends, as well as finding a <strong>co-Yoneda lemma</strong>.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> The Yoneda lemma (in the setting of <span class="math inline">\mathcal{V}</span>-enriched categories) reads</p>
-<p><span class="math display">[\mathcal{C}^\mathrm{op},\mathcal{V}](\mathcal{C}(-,c),F) \cong F(c)</span></p>
+<p>We can also rephrase the Yoneda lemma<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> in
+terms of ends, as well as finding a <strong>co-Yoneda lemma</strong>.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> The Yoneda lemma (in the setting of
+<span class="math inline">\mathcal{V}</span>-enriched categories)
+reads</p>
+<p><span class="math display">[\mathcal{C}^\mathrm{op},\mathcal{V}](\mathcal{C}(-,c),F)
+\cong F(c)</span></p>
 <p>and so can be rephrased as</p>
-<p><span class="math display">F \cong \int_{c\in\mathcal{C}} \mathcal{C}(c,-)\otimes F(c)</span></p>
+<p><span class="math display">F \cong \int_{c\in\mathcal{C}}
+\mathcal{C}(c,-)\otimes F(c)</span></p>
 <p>whence we find the co-Yoneda lemma:</p>
-<p><span class="math display">F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c).</span></p>
+<p><span class="math display">F \cong \int^{c\in\mathcal{C}}
+\mathcal{C}(-,c)\otimes F(c).</span></p>
 <h1 id="much-better-references">Much better references</h1>
 <a href="#post-title" class="toc-back">↟</a>
-<p>If you really want to read about ends then you my friend are in the wrong place. Here are some papers and blog posts that I found interesting and really well written:</p>
+<p>If you really want to read about ends then you my friend are in the
+wrong place. Here are some papers and blog posts that I found
+interesting and really well written:</p>
 <ol type="1">
-<li><a href="https://arxiv.org/abs/1501.02503">This is the (co)end, my only (co)friend</a></li>
-<li><a href="https://arxiv.org/abs/1604.01670">Coends in conformal field theory</a></li>
+<li><a href="https://arxiv.org/abs/1501.02503">This is the (co)end, my
+only (co)friend</a></li>
+<li><a href="https://arxiv.org/abs/1604.01670">Coends in conformal field
+theory</a></li>
 <li>
-<a href="https://golem.ph.utexas.edu/category/2014/01/ends.html">Ends</a>, on the the n-Category Café</li>
+<a href="https://golem.ph.utexas.edu/category/2014/01/ends.html">Ends</a>,
+on the the n-Category Café</li>
 <li>
-<a href="https://bartoszmilewski.com/2017/03/29/ends-and-coends/">Ends and coends</a>, on Bartosz Milewski’s Programming Cafe</li>
+<a href="https://bartoszmilewski.com/2017/03/29/ends-and-coends/">Ends and
+coends</a>, on Bartosz Milewski’s Programming Cafe</li>
 </ol>
 <section class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1" role="doc-endnote"><p>A subobject of an object <span class="math inline">y</span> is a class of isomorphisms of monomorphisms into <span class="math inline">y</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2" role="doc-endnote"><p>One thing that I’ve learnt whilst reading about category theory, or even just modern maths in general, is that it is very tempting to <em>accept</em> that something is a triviality without really thinking about <em>why</em> it’s trivial. Many a time have I thought that I knew that something was trivial only to fail to be able to explain it to somebody when asked. My new year’s resolution is to always prove that trivialities are trivial.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3" role="doc-endnote"><p>I’m not sure if this should be ‘enriched functor-category’ or ‘enriched-functor category’. My first thought was the latter, because it’s the category of enriched functors, but I suppose that it’s clearer that our natural transformations are also enriched if we describe this as ‘the functor category enriched over <span class="math inline">\mathcal{V}</span>’. But then, I tend to overuse hyphens when there’s more than one adjective, just to be extra safe.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4" role="doc-endnote"><p>‘Tensor’ is another name for ‘co-power’, i.e. a <span class="math inline">\mathcal{V}</span>-category <span class="math inline">\mathcal{E}</span> is <strong>tensored over <span class="math inline">\mathcal{V}</span></strong> if all pairs of objects <span class="math inline">(x,k)</span>, where <span class="math inline">x\in\mathcal{E}</span> and <span class="math inline">k\in\mathcal{V}</span>, have a <strong>co-power</strong>: an object <span class="math inline">k\odot x</span> along with a natural isomorphism <span class="math inline">\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k, \mathcal{C}(x,-))</span>, where <span class="math inline">\mathcal{V}(-,-)</span> is the internal hom in <span class="math inline">\mathcal{V}</span>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5" role="doc-endnote"><p>When phrased in terms of ends, this is sometimes called <em>Yoneda reduction</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6" role="doc-endnote"><p>This presentation of the (co-)Yoneda lemma is <a href="https://mathoverflow.net/a/20451">sometimes referred to</a> as the <em>ninja Yoneda lemma</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>A subobject of an object <span class="math inline">y</span> is a class of isomorphisms of monomorphisms
+into <span class="math inline">y</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>One thing that I’ve learnt whilst
+reading about category theory, or even just modern maths in general, is
+that it is very tempting to <em>accept</em> that something is a
+triviality without really thinking about <em>why</em> it’s trivial. Many
+a time have I thought that I knew that something was trivial only to
+fail to be able to explain it to somebody when asked. My new year’s
+resolution is to always prove that trivialities are trivial.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>I’m not sure if this should be
+‘enriched functor-category’ or ‘enriched-functor category’. My first
+thought was the latter, because it’s the category of enriched functors,
+but I suppose that it’s clearer that our natural transformations are
+also enriched if we describe this as ‘the functor category enriched over
+<span class="math inline">\mathcal{V}</span>’. But then, I tend to
+overuse hyphens when there’s more than one adjective, just to be extra
+safe.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>‘Tensor’ is another name for
+‘co-power’, i.e. a <span class="math inline">\mathcal{V}</span>-category
+<span class="math inline">\mathcal{E}</span> is <strong>tensored over
+<span class="math inline">\mathcal{V}</span></strong> if all pairs of
+objects <span class="math inline">(x,k)</span>, where <span class="math inline">x\in\mathcal{E}</span> and <span class="math inline">k\in\mathcal{V}</span>, have a
+<strong>co-power</strong>: an object <span class="math inline">k\odot
+x</span> along with a natural isomorphism <span class="math inline">\mathcal{C}(k\odot x, -) \cong \mathcal{V}(k,
+\mathcal{C}(x,-))</span>, where <span class="math inline">\mathcal{V}(-,-)</span> is the internal hom in <span class="math inline">\mathcal{V}</span>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5" role="doc-endnote"><p>When phrased in terms of ends, this
+is sometimes called <em>Yoneda reduction</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6" role="doc-endnote"><p>This presentation of the (co-)Yoneda
+lemma is <a href="https://mathoverflow.net/a/20451">sometimes referred
+to</a> as the <em>ninja Yoneda lemma</em>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
