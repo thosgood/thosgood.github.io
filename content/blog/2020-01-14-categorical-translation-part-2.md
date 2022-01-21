@@ -8,7 +8,7 @@ created_at: 2020-01-14
 
 After my [previous post](https://thosgood.com/blog/2019/11/07/categorical-translation-part-1.html), I got the chance to _(a)_ spend a bit of time thinking about things, and _(b)_ talk to [Jade Master](https://sites.google.com/view/jadeedenstarmaster/home) on Twitter.
 Rather than going back to edit my original post, I decided to turn this into more of a series.
-Here are some new thoughts (but not really any _visible_ progress) on the whole kit and caboodle.^[I realise that, despite writing about how to write mathematics in a language-independent way, I use a lot of little phrases that maybe aren't very easy to understand for foreign speakers. I understand the irony of this, but, living abroad, I do miss such words, because they're quite fun to say, and so I do go somewhat over the top when it comes to these blog posts. Sorry.]
+Here are some new thoughts (but not really any _visible_ progress) on the whole affair.
 
 <!-- more -->
 
