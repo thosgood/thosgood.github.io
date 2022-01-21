@@ -9,24 +9,24 @@ jobs:
     runs-on: macOS-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: ⬇️ Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Ruby ✨
+      - name: 💿 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7.5
           bundler-cache: true
 
-      - name: Setup Pandoc ✨
+      - name: 💿 Setup Pandoc
         run: brew install pandoc
 
-      - name: Install and Build 🔧
+      - name: 🛠 Install and Build
         run: |
           bundle exec nanoc
           bundle exec nanoc check internal_links mixed_content stale
           
-      - name: Deploy 🚀
+      - name: 🚀 Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
