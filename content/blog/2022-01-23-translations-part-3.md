@@ -15,7 +15,7 @@ The main change is that *nearly* all of the translations are now viewable as web
 This hopefully makes them much more accessible to people who use screen readers, but is also nice even for people who don't: you can change the font, the font size, switch to dark mode, use the table of contents which scrolls down the page with you, fit the whole page onto your phone, etc. etc.
 I also took this opportunity to refresh the CSS a bit, so hopefully things look slick and nice now.
 
-![New style for web versions of translations](/assets/post-images/2022-01-23-new-css.png "New style for web versions of translations")
+![New style for web versions of translations: the buttons in the top left are for toggling the table of contents, changing font options, and viewing the PDF version. Thanks [Bookdown](https://bookdown.org/)!](/assets/post-images/2022-01-23-new-css.png "New style for web versions of translations")
 
 There are some translations which I probably won't switch over to HTML, simply because they have commutative diagrams which cannot be rendered in the [`CD` environment](https://ctan.org/pkg/amscd?lang=en) (which is now supported by KaTeX), and I just haven't gotten around to sorting out image generation for these web versions yet.
 
