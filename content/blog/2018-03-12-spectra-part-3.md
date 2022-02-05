@@ -2,7 +2,7 @@
 title: Loop spaces, spectra, and operads
 part: Part 3
 kind: article
-tags: ['category-theory', 'spectra', 'algebraic-topology', 'operads']
+tags: ['higher-category-theory', 'category-theory', 'spectra', 'algebraic-topology', 'operads']
 created_at: 2018-03-12
 ---
 
