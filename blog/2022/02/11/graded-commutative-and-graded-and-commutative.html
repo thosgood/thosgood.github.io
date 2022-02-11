@@ -290,7 +290,7 @@ and we definitely have that <span class="math inline">0=0</span>).</p>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
-<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (unless <span class="math inline">n=1</span>)</td>
 <td style="text-align: center;">✅</td>
 </tr>
 </tbody>
@@ -359,8 +359,8 @@ enforcing that one separately!)</p>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
-<td style="text-align: center;">❌ (unless <span class="math inline">n=1</span>) ✅</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">❌ (unless <span class="math inline">n=1</span>)</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2</span> is invertible in <span class="math inline">S</span>)</td>
 </tr>
 </tbody>
@@ -399,7 +399,7 @@ need”.</em></p>
 <span class="math display">
   \operatorname{H}^\bullet(X\times Y) \cong
 \operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y)
-</span> (where <span class="math inline">\iso</span> means “isomorphic
+</span> (where <span class="math inline">\cong</span> means “isomorphic
 <em>as graded rings</em>”).</p>
 </div>
 <p>Using this, we can look at two examples.</p>
@@ -408,12 +408,12 @@ need”.</em></p>
   \operatorname{H}^n(S^1) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0,1\text{;}
-    0 &amp;\text{otherwise.}
+  \\0 &amp;\text{otherwise.}
   \end{cases}
 </span> If we denote by <span class="math inline">\alpha</span> the
 generator of <span class="math inline">\operatorname{H}^1(S^1)</span>,
 then <span class="math display">
-  \alpha^2 \coloneqq \alpha\cup\alpha
+  \alpha^2 \coloneqq \alpha\smile\alpha
 </span> is an element of <span class="math inline">\operatorname{H}^2(S^1)</span>, but this group is
 zero, and so it must be the case that <span class="math inline">\alpha^2=0</span>. Thus <span class="math display">
   \operatorname{H}^\bullet(S^1) \cong \mathbb{Z}\langle1\rangle \oplus
@@ -439,12 +439,12 @@ graded commutative but <em>not</em> commutative (i.e. <span class="math inline"
   \operatorname{H}^n(S^2) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0,2\text{;}
-    0 &amp;\text{otherwise.}
+  \\0 &amp;\text{otherwise.}
   \end{cases}
 </span> If we denote by <span class="math inline">\beta</span> the
 generator of <span class="math inline">\operatorname{H}^2(S^2)</span>,
 then <span class="math display">
-  \beta^2 \coloneqq \beta\cup\beta
+  \beta^2 \coloneqq \beta\smile\beta
 </span> is an element of <span class="math inline">\operatorname{H}^4(S^2)</span>, but this group is
 zero, and so it must be the case that <span class="math inline">\beta^2=0</span>. Thus <span class="math display">
   \operatorname{H}^\bullet(S^2) \cong \mathbb{Z}\langle1\rangle \oplus
@@ -495,8 +495,8 @@ of our previous lemma).</p>
   \operatorname{H}^n(\mathbb{RP}^2) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0\text{;}
-    \mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=2\text{;}
-    0 &amp;\text{otherwise.}
+  \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=2\text{;}
+  \\0 &amp;\text{otherwise.}
   \end{cases}
 </span> Doing some <span class="math inline">\operatorname{Tor}</span>
 calculations (use the fact that <span class="math inline">\mathbb{Z}</span> is free and thus flat (or even
@@ -507,10 +507,10 @@ the above Corollary gives us that <span class="math display">
   \operatorname{H}^n(\mathbb{RP}^2\times\mathbb{RP}^2) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0\text{;}
-    (\mathbb{Z}/2\mathbb{Z})^2 &amp;\text{if }n=2\text{;}
-    \mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=3{;}
-    \mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=4{;}
-    0 &amp;\text{otherwise.}
+  \\(\mathbb{Z}/2\mathbb{Z})^2 &amp;\text{if }n=2\text{;}
+  \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=3{;}
+  \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=4{;}
+  \\0 &amp;\text{otherwise.}
   \end{cases}
 </span> We’ve written the case <span class="math inline">n=3</span> on a
 separate line because this is exactly the “correction term” given by the
@@ -521,7 +521,7 @@ otherwise.</p>
 <div class="rmenv" title="Exercise">
 <p>Calculate <span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^2\times\mathbb{RP}^2;\mathbb{Q}/\mathbb{Z})</span>.</p>
 <p><em>Hint: use the Universal Coefficient Theorem, or the long exact
-sequence associated to the short exact sequence <span class="math inline">0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadsrightarrow\mathbb{Q}/\mathbb{Z}\to0</span>,
+sequence associated to the short exact sequence <span class="math inline">0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadrightarrow\mathbb{Q}/\mathbb{Z}\to0</span>,
 and recall that <span class="math inline">\operatorname{Tor}(A,\mathbb{Q}/\mathbb{Z})\cong\operatorname{tors}(A)</span>,
 the torsion part of <span class="math inline">A</span>.</em></p>
 </div>
@@ -537,7 +537,7 @@ where <span class="math inline">|\beta|=2</span>;</li>
 where <span class="math inline">|\beta|=2</span> and <span class="math inline">|\varepsilon|=2n+1</span> (here <span class="math inline">\epsilon</span> is the generator of <span class="math inline">\operatorname{H}^{2n+1}</span>).</li>
 </ul>
 <p>What’s nice is that, if we work with <span class="math inline">\mathbb{Z}/2\mathbb{Z}</span> coefficients (instead
-of <span class="math inline">\mathbb{Z}</span>}), then we can write both
+of <span class="math inline">\mathbb{Z}</span>), then we can write both
 cases together as one thing:</p>
 <ul>
 <li>
