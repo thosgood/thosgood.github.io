@@ -139,7 +139,7 @@ Back to our table:
 | :---------: | :----------: | :-----------------: |
 | $S[x]$ | ✅ | ❌ (**unless** $2=0$ in $S$) |
 | $S[x^2]$ | ✅ | ✅ |
-| $\Lambda_S[\alpha_1,\ldots,\alpha_n]$ | ✅ | ✅ |
+| $\Lambda_S[\alpha_1,\ldots,\alpha_n]$ | ❌ (unless $n=1$) | ✅ |
 
 (we've removed the row for $S[x]/(x^2)$, since this is just a specific example of the exterior algebra $\Lambda_S[\alpha_1,\ldots,\alpha_n]$ where $n=1$.)
 
@@ -171,7 +171,7 @@ Of course, I'm going to put this in the table (and I'll write "gc-ring" to mean 
 | :---------: | :----------: | :-----------------: | :-----------------: |
 | $S[x]$ | ✅ | ❌ (**unless** $2=0$ in $S$) | ✅ |
 | $S[x^d]$ | ✅ | ❌ (**unless** $2$ divides $d$) | ✅ |
-| $\Lambda_S[\alpha_1,\ldots,\alpha_n]$ | ❌ (unless $n=1$) ✅ | | ❌ (**unless** $2$ is invertible in $S$) |
+| $\Lambda_S[\alpha_1,\ldots,\alpha_n]$ | ❌ (unless $n=1$) | ✅ | ❌ (**unless** $2$ is invertible in $S$) |
 
 By now you have probably noticed that all of the difficulties and subtleties come from how the number $2$ behaves (except for the exterior algebra only being commutative when in one variable, but this isn't a "graded" property, so we'll ignore that one), and this is a very common thing to happen.^[Both number theorists and algebraic geometers get very tired of having to write "let $k$ be a field of characteristic not equal to $2$", since $2$ "behaves badly" for them; some algebraic topologists, on the other hand, get very excited when you say "calculate (co)homology with coefficients in a field of characteristic $2$", since $2$ "behaves nicely" for them. Basically, $2$ is a tricky number.]
 
@@ -205,7 +205,7 @@ If $Y$ is such that $\HH^\bullet(Y)$ is *free* (as a graded commutative ring) an
 $$
   \HH^\bullet(X\times Y) \cong \HH^\bullet(X)\otimes\HH^\bullet(Y)
 $$
-(where $\iso$ means "isomorphic *as graded rings*").
+(where $\cong$ means "isomorphic *as graded rings*").
 :::
 
 Using this, we can look at two examples.
@@ -216,12 +216,12 @@ $$
   \HH^n(S^1) =
   \begin{cases}
     \mathbb{Z} &\text{if }n=0,1\text{;}
-    0 &\text{otherwise.}
+  \\0 &\text{otherwise.}
   \end{cases}
 $$
 If we denote by $\alpha$ the generator of $\HH^1(S^1)$, then
 $$
-  \alpha^2 \coloneqq \alpha\cup\alpha
+  \alpha^2 \coloneqq \alpha\smile\alpha
 $$
 is an element of $\HH^2(S^1)$, but this group is zero, and so it must be the case that $\alpha^2=0$.
 Thus
@@ -247,12 +247,12 @@ $$
   \HH^n(S^2) =
   \begin{cases}
     \mathbb{Z} &\text{if }n=0,2\text{;}
-    0 &\text{otherwise.}
+  \\0 &\text{otherwise.}
   \end{cases}
 $$
 If we denote by $\beta$ the generator of $\HH^2(S^2)$, then
 $$
-  \beta^2 \coloneqq \beta\cup\beta
+  \beta^2 \coloneqq \beta\smile\beta
 $$
 is an element of $\HH^4(S^2)$, but this group is zero, and so it must be the case that $\beta^2=0$.
 Thus
@@ -307,8 +307,8 @@ $$
   \HH^n(\mathbb{RP}^2) =
   \begin{cases}
     \mathbb{Z} &\text{if }n=0\text{;}
-    \mathbb{Z}/2\mathbb{Z} &\text{if }n=2\text{;}
-    0 &\text{otherwise.}
+  \\\mathbb{Z}/2\mathbb{Z} &\text{if }n=2\text{;}
+  \\0 &\text{otherwise.}
   \end{cases}
 $$
 Doing some $\operatorname{Tor}$ calculations (use the fact that $\mathbb{Z}$ is free and thus flat (or even just projective) to see that $\operatorname{Tor}(\mathbb{Z},-)=\operatorname{Tor}(-,\mathbb{Z})=0$; use the fact that $\operatorname{Tor}(A,\mathbb{Z}/m\mathbb{Z})\cong\{a\in A\mid ma=0\}$ to see that $\operatorname{Tor}(\mathbb{Z}/2\mathbb{Z},\mathbb{Z}/2\mathbb{Z})\cong\mathbb{Z}/2\mathbb{Z}$), the above Corollary gives us that
@@ -316,10 +316,10 @@ $$
   \HH^n(\mathbb{RP}^2\times\mathbb{RP}^2) =
   \begin{cases}
     \mathbb{Z} &\text{if }n=0\text{;}
-    (\mathbb{Z}/2\mathbb{Z})^2 &\text{if }n=2\text{;}
-    \mathbb{Z}/2\mathbb{Z} &\text{if }n=3{;}
-    \mathbb{Z}/2\mathbb{Z} &\text{if }n=4{;}
-    0 &\text{otherwise.}
+  \\(\mathbb{Z}/2\mathbb{Z})^2 &\text{if }n=2\text{;}
+  \\\mathbb{Z}/2\mathbb{Z} &\text{if }n=3{;}
+  \\\mathbb{Z}/2\mathbb{Z} &\text{if }n=4{;}
+  \\0 &\text{otherwise.}
   \end{cases}
 $$
 We've written the case $n=3$ on a separate line because this is exactly the "correction term" given by the Künneth theorem, i.e. the previous Lemma would have given us everything else but would have said that $\HH^3=0$; Künneth tells us otherwise.
@@ -328,7 +328,7 @@ We've written the case $n=3$ on a separate line because this is exactly the "cor
 ::: {.rmenv title="Exercise"}
 Calculate $\HH^\bullet(\mathbb{RP}^2\times\mathbb{RP}^2;\mathbb{Q}/\mathbb{Z})$.
 
-*Hint: use the Universal Coefficient Theorem, or the long exact sequence associated to the short exact sequence $0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadsrightarrow\mathbb{Q}/\mathbb{Z}\to0$, and recall that $\operatorname{Tor}(A,\mathbb{Q}/\mathbb{Z})\cong\operatorname{tors}(A)$, the torsion part of $A$.*
+*Hint: use the Universal Coefficient Theorem, or the long exact sequence associated to the short exact sequence $0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadrightarrow\mathbb{Q}/\mathbb{Z}\to0$, and recall that $\operatorname{Tor}(A,\mathbb{Q}/\mathbb{Z})\cong\operatorname{tors}(A)$, the torsion part of $A$.*
 :::
 
 
@@ -339,7 +339,7 @@ Real projective spaces have pretty nice cohomology rings, but they differ in pre
 - $\HH^\bullet(\mathbb{RP}^{2n})\cong\mathbb{Z}[\beta]/(2\beta,\beta^{n+1})$, where $|\beta|=2$;
 - $\HH^\bullet(\mathbb{RP}^{2n+1})\cong\mathbb{Z}[\beta,\varepsilon]/(2\beta,\beta^{n+1},\epsilon^2,\beta\epsilon)$, where $|\beta|=2$ and $|\varepsilon|=2n+1$ (here $\epsilon$ is the generator of $\HH^{2n+1}$).
 
-What's nice is that, if we work with $\mathbb{Z}/2\mathbb{Z}$ coefficients (instead of $\mathbb{Z}$}), then we can write both cases together as one thing:
+What's nice is that, if we work with $\mathbb{Z}/2\mathbb{Z}$ coefficients (instead of $\mathbb{Z}$), then we can write both cases together as one thing:
 
 - $\HH^\bullet(\mathbb{RP}^n;\mathbb{Z}/2\mathbb{Z})\cong(\mathbb{Z}/2\mathbb{Z})[\alpha]/(\alpha^{n+1})$, where $|\alpha|=1$.
 
