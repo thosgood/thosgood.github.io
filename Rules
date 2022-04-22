@@ -10,6 +10,10 @@ preprocess do
     identifier = "/blog/tags/#{tag}"
     @items.create(content, attributes, identifier)
   end
+  # Delete future-dated and draft posts
+  @items.delete_if do |item|
+    (item[:created_at] > Date.today if item[:created_at]) || (item[:draft] == true)
+  end
 end
 
 # make pages for each tag item that we made in the preprocessing
