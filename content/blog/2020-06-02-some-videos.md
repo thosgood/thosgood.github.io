@@ -1,7 +1,7 @@
 ---
 title: Some videos I recorded
 kind: article
-tags: ['general', 'algebraic-geometry', 'differential-geometry']
+tags: ['general', 'algebraic-geometry', 'differential-geometry', 'quick-read']
 created_at: 2020-06-02
 ---
 

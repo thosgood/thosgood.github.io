@@ -1,7 +1,7 @@
 ---
 title: Derived, DG, triangulated, and infinity-categories
 kind: article
-tags: ['higher-category-theory', 'category-theory']
+tags: ['higher-category-theory', 'category-theory', 'quick-read']
 created_at: 2018-04-26
 ---
 

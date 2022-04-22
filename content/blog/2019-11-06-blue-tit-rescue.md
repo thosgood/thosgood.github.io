@@ -1,7 +1,7 @@
 ---
 title: Bird rescue
 kind: article
-tags: ['birds', 'general']
+tags: ['birds', 'general', 'quick-read']
 created_at: 2019-11-06
 ---
 

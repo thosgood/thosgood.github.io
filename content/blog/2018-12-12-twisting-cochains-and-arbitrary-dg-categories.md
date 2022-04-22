@@ -1,7 +1,7 @@
 ---
 title: Twisting cochains and arbitrary dg-categories
 kind: article
-tags: ['higher-category-theory', 'category-theory']
+tags: ['higher-category-theory', 'category-theory', 'quick-read']
 created_at: 2018-12-12
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Life update
 kind: article
-tags: ['general']
+tags: ['general', 'quick-read']
 created_at: 2021-02-24
 ---
 

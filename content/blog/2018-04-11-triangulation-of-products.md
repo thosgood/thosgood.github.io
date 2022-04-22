@@ -1,7 +1,7 @@
 ---
 title: Triangulations of products of triangulations
 kind: article
-tags: ['algebraic-topology', 'quick-tip']
+tags: ['algebraic-topology', 'quick-read', 'simplicial-things']
 created_at: 2018-04-11
 ---
 

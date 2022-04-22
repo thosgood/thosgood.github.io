@@ -1,6 +1,7 @@
 ---
 title: Nothing really that new
 kind: article
+tags: ['quick-read']
 created_at: 2018-07-08
 ---
 

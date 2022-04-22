@@ -2,7 +2,7 @@
 title: Translations
 part: Part 1
 kind: article
-tags: ['translation', 'general']
+tags: ['translation', 'general', 'quick-read']
 created_at: 2020-08-18
 ---
 

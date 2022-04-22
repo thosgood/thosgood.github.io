@@ -1,7 +1,7 @@
 ---
 title: Twisting cochains and twisted complexes
 kind: article
-tags: ['differential-geometry', 'complex-geometry', 'algebraic-topology', 'category-theory', 'homotopy-theory']
+tags: ['algebraic-topology', 'category-theory', 'homotopy-theory', 'quick-read']
 created_at: 2019-07-26
 ---
 

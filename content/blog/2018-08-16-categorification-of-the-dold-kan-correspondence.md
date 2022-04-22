@@ -1,7 +1,7 @@
 ---
 title: Categorification of the Dold-Kan correspondence
 kind: article
-tags: ['category-theory']
+tags: ['category-theory', 'quick-read']
 created_at: 2018-08-16
 ---
 

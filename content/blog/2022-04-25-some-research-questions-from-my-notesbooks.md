@@ -1,10 +1,12 @@
 ---
 title: Some research questions from my notebooks
 kind: article
-tags: []
+tags: ['algebraic-geometry', 'category-theory', 'simplicial-things']
 created_at: 2022-04-25
 draft: true
 ---
+
+
 
 <!-- more -->
 

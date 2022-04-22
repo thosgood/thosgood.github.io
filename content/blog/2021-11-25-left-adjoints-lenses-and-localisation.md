@@ -1,7 +1,7 @@
 ---
 title: Left adjoints, lenses, and localisation
 kind: article
-tags: ['lenses', 'algebraic-geometry', 'category-theory', 'homotopy-theory']
+tags: ['lenses', 'algebraic-geometry', 'category-theory', 'homotopy-theory', 'quick-read']
 created_at: 2021-11-26
 ---
 

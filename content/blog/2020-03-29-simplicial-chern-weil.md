@@ -1,7 +1,7 @@
 ---
 title: Simplicial Chern-Weil theory
 kind: article
-tags: ['category-theory', 'algebraic-geometry']
+tags: ['category-theory', 'algebraic-geometry', 'simplicial-things']
 created_at: 2020-03-29
 ---
 
