@@ -10,9 +10,10 @@ preprocess do
     identifier = "/blog/tags/#{tag}"
     @items.create(content, attributes, identifier)
   end
-  # Delete future-dated and draft posts
+  # Delete draft posts
   @items.delete_if do |item|
-    (item[:created_at] > Date.today if item[:created_at]) || (item[:draft] == true)
+    # (item[:created_at] > Date.today if item[:created_at]) || (item[:draft] == true)
+    (item[:draft] == true)
   end
 end
 
