@@ -24,7 +24,7 @@ All of these questions are about using the Čech nerve, and sometimes the notion
 
 ## Barycentric global sections always exist
 
-Take a presheaf $\mathscr{F}$ (of $\mathbb{R}$-modules, say) on some space $X$, and pick a bunch of local sections $\{s_i\in\Gamma(U_i,\mathscr{F})\}_{i\in I}$, where $\{U_i\}_{i\in I}$ is an open cover of $X$. Since we only have a presheaf, there's no reason for these local sections to glue to give a global section. *But* if we pull back our presheaf along the Čech nerve then we can consider the "barycentric global section" $\sum_{j=0}^p t_j s_j$ on any $U_{\alpha_0\ldots\alpha_p}$. This is like the "uniform average" of all the sections: if we fibre integrate then we'd get e.g. $\frac1{p+1}(s_{\alpha_0}+s_{\alpha_1}+\ldots+s_{\alpha_p})$ on each $U_{\alpha_0\ldots\alpha_p}$.
+Take a presheaf $\mathscr{F}$ (of $\mathbb{R}$-modules, say) on some space $X$, and pick a bunch of local sections $\{s_i\in\Gamma(U_i,\mathscr{F})\}_{i\in I}$, where $\{U_i\}_{i\in I}$ is an open cover of $X$. Since we only have a presheaf, there's no reason for these local sections to glue to give a global section. *But* if we pull back our presheaf along the Čech nerve then we can consider the "barycentric global section" $\sum_{j=0}^p t_j s_j$ on any $U_{\alpha_0\ldots\alpha_p}$. This is like the "uniform average" of all the sections: if we fibre integrate then we'd get e.g. $\frac1{p+1}\sum_{i=0}^p s_{\alpha_j}$ on each $U_{\alpha_0\ldots\alpha_p}$.
 
 Is this ever useful at all?
 
