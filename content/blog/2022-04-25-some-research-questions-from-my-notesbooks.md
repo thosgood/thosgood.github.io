@@ -8,13 +8,13 @@ draft: true
 
 One thing that the past few years have taught me is that I am not good at doing maths all by myself. In fact, I would go as far as to say I am completely useless and unmotivated. I do much better when I have coauthors to give me deadlines and friends to talk to, but, for obvious reasons, the past two years have not been good for this. Not really the ideal time for first postdocs, but alas, that's life.
 
-I recently found an old notebook with some vague questions and research ideas in it, and then realised that I had really no reasons whatsoever to keep them to myself.
+I recently found an old notebook with some vague questions and research ideas in it, and then realised that I had no real reasons to keep them to myself.
 
 <!-- more -->
 
 A common fear amongst early-career mathematicians seems to be getting scooped: having somebody solve the questions you were working on before you do, maybe even by having read your work and using it as a launchpad. This is very understandable, since we live in a horrible academic world where publishing is everything, and trying to publish some results that you've arrived at *after* somebody else, no matter how shortly or how differently, suddenly becomes a *lot* harder, which makes getting a job next year *much* more difficult, and...
 
-Because of this, I've always been a bit cautious in writing what I'm working on. But, in the context of my life, the world around me, and some other things, I realise that these fears aren't really very well founded right now. There's no point in me worrying about other people using my ideas to solve problems before I do if *I'm not even working on applying my ideas myself*. Not only that, it's not like I'm sitting on some goldmine of potential paths to solutions of big long-standing open problems --- I just have a few small ideas about small things, and none of them are particularly profound or ingenious anyway! If anything, I shouldn't be worried about people scooping my ideas, but the opposite: trying to get anybody to listen to my ideas at all!
+Because of this, I've always been a bit cautious in writing what I'm working on. But, in the context of my life, the world around me, and some other things, I realise that these fears aren't really very well founded right now. There's no point in me worrying about other people using my ideas to solve problems before I do if *I'm not even working on applying my ideas myself*. Not only that, it's not like I'm sitting on some goldmine of potential paths to solutions of big long-standing open problems --- I just have a few small ideas about small things, and none of them are particularly profound or ingenious anyway! If anything, I shouldn't be worried about people scooping my ideas, but the opposite: trying to get anybody to listen to my ideas at all! Not only that, but I grow more and more pessimistic about the lifespan of my "career" in this field ("homotopical complex geometry", for want of a better name), so who knows how much longer I'll be actively thinking about these things anyway.
 
 So I figured I might as well just open my research up^[Apart from one paper which I'm currently working on with a coauthor, because that's not just my story to share. But this will hopefully hit the arXiv... within a year? I dunno, I've been saying that about this paper for the past two years, so we'll see what actually happens.] in the hopes that one of you might see one of the questions I have and think "oh, that's interesting, I wonder if Tim would like to work on that with me" (to which I would almost certainly (time and obligations permitting) answer, "yes, that would be so lovely").
 
@@ -33,19 +33,49 @@ Is this ever useful at all?
 
 Consider some complex-analytic "thing" (i.e. manifold, space, whatever) $X$ that is locally algebraic (whatever that might mean). If we take the Čech nerve then is the resulting simplicial "thing" an *algebraic* simplicial thing $\widetilde{X}$? In the case where $X$ is *not* algebraic, can we measure how far away it is from being so by looking at the simplicial thing $\widetilde{X}$?
 
-A simpler, similar question: is the Čech nerve of an affine cover of an (algebraic) scheme an "affine object" in the category of simplicial schemes? *(This should be something already well known, but I just don't know the answer myself.)*
+A simpler, similar question: is the Čech nerve of an affine cover of an (algebraic) scheme an "affine object" in the category of simplicial schemes?
+
+*(This last question should be something already well known, but I just don't know the answer myself.)*
 
 
 ### Some analytic geometry
 
-- Chern--Weil for stacks
-- Chern classes in (*holomorphic*) Deligne cohomology
+#### Chern--Weil for stacks
+
+One way of cheekily summarising some of the results from [my PhD thesis](https://tel.archives-ouvertes.fr/tel-02882140) would be that "sheaves on the Čech nerve sometimes allow you to apply smooth methods to complex-analytic things", and the application of this that I considered was Chern--Weil theory via the Atiyah exact sequence. So is it possible to extend some results concerning Chern--Weil theory via the Atiyah exact sequence on differentiable stacks to the complex-analytic case?
+
+*(This question was prompted by seeing two papers on the arXiv by Indranil Biswas, Saikat Chatterjee, Praphulla Koushik, and Frank Neumann: [2012.08442](https://arxiv.org/abs/2012.08442) and [2012.08447](https://arxiv.org/abs/2012.08447).)*
+
+#### Holomorphic Deligne cohomology
+
+This is one that I've been thinking about ever since the middle of my PhD, and it was actually the original problem that I'd hoped to solve (but that turned out to be much more difficult than we'd first thought). Deligne cohomology in the *smooth* setting is really well understood --- for example, Urs Schreiber has written SO much about this (and all very very lovely, albeit nearly entirely far over my head) under the name of *differential cohomology*. But at some point quite early on there is a partition of unity argument, which means that it fails in the holomorphic case. Indeed, there are lots of little worked examples you can do that show that Deligne cohomology in the complex-analytic world really is quite different.
+
+One "simple" concrete problem is the following: given a holomorphic vector bundle (not even an arbitrary coherent analytic sheaf!), write down *Čech representatives* for its Chern classes *in Deligne cohomology*. Just the first part (Čech representatives) was done^[Well, the method was explained, but the actual computations were basically left as an exercise to the reader --- I was one such reader, and I wrote them down in *my* PhD thesis.] in [Green's 1980 PhD thesis](http://wrap.warwick.ac.uk/40592/); just the second part (holomorphic Deligne cohomology) was done in [Grivaux's 2009 thesis](http://jgrivaux.perso.math.cnrs.fr/articles/Chern.pdf). There is a paper by Brylinski and McLaughlin ("[Cech Cocycles for Characteristic Classes](https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-178/issue-1/%C4%8Cech-cocycles-for-characteristic-classes/cmp/1104286562.pdf)") that seems to give an answer, but only gives a proof in the smooth setting, and when I sat down (many *many* times) and tried to work through it myself, the degrees in the holomorphic setting seemed to be exactly the wrong ones that you would get from trying to treat smooth Deligne cohomology like holomorphic Deligne cohomology (i.e. bidegree $(2p,0)$ instead of $(p,p)$, if I remember correctly).
 
 
 ### Some analytic sheaves
 
-- questions from https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html
-- Coh vs CCoh
+#### Complexes of coherent sheaves
+
+If you're dealing with sheaves in algebraic geometry, then you might care about whether or not they're coherent. Given that we like to think of complexes of sheaves instead of just single sheaves (e.g. we like working in the derived category), we are interested in the category $C^\mathrm{b}\mathsf{Coh}(X)$ of (bounded) complexes of coherent sheaves. But there's another category which actually arises in practice, namely the category $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of complexes of sheaves that are not necessarily coherent, but whose (internal, i.e. "kernel of the differential of the complex modulo the image of the differential") cohomology consists of coherent sheaves. The latter sounds like it should be more general, but in nice algebraic cases the two are actually equivalent! This follows a result in SGA 6:
+
+- **§II, Corollaire 2.2.2.1.** If $X$ is a Noetherian scheme, then the canonical fully faithful functor $D^\mathrm{b}(\mathsf{Coh}(X))\hookrightarrow D(\mathsf{Sh}(X))$ identifies the codomain with the full subcategory $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of the domain.
+
+Now there's another related result, which follows from applying the above corollary to a specific case:
+
+- **§I, Exemples 5.11 (+ II, Corollaire 2.2.2.1).** If $X$ is a smooth scheme, then there is a canonical equivalence of triangulated categories $\mathsf{Perf}(X)\xrightarrow{\sim}D^{\mathrm{b}}(\mathsf{Coh}(X))$.
+
+This says that, for *smooth* schemes, pseudo-coherence is equivalent to perfectness (being *locally* resolved by locally free sheaves).
+
+Now, this second statement holds even in the analytic case: coherent analytic sheaves always have *local* locally free resolutions. But the first statement is a corollary to Proposition 2.2.2, which uses the fact that "every quasi-coherent module is the filtrant colimit of its coherent submodules", and this is *not* true in the analytic case (in fact, this raises a question I'll talk about after this one).
+
+So are these two categories, "complexes of coherent sheaves" and "complexes of sheaves with coherent cohomology" equivalent in the analytic setting? In the specific case where $X$ is a smooth compact analytic *surface*, yes! This is Corollary 5.2.2 of Bondal and Van den Bergh's "[Generators and representability of functors in commutative and noncommutative geometry](https://arxiv.org/abs/math/0204218)". But in higher dimensions, it is (as far as I can tell) still an open question.
+
+I don't have any particular insight into this problem, except that I think (yet again) that sheaves on the nerve might have something to say about this. Furthermore, I haven't read the details of Bondal and Van den Bergh's proofs, nor those in SGA 6, so maybe the following is obvious (or even tautological somehow), but it's intriguing that these hypotheses ($X$ is smooth, compact, and a surface) are exactly those found in Schuster's "[Locally free resolutions of coherent sheaves on surfaces](https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html)" which shows that, under there hypothesis, coherent analytic sheaves can be *globally* resolved by locally free sheaves (the *resolution property*, something else which I'm going to talk about in a bit).
+
+#### Analogies between algebraic and analytic geometry
+
+Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html)". The main one here is "what should a quasi-coherent analytic sheaf be, and why is it the good one?" (and one possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together").
 
 
 ### Some questions at my thesis defence
