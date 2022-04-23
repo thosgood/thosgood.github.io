@@ -8,7 +8,7 @@ draft: true
 
 One thing that the past few years have taught me is that I am not good at doing maths all by myself. In fact, I would go as far as to say I am completely useless and unmotivated. I do much better when I have co-authors to give me deadlines and friends to talk to, but, for obvious reasons, the past two years have not been good for this. Not really the ideal time for first postdocs, but alas, that's life.
 
-I recently found an old notebook with some vague questions and research ideas in it, and then realised that I had no real reasons to keep them to myself.
+I recently found an old notebook with some vague questions and research ideas in it, and then realised that I have had no motivation to work on any of these alone, so why not put them out there for other people to see?
 
 <!-- more -->
 
