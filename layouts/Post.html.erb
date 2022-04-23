@@ -13,18 +13,6 @@
         </button>
       </li>
     </ul>
-    <ul id="font-select" class="fl">
-      <li>
-        <button type="button" onclick="sansStyle()">
-          Sans
-        </button>
-      </li>
-      <li>
-        <button type="button" onclick="serifStyle()">
-          Serif
-        </button>
-      </li>
-    </ul>
     <!-- Navigation -->
     <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr f5">&larr; Return to all posts</a>
   </div>
@@ -107,12 +95,5 @@
     for (var i = 0; i < tables.length; i++) {
       tables[i].style.color = 'black';
     }
-  }
-
-  function sansStyle() {
-    content.style.fontFamily = 'WorkSans';
-  }
-  function serifStyle() {
-    content.style.fontFamily = 'Domine';
   }
 </script>
