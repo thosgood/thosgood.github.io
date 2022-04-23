@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Some research questions from my notebooks // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.com/assets/images/me.jpg">
+
+    <title>Some research questions from my notebooks | Tim Hosgood</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f4-ns f5"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <!-- Navigation -->
+    <a href="/blog/#2022-04-25-some-research-questions-from-my-notesbooks" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">Some research questions from my notebooks</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">25th April, 2022</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/algebraic-geometry" rel="tag">algebraic-geometry</a>, <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/simplicial-things" rel="tag">simplicial-things</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#some-simplicial-things">Some simplicial things</a></li>
+<li><a href="#some-analytic-geometry">Some analytic geometry</a></li>
+<li><a href="#some-analytic-sheaves">Some analytic sheaves</a></li>
+</ol>
+<p>One thing that the past few years have taught me is that I am not
+good at doing maths all by myself. In fact, I would go as far as to say
+I am completely useless and unmotivated. I do much better when I have
+co-authors to give me deadlines and friends to talk to, but, for obvious
+reasons, the past two years have not been good for this. Not really the
+ideal time for first postdocs, but alas, that’s life.</p>
+<p>I recently found an old notebook with some vague questions and
+research ideas in it, and then realised that I had no real reasons to
+keep them to myself.</p>
+<!-- more -->
+<p>A common fear amongst early-career mathematicians seems to be getting
+scooped: having somebody solve the questions you were working on before
+you do, maybe even by having read your work and using it as a launchpad.
+This is very understandable, since we live in a horrible academic world
+where publishing is everything, and trying to publish some results that
+you’ve arrived at <em>after</em> somebody else, no matter how shortly or
+how differently, suddenly becomes a <em>lot</em> harder, which makes
+getting a job next year <em>much</em> more difficult, and…</p>
+<p>Because of this, I’ve always been a bit cautious in writing what I’m
+working on. But, in the context of my life, the world around me, and
+some other things, I realise that these fears aren’t really very well
+founded right now. There’s no point in me worrying about other people
+using my ideas to solve problems before I do if <em>I’m not even working
+on applying my ideas myself</em>. Not only that, it’s not like I’m
+sitting on some goldmine of potential paths to solutions of big
+long-standing open problems — I just have a few small ideas about small
+things, and none of them are particularly profound or ingenious anyway!
+(In fact, now that I read back what I’ve written, I see that they’re
+basically all just “what if you did X, but with the Čech nerve
+instead?”). If anything, I shouldn’t be worried about people scooping my
+ideas, but the opposite: trying to get anybody to listen to my ideas at
+all!</p>
+<p>So I figured I might as well just open my research up<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in
+the hopes that one of you might see one of the questions I have and
+think “oh, that’s interesting, I wonder if Tim would like to work on
+that with me” (to which I would almost certainly (time and obligations
+permitting) answer, “yes, that would be so lovely”).</p>
+<h1 id="some-simplicial-things">Some simplicial things</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>All of these questions are about using the Čech nerve, and sometimes
+the notion of (pre)sheaves on the Čech nerve (cf. Definition 2.2.1 in
+“<a href="https://arxiv.org/abs/2003.10023">Simplicial Chern-Weil theory
+for coherent analytic sheaves, Part I</a>”).</p>
+<h2 id="barycentric-global-sections-always-exist">Barycentric global
+sections always exist</h2>
+<p>Take a presheaf <span class="math inline">\mathscr{F}</span> (of
+<span class="math inline">\mathbb{R}</span>-modules, say) on some space
+<span class="math inline">X</span>, and pick a bunch of local sections
+<span class="math inline">\{s_i\in\Gamma(U_i,\mathscr{F})\}_{i\in
+I}</span>, where <span class="math inline">\{U_i\}_{i\in I}</span> is an
+open cover of <span class="math inline">X</span>. Since we only have a
+presheaf, there’s no reason for these local sections to glue to give a
+global section. <em>But</em> if we pull back our presheaf along the Čech
+nerve then we can consider the “barycentric global section” <span class="math inline">\sum_{j=0}^p t_j s_j</span> on any <span class="math inline">U_{\alpha_0\ldots\alpha_p}</span>. This is like the
+“uniform average” of all the sections: if we fibre integrate then we’d
+get e.g. <span class="math inline">\frac1{p+1}\sum_{i=0}^p
+s_{\alpha_j}</span> on each <span class="math inline">U_{\alpha_0\ldots\alpha_p}</span>.</p>
+<p>Is this ever useful at all?</p>
+<h2 id="čech-nerves-of-things">Čech nerves of things</h2>
+<p>Consider some complex-analytic “thing” (i.e. manifold, space,
+whatever) <span class="math inline">X</span> that is locally algebraic
+(whatever that might mean). If we take the Čech nerve then is the
+resulting simplicial “thing” an <em>algebraic</em> simplicial thing
+<span class="math inline">\widetilde{X}</span>? In the case where <span class="math inline">X</span> is <em>not</em> algebraic, can we measure
+how far away it is from being so by looking at the simplicial thing
+<span class="math inline">\widetilde{X}</span>?</p>
+<p>A simpler, similar question: is the Čech nerve of an affine cover of
+an (algebraic) scheme an “affine object” in the category of simplicial
+schemes?</p>
+<p><em>(This last question should be something already well known, but I
+just don’t know the answer myself.)</em></p>
+<h1 id="some-analytic-geometry">Some analytic geometry</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<h2 id="chernweil-for-stacks">Chern–Weil for stacks</h2>
+<p>One way of cheekily summarising some of the results from <a href="https://tel.archives-ouvertes.fr/tel-02882140">my PhD thesis</a>
+would be that “sheaves on the Čech nerve sometimes allow you to apply
+smooth methods to complex-analytic things”, and the application of this
+that I considered was Chern–Weil theory via the Atiyah exact sequence.
+So is it possible to extend some results concerning Chern–Weil theory
+via the Atiyah exact sequence on differentiable stacks to the
+complex-analytic case?</p>
+<p><em>(This question was prompted by seeing two papers on the arXiv by
+Indranil Biswas, Saikat Chatterjee, Praphulla Koushik, and Frank
+Neumann: <a href="https://arxiv.org/abs/2012.08442"><code>2012.08442</code></a> and
+<a href="https://arxiv.org/abs/2012.08447"><code>2012.08447</code></a>.)</em></p>
+<h2 id="holomorphic-deligne-cohomology">Holomorphic Deligne
+cohomology</h2>
+<p>This is one that I’ve been thinking about ever since the middle of my
+PhD, and it was actually the original problem that I’d hoped to solve
+(but that turned out to be much more difficult than we’d first thought).
+Deligne cohomology in the <em>smooth</em> setting is really well
+understood — for example, Urs Schreiber has written SO much about this
+(and all very very lovely, albeit nearly entirely far over my head)
+under the name of <em>differential cohomology</em>. But at some point
+quite early on there is a partition of unity argument, which means that
+it fails in the holomorphic case. Indeed, there are lots of little
+worked examples you can do that show that Deligne cohomology in the
+complex-analytic world really is quite different.</p>
+<p>One “simple” concrete problem is the following: given a holomorphic
+vector bundle (not even an arbitrary coherent analytic sheaf!), write
+down <em>Čech representatives</em> for its Chern classes <em>in Deligne
+cohomology</em>. Just the first part (Čech representatives) was done<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> in <a href="http://wrap.warwick.ac.uk/40592/">Green’s 1980 PhD thesis</a>;
+just the second part (holomorphic Deligne cohomology) was done in <a href="http://jgrivaux.perso.math.cnrs.fr/articles/Chern.pdf">Grivaux’s
+2009 thesis</a>. There is a paper by Brylinski and McLaughlin (“<a href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-178/issue-1/%C4%8Cech-cocycles-for-characteristic-classes/cmp/1104286562.pdf">Cech
+Cocycles for Characteristic Classes</a>”) that seems to give an answer,
+but only gives a proof in the smooth setting, and when I sat down (many
+<em>many</em> times) and tried to work through it myself, the degrees in
+the holomorphic setting seemed to be exactly the wrong ones that you
+would get from trying to treat smooth Deligne cohomology like
+holomorphic Deligne cohomology (i.e. bidegree <span class="math inline">(2p,0)</span> instead of <span class="math inline">(p,p)</span>, if I remember correctly).</p>
+<h1 id="some-analytic-sheaves">Some analytic sheaves</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<h2 id="complexes-of-coherent-sheaves">Complexes of coherent
+sheaves</h2>
+<p>If you’re dealing with sheaves in algebraic geometry, then you might
+care about whether or not they’re coherent. Given that we like to think
+of complexes of sheaves instead of just single sheaves (e.g. we like
+working in the derived category), we are interested in the category
+<span class="math inline">C^\mathrm{b}\mathsf{Coh}(X)</span> of
+(bounded) complexes of coherent sheaves. But there’s another category
+which actually arises in practice, namely the category <span class="math inline">D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))</span>
+of complexes of sheaves that are not necessarily coherent, but whose
+(internal, i.e. “kernel of the differential of the complex modulo the
+image of the differential”) cohomology consists of coherent sheaves. The
+latter sounds like it should be more general, but in nice algebraic
+cases the two are actually equivalent! This follows from a result in SGA
+6:</p>
+<ul>
+<li>
+<strong>SGA 6, II, Corollaire 2.2.2.1.</strong> If <span class="math inline">X</span> is a Noetherian scheme, then the canonical
+fully faithful functor <span class="math inline">D^\mathrm{b}(\mathsf{Coh}(X))\hookrightarrow
+D(\mathsf{Sh}(X))</span> identifies the codomain with the full
+subcategory <span class="math inline">D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))</span>
+of the domain.</li>
+</ul>
+<p>Now there’s another related result, which follows from applying the
+above corollary to a specific case:</p>
+<ul>
+<li>
+<strong>SGA 6, I, Exemples 5.11 (+ II, Corollaire 2.2.2.1).</strong>
+If <span class="math inline">X</span> is a smooth scheme, then there is
+a canonical equivalence of triangulated categories <span class="math inline">\mathsf{Perf}(X)\xrightarrow{\sim}D^{\mathrm{b}}(\mathsf{Coh}(X))</span>.</li>
+</ul>
+<p>This says that, for <em>smooth</em> schemes, pseudo-coherence is
+equivalent to perfectness (being <em>locally</em> resolved by locally
+free sheaves).</p>
+<p>Now, this second statement holds even in the analytic case: coherent
+analytic sheaves always have <em>local</em> locally free resolutions.
+But the first statement is a corollary to Proposition 2.2.2, which uses
+the fact that “every quasi-coherent module is the filtrant colimit of
+its coherent submodules”, and this is <em>not</em> true in the analytic
+case (in fact, this raises a question I’ll talk about after this
+one).</p>
+<p>So are these two categories, “complexes of coherent sheaves” and
+“complexes of sheaves with coherent cohomology” equivalent in the
+analytic setting? In the specific case where <span class="math inline">X</span> is a smooth compact analytic
+<em>surface</em>, yes! This is Corollary 5.2.2 of Bondal and Van den
+Bergh’s “<a href="https://arxiv.org/abs/math/0204218">Generators and
+representability of functors in commutative and noncommutative
+geometry</a>”. But in higher dimensions, it is (as far as I can tell)
+still an open question.</p>
+<p>I don’t have any particular insight into this problem, except that I
+think (yet again) that sheaves on the nerve might have something to say
+about this. Furthermore, I haven’t read the details of Bondal and Van
+den Bergh’s proofs, nor those in SGA 6, so maybe the following is
+obvious (or even tautological somehow), but it’s intriguing that these
+hypotheses (<span class="math inline">X</span> is smooth, compact, and a
+surface) are exactly those found in Schuster’s “<a href="https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html">Locally
+free resolutions of coherent sheaves on surfaces</a>” which shows that,
+under there hypothesis, coherent analytic sheaves can be
+<em>globally</em> resolved by locally free sheaves (the <em>resolution
+property</em>).</p>
+<h2 id="the-resolution-property">The resolution property</h2>
+<p>Whether or not coherent analytic sheaves can be <em>globally</em>
+resolved by locally free sheaves (instead of just <em>locally</em>
+resolved) is controlled by the so-called <em>resolution property</em>,
+mentioned above. We say that something (e.g. a stack) <em>has the
+resolution property</em> if every coherent sheaf admits a surjection
+from a locally free sheaf — what happens if we change this to “… a
+surjection from a locally free sheaf <em>on the nerve</em>”? This could
+be useful for Riemann–Roch for Artin stacks: these have the resolution
+property when they are quotients of quasi-projective schemes by
+reductive groups, but not in general (and so this assumption appears in
+Toën’s Riemann–Roch paper). It could also be useful for a formal GAGA
+theorem, cf. Geraschenko and Zureick-Brown’s “<a href="https://arxiv.org/abs/1208.2882">Formal GAGA for good moduli
+spaces</a>”.</p>
+<h2 id="analogies-between-algebraic-and-analytic-geometry">Analogies
+between algebraic and analytic geometry</h2>
+<p>Here I’m just going to refer you to a previous blog post of mine: “<a href="https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html">Some
+questions about complex-analytic geometry</a>”. The main one here is
+“what should a quasi-coherent analytic sheaf be, and why is it the good
+one?” (and one possible answer is “read Scholze and Clausen’s lecture
+notes on condensed mathematics, Conrad’s paper on relative ampleness in
+rigid geometry, and Eschmeier and Putinar’s book <em>Spectral
+Decompositions and Analytic Sheaves</em>, and see if you can put all the
+pieces together”).</p>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Apart from one paper which I’m
+currently working on with a co-author, because that’s not just my story
+to share. But this will hopefully hit the arXiv… within a year? I dunno,
+I’ve been saying that about this paper for the past two years, so we’ll
+see what actually happens.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Well, the method was explained, but
+the actual computations were basically left as an exercise to the reader
+— I was one such reader, and I wrote them down in <em>my</em> PhD
+thesis.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+    <!-- Comments -->
+    <hr>
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css">
+    </script>
+    <div id="commento"></div>
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Stockholms Universitet</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+
+<!-- Use KaTeX rendering for all static page content -->
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

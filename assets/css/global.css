@@ -1,23 +1,7 @@
 /* Typography */
 
-@font-face {
-  font-family: WorkSans;
-  src: url(../fonts/WorkSans-VariableFont_wght.ttf) format('truetype');
-}
-@font-face {
-  font-family: WorkSans;
-  src: url(../fonts/WorkSans-Italic-VariableFont_wght.ttf) format('truetype');
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Domine;
-  src: url(../fonts/Domine-VariableFont_wght.ttf) format('truetype');
-}
-
-
 body {
-  font: 330 1rem WorkSans, Avenir, Helvetica, Arial, sans-serif;
+  font: 400 1rem Avenir, Helvetica, Arial, sans-serif;
   background-color: #f0f8ff;
 }
 
