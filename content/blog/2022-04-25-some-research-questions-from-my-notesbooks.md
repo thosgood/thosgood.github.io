@@ -19,17 +19,17 @@ Because of this, I've always been a bit cautious in writing what I'm working on.
 So I figured I might as well just open my research up^[Apart from one paper which I'm currently working on with a coauthor, because that's not just my story to share. But this will hopefully hit the arXiv... within a year? I dunno, I've been saying that about this paper for the past two years, so we'll see what actually happens.] in the hopes that one of you might see one of the questions I have and think "oh, that's interesting, I wonder if Tim would like to work on that with me" (to which I would almost certainly (time and obligations permitting) answer, "yes, that would be so lovely").
 
 
-### Some simplicial things
+## Some simplicial things
 
 All of these questions are about using the Čech nerve, and sometimes the notion of (pre)sheaves on the Čech nerve (cf. Definition 2.2.1 in "[Simplicial Chern-Weil theory for coherent analytic sheaves, Part I](https://arxiv.org/abs/2003.10023)").
 
-#### Barycentric global sections always exist
+### Barycentric global sections always exist
 
 Take a presheaf $\mathcal{F}$ (of $\mathbb{R}$-modules, say) on some space $X$, and pick a bunch of local sections $\{s_i\in\Gamma(U_i,\mathcal{F})\}_{i\in I}$, where $\{U_i\}_{i\in I}$ is an open cover of $X$. Since we only have a presheaf, there's no reason for these local sections to glue to give a global section. *But* if we pull back our presheaf along the Čech nerve then we can consider the "barycentric global section" $\sum_{j=0}^p t_j s_j$ on any $U_{\alpha_0\ldots\alpha_p}$. This is like the "uniform average" of all the sections: if we fibre integrate then we'd get e.g. $\frac12(s_\alpha+s_\beta)$ on each $U_{\alpha\beta}$.
 
 Is this ever useful at all?
 
-#### Čech nerves of things
+### Čech nerves of things
 
 Consider some complex-analytic "thing" (i.e. manifold, space, whatever) $X$ that is locally algebraic (whatever that might mean). If we take the Čech nerve then is the resulting simplicial "thing" an *algebraic* simplicial thing $\widetilde{X}$? In the case where $X$ is *not* algebraic, can we measure how far away it is from being so by looking at the simplicial thing $\widetilde{X}$?
 
@@ -38,32 +38,32 @@ A simpler, similar question: is the Čech nerve of an affine cover of an (algebr
 *(This last question should be something already well known, but I just don't know the answer myself.)*
 
 
-### Some analytic geometry
+## Some analytic geometry
 
-#### Chern--Weil for stacks
+### Chern--Weil for stacks
 
 One way of cheekily summarising some of the results from [my PhD thesis](https://tel.archives-ouvertes.fr/tel-02882140) would be that "sheaves on the Čech nerve sometimes allow you to apply smooth methods to complex-analytic things", and the application of this that I considered was Chern--Weil theory via the Atiyah exact sequence. So is it possible to extend some results concerning Chern--Weil theory via the Atiyah exact sequence on differentiable stacks to the complex-analytic case?
 
-*(This question was prompted by seeing two papers on the arXiv by Indranil Biswas, Saikat Chatterjee, Praphulla Koushik, and Frank Neumann: [2012.08442](https://arxiv.org/abs/2012.08442) and [2012.08447](https://arxiv.org/abs/2012.08447).)*
+*(This question was prompted by seeing two papers on the arXiv by Indranil Biswas, Saikat Chatterjee, Praphulla Koushik, and Frank Neumann: [`2012.08442`](https://arxiv.org/abs/2012.08442) and [`2012.08447`](https://arxiv.org/abs/2012.08447).)*
 
-#### Holomorphic Deligne cohomology
+### Holomorphic Deligne cohomology
 
 This is one that I've been thinking about ever since the middle of my PhD, and it was actually the original problem that I'd hoped to solve (but that turned out to be much more difficult than we'd first thought). Deligne cohomology in the *smooth* setting is really well understood --- for example, Urs Schreiber has written SO much about this (and all very very lovely, albeit nearly entirely far over my head) under the name of *differential cohomology*. But at some point quite early on there is a partition of unity argument, which means that it fails in the holomorphic case. Indeed, there are lots of little worked examples you can do that show that Deligne cohomology in the complex-analytic world really is quite different.
 
 One "simple" concrete problem is the following: given a holomorphic vector bundle (not even an arbitrary coherent analytic sheaf!), write down *Čech representatives* for its Chern classes *in Deligne cohomology*. Just the first part (Čech representatives) was done^[Well, the method was explained, but the actual computations were basically left as an exercise to the reader --- I was one such reader, and I wrote them down in *my* PhD thesis.] in [Green's 1980 PhD thesis](http://wrap.warwick.ac.uk/40592/); just the second part (holomorphic Deligne cohomology) was done in [Grivaux's 2009 thesis](http://jgrivaux.perso.math.cnrs.fr/articles/Chern.pdf). There is a paper by Brylinski and McLaughlin ("[Cech Cocycles for Characteristic Classes](https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-178/issue-1/%C4%8Cech-cocycles-for-characteristic-classes/cmp/1104286562.pdf)") that seems to give an answer, but only gives a proof in the smooth setting, and when I sat down (many *many* times) and tried to work through it myself, the degrees in the holomorphic setting seemed to be exactly the wrong ones that you would get from trying to treat smooth Deligne cohomology like holomorphic Deligne cohomology (i.e. bidegree $(2p,0)$ instead of $(p,p)$, if I remember correctly).
 
 
-### Some analytic sheaves
+## Some analytic sheaves
 
-#### Complexes of coherent sheaves
+### Complexes of coherent sheaves
 
-If you're dealing with sheaves in algebraic geometry, then you might care about whether or not they're coherent. Given that we like to think of complexes of sheaves instead of just single sheaves (e.g. we like working in the derived category), we are interested in the category $C^\mathrm{b}\mathsf{Coh}(X)$ of (bounded) complexes of coherent sheaves. But there's another category which actually arises in practice, namely the category $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of complexes of sheaves that are not necessarily coherent, but whose (internal, i.e. "kernel of the differential of the complex modulo the image of the differential") cohomology consists of coherent sheaves. The latter sounds like it should be more general, but in nice algebraic cases the two are actually equivalent! This follows a result in SGA 6:
+If you're dealing with sheaves in algebraic geometry, then you might care about whether or not they're coherent. Given that we like to think of complexes of sheaves instead of just single sheaves (e.g. we like working in the derived category), we are interested in the category $C^\mathrm{b}\mathsf{Coh}(X)$ of (bounded) complexes of coherent sheaves. But there's another category which actually arises in practice, namely the category $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of complexes of sheaves that are not necessarily coherent, but whose (internal, i.e. "kernel of the differential of the complex modulo the image of the differential") cohomology consists of coherent sheaves. The latter sounds like it should be more general, but in nice algebraic cases the two are actually equivalent! This follows from a result in SGA 6:
 
-- **§II, Corollaire 2.2.2.1.** If $X$ is a Noetherian scheme, then the canonical fully faithful functor $D^\mathrm{b}(\mathsf{Coh}(X))\hookrightarrow D(\mathsf{Sh}(X))$ identifies the codomain with the full subcategory $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of the domain.
+- **SGA 6, II, Corollaire 2.2.2.1.** If $X$ is a Noetherian scheme, then the canonical fully faithful functor $D^\mathrm{b}(\mathsf{Coh}(X))\hookrightarrow D(\mathsf{Sh}(X))$ identifies the codomain with the full subcategory $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of the domain.
 
 Now there's another related result, which follows from applying the above corollary to a specific case:
 
-- **§I, Exemples 5.11 (+ II, Corollaire 2.2.2.1).** If $X$ is a smooth scheme, then there is a canonical equivalence of triangulated categories $\mathsf{Perf}(X)\xrightarrow{\sim}D^{\mathrm{b}}(\mathsf{Coh}(X))$.
+- **SGA 6, I, Exemples 5.11 (+ II, Corollaire 2.2.2.1).** If $X$ is a smooth scheme, then there is a canonical equivalence of triangulated categories $\mathsf{Perf}(X)\xrightarrow{\sim}D^{\mathrm{b}}(\mathsf{Coh}(X))$.
 
 This says that, for *smooth* schemes, pseudo-coherence is equivalent to perfectness (being *locally* resolved by locally free sheaves).
 
@@ -73,10 +73,10 @@ So are these two categories, "complexes of coherent sheaves" and "complexes of s
 
 I don't have any particular insight into this problem, except that I think (yet again) that sheaves on the nerve might have something to say about this. Furthermore, I haven't read the details of Bondal and Van den Bergh's proofs, nor those in SGA 6, so maybe the following is obvious (or even tautological somehow), but it's intriguing that these hypotheses ($X$ is smooth, compact, and a surface) are exactly those found in Schuster's "[Locally free resolutions of coherent sheaves on surfaces](https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html)" which shows that, under there hypothesis, coherent analytic sheaves can be *globally* resolved by locally free sheaves (the *resolution property*).
 
-#### The resolution property
+### The resolution property
 
 Whether or not coherent analytic sheaves can be *globally* resolved by locally free sheaves (or just *locally* resolved) is controlled by the so-called *resolution property*, mentioned above. We say that something (e.g. a stack) *has the resolution property* if every coherent sheaf admits a surjection from a locally free sheaf --- what happens if we change this to "... a surjection from a locally free sheaf *on the nerve*"? This could be useful for Riemann--Roch for Artin stacks: these have the resolution property when they are quotients of quasi-projective schemes by reductive groups, but not in general (and so this assumption appears in Toën's Riemann--Roch paper). It could also be useful for a formal GAGA theorem, cf. Geraschenko and Zureick-Brown's "[Formal GAGA for good moduli spaces](https://arxiv.org/abs/1208.2882)".
 
-#### Analogies between algebraic and analytic geometry
+### Analogies between algebraic and analytic geometry
 
 Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html)". The main one here is "what should a quasi-coherent analytic sheaf be, and why is it the good one?" (and one possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together").
