@@ -11,8 +11,7 @@ Let's have a look at what I've been doing, shall we?
 
 <!-- more -->
 
-- Artur and I have been working hard on the [online quantum information book](https://qubit.guide), as well as the [accompanying lecture videos](https://www.youtube.com/c/ArturEkert/playlists/) (the final three of which have been filmed, and just await my editing now).
-There are still a few things left to write for the notes, but these should be finished soon (famous last words), and then we'll look at hosting them on their own domain and making a nice-looking homepage --- fun!
+- Artur and I have been working hard on the [online quantum information book](https://qubit.guide), as well as the [accompanying lecture videos](https://www.youtube.com/c/ArturEkert/playlists/) (the final three of which have been filmed, and just await my editing now). There are still a few things left to write for the notes, but these should be finished soon (famous last words), and then we'll look at hosting them on their own domain and making a nice-looking homepage --- fun!
 
 - The [Topos Institute Colloquium](https://topos.site/topos-colloquium) has been running weekly since it started, which means we now have [nearly 20 recorded talks](https://www.youtube.com/playlist?list=PLhgq-BqyZ7i4WF1RW0A7VE87taAXVARz4), with just over another 15 to come this year before a winter break.
 
