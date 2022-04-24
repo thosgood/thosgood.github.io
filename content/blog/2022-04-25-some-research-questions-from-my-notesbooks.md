@@ -3,7 +3,7 @@ title: Some research questions from my notebooks
 kind: article
 tags: ['algebraic-geometry', 'category-theory', 'simplicial-things']
 created_at: 2022-04-25
-# draft: true
+draft: true
 ---
 
 One thing that the past few years have taught me is that I am not good at doing maths all by myself. In fact, I would go as far as to say I am completely useless and unmotivated. I do much better when I have co-authors to give me deadlines and friends to talk to, but, for obvious reasons, the past two years have not been good for this. Not really the ideal time for first postdocs, but alas, that's life.
