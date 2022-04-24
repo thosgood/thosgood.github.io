@@ -87,6 +87,7 @@ article .katex {
 }
 
 
+
 /* Header */
 
 #header {
@@ -133,6 +134,7 @@ article .katex {
 
 #main li {
   padding-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 .tag-list {
@@ -142,4 +144,8 @@ article .katex {
 
 .tag-list a {
   text-decoration: none;
+}
+
+li img.progress_shield {
+  vertical-align: top;
 }
