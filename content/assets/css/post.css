@@ -38,6 +38,10 @@
   font-size: 0.95em;
 }
 
+#post-content li {
+  line-height: 1.5;
+}
+
 #post-content li p {
   margin-top: 0px;
   margin-bottom: 0.5rem;

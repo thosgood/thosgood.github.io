@@ -82,4 +82,14 @@ Whether or not coherent analytic sheaves can be *globally* resolved by locally f
 
 ## Analogies between algebraic and analytic geometry
 
-Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html)". The main one here is "what should a quasi-coherent analytic sheaf be, and why is it the good one?" (and one possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together").
+Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html)". The main one here is "*how should we define the notion of quasi-coherence for an analytic sheaf?*", followed immediately by "*why did we pick this definition, and not the others?*". One possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together".
+
+Just for the sake of it, here are some possible contenders for the definition of quasi-coherence for an analytic sheaf $\mathscr{F}$ of $\mathcal{O}_X$-modules:
+
+1. being *of local presentation*, i.e. for all $x\in X$ there exists an open $U\subseteq X$ on which there is an exact sequence
+    $$\mathcal{O}_X^{\oplus I}|U \to \mathcal{O}_X^{\oplus J}|U \to \mathscr{F}|U \to 0$$
+2. being the filtrant colimit of its coherent subsheaves
+3. being *Fréchet quasi-coherent*, or, equivalently, admitting a global "topologically free" resolution
+4. something analogous to arising from the right Kan extension of something like the pseudofunctor $\mathsf{CRing}\to\mathsf{Cat}$ defined by $R\mapsto\mathsf{Mod}_R$ (very vague, I know).
+
+I know that there are [examples of 1. that do not satisfy 2.](https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087), but I don't know how the other notions interact at all actually.
