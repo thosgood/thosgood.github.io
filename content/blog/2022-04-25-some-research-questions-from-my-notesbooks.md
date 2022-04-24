@@ -93,3 +93,4 @@ Just for the sake of it, here are some possible contenders for the definition of
 4. something analogous to arising from the right Kan extension of something like the pseudofunctor $\mathsf{CRing}\to\mathsf{Cat}$ defined by $R\mapsto\mathsf{Mod}_R$ (very vague, I know).
 
 I know that there are [examples of 1. that do not satisfy 2.](https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087), but I actually don't know how the other notions interact at all.
+
