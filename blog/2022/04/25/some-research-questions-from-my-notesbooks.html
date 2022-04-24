@@ -140,14 +140,15 @@ nerve then we can consider the “barycentric global section” <span class="mat
 “uniform average” of all the sections: if we fibre integrate then we’d
 get e.g. <span class="math inline">\frac1{p+1}\sum_{i=0}^p
 s_{\alpha_j}</span> on each <span class="math inline">U_{\alpha_0\ldots\alpha_p}</span>.</p>
-<p>Is this ever useful at all?</p>
+<p>Is this ever useful at all, as a sort of “second best thing” for a
+global section that you know doesn’t exist?</p>
 <h2 id="čech-nerves-of-things">Čech nerves of things</h2>
 <p>Consider some complex-analytic “thing” (i.e. manifold, space,
 whatever) <span class="math inline">X</span> that is locally algebraic
 (whatever that might mean). If we take the Čech nerve then is the
-resulting simplicial “thing” an <em>algebraic</em> simplicial thing
+resulting simplicial “thing” an <em>algebraic</em> simplicial “thing”
 <span class="math inline">\widetilde{X}</span>? In the case where <span class="math inline">X</span> is <em>not</em> algebraic, can we measure
-how far away it is from being so by looking at the simplicial thing
+how far away it is from being so by looking at the simplicial “thing”
 <span class="math inline">\widetilde{X}</span>?</p>
 <p>A simpler, similar question: is the Čech nerve of an affine cover of
 an (algebraic) scheme an “affine object” in the category of simplicial
@@ -202,15 +203,15 @@ then why not just do it?!).</p>
 <p>To reduce this problem down to the very simplest form: given a
 rank-<span class="math inline">2</span> holomorphic vector bundle
 defined by transition functions <span class="math inline">g_{\alpha\beta}</span>, write down a Čech cocycle
-(in terms of the <span class="math inline">g_{\alpha\beta}</span>)
-representing the second Chern class in <em>Deligne cohomology</em>. For
-example, we know how to do this in <em>de Rham cohomology</em>: you can
-take <span class="math inline">\operatorname{tr}(\omega_{\alpha\beta}g_{\alpha\beta}\omega_{\beta\gamma}g_{\alpha\beta}^{-1})</span>
+<em>in terms of the <span class="math inline">g_{\alpha\beta}</span></em> representing the second
+Chern class in <em>Deligne cohomology</em>.</p>
+<p><em>(For example, we know how to do this in de Rham cohomology: you
+can take <span class="math inline">\operatorname{tr}(\omega_{\alpha\beta}g_{\alpha\beta}\omega_{\beta\gamma}g_{\alpha\beta}^{-1})</span>
 or, equivalently (via some algebraic manipulations), <span class="math inline">\operatorname{tr}(\omega_{\alpha\beta}(\omega_{\alpha\gamma}-\omega_{\alpha\beta}))</span>,
 where <span class="math inline">\omega_{\alpha\beta}=\operatorname{d}\log
-g_{\alpha\beta}=g_{\alpha\beta}^{-1}dg_{\alpha\beta}</span> (and you can
+g_{\alpha\beta}=g_{\alpha\beta}^{-1}dg_{\alpha\beta}</span>, and you can
 then extend this to give a closed element of the Čech-de Rham
-bicomplex).</p>
+bicomplex.)</em></p>
 <h1 id="some-analytic-sheaves">Some analytic sheaves</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <h2 id="complexes-of-coherent-sheaves">Complexes of coherent
@@ -218,10 +219,10 @@ sheaves</h2>
 <p>If you’re dealing with sheaves in algebraic geometry, then you might
 care about whether or not they’re coherent. Given that we like to think
 of complexes of sheaves instead of just single sheaves (e.g. we like
-working in the derived category), we are interested in the category
-<span class="math inline">C^\mathrm{b}\mathsf{Coh}(X)</span> of
+working in the derived category), we are interested in the derived
+category <span class="math inline">D^\mathrm{b}\mathsf{Coh}(X)</span> of
 (bounded) complexes of coherent sheaves. But there’s another category
-which actually arises in practice, namely the category <span class="math inline">D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))</span>
+which arises quite often in practice, namely the category <span class="math inline">D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))</span>
 of complexes of sheaves that are not necessarily coherent, but whose
 (internal, i.e. “kernel of the differential of the complex modulo the
 image of the differential”) cohomology consists of coherent sheaves. The
@@ -247,13 +248,13 @@ a canonical equivalence of triangulated categories <span class="math inline">\ma
 <p>This says that, for <em>smooth</em> schemes, pseudo-coherence is
 equivalent to perfectness (being <em>locally</em> resolved by locally
 free sheaves).</p>
-<p>Now, this second statement holds even in the analytic case: coherent
-analytic sheaves always have <em>local</em> locally free resolutions.
-But the first statement is a corollary to Proposition 2.2.2, which uses
-the fact that “every quasi-coherent module is the filtrant colimit of
-its coherent submodules”, and this is <em>not</em> true in the analytic
-case (in fact, this raises a question I’ll talk about after this
-one).</p>
+<p>Now, the analogue of this second statement is still true in the
+analytic case: coherent analytic sheaves always have <em>local</em>
+locally free resolutions. But the first statement is a corollary to
+Proposition 2.2.2, which uses the fact that “every quasi-coherent module
+is the filtrant colimit of its coherent submodules”, and this is
+<em>not</em> true in the analytic case (in fact, this raises a question
+I’ll talk about after this one).</p>
 <p>So are these two categories, “complexes of coherent sheaves” and
 “complexes of sheaves with coherent cohomology” equivalent in the
 analytic setting? In the specific case where <span class="math inline">X</span> is a smooth compact analytic
@@ -266,9 +267,9 @@ still an open question.</p>
 think (yet again) that sheaves on the nerve might have something to say
 about this. Furthermore, I haven’t read the details of Bondal and Van
 den Bergh’s proofs, nor those in SGA 6, so maybe the following is
-obvious (or even tautological somehow), but it’s intriguing that these
-hypotheses (<span class="math inline">X</span> is smooth, compact, and a
-surface) are exactly those found in Schuster’s “<a href="https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html">Locally
+obvious (or even tautological somehow, actually), but it’s intriguing
+that these hypotheses (<span class="math inline">X</span> is smooth,
+compact, and a surface) are exactly those found in Schuster’s “<a href="https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html">Locally
 free resolutions of coherent sheaves on surfaces</a>” which shows that,
 under there hypothesis, coherent analytic sheaves can be
 <em>globally</em> resolved by locally free sheaves (the <em>resolution
