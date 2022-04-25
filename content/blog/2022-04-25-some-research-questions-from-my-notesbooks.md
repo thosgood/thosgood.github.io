@@ -20,7 +20,7 @@ So I figured I might as well just open up some of^[Apart from one paper which I'
 
 # Some simplicial things
 
-*(All of these questions are about using the Čech nerve, and sometimes the notion of (pre)sheaves on the Čech nerve --- cf. e.g. Definition 2.2.1 in "[Simplicial Chern-Weil theory for coherent analytic sheaves, Part I](https://arxiv.org/abs/2003.10023)".)*
+*(These questions are about using the Čech nerve, and sometimes the notion of (pre)sheaves on the Čech nerve --- cf. e.g. Definition 2.2.1 in "[Simplicial Chern-Weil theory for coherent analytic sheaves, Part I](https://arxiv.org/abs/2003.10023)".)*
 
 ## Barycentric global sections always exist
 
@@ -38,6 +38,8 @@ A simpler, similar question: is the Čech nerve of an affine cover of an (algebr
 
 
 # Some analytic geometry
+
+*(These questions are about taking things that we know how to do in the smooth or the algebraic world, and trying to do them in the complex-analytic world.)*
 
 ## Chern--Weil for stacks
 
@@ -58,6 +60,8 @@ To reduce this problem down to the very simplest form: given a rank-$2$ holomorp
 
 # Some analytic sheaves
 
+*(More complex-analytic geometry, this time dealing with holomorphic vector bundles and their generalisations.)*
+
 ## Complexes of coherent sheaves
 
 If you're dealing with sheaves in algebraic geometry, then you might care about whether or not they're coherent. Given that we like to think of complexes of sheaves instead of just single sheaves (e.g. we like working in the derived category), we are interested in the derived category $D^\mathrm{b}\mathsf{Coh}(X)$ of (bounded) complexes of coherent sheaves. But there's another category which arises quite often in practice, namely the category $D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))$ of complexes of sheaves that are not necessarily coherent, but whose (internal, i.e. "kernel of the differential of the complex modulo the image of the differential") cohomology consists of coherent sheaves. The latter sounds like it should be more general, but in nice algebraic cases the two are actually equivalent! This follows from a result in SGA 6:
@@ -74,7 +78,7 @@ Now, the analogue of this second statement is still true in the analytic case: c
 
 So are these two categories, "complexes of coherent sheaves" and "complexes of sheaves with coherent cohomology" equivalent in the analytic setting? In the specific case where $X$ is a smooth compact analytic *surface*, yes! This is Corollary 5.2.2 of Bondal and Van den Bergh's "[Generators and representability of functors in commutative and noncommutative geometry](https://arxiv.org/abs/math/0204218)". But in higher dimensions, it is (as far as I can tell) still an open question.
 
-I don't have any particular insight into this problem, except that I think (yet again) that sheaves on the nerve might have something to say about this. Furthermore, I haven't read the details of Bondal and Van den Bergh's proofs, nor those in SGA 6, so maybe the following is obvious (or even tautological somehow, actually), but it's intriguing that these hypotheses ($X$ is smooth, compact, and a surface) are exactly those found in Schuster's "[Locally free resolutions of coherent sheaves on surfaces](https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html)" which shows that, under there hypothesis, coherent analytic sheaves can be *globally* resolved by locally free sheaves (the *resolution property*).
+I don't have any particular insight into this problem, except that I think (yet again) that sheaves on the nerve might have something to say about this. Furthermore, I haven't read the details of Bondal and Van den Bergh's proofs, nor those in SGA 6, so probably the following is obvious (or even tautological, actually), but it's intriguing that these hypotheses ($X$ is smooth, compact, and a surface) are exactly those found in Schuster's "[Locally free resolutions of coherent sheaves on surfaces](https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html)" which shows that, under these hypothesis, coherent analytic sheaves can be *globally* resolved by locally free sheaves (the *resolution property*).
 
 ## The resolution property
 
