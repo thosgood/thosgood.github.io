@@ -52,7 +52,7 @@ compile '/blog/*.md' do
   layout '/Post.*'
   filter :add_toc
   y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
-  write "/blog/#{y}/#{m}/#{d}/#{slug}.html"
+  write "/blog/#{y}/#{m}/#{d}/#{slug}/index.html"
 end
 
 # any files in /content left untouched? just copy them over the the output
