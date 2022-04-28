@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Triangulations of products of triangulations // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.com/assets/images/me.jpg">
+
+    <title>Triangulations of products of triangulations | Tim Hosgood</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f4-ns f5"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <!-- Navigation -->
+    <a href="/blog/#2018-04-11-triangulation-of-products-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">Triangulations of products of triangulations</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">11th April, 2018</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>, <a href="/blog/tags/quick-read" rel="tag">quick-read</a>, <a href="/blog/tags/simplicial-things" rel="tag">simplicial-things</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+    <!-- Content -->
+    <p>At a conference this week, I ended up having a conversation with
+Nicolas Vichery and Eduard Balzin about why simplices are the prevalent
+choice of geometric shape for higher structure, as opposed to e.g. cubes
+or globes.</p>
+<!-- more -->
+<p>I know there are a bunch of nice properties that simplices have that
+other shapes don’t have<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and they seem to be the natural
+choice when you start thinking about higher categories as
+quasi-categories and filling of horns etc., but I always thought that
+simplices were badly behaved with respect to taking products.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Nicolas, however, showed me a great
+little calculation that solves this problem. Neither I nor some of the
+other people I spoke to had seen this before, so I thought it would be
+worth spreading the word.</p>
+<p>If we take the (geometric realisation of the) 1-cube (the interval
+<span class="math inline">[0,1]</span>), then we can take the product
+with itself to get <span class="math inline">[0,1]\times[0,1]</span>,
+which is automatically the 2-cube. More generally, any product of cubes
+will itself be a cube. For simplices, however, this is not at all
+immediate: think of the problem of trying to find a triangulation for a
+product of spaces when calculating simplicial homology in an
+undergraduate course, for example. Explicitly, if we take the product of
+the (geometric realisations of) two 1-simplices (the interval <span class="math inline">[0,1]</span> again), then we, as above, get the
+space <span class="math inline">[0,1]\times[0,1]</span>, which is not a
+<span class="math inline">\Delta</span>-complex (in the language of
+Hatcher). To triangulate this space, we need to add a 1-simplex along
+the diagonal of the square.</p>
+<figure>
+<img src="/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg" title="Cubes work, simplices don't" alt="Cubes work, simplices don’t">
+<figcaption aria-hidden="true">Cubes work, simplices don’t</figcaption>
+</figure>
+<p>This isn’t too hard to see, but for arbitrary triangulations of
+spaces, it’s much harder to see what extra simplices we need to add to
+their product to recover a triangulation. Even if we <em>can</em> figure
+out how to do it for hard examples, then we still would need a way to
+describe an algorithm for doing it to <em>any</em> product space. But
+there is a ‘trick’, which works as follows: write your simplices as
+simplicial sets, <strong>including degeneracies</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>,
+and then take the product in the category of simplicial sets.</p>
+<p>Consider our example of <span class="math inline">\Delta^1\times\Delta^1</span>, i.e. <span class="math inline">[0,1]\times[0,1]</span>. Define the simplicial set
+<span class="math inline">X_\bullet</span> by</p>
+<p><span class="math display">
+\begin{aligned}
+    X_0 &amp;= \{[0], [1]\}\\
+    X_1 &amp;= \{[0,0],[0,1],[1,1]\}\\
+    X_2 &amp;= \{[0,0,0],[0,0,1],[0,1,1],[1,1,1]\}\\
+    &amp;\vdots
+\end{aligned}
+</span></p>
+<p>that is, all simplices in degree 2 and higher are degenerate (and we
+include all of them); the 0-simplices correspond to the points 0 and 1;
+and the 1-simplices correspond to the line from 0 to 1, as well as the
+two degenerate ‘lines’ from 0 to 0 and from 1 to 1_.</p>
+<p>When we apply geometric realisation, these degenerate simplices will
+‘vanish’, and so we can just look at what the non-degenerate 1-simplices
+of <span class="math inline">X_\bullet\times X_\bullet</span> are to see
+what happens in terms of triangulation. There are nine 1-simplices in
+the product:</p>
+<p><span class="math display">
+\begin{aligned}
+   &amp;[0,0]\times[0,0], \quad [0,0]\times[0,1], \quad
+[0,0]\times[1,1],\\
+   &amp;[0,1]\times[0,0], \quad [0,1]\times[0,1], \quad
+[0,1]\times[1,1],\\
+   &amp;[1,1]\times[0,0], \quad [1,1]\times[0,1], \quad
+[1,1]\times[1,1].
+\end{aligned}
+</span></p>
+<p>Five of these are non-degenerate,<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> and the one that
+interests us is <span class="math inline">[0,1]\times[0,1]</span>: when
+we apply geometric realisation, this will be a 1-simplex along the
+diagonal of the square.</p>
+<figure>
+<img src="/assets/post-images/2018-04-11-triangulation-of-products-result.jpg" title="The final result" alt="The final result">
+<figcaption aria-hidden="true">The final result</figcaption>
+</figure>
+<p>In essence, the idea is simple, but it’s a trick that I’d never seen
+before, and it really makes me ‘believe’ in simplices.</p>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>Or, at least, not a priori. This is
+sort of exampled by the fact that the cube category is a test category
+that is <em>not</em> strict, but becomes strict when we consider cubes
+with connections. See (as always) the <a href="https://ncatlab.org/nlab/show/test+category#examples">nLab page on
+test categories</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>I mean, what follows doesn’t really
+answer what we were actually discussing at all (why simplices are the
+‘right’ choice, if they even are), but just assuaged one of my doubts
+about the niceness of simplices that originally led me to wonder about
+this problem in the first place.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p>Geometrically, this means we take
+‘lines’ that are actually points, ‘triangles’ that are actually lines or
+points, etc. Algebraically, this means that we take simplices in the
+image of the degeneracy maps <span class="math inline">s_i^p\colon\Delta_p\to\Delta_{p+1}</span> given by
+<span class="math inline">s_i^p\colon[0,1,\ldots,p]\mapsto[0,1,\ldots,i,i,\ldots,p]</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4" role="doc-endnote"><p>The ones not in the corners of our
+3-by-3 list, i.e. those that have at least one component
+non-degenerate.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+    <!-- Comments -->
+    <hr>
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css">
+    </script>
+    <div id="commento"></div>
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Stockholms Universitet</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+
+<!-- Use KaTeX rendering for all static page content -->
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

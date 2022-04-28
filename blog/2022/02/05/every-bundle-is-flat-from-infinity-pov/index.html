@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Every principal bundle is flat, in the infinity world // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.com/assets/images/me.jpg">
+
+    <title>Every principal bundle is flat, in the infinity world | Tim Hosgood</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f4-ns f5"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <!-- Navigation -->
+    <a href="/blog/#2022-02-05-every-bundle-is-flat-from-infinity-pov-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">Every principal bundle is flat, in the infinity world</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">5th February, 2022</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/higher-category-theory" rel="tag">higher-category-theory</a>, <a href="/blog/tags/category-theory" rel="tag">category-theory</a>, <a href="/blog/tags/algebraic-topology" rel="tag">algebraic-topology</a>, <a href="/blog/tags/homotopy-theory" rel="tag">homotopy-theory</a>, <a href="/blog/tags/differential-geometry" rel="tag">differential-geometry</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#the-setup">The setup</a></li>
+<li><a href="#some-cubical-wizardry">Some cubical wizardry</a></li>
+<li><a href="#behind-the-scenes-and-some-history">Behind the scenes, and some
+history</a></li>
+</ol>
+<p>Earlier today, Mahmoud Zeinalian explained something to me that
+Dennis Sullivan once explained to him, and it’s been sitting in my brain
+ever since then. In an attempt to empty out my thoughts, and also
+preserve what little understanding I currently believe to have of the
+story, I thought I’d write a little blog post about it. It’s going to
+move quite quickly, because I don’t want to spend time developing the
+prerequisites — the main purpose is for this to jog my brain two weeks
+down the line when I forget all the details!</p>
+<!-- more -->
+<p>The rather “provocative” statement that I’m going to try to justify
+today is the following:</p>
+<blockquote>
+<p><em>Every principal bundle is flat, from the <span class="math inline">(\infty,1)</span>-point-of-view.</em></p>
+</blockquote>
+<p>Let’s give some setup and explain why, first of all, this should
+sound rather bizarre, if not completely incorrect.</p>
+<h1 id="the-setup">The setup</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Pick some principal <span class="math inline">G</span>-bundle <span class="math inline">\pi\colon E\to B</span>, endowed with a connection
+<span class="math inline">\nabla</span>. We’re going to look at what
+sort of information we can associated to singular cells in the base
+space <span class="math inline">B</span>, using the things that we have
+available to us.</p>
+<p>We know that the fibre <span class="math inline">E_b=\pi^{-1}(b)</span> of <span class="math inline">E</span> at any point <span class="math inline">b\in
+B</span> “looks like” the group <span class="math inline">G</span>, so,
+using the axiom of choice if we have to (or whatever really — we’re
+playing fast and loose here!), pick an element in each fibre to be the
+identity element of <span class="math inline">G</span>. That is,
+<em>very</em> discontinuously think of all the fibres as copies of <span class="math inline">G</span>.</p>
+<p>Now let’s look at what a <span class="math inline">1</span>-simplex
+(i.e. a line) in <span class="math inline">B</span> gives us. Say the
+line goes from the point <span class="math inline">b</span> to the point
+<span class="math inline">b'</span>. We get a <span class="math inline">G</span>-equivariant map <span class="math inline">\Gamma_b^{b'}\colon E_b\to E_{b'}</span> by
+using the parallel transport offered to us from the connection <span class="math inline">\nabla</span>. But, using the fact that we have
+already identified our fibres with <span class="math inline">G</span>,
+and a nice technical lemma about Lie groups (saying (roughly) that, if a
+map commutes with all left actions, then it must be given by right
+action, i.e. by an element of the Lie group itself), we see that this is
+exactly the data of an element of <span class="math inline">G</span>,
+say <span class="math inline">g_{b,b'}</span>.</p>
+<p>The next step is to think about what happens with <span class="math inline">2</span>-simplices (i.e. triangles) in <span class="math inline">B</span>. If we call the three vertices <span class="math inline">0</span>, <span class="math inline">1</span>, and
+<span class="math inline">2</span>, and label the edge between <span class="math inline">i</span> and <span class="math inline">j</span> by
+<span class="math inline">ij</span>, then, by the above, the three edges
+will give us three elements <span class="math inline">g_{01},g_{12},g_{02}\in G</span>. But here is where
+things “break”: it is <em>not</em> necessarily the case that <span class="math inline">g_{12}g_{01}=g_{02}</span>; this identity that the
+notation suggestively implies is only true if <span class="math inline">\nabla</span> is flat! (Recall: flatness of the
+connections corresponds to path-independence of the associated parallel
+transport).</p>
+<p>So we’ve come to the conclusion that a bundle is flat if and only if…
+it is flat. Great!</p>
+<p>So how about this claim that <em>every</em> bundle is flat “from the
+<span class="math inline">(\infty,1)</span>-point-of-view”?</p>
+<h1 id="some-cubical-wizardry">Some cubical wizardry</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Trying to be ever so slightly more precise, we can formalise what we
+were doing in the above construction: for <span class="math inline">p=1,2</span>, to each singular <span class="math inline">p</span>-chain (i.e. each <span class="math inline">p</span>-simplex) in <span class="math inline">B</span> we were associating a <span class="math inline">(p-1)</span>-cube with values in <span class="math inline">G</span>. That is, were were constructing an element
+of the singular cochain complex on <span class="math inline">B</span>
+with values in “cubical chains with values in <span class="math inline">G</span>”, which we could write as <span class="math display">
+    \varphi_\nabla \in
+\mathrm{C}^{\bullet,\mathrm{sing}}(B,\mathrm{C}_{\bullet-1}^\mathrm{cube}(B,G)).
+</span> The fact that our connection is not flat is reflected in the
+fact that this element does not satisfy the Maurer–Cartan equation:
+<span class="math display">
+    \mathrm{d}\varphi_\nabla+\varphi_\nabla^2 \neq 0
+</span> where defining the product turns out to be really easy, because
+cubes, <em>unlike simplices</em>, actually satisfy “the product of two
+cubes is a cube”.</p>
+<p>So here’s the question: we’ve constructed <span class="math inline">\varphi_\nabla</span> to be concentrated only in two
+(low) degrees; can we “extend” it to give an element that <em>does</em>
+satisfy Maurer–Cartan? The answer is <strong>YES</strong>, and this is
+exactly what we mean by our opening claim that “every bundle is flat in
+the <span class="math inline">(\infty,1)</span>-sense”. I won’t spell
+out the details on how <em>exactly</em> this works (since I’ve already
+been very informal up until now anyway), but I’ll show you some very
+lovely pictures, and then afterwards tell you where you can go to read
+about this in proper detail.</p>
+<p>Thinking about what we need to “construct” in order to extend our
+element, we can guess that we need some sort of “homotopy” between <span class="math inline">g_{12}g_{01}</span> and <span class="math inline">g_{02}</span>. But how exactly can we do this? And,
+further, how can we do it in a cubical way?</p>
+<p>Well we know that every path in <span class="math inline">B</span>
+gives us an element of <span class="math inline">G</span>, and we know
+that the path <span class="math inline">02</span> gives us <span class="math inline">g_{02}</span>, and the composite path <span class="math inline">01;12</span> gives us the element <span class="math inline">g_{12}g_{01}</span>, so let’s draw a bunch of
+intermediate paths! We can do this by starting at <span class="math inline">0</span>, heading along the line <span class="math inline">01</span> <em>for some time <span class="math inline">0\leq t_0\leq1</span></em>, and then heading towards
+the point <span class="math inline">2</span> for the rest of the time
+<span class="math inline">t_0-1</span>. When <span class="math inline">t_0=0</span> we recover exactly the line <span class="math inline">02</span>, and when <span class="math inline">t_0=1</span> we recover exactly the composite <span class="math inline">01;12</span>; for intermediate values, we get
+something like in the (very hastily drawn) picture below.</p>
+<figure>
+<img src="/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-2.png" alt="Paths in the 2-simplex.">
+<figcaption aria-hidden="true">Paths in the <span class="math inline">2</span>-simplex.</figcaption>
+</figure>
+<p>What’s wonderful is that, when we look at doing something similar for
+the <span class="math inline">3</span>-simplex, we see that all our
+paths are parametrised by variables <span class="math inline">0\leq
+t_0,t_1\leq 1</span>, i.e. by the <span class="math inline">2</span>-cube!</p>
+<figure>
+<img src="/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-3.png" alt="Paths in the 3-simplex.">
+<figcaption aria-hidden="true">Paths in the <span class="math inline">3</span>-simplex.</figcaption>
+</figure>
+<h1 id="behind-the-scenes-and-some-history">Behind the scenes, and some
+history</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>This whole story is really an explicit example of the <em>universal
+twisting cochain construction</em> for the path space bundle. What do I
+mean by that? Well, given any based topological space <span class="math inline">(X,x_0)</span>, we have the (based) path space
+bundle <span class="math inline">\mathcal{P}_{x_0}X\hookrightarrow
+X</span> given by sending a path to its endpoint; the fibre at the point
+<span class="math inline">x_0</span> is exactly the (based) loop space.
+Although this bundle doesn’t have a connection, we can use the homotopy
+lifting property to get something akin to parallel transport. We can
+make a nice simplification too: instead of looking at singular chains in
+<span class="math inline">X</span>, we can look at singular chains in
+<span class="math inline">X</span> whose <span class="math inline">0</span>-cells are all sent to the point <span class="math inline">x_0</span>; somehow this carries the same
+“homological information” as the usual singular chain complex. Then a
+<span class="math inline">1</span>-simplex is exactly a loop based at
+<span class="math inline">x_0</span>, which is exactly a <span class="math inline">0</span>-simplex in the loop space — this
+corresponds to the same “dimension drop” that we saw in the example
+above (where e.g. a line was sent to an element of <span class="math inline">G</span>).</p>
+<p>You know what? At this point, I’m just going to give up trying to
+explain things any better. Hopefully you’re confused enough by my
+meandering and poorly-written exposé that you want to read some proper
+references. This construction was described abstractly in J.F. Adams’
+“On the Cobar Construction”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>; the concrete
+description (using these paths parametrised by the <span class="math inline">(p-1)</span>-cube) is found in Edgar H. Brown, Jr.’s
+“Twisted Tensor Products, I”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Enjoy!</p>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>J. F. Adams, “On the Cobar
+Construction”. <em>PNAS</em> <strong>42</strong> (1956), 409–412. <a href="https://www.jstor.org/stable/89694">JSTOR:89694</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Edgar H. Brown, Jr., “Twisted Tensor
+Products, I”. <em>Annals of Mathematics</em> <strong>69</strong> (1959),
+223–246. <a href="https://doi.org/10.2307/1970101">DOI:10.2307/1970101</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+    <!-- Comments -->
+    <hr>
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css">
+    </script>
+    <div id="commento"></div>
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Stockholms Universitet</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+
+<!-- Use KaTeX rendering for all static page content -->
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

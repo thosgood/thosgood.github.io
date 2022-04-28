@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="The basics of Lie algebra cohomology // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.com/assets/images/me.jpg">
+
+    <title>The basics of Lie algebra cohomology | Tim Hosgood</title>
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pb0-ns pb2 w-100">
+      <span class="f4-ns f5"><a class="link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib">
+          <a class="link f4-ns f5" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib">
+          <a class="link f4-ns f5" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+    <div class="mw7 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-80-ns w-100">
+    <!-- Display settings -->
+    <ul id="colour-select" class="fl">
+      <li>
+        <button type="button" onclick="lightStyle()">
+          Light
+        </button>
+      </li>
+      <li>
+        <button type="button" onclick="darkStyle()">
+          Dark
+        </button>
+      </li>
+    </ul>
+    <!-- Navigation -->
+    <a href="/blog/#2021-11-29-lie-algebra-cohomology-part-3-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-content" class="w-80-ns ph3-ns w-100">
+    <h1 id="post-title">The basics of Lie algebra cohomology</h1>
+    <h2 id="post-part">Part 3</h2>
+    <h6 id="post-date">29th November, 2021</h6>
+    <div class="tag-list">
+      <a href="/blog/tags/lie-algebras" rel="tag">lie-algebras</a>, <a href="/blog/tags/cohomology" rel="tag">cohomology</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/blog/2021/11/22/lie-algebra-cohomology-part-1/">Part 1</a>
+          
+        
+          
+            <a href="/blog/2021/11/24/lie-algebra-cohomology-part-2/">Part 2</a>
+          
+        
+          
+        
+          
+            <span class="active">Part 3</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#lie-algebra-homology">Lie algebra homology</a></li>
+<li><a href="#relative-lie-algebra-cohomology-some-properties">Relative Lie
+algebra (co)homology: some properties</a></li>
+<li><a href="#relative-lie-algebra-cohomology-some-definitions">Relative Lie
+algebra (co)homology: some definitions</a></li>
+</ol>
+<p>We’ll end this series (for now) by talking about two things that we
+really should talk about: Lie algebra <em>homology</em>, and
+<em>relative</em> Lie algebra (co)homology. (We will work over a field
+<span class="math inline">k</span>, but really we are thinking only of
+the case <span class="math inline">k=\mathbb{C}</span>).</p>
+<!-- more -->
+<h1 id="lie-algebra-homology">Lie algebra homology</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Just as Lie algebra cohomology is constructed to be the derived
+functor of the functor of invariants, Lie algebra homology is
+constructed to be the derived functor of the functor of
+<em>coinvariants</em>: <span class="math display">
+  \begin{aligned}
+    \operatorname{Coinv}_\mathfrak{g}(M) = M_\mathfrak{g}&amp;\coloneqq
+M/\mathfrak{g}M
+  \\\operatorname{H}_\bullet(\mathfrak{g},M) &amp;\coloneqq
+\operatorname{Tor}_\bullet^{U(\mathfrak{g})}(k,M).
+  \end{aligned}
+</span> We need to justify why this <span class="math inline">\operatorname{Tor}</span> is indeed the derived
+functor of <span class="math inline">\operatorname{Coinv}</span>, since
+the latter doesn’t seem to have anything to do with tensor products a
+priori. To do this, we need to make a small definition (which we should
+really have made back when we constructed the projective resolution
+<span class="math inline">U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow
+k^\mathrm{triv}</span>).</p>
+<div class="rmenv" title="Definition">
+<p>Write <span class="math inline">i\colon\mathfrak{g}\to
+U(\mathfrak{g})</span> to mean the composite map <span class="math inline">\mathfrak{g}\hookrightarrow
+T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})</span>. The <span class="math inline">k</span>-algebra homomorphism <span class="math inline">\varepsilon\colon U(\mathfrak{g})\to k</span>
+defined by sending <span class="math inline">i(\mathfrak{g})</span> to
+zero is called the <em>augmentation map</em>, and we call its kernel
+<span class="math inline">\mathfrak{J}</span> the <em>augmentation
+ideal</em>.</p>
+</div>
+<div class="itenv" title="Lemma">
+<p>The augmentation ideal <span class="math inline">\mathfrak{J}</span>
+is generated (as a <span class="math inline">U(\mathfrak{g})</span>-module) by the image <span class="math inline">i(\mathfrak{g})</span>. Further, <span class="math inline">k\cong
+U(\mathfrak{g})/\mathfrak{J}=U(\mathfrak{g})_\mathfrak{g}</span>.</p>
+</div>
+<p>With this, we can see why the derived functor of the coinvariants
+functor is calculated by <span class="math inline">\operatorname{Tor}</span>, since <span class="math display">
+  \begin{aligned}
+    k\otimes_{U(\mathfrak{g})}M
+    &amp;\cong U(\mathfrak{g})/\mathfrak{J}_{U(\mathfrak{g})}M
+  \\&amp;\cong M/\mathfrak{J}M
+  \\&amp;\cong M/\mathfrak{g}M
+    = M_\mathfrak{g}.
+  \end{aligned}
+</span></p>
+<p>As we did for cohomology, we can construct a chain complex that
+computes the Lie algebra homology: we define <span class="math display">
+  \wedge_p = \wedge_p(\mathfrak{g},M) \coloneqq
+\wedge^p(\mathfrak{g})\otimes_k M
+</span> (so that <span class="math inline">\wedge_0=M</span>), with
+differential <span class="math inline">\partial\colon\wedge_p\to\wedge_{p-1}</span> given
+by <span class="math display">
+  \begin{aligned}
+    &amp;\partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
+  \\\,&amp;\sum_{1\leqslant i&lt;j\leqslant p} (-1)^{i+j}
+[x_i,x_j]\wedge
+x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge
+x_p \otimes m
+  \\+&amp;\sum_{i=1}^p (-1)^i
+x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
+  \end{aligned}
+</span> The claim (which we won’t prove) is then that <span class="math display">
+  \operatorname{H}_p(\mathfrak{g},M) \cong
+\operatorname{Z}_p(\mathfrak{g},M)/\operatorname{B}_p(\mathfrak{g},M).
+</span></p>
+<h1 id="relative-lie-algebra-cohomology-some-properties">Relative Lie
+algebra (co)homology: some properties</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Again, as is usual for (co)homology theories, we wish to have some
+notion of the (co)homology <em>of a pair</em>. So let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a Lie algebra
+pair (i.e. <span class="math inline">\mathfrak{h}</span> and <span class="math inline">\mathfrak{g}</span> are both Lie algebras, with
+<span class="math inline">\mathfrak{h}\hookrightarrow\mathfrak{g}</span>
+a subalgebra), and <span class="math inline">M</span> a <span class="math inline">\mathfrak{g}</span>-module. It should be the case
+that, however we define the (co)homology of this pair (with coefficients
+in <span class="math inline">M</span>), we at the very least recover the
+non-relative (co)homology of <span class="math inline">\mathfrak{g}</span> when <span class="math inline">\mathfrak{h}</span> is zero, i.e. we should
+definitely have that <span class="math display">
+  \operatorname{H}^\bullet(\mathfrak{g},0;M) \cong
+\operatorname{H}^\bullet(\mathfrak{g};M).
+</span> But before giving the definition, it’s maybe also helpful to see
+another theorem which will hold, which tells us about the case of the
+relative cohomology of a <em>reductive</em> subalgebra.</p>
+<div class="rmenv" title="Definition">
+<p>Let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a
+Lie algebra pair. We say that it is <em>reductive</em> if the adjoint
+Lie algebra representation of <span class="math inline">\mathfrak{h}</span> on <span class="math inline">\mathfrak{g}</span> is completely reducible.</p>
+</div>
+<div class="itenv" title="Theorem">
+<p>Let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a
+Lie algebra pair, and <span class="math inline">M</span> a <span class="math inline">\mathfrak{g}</span>-module. Assume that</p>
+<ul>
+<li>everything (i.e. <span class="math inline">\mathfrak{h}</span>,
+<span class="math inline">\mathfrak{g}</span>, and <span class="math inline">M</span>) is finite dimensional (I’m not actually
+sure that this is necessary, but I’m just being safe here);</li>
+<li>
+<span class="math inline">(\mathfrak{g},\mathfrak{h})</span> is a
+reductive pair; and</li>
+<li>we can write <span class="math inline">\mathfrak{g}</span> as a
+semi-direct product <span class="math inline">\mathfrak{g}=\mathfrak{h}\ltimes\mathfrak{a}</span>
+(where <span class="math inline">\mathfrak{a}</span> is thus, in
+particular, a <em>Lie ideal</em> of <span class="math inline">\mathfrak{g}</span>, i.e. a vector subspace such
+that <span class="math inline">[\mathfrak{a},\mathfrak{g}]\subseteq\mathfrak{a}</span>).</li>
+</ul>
+<p>Then <span class="math display">
+  \operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{g}\simeq
+\operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{h}\simeq
+\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M)
+</span> (where the superscript denotes the space of invariants).</p>
+</div>
+<h1 id="relative-lie-algebra-cohomology-some-definitions">Relative Lie
+algebra (co)homology: some definitions</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>As before, we will first give a complex whose internal cohomology
+computes relative Lie algebra cohomology, and then construct a
+projective resolution of <span class="math inline">k^\mathrm{triv}</span> so that we can show how to
+recover the derived functor definition.</p>
+<div class="rmenv" title="Definition">
+<p>The <em>relative Chevalley–Eilenberg complex <span class="math inline">\operatorname{CE}^\bullet(\mathfrak{g},\mathfrak{h};M)</span></em>
+is defined by <span class="math display">
+  \operatorname{CE}^p(\mathfrak{g},\mathfrak{h};M) \coloneqq \big(
+(\wedge^p(\mathfrak{g}/\mathfrak{h})^*)\otimes_k M \big)^\mathfrak{h}
+</span> and the differential is given by the duals of the Lie bracket
+and the action of <span class="math inline">\mathfrak{g}</span> on <span class="math inline">M</span>, i.e. <span class="math display">
+  d \coloneqq \rho^* + [-,-]^*.
+</span></p>
+</div>
+<p>By definition, if <span class="math inline">\mathfrak{h}=0</span>,
+then we recover exactly the Chevalley–Eilenberg complex of <span class="math inline">\mathfrak{g}</span>, which is one thing that we
+wanted. (To see this, we use the general fact that we have an
+isomorphism of the form <span class="math inline">\operatorname{Hom}_k(A,V)\cong A^*\otimes_k
+V</span>).</p>
+<p>As for relative homology, we define the complex <span class="math display">
+  \wedge_p = \wedge_p(\mathfrak{g},\mathfrak{h};M) \coloneqq
+\frac{\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k
+M}{\mathfrak{h}\cdot(\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k M)}
+</span> where <span class="math inline">\mathfrak{h}\cdot V</span>, for
+an <span class="math inline">\mathfrak{h}</span>-module <span class="math inline">V</span>, denotes the span of elements of the form
+<span class="math inline">x\cdot v</span> for <span class="math inline">x\in\mathfrak{h}</span> and <span class="math inline">v\in V</span>.</p>
+<p>So far, we have not really been making any assumptions about whether
+or not <span class="math inline">M</span> is finite dimensional. It
+turns out that we don’t have to, but we do need to impose at least some
+sort of condition relating to its dimension, whence the following
+definition.</p>
+<div class="rmenv" title="Definition">
+<p>We say that a <span class="math inline">\mathfrak{g}</span>-module is
+<em>finitely semisimple</em> if it is the sum of its finite-dimensional
+irreducible <span class="math inline">\mathfrak{g}</span>-submodules.</p>
+</div>
+<p>Being finitely semisimple is preserved under quotients, taking
+submodules, and tensor products.</p>
+<div class="itenv" title="Lemma">
+<p>Let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a
+Lie algebra pair such that <span class="math inline">\mathfrak{g}</span>
+is finitely semisimple under the adjoint action of <span class="math inline">\mathfrak{h}</span>. Write <span class="math inline">\mathcal{G}\coloneqq U(\mathfrak{g})</span>, and
+<span class="math inline">\mathcal{H}\coloneqq U(\mathfrak{h})</span>.
+Then the complex <span class="math display">
+  \ldots \to D_2 \to D_1 \to D_0
+</span> is a <span class="math inline">(\mathcal{G},\mathcal{H})</span>-projective
+resolution of <span class="math inline">k^\mathrm{triv}</span>, where
+<span class="math display">
+  D_p \coloneqq
+\mathcal{G}\otimes_\mathcal{H}\wedge^p(\mathfrak{g}/\mathfrak{h}).
+</span></p>
+</div>
+<div class="itenv" title="Corollary">
+<p>Under the same assumptions, the complex <span class="math inline">D_\bullet\otimes_k M</span> is a <span class="math inline">(\mathcal{G},\mathcal{H})</span>-projective
+resolution of <span class="math inline">M</span>.</p>
+</div>
+<p>Using this resolution, we can show the following:</p>
+<div class="itenv" title="Lemma">
+<p>Let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a
+Lie algebra pair such that <span class="math inline">\mathfrak{g}</span>
+is finitely semisimple under the adjoint action of <span class="math inline">\mathfrak{h}</span>. Then <span class="math display">
+  \operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
+\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(M^t,k) \simeq
+\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(k,M)
+</span> (where <span class="math inline">M^t</span> is the right <span class="math inline">\mathfrak{g}</span>-module with the same underlying
+space as <span class="math inline">M</span>, but with <span class="math inline">m\cdot x\coloneqq -xm</span> for <span class="math inline">m\in M</span> and <span class="math inline">x\in\mathfrak{g}</span>), and <span class="math display">
+  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
+\operatorname{Ext}_{(\mathcal{G},\mathcal{H})}^\bullet(k,M).
+</span></p>
+</div>
+<p>A “fun” exercise is then to prove that, for any Lie algebra pair
+<span class="math inline">(\mathfrak{g},\mathfrak{h})</span> and any
+<span class="math inline">\mathfrak{g}</span>-module <span class="math inline">M</span>, <span class="math display">
+  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M^*) \simeq
+\operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)^*.
+</span></p>
+
+    <!-- Comments -->
+    <hr>
+    <p class="black-70 i">
+      Comments can be written in Markdown. To post, you must either provide a name or tick the box to comment anonymously (or, if you see yourself wanting to comment often, you can login).
+    </p>
+    <script defer src="https://commento.thosgood.com/js/commento.js" data-css-override="https://thosgood.com/assets/css/commento.css">
+    </script>
+    <div id="commento"></div>
+  </div>
+
+      </div>
+    </div>
+    <div id="footer-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="footer" class="w-60-ns w-80-m pa3 flex flex-wrap items-center f6">
+    
+    <div class="w-third-ns tl w-100">
+      <ul class="list pl0 ma0">
+        <!-- <li>Tim Hosgood</li> -->
+        <!-- <li>Stockholms Universitet</li> -->
+        <li><a href="mailto:tim.hosgood@posteo.net">tim.hosgood@posteo.net</a></li>
+      </ul>
+    </div>
+    
+    <div class="w-two-thirds-ns tr w-100">
+      <ul class="ma0-ns fr-ns list ph0 mt3">
+        <li class="ph2 di"><a href="https://twitter.com/tim_hosgood">Twitter</a></li>
+        <li class="ph2 di"><a href="https://github.com/thosgood">GitHub</a></li>
+        <li class="ph2 di"><a href="https://matrix.to/#/@thosgood:matrix.org">Element</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/hosgood_t_1">arXiv</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.4.1.slim.min.js"></script>
+
+
+<!-- Use KaTeX rendering for all static page content -->
+
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = '#f0f8ff';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = '#eee'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>
