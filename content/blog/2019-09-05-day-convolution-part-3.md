@@ -6,7 +6,7 @@ tags: ['category-theory', 'profunctors']
 created_at: 2019-09-05
 ---
 
-Finally, I find myself with enough motivation to start writing the last part to this series. It's been a while, but hopefully nobody has actually been waiting... This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I've got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes' theorem, which I found pretty neat indeed --- more details can be found in [this post](/blog/2019/09/04/stokes-coend.html).
+Finally, I find myself with enough motivation to start writing the last part to this series. It's been a while, but hopefully nobody has actually been waiting... This is where we will finally see some of the exciting applications of (co)ends, including tensor products, geometric realisation, and Day convolution. One reason I've got around to writing this post is because coends (or, really, cowedges) appeared to me recently in a tweet about Stokes' theorem, which I found pretty neat indeed --- more details can be found in [this post](/blog/2019/09/04/stokes-coend/).
 
 <!-- more -->
 
@@ -28,7 +28,7 @@ where $S\cdot d=\coprod_{s\in S}d$ for any set $S$ and any object $d\in D$.
 
 - Consider a ring $R$ as a one-object $\mathsf{Ab}$-enriched. Then a right $R$-module gives an additive functor $R^\mathrm{op}\to\mathsf{Ab}$, and a left $R$-module gives an additive functor $R\to\mathsf{Ab}$. Then their tensor product, as $\mathsf{Ab}$-enriched functors, coincides with their usual tensor product as $R$-modules.
 
-    This example is actually really linked to the theory of _profunctors_, which we will talk about below, but have already talked about in [a previous post](https://thosgood.com/blog/2019/07/14/cauchy-completion-and-profunctors.html).
+    This example is actually really linked to the theory of _profunctors_, which we will talk about below, but have already talked about in [a previous post](https://thosgood.com/blog/2019/07/14/cauchy-completion-and-profunctors/).
 - The co-Yoneda lemma $F \cong \int^{c\in\mathcal{C}} \mathcal{C}(-,c)\otimes F(c)$ can now just be written as
 
     $$F\cong F\otimes_\mathcal{C}よ$$
