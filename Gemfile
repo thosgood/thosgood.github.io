@@ -4,13 +4,12 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem 'builder'
-
 gem 'nanoc', '~> 4.12'
 group 'nanoc' do
   gem 'nanoc-live'
 end
 
+gem 'builder'
 gem "webrick", "~> 1.7"
 gem "nokogiri", ">= 1.13.4"
 gem "pandoc-ruby", "~> 2.1"
