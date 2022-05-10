@@ -55,6 +55,12 @@ compile '/blog/*.md' do
   write "/blog/#{y}/#{m}/#{d}/#{slug}/index.html"
 end
 
+# generate the RSS feed
+compile '/blog/feed.*' do
+  filter :erb
+  write '/blog.xml'
+end
+
 # any files in /content left untouched? just copy them over the the output
 # directory exactly as they are
 passthrough '/**/*'
