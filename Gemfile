@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 # gem "rails"
 
+gem 'builder'
+
 gem 'nanoc', '~> 4.12'
 group 'nanoc' do
   gem 'nanoc-live'
