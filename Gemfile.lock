@@ -11,6 +11,7 @@ GEM
       eventmachine (~> 1.2)
       listen (~> 3.0)
       rack-livereload (~> 0.3)
+    builder (3.2.4)
     colored (1.2)
     concurrent-ruby (1.1.9)
     cri (2.15.11)
@@ -99,6 +100,7 @@ PLATFORMS
 
 DEPENDENCIES
   addressable (>= 2.8.0)
+  builder
   nanoc (~> 4.12)
   nanoc-live
   nokogiri (>= 1.13.4)
