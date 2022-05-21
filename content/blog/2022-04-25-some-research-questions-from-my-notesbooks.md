@@ -85,7 +85,7 @@ Whether or not coherent analytic sheaves can be *globally* resolved by locally f
 
 ## Analogies between algebraic and analytic geometry
 
-Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry.html)". The main one here is "*how should we define the notion of quasi-coherence for an analytic sheaf?*", followed immediately by "*why did we pick this definition, and not the others?*". One possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together".
+Here I'm just going to refer you to a previous blog post of mine: "[Some questions about complex-analytic geometry](https://thosgood.com/blog/2021/09/24/some-questions-about-analytic-geometry)". The main one here is "*how should we define the notion of quasi-coherence for an analytic sheaf?*", followed immediately by "*why did we pick this definition, and not the others?*". One possible answer is "read Scholze and Clausen's lecture notes on condensed mathematics, Conrad's paper on relative ampleness in rigid geometry, and Eschmeier and Putinar's book *Spectral Decompositions and Analytic Sheaves*, and see if you can put all the pieces together".
 
 Just for the sake of it, here are some possible contenders for the definition of quasi-coherence for an analytic sheaf $\mathscr{F}$ of $\mathcal{O}_X$-modules:
 
