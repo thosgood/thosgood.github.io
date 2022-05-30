@@ -5,6 +5,7 @@ tags: ['general', 'blog']
 created_at: 2021-12-22
 ---
 
+**Update: comments have been "temporarily" disabled (I had some server issues).**
 This blog now has support for comments! I haven't had a chance to properly test things yet, and there are still some kinks left to iron out, but please do use this as an excuse to browse back through old posts and say nice things.
 
 <!-- more -->
