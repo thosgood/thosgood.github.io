@@ -1,7 +1,7 @@
 ---
 title: Various notions of (co)simplicial (pre)sheaves
 kind: article
-tags: ['category-theory', 'simplicial-things', 'quick-read']
+tags: ['category-theory', 'simplicial-things']
 created_at: 2022-05-30
 ---
 
