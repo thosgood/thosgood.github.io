@@ -2,13 +2,206 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
   <id>https://thosgood.com/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2022-04-25T00:00:00Z</updated>
+  <updated>2022-05-30T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
   <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.com</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.com,2022-05-30:/blog/2022/06/01/various-notions-of-cosimplicial-presheaves/</id>
+    <title type="html">Various notions of (co)simplicial (pre)sheaves</title>
+    <published>2022-05-30T00:00:00Z</published>
+    <updated>2022-05-30T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.com/blog/2022/06/01/various-notions-of-cosimplicial-presheaves/" type="text/html"/>
+    <content type="html">&lt;p&gt;For the first time, I have released into the wild a preprint of which
+I am the sole author, and had no real supervision. This is a scary
+moment indeed — how do I know that I haven’t written complete made-up
+nonsense? It’s true that I talked with a couple of close colleagues
+about the results, and they nodded in vague agreement, but the
+responsibility of checking the actual formal details is all on me. Even
+worse, I wanted to include some results about something that I don’t
+really have any formal experience with. Anyway, I hope the resulting
+paper is at least mildly “good” (whatever that might mean). It’s called
+“Various notions of (co)simplicial (pre)sheaves”, and will be up on the
+arXiv soon (and I’ll update this post with a link when it’s live).&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id="where-this-paper-came-from"&gt;Where this paper came from&lt;/h1&gt;
+&lt;p&gt;Ever since my PhD thesis, I’ve been thinking on-and-off about these
+things called “sheaves on the Čech nerve”, which were introduced by
+Green&lt;a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, and then later in a different way
+by Toledo and Tong&lt;a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, in order to do some nice
+homotopical construction in complex geometry. The vague idea is that a
+sheaf &lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; on a space &lt;span
+class="math inline"&gt;X&lt;/span&gt; can be split up into finer parts, with an
+individual sheaf &lt;span class="math inline"&gt;\mathcal{F}^p&lt;/span&gt; for each
+simplicial level of the Čech nerve of (a cover of) &lt;span
+class="math inline"&gt;X&lt;/span&gt;, i.e. instead of just describing what &lt;span
+class="math inline"&gt;\mathcal{F}&lt;/span&gt; looks like on all of &lt;span
+class="math inline"&gt;X&lt;/span&gt;, we describe what it looks like on all the
+open sets in a cover of &lt;span class="math inline"&gt;X&lt;/span&gt; (this is
+&lt;span class="math inline"&gt;\mathcal{F}^0&lt;/span&gt;), and then what it looks
+like on each pairwise intersection &lt;span class="math inline"&gt;U\cap
+V&lt;/span&gt; of open sets from the cover (this is &lt;span
+class="math inline"&gt;\mathcal{F}^1&lt;/span&gt;), and then what it looks like
+on each triple-wise intersection &lt;span class="math inline"&gt;U\cap V\cap
+W&lt;/span&gt; of open sets from the cover (this is &lt;span
+class="math inline"&gt;\mathcal{F}^2&lt;/span&gt;), and… and so on. One reason
+for wanting to do this is that sometimes we want to endow our sheaf
+&lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; with some extra structure
+or data (such as a &lt;a
+href="https://en.wikipedia.org/wiki/Connection_(vector_bundle)#Formal_definition"&gt;&lt;em&gt;Koszul
+connection&lt;/em&gt;&lt;/a&gt;, in the case of Green/Toledo–Tong) that might not
+exist globally (as is indeed the case for holomorphic connections),
+&lt;em&gt;but&lt;/em&gt; that exists &lt;em&gt;locally&lt;/em&gt; — decomposing our sheaf &lt;span
+class="math inline"&gt;\mathcal{F}&lt;/span&gt; into different simplicial levels
+over the Čech nerve lets us do exactly this!&lt;/p&gt;
+&lt;p&gt;Anyway, what always annoyed me about this story (however petty this
+might be) was the terminology: a bunch of sheaves &lt;span
+class="math inline"&gt;(\mathcal{F}^p)_{p\in\mathbb{N}}&lt;/span&gt; living over
+a simplicial space &lt;span
+class="math inline"&gt;(X_p)_{p\in\mathbb{N}}&lt;/span&gt; were called
+&lt;em&gt;simplicial sheaves&lt;/em&gt;, but they’re &lt;em&gt;not&lt;/em&gt; simplicial objects
+in the category of sheaves on &lt;span class="math inline"&gt;X&lt;/span&gt;, and,
+even worse, they don’t actually really even look very simplicial (the
+morphisms all end up going the wrong way, making them look
+&lt;em&gt;co&lt;/em&gt;simplicial). So is there any relation between these things
+(which I gave the uninventive but fairly descriptive name of &lt;em&gt;sheaves
+on a simplicial space&lt;/em&gt;) and actual simplicial sheaves? Since the
+only reference that I know of which actually talks about these sheaves
+on simplicial spaces is Green’s aforementioned thesis (and Toledo–Tong’s
+aforementioned summary of it), I couldn’t find if anybody else actually
+even cared about these objects, let alone cared enough to figure out if
+they also deserved the name of “simplicial sheaves”.&lt;/p&gt;
+&lt;h1 id="an-unexpected-application"&gt;An unexpected application&lt;/h1&gt;
+&lt;p&gt;When I finally got the motivation to sit down and write things down,
+I realised that there was also another pretty large gap in what I knew
+about these things: the second thing you normally learn about after
+learning about sheaves is &lt;em&gt;sections&lt;/em&gt; of a sheaf. So what is a
+section of a sheaf on a simplicial space? In one of life’s little
+coincidences, when I started thinking about this specific question
+seriously, I was working in an office three floors above Vincent
+Wang-Maścianica, who patiently helped me to understand the basics of
+string diagrams as well as some other stuff that he was working on. The
+reason this is a coincidence is because, one afternoon (to mildly
+dramatise the story) he saw a diagram on my board and said “oh, I didn’t
+realise you were studying X”, to which I replied, “I’m not, I’m thinking
+about sections of sheaves on simplicial spaces”, to which we both
+replied “oh… interesting”.&lt;/p&gt;
+&lt;p&gt;The upshot of the ensuing conversations with Vincent left me
+reasonably convinced that I could find an application for sheaves on
+simplicial spaces outside their one appearance in complex geometry: they
+could be used to describe “stuff, stuff relating that stuff, and the
+order in which those relations should evolve”. To give a more concrete
+example of this, consider the following scenario: we have some objects
+&lt;span class="math inline"&gt;x_1,\ldots,x_n&lt;/span&gt; in a category that has a
+nice notion of tensor product (e.g. a symmetric monoidal category), and
+we want to understand what endomorphisms of &lt;span
+class="math inline"&gt;x_1\otimes x_2\otimes \ldots\otimes x_n&lt;/span&gt; look
+like. One way of getting such endomorphisms is to build them up from
+smaller endomorphisms! For example, say we have objects &lt;span
+class="math inline"&gt;A&lt;/span&gt;, &lt;span class="math inline"&gt;B&lt;/span&gt;, &lt;span
+class="math inline"&gt;C&lt;/span&gt;, and &lt;span class="math inline"&gt;D&lt;/span&gt;,
+and an endomorphism &lt;span
+class="math inline"&gt;f\in\operatorname{End}(A\otimes B)&lt;/span&gt; and
+another endomorphism &lt;span
+class="math inline"&gt;g\in\operatorname{End}(B\otimes C\otimes D)&lt;/span&gt;.
+Then we can get an endomorphism on &lt;span class="math inline"&gt;A\otimes
+B\otimes C\otimes D&lt;/span&gt; by composing &lt;span
+class="math inline"&gt;f&lt;/span&gt; and &lt;span class="math inline"&gt;g&lt;/span&gt;,
+after extending them by identity morphisms: &lt;span
+class="math inline"&gt;(\mathrm{id}_A\otimes
+g)\circ(f\otimes\mathrm{id}_C\otimes\mathrm{id}_D)&lt;/span&gt;. But of course
+we could have also composed these in the other order, doing &lt;span
+class="math inline"&gt;g&lt;/span&gt; first and then &lt;span
+class="math inline"&gt;f&lt;/span&gt;, or we could have even picked different
+endomorphisms, or we could have had &lt;em&gt;more&lt;/em&gt; endomorphisms on
+tensor products of &lt;em&gt;different&lt;/em&gt; subsets of our objects.&lt;/p&gt;
+&lt;p&gt;In the paper, I (timidly) make the argument that all of these choices
+can be bundled up into one sheaf on a simplicial space, and then that a
+single choice of all the data described above corresponds to a
+&lt;em&gt;section&lt;/em&gt; of this sheaf. There are some caveats in this
+construction (for example, the method that I describe requires that we
+fix the number and type of endomorphisms beforehand), but I think that
+most of them could probably be done away with by somebody who actually
+knows something about these very restrictive sorts of string diagrams
+(e.g. if there are some “generating” shapes of these diagrams then you
+could maybe consider building a simplicial space for each one and then
+gluing them altogether with some limit-y process).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="/assets/post-images/2022-05-30-endomorphism-construction.png"
+alt="String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space." /&gt;
+&lt;figcaption aria-hidden="true"&gt;String diagrams of a certain form
+correspond to sections of a specific sheaf on a simplicial
+space.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Really, the only reason that I actually include this construction at
+all (beyond wanting to make people in another field aware of these
+objects that I find so fascinating) is in the hope that somebody comes
+along and makes it much better! I think it could be extended to describe
+much more general string diagrams, with copies and deletes and whatnot,
+but this is not something that I have the knowledge to do on my own.&lt;/p&gt;
+&lt;p&gt;This application is, I think, not particularly useful, and might just
+be an example of “if all you have is a hammer, then everything looks
+like a nail”, or even just a tautology (“of &lt;em&gt;course&lt;/em&gt; sections of
+a sheaf on a simplicial space describe such things — they’re just
+objects in the totalisation of the cosimplicial simplicial mapping space
+from a cofibrant replacement of a point, and the simplicial nature is
+exactly describing the notion of linear order”, or something like this,
+says some hypothetical expert), but “hey ho”, thought I, “why not just
+write it down anyway — maybe somebody else will also like to think about
+such things from this point of view”.&lt;/p&gt;
+&lt;h1 id="whats-actually-in-the-paper"&gt;What’s actually in the paper&lt;/h1&gt;
+&lt;p&gt;The paper is mostly a survey, but contains some proofs of what I’m
+calling “pre-folklore results” — results which I think would be folklore
+if I’d ever actually heard anybody else care about them!&lt;/p&gt;
+&lt;p&gt;The first two sections (after the introduction) define three (or
+really four) notions of “simplicial sheaf” and describes how they relate
+to one another; the next section recalls a technical construction that
+shows how to understand this story in the specific setting of (locally)
+ringed spaces via a lovely construction&lt;a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; of
+lax homotopy limits of model categories by Bergner; the final section is
+split into two, and contains a summary of the application of sheaves on
+simplicial spaces to coherent sheaves in complex geometry, and then this
+semi-conjectural construction relating sections of a sheaf on a
+simplicial space to string diagrams describing endomorphisms generated
+by endomorphisms.&lt;/p&gt;
+&lt;p&gt;If anybody does actually read this and have any comments,
+corrections, criticisms, or complaints, then please do let me know — you
+can leave a comment here, or email me, or tweet at me, or whatever you
+like. Happy reading!&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="/assets/post-images/2022-05-30-three-notions.png"
+alt="The three main notions of simplicial sheaf." /&gt;
+&lt;figcaption aria-hidden="true"&gt;The three main notions of simplicial
+sheaf.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;section class="footnotes footnotes-end-of-document"
+role="doc-endnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn1" role="doc-endnote"&gt;&lt;p&gt;H.I. Green. “Chern classes for
+coherent sheaves”. PhD Thesis. University of Warwick, (1980). &lt;a
+href="https://pugwash.lib.warwick.ac.%20uk/record=b1751746~S1"&gt;pugwash.lib.warwick.ac.uk/record=b1751746~S1&lt;/a&gt;&lt;a
+href="#fnref1" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn2" role="doc-endnote"&gt;&lt;p&gt;Domingo Toledo and Yue Lin L Tong.
+“Green’s theory of Chern classes and the Riemann-Roch formula”. In:
+&lt;em&gt;The Lefschetz Centennial Conference, Part 1&lt;/em&gt;, Amer. Math. Soc.
+(1987). DOI:&lt;a
+href="https://doi.org/10.1090/conm/058.1/860421"&gt;10.1090/conm/058.1/860421&lt;/a&gt;&lt;a
+href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn3" role="doc-endnote"&gt;&lt;p&gt;Julia E. Bergner. “Homotopy limits of
+model categories and more general homotopy theories”. (2012). arXiv:&lt;a
+href="https://arxiv.org/abs/1010.0717v2"&gt;1010.0717v2&lt;/a&gt;&lt;a
+href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.com,2022-04-25:/blog/2022/04/25/some-research-questions-from-my-notesbooks/</id>
     <title type="html">Some research questions from my notebooks</title>
@@ -1888,418 +2081,6 @@ discussion on the &lt;a
 href="https://en.wikipedia.org/wiki/Jordan_map"&gt;Jordan–Schwinger
 map&lt;/a&gt;, and how we can understand quantum angular momentum via quantum
 harmonic oscillators).&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.com,2021-11-22:/blog/2021/11/22/lie-algebra-cohomology-part-1/</id>
-    <title type="html">The basics of Lie algebra cohomology</title>
-    <published>2021-11-22T00:00:00Z</published>
-    <updated>2021-11-22T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2021/11/22/lie-algebra-cohomology-part-1/" type="text/html"/>
-    <content type="html">&lt;p&gt;As part of a reading group I’m in on Kac–Moody groups (something I
-know nothing about), I had to give a talk introducing the basics of Lie
-algebra cohomology (something I know very little about), along with some
-sort of motivation and intuition, and some worked examples. Since I’ve
-written these notes anyway, I figured I might as well put them up on
-this blog, and then, when I inevitably forget all I ever once knew, I
-can refer back to here.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;The main two references that I consulted were Danny Cryster’s &lt;a
-href="http://myslu.stlawu.edu/~dcrytser/EnvelopingAlgebrasNotes.pdf"&gt;“Notes
-on Enveloping Algebras”&lt;/a&gt; and Friedrich Wagemann’s &lt;a
-href="https://www.math.sciences.univ-nantes.fr/~wagemann/LAlecture.pdf"&gt;“Introduction
-to Lie algebra cohomology with a view towards BRST cohomology”&lt;/a&gt;.
-Honestly, you’d maybe be better off just going and reading those two
-papers to be honest, since all I’m going to add here is some background
-on group cohomology, and then splice together the relevant parts of the
-two linked papers. Anyway, let’s get on with it.&lt;/p&gt;
-&lt;h1 id="first-motivation-group-cohomology"&gt;First motivation: group
-cohomology&lt;/h1&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;G&lt;/span&gt; be a group. Unravelling
-definitions, we can see that a &lt;span
-class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;-module is exactly the same
-thing as an abelian group endowed with an action of &lt;span
-class="math inline"&gt;G&lt;/span&gt;. This equivalence gives us another way of
-thinking about &lt;em&gt;invariant elements&lt;/em&gt;, i.e. elements of the group
-&lt;span class="math inline"&gt;\operatorname{Inv}_G(A)\coloneqq\{a\in A\mid
-ga=a \text{ for all } g\in G\}&lt;/span&gt;.&lt;/p&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;&lt;span class="math inline"&gt;\operatorname{Inv}_G(A) \cong
-\operatorname{Hom}_{\mathbb{Z}[G]}(\mathbb{Z}^\mathrm{triv},A)&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; Given &lt;span
-class="math inline"&gt;\varphi\colon\mathbb{Z}^\mathrm{triv}\to A&lt;/span&gt;,
-we obtain invariant elements, since &lt;span
-class="math inline"&gt;\varphi(n)=\varphi(gn)=g\varphi(n)&lt;/span&gt; for all
-&lt;span class="math inline"&gt;n\in\mathbb{Z}&lt;/span&gt;; conversely, given &lt;span
-class="math inline"&gt;a\in\operatorname{Inv}_G(A)&lt;/span&gt;, we can define
-&lt;span class="math inline"&gt;\varphi_a\colon1\mapsto a&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;This leads us to consider the &lt;em&gt;functor of invariants&lt;/em&gt; &lt;span
-class="math display"&gt;
-  \operatorname{Inv}\coloneqq\operatorname{Hom}_{\mathbb{Z}[G]}(\mathbb{Z}^\mathrm{triv},-)\colon
-\mathsf{Mod}_{\mathbb{Z}[G]}\to\mathsf{Mod}_{\mathbb{Z}}.
-&lt;/span&gt; But, as always, since this is a functor between categories of
-modules, we are interested in &lt;em&gt;deriving it&lt;/em&gt;, and this is exactly
-the definition of group cohomology: &lt;span class="math display"&gt;
-  \operatorname{H}^n(G,A) \coloneqq
-\operatorname{Ext}_{\mathbb{Z}[G]}^\bullet(\mathbb{Z}^\mathrm{triv},-).
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;To actually compute this, then, it suffices to find a projective
-resolution of &lt;span class="math inline"&gt;\mathbb{Z}^\mathrm{triv}&lt;/span&gt;
-as a &lt;span class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;-module, and there is
-a canonical way of doing this, via the so-called &lt;em&gt;bar
-construction&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;We define &lt;span class="math inline"&gt;B_0&lt;/span&gt; to be the &lt;span
-class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;-module &lt;span
-class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;; for &lt;span
-class="math inline"&gt;n\geqslant 1&lt;/span&gt;, we define &lt;span
-class="math inline"&gt;B_n&lt;/span&gt; to be the free &lt;span
-class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;-module on the set &lt;span
-class="math inline"&gt;G^{\times(n+1)}&lt;/span&gt;, and write its elements as
-symbols of the form &lt;span class="math inline"&gt;(g_0|\ldots|g_n)&lt;/span&gt;
-for &lt;span class="math inline"&gt;g_i\in G&lt;/span&gt;. Then we define &lt;span
-class="math inline"&gt;d_0\colon B_0\to\mathbb{Z}^\mathrm{triv}&lt;/span&gt; by
-&lt;span class="math display"&gt;
-  d_0\left(\sum_i m_i g_i\right) = \sum_i m_i
-&lt;/span&gt; and &lt;span class="math inline"&gt;d_n\colon B_n \to B_{n-1}&lt;/span&gt;
-by &lt;span class="math display"&gt;
-  \begin{aligned}
-    d_n(g_0|\ldots|g_n) =
-    \,\,&amp;amp;g_0(g_1|\ldots|g_n)
-  \\+&amp;amp;\sum_{i=0}^{n-1} (-1)^i (g_0|\ldots|g_{i-1}|g_i
-g_{i+1}|g_{i+2}|\ldots|g_n)
-  \\\pm&amp;amp;(g_0|\ldots|g_n).
-  \end{aligned}
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Something that we won’t discuss is that this complicated equation is
-actually somehow “natural”, in that the bar construction is a “nice
-thing” that “makes sense”. For more on this (since it would require a
-large detour here), I highly recommend Emily Riehl’s beautiful (and
-freely-available) book &lt;a
-href="https://math.jhu.edu/~eriehl/cathtpy.pdf"&gt;&lt;em&gt;Categorical homotopy
-theory&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;We can understand low-dimensional group cohomology quite
-explicitly:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span
-class="math inline"&gt;\operatorname{H}^0(G,A)=A^G\coloneqq\operatorname{Inv}_G(A)&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;\operatorname{H}^1(G,A)&lt;/span&gt; is given by
-the quotient &lt;span class="math display"&gt;
-    \{\varphi\colon\underline{G}\to\underline{A} \mid
-\varphi(gh)=\varphi(g)+g\varphi(h)\}\Big/\{\varphi=\varphi_a\colon
-g\mapsto ag-a\}
-  &lt;/span&gt; where we write &lt;span class="math inline"&gt;\underline{G}&lt;/span&gt;
-to denote the underlying &lt;em&gt;set&lt;/em&gt; of a group (note that this reduces
-to &lt;span class="math inline"&gt;\operatorname{Hom}(G,A)&lt;/span&gt; in the case
-where &lt;span class="math inline"&gt;A&lt;/span&gt; has the trivial &lt;span
-class="math inline"&gt;G&lt;/span&gt;-action).&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;\operatorname{H}^2(G,A)&lt;/span&gt; classifies
-isomorphism classes of extensions of &lt;span class="math inline"&gt;G&lt;/span&gt;
-by &lt;span class="math inline"&gt;A&lt;/span&gt; such that… some condition
-involving the action of &lt;span class="math inline"&gt;G&lt;/span&gt; on &lt;span
-class="math inline"&gt;A&lt;/span&gt; holds (note here the degree shift: &lt;span
-class="math inline"&gt;\operatorname{H}^2(G,A)=\operatorname{Ext}_{\mathbb{Z}[G]}^2(G,A)&lt;/span&gt;
-is (some subset of) &lt;span
-class="math inline"&gt;\operatorname{Ext}_\mathbb{Z}^1(G,A)&lt;/span&gt;; the
-&lt;span class="math inline"&gt;\operatorname{Ext}&lt;/span&gt; are in different
-degrees, but this is because they are taken in different
-categories).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="generalising-to-lie-algebras"&gt;Generalising to Lie algebras&lt;/h1&gt;
-&lt;p&gt;When we define Lie algebra cohomology, we’re going to do something
-entirely analogous to what we did above for group cohomology. Indeed,
-Lie algebras “are just” infinitesimal Lie groups, which “are just”
-particularly nice groups, so we can imagine carrying forward the
-definition for groups, making some suitable adjustments where necessary.
-One thing to note is that, when we do the bar construction (which we
-will do later on), the differential will look more complicated,
-resembling some sort of total differential of a double complex, with the
-second part looking like some sort of “Čech differential”. This is
-because, whereas groups have “one structure” (the group operation), Lie
-algebras have “two” (the group operation &lt;em&gt;and&lt;/em&gt; the Lie bracket).
-But the story behind everything is exactly the same: &lt;em&gt;Lie algebra
-cohomology is the derived functor of the functor of invariants&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Before giving any actual definitions, let’s see what &lt;em&gt;will&lt;/em&gt; be
-true (for a Lie algebra &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-(over a field &lt;span class="math inline"&gt;k&lt;/span&gt;) and a &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module &lt;span
-class="math inline"&gt;M&lt;/span&gt;) in analogy to our low-dimensional
-statements for group cohomology:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span
-class="math inline"&gt;\operatorname{H}^0(\mathfrak{g},M)=M^\mathfrak{g}&lt;/span&gt;
-is the group of &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-invariants
-of &lt;span class="math inline"&gt;M&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;\operatorname{H}^1(\mathfrak{g},M)&lt;/span&gt;
-is given by &lt;a
-href="https://en.wikipedia.org/wiki/Lie_algebra#Derivations"&gt;derivations&lt;/a&gt;
-&lt;span class="math inline"&gt;\operatorname{Der}(\mathfrak{g},M)&lt;/span&gt;
-modulo &lt;em&gt;inner&lt;/em&gt; derivations &lt;span
-class="math inline"&gt;\operatorname{PDer}(\mathfrak{g},M)&lt;/span&gt;, where
-&lt;span class="math display"&gt;
-    \begin{aligned}
-      \operatorname{Der}(\mathfrak{g},M) &amp;amp;\coloneqq
-      \{\varphi\in\operatorname{Hom}_k(\mathfrak{g},M) \mid
-\varphi([x,y])=xf(y)-yf(x)\}
-    \\\operatorname{PDer}(\mathfrak{g},M) &amp;amp;\coloneqq
-      \{\varphi\in\operatorname{Hom}_k(\mathfrak{g},M) \mid
-\varphi=\varphi_m\colon x\mapsto xm\}
-    \end{aligned}
-  &lt;/span&gt; In particular, &lt;span
-class="math inline"&gt;\operatorname{H}^1(\mathfrak{g},\mathfrak{g})&lt;/span&gt;
-(where &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; acts on itself by
-the adjoint action) will be given by &lt;a
-href="https://en.wikipedia.org/wiki/Lie_algebra#Derivations"&gt;&lt;em&gt;outer&lt;/em&gt;
-derivations&lt;/a&gt; of &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;; the
-other “canonical” choice for &lt;span class="math inline"&gt;M&lt;/span&gt;, namely
-&lt;span class="math inline"&gt;M=k^\mathrm{triv}&lt;/span&gt; (the analogy of &lt;span
-class="math inline"&gt;\mathbb{Z}^\mathrm{triv}&lt;/span&gt; from before), gives
-&lt;span
-class="math inline"&gt;\operatorname{H}^1(\mathfrak{g},k^\mathrm{triv})=(\mathfrak{g}/[\mathfrak{g},\mathfrak{g}])^*&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;\operatorname{H}^2(\mathfrak{g},M)&lt;/span&gt;
-classifies &lt;em&gt;abelian&lt;/em&gt; (i.e. those such that the image of &lt;span
-class="math inline"&gt;M&lt;/span&gt; is abelian) &lt;a
-href="https://en.wikipedia.org/wiki/Lie_algebra_extension"&gt;extensions of
-&lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; by &lt;span
-class="math inline"&gt;M&lt;/span&gt;&lt;/a&gt; (again, &lt;span
-class="math inline"&gt;\operatorname{Ext}^2&lt;/span&gt; in the category of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-modules, but &lt;span
-class="math inline"&gt;\operatorname{Ext}^1&lt;/span&gt; in the category of Lie
-algebras).&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;\operatorname{H}^3(\mathfrak{g},M)&lt;/span&gt;
-classifies certain &lt;a
-href="https://ncatlab.org/nlab/show/differential+crossed+module"&gt;&lt;em&gt;crossed
-modules&lt;/em&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further, Lie algebra cohomology tells us not only &lt;em&gt;algebraic&lt;/em&gt;
-information, but also &lt;em&gt;geometric&lt;/em&gt; information:&lt;/p&gt;
-&lt;div class="itenv" title="Cartan&amp;#39;s Theorem"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;G&lt;/span&gt; be a compact connected Lie
-group, and &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; its Lie
-algebra. Then &lt;span class="math display"&gt;
-  \operatorname{H}_\mathrm{dR}^\bullet(G) \cong
-\operatorname{H}^\bullet(\mathfrak{g},\mathbb{R}) \cong
-\operatorname{Inv}_G(\wedge^\bullet\mathfrak{g}^*).
-&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="the-universal-enveloping-algebra-and-poincarébirkhoff-witt"&gt;The
-universal enveloping algebra and Poincaré–Birkhoff-Witt&lt;/h1&gt;
-&lt;p&gt;One key ingredient in giving a useful definition of Lie algebra
-cohomology is the &lt;em&gt;universal enveloping algebra&lt;/em&gt; of a Lie
-algebra, so let’s talk about this for a bit.&lt;/p&gt;
-&lt;p&gt;Any (associative) algebra &lt;span class="math inline"&gt;A&lt;/span&gt; has an
-“underlying” Lie algebra &lt;span class="math inline"&gt;A_-&lt;/span&gt;, whose set
-of elements is the same, and is endowed with the Lie bracket defined by
-&lt;span class="math display"&gt;
-  [x,y] \coloneqq xy-yx.
-&lt;/span&gt; This gives us a “forgetful” functor &lt;span class="math display"&gt;
-  \begin{aligned}
-    \mathsf{Alg} &amp;amp;\to \mathsf{LieAlg}
-  \\A &amp;amp;\mapsto A_-
-  \end{aligned}
-&lt;/span&gt; and so we can ask the natural question, &lt;em&gt;does this functor
-have a left adjoint?&lt;/em&gt; We will show that the answer to this question
-is “yes”, by functorially constructing an algebra &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt; such that &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; sits inside &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;, generating it as an algebra
-(&lt;strong&gt;not&lt;/strong&gt; as a Lie algebra), in such a way that
-representations of &lt;span class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;
-correspond to representations of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;The &lt;em&gt;tensor algebra &lt;span
-class="math inline"&gt;T(\mathfrak{g})&lt;/span&gt;&lt;/em&gt; is the algebra &lt;span
-class="math display"&gt;
-  T(\mathfrak{g}) \coloneqq \bigoplus_{n=0}^\infty \mathfrak{g}^{\otimes
-n}
-&lt;/span&gt; (where we take the tensor product of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; as a &lt;em&gt;vector space&lt;/em&gt;).&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Note that, a priori, &lt;span class="math inline"&gt;x\otimes y-y\otimes
-x\neq[x,y]&lt;/span&gt;. In other words, the inclusion &lt;span
-class="math inline"&gt;\mathfrak{g}\hookrightarrow T(\mathfrak{g})&lt;/span&gt;
-is &lt;em&gt;not&lt;/em&gt; a Lie algebra homomorphism.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;The &lt;em&gt;universal enveloping algebra &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;&lt;/em&gt; is the largest quotient
-algebra of &lt;span class="math inline"&gt;T(\mathfrak{g})&lt;/span&gt; such that
-the composite &lt;span class="math display"&gt;
-  \mathfrak{g}\hookrightarrow T(\mathfrak{g}) \twoheadrightarrow
-U(\mathfrak{g})
-&lt;/span&gt; is a Lie algebra homomorphism. Constructively, &lt;span
-class="math display"&gt;
-  U(\mathfrak{g}) \coloneqq T(\mathfrak{g})/(x\otimes y-y\otimes
-x-[x,y]).
-&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Note that, if &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; is
-abelian (i.e. if the bracket is zero), then &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt; is exactly the symmetric
-algebra &lt;span
-class="math inline"&gt;\operatorname{Sym}(\mathfrak{g})&lt;/span&gt;.&lt;/p&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;The universal enveloping algebra construction is left adjoint to the
-underlying Lie algebra functor, i.e. &lt;span class="math display"&gt;
-  \operatorname{Hom}_\mathsf{Alg}(U(\mathfrak{g}),A) \cong
-\operatorname{Hom}_\mathsf{LieAlg}(\mathfrak{g},A_-)
-&lt;/span&gt; functorially in &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-and &lt;span class="math inline"&gt;A&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Another way of stating this universal property (and, indeed, the one
-that is found in a lot of introductory texts) is the following:&lt;/p&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;\varphi\colon\mathfrak{g}\to A_-&lt;/span&gt;
-be a Lie algebra homomorphism. Then there exists a unique algebra
-homomorphism &lt;span class="math inline"&gt;\widehat{\varphi}\colon
-U(\mathfrak{g})\to A&lt;/span&gt; such that &lt;span
-class="math inline"&gt;\varphi=\widehat{\varphi}\circ h&lt;/span&gt;, where &lt;span
-class="math inline"&gt;h\colon\mathfrak{g}\to U(\mathfrak{g})&lt;/span&gt; is the
-canonical map.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;In particular, this implies (by taking &lt;span
-class="math inline"&gt;A=\operatorname{End}(M)&lt;/span&gt;) that &lt;em&gt;every
-representation &lt;span class="math inline"&gt;M&lt;/span&gt; of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; extends uniquely to a
-representation of &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;One question we can ask now is if the map &lt;span
-class="math inline"&gt;h\colon\mathfrak{g}\to U(\mathfrak{g})&lt;/span&gt; is
-somehow an embedding, and the (positive) answer to this is given by the
-following &lt;a
-href="https://en.wikipedia.org/wiki/Universal_enveloping_algebra#Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem"&gt;important
-theorem&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="itenv" title="Poincaré–Birkhoff–Witt Theorem"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;(x_1,\ldots,x_n)&lt;/span&gt; be a vector
-space basis for &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;. Then the
-ordered set of monomials &lt;span class="math display"&gt;
-  (x_1^{i_1}x_2^{i_2}\ldots x_n^{i_n} \mid
-(i_1,\ldots,i_n)\in\mathbb{N}^n)
-&lt;/span&gt; is a vector space basis for &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="actual-definitions"&gt;Actual definitions&lt;/h1&gt;
-&lt;p&gt;I’m going to end this post by actually defining the thing that I’ve
-apparently been trying to explain this whole time: Lie algebra
-cohomology.&lt;/p&gt;
-&lt;p&gt;Firstly, analogously to how &lt;span
-class="math inline"&gt;\mathbb{Z}[G]&lt;/span&gt;-modules are exactly abelian
-groups endowed with a &lt;span class="math inline"&gt;G&lt;/span&gt;-action, we can
-interchangeably talk about &lt;em&gt;representations&lt;/em&gt; and &lt;em&gt;modules&lt;/em&gt;
-of a Lie algebra.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; be a Lie algebra.
-Then a &lt;em&gt;&lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module &lt;span
-class="math inline"&gt;M&lt;/span&gt;&lt;/em&gt; is a vector space endowed with a &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-action such that &lt;span
-class="math display"&gt;
-  [x,y]\cdot m = x\cdot(y\cdot m) - y\cdot(x\cdot m).
-&lt;/span&gt; Equivalently, we can require that the map &lt;span
-class="math display"&gt;
-  \begin{aligned}
-    \mathfrak{g}&amp;amp;\to \operatorname{End}(\mathfrak{g})
-  \\x &amp;amp;\mapsto x\cdot(-)
-  \end{aligned}
-&lt;/span&gt; induced by the &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-action be a Lie algebra
-homomorphism.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;We mentioned right near the start of this post that Lie algebra
-cohomology was going to be defined as the derived functor of the functor
-of invariants. Although this is technically true, it’s not really very
-obvious with the specific definition that we’re about to give, but we’ll
-explain how they are equivalent afterwards.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;The &lt;em&gt;Chevalley–Eilenberg complex &lt;span
-class="math inline"&gt;\operatorname{CE}^\bullet(\mathfrak{g},M)&lt;/span&gt;&lt;/em&gt;
-is defined by &lt;span class="math display"&gt;
-  \operatorname{CE}(\mathfrak{g},M)^p \coloneqq
-\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)
-&lt;/span&gt; (i.e. the set of &lt;span class="math inline"&gt;p&lt;/span&gt;-linear
-alternating maps &lt;span class="math inline"&gt;\mathfrak{g}^{\times p}\to
-M&lt;/span&gt;) with differential &lt;span
-class="math inline"&gt;d\colon\operatorname{CE}(\mathfrak{g},M)^p\to\operatorname{CE}(\mathfrak{g},M)^{p+1}&lt;/span&gt;
-given by &lt;span class="math display"&gt;
-  \begin{aligned}
-    (dc)(x_1,\ldots,x_{p+1}) \coloneqq
-    \,\,&amp;amp;\sum_{1\leqslant i&amp;lt;j\leqslant p+1}
-(-1)^{i+j}c([x_i,x_j],x_1,\ldots,\widehat{x_i},\ldots,\widehat{x_j},\ldots,x_{p+1})
-  \\+&amp;amp;\sum_{i=1}^{p+1} (-1)^{i+1} x_i
-c(x_1,\ldots,\widehat{x_i},\ldots,x_{p+1}).
-  \end{aligned}
-&lt;/span&gt; We then define the &lt;em&gt;Lie algebra cohomology of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;&lt;/em&gt; (&lt;em&gt;with coefficients in
-&lt;span class="math inline"&gt;M&lt;/span&gt;&lt;/em&gt;) to be the internal cohomology
-of this complex, i.e. &lt;span class="math display"&gt;
-  \operatorname{H}^p(\mathfrak{g},M) \coloneqq
-\operatorname{Z}^p(\mathfrak{g},M)/\operatorname{B}^p(\mathfrak{g},M)
-&lt;/span&gt; (“the kernel of &lt;span class="math inline"&gt;d_p&lt;/span&gt; modulo the
-image of &lt;span class="math inline"&gt;d_{p-1}&lt;/span&gt;”).&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;This Chevalley–Eilenberg complex deserves a whole blog post to
-itself, because there’s a beautiful story about how it links to
-deformation theory and Maurer–Cartan elements, but to tell this we would
-need to pass to the more general theory of &lt;em&gt;differential graded Lie
-algebras&lt;/em&gt;, which we don’t have time for today, alas.&lt;/p&gt;
-&lt;p&gt;As a small side note, we don’t assume &lt;span
-class="math inline"&gt;M&lt;/span&gt; to be finite dimensional, but we
-&lt;em&gt;do&lt;/em&gt; require &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; to be
-finite dimensional, otherwise the cohomology groups are just “too big”
-to be of much use. In the case where &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; &lt;em&gt;is&lt;/em&gt; infinite
-dimensional, we can still get something useful if we have some sort of
-topological structure on &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-and &lt;span class="math inline"&gt;M&lt;/span&gt;, because we can replace the
-tensor product in the definition of &lt;span
-class="math inline"&gt;\wedge^p\mathfrak{g}&lt;/span&gt; with the
-&lt;em&gt;topological&lt;/em&gt; tensor product &lt;span
-class="math inline"&gt;\otimes^\pi&lt;/span&gt;, resulting in so-called &lt;a
-href="https://en.wikipedia.org/wiki/Gelfand%E2%80%93Fuks_cohomology"&gt;Gelfand–Fuks
-cohomology&lt;/a&gt;. But we’re not going to worry about that here!&lt;/p&gt;
-&lt;p&gt;Now let’s finish up by asking how this definition recovers the idea
-of deriving the functor of invariants. As we’ve already mentioned, the
-fact that the universal enveloping algebra construction is left adjoint
-to the underlying Lie algebra construction implies that
-&lt;em&gt;representations of &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-give us representations of &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;&lt;/em&gt;; the
-Poincaré–Birkhoff–Witt theorem gives us a converse to this, telling us
-that &lt;em&gt;representations of &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt; give us representations of
-&lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;&lt;/em&gt; (since &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; embeds into &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;). In fact, these two
-correspondences are inverse, and so &lt;em&gt;there is a bijective
-correspondence between &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-modules and &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;-modules&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Using this, we can prove a result analogous to what we had for group
-cohomology, namely that &lt;span class="math display"&gt;
-  M^\mathfrak{g}\cong
-\operatorname{Hom}_{U(\mathfrak{g})}(k^\mathrm{triv},M).
-&lt;/span&gt; So, if we want to show that the derived functor of invariants is
-“the same” as the notion Lie algebra cohomology that we defined above,
-we need to show that &lt;span class="math display"&gt;
-  \operatorname{Ext}_{U(\mathfrak{g})}^\bullet(k^\mathrm{triv},M) \simeq
-\operatorname{H}^\bullet(\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)).
-&lt;/span&gt; To do this, it would suffice to show that &lt;span
-class="math display"&gt;
-  \operatorname{Hom}_k(\wedge^p\mathfrak{g},M) \cong
-\operatorname{Hom}_{U(\mathfrak{g})}(P^\bullet,M)
-&lt;/span&gt; for some projective resolution &lt;span
-class="math inline"&gt;P^\bullet&lt;/span&gt; of &lt;span
-class="math inline"&gt;k^\mathrm{triv}&lt;/span&gt;. We won’t give the details
-here, but this is indeed true, and comes from the projective resolution
-&lt;span class="math display"&gt;
-  U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow
-k^\mathrm{triv}
-&lt;/span&gt; where we choose some “clever” definition of differential for the
-complex &lt;span
-class="math inline"&gt;U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}&lt;/span&gt;
-(namely that of the &lt;a
-href="https://en.wikipedia.org/wiki/Koszul_complex"&gt;Koszul complex&lt;/a&gt;),
-which looks as similar as possible to the differential in the
-Chevalley-Eilenberg complex.&lt;/p&gt;
 </content>
   </entry>
 </feed>
