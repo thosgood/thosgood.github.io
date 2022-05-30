@@ -1424,10 +1424,11 @@ all!&lt;/p&gt;
     <published>2021-12-22T00:00:00Z</published>
     <updated>2021-12-22T00:00:00Z</updated>
     <link rel="alternate" href="https://thosgood.com/blog/2021/12/22/blog-comments/" type="text/html"/>
-    <content type="html">&lt;p&gt;This blog now has support for comments! I haven’t had a chance to
-properly test things yet, and there are still some kinks left to iron
-out, but please do use this as an excuse to browse back through old
-posts and say nice things.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;Update: comments have been “temporarily” disabled (I had some
+server issues).&lt;/strong&gt; This blog now has support for comments! I
+haven’t had a chance to properly test things yet, and there are still
+some kinks left to iron out, but please do use this as an excuse to
+browse back through old posts and say nice things.&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;Using the lovely &lt;a
 href="https://github.com/souramoo/commentoplusplus#how-is-this-different-to-the-original-commento"&gt;Commento++&lt;/a&gt;,
