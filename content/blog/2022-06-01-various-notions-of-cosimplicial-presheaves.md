@@ -56,7 +56,6 @@ Happy reading!
 
 ![The three main notions of simplicial sheaf.](/assets/post-images/2022-05-30-three-notions.png)
 
-[^1]: H.I. Green. “Chern classes for coherent sheaves”. PhD Thesis. University of Warwick, (1980). [pugwash.lib.warwick.ac.uk/record=b1751746~S1](https://pugwash.lib.warwick.ac.
-uk/record=b1751746~S1)
+[^1]: H.I. Green. “Chern classes for coherent sheaves”. PhD Thesis. University of Warwick, (1980). [pugwash.lib.warwick.ac.uk/record=b1751746~S1](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1)
 [^2]: Domingo Toledo and Yue Lin L Tong. "Green’s theory of Chern classes and the Riemann-Roch formula". In: *The Lefschetz Centennial Conference, Part 1*, Amer. Math. Soc. (1987). DOI:[10.1090/conm/058.1/860421](https://doi.org/10.1090/conm/058.1/860421)
 [^3]: Julia E. Bergner. "Homotopy limits of model categories and more general homotopy theories". (2012). arXiv:[1010.0717v2](https://arxiv.org/abs/1010.0717v2)
