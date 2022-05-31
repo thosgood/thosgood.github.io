@@ -5,7 +5,7 @@
 }
 
 .citation .title {
-  font-weight: 500;
+  font-weight: 400;
 }
 .citation .title:before { content: '"'; }
 .citation .title:after { content: '".'; }
