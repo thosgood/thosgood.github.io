@@ -5,7 +5,7 @@
 }
 
 .citation .title {
-  font-weight: 330;
+  font-weight: 500;
 }
 .citation .title:before { content: '"'; }
 .citation .title:after { content: '".'; }
@@ -15,7 +15,7 @@
 }
 
 .citation .volume {
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .citation .year:before { content: '('; }
