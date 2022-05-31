@@ -5,7 +5,7 @@ tags: ['category-theory', 'simplicial-things']
 created_at: 2022-05-30
 ---
 
-For the first time, I have released into the wild a preprint of which I am the sole author, and had no real supervision. This is a scary moment indeed — how do I know that I haven't written complete made-up nonsense? It's true that I talked with a couple of close colleagues about the results, and they nodded in vague agreement, but the responsibility of checking the actual formal details is all on me. Even worse, I wanted to include some results about something that I don't really have any formal experience with. Anyway, I hope the resulting paper is at least mildly "good" (whatever that might mean). It's called "Various notions of (co)simplicial (pre)sheaves", and will be up on the arXiv soon (and I'll update this post with a link when it's live).
+For the first time, I have released into the wild a preprint of which I am the sole author, and had no real supervision. This is a scary moment indeed — how do I know that I haven't written complete made-up nonsense? It's true that I talked with a couple of close colleagues about the results, and they nodded in vague agreement, but the responsibility of checking the actual formal details is all on me. Even worse, I wanted to include some results about something that I don't really have any formal experience with. Anyway, I hope the resulting paper is at least mildly "good" (whatever that might mean). It's called "Various notions of (co)simplicial (pre)sheaves", and is now on the arXiv: <a href="https://arxiv.org/abs/2205.15185">2205.15185</a>.
 
 <!-- more -->
 
