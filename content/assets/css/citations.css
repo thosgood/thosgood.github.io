@@ -60,7 +60,7 @@
 .book .series {}
 
 .book .volume {
-  font-weight: 400;
+  font-weight: 450;
 }
 
 .book .year:before { content: '('; }
