@@ -19,30 +19,6 @@ div.content {
   }
 }
 
-a {
-  text-decoration: underline;
-  color: #357edd;;
-  border: 1px solid transparent;
-}
-
-a:hover {
-  /*color: #fff;*/
-  /*background: #357edd;;*/
-  /*background: #999;*/
-  border: 1px dashed #357edd;
-}
-
-.link {
-  border: 2px solid transparent;
-}
-
-.link:hover {
-  color: #357edd;;
-  background: none;
-  border: 2px solid transparent;
-  border-bottom: 2px dashed #357edd;;
-}
-
 #main strong {
   font-weight: 450;
 }
@@ -88,6 +64,43 @@ article .katex {
 
 
 
+/* Links */
+
+a {
+  text-decoration: underline;
+  color: #357edd;
+  border: 1px solid transparent;
+}
+
+a:hover {
+  /*color: #fff;*/
+  /*background: #357edd;*/
+  /*background: #999;*/
+  border: 1px dashed #357edd;
+}
+
+.nav_link {
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.nav_link:hover {
+  color: #357edd;
+  background: none;
+  border: 2px solid transparent;
+  border-bottom: 2px dashed #357edd;
+}
+
+.dark_link {
+  color: black;
+}
+
+.section_title_link {
+  color: black;
+  text-decoration: none;
+}
+
+
+
 /* Header */
 
 #header {
@@ -102,10 +115,10 @@ article .katex {
 }
 
 #header span.active {
-  color: #357edd;;
+  color: #357edd;
   font-size: 1rem;
   border: 2px solid transparent;
-  border-bottom: 2px solid #357edd;;
+  border-bottom: 2px solid #357edd;
 }
 
 @media screen and (min-width: 30em) {
