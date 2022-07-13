@@ -25,21 +25,21 @@
 
 .citation .doi:before { content: 'DOI: '; }
 .citation .doi a {
-  color: black;
+  /*color: black;*/
   /*text-decoration: none;*/
   font-weight: 400;
 }
 
 .citation .arxiv:before { content: 'arXiv: '; }
 .citation .arxiv a {
-  color: black;
+  /*color: black;*/
   /*text-decoration: none;*/
   font-weight: 400;
 }
 
 .citation .hal:before { content: 'HAL: '; }
 .citation .hal a {
-  color: black;
+  /*color: black;*/
   /*text-decoration: none;*/
   font-weight: 400;
 }
