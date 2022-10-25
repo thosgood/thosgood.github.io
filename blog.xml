@@ -180,22 +180,21 @@ alt="The three main notions of simplicial sheaf." /&gt;
 &lt;figcaption aria-hidden="true"&gt;The three main notions of simplicial
 sheaf.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;section class="footnotes footnotes-end-of-document"
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes"&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id="fn1" role="doc-endnote"&gt;&lt;p&gt;H.I. Green. “Chern classes for
-coherent sheaves”. PhD Thesis. University of Warwick, (1980). &lt;a
+&lt;li id="fn1"&gt;&lt;p&gt;H.I. Green. “Chern classes for coherent sheaves”. PhD
+Thesis. University of Warwick, (1980). &lt;a
 href="https://pugwash.lib.warwick.ac.uk/record=b1751746~S1"&gt;pugwash.lib.warwick.ac.uk/record=b1751746~S1&lt;/a&gt;&lt;a
 href="#fnref1" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2" role="doc-endnote"&gt;&lt;p&gt;Domingo Toledo and Yue Lin L Tong.
-“Green’s theory of Chern classes and the Riemann-Roch formula”. In:
-&lt;em&gt;The Lefschetz Centennial Conference, Part 1&lt;/em&gt;, Amer. Math. Soc.
-(1987). DOI:&lt;a
+&lt;li id="fn2"&gt;&lt;p&gt;Domingo Toledo and Yue Lin L Tong. “Green’s theory of
+Chern classes and the Riemann-Roch formula”. In: &lt;em&gt;The Lefschetz
+Centennial Conference, Part 1&lt;/em&gt;, Amer. Math. Soc. (1987). DOI:&lt;a
 href="https://doi.org/10.1090/conm/058.1/860421"&gt;10.1090/conm/058.1/860421&lt;/a&gt;&lt;a
 href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn3" role="doc-endnote"&gt;&lt;p&gt;Julia E. Bergner. “Homotopy limits of
-model categories and more general homotopy theories”. (2012). arXiv:&lt;a
+&lt;li id="fn3"&gt;&lt;p&gt;Julia E. Bergner. “Homotopy limits of model categories
+and more general homotopy theories”. (2012). arXiv:&lt;a
 href="https://arxiv.org/abs/1010.0717v2"&gt;1010.0717v2&lt;/a&gt;&lt;a
 href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -476,21 +475,20 @@ know).&lt;/li&gt;
 href="https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087"&gt;examples
 of 1. that do not satisfy 2.&lt;/a&gt;, but I actually don’t know how the
 other notions interact at all.&lt;/p&gt;
-&lt;section class="footnotes footnotes-end-of-document"
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes"&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id="fn1" role="doc-endnote"&gt;&lt;p&gt;Apart from one paper which I’m
-currently working on with a co-author, because that’s not just my story
-to share. But this will hopefully hit the arXiv… within a year? I dunno,
-I’ve been saying that about this specific paper for the past two years,
-so we’ll see what actually happens.&lt;a href="#fnref1"
-class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2" role="doc-endnote"&gt;&lt;p&gt;Well, the method was explained, but
-the actual computations were basically left as an exercise to the reader
-— I was one such reader, and I wrote them down in &lt;em&gt;my&lt;/em&gt; PhD
-thesis.&lt;a href="#fnref2" class="footnote-back"
+&lt;li id="fn1"&gt;&lt;p&gt;Apart from one paper which I’m currently working on with
+a co-author, because that’s not just my story to share. But this will
+hopefully hit the arXiv… within a year? I dunno, I’ve been saying that
+about this specific paper for the past two years, so we’ll see what
+actually happens.&lt;a href="#fnref1" class="footnote-back"
 role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn2"&gt;&lt;p&gt;Well, the method was explained, but the actual
+computations were basically left as an exercise to the reader — I was
+one such reader, and I wrote them down in &lt;em&gt;my&lt;/em&gt; PhD thesis.&lt;a
+href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>
@@ -1096,36 +1094,35 @@ class="math inline"&gt;\operatorname{H}^\bullet(\mathbb{CP}^\infty)\cong\mathbb{
 where &lt;span class="math inline"&gt;|\beta|=2&lt;/span&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Nice!&lt;/p&gt;
-&lt;section class="footnotes footnotes-end-of-document"
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes"&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id="fn1" role="doc-endnote"&gt;&lt;p&gt;Note that this condition extends to
-give some condition on the multiplication of arbitrary elements of &lt;span
+&lt;li id="fn1"&gt;&lt;p&gt;Note that this condition extends to give some condition
+on the multiplication of arbitrary elements of &lt;span
 class="math inline"&gt;R&lt;/span&gt;, since every element can be written (in a
 unique way) as a sum of homogeneous elements, by the fact that &lt;span
 class="math inline"&gt;R\cong\bigoplus_{d=0}^\infty R_d&lt;/span&gt;.&lt;a
 href="#fnref1" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2" role="doc-endnote"&gt;&lt;p&gt;This is very similar to the fact that
-a group homomorphism must send an element of order &lt;span
+&lt;li id="fn2"&gt;&lt;p&gt;This is very similar to the fact that a group
+homomorphism must send an element of order &lt;span
 class="math inline"&gt;n&lt;/span&gt; to an element of order &lt;span
 class="math inline"&gt;m&lt;/span&gt; &lt;em&gt;such that &lt;span
 class="math inline"&gt;m&lt;/span&gt; divides &lt;span
 class="math inline"&gt;n&lt;/span&gt;&lt;/em&gt;.&lt;a href="#fnref2"
 class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn3" role="doc-endnote"&gt;&lt;p&gt;Both number theorists and algebraic
-geometers get very tired of having to write “let &lt;span
-class="math inline"&gt;k&lt;/span&gt; be a field of characteristic not equal to
-&lt;span class="math inline"&gt;2&lt;/span&gt;”, since &lt;span
-class="math inline"&gt;2&lt;/span&gt; “behaves badly” for them; some algebraic
-topologists, on the other hand, get very excited when you say “calculate
-(co)homology with coefficients in a field of characteristic &lt;span
+&lt;li id="fn3"&gt;&lt;p&gt;Both number theorists and algebraic geometers get very
+tired of having to write “let &lt;span class="math inline"&gt;k&lt;/span&gt; be a
+field of characteristic not equal to &lt;span
 class="math inline"&gt;2&lt;/span&gt;”, since &lt;span class="math inline"&gt;2&lt;/span&gt;
-“behaves nicely” for them. Basically, &lt;span class="math inline"&gt;2&lt;/span&gt;
-is a tricky number.&lt;a href="#fnref3" class="footnote-back"
-role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn4" role="doc-endnote"&gt;&lt;p&gt;Or if we work over a field instead of
-over &lt;span class="math inline"&gt;\mathbb{Z}&lt;/span&gt;…&lt;a href="#fnref4"
+“behaves badly” for them; some algebraic topologists, on the other hand,
+get very excited when you say “calculate (co)homology with coefficients
+in a field of characteristic &lt;span class="math inline"&gt;2&lt;/span&gt;”, since
+&lt;span class="math inline"&gt;2&lt;/span&gt; “behaves nicely” for them. Basically,
+&lt;span class="math inline"&gt;2&lt;/span&gt; is a tricky number.&lt;a href="#fnref3"
+class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn4"&gt;&lt;p&gt;Or if we work over a field instead of over &lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;…&lt;a href="#fnref4"
 class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -1310,17 +1307,16 @@ class="math inline"&gt;(p-1)&lt;/span&gt;-cube) is found in Edgar H. Brown, Jr.�
 “Twisted Tensor Products, I”&lt;a href="#fn2" class="footnote-ref"
 id="fnref2" role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
-&lt;section class="footnotes footnotes-end-of-document"
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes"&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id="fn1" role="doc-endnote"&gt;&lt;p&gt;J. F. Adams, “On the Cobar
-Construction”. &lt;em&gt;PNAS&lt;/em&gt; &lt;strong&gt;42&lt;/strong&gt; (1956), 409–412. &lt;a
+&lt;li id="fn1"&gt;&lt;p&gt;J. F. Adams, “On the Cobar Construction”. &lt;em&gt;PNAS&lt;/em&gt;
+&lt;strong&gt;42&lt;/strong&gt; (1956), 409–412. &lt;a
 href="https://www.jstor.org/stable/89694"&gt;JSTOR:89694&lt;/a&gt;.&lt;a
 href="#fnref1" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2" role="doc-endnote"&gt;&lt;p&gt;Edgar H. Brown, Jr., “Twisted Tensor
-Products, I”. &lt;em&gt;Annals of Mathematics&lt;/em&gt; &lt;strong&gt;69&lt;/strong&gt; (1959),
-223–246. &lt;a
+&lt;li id="fn2"&gt;&lt;p&gt;Edgar H. Brown, Jr., “Twisted Tensor Products, I”.
+&lt;em&gt;Annals of Mathematics&lt;/em&gt; &lt;strong&gt;69&lt;/strong&gt; (1959), 223–246. &lt;a
 href="https://doi.org/10.2307/1970101"&gt;DOI:10.2307/1970101&lt;/a&gt;.&lt;a
 href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
