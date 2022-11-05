@@ -11,7 +11,7 @@ Once again I feel the urge to type something nice, but have nothing new of my ow
 
 # Unmotivated definitions
 
-There are a bunch of different definitions of the _Hochschild complex_ $C_\bullet(A,N)$ for a bimodule $N$ over a (commutative) algebra $A$. Let's have a look at them. Throughout, we make use of the _enveloping algebra_ $A^e$ of $A$, which is defined by $A^e=A\otimes A^\mathrm{op}$ (which makes it look a bit like the endomorphism algebra, but with $\mathrm{op}$ instead of duals). Useful to know is the fact that a bimodule over $A$ is exactly the same thing as a bimodule over $A^e$.
+There are a bunch of different definitions of the _Hochschild complex_ $C_\bullet(A,N)$ for a bimodule $N$ over a (commutative) algebra $A$. Let's have a look at them. Throughout, we make use of the _enveloping algebra_ $A^e$ of $A$, which is defined by $A^e=A\otimes A^\mathrm{op}$ (which makes it look a bit like the endomorphism algebra, but with $\mathrm{op}$ instead of duals). Useful to know is the fact that a bimodule over $A$ is exactly the same thing as a module over $A^e$.
 
 Note that, when we've defined the Hochschild complex $C_\bullet(A,N)$, we can define _Hochschild homology_ of an algebra $A$ as simply $$\mathrm{HH}_\bullet(A) = \mathrm{H}_\bullet(C_\bullet(A,A))$$ using the fact that $A$ is a bimodule over itself.
 
