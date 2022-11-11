@@ -29,7 +29,7 @@ First of all, there are two points that I want to make about choices of language
 
 Without further ado, here is a diagram that attempts to explain the relationships between various things that you might have learnt about in various places.
 
-![How things all sort of fit together](/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-1.png "How things all sort of fit together")
+![How things all sort of fit together](1.png "How things all sort of fit together")
 
 Here are a few words about the above diagram.
 
@@ -40,7 +40,7 @@ Here are a few words about the above diagram.
 
 Now here is a picture of where the derived category of chain complexes fits in to all this.
 
-![Where does the derived category fit in?](/assets/post-images/2018-04-26-derived-dg-triangulated-and-infinity-categories-2.png "Where does the derived category fit in?")
+![Where does the derived category fit in?](2.png "Where does the derived category fit in?")
 
 Here are a few words about the above diagram.
 

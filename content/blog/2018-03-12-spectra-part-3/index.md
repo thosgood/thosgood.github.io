@@ -94,7 +94,7 @@ This generalises in section 6 to showing that $n$-fold loop spaces can be acted 
 That is, we define $E_n$ to be the little $n$-discs operad, and $E_\infty$ to be the colimit of the $E_n$, which is weakly equivalent to the commutative operad $\mathrm{Comm}$.
 As an interesting fact, we can see that $E_n$ is generally homotopically non-trivial (tiny picture below), but $E_\infty$ is contractible.
 
-![Proof that $E_2(2)$ is homotopic to the circle](/assets/post-images/2018-3-12-spectra-part-3-E22.jpg)
+![Proof that $E_2(2)$ is homotopic to the circle](./E22.jpg)
 
 I haven't really talked much about spectra here, but the definition of an **infinite loop space** in Vogt is the same as the definition of an $\Omega$-spectrum in the previous post.
 Vogt mentions (5.2) that if $X$ is an infinite loop space then $Y\mapsto[Y,X_n]^\bullet$ defines a cohomology theory, and that any cohomology theory arises in this way.

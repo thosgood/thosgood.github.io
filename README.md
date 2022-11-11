@@ -2,8 +2,6 @@
 
 ### Major
 
-- structure of `content/` directory changed to mirror blogdown
-    + i.e. posts are just an `index.md` file inside a `YYYY-MM-DD-slug/` directory
 - links like `/blog/2022/02` should work
 - pagination for blog
 

@@ -46,7 +46,7 @@ Generally, I lean very far to the 'copyright has become, thanks to certain big n
 
 In almost any conversation, there is a relevant XKCD: here, it's [#927](https://xkcd.com/927/) : there are so many competing standards, so why try for another one?
 
-![The XKCD in question](/assets/post-images/2019-10-09-matrix-riot-what-is-it-xkcd927.png "The alt text on the original is also great.")
+![The XKCD in question](xkcd927.png "XKCD number 927")
 
 First of all, as mentioned above, Matrix solves a pretty big problem by being _federated_: like email, it doesn't matter who you choose to trust (I still use the word 'trust' here, because that's always something you should think about) to give you your username and deal with your message sending/receiving (e.g. `matrix.org`, `matrix.sibnsk.net`, or `converser.eu`), because you can always send and receive messages from people who made a different choice. To me, this is just so obvious! Why did we move from email, and then SMS, to things like chat apps...
 

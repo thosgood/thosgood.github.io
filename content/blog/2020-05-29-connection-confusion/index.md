@@ -16,7 +16,7 @@ First, the quote in question.
 
 I'm in full agreement with this paragraph. There's a nice little family tree you can draw that helps:
 
-![](/assets/post-images/2020-05-29-connection-confusion-family-tree.png)
+![](family-tree.png)
 
 But even when working with just Koszul connections (also known as _linear_ connections), there can be some subtleties between different definitions that are not really always signposted very clearly. Let's see if I can justify this and explain what I mean a bit better.
 
@@ -30,4 +30,4 @@ But how can we make sense of having three seemingly different definitions? I mea
 
 Things become a little bit clearer when we look at the following nice hierarchy of notions of morphisms though:
 
-![](/assets/post-images/2020-05-29-connection-confusion-hierarchy.jpg)
+![](hierarchy.jpg)

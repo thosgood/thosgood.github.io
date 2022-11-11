@@ -65,13 +65,13 @@ And, further, how can we do it in a cubical way?
 
 Well we know that every path in $B$ gives us an element of $G$, and we know that the path $02$ gives us $g_{02}$, and the composite path $01;12$ gives us the element $g_{12}g_{01}$, so let's draw a bunch of intermediate paths!
 We can do this by starting at $0$, heading along the line $01$ *for some time $0\leq t_0\leq1$*, and then heading towards the point $2$ for the rest of the time $t_0-1$.
-When $t_0=0$ we recover exactly the line $02$, and when $t_0=1$ we recover exactly the composite $01;12$; for intermediate values, we get something like in the (very hastily drawn) picture below.
+When $t_0=0$ we recover exactly the line $02$, and when $t_0=1$ we recover exactly the composite $01;12$; for intermediate values, we get something like in the (very hastily drawn) picture below:
 
-![Paths in the $2$-simplex.](/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-2.png)
+![Paths in the $2$-simplex.](paths-in-delta-2.png)
 
 What's wonderful is that, when we look at doing something similar for the $3$-simplex, we see that all our paths are parametrised by variables $0\leq t_0,t_1\leq 1$, i.e. by the $2$-cube!
 
-![Paths in the $3$-simplex.](/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-3.png)
+![Paths in the $3$-simplex.](paths-in-delta-3.png)
 
 
 # Behind the scenes, and some history

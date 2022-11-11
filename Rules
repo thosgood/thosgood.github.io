@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+
+# TAGS
+
 # for each tag, make an item called /blog/tags/tagname
 preprocess do
   tags = @items.map { |i| i[:tags] }.flatten.uniq
@@ -23,6 +26,9 @@ compile '/blog/tags/*' do
   write "/blog/tags/#{item.identifier.to_s.split('/')[-1]}/index.html"
 end
 
+
+# STATIC PAGES
+
 # take the /content/index.hmtl file and filter it with erb (passing it through
 # the layout "Default") and make a file /index.html in the output directory
 compile '/index.html' do
@@ -41,19 +47,30 @@ compile '/**/*.html' do
   write item.identifier.without_ext + '/index.html'
 end
 
+
+# BLOG POSTS
+
 # take all the .md files in /blog and filter them with pandoc, using the katex
-# parser (which doesn't actually really do much, alas) (passing them through
-# the layout "Post") and making a file /blog/y/m/d/name.html, where y, m, d, and
-# name all come from the title of the file
-compile '/blog/*.md' do
+# parser (which doesn't actually really do much) (passing them through the
+# layout "Post") and making a file /blog/y/m/d/name/index.html,
+# where y, m, d, and name all come from the title of the file
+compile "/blog/*/index.md" do
   filter :pandoc, args: [
     :katex
   ]
   layout '/Post.*'
   filter :add_toc
-  y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+).md/.match(item.identifier).captures
+  y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+)\/index.md/.match(item.identifier.to_s).captures
   write "/blog/#{y}/#{m}/#{d}/#{slug}/index.html"
 end
+compile "/blog/*/*" do 
+  write(item.identifier.to_s)
+  y,m,d,slug,image = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+)\/(.*)/.match(item.identifier.to_s).captures
+  write "/blog/#{y}/#{m}/#{d}/#{slug}/#{image}"
+end
+
+
+# OTHER
 
 # generate the RSS feed
 compile '/blog/feed.*' do

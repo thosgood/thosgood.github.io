@@ -37,7 +37,7 @@ But of course we could have also composed these in the other order, doing $g$ fi
 In the paper, I (timidly) make the argument that all of these choices can be bundled up into one sheaf on a simplicial space, and then that a single choice of all the data described above corresponds to a *section* of this sheaf.
 There are some caveats in this construction (for example, the method that I describe requires that we fix the number and type of endomorphisms beforehand), but I think that most of them could probably be done away with by somebody who actually knows something about these very restrictive sorts of string diagrams (e.g. if there are some "generating" shapes of these diagrams then you could maybe consider building a simplicial space for each one and then gluing them altogether with some limit-y process).
 
-![String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space.](/assets/post-images/2022-05-30-endomorphism-construction.png)
+![String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space.](endomorphism-construction.png)
 
 Really, the only reason that I actually include this construction at all (beyond wanting to make people in another field aware of these objects that I find so fascinating) is in the hope that somebody comes along and makes it much better!
 I think it could be extended to describe much more general string diagrams, with copies and deletes and whatnot, but this is not something that I have the knowledge to do on my own.
@@ -54,7 +54,7 @@ The first two sections (after the introduction) define three (or really four) no
 If anybody does actually read this and have any comments, corrections, criticisms, or complaints, then please do let me know --- you can leave a comment here, or email me, or tweet at me, or whatever you like.
 Happy reading!
 
-![The three main notions of simplicial sheaf.](/assets/post-images/2022-05-30-three-notions.png)
+![The three main notions of simplicial sheaf.](three-notions.png)
 
 [^1]: H.I. Green. “Chern classes for coherent sheaves”. PhD Thesis. University of Warwick, (1980). [pugwash.lib.warwick.ac.uk/record=b1751746~S1](https://pugwash.lib.warwick.ac.uk/record=b1751746~S1)
 [^2]: Domingo Toledo and Yue Lin L Tong. "Green’s theory of Chern classes and the Riemann-Roch formula". In: *The Lefschetz Centennial Conference, Part 1*, Amer. Math. Soc. (1987). DOI:[10.1090/conm/058.1/860421](https://doi.org/10.1090/conm/058.1/860421)

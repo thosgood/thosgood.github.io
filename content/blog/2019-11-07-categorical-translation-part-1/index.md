@@ -183,7 +183,7 @@ Assuming we know how to deal with 'words' (which I continue to write in scare qu
 This is something that, as I said above, I'm pretty sure has been well understood by people for a while now: we think of a sentence as a tree.
 Here's an example (which I would normally have made look nice in TikZ, but I've already spent far too much time on this whole side project):
 
-![A sample sentence tree](/assets/post-images/2019-11-07-categorical-translation-tree.jpg "A sample sentence tree.")
+![A sample sentence tree](tree.jpg "A sample sentence tree.")
 
 But the whole point of our $\boxtimes$ structure on $\mathcal{T}$ is that we can write these trees as 'linear concatenations', i.e. as strings with arguments just being applied by concatenation on the right.
 
@@ -205,7 +205,7 @@ The first sounds like an administrative nightmare; the second sounds 'evil', but
 What _is_ translation then?
 Well, on sentences, it's given compositionally (I'm literally trying to wave my hands as I type that), and on sentences it's given by the profunctor^[Thanks to John Baez for reminding me about indicator functions and profunctors and the like.] $\mathrm{Tr}_{\mathsf{L}_1,\mathsf{L}_2} \colon \mathsf{L}_1 \nrightarrow \mathsf{L}_2$ defined by 
 
-![The translation profunctor](/assets/post-images/2019-11-07-categorical-translation-profunctor.png "The translation profunctor.")
+![The translation profunctor](profunctor.png "The translation profunctor.")
 
 That is, translating words is just given by finding a word in the target language with the same base.
 "But what if there are synonyms?" I hear you cry, to which I defensively respond "well just pick any of them then, because if they really are synonyms then it doesn't matter which one we use".

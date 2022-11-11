@@ -19,7 +19,7 @@ For simplices, however, this is not at all immediate: think of the problem of tr
 Explicitly, if we take the product of the (geometric realisations of) two 1-simplices (the interval $[0,1]$ again), then we, as above, get the space $[0,1]\times[0,1]$, which is not a $\Delta$-complex (in the language of Hatcher).
 To triangulate this space, we need to add a 1-simplex along the diagonal of the square.
 
-![Cubes work, simplices don't](/assets/post-images/2018-04-11-triangulation-of-products-cubes-work.jpg "Cubes work, simplices don't")
+![Cubes work, simplices don't](cubes-work.jpg "Cubes work, simplices don't")
 
 This isn't too hard to see, but for arbitrary triangulations of spaces, it's much harder to see what extra simplices we need to add to their product to recover a triangulation.
 Even if we _can_ figure out how to do it for hard examples, then we still would need a way to describe an algorithm for doing it to _any_ product space.
@@ -52,6 +52,6 @@ $$
 
 Five of these are non-degenerate,^[The ones not in the corners of our 3-by-3 list, i.e. those that have at least one component non-degenerate.] and the one that interests us is $[0,1]\times[0,1]$: when we apply geometric realisation, this will be a 1-simplex along the diagonal of the square.
 
-![The final result](/assets/post-images/2018-04-11-triangulation-of-products-result.jpg "The final result")
+![The final result](result.jpg "The final result")
 
 In essence, the idea is simple, but it's a trick that I'd never seen before, and it really makes me 'believe' in simplices.

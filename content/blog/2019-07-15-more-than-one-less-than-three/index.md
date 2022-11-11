@@ -38,11 +38,11 @@ These objects are such that **all** pseudonatural transformations _into_ them ar
 - We should be able to compose 1-morphisms 'along objects', in that, given 1-morphisms $f\colon x\to y$ and $g\colon y\to z$, we should get some 1-morphism $g\circ f\colon x\to z$.
 - We should be able to compose 2-morphisms 'along objects' (so-called _horizontally_)
 
-![horizontal composition](/assets/post-images/2019-07-15-horizontal-2-composition.png)
+![horizontal composition](horizontal-2-composition.png)
 
 but _also_ 'along 1-morphisms' (so-called _vertically_)
 
-![vertical composition](/assets/post-images/2019-07-15-vertical-2-composition.png)
+![vertical composition](vertical-2-composition.png)
 
 and we ask that both senses of composition be associative _only up to coherent associator 2-morphisms_.
 
@@ -93,7 +93,7 @@ This means that it has
 
 We can picture the 2-cells as a square (hence the name), as
 
-![squares](/assets/post-images/2019-07-15-double-square.png)
+![squares](double-square.png)
 
 where $x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0$ are objects, $f,g\in\operatorname{ob}\mathcal{C}_1$ are horizontal morphisms, $\alpha\beta\in\operatorname{Arr}\mathcal{C}_0$ are vertical morphisms, and $\phi\in\operatorname{Arr}\mathcal{C}_1$ is the 2-cell.
 
