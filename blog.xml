@@ -10,11 +10,11 @@
     <uri>https://thosgood.com</uri>
   </author>
   <entry>
-    <id>tag:thosgood.com,2022-05-30:/blog/2022/06/01/various-notions-of-cosimplicial-presheaves/</id>
+    <id>tag:thosgood.com,2022-05-30:/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/</id>
     <title type="html">Various notions of (co)simplicial (pre)sheaves</title>
     <published>2022-05-30T00:00:00Z</published>
     <updated>2022-05-30T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/06/01/various-notions-of-cosimplicial-presheaves/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.com/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/" type="text/html"/>
     <content type="html">&lt;p&gt;For the first time, I have released into the wild a preprint of which
 I am the sole author, and had no real supervision. This is a scary
 moment indeed — how do I know that I haven’t written complete made-up
@@ -132,7 +132,7 @@ knows something about these very restrictive sorts of string diagrams
 could maybe consider building a simplicial space for each one and then
 gluing them altogether with some limit-y process).&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="/assets/post-images/2022-05-30-endomorphism-construction.png"
+&lt;img src="endomorphism-construction.png"
 alt="String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space." /&gt;
 &lt;figcaption aria-hidden="true"&gt;String diagrams of a certain form
 correspond to sections of a specific sheaf on a simplicial
@@ -175,7 +175,7 @@ corrections, criticisms, or complaints, then please do let me know — you
 can leave a comment here, or email me, or tweet at me, or whatever you
 like. Happy reading!&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="/assets/post-images/2022-05-30-three-notions.png"
+&lt;img src="three-notions.png"
 alt="The three main notions of simplicial sheaf." /&gt;
 &lt;figcaption aria-hidden="true"&gt;The three main notions of simplicial
 sheaf.&lt;/figcaption&gt;
@@ -1253,11 +1253,9 @@ class="math inline"&gt;t_0=0&lt;/span&gt; we recover exactly the line &lt;span
 class="math inline"&gt;02&lt;/span&gt;, and when &lt;span
 class="math inline"&gt;t_0=1&lt;/span&gt; we recover exactly the composite &lt;span
 class="math inline"&gt;01;12&lt;/span&gt;; for intermediate values, we get
-something like in the (very hastily drawn) picture below.&lt;/p&gt;
+something like in the (very hastily drawn) picture below:&lt;/p&gt;
 &lt;figure&gt;
-&lt;img
-src="/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-2.png"
-alt="Paths in the 2-simplex." /&gt;
+&lt;img src="paths-in-delta-2.png" alt="Paths in the 2-simplex." /&gt;
 &lt;figcaption aria-hidden="true"&gt;Paths in the &lt;span
 class="math inline"&gt;2&lt;/span&gt;-simplex.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1267,9 +1265,7 @@ paths are parametrised by variables &lt;span class="math inline"&gt;0\leq
 t_0,t_1\leq 1&lt;/span&gt;, i.e. by the &lt;span
 class="math inline"&gt;2&lt;/span&gt;-cube!&lt;/p&gt;
 &lt;figure&gt;
-&lt;img
-src="/assets/post-images/2022-02-05-every-bundle-is-flat-from-infinity-pov-paths-in-delta-3.png"
-alt="Paths in the 3-simplex." /&gt;
+&lt;img src="paths-in-delta-3.png" alt="Paths in the 3-simplex." /&gt;
 &lt;figcaption aria-hidden="true"&gt;Paths in the &lt;span
 class="math inline"&gt;3&lt;/span&gt;-simplex.&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -1343,8 +1339,8 @@ the page with you, fit the whole page onto your phone, etc. etc. I also
 took this opportunity to refresh the CSS a bit, so hopefully things look
 slick and nice now.&lt;/p&gt;
 &lt;figure&gt;
-&lt;img src="/assets/post-images/2022-01-23-new-css.png"
-title="New style for web versions of translations"
+&lt;img src="new-css.png"
+title="A screenshot of the new style for the web versions of my translations"
 alt="New style for web versions of translations: the buttons in the top left are for toggling the table of contents, changing font options, and viewing the PDF version. Thanks Bookdown!" /&gt;
 &lt;figcaption aria-hidden="true"&gt;New style for web versions of
 translations: the buttons in the top left are for toggling the table of
