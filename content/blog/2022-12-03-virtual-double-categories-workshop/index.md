@@ -28,6 +28,7 @@ Knowing that I would attend such a workshop anyway, I offered to help with the t
 Organising an online event is, in many many ways, much simpler than an in-person one --- no room bookings, catering, accommodation, etc. --- and yet it's somehow a bit stressful in an entirely different way (*will people turn up?* *what if my internet cuts out?* *what if a speaker's internet cuts out?* *what time zone is best to do each talk in?*).
 But last week things ran pretty much as smoothly as possible, and it seemed like everybody involved got something out of the workshop.
 Once again, I'd really like to thank all of the speakers --- I wish I had the time and energy to write about all of the talks individually, but let me just mention a few that were particularly relevant to the thing I've been thinking about recently.
+I'd also like to thank Bryce, for having the idea in the first place, and then for letting me get involved.
 
 Before I go any further, I really do recommend that you look at the abstracts on [the workshop webpage](https://bryceclarke.github.io/virtual-double-categories-workshop/) yourself, because the variety of topics, given that all speakers were asked to talk about double categories, is really quite astonishing: formal category theory, size issues, cybernetics, higher homotopy theory, coloured symmetric sequences, monoidal things, rewriting theory, and operads, to name but a few.
 
