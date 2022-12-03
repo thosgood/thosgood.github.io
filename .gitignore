@@ -1,3 +1,5 @@
+**/.DS_Store
+
 # For projects using Nanoc (http://nanoc.ws/)
 
 # Default location for output (needs to match output_dir's value found in nanoc.yaml)
@@ -8,5 +10,3 @@ tmp/
 
 # Crash Log
 crash.log
-.DS_Store
-content/.DS_Store
