@@ -75,7 +75,7 @@ Something that's already "well known" (see e.g. Example 3.8 in ["Generalized Len
 But sometimes we want to consider the category of sheaves on spaces as having different morphisms --- if the space is the same, then we want the map of sheaves to go in the "forwards" direction: $\varphi\colon(X,\mathcal{O}_X)\to(X,\mathcal{O}'_X)$ should be a morphism of sheaves $\varphi\colon\mathcal{O}_X\to\mathcal{O}'_X$.
 These two notions of morphisms of pairs consisting of a space and a sheaf on the space (one where we think of the pair as a ringed space, and the other where we think of the pair as an element of $\mathsf{Sh}(X)$ for some fixed $X$) seem to be exactly the two notions that Matteo described.
 It seems like an interesting question for algebraic geometers: is this double category of "sheaves on spaces" useful?
-At the very least, it seems to be a nice and tidy way of expressing the two flavours of sheaf morphism geometers usually care about!At the very least, it seems to be a nice and tidy way of expressing the two flavours of sheaf morphism geometers usually care about!
+At the very least, it seems to be a nice and tidy way of expressing the two flavours of sheaf morphism geometers usually care about!
 
 Finally, I would like to thank Andrée Ehresmann, who surprised us at [the end of David Jaz Myers' talk](https://www.youtube.com/watch?v=zB_ifewP8Yk) with a few words, telling us a little bit about the history of double categories (since it was indeed her late husband who first wrote down a definition).
 This was a lovely touch to the end of the workshop.
