@@ -1,5 +1,5 @@
 <% render '/**/Default.*' do %>
-  <div id="post-nav" class="w-80-ns w-100">
+  <div id="post-nav" class="w-100-ns w-100">
     <!-- Display settings -->
     <ul id="colour-select" class="fl">
       <li>
@@ -16,7 +16,7 @@
     <!-- Navigation -->
     <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr f5">&larr; Return to all posts</a>
   </div>
-  <div id="post-content" class="w-80-ns ph3-ns w-100">
+  <div id="post-content" class="w-100-ns ph3-ns w-100">
     <h1 id="post-title"><%= @item[:title] %></h1>
     <h2 id="post-part"><%= @item[:part] %></h2>
     <h6 id="post-date"><%= get_pretty_date(item) %></h6>
