@@ -21,6 +21,7 @@
 .citation .year:before { content: '('; }
 .citation .year:after { content: ')'; }
 
+.citation .pages:before { content: 'pp. '; }
 .citation .pages:after { content: '.'; }
 
 .citation .doi:before { content: 'DOI: '; }
