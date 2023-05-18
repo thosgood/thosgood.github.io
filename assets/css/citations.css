@@ -19,7 +19,7 @@
 }
 
 .citation .year:before { content: '('; }
-.citation .year:after { content: '),'; }
+.citation .year:after { content: ')'; }
 
 .citation .pages:after { content: '.'; }
 
