@@ -10,11 +10,12 @@
     
     <div class="w-two-thirds-ns tr w-100">
       <ul class="ma0-ns fr-ns list ph0 mt3">
-        <li class="ph2 di"><a href="<%= @config[:base_url] %>/blog.xml">RSS</a></li>
+        <li class="pl2 di"><a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">arXiv</a></li>
+        <li class="pl2 di"><a href="https://orcid.org/<%= @config[:orcid_id] %>">ORCID</a></li>
         <li class="ph2 di"><a href="https://github.com/<%= @config[:github_username] %>">GitHub</a></li>
         <li class="ph2 di"><a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">Mastodon</a></li>
         <li class="ph2 di"><a href="https://matrix.to/#/@<%= @config[:matrix_username] %>">Element</a></li>
-        <li class="pl2 di"><a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">arXiv</a></li>
+        <li class="ph2 di"><a href="<%= @config[:base_url] %>/blog.xml">RSS</a></li>
       </ul>
     </div>
 
