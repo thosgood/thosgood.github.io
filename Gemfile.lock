@@ -101,6 +101,7 @@ PLATFORMS
 DEPENDENCIES
   addressable (>= 2.8.0)
   builder
+  eventmachine (= 1.2.7)
   nanoc (~> 4.12)
   nanoc-live
   nokogiri (>= 1.13.4)
