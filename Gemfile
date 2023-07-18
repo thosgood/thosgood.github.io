@@ -14,4 +14,3 @@ gem "webrick", "~> 1.7"
 gem "nokogiri", ">= 1.13.4"
 gem "pandoc-ruby", "~> 2.1"
 gem "addressable", ">= 2.8.0"
-gem 'eventmachine', '1.2.7', git: 'git@github.com:eventmachine/eventmachine', tag: 'v1.2.7'

@@ -22,6 +22,10 @@ jobs:
       - name: 💿 Setup Pandoc
         run: brew install pandoc
 
+      - name: eventmachine hack fix
+        run: |
+          gem install eventmachine -v '1.2.7' -- --with-ldflags="-Wl,-undefined,dynamic_lookup"
+
       - name: 🛠 Install and Build
         run: |
           bundle exec nanoc
