@@ -24,7 +24,8 @@ jobs:
 
       - name: eventmachine hack fix
         run: |
-          gem install eventmachine -v '1.2.7' -- --with-ldflags="-Wl,-undefined,dynamic_lookup"
+          gem uninstall eventmachine
+          gem install eventmachine --platform=ruby
 
       - name: 🛠 Install and Build
         run: |
