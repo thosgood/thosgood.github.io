@@ -80,7 +80,7 @@
     <!-- Content -->
     <ol id="toc">
 <li><a href="#what-are-matrix-riot-etc.">What are Matrix, Riot, etc.?</a></li>
-<li><a href="#why-do-you-write-latex-in-scare-quotes">Why do you write ‘LaTeX’
+<li><a href="#why-do-you-write-latex-in-scare-quotes">Why do you write “LaTeX”
 in scare quotes?</a></li>
 <li><a href="#why-are-you-telling-me-all-this">Why are you telling me all
 this?</a></li>
@@ -92,7 +92,7 @@ Matrix, and Riot, and maybe a whole host of other such things. I
 understand that most people probably won’t really care much about it
 all, but I thought that I’d try to explain a bit why I’m quite so
 passionate about this stuff, and why I’m bothering to try to work on
-‘LaTeX’ support (with scare quotes for good reason, as explained
+“LaTeX” support (with scare quotes for good reason, as explained
 later).</p>
 <!-- more -->
 <h1 id="what-are-matrix-riot-etc.">What are Matrix, Riot, etc.?</h1>
@@ -109,12 +109,13 @@ time since I worked in any sort of technology sector, so I hope I don’t
 mess up any important points too badly. Sorry in advance to any experts
 out there.)</p>
 <p>Matrix is, at its very heart, <a href="https://matrix.org/">a
-<em>specification (or, protocol) for communication</em>.</a> What does
-this mean? I would explain it to a mathematician by saying that it is a
-set of properties that a method of communication can satisfy, or maybe
-an axiomatisation of such a system. This is where it has some
-similarities to IRC, or even something a bit more like WhatsApp.</p>
-<p>You can think of Matrix as ‘email’ in the following sense. There are
+<em>specification</em> (or <em>protocol</em>) <em>for
+communication</em>.</a> What does this mean? I would explain it to a
+mathematician by saying that it is a set of properties that a method of
+communication can satisfy, or maybe an axiomatisation of such a system.
+This is where it has some similarities to IRC, or even something a bit
+more like WhatsApp.</p>
+<p>You can think of Matrix as “email” in the following sense. There are
 many ways of sending emails, in that you can use any <em>client</em>
 that you want to (e.g. GMail, Apple Mail, Thunderbird, Mutt, Telnet),
 and you can send to and from people with email addresses hosted by
@@ -130,7 +131,7 @@ of HTML they see should actually mean, and how it should be displayed.
 There are lots of subtleties I’m skipping over here, I’m afraid, but
 it’s just to motivate the general idea.</p>
 <p>So then, what is Riot? <a href="https://riot.im">Riot is a client for
-sending messages via Matrix.</a> Further, it’s the ‘official’ client, in
+sending messages via Matrix.</a> Further, it’s the “official” client, in
 that it’s made by (sort of) the same people who make Matrix. There are
 lots of clients out there now, for all sorts of operating systems, and
 written in all sorts of different programming languages (and, recently,
@@ -148,43 +149,23 @@ sometimes find forced upon ourselves, because everything here is
 <em>free, open source, decentralised (but federated), and
 secure</em>.</p>
 <p>Most of those words are probably pretty self-explanatory, but it’s
-worth mentioning the ‘decentralised (but federated)’ bit. The former
-means that you can go and find an old computer (or even use part of your
-new one, if you like) and ‘build’ your very own Matrix Homeserver, which
+worth mentioning the “decentralised (but federated)” bit. This means
+that you can go and find an old computer (or even use part of your new
+one, if you like) and ‘build’ your very own Matrix Homeserver, which
 means that you can now send messages and receive messages to people on
 any other homeserver! This is like the fact that you can send emails
 from any email host to any other. Imagine what a nightmare it would be
 if you could only email people with the same <code>@foo.bar</code> email
 address. Unfortunately, this is how most technologies seem to head this
 day, because the hope is that everybody will flock to the biggest
-platform to be able to speak with the most people, and then shady people
-can flock to smaller ones, in turn giving them a bad name and leading
-for the big one to demand that the smaller one shuts down and wow we’re
-one step closer to an authoritative monopoly, which is the ‘best’ kind,
-because it literally controls who we can speak to 🙃.</p>
-<p>Not to point fingers, I’ll just point hands: WhatsApp, Facebook
-Messenger, Slack, Telegram, and Signal. All very different use cases,
-but all have basically this problem: the only way that I can send
-messages to somebody on Facebook Messenger is by using Facebook
-Messenger: I don’t (really) have a choice of clients, and I don’t have a
-way of building my own copy of Facebook messenger that I can use,
-because this would give the added bonus of knowing exactly how Facebook
-Messenger works behind the scenes.</p>
-<p>Luckily though, I’m sure that Mark Zuckerberg would love to share all
-the lovely secrets about what Facebook Messenger does during the process
-of ‘deliver this message from Person A to Person B’. It must be because
-there are many techincal details that he wants to keep secret.
-Unfortunately, it can’t be anything about how the message is sent, or
-encrypted, or anything like that, because Riot’s source code contains
-basically all these sorts of things that work just as well, if not
-better, than Facebook Messenger’s. Anyway, luckily though, Mark
-Zuckerberg is simultaneously a man who we can all trust with anything,
-and also the sort of man who would definitely come forward and tell us
-if there were anything that he were actually trying to hide. Our society
-today and the sorts of people in power really make it very easy to trust
-everybody all the time. One of them even told me that if you think
-that’s not the case because you read it in a newspapers or something
-then the newspaper just made it up, so that’s nice.</p>
+platform to be able to speak with the most people.</p>
+<p>WhatsApp, Facebook Messenger, Slack, and even Telegram and Signal all
+have basically this problem: the only way that I can send messages to
+somebody on Facebook Messenger is by using Facebook Messenger; I don’t
+(really) have a choice of clients, and I don’t have a way of building my
+own copy of Facebook messenger that I can use, because this would give
+the added bonus of knowing exactly how Facebook Messenger works behind
+the scenes.</p>
 <p>Anyway, back to happier business. Wouldn’t it be nice to have a
 method of communication, like email, where anybody can send messages to
 anybody else, irrelevant of what app/program they use, and we all know
@@ -203,7 +184,7 @@ might be asking.</p>
 privacy/security by saying “oh but I can’t tell you the details of how
 it works, because then hackers could hack it”, then they are almost
 certainly explaining <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">a pretty
-shitty system</a>. Good cryptographic algorithms are those where every
+insecure system</a>. Good cryptographic algorithms are those where every
 single step is read by hundreds of different scientists and developers
 and mathematicians, over and over, for 30 years, and everybody agrees
 that all the pieces they’ve read (maybe even the whole thing) are good,
@@ -215,24 +196,11 @@ where this has absolutely no way of telling you how it works
 intended one, is that Matrix <em>is</em> more secure than how I
 described it, because all of your messages can be send with
 <em>end-to-end encryption</em>. This is something that, for example,
-WhatsApp offers, but they don’t tell us what they do at either ‘end’,
+WhatsApp offers, but they don’t tell us what they do at either “end”,
 i.e. before the message has been encrypted and when the message has been
-decrypted. Heck, for all we know they could be attaching a little
-something to your message before decryption, and then quickly sneaking
-it away to keep on the other phone just after decoding. Who knows?</p>
-<p>Generally, I lean very far to the ‘copyright has become, thanks to
-certain big names, a system of oppression and removal-of-choice for the
-individual, and an incredibly <em>incredibly</em> profitable system for
-those in power’ side of the argument, but <strong>even so</strong>, it
-makes sense to ask why WhatsApp want to keep all their code secret. I
-understand that, sometimes, it is unfair to expect a piece of code to be
-open source: people want to make a living by making and selling
-software, and quite often, I think, the people <em>know</em> that they
-want to make money because you need money to have an easier (to put it
-mildly) time in life, and don’t <em>really</em> want to have to work so
-un-collaboratively and in secret, but have to, for various reasons which
-I will not go in to, lest this becomes a drug-fuelled foray into
-politics.</p>
+decrypted. For all we know they could be attaching a little something to
+your message before decryption, and then quickly sneaking it away to
+keep on the other phone just after decoding. Who knows?</p>
 <h2 id="so-its-just-like-that-xckd-comic-right">So it’s just like that
 XCKD comic, right?</h2>
 <p>In almost any conversation, there is a relevant XKCD: here, it’s <a href="https://xkcd.com/927/">#927</a> : there are so many competing
@@ -243,7 +211,7 @@ standards, so why try for another one?</p>
 </figure>
 <p>First of all, as mentioned above, Matrix solves a pretty big problem
 by being <em>federated</em>: like email, it doesn’t matter who you
-choose to trust (I still use the word ‘trust’ here, because that’s
+choose to trust (I still use the word “trust” here, because that’s
 always something you should think about) to give you your username and
 deal with your message sending/receiving (e.g. <code>matrix.org</code>,
 <code>matrix.sibnsk.net</code>, or <code>converser.eu</code>), because
@@ -257,44 +225,42 @@ bridges</em>. Bridges are ways for people to interact with chat rooms
 <em>other apps/programs.</em> That is, <em>without leaving Riot</em>, I
 can send and reply to emails, take part in a conversation on Slack, and
 message somebody a funny (yet cute) photo of a bird on WhatsApp. So
-Matrix is not saying ‘everybody has to use me <code>&gt;:|</code>’, but
-instead ‘anybody who uses me can also talk to people not using me
-<code>:)</code>’.</p>
-<h1 id="why-do-you-write-latex-in-scare-quotes">Why do you write ‘LaTeX’
+Matrix is not saying “everybody has to use me”, but instead “anybody who
+uses me can also talk to people not using me”.</p>
+<h1 id="why-do-you-write-latex-in-scare-quotes">Why do you write “LaTeX”
 in scare quotes?</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <p>What I’ve been working on for a while is trying to find a way to be
 able to type formatted maths in messages.</p>
 <p>This started off as the naive idea of teaching Riot to understand
-KaTeX, MathJax, or MathML, or <em>something</em> ‘LaTeX-ish’. LaTeX is a
+KaTeX, MathJax, or MathML, or <em>something</em> “LaTeX-ish”. LaTeX is a
 full <em>language</em>, and I just want to be able to message somebody
 in a way prettier than typing out raw LaTeX code. A first step, then,
 would be to just put a little LaTeX compiler into Riot (something like
-LaTeXiT, which I <em>do</em> use for a <em>lot</em> of things, including
-doing exactly this (by hand) when I want to have some maths in my
-email), so that we can send maths and the viewer can see them as images.
-This has a few problems thought, like the fact that we then can’t really
-just edit the message after we’ve sent it, because it’s now an image;
-and also, LaTeX installations are generally full of a lot of faff (even
-TinyTeX — something I personally use and love — has just so many
-capabilities that we don’t need, like knowing how to make tables of
-contents, or to do page numbering, or margins, or tables, or… any other
-number of things that are either not necessary for instant messages, or
-already possible to do in much simpler ways): all we really want is to
-be able to turn something like</p>
+LaTeXiT, which I <em>do</em> use for a lot of things, including doing
+exactly this (by hand) when I want to have some maths in my email), so
+that we can send maths and the viewer can see them as images. This has a
+few problems thought, like the fact that we then can’t really just edit
+the message after we’ve sent it, because it’s now an image; and also,
+LaTeX installations are generally full of a lot of faff (even TinyTeX —
+something I personally use and love — has just so many capabilities that
+we don’t need, like knowing how to make tables of contents, or to do
+page numbering, or margins, or tables, or… any other number of things
+that are either not necessary for instant messages, or already possible
+to do in much simpler ways): all we really want is to be able to turn
+something like</p>
 <pre><code>\oiint_{\partial\Sigma}\omega\,\mathrm{d}\tau</code></pre>
 <p>into <span class="math inline">\oiint_{\partial\Sigma}\omega\,\mathrm{d}\tau</span>.</p>
-<p>So I write ‘LaTeX’ support, because we don’t really want LaTeX, but
+<p>So I write “LaTeX” support, because we don’t really want LaTeX, but
 instead something like MathJax or KaTeX: something that can just display
 LaTeX syntax as nice SVG/HTML content.</p>
 <p>But, of course, the project progressed somewhat, and, after having
-talked (talken? right now, talken sounds like a much better word) to
-some very knowledgeable and talented people, some involved in the same
-way I am, and some involved by being employees of the non-profit
-organisation that helps make Matrix and Riot. The main consensus now is
-that, we should <em>not</em> just be asking how to make Riot display
-LaTeX syntax as recognisable maths (this is something that’s easy enough
-to do that even I did it, having what I would dare to call a negative
+talked to some very knowledgeable and talented people, some involved in
+the same way I am, and some involved by being employees of the
+non-profit organisation that helps make Matrix and Riot. The main
+consensus now is that, we should <em>not</em> just be asking how to make
+Riot display LaTeX syntax as recognisable maths (this is something
+that’s easy enough to do that even I did it, having the bare minimum
 amount of experience with Javascript: the result is <a href="https://pigeon.digital">https://pigeon.digital</a>); we should be
 asking how to deal with the idea of wanting to send mathematical syntax
 (that is easy to type) in a way that agrees with Matrix, i.e. how to add
@@ -306,7 +272,7 @@ exciting for other people too, I promise! Hear me out.</p>
 this?</h1>
 <a href="#post-title" class="toc-back">↟</a>
 <p>What people are now trying to do is to come up with a way of sending
-‘LaTeX’ source code (here the square quotes mark the fact that we don’t
+“LaTeX” source code (here the square quotes mark the fact that we don’t
 want to be able to send arbitrary LaTeX code to be executed, for fair
 security reasons) within the Matrix protocol. Then individual clients
 can decide how they want to display this. For example, Riot already
@@ -314,7 +280,7 @@ knows how to display maths as HTML+CSS using KaTeX, and it can almost,
 itself, generate images of the rendered maths to send alongside the
 plain text message, so that other clients who <em>can’t</em> turn LaTeX
 into something viewable, can use these images as fallbacks instead. It
-might even be the case that basically nobody does any ‘programming’, and
+might even be the case that basically nobody does any “programming”, and
 the messages are just sent as plain text, but then the homeservers do
 some media magic and accompany the messages with a nice rendered version
 of the maths.</p>
@@ -336,11 +302,11 @@ homotopy type theory. At the moment, Riot can bridge to IRC, so a single
 room can be at once an IRC room and a Matrix room, but with the Matrix
 room supporting things like saving history of conversations that take
 place while you’re logged out, and images, file sharing, voice calls,
-video calls, E2E encryption, etc.. Seeing how nice it is to still have
+video calls, E2E encryption, etc. Seeing how nice it is to still have
 chat rooms, where you can go and ask a question and get answers (as
 opposed to, say, stackexchange/mathoverflow, where you can ask
 questions, but all discussions must be moved to a separate thread, and
-questions must adhere to a certain structure, etc. etc. (not taht I’m
+questions must adhere to a certain structure, etc. etc. (not that I’m
 saying that stackexchange is bad, not at all, but just that it is meant
 for a different (more rigorous) purpose)), it seems even nicer to me
 that we could have ones that have a bit more support for modern things
@@ -372,7 +338,7 @@ and Riot Web/Desktop (<a href="https://matrix.to/#/#riot-web:matrix.org"><code>#
 other clients, or anything at all really, then just ask me (via email,
 Twitter, or even Matrix itself!) and I will either answer, or point you
 in the direction of somebody who can! If you want to get involved in
-these discussions about ‘LaTeX’, then I can point you to the rooms where
+these discussions about “LaTeX”, then I can point you to the rooms where
 these discussions are taking place.</li>
 <li>If you like maths, but have never really used IRC rooms before (or
 those chat rooms on stackexchange), or even if you <em>have</em> used
@@ -390,10 +356,6 @@ private and just use it with your local team/work group/reading group;
 you can make it public so that anybody can see it; or you can suggest
 for it to be added to the Mathematics community list!</li>
 </ol>
-<p>If you’ve made it this far, then thank you. I should be asleep by
-now, given that I started writing this an hour ago, and it should really
-have taken about 15 minutes to write. I hope it’s at least mildly
-coherent.</p>
 
   </div>
 
