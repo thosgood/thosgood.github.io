@@ -16,16 +16,11 @@ jobs:
       - name: 💿 Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.5
+          ruby-version: 3.0.1
           bundler-cache: true
 
       - name: 💿 Setup Pandoc
         run: brew install pandoc
-
-      - name: eventmachine hack fix
-        run: |
-          gem uninstall eventmachine
-          gem install eventmachine --platform=ruby
 
       - name: 🛠 Install and Build
         run: |
