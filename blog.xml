@@ -2,13 +2,60 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
   <id>https://thosgood.com/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2022-12-03T00:00:00Z</updated>
+  <updated>2023-07-04T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
   <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.com</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.com,2023-07-04:/blog/2023/07/30/translations-part-4/</id>
+    <title type="html">Translations</title>
+    <published>2023-07-04T00:00:00Z</published>
+    <updated>2023-07-04T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.com/blog/2023/07/30/translations-part-4/" type="text/html"/>
+    <content type="html">&lt;p&gt;Hopefully one of my co-authors and I will be uploading a long-awaited
+preprint on dg-categories, twisting cochains, and homotopy limits to the
+arXiv “soon”. Until then, here are the small handful of translations
+that I’ve finished in the year since I last wrote&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Unintentionally, all three translations here are Grothendieck
+related. Let’s start with the smallest one first: Grothendieck’s famous
+letter to Thomason on derivators, which makes for some interesting
+“light” reading.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Grothendieck, “Lettre d’Alexander Grothendieck sur les
+Dérivateurs, 02.04.91”. Edited by Matthias Künzer. &lt;a
+href="https://labs.thosgood.com/translations/grothendieck-thomason-91-04-02.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next, I &lt;em&gt;finally&lt;/em&gt; finished EGA II. I have yet to proofread it,
+so it probably still has an awful amount of typos and possible errors
+(if you spot any the please do let me know, either by email or
+(preferably) by &lt;a
+href="https://github.com/ryankeleti/ega/issues"&gt;submitting an issue on
+the repo&lt;/a&gt;). Note that the web version is down at the moment due to
+some technical issues that neither Ryan nor I have had the time to fix,
+but you can still view and download the &lt;a
+href="https://github.com/ryankeleti/ega#pdfs"&gt;PDF versions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lastly, I’ve been slowly working away at FGA, since it’s not
+inconceivable that I actually manage to finish this one off sometime by
+early 2024 (famous last words, I’m sure). I haven’t done much more, but
+have finished seminar IV (“Hilbert schemes”).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
+géométrie algébrique, IV”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
+&lt;strong&gt;12&lt;/strong&gt; and &lt;strong&gt;13&lt;/strong&gt; (1959/60 and 1960/61), Talks
+no. 190, 195, and 212. &lt;a href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When I finish off the last two seminars (V and VI, both on Picard
+schemes), I will go back and fix all the little issues (weird
+bibliographies, no links to original scans, no PDF versions, etc. etc.)
+but I’m saving that as a nice little “treat” when all the typing is
+done.&lt;/p&gt;
+&lt;p&gt;Hope you’re all having a lovely summer.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.com,2022-12-03:/blog/2022/12/03/virtual-double-categories-workshop/</id>
     <title type="html">Virtual Double Categories Workshop</title>
@@ -1914,41 +1961,6 @@ class="math inline"&gt;M&lt;/span&gt;, &lt;span class="math display"&gt;
   \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M^*) \simeq
 \operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)^*.
 &lt;/span&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.com,2021-11-26:/blog/2021/11/25/left-adjoints-lenses-and-localisation/</id>
-    <title type="html">Left adjoints, lenses, and localisation</title>
-    <published>2021-11-26T00:00:00Z</published>
-    <updated>2021-11-26T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2021/11/25/left-adjoints-lenses-and-localisation/" type="text/html"/>
-    <content type="html">&lt;p&gt;This is really just a cross-post announcement: I wrote &lt;a
-href="https://topos.site/blog/2021/11/left-adjoints-lenses-and-localisation/"&gt;a
-post over on the Topos blog&lt;/a&gt;, but it’s something I’ve been thinking
-about a lot, so I wanted to share a link to it here as well. It’s
-basically the result of me, knowing a bit about derived categories and
-model categories, trying to digest this lovely bit of Australian
-category theory by &lt;a href="https://bryceclarke.github.io/"&gt;Bryce
-Clarke&lt;/a&gt; concerning &lt;a
-href="https://arxiv.org/abs/2009.06835v1"&gt;internal lenses&lt;/a&gt;. In fact,
-it’s really a fermented and distilled version of an old blog post from
-here, namely &lt;a
-href="https://thosgood.com/blog/2019/07/14/cauchy-completion-and-profunctors"&gt;&lt;em&gt;Cauchy
-completion and profunctors&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;I won’t copy the contents of the entire post here, but I will just
-repeat the question that I ask at the end (and will refer anybody
-interested in more context over to &lt;a
-href="https://topos.site/blog/2021/11/left-adjoints-lenses-and-localisation/"&gt;my
-post&lt;/a&gt;).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Is there some setting in which I could say something like (maybe
-swapping “projective” for “injective”) the following: cofunctors are the
-morphisms in some “derived” category; weak equivalences are
-bijective-on-objects functors; fibrations are discrete opfibrations; the
-category does not have enough projectives; lenses correspond (via
-looking at their domain) to K-projective objects.&lt;/p&gt;
-&lt;/blockquote&gt;
 </content>
   </entry>
 </feed>
