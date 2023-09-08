@@ -2,13 +2,376 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
   <id>https://thosgood.com/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2023-07-04T00:00:00Z</updated>
+  <updated>2023-09-08T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
   <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.com</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.com,2023-09-08:/blog/2023/09/08/cech-totalisation/</id>
+    <title type="html">Čech totalisation</title>
+    <published>2023-09-08T00:00:00Z</published>
+    <updated>2023-09-08T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.com/blog/2023/09/08/cech-totalisation/" type="text/html"/>
+    <content type="html">&lt;p&gt;After a pretty long time (over two and half years or so), &lt;a
+href="https://www.zeinalian.com/"&gt;Mahmoud Zeinalian&lt;/a&gt; and I have
+finished our paper “Simplicial presheaves of Green complexes and
+twisting cochains” (arXiv:&lt;a
+href="https://arxiv.org/abs/2308.09627"&gt;2308.09627&lt;/a&gt;). In this blog
+post I want to give a brief overview of one of the main technical tools
+that we use, which we call &lt;em&gt;Čech totalisation&lt;/em&gt;. The full story
+involves model categories and homotopy limits and all this sort of
+machinery, but the main part of this post will try to keep this to a
+minimum, and just talk about a surprisingly useful roundabout way of
+describing principal bundles. There might be a second part to this, but
+for those interested or wanting for more details I recommend just
+delving into the paper — I spent a lot of time trying to make it as
+readable as possible!&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id="the-motivating-example-principal-g-bundles"&gt;The motivating
+example: principal &lt;span class="math inline"&gt;G&lt;/span&gt;-bundles&lt;/h1&gt;
+&lt;p&gt;Here’s a really over-the-top way of constructing/defining principal
+&lt;span class="math inline"&gt;G&lt;/span&gt;-bundles, whose usefulness we will
+soon come to justify. We’re first going to go very quickly, with an
+nLab-style approach, but we’ll come back and explain things more
+concretely afterwards.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;G&lt;/span&gt; be a Lie group (i.e. a group
+object in the category &lt;span class="math inline"&gt;\mathsf{Man}&lt;/span&gt; of
+smooth manifolds). Then Yoneda gives us a presheaf &lt;span
+class="math display"&gt;
+  y^G
+  = \mathsf{Man}(-,G)
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Set}
+&lt;/span&gt; but we can in fact endow this presheaf with the structure of a
+Lie group, by using the Lie group structure of &lt;span
+class="math inline"&gt;G&lt;/span&gt; “pointwise”. This means that we can deloop
+&lt;span class="math inline"&gt;y^G&lt;/span&gt; to obtain a presheaf of one-element
+groupoids &lt;span class="math display"&gt;
+  \mathbb{B}y^G
+  = \mathbb{B}\mathsf{Man}(-,G)
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Grpd}.
+&lt;/span&gt; In other words, given any smooth manifold &lt;span
+class="math inline"&gt;X&lt;/span&gt;, we obtain a groupoid &lt;span
+class="math inline"&gt;\mathbb{B}y^G(X)&lt;/span&gt; with a single object &lt;span
+class="math inline"&gt;*&lt;/span&gt; and with endomorphism group &lt;span
+class="math inline"&gt;\operatorname{Hom}(*,*)\cong\mathsf{Man}(X,G)&lt;/span&gt;.
+Finally, for this step, we can take the categorical nerve &lt;span
+class="math inline"&gt;\mathcal{N}\colon\mathsf{Cat}\to\mathsf{sSet}&lt;/span&gt;
+to obtain a presheaf of simplicial sets &lt;span class="math display"&gt;
+  \mathcal{N}\mathbb{B}y^G
+  \colon\mathsf{Man}^\mathrm{op}\to[\Delta^\mathrm{op},\mathsf{Set}].
+&lt;/span&gt; So if we go back and forget about our choice of &lt;span
+class="math inline"&gt;G&lt;/span&gt;, instead leaving that open, we get a
+functor &lt;span class="math display"&gt;
+  \mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}^\mathrm{op},[\Delta^\mathrm{op},\mathsf{Set}]].
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Let’s now think about covers. Let &lt;span
+class="math inline"&gt;\mathsf{Man}_\mathcal{U}&lt;/span&gt; denote the category
+whose objects are pairs &lt;span class="math inline"&gt;(X,\mathcal{U})&lt;/span&gt;
+of a smooth manifold and a (good) cover, and whose morphisms &lt;span
+class="math inline"&gt;(X,\mathcal{U})\to(Y,\mathcal{V})&lt;/span&gt; are the
+morphisms &lt;span class="math inline"&gt;f\colon X\to Y&lt;/span&gt; in &lt;span
+class="math inline"&gt;\mathsf{Man}&lt;/span&gt; such that &lt;span
+class="math inline"&gt;\mathcal{U}&lt;/span&gt; is a refinement of &lt;span
+class="math inline"&gt;f^{-1}(\mathcal{V})&lt;/span&gt;. Then we can write the
+Čech nerve &lt;span class="math inline"&gt;\check{\mathcal{N}}&lt;/span&gt; as a
+functor &lt;span class="math display"&gt;
+  \check{\mathcal{N}}
+  \colon\mathsf{Man}_\mathcal{U}\to[\Delta^\mathrm{op},\mathsf{Man}]
+&lt;/span&gt; and then the purely abstract fact that &lt;span
+class="math inline"&gt;[\mathcal{C},\mathcal{D}]^\mathrm{op}\cong[\mathcal{C}^\mathrm{op},\mathcal{D}^\mathrm{op}]&lt;/span&gt;
+for any categories &lt;span class="math inline"&gt;\mathcal{C}&lt;/span&gt; and
+&lt;span class="math inline"&gt;\mathcal{D}&lt;/span&gt; lets us apply an &lt;span
+class="math inline"&gt;\mathrm{op}&lt;/span&gt; to get a functor &lt;span
+class="math display"&gt;
+  \check{\mathcal{N}}^\mathrm{op}
+  \colon\mathsf{Man}_\mathcal{U}^\mathrm{op}\to[\Delta,\mathsf{Man}^\mathrm{op}].
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can precompose (which we write with as &lt;span
+class="math inline"&gt;(-)^*&lt;/span&gt;) the above &lt;span
+class="math inline"&gt;\mathcal{N}\mathbb{B}y^{(-)}&lt;/span&gt; with this &lt;span
+class="math inline"&gt;\check{\mathcal{N}}^\mathrm{op}&lt;/span&gt; to obtain a
+single functor &lt;span class="math display"&gt;
+  (\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{csSet}]
+&lt;/span&gt; where &lt;span
+class="math inline"&gt;\mathsf{csSet}=[\Delta,[\Delta^\mathrm{op},\mathsf{Set}]]&lt;/span&gt;
+is the category of cosimplicial simplicial sets. The very last step (for
+real this time) is to then &lt;em&gt;totalise&lt;/em&gt; over the cosimplicial
+structure, i.e. to apply the functor &lt;span
+class="math inline"&gt;\operatorname{Tot}\colon\mathsf{csSet}\to\mathsf{sSet}&lt;/span&gt;
+that turns a cosimplicial simplicial set into a simplicial set in
+exactly the same way that taking the total complex turns a bicomplex
+into a complex (don’t worry, we’ll talk more about what this functor is
+later). All in all, we get a simplicial presheaf on the category of
+smooth manifolds with chosen cover, namely &lt;span class="math display"&gt;
+  \operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{sSet}].
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now comes the punchline.&lt;/p&gt;
+&lt;div class="itenv" title="Theorem"&gt;
+&lt;p&gt;For any Lie group &lt;span class="math inline"&gt;G&lt;/span&gt; and space with
+cover &lt;span class="math inline"&gt;(X,\mathcal{U})&lt;/span&gt;, the simplicial
+set &lt;span
+class="math inline"&gt;\operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{G}&lt;/span&gt;
+is the &lt;strong&gt;space&lt;/strong&gt; of principal &lt;span
+class="math inline"&gt;G&lt;/span&gt;-bundles.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;What do we mean by this? Well, we are saying the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the resulting simplicial set is actually a Kan complex, and thus
+earns the name of “space”;&lt;/li&gt;
+&lt;li&gt;the points of this space are exactly principal &lt;span
+class="math inline"&gt;G&lt;/span&gt;-bundles;&lt;/li&gt;
+&lt;li&gt;a path between two points in this space is exactly an isomorphism of
+principal &lt;span class="math inline"&gt;G&lt;/span&gt;-bundles;&lt;/li&gt;
+&lt;li&gt;there is no higher homotopical information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can actually even modify this construction to obtain a “space”
+where the paths are mere morphisms of principal &lt;span
+class="math inline"&gt;G&lt;/span&gt;-bundles, but this is then only a
+&lt;em&gt;quasi-category&lt;/em&gt; instead of a true space.&lt;/p&gt;
+&lt;p&gt;This story is very &lt;span class="math inline"&gt;1&lt;/span&gt;-categorical,
+and can even be seen as a &lt;span class="math inline"&gt;1&lt;/span&gt;-categorical
+version of §3.2.1 of “Čech cocycles for differential characteristic
+classes: an &lt;span class="math inline"&gt;\infty&lt;/span&gt;-Lie theoretic
+construction” by Fiorenza, Schreiber, and Stasheff (DOI:&lt;a
+href="https://dx.doi.org/10.4310/ATMP.2012.v16.n1.a5"&gt;10.4310/ATMP.2012.v16.n1.a5&lt;/a&gt;).
+The &lt;span class="math inline"&gt;\infty&lt;/span&gt;-categorical version turns up
+in the paper by me and Mahmoud in the following guise:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;The space of twisting cochains is given by the Čech totalisation
+of the maximal Kan complex of the dg-nerve of the category of finitely
+generated free complexes.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This may mean nothing to you (twisting cochains à la Toledo and Tong
+seem to be rather underappreciated in modern literature, imho), but I
+promise that it’s a cool result (just not one that I have the space to
+delve into today). In fact, you can take this as a motto if you
+like:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Twisting cochains are the &lt;span
+class="math inline"&gt;\infty&lt;/span&gt;-analogue of vector bundles, a sort of
+“homotopy-coherent bundles”.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now, I am sure that the &lt;span
+class="math inline"&gt;1&lt;/span&gt;-categorical statement (concerning principal
+&lt;span class="math inline"&gt;G&lt;/span&gt;-bundles) is a known result, even
+though I can’t find it written down anywhere (except for in our paper).
+Indeed, all it’s really saying is that &lt;em&gt;“bundles are homotopy limits
+of locally trivial stuff”&lt;/em&gt;. Let’s take this rather glib summary and
+try to see if we can understand it in more detail.&lt;/p&gt;
+&lt;h1 id="the-čech-nerve-totalisation-and-reedy-fibrancy"&gt;The Čech nerve;
+totalisation and Reedy fibrancy&lt;/h1&gt;
+&lt;p&gt;Given a cover &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt; of a space
+&lt;span class="math inline"&gt;X&lt;/span&gt;, the &lt;em&gt;Čech nerve&lt;/em&gt; is the
+simplicial space given in degree &lt;span class="math inline"&gt;p&lt;/span&gt; by
+the disjoint union of all non-empty &lt;span
+class="math inline"&gt;p&lt;/span&gt;-fold intersections of elements of &lt;span
+class="math inline"&gt;\mathcal{U}&lt;/span&gt;, i.e. &lt;span class="math display"&gt;
+  \check{\mathcal{N}}\mathcal{U}_p
+  = \coprod U_{\alpha_0\ldots\alpha_p}
+&lt;/span&gt; and the face and degeneracy maps are given by dropping/repeating
+indices &lt;span class="math inline"&gt;\alpha_i&lt;/span&gt;. If the cover is
+“good”, then this gives a fibrant replacement of &lt;span
+class="math inline"&gt;X&lt;/span&gt;, and so can be used to compute cohomology
+(or more general mapping spaces). I love the Čech nerve — I think it
+turns up in almost everything I write — but I’d rather spend my little
+remaining energy describing totalisation instead.&lt;/p&gt;
+&lt;p&gt;The prototypical cosimplicial simplicial set is &lt;span
+class="math display"&gt;
+  \begin{aligned}
+    \Delta[\star]
+    \colon\Delta
+    &amp;amp;\to\mathsf{sSet}
+  \\ [p]
+    &amp;amp;\mapsto\Delta[p]=\operatorname{Hom}_\Delta(-,[p])
+  \end{aligned}
+&lt;/span&gt; which we can think of as “all of the simplices &lt;span
+class="math inline"&gt;\Delta[p]&lt;/span&gt; gathered together”. This lets us
+define a functor &lt;span class="math display"&gt;
+  \begin{aligned}
+    L
+    \colon\mathsf{sSet}
+    &amp;amp;\to\mathsf{csSet}
+  \\Y_\bullet
+    &amp;amp;\mapsto Y_\bullet\times\Delta[\star]
+  \end{aligned}
+&lt;/span&gt; and this admits a right adjoint, which we call
+&lt;em&gt;totalisation&lt;/em&gt; &lt;span class="math display"&gt;
+  \begin{aligned}
+    \operatorname{Tot}
+    \colon\mathsf{csSet}
+    &amp;amp;\to\mathsf{sSet}
+  \\Y_\bullet^\star
+    &amp;amp;\mapsto
+\underline{\operatorname{Hom}}_\mathsf{csSet}(\Delta[\star],Y_\bullet^\star)
+  \end{aligned}
+&lt;/span&gt; where we make use of the fact that &lt;span
+class="math inline"&gt;\mathsf{csSet}&lt;/span&gt; is enriched over &lt;span
+class="math inline"&gt;\mathsf{sSet}&lt;/span&gt; via &lt;span class="math display"&gt;
+  \left(\underline{\operatorname{Hom}}_\mathsf{csSet}(A_\bullet^\star,B_\bullet^\star)\right)_p
+  =
+\operatorname{Hom}_\mathsf{csSet}(A_\bullet^\star\times\Delta[p],B_\bullet^\star).
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The particularly useful fact about totalisation is the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;If &lt;span
+class="math inline"&gt;Y_\bullet^\star\in\mathsf{csSet}&lt;/span&gt; is Reedy
+fibrant, then its totalisation and its homotopy limit are naturally
+weakly equivalent.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;There are lots of ways of thinking about totalisation, but there’s a
+very nice one that comes in useful for explicit calculations, namely
+that &lt;em&gt;a point in the totalisation &lt;span
+class="math inline"&gt;\operatorname{Tot}Y_\bullet^\star&lt;/span&gt; consists of
+&lt;span class="math inline"&gt;(y^0,y^1,\ldots)&lt;/span&gt; with &lt;span
+class="math inline"&gt;y^p\in Y_p^p&lt;/span&gt; such that “they all glue
+together”&lt;/em&gt;. Of course, the end of this sentence is very vague, and I
+don’t really want to type out everything from the paper again, but I’ll
+include a nice picture here that sort of describes the idea.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="totalisation-point.png"
+alt="A point in the totalisation of a cosimplicial simplicial set." /&gt;
+&lt;figcaption aria-hidden="true"&gt;A point in the totalisation of a
+cosimplicial simplicial set.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Trying to understand higher simplices in the totalisation is a bit of
+a mess, but it turns out that there is a really nice combinatorial
+approach involving paths of &lt;span class="math inline"&gt;1&lt;/span&gt;-simplices
+in products &lt;span class="math inline"&gt;\Delta[p]\times\Delta[q]&lt;/span&gt;
+(see Appendix B.2 in “Chern character for infinity vector bundles”, by
+Glass, Miller, Tradler, and Zeinalian (arXiv:&lt;a
+href="https://arxiv.org/abs/2211.02549"&gt;2211.02549&lt;/a&gt;)). In the paper
+by me and Mahmoud, we calculate some &lt;span
+class="math inline"&gt;1&lt;/span&gt;-simplices explicitly, showing that they
+recover pre-existing notions of weak equivalences between objects that
+some people really care about. Below is a nice picture from one of the
+proofs without any further explanation.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="product-of-simplices.png"
+alt="The canonical simplicial structure of a product of simplices." /&gt;
+&lt;figcaption aria-hidden="true"&gt;The canonical simplicial structure of a
+product of simplices.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h1 id="the-čech-totalisation-functor"&gt;The Čech totalisation
+functor&lt;/h1&gt;
+&lt;p&gt;The story in the previous section is a retelling of what Mahmoud
+explained to me almost three years ago now, and this kickstarted the
+project that became the paper now on the arXiv. In “Chern character for
+infinity vector bundles”, by Glass, Miller, Tradler, and Zeinalian
+(arXiv:&lt;a href="https://arxiv.org/abs/2211.02549"&gt;2211.02549&lt;/a&gt;), the
+same two-step fundamental construction turns up:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;apply the Čech nerve to a simplicial presheaf;&lt;/li&gt;
+&lt;li&gt;totalise the resulting cosimplicial simplicial presheaf.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This combination is what we call &lt;em&gt;Čech totalisation&lt;/em&gt;, and it
+can be understood as a sort of partial sheafification. Indeed, if
+applied to a presheaf of mere sets, then it recovers the usual process
+sheafification given by taking sections of the espace étalé (though I
+must admit that this is not actually explicitly worked out anywhere in
+writing). There are actually some more general results about when this
+Čech totalisation does actually compute the sheafification, and you can
+find these in §5.1 of the Glass, Miller, Tradler, Zeinalian paper
+mentioned above. But it turns out to be an interesting construction even
+without thinking about sheafification.&lt;/p&gt;
+&lt;p&gt;Let’s start with a proper definition.&lt;/p&gt;
+&lt;div class="rmenv" title="Definition"&gt;
+&lt;p&gt;Let &lt;span
+class="math inline"&gt;\mathcal{F}\colon\mathsf{Space}^\mathrm{op}\to\mathsf{sSet}&lt;/span&gt;
+be a simplicial presheaf on the category of spaces, and let &lt;span
+class="math inline"&gt;X\in\mathsf{Space}&lt;/span&gt; be a space with cover
+&lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt;. We define the &lt;em&gt;Čech
+totalisation of &lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; at &lt;span
+class="math inline"&gt;\mathcal{U}&lt;/span&gt;&lt;/em&gt; to be the simplicial set
+given by &lt;span
+class="math inline"&gt;\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}_\bullet)&lt;/span&gt;,
+i.e. the totalisation of the cosimplicial simplicial set given by
+evaluating &lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; on the Čech
+nerve of &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here are some things that we show in our paper, &lt;em&gt;under the
+assumption that we have presheaves of Kan complexes&lt;/em&gt; (i.e. “globally
+fibrant” simplicial presheaves).&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;The Čech totalisation of &lt;span
+class="math inline"&gt;\mathcal{F}&lt;/span&gt; is a Kan complex.&lt;/li&gt;
+&lt;li&gt;If &lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; and &lt;span
+class="math inline"&gt;\mathcal{G}&lt;/span&gt; are weakly equivalent to one
+another, then their Čech totalisations are weakly equivalent to one
+another.&lt;/li&gt;
+&lt;li&gt;The Čech totalisation computes the homotopy limit (this is due to
+the fact that evaluating on the Čech nerve gives a Reedy fibrant
+cosimplicial simplicial set).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These facts turn out to be useful for our intended applications
+(maybe I haven’t made this very clear, but Čech totalisation is only
+really a tool in our paper, used to study a rather different problem!)
+but we can also use them to compare to the existing results in the
+literature concerning homotopy limits of presheaves of dg-categories. In
+“Explicit homotopy limits of dg-categories and twisted complexes”, by
+Block, Holstein, and Wei (arXiv:&lt;a
+href="https://arxiv.org/abs/1511.08659"&gt;1511.08659&lt;/a&gt;), it is explained
+how to calculate homotopy limits of presheaves of dg-categories by using
+the fact that totalisations of Reedy fibrant objects are weakly
+equivalent to their homotopy limits. The nice (but expected) result that
+we show is that one can switch from presheaves of dg-categories to
+simplicial presheaves by taking the dg-nerve (followed by the maximal
+Kan complex) without changing the resulting object. More precisely:&lt;/p&gt;
+&lt;div class="itenv" title="Theorem"&gt;
+&lt;p&gt;Let &lt;span
+class="math inline"&gt;\mathcal{F}\colon\mathsf{Space}^\mathrm{op}\to\mathsf{dgCat}&lt;/span&gt;
+be a presheaf on the category of spaces that sends finite products to
+coproducts, and let &lt;span class="math inline"&gt;X\in\mathsf{Space}&lt;/span&gt;
+be a space with cover &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt;. Then
+there is a weak equivalence of Kan complexes &lt;span class="math display"&gt;
+  \operatorname{Tot}\langle\mathcal{N}^\mathrm{dg}\mathcal{F}(\check{\mathcal{N}}\mathcal{U})\rangle
+  \simeq
+  \langle\mathcal{N}^\mathrm{dg}\big(\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}\big))\rangle
+&lt;/span&gt; where we write &lt;span class="math inline"&gt;\langle-\rangle&lt;/span&gt;
+to denote the maximal Kan complex, and on the left-hand side we are
+taking the totalisation of cosimplicial simplicial sets, and on the
+right-hand side we are taking the totalisation of cosimplicial
+dg-categories.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id="applications"&gt;Applications&lt;/h1&gt;
+&lt;p&gt;So what do Mahmoud and I actually use Čech totalisation for in our
+paper? Well, if you actually want to know the answer to that, then I
+recommend just having a look at either the introduction or the section
+named “Narrative” in the actual paper itself, since these are written
+with minimal technical details. However, here’s a very quick version of
+the story (and each sentence is justified with real details somewhere in
+the paper, I promise).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Locally free sheaves (read: “vector bundles”) on ringed spaces (read:
+“schemes”, “manifolds”, or whatever geometric thing you like) are very
+interesting, but they’re very homotopically rigid. In fact, when we look
+at complex-analytic (i.e. holomorphic) manifolds, they become too rigid,
+and we can’t always break down problems about coherent sheaves (the
+things that geometers often really care about) into problems about
+locally free ones. There is a solution to this: the &lt;strong&gt;twisting
+cochains&lt;/strong&gt; of Toledo and Tong, which are like homotopy-coherent
+locally free sheaves, and are very related to the dg-nerve. There is
+another solution though: the &lt;strong&gt;Green complexes&lt;/strong&gt; of Green
+(a student of O’Brian, a co-author of Toledo and Tong), which are very
+related to simplicial objects. These two things share a common
+generalisation, namely &lt;strong&gt;simplicial twisting
+cochains&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;What is the relationship between these three things? Is there some
+sort of Dold–Kan correspondence? Can we place them all in a unified
+framework, and use the tools of homotopy theory to talk about them? What
+does this tell us about the geometry of complex-analytic manifolds? What
+does this tell us about geometry more generally? And do we learn
+anything about presheaves of dg-categories along the way?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As always, I’d love to talk about this stuff with anybody interested
+— please do reach out if you like!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.com,2023-07-04:/blog/2023/07/30/translations-part-4/</id>
     <title type="html">Translations</title>
@@ -1718,249 +2081,6 @@ please be patient, and also just
 wrong&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Hopefully see you all in the comments soon!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.com,2021-11-29:/blog/2021/11/29/lie-algebra-cohomology-part-3/</id>
-    <title type="html">The basics of Lie algebra cohomology</title>
-    <published>2021-11-29T00:00:00Z</published>
-    <updated>2021-11-29T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2021/11/29/lie-algebra-cohomology-part-3/" type="text/html"/>
-    <content type="html">&lt;p&gt;We’ll end this series (for now) by talking about two things that we
-really should talk about: Lie algebra &lt;em&gt;homology&lt;/em&gt;, and
-&lt;em&gt;relative&lt;/em&gt; Lie algebra (co)homology. (We will work over a field
-&lt;span class="math inline"&gt;k&lt;/span&gt;, but really we are thinking only of
-the case &lt;span class="math inline"&gt;k=\mathbb{C}&lt;/span&gt;).&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h1 id="lie-algebra-homology"&gt;Lie algebra homology&lt;/h1&gt;
-&lt;p&gt;Just as Lie algebra cohomology is constructed to be the derived
-functor of the functor of invariants, Lie algebra homology is
-constructed to be the derived functor of the functor of
-&lt;em&gt;coinvariants&lt;/em&gt;: &lt;span class="math display"&gt;
-  \begin{aligned}
-    \operatorname{Coinv}_\mathfrak{g}(M) = M_\mathfrak{g}&amp;amp;\coloneqq
-M/\mathfrak{g}M
-  \\\operatorname{H}_\bullet(\mathfrak{g},M) &amp;amp;\coloneqq
-\operatorname{Tor}_\bullet^{U(\mathfrak{g})}(k,M).
-  \end{aligned}
-&lt;/span&gt; We need to justify why this &lt;span
-class="math inline"&gt;\operatorname{Tor}&lt;/span&gt; is indeed the derived
-functor of &lt;span class="math inline"&gt;\operatorname{Coinv}&lt;/span&gt;, since
-the latter doesn’t seem to have anything to do with tensor products a
-priori. To do this, we need to make a small definition (which we should
-really have made back when we constructed the projective resolution
-&lt;span
-class="math inline"&gt;U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow
-k^\mathrm{triv}&lt;/span&gt;).&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;Write &lt;span class="math inline"&gt;i\colon\mathfrak{g}\to
-U(\mathfrak{g})&lt;/span&gt; to mean the composite map &lt;span
-class="math inline"&gt;\mathfrak{g}\hookrightarrow
-T(\mathfrak{g})\twoheadrightarrow U(\mathfrak{g})&lt;/span&gt;. The &lt;span
-class="math inline"&gt;k&lt;/span&gt;-algebra homomorphism &lt;span
-class="math inline"&gt;\varepsilon\colon U(\mathfrak{g})\to k&lt;/span&gt;
-defined by sending &lt;span class="math inline"&gt;i(\mathfrak{g})&lt;/span&gt; to
-zero is called the &lt;em&gt;augmentation map&lt;/em&gt;, and we call its kernel
-&lt;span class="math inline"&gt;\mathfrak{J}&lt;/span&gt; the &lt;em&gt;augmentation
-ideal&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;The augmentation ideal &lt;span class="math inline"&gt;\mathfrak{J}&lt;/span&gt;
-is generated (as a &lt;span
-class="math inline"&gt;U(\mathfrak{g})&lt;/span&gt;-module) by the image &lt;span
-class="math inline"&gt;i(\mathfrak{g})&lt;/span&gt;. Further, &lt;span
-class="math inline"&gt;k\cong
-U(\mathfrak{g})/\mathfrak{J}=U(\mathfrak{g})_\mathfrak{g}&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;With this, we can see why the derived functor of the coinvariants
-functor is calculated by &lt;span
-class="math inline"&gt;\operatorname{Tor}&lt;/span&gt;, since &lt;span
-class="math display"&gt;
-  \begin{aligned}
-    k\otimes_{U(\mathfrak{g})}M
-    &amp;amp;\cong U(\mathfrak{g})/\mathfrak{J}_{U(\mathfrak{g})}M
-  \\&amp;amp;\cong M/\mathfrak{J}M
-  \\&amp;amp;\cong M/\mathfrak{g}M
-    = M_\mathfrak{g}.
-  \end{aligned}
-&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;As we did for cohomology, we can construct a chain complex that
-computes the Lie algebra homology: we define &lt;span class="math display"&gt;
-  \wedge_p = \wedge_p(\mathfrak{g},M) \coloneqq
-\wedge^p(\mathfrak{g})\otimes_k M
-&lt;/span&gt; (so that &lt;span class="math inline"&gt;\wedge_0=M&lt;/span&gt;), with
-differential &lt;span
-class="math inline"&gt;\partial\colon\wedge_p\to\wedge_{p-1}&lt;/span&gt; given
-by &lt;span class="math display"&gt;
-  \begin{aligned}
-    &amp;amp;\partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
-  \\\,&amp;amp;\sum_{1\leqslant i&amp;lt;j\leqslant p} (-1)^{i+j}
-[x_i,x_j]\wedge
-x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\wedge
-x_p \otimes m
-  \\+&amp;amp;\sum_{i=1}^p (-1)^i
-x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
-  \end{aligned}
-&lt;/span&gt; The claim (which we won’t prove) is then that &lt;span
-class="math display"&gt;
-  \operatorname{H}_p(\mathfrak{g},M) \cong
-\operatorname{Z}_p(\mathfrak{g},M)/\operatorname{B}_p(\mathfrak{g},M).
-&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id="relative-lie-algebra-cohomology-some-properties"&gt;Relative Lie
-algebra (co)homology: some properties&lt;/h1&gt;
-&lt;p&gt;Again, as is usual for (co)homology theories, we wish to have some
-notion of the (co)homology &lt;em&gt;of a pair&lt;/em&gt;. So let &lt;span
-class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; be a Lie algebra
-pair (i.e. &lt;span class="math inline"&gt;\mathfrak{h}&lt;/span&gt; and &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; are both Lie algebras, with
-&lt;span class="math inline"&gt;\mathfrak{h}\hookrightarrow\mathfrak{g}&lt;/span&gt;
-a subalgebra), and &lt;span class="math inline"&gt;M&lt;/span&gt; a &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module. It should be the case
-that, however we define the (co)homology of this pair (with coefficients
-in &lt;span class="math inline"&gt;M&lt;/span&gt;), we at the very least recover the
-non-relative (co)homology of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; when &lt;span
-class="math inline"&gt;\mathfrak{h}&lt;/span&gt; is zero, i.e. we should
-definitely have that &lt;span class="math display"&gt;
-  \operatorname{H}^\bullet(\mathfrak{g},0;M) \cong
-\operatorname{H}^\bullet(\mathfrak{g};M).
-&lt;/span&gt; But before giving the definition, it’s maybe also helpful to see
-another theorem which will hold, which tells us about the case of the
-relative cohomology of a &lt;em&gt;reductive&lt;/em&gt; subalgebra.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; be a
-Lie algebra pair. We say that it is &lt;em&gt;reductive&lt;/em&gt; if the adjoint
-Lie algebra representation of &lt;span
-class="math inline"&gt;\mathfrak{h}&lt;/span&gt; on &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt; is completely reducible.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="itenv" title="Theorem"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; be a
-Lie algebra pair, and &lt;span class="math inline"&gt;M&lt;/span&gt; a &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module. Assume that&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;everything (i.e. &lt;span class="math inline"&gt;\mathfrak{h}&lt;/span&gt;,
-&lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;, and &lt;span
-class="math inline"&gt;M&lt;/span&gt;) is finite dimensional (I’m not actually
-sure that this is necessary, but I’m just being safe here);&lt;/li&gt;
-&lt;li&gt;&lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; is a
-reductive pair; and&lt;/li&gt;
-&lt;li&gt;we can write &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; as a
-semi-direct product &lt;span
-class="math inline"&gt;\mathfrak{g}=\mathfrak{h}\ltimes\mathfrak{a}&lt;/span&gt;
-(where &lt;span class="math inline"&gt;\mathfrak{a}&lt;/span&gt; is thus, in
-particular, a &lt;em&gt;Lie ideal&lt;/em&gt; of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;, i.e. a vector subspace such
-that &lt;span
-class="math inline"&gt;[\mathfrak{a},\mathfrak{g}]\subseteq\mathfrak{a}&lt;/span&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Then &lt;span class="math display"&gt;
-  \operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{g}\simeq
-\operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{h}\simeq
-\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M)
-&lt;/span&gt; (where the superscript denotes the space of invariants).&lt;/p&gt;
-&lt;/div&gt;
-&lt;h1 id="relative-lie-algebra-cohomology-some-definitions"&gt;Relative Lie
-algebra (co)homology: some definitions&lt;/h1&gt;
-&lt;p&gt;As before, we will first give a complex whose internal cohomology
-computes relative Lie algebra cohomology, and then construct a
-projective resolution of &lt;span
-class="math inline"&gt;k^\mathrm{triv}&lt;/span&gt; so that we can show how to
-recover the derived functor definition.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;The &lt;em&gt;relative Chevalley–Eilenberg complex &lt;span
-class="math inline"&gt;\operatorname{CE}^\bullet(\mathfrak{g},\mathfrak{h};M)&lt;/span&gt;&lt;/em&gt;
-is defined by &lt;span class="math display"&gt;
-  \operatorname{CE}^p(\mathfrak{g},\mathfrak{h};M) \coloneqq \big(
-(\wedge^p(\mathfrak{g}/\mathfrak{h})^*)\otimes_k M \big)^\mathfrak{h}
-&lt;/span&gt; and the differential is given by the duals of the Lie bracket
-and the action of &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt; on &lt;span
-class="math inline"&gt;M&lt;/span&gt;, i.e. &lt;span class="math display"&gt;
-  d \coloneqq \rho^* + [-,-]^*.
-&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;By definition, if &lt;span class="math inline"&gt;\mathfrak{h}=0&lt;/span&gt;,
-then we recover exactly the Chevalley–Eilenberg complex of &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;, which is one thing that we
-wanted. (To see this, we use the general fact that we have an
-isomorphism of the form &lt;span
-class="math inline"&gt;\operatorname{Hom}_k(A,V)\cong A^*\otimes_k
-V&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;As for relative homology, we define the complex &lt;span
-class="math display"&gt;
-  \wedge_p = \wedge_p(\mathfrak{g},\mathfrak{h};M) \coloneqq
-\frac{\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k
-M}{\mathfrak{h}\cdot(\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k M)}
-&lt;/span&gt; where &lt;span class="math inline"&gt;\mathfrak{h}\cdot V&lt;/span&gt;, for
-an &lt;span class="math inline"&gt;\mathfrak{h}&lt;/span&gt;-module &lt;span
-class="math inline"&gt;V&lt;/span&gt;, denotes the span of elements of the form
-&lt;span class="math inline"&gt;x\cdot v&lt;/span&gt; for &lt;span
-class="math inline"&gt;x\in\mathfrak{h}&lt;/span&gt; and &lt;span
-class="math inline"&gt;v\in V&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;So far, we have not really been making any assumptions about whether
-or not &lt;span class="math inline"&gt;M&lt;/span&gt; is finite dimensional. It
-turns out that we don’t have to, but we do need to impose at least some
-sort of condition relating to its dimension, whence the following
-definition.&lt;/p&gt;
-&lt;div class="rmenv" title="Definition"&gt;
-&lt;p&gt;We say that a &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module is
-&lt;em&gt;finitely semisimple&lt;/em&gt; if it is the sum of its finite-dimensional
-irreducible &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-submodules.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Being finitely semisimple is preserved under quotients, taking
-submodules, and tensor products.&lt;/p&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; be a
-Lie algebra pair such that &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-is finitely semisimple under the adjoint action of &lt;span
-class="math inline"&gt;\mathfrak{h}&lt;/span&gt;. Write &lt;span
-class="math inline"&gt;\mathcal{G}\coloneqq U(\mathfrak{g})&lt;/span&gt;, and
-&lt;span class="math inline"&gt;\mathcal{H}\coloneqq U(\mathfrak{h})&lt;/span&gt;.
-Then the complex &lt;span class="math display"&gt;
-  \ldots \to D_2 \to D_1 \to D_0
-&lt;/span&gt; is a &lt;span
-class="math inline"&gt;(\mathcal{G},\mathcal{H})&lt;/span&gt;-projective
-resolution of &lt;span class="math inline"&gt;k^\mathrm{triv}&lt;/span&gt;, where
-&lt;span class="math display"&gt;
-  D_p \coloneqq
-\mathcal{G}\otimes_\mathcal{H}\wedge^p(\mathfrak{g}/\mathfrak{h}).
-&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="itenv" title="Corollary"&gt;
-&lt;p&gt;Under the same assumptions, the complex &lt;span
-class="math inline"&gt;D_\bullet\otimes_k M&lt;/span&gt; is a &lt;span
-class="math inline"&gt;(\mathcal{G},\mathcal{H})&lt;/span&gt;-projective
-resolution of &lt;span class="math inline"&gt;M&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Using this resolution, we can show the following:&lt;/p&gt;
-&lt;div class="itenv" title="Lemma"&gt;
-&lt;p&gt;Let &lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; be a
-Lie algebra pair such that &lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;
-is finitely semisimple under the adjoint action of &lt;span
-class="math inline"&gt;\mathfrak{h}&lt;/span&gt;. Then &lt;span
-class="math display"&gt;
-  \operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
-\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(M^t,k) \simeq
-\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(k,M)
-&lt;/span&gt; (where &lt;span class="math inline"&gt;M^t&lt;/span&gt; is the right &lt;span
-class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module with the same underlying
-space as &lt;span class="math inline"&gt;M&lt;/span&gt;, but with &lt;span
-class="math inline"&gt;m\cdot x\coloneqq -xm&lt;/span&gt; for &lt;span
-class="math inline"&gt;m\in M&lt;/span&gt; and &lt;span
-class="math inline"&gt;x\in\mathfrak{g}&lt;/span&gt;), and &lt;span
-class="math display"&gt;
-  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
-\operatorname{Ext}_{(\mathcal{G},\mathcal{H})}^\bullet(k,M).
-&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;A “fun” exercise is then to prove that, for any Lie algebra pair
-&lt;span class="math inline"&gt;(\mathfrak{g},\mathfrak{h})&lt;/span&gt; and any
-&lt;span class="math inline"&gt;\mathfrak{g}&lt;/span&gt;-module &lt;span
-class="math inline"&gt;M&lt;/span&gt;, &lt;span class="math display"&gt;
-  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M^*) \simeq
-\operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)^*.
-&lt;/span&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
