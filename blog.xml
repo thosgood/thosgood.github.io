@@ -2,13 +2,64 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
   <id>https://thosgood.com/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2023-09-08T00:00:00Z</updated>
+  <updated>2023-10-04T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
   <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.com</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.com,2023-10-04:/blog/2023/10/04/translations-part-5/</id>
+    <title type="html">Translations</title>
+    <published>2023-10-04T00:00:00Z</published>
+    <updated>2023-10-04T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.com/blog/2023/10/04/translations-part-5/" type="text/html"/>
+    <content type="html">&lt;p&gt;Briefly: two very short translations concerning geometry, and the
+final two seminars of FGA (thus finishing a complete first draft of the
+entire FGA seminar series).&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Let’s start with the two short papers that I needed to read for
+various reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;P Donato, P Iglesias, “Exemples de groupes differentiels: flots
+irrationnels sur le tore”. &lt;em&gt;C. R. Acad. Sc. Paris&lt;/em&gt;
+&lt;strong&gt;301&lt;/strong&gt; (1985) pp. 127–130. &lt;a
+href="https://labs.thosgood.com/translations/CRASP-301-1985-127.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;PF Sánchez, “Automorfismo de foliaciones holomorfas sobre
+superficies racionales”. &lt;em&gt;Pro Mathematica&lt;/em&gt; &lt;strong&gt;16&lt;/strong&gt;
+(2002) pp. 47–59. &lt;a
+href="https://labs.thosgood.com/translations/PM-16-2002-47.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then there’s the one I’ve been slowly chipping away at, on and off,
+since — GitHub tells me — June 2021. I’ve now finished the last two
+seminars of FGA, both on Picard schemes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
+géométrie algébrique, V and VI”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
+&lt;strong&gt;14&lt;/strong&gt; (1961/62), Talks no. 232 and 236. &lt;a
+href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This means there’s a complete (imperfect, sure) copy of FGA now
+digitised (and thus searchable!) online, and I’m going to take a break
+from it for a while before coming back with fresh eyes at some
+undetermined point in the future to catch all the typos and errors. Of
+course, if you happen to see any yourself then please do let me
+know!&lt;/p&gt;
+&lt;p&gt;Anyway, I’ll leave you with an insight into how much I struggled
+getting GitHub to automate the Bookdown build process for &lt;a
+href="https://thosgood.com/fga"&gt;the FGA page&lt;/a&gt; on the 23rd of June,
+2021, as well as how unhelpful my git commit messages would be to
+anybody reading them.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="./github-commits.png"
+alt="GitHub commit messages such as ‘i have no idea why this is not working now’ and ‘ok literally no idea’ and ‘surely this?’" /&gt;
+&lt;figcaption aria-hidden="true"&gt;GitHub commit messages such as ‘i have no
+idea why this is not working now’ and ‘ok literally no idea’ and ‘surely
+this?’&lt;/figcaption&gt;
+&lt;/figure&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.com,2023-09-08:/blog/2023/09/08/cech-totalisation/</id>
     <title type="html">Čech totalisation</title>
@@ -408,8 +459,8 @@ have finished seminar IV (“Hilbert schemes”).&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
 géométrie algébrique, IV”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
-&lt;strong&gt;12&lt;/strong&gt; and &lt;strong&gt;13&lt;/strong&gt; (1959/60 and 1960/61), Talks
-no. 190, 195, and 212. &lt;a href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+&lt;strong&gt;13&lt;/strong&gt; (1960/61), Talk no. 221. &lt;a
+href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When I finish off the last two seminars (V and VI, both on Picard
 schemes), I will go back and fix all the little issues (weird
@@ -2042,45 +2093,6 @@ you can always contribute anything yourself if the fancy ever takes you:
 href="https://github.com/thosgood/sga"&gt;github.com/thosgood/sga&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Anyways, that’s enough for now. Belated happy new year to you
 all!&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.com,2021-12-22:/blog/2021/12/22/blog-comments/</id>
-    <title type="html">Comments on blog posts</title>
-    <published>2021-12-22T00:00:00Z</published>
-    <updated>2021-12-22T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2021/12/22/blog-comments/" type="text/html"/>
-    <content type="html">&lt;p&gt;&lt;strong&gt;Update: comments have been “temporarily” disabled (I had some
-server issues).&lt;/strong&gt; This blog now has support for comments! I
-haven’t had a chance to properly test things yet, and there are still
-some kinks left to iron out, but please do use this as an excuse to
-browse back through old posts and say nice things.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;Using the lovely &lt;a
-href="https://github.com/souramoo/commentoplusplus#how-is-this-different-to-the-original-commento"&gt;Commento++&lt;/a&gt;,
-I’ve now enabled comments at the bottom of blog posts. Some things to
-point out:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I haven’t yet made LaTeX rendering work, but it’s next on my to-do
-list. For now, feel free to write stuff surrounded by &lt;code&gt;$&lt;/code&gt; or
-&lt;code&gt;$$&lt;/code&gt; (or wrap it in &lt;code&gt;\(\)&lt;/code&gt; or &lt;code&gt;\[\]&lt;/code&gt;),
-and at some point in the future this should actually render
-properly.&lt;/li&gt;
-&lt;li&gt;I also haven’t yet made it so that people can post comments via
-their Twitter/GitHub/whatever accounts, but I also don’t expect that
-this will really be something that people particularly want to do? I
-assume I get around six readers per month on this blog, so there’s not
-particularly high demand for anything…&lt;/li&gt;
-&lt;li&gt;If you want to comment a lot, you can create an account (using the
-“Login” button) which will let you set a profile picture and link to
-your website, but this isn’t necessary! You can always just leave a
-name, or even comment anonymously.&lt;/li&gt;
-&lt;li&gt;Things might generally be a bit buggy, but if that’s the case, then
-please be patient, and also just
-&lt;a href="mailto:tim.hosgood@posteo.net"&gt;let me know what went
-wrong&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Hopefully see you all in the comments soon!&lt;/p&gt;
 </content>
   </entry>
 </feed>
