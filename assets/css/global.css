@@ -110,21 +110,10 @@ a:hover {
   user-select: none;
 }
 
-#nav_bar {
-  font-size: 0;
-}
-
 #header span.active {
   color: #357edd;
-  font-size: 1rem;
   border: 2px solid transparent;
   border-bottom: 2px solid #357edd;
-}
-
-@media screen and (min-width: 30em) {
-  #header span.active {
-    font-size: 1.25rem;
-  }
 }
 
 
