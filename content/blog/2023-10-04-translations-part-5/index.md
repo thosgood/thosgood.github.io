@@ -23,6 +23,6 @@ I've now finished the last two seminars of FGA, both on Picard schemes:
 This means there's a complete (imperfect, sure) copy of FGA now digitised (and thus searchable!) online, and I'm going to take a break from it for a while before coming back with fresh eyes at some undetermined point in the future to catch all the typos and errors.
 Of course, if you happen to see any yourself then please do let me know!
 
-Anyway, I'll leave you with an insight into how much I struggled getting GitHub to automate the Bookdown build process for [the FGA page](thosgood.com/fga) on the 23rd of June, 2021, as well as how unhelpful my git commit messages would be to anybody reading them.
+Anyway, I'll leave you with an insight into how much I struggled getting GitHub to automate the Bookdown build process for [the FGA page](https://thosgood.com/fga) on the 23rd of June, 2021, as well as how unhelpful my git commit messages would be to anybody reading them.
 
 ![GitHub commit messages such as 'i have no idea why this is not working now' and 'ok literally no idea' and 'surely this?'](./github-commits.png)
