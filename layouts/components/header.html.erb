@@ -1,21 +1,24 @@
 <div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
   <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
-    <div class="w-third-ns tl pb0-ns pb2 w-100">
-      <span class="f4-ns f5"><%= link_to_unless_current(@config[:full_name], '/', :class => 'nav_link') %></span>
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><%= link_to_unless_current(@config[:full_name], '/', :class => 'nav_link') %></span>
     </div>
-    <div id="nav_bar" class="w-two-thirds-ns tr w-100">
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
       <ol class="fr-ns list ma0 pl0">
-        <li class="ph2-ns ph1 dib">
-          <%= link_to_unless_current('Work', '/work/', :class => 'nav_link f4-ns f5') %>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('About', '/about/', :class => 'nav_link') %>
         </li>
-        <li class="ph2-ns ph1 dib">
-          <%= link_to_unless_current('Translations', '/translations/', :class => 'nav_link f4-ns f5') %>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Work', '/work/', :class => 'nav_link') %>
         </li>
-        <li class="ph2-ns ph1 dib">
-          <%= link_to_unless_current('Blog', '/blog/', :class => 'nav_link f4-ns f5') %>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Translations', '/translations/', :class => 'nav_link') %>
         </li>
-        <li class="pl2-ns pl1 dib">
-          <%= link_to_unless_current('CV', '/cv/', :class => 'nav_link f4-ns f5') %>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Blog', '/blog/', :class => 'nav_link') %>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <%= link_to_unless_current('CV', '/cv/', :class => 'nav_link') %>
         </li>
       </ol>
     </div>
