@@ -247,4 +247,3 @@ Here, in no particular order (really, no order at all), are some references that
 - <https://en.wikipedia.org/wiki/Pregroup_grammar>
     + [English](http://www.math.mcgill.ca/barr/lambek/pdffiles/Pregrammars.pdf)
     + [French](https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/306504/filename/PrellerPrince-LinearParsing.pdf)
-- <https://arxiv.org/pdf/1811.11041.pdf>

@@ -20,7 +20,7 @@ Next, I *finally* finished EGA II. I have yet to proofread it, so it probably st
 
 Lastly, I've been slowly working away at FGA, since it's not inconceivable that I actually manage to finish this one off sometime by early 2024 (famous last words, I'm sure). I haven't done much more, but have finished seminar IV ("Hilbert schemes").
 
-- Grothendieck, A. "Technique de descente et théorèmes d’existence en géométrie algébrique, IV". *Séminaire Bourbaki* **12** and **13** (1959/60 and 1960/61), Talks no. 190, 195, and 212. [HTML](https://thosgood.com/fga)
+- Grothendieck, A. "Technique de descente et théorèmes d’existence en géométrie algébrique, IV". *Séminaire Bourbaki* **13** (1960/61), Talk no. 221. [HTML](https://thosgood.com/fga)
 
 When I finish off the last two seminars (V and VI, both on Picard schemes), I will go back and fix all the little issues (weird bibliographies, no links to original scans, no PDF versions, etc. etc.) but I'm saving that as a nice little "treat" when all the typing is done.
 
