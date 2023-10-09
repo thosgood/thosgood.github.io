@@ -1,0 +1,23 @@
+<div id="header-wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div id="nav_bar" class="center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('About', '/about/', :class => 'nav_link') %>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Work', '/work/', :class => 'nav_link') %>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Translations', '/translations/', :class => 'nav_link') %>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <%= link_to_unless_current('Blog', '/blog/', :class => 'nav_link') %>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <%= link_to_unless_current('CV', '/cv/', :class => 'nav_link') %>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
