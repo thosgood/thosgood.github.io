@@ -18,7 +18,7 @@ module PostHelper
 
   def get_short_date(post)
     attribute_to_time(post[:created_at])
-      .strftime('%y/%m/%d')
+      .strftime('%y-%m-%d')
   end
 
   def get_day(post)
@@ -43,7 +43,7 @@ module PostHelper
 
   def get_pretty_date(post)
     attribute_to_time(post[:created_at])
-      .strftime('{%-d} %B, %Y')
+      .strftime('{%-d} of %B, %Y')
       .gsub(/{(\d+)}/) { |d| $1 + date_suffix($1.to_i) }
   end
 
