@@ -5,7 +5,8 @@ class AddTocFilter < Nanoc::Filter
 
   def run(content, params={})
     doc = Nokogiri::HTML(content)
-    headers = doc.css('#post-content h1').drop(1)
+    # headers = doc.css('#post-content h1').drop(1)
+    headers = doc.css('#post-content h1')
     return doc.to_s if headers.empty?
     tag_list = doc.css('p')[0]
     toc_items = headers.map { |header| "<li><a href=\"\##{header["id"]}\">#{header.text}</a></li>" }

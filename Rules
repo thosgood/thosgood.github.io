@@ -29,7 +29,7 @@ end
 
 # STATIC PAGES
 
-# take the /content/index.hmtl file and filter it with erb (passing it through
+# take the /content/index.html file and filter it with erb (passing it through
 # the layout "Postcard") and make a file /index.html in the output directory
 compile '/index.html' do
   filter :erb
