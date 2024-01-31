@@ -37,9 +37,11 @@ In case I hadn't made it clear already, I am neither an applied category theoris
 I wanted to come up with something that could be interacted with in a browser, so I made the absolutely terrible decision of coming up with a prototype in JavaScript.
 Don't get me wrong, JavaScript has its uses, but so does a compost bin, and I wouldn't want to use one of them to write a functorial framework.
 
+![](old-demo.gif)
+
 If you want to play around with the demo, then you can do so [here](http://thosgood.com/categorical-translation/), although there are very few sentences that it can cope with translating, and it has more bugs than the [ICE2020](https://www.entsoc.org/event-calendar/international-congress-entomology-2020).
 If you want to see _something_ that works, try typing in something like 'Let \$X\$ be a scheme of finite type' into the box labelled 'EN' (or the French equivalent into the box labelled 'FR', etc.) and seeing what happens.
-Of course, if you are the kind of person who treats having loud construction works outside your window as some sort of free concert, or enjoys going to landfill sites for the aesthetic pleasure, then you might be masochistic or tasteless enough to want to look at the code making it tick (in the loosest sense of the word): nearly everything is in the page source, but you can have a look at the GitHub repo [here](https://github.com/thosgood/categorical-translation).
+Of course, if you are the kind of person who treats having loud construction works outside your window as some sort of free concert, or enjoys going to landfill sites for the aesthetic pleasure, then you might be tasteless enough to want to look at the code making it tick (in the loosest sense of the word): nearly everything is in the page source, but you can have a look at the GitHub repo [here](https://github.com/thosgood/categorical-translation).
 
 One reason that this demo is so terrible is that it is actually doing three things, and two of them are things that have probably already been really well implemented, but I didn't realise this until it was far too late.
 What it actually does is the following:

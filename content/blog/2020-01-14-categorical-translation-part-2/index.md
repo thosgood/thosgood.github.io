@@ -6,7 +6,7 @@ tags: ['category-theory', 'translation', 'software']
 created_at: 2020-01-14
 ---
 
-After my [previous post](https://thosgood.com/blog/2019/11/07/categorical-translation-part-1.html), I got the chance to _(a)_ spend a bit of time thinking about things, and _(b)_ talk to [Jade Master](https://sites.google.com/view/jadeedenstarmaster/home) on Twitter.
+After my [previous post](/blog/2019/11/07/categorical-translation-part-1), I got the chance to _(a)_ spend a bit of time thinking about things, and _(b)_ talk to [Jade Master](https://sites.google.com/view/jadeedenstarmaster/home) on Twitter.
 Rather than going back to edit my original post, I decided to turn this into more of a series.
 Here are some new thoughts (but not really any _visible_ progress) on the whole affair.
 

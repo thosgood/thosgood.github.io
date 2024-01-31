@@ -12,7 +12,7 @@ You can find abstracts, slides, and recordings of the talks on [the workshop web
 
 <!-- more -->
 
-Back in 2019 I wrote [a very cursory post](https://thosgood.com/blog/2019/07/15/more-than-one-less-than-three/) about 2-categories and double categories because I'd heard so much about them at CT2019, and I figured I should start learning something about them.
+Back in 2019 I wrote [a very cursory post](/blog/2019/07/15/more-than-one-less-than-three/) about 2-categories and double categories because I'd heard so much about them at CT2019, and I figured I should start learning something about them.
 Originally I found them interesting just for their own sake: I think I've always found definitions particularly interesting in mathematics, and seeing a new structure that's meant to generalise or build upon something you already know is pretty fascinating to me.
 But then thesis writing reared its head and I went back to the maths I was focusing on, which didn't seem to have much relevance to 2-categorical stuff.
 
