@@ -8,7 +8,11 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://thosgood.com/assets/images/me.jpg">
 
+    <% if @item[:part] != nil %>
+    <title><%= @item[:title] %> (<%= @item[:part] %>) | <%= @config[:site_name] %></title>
+    <% else %>
     <title><%= @item[:title] %> | <%= @config[:site_name] %></title>
+    <% end %>
 
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
