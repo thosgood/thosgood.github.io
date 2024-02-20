@@ -86,12 +86,15 @@
   </div>
   <div id="post-content" class="w-90-ns ph3-ns w-100">
     <!-- Content -->
-    <p><strong>Update: comments have been “temporarily” disabled (I had some
-server issues).</strong> This blog now has support for comments! I
-haven’t had a chance to properly test things yet, and there are still
-some kinks left to iron out, but please do use this as an excuse to
-browse back through old posts and say nice things.</p>
+    <p>This blog now has support for comments! I haven’t had a chance to
+properly test things yet, and there are still some kinks left to iron
+out, but please do use this as an excuse to browse back through old
+posts and say nice things.</p>
 <!-- more -->
+<p><strong>Update on the update: I’ve just switched over to <a href="https://giscus.app/">giscus</a>, so anybody with a GitHub account
+can comment. It’s not perfect, but it’ll do for now :-)</strong></p>
+<p><strong>Update: comments have been “temporarily” disabled (I had some
+server issues).</strong></p>
 <p>Using the lovely <a href="https://github.com/souramoo/commentoplusplus#how-is-this-different-to-the-original-commento">Commento++</a>,
 I’ve now enabled comments at the bottom of blog posts. Some things to
 point out:</p>
@@ -111,13 +114,14 @@ particularly high demand for anything…</li>
 your website, but this isn’t necessary! You can always just leave a
 name, or even comment anonymously.</li>
 <li>Things might generally be a bit buggy, but if that’s the case, then
-please be patient, and also just
-<a href="mailto:tim.hosgood@posteo.net">let me know what went
-wrong</a>.</li>
+please be patient, and also just let me know what went wrong.</li>
 </ul>
 <p>Hopefully see you all in the comments soon!</p>
 
   </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
 
       </div>
     </div>
@@ -173,9 +177,9 @@ wrong</a>.</li>
   const content = document.getElementById('post-content');
 
   function lightStyle() {
-    body.style.background = '#f0f8ff';
+    body.style.background = 'white';
     body.style.color = 'black';
-    document.getElementById('post-nav').style.background = '#eee'
+    document.getElementById('post-nav').style.background = 'white'
     var links = document.getElementsByTagName('a');
     for (var i = 0; i < links.length; i++) {
       links[i].style.color = '#2a7ae2';
