@@ -1,3 +1,7 @@
+:root {
+  --primary: #357edd;
+}
+
 /* Typography */
 
 body {
@@ -68,15 +72,15 @@ article .katex {
 
 a {
   text-decoration: underline;
-  color: #357edd;
+  color: var(--primary);
   border: 1px solid transparent;
 }
 
 a:hover {
   /*color: #fff;*/
-  /*background: #357edd;*/
+  /*background: var(--primary);*/
   /*background: #999;*/
-  border: 1px dashed #357edd;
+  border: 1px dashed var(--primary);
 }
 
 .nav_link {
@@ -84,10 +88,10 @@ a:hover {
   border: 2px solid transparent;
 }
 .nav_link:hover {
-  color: #357edd;
+  color: var(--primary);
   background: none;
   border: 2px solid transparent;
-  border-bottom: 2px dashed #357edd;
+  border-bottom: 2px dashed var(--primary);
 }
 
 .dark_link {
@@ -111,9 +115,9 @@ a:hover {
 }
 
 #header span.active {
-  color: #357edd;
+  color: var(--primary);
   border: 2px solid transparent;
-  border-bottom: 2px solid #357edd;
+  border-bottom: 2px solid var(--primary);
 }
 
 
