@@ -9,6 +9,8 @@
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv0-ns mv3 ph4">
         <%= yield %>
       </div>
+      <%= render '/components/small_footer.html.erb' %>
+      <a href="/assets/images/birds.png" class="tc" style="border: none;"><img src="/assets/images/2pigeon.gif" alt="a gif of a pigeon flying" class="absolute bottom-0"></a>
     </div>
 
     <% if @item[:katex] != false %>
