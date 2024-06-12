@@ -29,11 +29,19 @@ end
 
 # STATIC PAGES
 
+# # take the /content/index.html file and filter it with erb (passing it through
+# # the layout "Postcard") and make a file /index.html in the output directory
+# compile '/index.html' do
+#   filter :erb
+#   layout '/Postcard.*'
+#   write '/index.html'
+# end
+
 # take the /content/index.html file and filter it with erb (passing it through
-# the layout "Postcard") and make a file /index.html in the output directory
+# the layout "Default") and make a file /index.html in the output directory
 compile '/index.html' do
   filter :erb
-  layout '/Postcard.*'
+  layout '/Default.*'
   write '/index.html'
 end
 

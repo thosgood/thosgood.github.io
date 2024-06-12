@@ -5,11 +5,15 @@
   <body>
 
     <%= render '/components/header.html.erb' %>
-    
-    <div class="mw7 flex flex-column center">
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
       <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
         <%= yield %>
       </div>
+      
+      <% if @item[:footer] == true %>
+        <%= render '/components/small_footer.html.erb' %>
+      <% end %>
     </div>
 
     <% if @item[:katex] != false %>
