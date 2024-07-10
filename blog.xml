@@ -1351,14 +1351,14 @@ just in this table, we’re going to make the assumption that
 &lt;strong&gt;&lt;span class="math inline"&gt;S&lt;/span&gt; is commutative&lt;/strong&gt;).&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class="header"&gt;
+&lt;tr&gt;
 &lt;th style="text-align: center;"&gt;Graded ring&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Commutative?&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Graded commutative?&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
@@ -1366,13 +1366,13 @@ class="math inline"&gt;S[x]&lt;/span&gt;&lt;/td&gt;
 class="math inline"&gt;2=0&lt;/span&gt; in &lt;span
 class="math inline"&gt;S&lt;/span&gt;)&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="even"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x]/(x^2)&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x^2]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
@@ -1409,14 +1409,14 @@ and we definitely have that &lt;span class="math inline"&gt;0=0&lt;/span&gt;).&l
 &lt;p&gt;Back to our table:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
-&lt;tr class="header"&gt;
+&lt;tr&gt;
 &lt;th style="text-align: center;"&gt;Graded ring&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Commutative?&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Graded commutative?&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
@@ -1424,13 +1424,13 @@ class="math inline"&gt;S[x]&lt;/span&gt;&lt;/td&gt;
 class="math inline"&gt;2=0&lt;/span&gt; in &lt;span
 class="math inline"&gt;S&lt;/span&gt;)&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="even"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x^2]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;\Lambda_S[\alpha_1,\ldots,\alpha_n]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;❌ (unless &lt;span
@@ -1498,7 +1498,7 @@ enforcing that one separately!)&lt;/p&gt;
 &lt;col style="width: 31%" /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr class="header"&gt;
+&lt;tr&gt;
 &lt;th style="text-align: center;"&gt;Graded ring&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Commutative?&lt;/th&gt;
 &lt;th style="text-align: center;"&gt;Graded commutative?&lt;/th&gt;
@@ -1506,7 +1506,7 @@ enforcing that one separately!)&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
@@ -1515,7 +1515,7 @@ class="math inline"&gt;2=0&lt;/span&gt; in &lt;span
 class="math inline"&gt;S&lt;/span&gt;)&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="even"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;S[x^d]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
@@ -1524,7 +1524,7 @@ class="math inline"&gt;2&lt;/span&gt; divides &lt;span
 class="math inline"&gt;d&lt;/span&gt;)&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;✅&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class="odd"&gt;
+&lt;tr&gt;
 &lt;td style="text-align: center;"&gt;&lt;span
 class="math inline"&gt;\Lambda_S[\alpha_1,\ldots,\alpha_n]&lt;/span&gt;&lt;/td&gt;
 &lt;td style="text-align: center;"&gt;❌ (unless &lt;span
