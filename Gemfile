@@ -8,7 +8,7 @@ group 'nanoc' do
 end
 
 gem 'builder'
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.8"
 gem "nokogiri", ">= 1.13.4"
 gem "pandoc-ruby", "~> 2.1"
 gem "addressable", ">= 2.8.0"
