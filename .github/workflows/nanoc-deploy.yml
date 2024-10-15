@@ -26,6 +26,10 @@ jobs:
         run: |
           bundle exec nanoc
           bundle exec nanoc check internal_links mixed_content stale
+
+      - name: Other files
+        run: |
+          cp robots.txt public/
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
