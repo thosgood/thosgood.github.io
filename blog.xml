@@ -2,13 +2,121 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
   <id>https://thosgood.com/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2023-10-04T00:00:00Z</updated>
+  <updated>2025-01-07T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
   <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.com</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.com,2025-01-07:/blog/2025/01/07/woops-long-time/</id>
+    <title type="html">Woops it's been a while</title>
+    <published>2025-01-07T00:00:00Z</published>
+    <updated>2025-01-07T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.com/blog/2025/01/07/woops-long-time/" type="text/html"/>
+    <content type="html">&lt;p&gt;I managed to forget to write a blog post for the entirety of 2024 —
+wow! Let’s see if I can zip through some things that have happened in
+the past 14 months.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;I finished my two-year postdoc position at Stockholm University at
+the end of 2023, and then went immediately to &lt;a
+href="https://oist.jp"&gt;OIST&lt;/a&gt; in Okinawa for three months as a &lt;a
+href="https://www.oist.jp/research/research-units/qis/visitors"&gt;visitor&lt;/a&gt;
+to the Quantum Information Security Unit, headed up by &lt;a
+href="https://www.arturekert.org/"&gt;Artur&lt;/a&gt;, where I spent most of my
+time writing and rewriting various parts of &lt;a
+href="https://qubit.guide/"&gt;qubit.guide&lt;/a&gt; in order to get it ready for
+print publication, joint with Alastair Kay and Chiara Macchiavello.&lt;/p&gt;
+&lt;p&gt;After that, I moved back to Oxford (yet again) to teach the quantum
+information course again (also gaining student feedback and suggestions
+to improve &lt;a href="https://qubit.guide/"&gt;qubit.guide&lt;/a&gt; even more),
+but, on a longer-term scale, to formally join the &lt;a
+href="https://topos.institute/"&gt;Topos Institute&lt;/a&gt; as Director of UK
+Operations. That’s such a fancy title compared to what I’ve been before,
+but my role has essentially been to figure out how to start a partner
+institute here in the UK and join in on the community building work
+that’s already happening here for what might be glibly (but also rather
+accurately) described as &lt;em&gt;compassionate applied mathematics&lt;/em&gt;.
+This is one reason I haven’t been blogging here so much, because I’ve
+been writing some posts over at the &lt;a
+href="https://topos.institute/blog/"&gt;Topos Institute blog&lt;/a&gt;. One &lt;a
+href="https://topos.institute/blog/2024-09-06-open-source-curriculum-workshop/"&gt;particular
+post&lt;/a&gt; was about a trip to Kisumu, Kenya, to a workshop on open
+curricula and assessment tools for mathematics, which was an absolutely
+fantastic workshop, both in terms of topics and attendees. Hopefully
+soon I’ll be writing even more about Topos here in the UK, but I’d
+rather keep this post short so I can finish it (these days if I take a
+break from writing then I almost never find the energy to return).&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="brendan-tim-equator.jpg"
+alt="Brendan and myself at the equator near Kisumu, with me in the northern hemisphere and Brendan in the southern" /&gt;
+&lt;figcaption aria-hidden="true"&gt;Brendan and myself at the equator near
+Kisumu, with me in the northern hemisphere and Brendan in the
+southern&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Another delightful event was organising the &lt;a
+href="https://bryceclarke.github.io/virtual-double-categories-workshop/"&gt;Second
+Virtual Workshop on Double Categories&lt;/a&gt; with &lt;a
+href="https://bryceclarke.github.io/"&gt;Bryce&lt;/a&gt;, following the previous
+one that we organised ran in 2022. It’s always a delight to run any sort
+of event with Bryce, but the invited speakers, and all the participants,
+made it even more delightful again. As a sort of side activity to this,
+I have been working on two translations of papers by Charles Ehresmann
+that were fundamental in the introduction of double categories, as
+suggested by Bryce and Andrée Ehresmann herself: “Catégories doubles et
+catégories structurées” (a short note) and “Catégories structurées” (a
+much longer paper). The former is finished (&lt;a
+href="https://translations.thosgood.com/CRAS-256-1963-1198.pdf"&gt;[PDF]&lt;/a&gt;,
+&lt;a
+href="https://github.com/thosgood/translations/blob/main/latex/CRAS-256-1963-1198.tex"&gt;[source]&lt;/a&gt;)
+and I’m about halfway through the latter.&lt;/p&gt;
+&lt;p&gt;Also on translation, I’ve been invited to speak at a workshop at the
+&lt;a href="https://www.newton.ac.uk/"&gt;Isaac Newton Institute&lt;/a&gt; as part
+of the &lt;a href="https://www.newton.ac.uk/event/mhm/"&gt;Modern History of
+Mathematics&lt;/a&gt; programme. Here’s a copy of my title and abstract at the
+moment:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Open translations in mathematics.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Translation, in full generality, is a nuanced and complex art form
+that requires serious expertise and a holistic approach. So how can we
+as mathematicians hope to “solve the problem of translation” in our
+domain? Furthermore, can we do so without making access to academia even
+harder for non-native English speakers or hurrying a domain collapse of
+non-English languages? I believe that the answer to both of these
+questions can only possibly be “yes” if we approach translation as a
+community-driven activity.&lt;/p&gt;
+&lt;p&gt;In this talk, I will speak about my experiences in working on large
+translation projects with an open-source approach — the technology and
+methodology that was helpful for doing so, as well as some of the
+difficulties — and describe the sorts of resources that I believe would
+have been helpful. Hopefully this can form a starting point for
+community thought on the types of projects that we could focus on in the
+future.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As for geometry, I gave a talk at the &lt;a
+href="https://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html"&gt;New
+York City Category Theory Seminar&lt;/a&gt; on “loose simplicial objects”,
+which are a generalisation of the &lt;a
+href="https://www.youtube.com/watch?v=YpOpKzfXRl8"&gt;My talk&lt;/a&gt; wasn’t
+very good (I severely ran out of time), but &lt;a
+href="https://thosgood.com/assets/files/loose-simplicial-objects.pdf"&gt;the
+slides&lt;/a&gt; are available, and hopefully there’ll be a real paper on the
+arXiv this year. I’m currently thinking about what Clausen (et al) call
+the “modified Hodge conjecture”, but entirely by accident — it just so
+happens that the relationship between holomorphic Deligne cohomology and
+refined notions of coherent analytic sheaves are two things that have
+been surrounding my research for the past eight years now!&lt;/p&gt;
+&lt;p&gt;I also took up knitting and my mum showed me how to knit a chicken.
+It was, like many things, frustrating at times, but very much worth
+it.&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src="chicken.jpg" alt="My E.S.C." /&gt;
+&lt;figcaption aria-hidden="true"&gt;My &lt;a
+href="https://www.ravelry.com/patterns/library/emotional-support-chicken"&gt;E.S.C.&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.com,2023-10-04:/blog/2023/10/04/translations-part-5/</id>
     <title type="html">Translations</title>
@@ -2002,97 +2110,6 @@ href="https://doi.org/10.2307/1970101"&gt;DOI:10.2307/1970101&lt;/a&gt;.&lt;a
 href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.com,2022-01-23:/blog/2022/01/23/translations-part-3/</id>
-    <title type="html">Translations</title>
-    <published>2022-01-23T00:00:00Z</published>
-    <updated>2022-01-23T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/01/23/translations-part-3/" type="text/html"/>
-    <content type="html">&lt;p&gt;I haven’t blogged about it in a while, but I’ve been working on just
-making &lt;a href="https://thosgood.com/translations"&gt;my translations&lt;/a&gt; a
-bit better, both in terms of content and accessibility. Let’s have a
-look at what I’ve done, shall we?&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;The main change is that &lt;em&gt;nearly&lt;/em&gt; all of the translations are
-now viewable as web versions, &lt;em&gt;as well as&lt;/em&gt; PDFs. This hopefully
-makes them much more accessible to people who use screen readers, but is
-also nice even for people who don’t: you can change the font, the font
-size, switch to dark mode, use the table of contents which scrolls down
-the page with you, fit the whole page onto your phone, etc. etc. I also
-took this opportunity to refresh the CSS a bit, so hopefully things look
-slick and nice now.&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src="new-css.png"
-title="A screenshot of the new style for the web versions of my translations"
-alt="New style for web versions of translations: the buttons in the top left are for toggling the table of contents, changing font options, and viewing the PDF version. Thanks Bookdown!" /&gt;
-&lt;figcaption aria-hidden="true"&gt;New style for web versions of
-translations: the buttons in the top left are for toggling the table of
-contents, changing font options, and viewing the PDF version. Thanks &lt;a
-href="https://bookdown.org/"&gt;Bookdown&lt;/a&gt;!&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;There are some translations which I probably won’t switch over to
-HTML, simply because they have commutative diagrams which cannot be
-rendered in the &lt;a
-href="https://ctan.org/pkg/amscd?lang=en"&gt;&lt;code&gt;CD&lt;/code&gt;
-environment&lt;/a&gt; (which is now supported by KaTeX), and I just haven’t
-gotten around to sorting out image generation for these web versions
-yet.&lt;/p&gt;
-&lt;p&gt;I’ve also finished some new translations since I last blogged. Here
-are the articles:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;M Balazard, E Saias, M Yor. “Notes sur la fonction ζ de Riemann, 2”.
-&lt;em&gt;Adv. in Math.&lt;/em&gt; &lt;strong&gt;143&lt;/strong&gt; (1999), 284–287. &lt;a
-href="https://labs.thosgood.com/translations/AIM-143-1999-284.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;P Deligne. “Variétés abéliennes ordinaires sur un corps fini”.
-&lt;em&gt;Inv. Math.&lt;/em&gt; &lt;strong&gt;8&lt;/strong&gt; (1969), 238–243. &lt;a
-href="https://labs.thosgood.com/translations/IM-8-1969-238.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;P Deligne. “Théorie de Hodge I”. &lt;em&gt;Actes du Congrès intern.
-math.&lt;/em&gt; &lt;strong&gt;1&lt;/strong&gt; (1970), 425–430. &lt;a
-href="https://labs.thosgood.com/translations/ACIM-1-1970-425.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Y Diers. “Catégories Multialgébriques”. &lt;em&gt;Archiv der Math.&lt;/em&gt;
-&lt;strong&gt;34&lt;/strong&gt; (1980), 193–209. &lt;a
-href="https://labs.thosgood.com/translations/ADM-34-1980-193.pdf"&gt;PDF&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Grothendieck. “Résumé des résultats essentiels dans la théorie des
-produits tensoriels topologiques et des espaces nucléaires”. &lt;em&gt;Annales
-de l’Institut Fourier&lt;/em&gt; &lt;strong&gt;4&lt;/strong&gt; (1952), 73–112. &lt;a
-href="https://labs.thosgood.com/translations/AIF-4-1952-73.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And here are the seminars:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;H Cartan. “Les travaux de Koszul, I, II, and III”. &lt;em&gt;Séminaire
-Bourbaki&lt;/em&gt; &lt;strong&gt;1&lt;/strong&gt; (1952), Talks no. 1, 8, and 12. &lt;a
-href="https://labs.thosgood.com/translations/SB-1-1%2B8%2B12.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A Douady. “Variétés et espaces mixtes; Déformations régulières;
-Obstruction primaire à la déformation”. &lt;em&gt;Séminaire Henri Cartan&lt;/em&gt;
-&lt;strong&gt;13(1)&lt;/strong&gt; (1960/61), Talks no. 2, 3, and 4. &lt;a
-href="https://labs.thosgood.com/translations/SHC-13(1)-2+3+4.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
-géométrie algébrique, I, II, and III”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
-&lt;strong&gt;12&lt;/strong&gt; and &lt;strong&gt;13&lt;/strong&gt; (1959/60 and 1960/61), Talks
-no. 190, 195, and 212. &lt;a href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You might notice that this last one is Grothendieck’s FGA, and I’ve
-already talked a lot about how much progress has been made (although,
-admittedly, not for a while, due to general life chaos) about the &lt;a
-href="https://github.com/ryankeleti/ega"&gt;EGA translation&lt;/a&gt;, so the
-natural question to ask is &lt;em&gt;what about SGA?&lt;/em&gt; Although I said I
-wasn’t going to work on this until I’d at least finished the FGA
-translation (of which there are only two and a half chapters left), I
-ended up needing to read bits of SGA 6 for my research anyway, so I just
-gave in and translated some: the homepage of the SGA translation is &lt;a
-href="https://thosgood.com/sga/"&gt;thosgood.com/sga&lt;/a&gt; (to accompany &lt;a
-href="https://thosgood.com/fga"&gt;thosgood.com/fga&lt;/a&gt;), and here you can
-see what I’ve done so far (just the first section of SGA 1, and a little
-bit of the introduction from SGA 6), but &lt;em&gt;do not expect any updates
-to this any time soon&lt;/em&gt; — I really have to finish up some old
-projects before I get started on any news ones! (Although, as always,
-you can always contribute anything yourself if the fancy ever takes you:
-&lt;a
-href="https://github.com/thosgood/sga"&gt;github.com/thosgood/sga&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;Anyways, that’s enough for now. Belated happy new year to you
-all!&lt;/p&gt;
 </content>
   </entry>
 </feed>
