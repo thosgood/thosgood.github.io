@@ -1,7 +1,7 @@
 <% render '/**/Default.*' do %>
   <div id="post-nav" class="w-100-ns w-100">
     <!-- Display settings -->
-    <ul id="colour-select" class="fl">
+    <%# <ul id="colour-select" class="fl">
       <li>
         <button type="button" onclick="lightStyle()">
           Light
@@ -12,7 +12,7 @@
           Dark
         </button>
       </li>
-    </ul>
+    </ul> %>
     <!-- Navigation -->
     <a href="/blog/#<%= generate_post_link_id(@item) %>" class="fr f5">&larr; Return to all posts</a>
   </div>
