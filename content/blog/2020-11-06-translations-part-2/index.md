@@ -7,7 +7,7 @@ created_at: 2020-11-06
 ---
 
 I've had a bit of free time during various quarantines and lockdowns as of late, so I've been able to do some more translations.
-Here's a quick summary of what I've uploaded to [thosgood.com/translations](https://thosgood.com/translations) recently, as well as what I'm now working on.
+Here's a quick summary of what I've uploaded to [thosgood.net/translations](https://thosgood.net/translations) recently, as well as what I'm now working on.
 
 <!-- more -->
 
@@ -18,7 +18,7 @@ Here's a quick summary of what I've uploaded to [thosgood.com/translations](http
     + Deligne, P. "A quoi servent les motifs?". _Proc. Symp. in Pure Math._ **55** (1994), 143--161.
     + Pólya, G. "Bemerkung Über die Integraldarstellung der Riemannschen ξ-Funktion". _Acta Math._ **48** (1926), 305--317.
 
-Finally, at the [bottom of the site](https://thosgood.com/translations/#in-progress) I've made available any "works in progress", with the idea that (a) people can at least hopefully profit from what I've done, and (b) people can let me know if there's anything there that they'd really like to see finished.
+Finally, at the [bottom of the site](https://thosgood.net/translations/#in-progress) I've made available any "works in progress", with the idea that (a) people can at least hopefully profit from what I've done, and (b) people can let me know if there's anything there that they'd really like to see finished.
 Most of these are either quite long, or in German (or some other language that I don't speak), and so will be very much a long-term project.
 I'd like to get Brion and Procesi's "Action d’un tore dans une variété projective" finished, because there isn't a good version easily findable on the web (in fact, thanks to [Benjamin Brown](https://bencwbrown.co.uk/) for actually going to the lengths of tracking down a physical copy and sending me a scan!); Deligne's book _Equations Différentielles à Points Singuliers Réguliers_ is also top of the list for me, because it's something I've been meaning to read anyway!
 

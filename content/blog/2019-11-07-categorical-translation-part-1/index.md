@@ -39,7 +39,7 @@ Don't get me wrong, JavaScript has its uses, but so does a compost bin, and I wo
 
 ![](old-demo.gif)
 
-If you want to play around with the demo, then you can do so [here](http://thosgood.com/categorical-translation/), although there are very few sentences that it can cope with translating, and it has more bugs than the [ICE2020](https://www.entsoc.org/event-calendar/international-congress-entomology-2020).
+If you want to play around with the demo, then you can do so [here](http://thosgood.net/categorical-translation/), although there are very few sentences that it can cope with translating, and it has more bugs than the [ICE2020](https://www.entsoc.org/event-calendar/international-congress-entomology-2020).
 If you want to see _something_ that works, try typing in something like 'Let \$X\$ be a scheme of finite type' into the box labelled 'EN' (or the French equivalent into the box labelled 'FR', etc.) and seeing what happens.
 Of course, if you are the kind of person who treats having loud construction works outside your window as some sort of free concert, or enjoys going to landfill sites for the aesthetic pleasure, then you might be tasteless enough to want to look at the code making it tick (in the loosest sense of the word): nearly everything is in the page source, but you can have a look at the GitHub repo [here](https://github.com/thosgood/categorical-translation).
 

@@ -8,7 +8,7 @@ created_at: 2020-08-18
 
 I've been having quite a bit of fun translating some maths papers into English recently.
 Of course, I'm still chugging away at the [EGA translation project](https://github.com/ryankeleti/ega), having just finished another section of EGA II, leaving "only" about 60 pages left before that chapter will be done as well!
-However, I've started putting some of my other translations all together, and they can now be found at <https://thosgood.com/translations>.
+However, I've started putting some of my other translations all together, and they can now be found at <https://thosgood.net/translations>.
 There are a lot still in progress, but here's a summary of what I've done so far.
 
 <!-- more -->

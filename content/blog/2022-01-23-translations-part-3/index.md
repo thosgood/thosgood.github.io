@@ -6,7 +6,7 @@ tags: ['translation', 'general', 'quick-read']
 created_at: 2022-01-23
 ---
 
-I haven't blogged about it in a while, but I've been working on just making [my translations](https://thosgood.com/translations) a bit better, both in terms of content and accessibility.
+I haven't blogged about it in a while, but I've been working on just making [my translations](https://thosgood.net/translations) a bit better, both in terms of content and accessibility.
 Let's have a look at what I've done, shall we?
 
 <!-- more -->
@@ -22,20 +22,20 @@ There are some translations which I probably won't switch over to HTML, simply b
 I've also finished some new translations since I last blogged.
 Here are the articles:
 
-- M Balazard, E Saias, M Yor. "Notes sur la fonction ζ de Riemann, 2". *Adv. in Math.* **143** (1999), 284–287. [HTML](https://labs.thosgood.com/translations/AIM-143-1999-284.html)
-- P Deligne. "Variétés abéliennes ordinaires sur un corps fini". *Inv. Math.* **8** (1969), 238–243. [HTML](https://labs.thosgood.com/translations/IM-8-1969-238.html)
-- P Deligne. "Théorie de Hodge I". *Actes du Congrès intern. math.* **1** (1970), 425–430. [HTML](https://labs.thosgood.com/translations/ACIM-1-1970-425.html)
-- Y Diers. "Catégories Multialgébriques". *Archiv der Math.* **34** (1980), 193–209. [PDF](https://labs.thosgood.com/translations/ADM-34-1980-193.pdf)
-- A Grothendieck. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". *Annales de l'Institut Fourier* **4** (1952), 73–112. [HTML](https://labs.thosgood.com/translations/AIF-4-1952-73.html)
+- M Balazard, E Saias, M Yor. "Notes sur la fonction ζ de Riemann, 2". *Adv. in Math.* **143** (1999), 284–287. [HTML](https://translations.thosgood.net/AIM-143-1999-284.html)
+- P Deligne. "Variétés abéliennes ordinaires sur un corps fini". *Inv. Math.* **8** (1969), 238–243. [HTML](https://translations.thosgood.net/IM-8-1969-238.html)
+- P Deligne. "Théorie de Hodge I". *Actes du Congrès intern. math.* **1** (1970), 425–430. [HTML](https://translations.thosgood.net/ACIM-1-1970-425.html)
+- Y Diers. "Catégories Multialgébriques". *Archiv der Math.* **34** (1980), 193–209. [PDF](https://translations.thosgood.net/ADM-34-1980-193.pdf)
+- A Grothendieck. "Résumé des résultats essentiels dans la théorie des produits tensoriels topologiques et des espaces nucléaires". *Annales de l'Institut Fourier* **4** (1952), 73–112. [HTML](https://translations.thosgood.net/AIF-4-1952-73.html)
 
 And here are the seminars:
 
-- H Cartan. "Les travaux de Koszul, I, II, and III". *Séminaire Bourbaki* **1** (1952), Talks no. 1, 8, and 12. [HTML](https://labs.thosgood.com/translations/SB-1-1%2B8%2B12.html)
-- A Douady. "Variétés et espaces mixtes; Déformations régulières; Obstruction primaire à la déformation". *Séminaire Henri Cartan* **13(1)** (1960/61), Talks no. 2, 3, and 4. [HTML](https://labs.thosgood.com/translations/SHC-13(1)-2+3+4.html)
-- Grothendieck, A. "Technique de descente et théorèmes d’existence en géométrie algébrique, I, II, and III". *Séminaire Bourbaki* **12** and **13** (1959/60 and 1960/61), Talks no. 190, 195, and 212. [HTML](https://thosgood.com/fga)
+- H Cartan. "Les travaux de Koszul, I, II, and III". *Séminaire Bourbaki* **1** (1952), Talks no. 1, 8, and 12. [HTML](https://translations.thosgood.net/SB-1-1%2B8%2B12.html)
+- A Douady. "Variétés et espaces mixtes; Déformations régulières; Obstruction primaire à la déformation". *Séminaire Henri Cartan* **13(1)** (1960/61), Talks no. 2, 3, and 4. [HTML](https://translations.thosgood.net/SHC-13(1)-2+3+4.html)
+- Grothendieck, A. "Technique de descente et théorèmes d’existence en géométrie algébrique, I, II, and III". *Séminaire Bourbaki* **12** and **13** (1959/60 and 1960/61), Talks no. 190, 195, and 212. [HTML](https://thosgood.net/fga)
 
 You might notice that this last one is Grothendieck's FGA, and I've already talked a lot about how much progress has been made (although, admittedly, not for a while, due to general life chaos) about the [EGA translation](https://github.com/ryankeleti/ega), so the natural question to ask is *what about SGA?*
-Although I said I wasn't going to work on this until I'd at least finished the FGA translation (of which there are only two and a half chapters left), I ended up needing to read bits of SGA 6 for my research anyway, so I just gave in and translated some: the homepage of the SGA translation is [thosgood.com/sga](https://thosgood.com/sga/) (to accompany [thosgood.com/fga](https://thosgood.com/fga)), and here you can see what I've done so far (just the first section of SGA 1, and a little bit of the introduction from SGA 6), but *do not expect any updates to this any time soon* --- I really have to finish up some old projects before I get started on any news ones!
+Although I said I wasn't going to work on this until I'd at least finished the FGA translation (of which there are only two and a half chapters left), I ended up needing to read bits of SGA 6 for my research anyway, so I just gave in and translated some: the homepage of the SGA translation is [thosgood.net/sga](https://thosgood.net/sga/) (to accompany [thosgood.net/fga](https://thosgood.net/fga)), and here you can see what I've done so far (just the first section of SGA 1, and a little bit of the introduction from SGA 6), but *do not expect any updates to this any time soon* --- I really have to finish up some old projects before I get started on any news ones!
 (Although, as always, you can always contribute anything yourself if the fancy ever takes you: [github.com/thosgood/sga](https://github.com/thosgood/sga).)
 
 Anyways, that's enough for now.

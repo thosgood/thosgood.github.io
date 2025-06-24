@@ -5,7 +5,7 @@ tags: ['algebraic-topology', 'category-theory', 'homotopy-theory', 'quick-read']
 created_at: 2019-07-26
 ---
 
-This week was the [Young Topologists Meeting](https://ytm2019.epfl.ch) at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides [here](https://thosgood.com/assets/files/twisting-cochains-YTM19.pdf).
+This week was the [Young Topologists Meeting](https://ytm2019.epfl.ch) at EPFL in Lausanne, and had courses by Julie Bergner (on 1- and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well as a bunch of great talks by various postdocs and PhD students. I was lucky enough to get the chance to talk about twisting cochains and twisted complexes for half an hour, and you can find the slides [here](https://thosgood.net/assets/files/twisting-cochains-YTM19.pdf).
 
 <!-- more -->
 

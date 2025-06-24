@@ -16,5 +16,5 @@ After lots of conversations with [Mahmoud Zeinalian](https://www.zeinalian.com) 
 I'm also working on another paper, but I gather that it's not really the done thing to announce such things until they're much closer to completion (which is very sensible, and advice that I would definitely pass on to anybody who asks).
 Either way, the point is that I still love thinking about simplicial things, so if you were hoping that I'd write some more about them some day, then hopefully I will! (and also thank you ever so much for caring about what I write).
 
-Oh, and I've taken a little break from working on the [maths dictionary](https://thosgood.com/maths-dictionary), but don't worry: the project is not dead, merely taking a little rest (just like [the EGA translation](https://github.com/ryankeleti/ega)).
-However, I've finished [a few more translations](https://thosgood.com/translations), and will hopefully be able to start emptying out the "in progress" list this spring.
+Oh, and I've taken a little break from working on the [maths dictionary](https://thosgood.net/maths-dictionary), but don't worry: the project is not dead, merely taking a little rest (just like [the EGA translation](https://github.com/ryankeleti/ega)).
+However, I've finished [a few more translations](https://thosgood.net/translations), and will hopefully be able to start emptying out the "in progress" list this spring.
