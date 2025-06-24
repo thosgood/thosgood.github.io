@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.com/">
-  <id>https://thosgood.com/</id>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.net/">
+  <id>https://thosgood.net/</id>
   <title>Tim Hosgood's blog</title>
   <updated>2025-01-07T00:00:00Z</updated>
-  <link rel="alternate" href="https://thosgood.com/" type="text/html"/>
-  <link rel="self" href="https://thosgood.com/blog.xml" type="application/atom+xml"/>
+  <link rel="alternate" href="https://thosgood.net/" type="text/html"/>
+  <link rel="self" href="https://thosgood.net/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
-    <uri>https://thosgood.com</uri>
+    <uri>https://thosgood.net</uri>
   </author>
   <entry>
-    <id>tag:thosgood.com,2025-01-07:/blog/2025/01/07/woops-long-time/</id>
+    <id>tag:thosgood.net,2025-01-07:/blog/2025/01/07/woops-long-time/</id>
     <title type="html">Woops it's been a while</title>
     <published>2025-01-07T00:00:00Z</published>
     <updated>2025-01-07T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2025/01/07/woops-long-time/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2025/01/07/woops-long-time/" type="text/html"/>
     <content type="html">&lt;p&gt;I managed to forget to write a blog post for the entirety of 2024 —
 wow! Let’s see if I can zip through some things that have happened in
 the past 14 months.&lt;/p&gt;
@@ -67,7 +67,7 @@ that were fundamental in the introduction of double categories, as
 suggested by Bryce and Andrée Ehresmann herself: “Catégories doubles et
 catégories structurées” (a short note) and “Catégories structurées” (a
 much longer paper). The former is finished (&lt;a
-href="https://translations.thosgood.com/CRAS-256-1963-1198.pdf"&gt;[PDF]&lt;/a&gt;,
+href="https://translations.thosgood.net/CRAS-256-1963-1198.pdf"&gt;[PDF]&lt;/a&gt;,
 &lt;a
 href="https://github.com/thosgood/translations/blob/main/latex/CRAS-256-1963-1198.tex"&gt;[source]&lt;/a&gt;)
 and I’m about halfway through the latter.&lt;/p&gt;
@@ -102,7 +102,7 @@ turning up time and time again in the past literature on twisting
 cochains, amongst other places. &lt;a
 href="https://www.youtube.com/watch?v=YpOpKzfXRl8"&gt;My talk&lt;/a&gt; wasn’t
 very good (I severely ran out of time), but &lt;a
-href="https://thosgood.com/assets/files/loose-simplicial-objects.pdf"&gt;the
+href="https://thosgood.net/assets/files/loose-simplicial-objects.pdf"&gt;the
 slides&lt;/a&gt; are available, and hopefully there’ll be a real paper on the
 arXiv this year. I’m currently thinking about what Clausen (et al) call
 the “modified Hodge conjecture”, but entirely by accident — it just so
@@ -120,11 +120,11 @@ href="https://www.ravelry.com/patterns/library/emotional-support-chicken"&gt;E.S
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2023-10-04:/blog/2023/10/04/translations-part-5/</id>
+    <id>tag:thosgood.net,2023-10-04:/blog/2023/10/04/translations-part-5/</id>
     <title type="html">Translations</title>
     <published>2023-10-04T00:00:00Z</published>
     <updated>2023-10-04T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2023/10/04/translations-part-5/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2023/10/04/translations-part-5/" type="text/html"/>
     <content type="html">&lt;p&gt;Briefly: two very short translations concerning geometry, and the
 final two seminars of FGA (thus finishing a complete first draft of the
 entire FGA seminar series).&lt;/p&gt;
@@ -135,11 +135,11 @@ various reasons:&lt;/p&gt;
 &lt;li&gt;P Donato, P Iglesias, “Exemples de groupes differentiels: flots
 irrationnels sur le tore”. &lt;em&gt;C. R. Acad. Sc. Paris&lt;/em&gt;
 &lt;strong&gt;301&lt;/strong&gt; (1985) pp. 127–130. &lt;a
-href="https://labs.thosgood.com/translations/CRASP-301-1985-127.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+href="https://translations.thosgood.net/CRASP-301-1985-127.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;PF Sánchez, “Automorfismo de foliaciones holomorfas sobre
 superficies racionales”. &lt;em&gt;Pro Mathematica&lt;/em&gt; &lt;strong&gt;16&lt;/strong&gt;
 (2002) pp. 47–59. &lt;a
-href="https://labs.thosgood.com/translations/PM-16-2002-47.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+href="https://translations.thosgood.net/PM-16-2002-47.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Then there’s the one I’ve been slowly chipping away at, on and off,
 since — GitHub tells me — June 2021. I’ve now finished the last two
@@ -148,7 +148,7 @@ seminars of FGA, both on Picard schemes:&lt;/p&gt;
 &lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
 géométrie algébrique, V and VI”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
 &lt;strong&gt;14&lt;/strong&gt; (1961/62), Talks no. 232 and 236. &lt;a
-href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+href="https://thosgood.net/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This means there’s a complete (imperfect, sure) copy of FGA now
 digitised (and thus searchable!) online, and I’m going to take a break
@@ -158,7 +158,7 @@ course, if you happen to see any yourself then please do let me
 know!&lt;/p&gt;
 &lt;p&gt;Anyway, I’ll leave you with an insight into how much I struggled
 getting GitHub to automate the Bookdown build process for &lt;a
-href="https://thosgood.com/fga"&gt;the FGA page&lt;/a&gt; on the 23rd of June,
+href="https://thosgood.net/fga"&gt;the FGA page&lt;/a&gt; on the 23rd of June,
 2021, as well as how unhelpful my git commit messages would be to
 anybody reading them.&lt;/p&gt;
 &lt;figure&gt;
@@ -171,11 +171,11 @@ this?”, and just “?!”&lt;/figcaption&gt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2023-09-08:/blog/2023/09/08/cech-totalisation/</id>
+    <id>tag:thosgood.net,2023-09-08:/blog/2023/09/08/cech-totalisation/</id>
     <title type="html">Čech totalisation</title>
     <published>2023-09-08T00:00:00Z</published>
     <updated>2023-09-08T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2023/09/08/cech-totalisation/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2023/09/08/cech-totalisation/" type="text/html"/>
     <content type="html">&lt;p&gt;After a pretty long time (over two and half years or so), &lt;a
 href="https://www.zeinalian.com/"&gt;Mahmoud Zeinalian&lt;/a&gt; and I have
 finished our paper “Simplicial presheaves of Green complexes and
@@ -534,11 +534,11 @@ anything about presheaves of dg-categories along the way?&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2023-07-04:/blog/2023/07/30/translations-part-4/</id>
+    <id>tag:thosgood.net,2023-07-04:/blog/2023/07/30/translations-part-4/</id>
     <title type="html">Translations</title>
     <published>2023-07-04T00:00:00Z</published>
     <updated>2023-07-04T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2023/07/30/translations-part-4/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2023/07/30/translations-part-4/" type="text/html"/>
     <content type="html">&lt;p&gt;Hopefully one of my co-authors and I will be uploading a long-awaited
 preprint on dg-categories, twisting cochains, and homotopy limits to the
 arXiv “soon”. Until then, here are the small handful of translations
@@ -551,7 +551,7 @@ letter to Thomason on derivators, which makes for some interesting
 &lt;ul&gt;
 &lt;li&gt;A Grothendieck, “Lettre d’Alexander Grothendieck sur les
 Dérivateurs, 02.04.91”. Edited by Matthias Künzer. &lt;a
-href="https://labs.thosgood.com/translations/grothendieck-thomason-91-04-02.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+href="https://translations.thosgood.net/grothendieck-thomason-91-04-02.html"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Next, I &lt;em&gt;finally&lt;/em&gt; finished EGA II. I have yet to proofread it,
 so it probably still has an awful amount of typos and possible errors
@@ -570,7 +570,7 @@ have finished seminar IV (“Hilbert schemes”).&lt;/p&gt;
 &lt;li&gt;Grothendieck, A. “Technique de descente et théorèmes d’existence en
 géométrie algébrique, IV”. &lt;em&gt;Séminaire Bourbaki&lt;/em&gt;
 &lt;strong&gt;13&lt;/strong&gt; (1960/61), Talk no. 221. &lt;a
-href="https://thosgood.com/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+href="https://thosgood.net/fga"&gt;HTML&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When I finish off the last two seminars (V and VI, both on Picard
 schemes), I will go back and fix all the little issues (weird
@@ -581,11 +581,11 @@ done.&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-12-03:/blog/2022/12/03/virtual-double-categories-workshop/</id>
+    <id>tag:thosgood.net,2022-12-03:/blog/2022/12/03/virtual-double-categories-workshop/</id>
     <title type="html">Virtual Double Categories Workshop</title>
     <published>2022-12-03T00:00:00Z</published>
     <updated>2022-12-03T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/12/03/virtual-double-categories-workshop/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/12/03/virtual-double-categories-workshop/" type="text/html"/>
     <content type="html">&lt;p&gt;I now realise two things: firstly, I haven’t posted anything in
 really quite a while; secondly, I should have written this specific blog
 post a week ago. Over the past five days, &lt;a
@@ -805,11 +805,11 @@ href="https://mathstodon.xyz/@thosgood"&gt;on Mathstodon&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-05-30:/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/</id>
+    <id>tag:thosgood.net,2022-05-30:/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/</id>
     <title type="html">Various notions of (co)simplicial (pre)sheaves</title>
     <published>2022-05-30T00:00:00Z</published>
     <updated>2022-05-30T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/05/30/various-notions-of-cosimplicial-presheaves/" type="text/html"/>
     <content type="html">&lt;p&gt;For the first time, I have released into the wild a preprint of which
 I am the sole author, and had no real supervision. This is a scary
 moment indeed — how do I know that I haven’t written complete made-up
@@ -997,11 +997,11 @@ href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-04-25:/blog/2022/04/25/some-research-questions-from-my-notesbooks/</id>
+    <id>tag:thosgood.net,2022-04-25:/blog/2022/04/25/some-research-questions-from-my-notesbooks/</id>
     <title type="html">Some research questions from my notebooks</title>
     <published>2022-04-25T00:00:00Z</published>
     <updated>2022-04-25T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/04/25/some-research-questions-from-my-notesbooks/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/04/25/some-research-questions-from-my-notesbooks/" type="text/html"/>
     <content type="html">&lt;p&gt;One thing that the past few years have taught me is that I am not
 good at doing maths all by myself. In fact, I would go as far as to say
 I am completely useless and unmotivated. I do much better when I have
@@ -1289,11 +1289,11 @@ href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-04-08:/blog/2022/04/08/diagrammatic-equations-and-multiphysics/</id>
+    <id>tag:thosgood.net,2022-04-08:/blog/2022/04/08/diagrammatic-equations-and-multiphysics/</id>
     <title type="html">Diagrammatic equations and multiphysics</title>
     <published>2022-04-08T00:00:00Z</published>
     <updated>2022-04-08T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/04/08/diagrammatic-equations-and-multiphysics/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/04/08/diagrammatic-equations-and-multiphysics/" type="text/html"/>
     <content type="html">&lt;p&gt;Just a very short post (you don’t even need to click “Continue
 reading” if you’re looking at this on my blog archive) — I finally
 managed to do some more maths (but only because I had some very hard
@@ -1309,11 +1309,11 @@ I’m all blogged out for the minute, so ciao for now!&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-02-11:/blog/2022/02/11/graded-commutative-and-graded-and-commutative/</id>
+    <id>tag:thosgood.net,2022-02-11:/blog/2022/02/11/graded-commutative-and-graded-and-commutative/</id>
     <title type="html">Graded commutative rings and graded and commutative rings</title>
     <published>2022-02-11T00:00:00Z</published>
     <updated>2022-02-11T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/02/11/graded-commutative-and-graded-and-commutative/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/02/11/graded-commutative-and-graded-and-commutative/" type="text/html"/>
     <content type="html">&lt;p&gt;One of the many reasons that teaching is fun is because you get to
 look back at things that you haven’t seen in a while and try to
 understand them in light of what you’ve learnt in the meantime. This
@@ -1924,11 +1924,11 @@ class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&g
 </content>
   </entry>
   <entry>
-    <id>tag:thosgood.com,2022-02-05:/blog/2022/02/05/every-bundle-is-flat-from-infinity-pov/</id>
+    <id>tag:thosgood.net,2022-02-05:/blog/2022/02/05/every-bundle-is-flat-from-infinity-pov/</id>
     <title type="html">Every principal bundle is flat, in the infinity world</title>
     <published>2022-02-05T00:00:00Z</published>
     <updated>2022-02-05T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.com/blog/2022/02/05/every-bundle-is-flat-from-infinity-pov/" type="text/html"/>
+    <link rel="alternate" href="https://thosgood.net/blog/2022/02/05/every-bundle-is-flat-from-infinity-pov/" type="text/html"/>
     <content type="html">&lt;p&gt;Earlier today, Mahmoud Zeinalian explained something to me that
 Dennis Sullivan once explained to him, and it’s been sitting in my brain
 ever since then. In an attempt to empty out my thoughts, and also
