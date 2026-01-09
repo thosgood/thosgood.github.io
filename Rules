@@ -3,14 +3,14 @@
 
 # TAGS
 
-# for each tag, make an item called /blog/tags/tagname
+# for each tag, make an item called /blog/tagname
 preprocess do
   tags = @items.map { |i| i[:tags] }.flatten.uniq
   tags.each do |tag|
     next unless tag
     content = ''
     attributes = { tag: tag, title: "#{tag} posts" }
-    identifier = "/blog/tags/#{tag}"
+    identifier = "/blog/#{tag}"
     @items.create(content, attributes, identifier)
   end
   # Delete draft posts
@@ -21,9 +21,9 @@ preprocess do
 end
 
 # make pages for each tag item that we made in the preprocessing
-compile '/blog/tags/*' do
+compile '/blog/*' do
   layout '/Tags.*'
-  write "/blog/tags/#{item.identifier.to_s.split('/')[-1]}/index.html"
+  write "/blog/#{item.identifier.to_s.split('/')[-1]}/index.html"
 end
 
 
@@ -60,8 +60,9 @@ end
 
 # take all the .md files in /blog and filter them with pandoc, using the katex
 # parser (which doesn't actually really do much) (passing them through the
-# layout "Post") and making a file /blog/y/m/d/name/index.html,
-# where y, m, d, and name all come from the title of the file
+# layout "Post") and making a file /blog/yyyy-mm-dd-name/index.html,
+# where {yyyy-mm-dd} and {name} come from the name of the folder
+# containing the file
 compile "/blog/*/index.md" do
   filter :pandoc, args: [
     :katex
@@ -69,12 +70,12 @@ compile "/blog/*/index.md" do
   layout '/Post.*'
   filter :add_toc
   y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+)\/index.md/.match(item.identifier.to_s).captures
-  write "/blog/#{y}/#{m}/#{d}/#{slug}/index.html"
+  write "/blog/#{y}-#{m}-#{d}-#{slug}/index.html"
 end
 compile "/blog/*/*" do 
   write(item.identifier.to_s)
   y,m,d,slug,image = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+)\/(.*)/.match(item.identifier.to_s).captures
-  write "/blog/#{y}/#{m}/#{d}/#{slug}/#{image}"
+  write "/blog/#{y}-#{m}-#{d}-#{slug}/#{image}"
 end
 
 

@@ -21,7 +21,7 @@
     <h2 id="post-part"><%= @item[:part] %></h2>
     <h6 id="post-date"><%= get_pretty_date(item) %></h6>
     <div class="tag-list">
-      <%= tags_for(@item, base_url: '/blog/tags/', separator: ", ") %>
+      <%= tags_for(@item, base_url: '/blog/', separator: ", ") %>
     </div>
     <!-- Other posts in the same series -->
     <% if @item[:part] != nil %>
