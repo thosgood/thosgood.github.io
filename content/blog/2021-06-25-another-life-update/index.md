@@ -17,7 +17,7 @@ Let's have a look at what I've been doing, shall we?
 
 - Other Topos Institute news is on the way too, with [Em-Cats](https://topos.site/em-cats/) now properly underway, and a big website redesign for [topos.site](https://topos.site/) in the works...
 
-- Lots of teaching took place these last few months (and oh yikes is it true that online teaching is oh-so-very time consuming), so I finally got around to putting up all of my class notes etc. [on a webpage](/teaching/). Since I'll have more teaching after summer too, this should hopefully grow as a resource as time passes.
+- Lots of teaching took place these last few months (and oh yikes is it true that online teaching is oh-so-very time consuming), so I finally got around to putting up all of my class notes etc. [on a webpage](https://thosgood.net/teaching/). Since I'll have more teaching after summer too, this should hopefully grow as a resource as time passes.
 
 - Why will I have more teaching after summer? Because I've been offered a postdoc position at [Stockholm University](https://www.math-stockholm.se/en/)! Hopefully I'll have some more information to share about this soon. Either way, it'll be a big change from my "postdoc" this year, which has been very much light on the research aspect, but has given me lots of time to work on some of my side projects.
 
@@ -25,7 +25,7 @@ Let's have a look at what I've been doing, shall we?
 
 - Still on the topic of translations, but deserving its own bullet point: I've moved my [FGA](https://en.m.wikipedia.org/wiki/Fondements_de_la_G%C3%A9ometrie_Alg%C3%A9brique) translation over to its own webpage: [translations.thosgood.net/fga/](http://translations.thosgood.net/fga/). (I've yet to sort out the PDF version, but that's right near the top of my to-do list). I've not quite yet finished all the chapters, but there's only FGAs 3.IV, 3.V, and 3.VI left, so the end is in sight! (And worry not: I've almost finished a big section of [EGA II](https://github.com/ryankeleti/ega) (but the server builds for this are currently broken, so the pdfs haven't been updated with the latest content yet --- sorry!)).
 
-- Not a translation exactly, but very much "translation adjacent", is the [maths dictionary](/maths-dictionary/), which has had a bunch of submissions in lots of languages (especially in Basque, Catalan, and Polish).
+- Not a translation exactly, but very much "translation adjacent", is the [maths dictionary](https://thosgood.net/maths-dictionary/), which has had a bunch of submissions in lots of languages (especially in Basque, Catalan, and Polish).
 
 - Surprisingly, I have actually been able to get some research done as well! Nowhere near as much as I would have liked, but hey ho, c'est la vie. My research with [Mahmoud Zeinalian](https://www.zeinalian.com/) on simplicial presheaves and coherent analytic sheaves has come along lots, but is now waiting on me to sit down and carefully check some of the more technical proofs (and one of them even involves checking that we've got a bunch of signs right... oh dear). When it's done I'll try to make a nice blog post about it all!
 
