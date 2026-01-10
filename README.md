@@ -2,7 +2,6 @@
 
 ### Major
 
-- links like `/blog/2022/02` should work
 - pagination for blog
 
 ### Minor
