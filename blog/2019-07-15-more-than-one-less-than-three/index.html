@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="More-than-one-but-less-than-three-categories // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>More-than-one-but-less-than-three-categories | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2019-07-15-more-than-one-less-than-three-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">More-than-one-but-less-than-three-categories</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">15th of July, 2019</h6>
+    <div class="tag-list">
+      <a href="/blog/higher-category-theory" rel="tag">higher-category-theory</a>, <a href="/blog/category-theory" rel="tag">category-theory</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#background-and-strictification">Background and
+strictification</a></li>
+<li><a href="#the-idea">The idea</a></li>
+<li><a href="#strict-vs.-weak">Strict vs. weak</a></li>
+<li><a href="#double-categories">Double categories</a></li>
+<li><a href="#categories-as-2-categories-as-double-categories">1-categories as
+2-categories as double categories</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+<p>What with all the wild applications of, and progress in, the theory
+of <span class="math inline">\infty</span>-categories, I had really
+neglected studying any kind of lower higher-category theory. But, as in
+many other ways, CT2019 opened my eyes somewhat, and now I’m trying to
+catch up on the theory of 2-categories, which have some really beautiful
+structure and examples.</p>
+<!-- more -->
+<h1 id="background-and-strictification">Background and
+strictification</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Before I get to the point of this post (which is to help me to
+remember the differences between 2-categories, bicategories, and double
+categories<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>), I’ll just say a tiny bit about why
+I’m an idiot.</p>
+<p>In some sense I had just assumed that 2-categories were kind of
+uninteresting, for two reasons: firstly, “they’re just <span class="math inline">n</span>-categories with <span class="math inline">n</span>=2”; and secondly, every weak 2-category can
+be strictified, so we can just always take strict models and everything
+works out just nicely. Both of these things are rather bad points of
+view to take.</p>
+<p>For the latter point, it’s important to note that, yes, weak
+2-categories can be strictified, and every pseudofunctor is equivalent
+to a strict one, but it is <strong>not</strong> true that every
+pseudonatural transformation is equivalent to a (strict) natural
+transformation.</p>
+<p>As explained in <a href="http://conferences.inf.ed.ac.uk/ct2019/slides/shulman.pdf">Mike
+Shulman’s talk</a>, working in the <span class="math inline">(2,1)</span>-topos <span class="math inline">[\mathbb{D}^{\text{op}},\mathsf{Gpd}]</span> for
+some small <span class="math inline">2</span>-category <span class="math inline">\mathbb{D}</span>, every pseudofunctor <span class="math inline">X\colon\mathbb{D}^{\text{op}}\to\mathsf{Gpd}</span>
+is equivalent to a strict one, but <strong>not</strong> every
+pseudonatural transformation <span class="math inline">X\rightsquigarrow
+Y</span> is equivalent to a strict one. But we do have the following
+lemma (from Mike’s talk).</p>
+<p><strong>Lemma.</strong> For any <span class="math inline">Y\in[\mathbb{D}^{\text{op}},\mathsf{Gpd}]</span>
+there is a strict <span class="math inline">\mathcal{C}^{\mathbb{D}}Y</span> and a bijection
+between pseudonatural <span class="math inline">X\rightsquigarrow
+Y</span> and strict <span class="math inline">X\to\mathcal{C}^{\mathbb{D}}Y</span>.</p>
+<p><strong>Proof</strong>. Almost by definition: a pseudonatural <span class="math inline">X\rightsquigarrow Y</span> assigns to each <span class="math inline">x\in X(d)</span> some image <span class="math inline">f_x(x)\in Y(d)</span> along with an isomorphism
+<span class="math inline">\gamma^*(f_x(x))\cong
+f_{x'}(\gamma^*(x))</span> for all <span class="math inline">\gamma\colon x\to x'</span> in <span class="math inline">\mathbb{D}</span>, and this isomorphism satisfies a
+coherence condition. So we just define <span class="math inline">\mathcal{C}^{\mathbb{D}}Y(d)</span> to consist of
+all this data.</p>
+<p>There is then a lovely theory of <em>coflexible</em> objects, which
+are those <span class="math inline">Y</span> such that the canonical
+morphism <span class="math inline">Y\to\mathcal{C}^{\mathbb{D}}Y</span>
+has a strict retraction. These objects are such that
+<strong>all</strong> pseudonatural transformations <em>into</em> them
+are isomorphic to <em>strict</em> such ones.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<h1 id="the-idea">The idea</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<h2 id="roughly">Roughly</h2>
+<ul>
+<li>A 2-category should be something which has <em>objects</em>,
+<em>1-morphisms</em> between the objects, and <em>2-morphisms</em>
+between the morphisms.</li>
+<li>We should be able to compose 1-morphisms ‘along objects’, in that,
+given 1-morphisms <span class="math inline">f\colon x\to y</span> and
+<span class="math inline">g\colon y\to z</span>, we should get some
+1-morphism <span class="math inline">g\circ f\colon x\to z</span>.</li>
+<li>We should be able to compose 2-morphisms ‘along objects’ (so-called
+<em>horizontally</em>)</li>
+</ul>
+<figure>
+<img src="horizontal-2-composition.png" alt="horizontal composition">
+<figcaption aria-hidden="true">horizontal composition</figcaption>
+</figure>
+<p>but <em>also</em> ‘along 1-morphisms’ (so-called
+<em>vertically</em>)</p>
+<figure>
+<img src="vertical-2-composition.png" alt="vertical composition">
+<figcaption aria-hidden="true">vertical composition</figcaption>
+</figure>
+<p>and we ask that both senses of composition be associative <em>only up
+to coherent associator 2-morphisms</em>.</p>
+<h2 id="categorification-and-monoidal-delooping">Categorification and
+monoidal delooping</h2>
+<p>An <span class="math inline">(n=2)</span>-category can be thought of
+as the Oidification (or <a href="https://ncatlab.org/nlab/show/horizontal+categorification">horizontal
+categorification</a>) of a monoidal category: it is like a monoidal
+category with many objects. To see this, note that the delooping of a
+monoidal category (i.e. the category where we shift all
+objects/morphisms ‘up one degree’) is exactly a one object <span class="math inline">(n=2)</span>-category, with 1-morphisms
+corresponding to the objects of the monoidal category, and 2-morphisms
+corresponding to the morphisms of the monoidal category.</p>
+<h1 id="strict-vs.-weak">Strict vs. weak</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<h2 id="the-categories">The categories</h2>
+<p>The general consensus is to call <em>strict</em> 2-categories
+“<strong>2-categories</strong>”, and the algebraic notion of
+<em>weak</em> 2-categories “<strong>bicategories</strong>”. This can be
+confusing, <a href="https://ncatlab.org/nlab/show/bicategory#terminology">for a few
+reasons</a>, but such is life. From now on, in this post, we will say
+<strong><span class="math inline">(n=2)</span>-categories</strong> to
+talk about both senses of 2-categories.</p>
+<p>Specifically, a <em>2-category</em> is a category enriched over the
+cartesian monoidal category <span class="math inline">\mathsf{Cat}</span>; a <em>bicategory</em> is a
+category <strong>weakly</strong> enriched over <span class="math inline">\mathsf{Cat}</span> (so the hom-objects are
+categories but the associativity and unit laws only hold up to coherent
+isomorphism).</p>
+<h2 id="the-functors">The functors</h2>
+<p>Whether we take strict or weak <span class="math inline">(n=2)</span>-categories, we can still choose whether
+we want our <span class="math inline">(n=2)</span>-functors to be strict
+or weak.</p>
+<p>A <em>2-functor</em> is a strict <span class="math inline">(n=2)</span>-functor (which <a href="https://www.ncatlab.org/nlab/show/2-functor#fn:1">usually</a> only
+makes sense between 2-categories); a <em>pseudofunctor</em> is a weak
+<span class="math inline">(n=2)</span>-functor (so the composition of
+1-morphisms is preserved only up to coherent (specified) 2-isomorphisms,
+and similarly for the identity 1-morphisms) (which can be between strict
+or weak <span class="math inline">(n=2)</span>-categories).</p>
+<p>If we forget the 2-structure of an <span class="math inline">(n=2)</span>-category and consider the
+hom-categories as discrete, then both of these notions of <span class="math inline">(n=2)</span>-functors reduce to 1-functors between
+1-categories. There is, however, an even weaker type of <span class="math inline">(n=2)</span>-functor for which this is
+<strong>not</strong> the case: a(n) <em>(op)lax 2-functor</em>: here the
+associator and compositor 2-cells are <strong>not</strong> required to
+even be coherent <em>isomorphisms</em>, but instead just coherent
+<em>morphisms</em>, in some direction (with one direction corresponding
+to lax and the other to oplax). This is exactly the idea of an (op)lax
+functor of monoidal categories, and so reassures us that <span class="math inline">(n=2)</span>-categories can be thought of as
+monoidal categories with multiple objects, as mentioned above.</p>
+<p>That is,</p>
+<table>
+<thead>
+<tr>
+<th>
+<span class="math inline">(n=2)</span>-functor</th>
+<th>compositor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2-functor</td>
+<td><span class="math inline">F(g\circ f)=F(g)\circ F(f)</span></td>
+</tr>
+<tr>
+<td>pseudofunctor</td>
+<td><span class="math inline">F(g\circ f)\cong F(g)\circ
+F(f)</span></td>
+</tr>
+<tr>
+<td>(op)lax 2-functor</td>
+<td><span class="math inline">F(g\circ f)\Rightarrow F(g)\circ
+F(f)</span></td>
+</tr>
+</tbody>
+</table>
+<p>At a first glance, (op)lax functors seem like almost too weak to be
+useful, but there are <a href="https://www.ncatlab.org/nlab/show/lax+functor#examples">many nice
+examples</a> of when they are good things to study.</p>
+<h1 id="double-categories">Double categories</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Something that looks a bit like an <span class="math inline">(n=2)</span>-category when you unwrap the abstract
+definition is a <em>double category</em>: an internal category <span class="math inline">\mathscr{C}=(\mathcal{C}_1\rightrightarrows\mathcal{C}_0)</span>
+of <span class="math inline">\mathsf{Cat}</span>. This means that it
+has</p>
+<ul>
+<li>
+<em>objects</em>, given by the objects of <span class="math inline">\mathcal{C}_0</span>;</li>
+<li>
+<em>vertical morphisms</em>, given by the morphisms of <span class="math inline">\mathcal{C}_0</span>;</li>
+<li>
+<em>horizontal morphisms</em>, given by the objects of <span class="math inline">\mathcal{C}_1</span>; and</li>
+<li>
+<em>2-cells</em>, or <em>squares</em>, given by the morphisms of
+<span class="math inline">\mathcal{C}_1</span>.</li>
+</ul>
+<p>We can picture the 2-cells as a square (hence the name), as</p>
+<figure>
+<img src="double-square.png" alt="squares">
+<figcaption aria-hidden="true">squares</figcaption>
+</figure>
+<p>where <span class="math inline">x_0,x_1,y_0,y_1\in\operatorname{ob}\mathcal{C}_0</span>
+are objects, <span class="math inline">f,g\in\operatorname{ob}\mathcal{C}_1</span> are
+horizontal morphisms, <span class="math inline">\alpha\beta\in\operatorname{Arr}\mathcal{C}_0</span>
+are vertical morphisms, and <span class="math inline">\phi\in\operatorname{Arr}\mathcal{C}_1</span> is the
+2-cell.</p>
+<p>Composition ‘horizontally’ of two squares, left and right of each
+other, is given by the usual composition in the categories <span class="math inline">\mathcal{C}_0</span> and <span class="math inline">\mathcal{C}_1</span>; composition ‘vertically’ of
+two squares, one above the other, is given by the composition operation
+on <span class="math inline">\mathcal{C}_1\rightrightarrows\mathcal{C}_0</span>,
+coming from the fact that <span class="math inline">\mathscr{C}</span>
+is an internal category.</p>
+<p>There are two <em>edge categories</em> associated to <span class="math inline">\mathscr{C}</span>, given by taking the objects and
+either the vertical or the horizontal morphisms as morphisms. If the two
+edge categories agree then we say that <span class="math inline">\mathscr{C}</span> is <em>edge-symmetric</em>.</p>
+<h2 id="examples">Examples</h2>
+<p>From <a href="https://ncatlab.org/nlab/show/double+category#examples">the
+nLab</a>, we have some fun examples.</p>
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>objects</th>
+<th>vertical</th>
+<th>horizontal</th>
+<th>2-cells</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\mathsf{Prof}</span></td>
+<td>small categories</td>
+<td>functors</td>
+<td>profunctors</td>
+<td>nat. trans.</td>
+</tr>
+<tr>
+<td><span class="math inline">\mathsf{Mod}</span></td>
+<td>model categories</td>
+<td>left Quil. functors</td>
+<td>right Quil. functors</td>
+<td>nat. trans.</td>
+</tr>
+<tr>
+<td><span class="math inline">\mathsf{MonCat}</span></td>
+<td>monoidal categories</td>
+<td>colax mon. functors</td>
+<td>lax mon. functors</td>
+<td>mon. nat. trans.</td>
+</tr>
+<tr>
+<td><span class="math inline">\mathsf{Dbl}\Pi(X)</span></td>
+<td>points of top. space <span class="math inline">X</span>
+</td>
+<td>paths</td>
+<td>paths</td>
+<td>homotopies</td>
+</tr>
+</tbody>
+</table>
+<p>For more details about why <span class="math inline">\mathsf{Mod}</span> is so interesting, see
+[S11].</p>
+<p>Note that we can also get weak versions of double categories, in many
+ways, as described <a href="https://ncatlab.org/nlab/show/double+category#weakenings">here</a>.</p>
+<p>Something that I won’t talk about, but simply mention instead, is the
+fact that double categories are exactly <a href="https://ncatlab.org/nlab/show/n-fold+category#fold_categories"><em>2-fold
+categories</em></a>.</p>
+<h1 id="categories-as-2-categories-as-double-categories">1-categories as
+2-categories as double categories</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<ul>
+<li>We can consider any 1-category as an <span class="math inline">(n=2)</span>-category by taking the 2-cells to just
+be identities.</li>
+<li>We can consider any <span class="math inline">(n=2)</span>-category
+as an edge-symmetric double category, its <em>double category of
+squares</em>, via the so-called <em>quintet construction</em>: by taking
+both vertical and horizontal morphisms to be the 1-morphisms, and the
+2-cells to be the 2-morphisms. We could also construct two other double
+categories: by taking either the vertical or the horizontal morphisms to
+be the 1-morphisms, and the other to be just the identity 1-morphisms.
+Finally, one last construction is the <em>mate construction</em>: the
+vertical arrows are adjunctions, the horizontal arrows are 1-morphisms,
+and the 2-cells are <a href="https://ncatlab.org/nlab/show/mate">mate-pairs of
+2-morphisms</a>.</li>
+<li>In the opposite direction to the above, there are two underlying
+2-categories of any double category, where we let 1-morphisms be just
+the vertical (resp. horizontal) morphisms, and the 2-morphisms are for
+commutative squares whose horizontal (resp. vertical) arrows are
+identities. We call these the <em>associated vertical</em> (resp.
+<em>horizontal</em>) <em>2-category</em>.</li>
+</ul>
+<h1 id="references">References</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<ul>
+<li>[S11] Michael Shulman, <a href="https://arxiv.org/pdf/0706.2868.pdf"><em>Comparing composites of
+left and right derived functors.</em></a> arXiv:
+<code>0706.2868v2</code> [math.CT].</li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>For some reason this reminds me of the confusion I
+always have when trying to remember what ‘biannual’ means.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The reason that Mike talked about them was in the
+context of interpreting types as coflexible objects.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

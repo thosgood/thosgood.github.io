@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Derived, DG, triangulated, and infinity-categories // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Derived, DG, triangulated, and infinity-categories | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2018-04-26-derived-dg-triangulated-and-infinity-categories-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Derived, DG, triangulated, and infinity-categories</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">26th of April, 2018</h6>
+    <div class="tag-list">
+      <a href="/blog/higher-category-theory" rel="tag">higher-category-theory</a>, <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/quick-read" rel="tag">quick-read</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#a-nice-diagram">A nice diagram</a></li>
+<li><a href="#unresolved-confusions">Unresolved confusions</a></li>
+</ol>
+<p>This post assumes that you have seen the construction of derived
+categories and maybe the definitions of dg- and <span class="math inline">A_\infty</span>-categories, and wondered how they
+all linked together. In particular, as an undergraduate I was always
+confused as to what the difference was between the two steps of
+constructing the derived category of chain complexes was: taking
+equivalence classes of chain homotopic complexes; and then formally
+inverting all quasi-isomorphisms. Both of them seemed to be some sort of
+quotienting/equivalence-class-like action, so why not do them at the
+same time? What different roles were played by each step?</p>
+<!-- more -->
+<p><em>This post could have many errors, and I don’t understand the
+proofs for many of the things I vaguely imply; I just mildly
+believe.</em> <em>Please do let me know if there is anything grossly
+misleading or just plain wrong.</em></p>
+<h1 id="warnings">Warnings</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>First of all, there are two points that I want to make about choices
+of language that I think are really very confusing.</p>
+<ol type="1">
+<li>When we talk about derived categories, we are using this word in the
+opposite sense to pretty much every other usage of the word in modern
+mathematics<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>: a <strong>derived category</strong>
+is like a homotopy truncation (i.e. the <span class="math inline">\pi_0</span>) of some thing with much higher
+homotopical data; a <strong>derived scheme/stack/whatever</strong> is
+something whose <span class="math inline">\pi_0</span> is the
+corresponding classical object. Derived ‘algebraic/geometric objects’
+<em>have</em> homotopy truncations; derived categories <em>are</em>
+homotopy truncations.</li>
+<li>When we quotient the category of chain complexes by the equivalence
+relation given by chain homotopy, we usually call the resulting category
+<span class="math inline">K(\mathcal{A})</span> the <strong>homotopy
+category of chain complexes</strong>. This is maybe not the best
+nomenclature, in some sense, because the category that ‘truly’ deserves
+this name is the <em>actual</em> homotopy category of chain complexes
+<span class="math inline">\mathrm{Ho}\mathsf{Ch}(\mathcal{A})</span>,
+which is, by definition, the derived category <span class="math inline">D(\mathcal{A})</span>. Because of this, I won’t
+refer to <span class="math inline">K(\mathcal{A})</span> as anything but
+<span class="math inline">K(\mathcal{A})</span>.</li>
+</ol>
+<h1 id="a-nice-diagram">A nice diagram</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Without further ado, here is a diagram that attempts to explain the
+relationships between various things that you might have learnt about in
+various places.</p>
+<figure>
+<img src="1.png" title="How things all sort of fit together" alt="How things all sort of fit together">
+<figcaption aria-hidden="true">How things all sort of fit
+together</figcaption>
+</figure>
+<p>Here are a few words about the above diagram.</p>
+<ul>
+<li>The structure of a <em>triangulated category</em> is essentially the
+structure that the category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> inherits from the
+fact that <span class="math inline">\mathcal{C}</span> is a
+<em>stable</em> <span class="math inline">(\infty,1)</span>-category.
+The equivalent notion in the more general case (the left-hand side of
+the diagram) is the structure inherent to <span class="math inline">\mathrm{h}(\mathcal{C})</span> from an <span class="math inline">(\infty,1)</span>-category viewed as a
+quasi-category (and thus, in particular, simplicial set).</li>
+<li>A <em>stable dg-category</em> is also known as an <em>enhanced
+triangulated category</em> or a <em>pretriangulated category</em>.</li>
+<li>If we wanted to draw a column in the middle for <em>stable</em>
+<span class="math inline">(\infty,1)</span>-categories that <em>aren’t
+necessarily linear</em>, then we’d arrive at the notion of a
+<em>spectral category</em> instead of a dg-category.</li>
+</ul>
+<p>Now here is a picture of where the derived category of chain
+complexes fits in to all this.</p>
+<figure>
+<img src="2.png" title="Where does the derived category fit in?" alt="Where does the derived category fit in?">
+<figcaption aria-hidden="true">Where does the derived category fit
+in?</figcaption>
+</figure>
+<p>Here are a few words about the above diagram.</p>
+<ul>
+<li><p>We can understand the definition of <em>chain homotopies</em>
+much better if we understand the idea of the <a href="https://ncatlab.org/nlab/show/interval+object+in+chain+complexes">interval
+object in chain complexes</a>.</p></li>
+<li>
+<p>As said at the beginning of this post, there <em>is</em> a
+difference between passing from <span class="math inline">\mathsf{Ch}(\mathcal{A})</span> to <span class="math inline">K(\mathcal{A})</span> and from <span class="math inline">K(\mathcal{A})</span> to <span class="math inline">D(\mathcal{A})</span>, i.e. quotienting and
+localising have no reason to behave similarly<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.
+<em>But</em>, there is a model structure that we can put on <span class="math inline">\mathsf{Ch}(\mathcal{A})</span>, and so there
+<em>is</em> some link between the two: to quote from <a href="https://mathoverflow.net/a/188199/73622">a mathoverflow answer by
+Simon Henry</a>,</p>
+<blockquote>
+<p><em>The reason why they give the same things in a lot of example
+(including chain complexes), giving the idea that they should be
+related, is because these examples are Quillen model categories and that
+it is the main result of Quillen’s “Homotopical Algebra” (where he
+defined model categories) that for Quillen model category the
+localization by weak equialence can be constructed as a quotient of the
+full subcategory of fibrant-cofibrant objects.</em></p>
+</blockquote>
+<p>There is, however, the slightly confusing fact that the construction
+of <span class="math inline">K(\mathcal{A})</span> as a quotient
+<em>does</em> agree with a localisation construction (as explained <a href="https://math.stackexchange.com/a/1128937/71510">here</a>).</p>
+</li>
+</ul>
+<h1 id="unresolved-confusions">Unresolved confusions</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>I still don’t fully see the link between the homotopy category <span class="math inline">\mathrm{h}(\mathcal{C})</span> and the homotopy
+category <span class="math inline">\mathrm{Ho}(\mathcal{C})</span> and
+localisation in general (e.g. I ‘know’ that <span class="math inline">\mathrm{Ho}(\mathcal{C})(a,b)\simeq\pi_0(\mathrm{L}\mathcal{C}(a,b))</span>,
+where <span class="math inline">\mathrm{L}</span> is the simplicial
+localisation, but that’s about it).</p>
+<p>You know what? There are a lot of things that I still don’t
+understand, but oh my goodness am I having fun trying to figure it all
+out.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Namely <em>derived algebraic geometry</em>, and its
+siblings, and its cousins, and… etc.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Think of rings (for some reason localisations and
+quotients of rings don’t look as confusingly similar to me as the
+categorical versions do).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

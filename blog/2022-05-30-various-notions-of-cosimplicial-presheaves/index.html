@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Various notions of (co)simplicial (pre)sheaves // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Various notions of (co)simplicial (pre)sheaves | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2022-05-30-various-notions-of-cosimplicial-presheaves-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Various notions of (co)simplicial (pre)sheaves</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">30th of May, 2022</h6>
+    <div class="tag-list">
+      <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/simplicial-things" rel="tag">simplicial-things</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#where-this-paper-came-from">Where this paper came from</a></li>
+<li><a href="#an-unexpected-application">An unexpected application</a></li>
+<li><a href="#whats-actually-in-the-paper">What’s actually in the paper</a></li>
+</ol>
+<p>For the first time, I have released into the wild a preprint of which
+I am the sole author, and had no real supervision. This is a scary
+moment indeed — how do I know that I haven’t written complete made-up
+nonsense? It’s true that I talked with a couple of close colleagues
+about the results, and they nodded in vague agreement, but the
+responsibility of checking the actual formal details is all on me. Even
+worse, I wanted to include some results about something that I don’t
+really have any formal experience with. Anyway, I hope the resulting
+paper is at least mildly “good” (whatever that might mean). It’s called
+“Various notions of (co)simplicial (pre)sheaves”, and is now on the
+arXiv: <a href="https://arxiv.org/abs/2205.15185">2205.15185</a>.</p>
+<!-- more -->
+<h1 id="where-this-paper-came-from">Where this paper came from</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Ever since my PhD thesis, I’ve been thinking on-and-off about these
+things called “sheaves on the Čech nerve”, which were introduced by
+Green<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and then later in a different way
+by Toledo and Tong<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, in order to do some nice
+homotopical construction in complex geometry. The vague idea is that a
+sheaf <span class="math inline">\mathcal{F}</span> on a space <span class="math inline">X</span> can be split up into finer parts, with an
+individual sheaf <span class="math inline">\mathcal{F}^p</span> for each
+simplicial level of the Čech nerve of (a cover of) <span class="math inline">X</span>, i.e. instead of just describing what <span class="math inline">\mathcal{F}</span> looks like on all of <span class="math inline">X</span>, we describe what it looks like on all the
+open sets in a cover of <span class="math inline">X</span> (this is
+<span class="math inline">\mathcal{F}^0</span>), and then what it looks
+like on each pairwise intersection <span class="math inline">U\cap
+V</span> of open sets from the cover (this is <span class="math inline">\mathcal{F}^1</span>), and then what it looks like
+on each triple-wise intersection <span class="math inline">U\cap V\cap
+W</span> of open sets from the cover (this is <span class="math inline">\mathcal{F}^2</span>), and… and so on. One reason
+for wanting to do this is that sometimes we want to endow our sheaf
+<span class="math inline">\mathcal{F}</span> with some extra structure
+or data (such as a <a href="https://en.wikipedia.org/wiki/Connection_(vector_bundle)#Formal_definition"><em>Koszul
+connection</em></a>, in the case of Green/Toledo–Tong) that might not
+exist globally (as is indeed the case for holomorphic connections),
+<em>but</em> that exists <em>locally</em> — decomposing our sheaf <span class="math inline">\mathcal{F}</span> into different simplicial levels
+over the Čech nerve lets us do exactly this!</p>
+<p>Anyway, what always annoyed me about this story (however petty this
+might be) was the terminology: a bunch of sheaves <span class="math inline">(\mathcal{F}^p)_{p\in\mathbb{N}}</span> living over
+a simplicial space <span class="math inline">(X_p)_{p\in\mathbb{N}}</span> were called
+<em>simplicial sheaves</em>, but they’re <em>not</em> simplicial objects
+in the category of sheaves on <span class="math inline">X</span>, and,
+even worse, they don’t actually really even look very simplicial (the
+morphisms all end up going the wrong way, making them look
+<em>co</em>simplicial). So is there any relation between these things
+(which I gave the uninventive but fairly descriptive name of <em>sheaves
+on a simplicial space</em>) and actual simplicial sheaves? Since the
+only reference that I know of which actually talks about these sheaves
+on simplicial spaces is Green’s aforementioned thesis (and Toledo–Tong’s
+aforementioned summary of it), I couldn’t find if anybody else actually
+even cared about these objects, let alone cared enough to figure out if
+they also deserved the name of “simplicial sheaves”.</p>
+<h1 id="an-unexpected-application">An unexpected application</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>When I finally got the motivation to sit down and write things down,
+I realised that there was also another pretty large gap in what I knew
+about these things: the second thing you normally learn about after
+learning about sheaves is <em>sections</em> of a sheaf. So what is a
+section of a sheaf on a simplicial space? In one of life’s little
+coincidences, when I started thinking about this specific question
+seriously, I was working in an office three floors above Vincent
+Wang-Maścianica, who patiently helped me to understand the basics of
+string diagrams as well as some other stuff that he was working on. The
+reason this is a coincidence is because, one afternoon (to mildly
+dramatise the story) he saw a diagram on my board and said “oh, I didn’t
+realise you were studying X”, to which I replied, “I’m not, I’m thinking
+about sections of sheaves on simplicial spaces”, to which we both
+replied “oh… interesting”.</p>
+<p>The upshot of the ensuing conversations with Vincent left me
+reasonably convinced that I could find an application for sheaves on
+simplicial spaces outside their one appearance in complex geometry: they
+could be used to describe “stuff, stuff relating that stuff, and the
+order in which those relations should evolve”. To give a more concrete
+example of this, consider the following scenario: we have some objects
+<span class="math inline">x_1,\ldots,x_n</span> in a category that has a
+nice notion of tensor product (e.g. a symmetric monoidal category), and
+we want to understand what endomorphisms of <span class="math inline">x_1\otimes x_2\otimes \ldots\otimes x_n</span> look
+like. One way of getting such endomorphisms is to build them up from
+smaller endomorphisms! For example, say we have objects <span class="math inline">A</span>, <span class="math inline">B</span>, <span class="math inline">C</span>, and <span class="math inline">D</span>,
+and an endomorphism <span class="math inline">f\in\operatorname{End}(A\otimes B)</span> and
+another endomorphism <span class="math inline">g\in\operatorname{End}(B\otimes C\otimes D)</span>.
+Then we can get an endomorphism on <span class="math inline">A\otimes
+B\otimes C\otimes D</span> by composing <span class="math inline">f</span> and <span class="math inline">g</span>,
+after extending them by identity morphisms: <span class="math inline">(\mathrm{id}_A\otimes
+g)\circ(f\otimes\mathrm{id}_C\otimes\mathrm{id}_D)</span>. But of course
+we could have also composed these in the other order, doing <span class="math inline">g</span> first and then <span class="math inline">f</span>, or we could have even picked different
+endomorphisms, or we could have had <em>more</em> endomorphisms on
+tensor products of <em>different</em> subsets of our objects.</p>
+<p>In the paper, I (timidly) make the argument that all of these choices
+can be bundled up into one sheaf on a simplicial space, and then that a
+single choice of all the data described above corresponds to a
+<em>section</em> of this sheaf. There are some caveats in this
+construction (for example, the method that I describe requires that we
+fix the number and type of endomorphisms beforehand), but I think that
+most of them could probably be done away with by somebody who actually
+knows something about these very restrictive sorts of string diagrams
+(e.g. if there are some “generating” shapes of these diagrams then you
+could maybe consider building a simplicial space for each one and then
+gluing them altogether with some limit-y process).</p>
+<figure>
+<img src="endomorphism-construction.png" alt="String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space.">
+<figcaption aria-hidden="true">String diagrams of a certain form
+correspond to sections of a specific sheaf on a simplicial
+space.</figcaption>
+</figure>
+<p>Really, the only reason that I actually include this construction at
+all (beyond wanting to make people in another field aware of these
+objects that I find so fascinating) is in the hope that somebody comes
+along and makes it much better! I think it could be extended to describe
+much more general string diagrams, with copies and deletes and whatnot,
+but this is not something that I have the knowledge to do on my own.</p>
+<p>This application is, I think, not particularly useful, and might just
+be an example of “if all you have is a hammer, then everything looks
+like a nail”, or even just a tautology (“of <em>course</em> sections of
+a sheaf on a simplicial space describe such things — they’re just
+objects in the totalisation of the cosimplicial simplicial mapping space
+from a cofibrant replacement of a point, and the simplicial nature is
+exactly describing the notion of linear order”, or something like this,
+says some hypothetical expert), but “hey ho”, thought I, “why not just
+write it down anyway — maybe somebody else will also like to think about
+such things from this point of view”.</p>
+<h1 id="whats-actually-in-the-paper">What’s actually in the paper</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>The paper is mostly a survey, but contains some proofs of what I’m
+calling “pre-folklore results” — results which I think would be folklore
+if I’d ever actually heard anybody else care about them!</p>
+<p>The first two sections (after the introduction) define three (or
+really four) notions of “simplicial sheaf” and describes how they relate
+to one another; the next section recalls a technical construction that
+shows how to understand this story in the specific setting of (locally)
+ringed spaces via a lovely construction<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of
+lax homotopy limits of model categories by Bergner; the final section is
+split into two, and contains a summary of the application of sheaves on
+simplicial spaces to coherent sheaves in complex geometry, and then this
+semi-conjectural construction relating sections of a sheaf on a
+simplicial space to string diagrams describing endomorphisms generated
+by endomorphisms.</p>
+<p>If anybody does actually read this and have any comments,
+corrections, criticisms, or complaints, then please do let me know — you
+can leave a comment here, or email me, or tweet at me, or whatever you
+like. Happy reading!</p>
+<figure>
+<img src="three-notions.png" alt="The three main notions of simplicial sheaf.">
+<figcaption aria-hidden="true">The three main notions of simplicial
+sheaf.</figcaption>
+</figure>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>H.I. Green. “Chern classes for coherent sheaves”. PhD
+Thesis. University of Warwick, (1980). <a href="https://pugwash.lib.warwick.ac.uk/record=b1751746~S1">pugwash.lib.warwick.ac.uk/record=b1751746~S1</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Domingo Toledo and Yue Lin L Tong. “Green’s theory of
+Chern classes and the Riemann-Roch formula”. In: <em>The Lefschetz
+Centennial Conference, Part 1</em>, Amer. Math. Soc. (1987). DOI:<a href="https://doi.org/10.1090/conm/058.1/860421">10.1090/conm/058.1/860421</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Julia E. Bergner. “Homotopy limits of model categories
+and more general homotopy theories”. (2012). arXiv:<a href="https://arxiv.org/abs/1010.0717v2">1010.0717v2</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

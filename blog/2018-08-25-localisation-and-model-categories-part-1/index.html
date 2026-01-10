@@ -1,0 +1,465 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Localisation and model categories // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Localisation and model categories (Part 1) | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2018-08-25-localisation-and-model-categories-part-1-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Localisation and model categories</h1>
+    <h2 id="post-part">Part 1</h2>
+    <h6 id="post-date">25th of August, 2018</h6>
+    <div class="tag-list">
+      <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/homotopy-theory" rel="tag">homotopy-theory</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <span class="active">Part 1</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#localisation-of-categories">Localisation of categories</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+<p>After some exceptionally enlightening discussions with Eduard Balzin
+recently, I’ve made some notes on the links between model categories,
+homotopy categories, and localisation, and how they all tie in together.
+There’s nothing particularly riveting or original here, but hopefully
+these notes can help somebody else who was lost in this mire of
+ideas.</p>
+<!-- more -->
+<p><em>Notational note:</em> we write <span class="math inline">\mathcal{C}(x,y)</span> instead of <span class="math inline">\mathrm{Hom}_\mathcal{C}(x,y)</span>.</p>
+<h1 id="localisation-of-categories">Localisation of categories</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Let <span class="math inline">(\mathcal{C},\mathcal{W})</span> be a
+pair, with <span class="math inline">\mathcal{C}</span> a category and
+<span class="math inline">\mathcal{W}</span> a wide subcategory (that
+is, a subcategory containing all the objects of <span class="math inline">\mathcal{C}</span>, or, equivalently, a set of
+morphisms in <span class="math inline">\mathcal{C}</span>). This data is
+known as a <em>relative category</em>, which is a weaker version of a
+category with weak equivalences, or a homotopical category, or other
+such notions.</p>
+<p>Often we want to <em>localise</em> <span class="math inline">\mathcal{C}</span> along <span class="math inline">\mathcal{W}</span>, i.e. ‘formally invert all
+morphisms in <span class="math inline">\mathcal{W}</span>’. A nice way
+of making this rigorous is by defining the localisation <span class="math inline">\mathcal{C}[\mathcal{W}^{-1}]</span> (also written
+<span class="math inline">\operatorname{Ho}(\mathcal{C})</span> or <span class="math inline">W^{-1}\mathcal{C}</span>)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> by
+a universal property:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p><span class="math display">\begin{array}{lcr}
+    \mathcal{C} &amp;
+\xrightarrow{\mathcal{W}\,\mapsto\,\text{iso}_\mathcal{D}} &amp;
+\mathcal{D}\\
+    \quad\searrow &amp; &amp; \nearrow_{\exists!}\\
+    &amp; \mathcal{C}[\mathcal{W}^{-1}] &amp;
+\end{array}</span></p>
+<p>That is, any category (along with a functor into it) such that all
+morphisms in <span class="math inline">\mathcal{W}</span> become
+isomorphisms <em>must</em> factor <em>uniquely</em> through <span class="math inline">\mathcal{C}[\mathcal{W}^{-1}]</span>.</p>
+<p>Since our definition is in terms of a universal property,
+<strong>if</strong> the localisation of a category exists then it is
+unique.</p>
+<h2 id="gabriel-zisman">Gabriel-Zisman</h2>
+<p>There is a reasonably concrete way of constructing the localisation
+that is called <em>Gabriel-Zisman</em> (or sometimes <em>zigzag</em>)
+<em>localisation</em>. It has a few issues, which we discuss below,
+after giving a definition. This is the localisation that most people
+will first study in the case of constructing the derived category of
+complexes, or some other such example, in a course on homological
+algebra or algebraic geometry.</p>
+<p>We define the objects of <span class="math inline">\mathcal{C}[\mathcal{W}^{-1}]</span> to be those of
+<span class="math inline">\mathcal{C}</span>, and the morphisms to be
+<em>zigzags</em> of morphisms: a morphism <span class="math inline">x\to
+y</span> is given by a directed graph whose vertices are objects of
+<span class="math inline">\mathcal{C}</span>, and whose edges are
+labelled by arrows in <span class="math inline">\operatorname{Arr}(\mathcal{C})\sqcup\operatorname{Arr}(\mathcal{W}^\text{op})</span>,
+<strong>modulo certain equivalence relations</strong>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
+That is, a morphism from <span class="math inline">x=a_0</span> to <span class="math inline">y=a_{n+1}</span> is given by a string of objects
+<span class="math inline">a_1,\ldots,a_n\in\mathcal{C}</span> with maps
+between them: either a map <span class="math inline">a_i\to
+a_{i+1}</span> in <span class="math inline">\mathcal{C}</span>, or a map
+<span class="math inline">a_i\leftarrow a_{i+1}</span> in <span class="math inline">\mathcal{W}</span>.</p>
+<p>Note that, if <span class="math inline">\mathcal{W}</span> contains
+all identity maps (for example), then we can always insert identity maps
+in our zigzags to ensure that they are always of the form <span class="math inline">f_1g_1\ldots f_ng_n</span> with <span class="math inline">f_i\in\operatorname{Arr}(\mathcal{C})</span> and
+<span class="math inline">g_i\in\operatorname{Arr}(\mathcal{W}^\text{op})</span>.</p>
+<p>As you can see, arbitrary morphisms in this category can be
+unreasonably large (in terms of the data describing them), and so we
+might hope that, by placing some conditions on <span class="math inline">\mathcal{W}</span>, we can globally bound the length
+of the zigzags. If fact, if <span class="math inline">\mathcal{W}</span>
+is a <em><a href="https://ncatlab.org/nlab/show/calculus+of+fractions#definition">calculus
+of fractions</a></em> then we can show that all the zigzags are actually
+just (co)roofs (depending on the handedness of the calculus of
+fractions):</p>
+<p><span class="math display">x\to a\xleftarrow{\small\mathcal{W}} y
+\quad\text{or}\quad x\xleftarrow{\small\mathcal{W}}a\to y.</span></p>
+<p>Note that we <strong>still</strong> have an equivalence relation: two
+morphisms <span class="math inline">x\xleftarrow{\mathcal{W}}a\to
+y</span> and <span class="math inline">x\xleftarrow{\mathcal{W}}b\to
+y</span> are equivalent if there exists some roof <span class="math inline">a\xleftarrow{\mathcal{W}}e\to b</span> such that
+‘everything commutes’.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>One potential problem with this construction (depending on how much
+you care about these things) is that the localisation might live only in
+some bigger universe, and so you have to start worrying about that.</p>
+<h2 id="dwyer-kan">Dwyer-Kan</h2>
+<p>Of course, just constructing a category is not usually enough these
+days, and we instead want to give it some higher structure. Enter
+<em>Dwyer-Kan</em> (or <em>simplicial</em>) localisation.</p>
+<p>This is a way of constructing an <span class="math inline">(\infty,1)</span>-category <span class="math inline">L_\mathcal{W}\mathcal{C}</span>, realised as a
+<em>simplicial category</em>. We talk more about simplicial categories
+later on, but first we quote Julia E. Bergner from <a href="https://arxiv.org/abs/math/0406507">“A model category structure on
+the category of simplicial categories”</a>:</p>
+<blockquote>
+<p><em>Note that the term “simplicial category” is potentially
+confusing. As we have already stated, by a simplicial category we mean a
+category enriched over simplicial sets.</em> <em>If <span class="math inline">a</span> and <span class="math inline">b</span> are
+objects in a simplicial category <span class="math inline">\mathcal{C}</span>, then we denote by <span class="math inline">\mathrm{Hom}_\mathcal{C}(a,b)</span> the function
+complex, or simplicial set of maps <span class="math inline">a\to
+b</span> in <span class="math inline">\mathcal{C}</span>.</em> <em>This
+notion is more restrictive than that of a simplicial object in the
+category of categories.</em> <em>Using our definition, a simplicial
+category is essentially a simplicial object in the category of
+categories which satisfies the additional condition that all the
+simplicial operators induce the identity map on the objects of the
+categories involved.</em></p>
+</blockquote>
+<p>First of all, note that we now require that <span class="math inline">(\mathcal{C},\mathcal{W})</span> be a <em>category
+with weak equivalences</em>: all isomorphisms are in <span class="math inline">\mathcal{W}</span>, and if any two of <span class="math inline">\{f,g,g\circ f\}</span> are in <span class="math inline">\mathcal{W}</span> then so too is the third. For
+example, any model category or homotopical category is automatically a
+category with weak equivalences.</p>
+<p>Now then, the definition by universal property is (modulo some
+technical <span class="math inline">\infty</span>-details) what you
+would expect: <span class="math inline">L_\mathcal{W}\mathcal{C}</span>
+is an <span class="math inline">(\infty,1)</span>-category such that
+<span class="math inline">\mathcal{C}</span> injects into <span class="math inline">L_\mathcal{W}\mathcal{C}</span> with every morphism
+in <span class="math inline">\mathcal{W}</span> becoming an equivalence
+(in the <span class="math inline">(\infty,1)</span>-sense) in <span class="math inline">L_\mathcal{W}\mathcal{C}</span>, and such that any
+other such <span class="math inline">(\infty,1)</span>-category factors
+‘uniquely’ through this.</p>
+<p>One such way of constructing this localisation is by <em>hammock
+localisation</em>. For any <span class="math inline">x,y\in\mathcal{C}</span> we define their <span class="math inline">\mathrm{Hom}</span> as the simplicial set <span class="math inline">L^\mathrm{H}(x,y)</span> given by</p>
+<p><span class="math display">L^\mathrm{H}(x,y) :=
+\coprod_{n\in\mathbb{N}}\mathcal{N}(\operatorname{H}_n(x,y))/\sim</span></p>
+<p>where <span class="math inline">\mathcal{N}</span> is the nerve
+(which sends a category to a simplicial set), and both the categories
+<span class="math inline">\operatorname{H}_n(x,y)</span> and the
+equivalence relation <span class="math inline">\sim</span> remain to be
+defined.</p>
+<p>For each <span class="math inline">n\in\mathbb{N}</span> the category
+<span class="math inline">\operatorname{H}_n(x,y)</span> has objects
+being length-<span class="math inline">n</span> zigzags, as in
+Gabriel-Zisman localisation<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, and the morphisms are
+‘hammocks’</p>
+<p><span class="math display">\begin{array}{ccccccccc}
+    &amp;&amp;a_1&amp;\to&amp;a_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;a_n&amp;\\
+    &amp;^{\small\mathcal{W}}\swarrow&amp;&amp;&amp;&amp;&amp;&amp;\searrow\\
+    x&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;\downarrow_{\small\mathcal{W}}&amp;\ldots&amp;\downarrow_{\small\mathcal{W}}&amp;&amp;y\\
+    &amp;_{\small\mathcal{W}}\nwarrow&amp;&amp;&amp;&amp;&amp;&amp;\nearrow\\
+    &amp;&amp;b_1&amp;\to&amp;b_2\xleftarrow{\small\mathcal{W}}&amp;\ldots&amp;b_n&amp;
+\end{array}</span></p>
+<p>i.e. commutative diagrams of zigzags, where the ‘linking’ arrows are
+all in <span class="math inline">\mathcal{W}</span>. The equivalence
+relations are the ‘natural’ ones: we can insert or remove identity maps,
+and compose any composable morphisms.</p>
+<h2 id="comparison">Comparison</h2>
+<p>Now then, we can ask how this ‘new’ localisation is related to the
+‘old’ one, and we can answer this question with the following lemma.</p>
+<p><strong>Lemma.</strong> <span class="math inline">\pi_0(L_\mathcal{W}\mathcal{C}(x,y))\simeq\mathcal{C}[\mathcal{W}^{-1}]</span>.</p>
+<p>For this post, that’s it, but my next post will talk about how we can
+extend these ideas to localise <em>quasi-categories</em>, and how the
+Bergner model structure on simplicial categories comes into the story.
+This will, in particular, let us formalise the fact that taking the
+homotopy category of a category (whenever this makes sense, e.g. for
+quasi-categories) is somehow equivalent to localising the category along
+weak equivalences. The lemma that we’ll look at is the following (where
+we’ve yet to define the right-hand side).</p>
+<p><strong>Lemma.</strong> <span class="math inline">\mathcal{C}[\mathcal{W}^{-1}]\simeq\mathrm{h}L\mathcal{C}</span>.</p>
+<h1 id="references">References</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<ul>
+<li>Julia E. Bergner, <a href="https://arxiv.org/abs/math/0406507"><em>A
+model category structure on the category of simplicial
+categories</em></a>, arXiv: <code>0406507v2</code> [math.AT].</li>
+<li>V. Hinich, <a href="https://arxiv.org/abs/1311.4128"><em>Dwyer-Kan
+localization revisited</em></a>, arXiv: <code>1311.4128</code>
+[math.QA].</li>
+<li>W.G. Dwyer and D.M. Kan. “<a href="https://www3.nd.edu/~wgd/Dvi/CalculatingSimplicialLocalizations.pdf">Calculating
+simplicial localizations</a>”. Journal of Pure and Applied Algebra,
+Volume 18 (1980), pp. 17-35.</li>
+<li>Pierre Gabriel, Michel Zisman, “<a href="http://web.math.rochester.edu/people/faculty/doug/otherpapers/GZ.pdf">Calculus
+of Fractions and Homotopy Theory</a>”, Springer-Verlag, 1967.</li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>There are so many things that ‘homotopy category’ or
+‘<span class="math inline">\operatorname{Ho}(\mathcal{C})</span>’ or
+‘<span class="math inline">\operatorname{h}(\mathcal{C})</span>’ can
+mean, so the context is always very important.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This diagram is horribly formatted. I am lost without
+<code>tikz-cd</code>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>These are just to ensure that composition and the
+identity morphism behave as expected. See <a href="https://ncatlab.org/nlab/show/localization#general_construction">the
+nLab</a> for details.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>I think of the diagram you want to show commutes as a
+tiny house of cards, two layers high.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>But, recalling what we said there, since <span class="math inline">\mathcal{W}</span> contains all isomorphisms then we
+can assume that our zigzags always alternate between arrows in <span class="math inline">\mathcal{C}</span> and arrows in <span class="math inline">\mathcal{W}^\text{op}</span>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

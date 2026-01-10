@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Categorical translation for mathematical language // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Categorical translation for mathematical language | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2019-11-07-categorical-translation-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Categorical translation for mathematical language</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">7th of November, 2019</h6>
+    <div class="tag-list">
+      <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/translation" rel="tag">translation</a>, <a href="/blog/software" rel="tag">software</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#implementation-before-theory">Implementation before theory</a></li>
+<li><a href="#the-dictionary-and-its-structure">The dictionary and its
+structure</a></li>
+<li><a href="#the-main-theoretical-input">The main theoretical input</a></li>
+<li><a href="#the-categorical-setting">The categorical setting</a></li>
+<li><a href="#the-underlying-type-theory">The underlying type theory</a></li>
+<li><a href="#languages-as-grothendieck-constructions">Languages as
+Grothendieck constructions</a></li>
+<li><a href="#sentences-as-trees">Sentences as trees</a></li>
+<li><a href="#compositional-translation">Compositional translation</a></li>
+<li><a href="#nonsensical-sentences">Nonsensical sentences</a></li>
+<li><a href="#whats-next">What’s next?</a></li>
+<li><a href="#assorted-references">Assorted references</a></li>
+</ol>
+<p>Being unable to ever properly finish any project that I start, but
+loving starting new projects, has made getting around to typing up this
+blog post quite an effort. Not only that, but it’s also unsatisfying to
+me how much I’ve failed to understand the categorical framework behind
+my translation project, so it’s mildly intimidating (to say the least)
+to present this stuff to the whole internet (although, in actuality,
+it’s really just to the one (mabye two) reader(s) of this blog), but I’m
+doing so in the hopes that somebody who actually knows about this sort
+of applied category theory can help me get somewhat closer to a solid
+understanding.</p>
+<!-- more -->
+<p>The idea for this project came to me whilst working on <a href="https://github.com/ryankeleti/ega">the translation of EGA</a> that
+Ryan Keleti and I have been chipping away at for the past however-many
+months. Wouldn’t it be nice, I thought to myself, if there were some
+universal language for doing mathematics? It’s true that most
+mathematicians can (and have to) read (and write) papers in English, but
+this doesn’t mean that it’s their preferred language. I mean, I can read
+and write papers in French<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, but trying to
+<em>understand</em> maths in French does create a whole new hurdle. Even
+for adept foreign-language speakers, there is some extra mental
+processing, and any hurdle, no matter how small, can be the straw that
+breaks the camel’s back when it comes to understanding mathematics — a
+rather difficult subject at times, to say the least.</p>
+<p>Something particularly nice about the EGA (and, I suppose,
+Grothendieck’s style in general) is the use of formulaic sentences.
+Often, good mathematical writing is good because it’s enjoyable to read,
+maybe somewhat whimsical at times, and not simply an arid recapitulation
+of a dictionary entry. But there is a (very important) place for more
+repetitive, dry language, especially when it comes to works that are, in
+some sense, actually trying to be like a dictionary (or maybe more of an
+encyclopedia). The <a href="https://stacks.math.columbia.edu/">Stacks
+project</a>, the EGA/SGA, <a href="https://kerodon.net/">Kerodon</a>,
+Hartshorne<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, and other such endeavours aim
+(amongst other things) to serve as a sort of definitive reference for a
+subject: not so much something to be read from cover to cover, but more
+something to refer to whenever you want to know something for sure.</p>
+<p>So then, I continued to say to myself, wouldn’t it be nice if we only
+had to translate EGA <em>once</em>, and have it available for everybody
+to read in their own language? Of course, if you stick it into some
+online translator then you might get something mildly cohesive, but
+<em>(a)</em> most translators struggle with mathematical terminology,
+and <em>(b)</em> the delicate aspects of the more complex parts of, for
+example, algebraic geometry, are not really something that you want to
+read in a translation that’s ‘probably mostly pretty accurate some of
+the time’. Going from one language to another, it becomes very easy to
+mix up the logical implications of, for example, the order of a
+sentence; there is a big difference between ‘<span class="math inline">A</span> if <span class="math inline">B</span>’ and
+‘if <span class="math inline">A</span>, <span class="math inline">B</span>’, but in a given language, the difference
+might be easy to miss for a non-native speaker.</p>
+<p>There is a nice thing about mathematical writing though: the
+necessity for preciseness is so important that there is usually very
+little ambiguity in any given sentence. This, I said to myself, in the
+last soliloquy of this introduction, might mean that writing translation
+software intended to translate <em>only</em> mathematics is actually
+somewhat <em>easier</em> than translating arbitrary phrases. Not only
+that, but when you restrict your mathematical writing even further to
+somewhat-boring sentences of the form ‘If <span class="math inline">A</span> then <span class="math inline">B</span>.
+Let <span class="math inline">x</span> be a <span class="math inline">T</span>. Then <span class="math inline">C</span>
+implies <span class="math inline">B</span>.’ then you work on each
+little logical sub-part and glue them all together to get the whole
+sentence. Compositionality!</p>
+<h1 id="implementation-before-theory">Implementation before theory</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>In case I hadn’t made it clear already, I am neither an applied
+category theorist nor a linguist (nor a polyglot, nor a programmer,
+actually), so my approach to this was to write some proof-of-concept
+software that at least half worked before trying to figure out any
+theoretical details. I wanted to come up with something that could be
+interacted with in a browser, so I made the absolutely terrible decision
+of coming up with a prototype in JavaScript. Don’t get me wrong,
+JavaScript has its uses, but so does a compost bin, and I wouldn’t want
+to use one of them to write a functorial framework.</p>
+<p><img src="old-demo.gif"></p>
+<p>If you want to play around with the demo, then you can do so <a href="http://thosgood.net/categorical-translation/">here</a>, although
+there are very few sentences that it can cope with translating, and it
+has more bugs than the <a href="https://www.entsoc.org/event-calendar/international-congress-entomology-2020">ICE2020</a>.
+If you want to see <em>something</em> that works, try typing in
+something like ‘Let $X$ be a scheme of finite type’ into the box
+labelled ‘EN’ (or the French equivalent into the box labelled ‘FR’,
+etc.) and seeing what happens. Of course, if you are the kind of person
+who treats having loud construction works outside your window as some
+sort of free concert, or enjoys going to landfill sites for the
+aesthetic pleasure, then you might be tasteless enough to want to look
+at the code making it tick (in the loosest sense of the word): nearly
+everything is in the page source, but you can have a look at the GitHub
+repo <a href="https://github.com/thosgood/categorical-translation">here</a>.</p>
+<p>One reason that this demo is so terrible is that it is actually doing
+three things, and two of them are things that have probably already been
+really well implemented, but I didn’t realise this until it was far too
+late. What it actually does is the following:</p>
+<ol type="1">
+<li>turn a sentence into some ‘abstract syntax tree’ (is that the right
+use of that phrase?);</li>
+<li>actually translate the sentence (in this tree form); then</li>
+<li>turn the tree back into a sentence in the target language.</li>
+</ol>
+<p>Steps 1 and 3 are much easier here than elsewhere because we’ve
+restricted ourselves to mathematical language, but still, they were far
+beyond my Javascript capabilities; Step 2, which is the actual bit that
+I was trying to figure out, is actually, computationally, pretty
+trivial.</p>
+<h1 id="the-dictionary-and-its-structure">The dictionary and its
+structure</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Even if the category theory behind all this turns out to be
+uninteresting, or just plain wrong, my hope is that the multilingual
+dictionary of mathematical terminology will be of at least some use, and
+I’m planning on making a way of contributing to it publicly available,
+so we can all have one nice resource, instead of having to go on
+Wikipedia and hope that some person has been nice enough to write an
+article on the object whose name you want to translate in the language
+that you want it translated into. At the moment the dictionary is very
+(<em>very</em>) small, but that’s mostly because I am at the time in my
+life where my thesis is going to be very unhappy if it goes any longer
+without being finished. You can see what little I currently have <a href="https://github.com/thosgood/maths-dictionary">here</a>.</p>
+<p>Before delving into the ‘theory’ (if I can dare to call it that), I
+thought it might be nice to have a look at what an entry from the
+dictionary looks like. It’s in <a href="https://en.wikipedia.org/wiki/JSON">JSON format</a>, which is
+quite a nice way of storing (and conveying) data consisting of key-value
+pairs and lists and such like. I’m thinking of eventually moving over to
+<a href="https://dhall-lang.org/">Dhall</a>, when I get around to
+writing the translation code in Idris or Haskell or something, but
+that’s not going to be for quite a while yet. So, anyway, here’s the
+entry for “group”:</p>
+<pre><code>"0677022e": {
+  "root": {
+    "DE": { "atom": "Gruppe", "gend": "feminin"   },
+    "EN": { "atom": "group"                       },
+    "ES": { "atom": "grupo" , "gend": "masculino" },
+    "FR": { "atom": "groupe", "gend": "masculin"  },
+    "IT": { "atom": "gruppo", "gend": "maschile"  },
+    "JA": { "atom": "群"                          },
+    "PT": { "atom": "grupo" , "gend": "masculino" },
+    "RU": { "atom": "группа", "gend": "же́нский"   },
+    "ZH": { "atom": "群"                          }
+  },
+  "adjs": {
+    "0ba202dd": {
+      "EN": { "atom": "reduced", "pstn": "before" },
+      "FR": { "atom": "réduit" , "pstn": "after"  }
+    },
+    "0b0e02cd": {
+      "EN": { "atom": "abelian", "pstn": "before" },
+      "FR": { "atom": "abélien", "pstn": "after"  }
+    },
+    "08b70280": {
+      "EN": { "atom": "finite", "pstn": "before" }
+    }
+  }
+}</code></pre>
+<p>As you can see, we have a bunch of data concerning the <em>root</em>,
+which is just my way of saying ‘the noun itself’. (For the moment I’m
+just going to talk about nouns. Sentences are a whole nother kettle of
+fish.) For each language, we just say what the translation is (what I’ve
+been calling the <em>atom</em>, thinking of sentences as compositional
+things made up of smaller things), and what the grammatical gender of
+the noun is.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Then we have a list of
+<em>adjectives</em> that can modify the noun. This is something which I
+think is quite neat, if not seemingly inefficient: to avoid any
+ambiguity, we have a separate entry for each time an adjective can
+modify a different noun. Why? I think it’s not that hard to believe
+that, although in English the word ‘normal’ can describe a group or a
+scheme, in some other language there might be a distinction, i.e. a
+different word used in each case. Because of this, it seems a lot nicer
+to make sure that adjectives really do ‘belong’ to the noun, in some
+sense. Not only that, but it also ensures that adjectives will always<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> agree (in gender, for example) with
+the noun that they modify, which means we have one less thing to worry
+about.</p>
+<p>The thing that I haven’t explained is the key for this entry: what is
+‘0677022e’? Well, as we’ll soon see, this whole system is built on the
+idea of some sort of underlying ‘base’ language, and most of this is
+vaguely like the idea that you can write notation instead of words, such
+as writing ‘∃’ instead of ‘there exists’, but there isn’t a notation for
+<em>every</em> single mathematical object. So, here, to come up with
+some language-independent way of writing the word ‘group’, we simply use
+a hash (Adler32) to generate a nonsensical but <em>unique</em><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> name for the entry.</p>
+<p>Let’s quickly look at what an entry for something that <em>isn’t</em>
+a noun looks like. Here is the entry for the ‘constructor’ (or phrase,
+really) ‘Let … be …’, as in, ‘Let <span class="math inline">X</span> be
+a scheme.’</p>
+<pre><code>"η": {
+  "fullType": "s",
+  "argsType": "v,n",
+  "EN": {
+    "atom": "let # be #",
+    "type": "s((v←)⊠(n←))",
+    "vari": "1,2"
+  },
+  "FR": {
+    "atom": "soit",
+    "type": "s((n←)(v←))",
+    "vari": "1,2"
+  }
+}</code></pre>
+<p>This now really is something that has been cobbled together to make
+some software ‘work’, but there is an underlying structure that I’ll
+describe in a bit. The entry here is called ‘η’ (for some reason that I
+can’t remember, but it’s possibly notation stolen from modal logic?)<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, it takes two arguments, of type
+‘variable’ and ‘noun’, and, when fully curried (do people say that? I
+mean, when it has been applied to the full number of variables), is of
+type ‘sentence’. The types of the entries for English and French might
+seem more familiar to those who’ve seen any pregroup grammar stuff
+before, but I wouldn’t assume that they mean what you think they mean,
+because I <em>don’t</em> really know my pregroup grammar stuff very
+well, so have probably butchered it somewhat. Sorry. Finally, there’s
+the ‘vari’ entry, which will help us to deal with the fact that
+different languages like to put words in different orders.</p>
+<h1 id="the-main-theoretical-input">The main theoretical input</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>To summarise my one ‘contribution’ to this translation problem, I can
+say the following: ‘words have meanings, and since, in mathematics,
+sentences are compositional, we can do translation by thinking of words
+as being fibres over some fundamental base meaning, and translate them
+by just ensuring that the image of the fibre is a fibre over the same
+basepoint.’ Of course, I now need to justify and explain this…</p>
+<h1 id="the-categorical-setting">The categorical setting</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>The paper that I’ve been reading to try to help me understand what I
+want to say is the brilliant <a href="https://arxiv.org/abs/1811.11041">Translating and Evolving:
+Towards a Model of Language Change in DisCoCat</a>, by Tai-Danae Bradley
+(Graduate Center, CUNY), Martha Lewis (ILLC, University of Amsterdam),
+Jade Master (Dept. Mathematics, UC Riverside), and Brad Theilman
+(Gentner Lab, UC San Diego). For the sake of not making this
+already-too-long post any longer, I will assume some familiarity with
+this paper.</p>
+<p>Before going any further though, I would like to point out that the
+flow of mathematical ideas has been entirely unidirectional: none of the
+above authors are to blame for any of the ramblings that now follow. And
+I really do mean ‘ramblings’, because, again, lest I never actually
+write this all up, I’m making things easier for myself by assuming that
+everybody reading this is imagining giant scare quotes around every
+single sentence that now follows. <em>If you are not yet doing so, then
+please now do so.</em></p>
+<h1 id="the-underlying-type-theory">The underlying type theory</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Let <span class="math inline">T</span> be some set of types, say
+<span class="math inline">T=\{n,v,s,...\}</span>, where <span class="math inline">n</span> stands for ‘noun’, ‘v’ for variable (think
+<span class="math inline">X</span>, <span class="math inline">f_{12}</span>, <span class="math inline">\widehat{\mathcal{C}}</span>, etc.), and <span class="math inline">s</span> for ‘sentence’.</p>
+<p>Already I’m avoiding the subtle issue of <em>subtypes</em>. For
+example, ‘variable’ is (in this framework) a subtype of ‘noun’, in that,
+if something is of type <span class="math inline">v</span> then it is
+inherently of type <span class="math inline">n</span> too.</p>
+<p>Let <span class="math inline">\mathcal{T}</span> be the free pregroup
+on <span class="math inline">T</span>, ‘freely promoted to a 2-rig’, by
+which I mean ‘throw in some notion of tensor product’, which we denote
+by <span class="math inline">\boxtimes</span>. (Whether or not this
+makes sense is something that I’m really not sure about. There are a lot
+of structures now floating around that have to all interact with each
+other. There are some nice comments about this on <a href="https://twitter.com/tjohnhos/status/1189228862745595904">this
+Twitter thread</a>.) The use of this product will be to deal with
+constructors (like the aforementioned ‘Let … be …’) that take arguments
+in a more complicated manner than just concatenation.</p>
+<p>Let <span class="math inline">\mathcal{B}</span>, the
+<em>base-language category</em>, be the category whose objects are pairs
+<span class="math inline">(a,t)</span>, where <span class="math inline">t\in\mathcal{T}</span> and <span class="math inline">a\in\mathsf{FormStr}</span>, which is just the
+<em>set</em> of ‘formal strings of characters’, and whose morphisms are
+given by those in <span class="math inline">\mathcal{T}</span>. The idea
+is that an object of <span class="math inline">\mathcal{B}</span> is
+some entry in the ‘base-language dictionary’, e.g. ‘0677022e’ or ‘η’,
+along with a type. The type of ‘η’, for example, would be written as
+<span class="math inline">s((n←)(v←))</span> (which we sort of decode
+into the ‘fullType: <span class="math inline">s</span>’ and ‘argsType:
+<span class="math inline">v</span>, <span class="math inline">n</span>’
+values in our JSON version above).</p>
+<p>What, then, should the category <span class="math inline">\mathsf{EN}</span> of English ‘words’ be? Keeping in
+mind how we want to translate things (by just making sure that we map an
+English ‘word’ to a French (for example) ‘word’ <em>that lies over the
+same base-language ‘word’</em>), we can come up with the idea that
+elements of <span class="math inline">\mathsf{EN}</span> should be
+triples <span class="math inline">(a,b,t)</span>, where <span class="math inline">a\in\mathsf{FormStr}</span>, <span class="math inline">b\in\mathcal{B}</span>, and <span class="math inline">t\in\mathcal{T}</span>. But we need some sort of
+coherence property: the type of some English ‘word’ should somehow
+respect the type of the base ‘word’ that it lies over! So we stipulate
+that <span class="math inline">t\in\mathcal{T}|_{\operatorname{type}(b)}</span>,
+where <span class="math inline">\mathcal{T}|_{\operatorname{type}(b)}</span> is the
+free pregroup generated by the elements of <span class="math inline">T</span> that appear in the expression of the type
+<span class="math inline">\operatorname{type}(b)</span> of <span class="math inline">b</span>, and where we limit the number of
+occurrences of each type to be exactly the same as in <span class="math inline">\operatorname{type}(b)</span>. For example, if we
+want to consider ‘Let … be …’ as an element of <span class="math inline">\mathsf{EN}</span>, then its type should have
+exactly one occurrence of <span class="math inline">s</span>, one of
+<span class="math inline">v</span>, and one of <span class="math inline">n</span>, because this is what the type of ‘η’ has.
+In our setting, its type should be <span class="math inline">s((v←)⊠(n←))</span>, which does indeed have the
+right number of occurrences of each type.</p>
+<p>So then, it almost looks like <span class="math inline">\mathsf{EN}</span> comes from some sort of
+Grothendieck construction!</p>
+<h1 id="languages-as-grothendieck-constructions">Languages as
+Grothendieck constructions</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>As we have just said, an object of <span class="math inline">\mathsf{EN}</span> is a triple <span class="math inline">(a,b,t)</span>, where <span class="math inline">a\in\mathsf{FormStr}</span>, <span class="math inline">b\in\mathcal{B}</span>, and <span class="math inline">t\in\mathcal{T}|_{\operatorname{type}(b)}</span>, so
+we might be able to realise <span class="math inline">\mathsf{EN}</span>
+as the Grothendieck construction of some functor <span class="math inline">\mathsf{FormStr}\times\mathcal{B}^{\mathrm{op}} \to
+\widehat{\mathcal{T}}</span>, where <span class="math inline">\widehat{\mathcal{T}}</span> is the category of all
+pregroups <span class="math inline">\mathcal{T}'</span> freely
+generated on some <span class="math inline">T'\subset T</span>. We
+know how this functor should act on objects: <span class="math inline">(a,b) \mapsto
+\mathcal{T}|_{\operatorname{type}(b)}</span>, but we need to think about
+how it acts on morphisms too.</p>
+<p>This is something that I’m really not too sure about, but something
+that might work is something like the following: a morphism <span class="math inline">(a,b)\leqslant(a',b')</span> consists of a
+reduction<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, and so the corresponding functor
+<span class="math inline">\mathcal{T}|_{\operatorname{type}(b')} \to
+\mathcal{T}|_{\operatorname{type}(b)}</span> is given by performing the
+corresponding expansion, i.e. if your reduction is e.g. <span class="math inline">n^r n\leqslant 1</span>, then we replace ‘some’
+<span class="math inline">1</span> in <span class="math inline">b</span>
+by <span class="math inline">n^r n</span>.</p>
+<p>I really don’t know about this bit, and maybe there isn’t actually a
+good functorial construction that makes this a Grothendieck
+construction, but I really hope there is, because that gives me some
+hope that there might actually be some truth hidden behind all this wild
+gesticulation.</p>
+<h1 id="sentences-as-trees">Sentences as trees</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Assuming we know how to deal with ‘words’ (which I continue to write
+in scare quotes because, by this I mean things of arbitrary type, not
+just of type <span class="math inline">n</span>), the next step is how
+to deal with sentences. This is something that, as I said above, I’m
+pretty sure has been well understood by people for a while now: we think
+of a sentence as a tree. Here’s an example (which I would normally have
+made look nice in TikZ, but I’ve already spent far too much time on this
+whole side project):</p>
+<figure>
+<img src="tree.jpg" title="A sample sentence tree." alt="A sample sentence tree">
+<figcaption aria-hidden="true">A sample sentence tree</figcaption>
+</figure>
+<p>But the whole point of our <span class="math inline">\boxtimes</span>
+structure on <span class="math inline">\mathcal{T}</span> is that we can
+write these trees as ‘linear concatenations’, i.e. as strings with
+arguments just being applied by concatenation on the right.</p>
+<p>Something that is very important, and very subtle, is the
+<em>order</em> of arguments. Normally this is something that comes up
+when you talk about adjectives, since most adjectives in English come
+<em>before</em> the noun that they modify, but most adjectives in, say,
+Spanish, come <em>after</em> the noun. This specific example of order
+doesn’t really bother us, because of the way that we treat adjectives as
+sort of ‘second-class objects’, in that they come bound to a noun, and
+can thus contain the information of order in their dictionary entry, but
+we still need to worry about order more generally. I actually can’t
+think of an example right now, but I’m sure that somebody out there can:
+in English, French, and Spanish (the only languages that I can claim any
+degree of knowledge in), the construction ‘Let … be …’, for example,
+takes its two arguments in the same order in all three. True, in French
+the type is s((n←)(v←)), whereas in English it’s s((v←)⊠(n←)), because
+in French we say ‘Soit <span class="math inline">R</span> un anneau’,
+and in English we say ‘Let <span class="math inline">R</span> be a
+ring’, but the ordered list of arguments is still <span class="math inline">(R,044a01b1)</span>, where ‘044a01b1’ is the hash of
+the word ‘ring’.</p>
+<p>There are two ways (<em>that I can think of</em>) of dealing with
+order:</p>
+<ol type="1">
+<li>keep track of how order changes for every specific entry between
+every possible pair of languages; or</li>
+<li>come up with some ‘canonical’ order for the base-language entry, and
+then either attach the data of a permutation to each language entry or
+use labelled occurrences of elements of <span class="math inline">\mathcal{T}</span>.</li>
+</ol>
+<p>The first sounds like an administrative nightmare; the second sounds
+‘evil’, but seems to work, and is thus the one for which I opted.</p>
+<h1 id="compositional-translation">Compositional translation</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>What <em>is</em> translation then? Well, on sentences, it’s given
+compositionally (I’m literally trying to wave my hands as I type that),
+and on sentences it’s given by the profunctor<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>
+<span class="math inline">\mathrm{Tr}_{\mathsf{L}_1,\mathsf{L}_2} \colon
+\mathsf{L}_1 \nrightarrow \mathsf{L}_2</span> defined by</p>
+<figure>
+<img src="profunctor.png" title="The translation profunctor." alt="The translation profunctor">
+<figcaption aria-hidden="true">The translation profunctor</figcaption>
+</figure>
+<p>That is, translating words is just given by finding a word in the
+target language with the same base. “But what if there are synonyms?” I
+hear you cry, to which I defensively respond “well just pick any of them
+then, because if they really are synonyms then it doesn’t matter which
+one we use”.</p>
+<h1 id="nonsensical-sentences">Nonsensical sentences</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Of course, at the moment we could conceivably translate entirely
+(mathematically) nonsensical sentences, like ‘If <span class="math inline">X</span> is the group and let <span class="math inline">z</span> be the complex triangle then <span class="math inline">P</span> does not hold false.’ An interesting
+question, I think, is whether or not we could introduce some sort of
+logic on our base language <span class="math inline">\mathcal{B}</span>
+to <em>prevent such sentences from even existing</em>. That is, think of
+our base language as some sort of proof assistant, like Lean or Coq or
+whatever, instead of just arbitrary symbols. This is perhaps a more
+interesting question, since we’re describing a sort of translation from
+proof assistant to natural language, and this is something that’s
+already been studied (see the references at the end of this post).</p>
+<h1 id="whats-next">What’s next?</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Wow. This ended up being much longer than I intended it on being, but
+I got a bit carried away. I think that, given some more time, I could
+actually build a genuinely working prototype of this translation
+software, and this makes me believe that there <em>has</em> to be some
+categorical underpinnings somewhere. I’ve tried to unearth them myself,
+and this post is a semi-lucid stream-of-consciousness record of my
+efforts, but that’s about all I can manage right now.</p>
+<p>I have no idea what my future holds in terms of postdocs (or lack
+thereof), but I hope to also get a chance to make the dictionary itself
+public and easy to contribute to.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>My dream implementation of this software would be that one could
+write something in the language of their choice, run some command on the
+source file, and be told how much of it can be translated into any given
+target language, and detail which sentences it can’t recognise. A bonus
+feature would be some sort of ‘did you mean …’ suggestion, or an
+autocomplete, to save people from having to go consult the dictionary to
+see how exactly they ‘should’ have phrased what they wanted to say to
+fit within the confines of the limited language.</p>
+<p>If anybody has read any of this and wants to talk to me about it,
+then please do! (Although if it’s just to point out all the flaws and
+mistakes, please at least also send a cute or funny picture of a bird or
+something, so that I don’t have to only read negative things. I am very
+sensitive.) You can talk to me on Twitter, by email, on Matrix, or any
+other way that you want. I love it when people actually want to talk to
+me.</p>
+<h1 id="assorted-references">Assorted references</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Here, in no particular order (really, no order at all), are some
+references that I’ve put on my reading list for this project.</p>
+<ul>
+<li><a href="https://kwarc.info/people/mkohlhase/papers/icms16-smglom.pdf" class="uri">https://kwarc.info/people/mkohlhase/papers/icms16-smglom.pdf</a></li>
+<li><a href="https://kwarc.info/people/mkohlhase/papers/synasc13.pdf" class="uri">https://kwarc.info/people/mkohlhase/papers/synasc13.pdf</a></li>
+<li><a href="http://www.logique.jussieu.fr/~alp/structure_vernacular.pdf" class="uri">http://www.logique.jussieu.fr/~alp/structure_vernacular.pdf</a></li>
+<li><a href="https://uniformal.github.io/doc/" class="uri">https://uniformal.github.io/doc/</a></li>
+<li><a href="http://mizar.org/JFM/" class="uri">http://mizar.org/JFM/</a></li>
+<li><a href="https://docs.weblate.org/en/latest/index.html" class="uri">https://docs.weblate.org/en/latest/index.html</a></li>
+<li><a href="https://jiggerwit.wordpress.com/2019/06/20/an-argument-for-controlled-natural-languages-in-mathematics/" class="uri">https://jiggerwit.wordpress.com/2019/06/20/an-argument-for-controlled-natural-languages-in-mathematics/</a></li>
+<li>
+<a href="https://en.wikipedia.org/wiki/Pregroup_grammar" class="uri">https://en.wikipedia.org/wiki/Pregroup_grammar</a>
+<ul>
+<li><a href="http://www.math.mcgill.ca/barr/lambek/pdffiles/Pregrammars.pdf">English</a></li>
+<li><a href="https://hal-lirmm.ccsd.cnrs.fr/file/index/docid/306504/filename/PrellerPrince-LinearParsing.pdf">French</a></li>
+</ul>
+</li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Well, almost passably so…<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This may be a contentious point, but I do think that
+Hartshorne’s Algebraic Geometry serves much better as a reference than
+as a book to learn from.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>For the moment, that’s all the information that I think
+we need about nouns, but that’s because I only really know European
+languages. I’m sure that when it comes to other language families there
+will be a whole host of other things to worry about.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>There are some weird edge cases that I know of (in
+French, for example) where the gender of a noun depends on its number,
+but if we deal with pluralisation of nouns in some sufficiently
+sensitive way, then we should still be able to not worry so much about
+adjectives. For example, the most blunt approach (that is somehow still
+quite sensitive) would be to record the pluralisation of each noun (and
+its adjectives) in the entry for the noun itself — it’s hard (for me
+right now) to imagine anything better, given how wild some languages can
+get when it comes to number.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Really hoping that there won’t be hash collision
+problems in the future, but that’s a worry for future Tim.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>I don’t know, and the nice thing is, it doesn’t really
+matter, because <em>we</em> never have to use these symbols!<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Not necessarily, but there is apparently some theorem by
+Lawvere that says you can restrict to just having the reduction axioms
+in your pregroup. It’s very likely that I’ve got this wrong, but let’s
+just go with it anyway, because, at this point, all formal reasoning is
+four sheets to the wind.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Thanks to John Baez for reminding me about indicator
+functions and profunctors and the like.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>I have no idea how to rewrite that sentence so that it
+doesn’t end with a preposition, but I’m going to leave it like that
+anyway because I like to show now and again that I am not a
+prescriptivist, but instead ‘punk rock’.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

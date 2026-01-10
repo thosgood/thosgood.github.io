@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Torsors and principal bundles // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Torsors and principal bundles | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2018-10-31-torsors-and-principal-bundles-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Torsors and principal bundles</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">31st of October, 2018</h6>
+    <div class="tag-list">
+      <a href="/blog/algebraic-topology" rel="tag">algebraic-topology</a>, <a href="/blog/quick-read" rel="tag">quick-read</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <p>In my thesis, switching between vector bundles and principal <span class="math inline">\mathrm{GL}_r</span>-bundles has often made certain
+problems easier (or harder) to understand. Due to my innate fear of all
+things differentially geometric, I often prefer working with principal
+bundles, and since reading Stephen Sontz’s (absolutely fantastic) book
+<a href="https://www.springer.com/fr/book/9783319147642">Principal
+Bundles — The Classical Case</a>, I’ve really grown quite fond of
+bundles, especially when you start talking about all the lovely <span class="math inline">\mathbb{B}G</span> and <span class="math inline">\mathbb{E}G</span> things therein<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+Point is, I haven’t posted anything in forever, and one of my
+supervisor’s strong pedagogical beliefs is that <em>‘affine vector
+spaces should be understood as <span class="math inline">G</span>-torsors, where <span class="math inline">G</span> is the underlying vector space acting via
+translation’</em>,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> which makes a nice short topic of
+discussion, whence this post.</p>
+<!-- more -->
+<p>We briefly<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> recall the definition of a principal
+<span class="math inline">G</span>-bundle over a space <span class="math inline">X</span>, where <span class="math inline">G</span>
+is some <em>topological</em> group.</p>
+<p><strong>Definition.</strong> A <em>principal <span class="math inline">G</span>-bundle over <span class="math inline">X</span></em> is a fibre bundle <span class="math inline">P\xrightarrow{\pi}X</span> with a continuous right
+action <span class="math inline">P\times G\to P</span> such that</p>
+<ol type="1">
+<li>
+<span class="math inline">G</span> acts <em>freely</em>;</li>
+<li>
+<span class="math inline">G</span> acts <em>transitively</em> on the
+orbits; and</li>
+<li>
+<span class="math inline">G</span> acts <em>properly</em>.</li>
+</ol>
+<p>It is maybe helpful to think of the following ‘dictionary’:</p>
+<ul>
+<li>free = injective (i.e. <span class="math inline">\exists x</span>
+s.t. <span class="math inline">gx=hx\implies g=h</span>)</li>
+<li>transitively = surjective (i.e. <span class="math inline">\forall
+x,y</span> <span class="math inline">\exists g</span> s.t. <span class="math inline">gx=y</span>)</li>
+<li>properly = something that you care about if you care about infinite
+sequences or Hausdorffness or things like that (i.e. the inverse image
+of <span class="math inline">G\times X\to X\times X</span> given by
+<span class="math inline">(g,x)\mapsto(gx,x)</span> preserves
+compactness)</li>
+</ul>
+<p>Thus the fibres <span class="math inline">F</span> are homeomorphic
+to <span class="math inline">G</span>, and also give the orbits, and the
+orbit space <span class="math inline">P/G</span> is homeomorphic to
+<span class="math inline">X</span>.</p>
+<p>Another definition is now useful.</p>
+<p><strong>Definition.</strong> A <em><span class="math inline">G</span>-torsor</em> is a space upon which <span class="math inline">G</span> acts <em>freely</em> and
+<em>transitively</em>.</p>
+<p><strong>Motto.</strong> <span class="math inline">G</span>-torsors
+<em>are</em> principal <span class="math inline">G</span>-bundles over a
+point <em>are</em> affine versions of <span class="math inline">G</span>.</p>
+<p>What do we mean by this last ‘equivalence’? Just that <span class="math inline">G</span>-torsors retain all the structure of <span class="math inline">G</span>, but don’t have some specified point that
+acts as the identity. Here are some nice examples.</p>
+<ul>
+<li>
+<span class="math inline">\mathrm{GL}_r</span>-torsors are vector
+spaces; <span class="math inline">\mathrm{GL}_r</span>-bundles are
+vector bundles.</li>
+<li>
+<span class="math inline">O(r)</span>-torsors are vector spaces with
+an inner product.</li>
+<li>
+<span class="math inline">\mathrm{GL}_r^+</span>-torsors are
+oriented vector spaces (where <span class="math inline">\mathrm{GL}_r^+</span> is the connected component of
+<span class="math inline">\mathrm{GL}_r</span> consisting of matrices
+with determinant strictly positive).</li>
+<li>
+<span class="math inline">\mathrm{SL}_r</span>-torsors are vector
+spaces with a specified isomorphism <span class="math inline">\det
+V\xrightarrow{\sim} k</span>, where <span class="math inline">\det
+V:=\wedge_{i=1}^r V</span>, and <span class="math inline">k</span> is
+our base field. Note that this is weaker than a choice of basis: it is a
+choice of an <span class="math inline">\mathrm{SL}_r</span>-conjugacy
+class of bases.</li>
+</ul>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>About which I recently had a nice little Twitter
+conversation with <a href="https://twitter.com/johncarlosbaez">John
+Baez</a>; his replies starting <a href="https://twitter.com/johncarlosbaez/status/1056999200125157376">here</a>
+are really quite nice. P.S. if you are not on Twitter then I would
+highly recommend it: the maths community is really friendly and
+interesting, and if you have a little question to ask then chances are
+you’ll get a bunch of nice responses. Also a chance to talk to people
+across the globe in a completely different time zone. Don’t get me
+wrong, Twitter has <em>many</em> problems, but you can ignore most of
+them and just follow the people that you like.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>An earlier version of this post incorrectly said ‘<span class="math inline">\mathrm{GL}_r</span>-torsor’; thanks to <a href="https://twitter.com/BarbaraFantechi/status/1057701336291123200">Barbara
+Fantechi for pointing this out!</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In particular we really sort of assume that the reader
+already knows what one of these is and are just writing this for some
+mild effort towards self-containedness. (Bonus question for anybody
+actually reading this: what is the word/phrase I can’t think of that
+means ‘self-containedness’ but is actually a real word/phrase?)<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

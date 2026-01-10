@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="Confusion about connections // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>Confusion about connections | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+</head>
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2020-05-29-connection-confusion-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">Confusion about connections</h1>
+    <h2 id="post-part"></h2>
+    <h6 id="post-date">29th of May, 2020</h6>
+    <div class="tag-list">
+      <a href="/blog/algebraic-geometry" rel="tag">algebraic-geometry</a>, <a href="/blog/differential-geometry" rel="tag">differential-geometry</a>, <a href="/blog/quick-read" rel="tag">quick-read</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <p>I am a big fan of Stephen Bruce Sontz’s book <a href="https://www.springer.com/gp/book/9783319147642"><em>Principal
+bundles: The Classical Case</em></a>, and cannot recommend it enough, as
+somebody who usually finds differential geometry (a) dull, and (b)
+incomprehensible. Anyway, there’s a lovely quote from this book about
+how confusing the terminology surrounding connections can be, so let’s
+try to clear some of that up today.</p>
+<!-- more -->
+<p>First, the quote in question.</p>
+<blockquote>
+<p><em>In my opinion, the word ‘’connection’’ is overused in this corner
+of differential geometry. I believe an Ehresmann connection is well
+named since it gives a way to connect tangent spaces (and other fibres
+of vector bundles) at distinct points. On the other hand, a Koszul
+connection <span class="math inline">\nabla_X</span> is a differential
+operator since it satisfies Leibniz’s rule. That makes it an object in
+analysis. But these names are set in stone even though no one knows
+where that stone is to be found.</em></p>
+</blockquote>
+<p>I’m in full agreement with this paragraph. There’s a nice little
+family tree you can draw that helps:</p>
+<p><img src="family-tree.png"></p>
+<p>But even when working with just Koszul connections (also known as
+<em>linear</em> connections), there can be some subtleties between
+different definitions that are not really always signposted very
+clearly. Let’s see if I can justify this and explain what I mean a bit
+better.</p>
+<p>Let <span class="math inline">E\xrightarrow{p}X</span> be a vector
+bundle, and write <span class="math inline">TE\xrightarrow{\pi}E</span>
+to mean the tangent bundle of <span class="math inline">E</span>. There
+are now three definitions of a connection on <span class="math inline">E</span> that we could give:</p>
+<ol type="1">
+<li>
+<span class="math inline">\nabla\colon TE\to p^*E</span> that
+splits;</li>
+<li>
+<span class="math inline">\nabla\colon TX\otimes_{\mathbb{R}}E\to
+E</span> that is <span class="math inline">\mathscr{C}_X^\infty</span>-linear in the <span class="math inline">TX</span> factor (so that <span class="math inline">\nabla_{fz}s=f\nabla_zs</span>) and such that <span class="math inline">\nabla_z(fs)=f\nabla_zs+(zf)s</span>;</li>
+<li>
+<span class="math inline">\nabla\colon
+E\to\Omega_X^1\otimes_{\mathscr{C}_X^\infty}E</span> such that <span class="math inline">\nabla(fs)=f\nabla s+\mathrm{d}f\otimes
+s</span>.</li>
+</ol>
+<p>But how can we make sense of having three seemingly different
+definitions? I mean, the second two are even about vector bundles
+really, but instead sheaves of <span class="math inline">\mathbb{R}_X</span>-vector spaces. Indeed, we would
+call <span class="math inline">\nabla</span> in the first definition a
+<em>strong morphism of vector bundles</em>, the <span class="math inline">\nabla</span> in second definition a
+<em>differential operator of order <span class="math inline">0</span> in
+<span class="math inline">TX</span> and order <span class="math inline">1</span> in <span class="math inline">E</span></em>,
+and the <span class="math inline">\nabla</span> in the third definition
+a <em>differential operator of order <span class="math inline">1</span></em>.</p>
+<p>Things become a little bit clearer when we look at the following nice
+hierarchy of notions of morphisms though:</p>
+<p><img src="hierarchy.jpg"></p>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>
