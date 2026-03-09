@@ -9,7 +9,7 @@ end
 
 gem 'builder'
 gem "webrick", "~> 1.8"
-gem "nokogiri", ">= 1.13.4"
+gem "nokogiri", "~> 1.18.10"
 gem "pandoc-ruby", "~> 2.1"
 gem "rack", ">= 2.2.11"
 gem "addressable", ">= 2.8.0"
