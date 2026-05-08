@@ -7,7 +7,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.8)
+    addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
     adsf (1.5.3)
       rack (>= 1.0.0, < 4.0.0)
@@ -82,11 +82,11 @@ GEM
       listen (~> 3.0)
       nanoc-cli (~> 4.11, >= 4.11.14)
       nanoc-core (~> 4.11, >= 4.11.14)
-    nokogiri (1.18.10-arm64-darwin)
+    nokogiri (1.19.3-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-darwin)
+    nokogiri (1.19.3-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.10-x86_64-linux-gnu)
+    nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
     pandoc-ruby (2.1.10)
     parallel (1.27.0)
@@ -96,9 +96,9 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
       reline (>= 0.6.0)
-    public_suffix (6.0.2)
+    public_suffix (7.0.5)
     racc (1.8.1)
-    rack (3.2.5)
+    rack (3.2.6)
     rackup (2.3.1)
       rack (>= 3)
     rb-fsevent (0.11.2)
@@ -135,7 +135,7 @@ DEPENDENCIES
   eventmachine!
   nanoc (~> 4.12)
   nanoc-live
-  nokogiri (~> 1.18.10)
+  nokogiri (~> 1.19.3)
   pandoc-ruby (~> 2.1)
   rack (>= 2.2.11)
   webrick (~> 1.8)
