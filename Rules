@@ -49,7 +49,7 @@ end
 # them through the layout "Default") and make a file /filename/index.html in the
 # output directory (so that we can go to e.g. website.com/projects instead of
 # having to go to website.com/projects.html)
-compile '/**/*.html' do
+compile '/*.html' do
   filter :erb
   layout '/Default.*'
   write item.identifier.without_ext + '/index.html'
