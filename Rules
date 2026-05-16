@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 
+# generate the RSS feed
+compile '/blog/feed.erb' do
+  filter :erb
+  write '/blog.xml'
+end
+
 
 # TAGS
 
@@ -80,12 +86,6 @@ end
 
 
 # OTHER
-
-# generate the RSS feed
-compile '/blog/feed.*' do
-  filter :erb
-  write '/blog.xml'
-end
 
 # any files in /content left untouched? just copy them over the the output
 # directory exactly as they are
