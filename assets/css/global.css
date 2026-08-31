@@ -44,7 +44,7 @@ body {
   border: 1px solid var(--primary);
 }
 #header_wrapper {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 div.content {
