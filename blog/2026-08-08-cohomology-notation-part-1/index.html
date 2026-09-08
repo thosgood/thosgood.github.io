@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="How does cohomology relate to cohomology? // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>How does cohomology relate to cohomology? (Part 1) | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+
+    <link rel="me" href="https://mathstodon.xyz/@thosgood">
+</head>
+
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2026-08-08-cohomology-notation-part-1-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">How does cohomology relate to cohomology?</h1>
+    <h2 id="post-part">Part 1</h2>
+    <h6 id="post-date">8th of August, 2026</h6>
+    <div class="tag-list">
+      <a href="/blog/maths" rel="tag">maths</a>, <a href="/blog/homological-algebra" rel="tag">homological-algebra</a>, <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/algebraic-geometry" rel="tag">algebraic-geometry</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <span class="active">Part 1</span>
+          
+        
+      </div>
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#internal-cohomology">Internal cohomology</a></li>
+<li><a href="#singular-cohomology">Singular cohomology</a></li>
+</ol>
+<p>There are so many things called cohomology and so many ways of
+writing the letter “H”. And I’m not even talking about the distinction
+between de Rham cohomology and singular cohomology and absolute Hodge
+cohomology: I really just mean the difference between writing <span class="math inline">\mathbb{H}^q(X;\Omega^p)</span> and <span class="math inline">\mathrm{H}^q(X,\Omega^p)</span>. Why does one use a
+semicolon and the other a comma, and one an <span class="math inline">\mathbb{H}</span> and the other an <span class="math inline">\mathrm{H}</span>? And what about that one time that
+I saw somebody write <span class="math inline">\mathscr{H}</span>?</p>
+<p>I remember being so confused by this during my PhD, and as a result
+all my notes from those days are a nightmare to read. Normally this
+wouldn’t matter at all, but for various reasons I’m interested in
+revisiting some of my old calculations. So here we go: I’m finally going
+to set my notation straight, and clear up as many of my past confusions
+as possible.</p>
+<!-- more -->
+<h1 id="internal-cohomology">Internal cohomology</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Firstly, let’s forget all about spaces and that geometry nonsense and
+talk about the one thing<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> that matters: cochain<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
+complexes. I really don’t have the energy today to write a good
+introduction to <em>why</em> we care about complexes nor <em>why</em>
+their cohomology is an interesting thing to study.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>
+Again, this blog post is really just about fixing some notation and
+stating some classical theorems. With that in mind, let’s speed
+through.</p>
+<p>We pick some nice<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> category <span class="math inline">\mathcal{A}</span> and we decide that, for some
+reason that I really won’t get into here, we care deeply about the
+category <span class="math inline">\mathsf{Ch}(\mathcal{A})</span> of
+<em>cochain complexes</em>. This is the category whose objects are of
+the form <span class="math display">
+    \ldots
+    \xrightarrow{d^{n-1}} C^n
+    \xrightarrow{d^n} C^{n+1}
+    \xrightarrow{d^{n+1}} \ldots
+</span> where <span class="math inline">(C^n\mid n\in\mathbb{Z})</span>
+are objects of <span class="math inline">\mathcal{A}</span> and <span class="math inline">(d^n\mid n\in\mathbb{Z})</span> are morphisms in
+<span class="math inline">\mathcal{A}</span> <em>such that</em> <span class="math inline">d^n\circ d^{n-1}=0</span>, i.e. any composite of
+these morphisms (called <em>differentials</em>) is zero; the morphisms
+between objects in this category are maybe not what you expect, because
+they’re simply the degree-wise morphisms, i.e. <span class="math inline">f^\bullet\colon C^\bullet\to D^\bullet</span> is
+just a collection of morphisms <span class="math inline">f^n\colon
+C^n\to D^n</span> in <span class="math inline">\mathcal{A}</span>
+satisfying absolutely no conditions whatsoever. However, we are often
+interested in those morphisms that respect the differentials, i.e. those
+such that everything commutes: <span class="math display">
+\begin{CD}
+    \ldots @&gt;{d^{n-1}}&gt;&gt; C^n @&gt;{d^n}&gt;&gt; C^{n+1}
+@&gt;{d^{n+1}}&gt;&gt; \ldots
+\\  @. @VV{f^{n-1}}V @VV{f^n}V @.
+\\  \ldots @&gt;{e^{n-1}}&gt;&gt; D^n @&gt;{e^n}&gt;&gt; D^{n+1}
+@&gt;{e^{n+1}}&gt;&gt; \ldots
+\end{CD}
+</span> We call such morphisms <strong>chain maps</strong>, and denote
+the category of cochain complexes with chain maps by <span class="math inline">\mathsf{Ch}^0(\mathcal{A})</span>.</p>
+<p>Now, here’s our first and most fundamental definition today, where
+we’re already going to be using slightly non-standard terminology.</p>
+<div class="itenv" title="Definition (Internal cohomology)">
+<p>Let <span class="math inline">C^\bullet\in\mathsf{Ch}^0(\mathcal{A})</span> be a
+cochain complex. Its <strong>internal cohomology</strong> is the <span class="math inline">\mathbb{Z}</span>-graded collection of abelian
+groups <span class="math inline">(\mathscr{H}^n(C^\bullet)\mid
+n\in\mathbb{Z})</span>, where we define <span class="math display">
+    \mathscr{H}^n(C^\bullet)
+    \coloneqq \frac{\operatorname{Ker}d^n}{\operatorname{Im}d^{n-1}}
+</span></p>
+</div>
+<p>Isn’t that neat!</p>
+<h1 id="singular-cohomology">Singular cohomology</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>With the definition of internal cohomology in our pockets, we can
+take it out and show it to our second-best friend: homotopy theory. In
+return, homotopy theory shows us <em>its</em> favourite fun little
+gadget: simplices.</p>
+<p>People<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> love to say that you can understand
+something by studying maps into it. So if we have some space <span class="math inline">X</span> then maybe we can understand it better by
+looking at how the topological simplices <span class="math inline">\Delta^n=\{(t_0,\ldots,t_n) \mid \sum_{i=0}^n
+t_i=1\}\subset\mathbb{R}^{n+1}</span> map into <span class="math inline">X</span>. This leads us to define the
+<strong>singular <span class="math inline">n</span>-simplices in <span class="math inline">X</span></strong> as the set <span class="math display">
+    \sigma_n(X)
+    \coloneqq \{\sigma\colon\Delta^n\to X\}
+</span> of continuous maps. We can think of this set <span class="math inline">\sigma_n(X)</span> as an abelian group by just
+letting ourselves write down purely formal (finite) sums of such maps,
+like <span class="math inline">2\sigma-5\tau</span>. When we do this we
+will refer to the elements not as singular <span class="math inline">n</span>-simplices but instead as <strong>singular
+<span class="math inline">n</span>-chains</strong>. Here’s where we come
+back to talking about complexes: these abelian groups actually sit
+together really nicely in a complex <span class="math display">
+    \ldots
+    \xleftarrow{\partial_{n-1}} \sigma_{n-1}(X)
+    \xleftarrow{\partial_n} \sigma_n(X)
+    \xleftarrow{\partial_{n+1}}
+    \ldots
+</span> where we define the <strong>boundary operator</strong> <span class="math inline">\partial_n</span> by taking an alternating sum of
+omitted indices. What do we mean by that? Well, the topological <span class="math inline">n</span>-simplex <span class="math inline">\Delta^n</span> has, in particular, <span class="math inline">(n+1)</span>-many vertices, say <span class="math inline">v_0,\ldots,v_n</span>. So every singular <span class="math inline">n</span>-simplex <span class="math inline">\sigma\colon\Delta^n\to X</span> describes, in
+particular, <span class="math inline">(n+1)</span>-many points <span class="math inline">\sigma(v_0),\ldots,\sigma(v_n)</span> in <span class="math inline">X</span>. It’s not true that we can entirely recover
+the whole image <span class="math inline">\sigma(\Delta^n)\subseteq
+X</span> from just these vertices, but they do describe a lot of
+information. For example, any subset <span class="math inline">S</span>
+of them uniquely defines a subspace of <span class="math inline">\sigma(\Delta^n)</span>, simply by looking at the
+image of the subspace of <span class="math inline">\Delta^n</span> given
+by the span (i.e. convex hull) of the vertices in that subset.
+Notationally, we like to write <span class="math inline">[\sigma_{s_1},\ldots,\sigma_{s_k}]</span> to mean
+this “restriction” of <span class="math inline">\sigma</span> to the
+subset of vertices <span class="math inline">S=\{s_1,\ldots,s_n\}</span>. This means that we can
+define <span class="math display">
+    \begin{aligned}
+        \partial_n\colon
+        \sigma_n(X)
+        &amp;\longrightarrow \sigma_{n-1}(X)
+    \\  \sigma
+        &amp;\longmapsto \sum_{i=0}^n (-1)^i
+[s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
+    \end{aligned}
+</span> If we want to really use some good notation that will save us a
+lot of time in the long run, we might write this “all the vertices apart
+from the <span class="math inline">i</span>-th one” using some standard
+notation: <span class="math display">
+    [s_1,\ldots,\widehat{s_i},\ldots,s_n]
+    \coloneqq [s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
+</span></p>
+<p>Ok, great, but what about the fact that our arrows are all going
+left-to-right? Our differentials <span class="math inline">\partial_n</span> are <em>decreasing</em> degree,
+not increasing it! Indeed, this isn’t a cochain complex at all, it’s a
+regular old <em>chain</em> complex. Well we can fix this using the
+standard trick of turning things into co-things in algebra: taking
+duals. Pick some <span class="math inline">\mathbb{Z}</span>-module<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> <span class="math inline">A</span>
+and define the <strong>singular <span class="math inline">n</span>-cochains in <span class="math inline">X</span></strong> as <span class="math display">
+    \sigma^n(X)
+    \coloneqq
+\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}\big(\sigma_n(X),A\big)
+</span> which is itself also a <span class="math inline">\mathbb{Z}</span>-module. Actually, even better than
+this: <span class="math inline">\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(-,A)</span>
+is a (contravariant) <em>functor</em> and thus gives us morphisms <span class="math display">
+    \operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(\partial_n(-),
+A)
+    \eqqcolon \partial^{n-1}
+    \colon \sigma^{n-1}(X)\to\sigma^n(X).
+</span> So we get the cochain complex that we’ve been hoping for all
+this time: <span class="math display">
+    \ldots
+    \xrightarrow{\partial^{n-1}} \sigma^n(X)
+    \xrightarrow{\partial^n} \sigma^{n+1}(X)
+    \xrightarrow{\partial^{n+1}} \ldots
+</span> whence, finally, another cohomology definition!</p>
+<div class="itenv" title="Definition (Singular cohomology)">
+<p>Let <span class="math inline">X</span> be a topological space. Its
+<strong>singular cohomology</strong> is the <span class="math inline">\mathbb{Z}</span>-graded collection of abelian
+groups <span class="math inline">(\mathrm{H}^n(X;A)\mid
+n\in\mathbb{Z})</span>, where we define the <span class="math inline">n</span>-th singular cohomology group as the <span class="math inline">n</span>-th internal cohomology group of the cochain
+complex of singular cochains: <span class="math display">
+    \mathrm{H}^n(X;A)
+    \coloneqq \mathscr{H}^n(\sigma^\bullet(X)).
+</span></p>
+</div>
+<p>There are three important things to note at this point:</p>
+<ol type="1">
+<li>
+<p><em>We never really specified anything about the abelian group
+<span class="math inline">A</span>.</em></p>
+<p>Indeed, we really should have called this <strong>singular cohomology
+with coefficients in <span class="math inline">A</span></strong>, but I
+was being lazy. From now on though I promise to follow what is the
+standard convention: <em>if we don’t specify <span class="math inline">A</span>, then we mean that <span class="math inline">A=\mathbb{Z}</span></em>. That is, “singular
+cohomology” means <span class="math inline">\mathrm{H}^n(X;\mathbb{Z})</span>.</p>
+</li>
+<li>
+<p><em>We’re using a fancy <span class="math inline">\mathscr{H}</span> for internal cohomology but
+basically nobody does this.</em></p>
+<p>Yeah, this is something that I went back and forth on for a while
+when writing this blog post. On one hand, I think it would be very nice
+and tidy and helpful to use different notation for different things, and
+indeed the very purpose of this post is to clear up what all the
+different notation means. On the other hand, it’s sometimes detrimental
+to “lie” about standard conventions, even if they do feel like a slight
+abuse of notation. In the end, I looked at the first draft of this post,
+where I wrote <span class="math display">\mathrm{H}^n(X;A)\coloneqq\mathrm{H}^n(\sigma^\bullet(X))</span>
+and decided that I really didn’t like it, and quite liked using <span class="math inline">\mathscr{H}</span> for internal cohomology. Anyway,
+I’m already being pedantic enough to insist on saying <em>internal</em>
+cohomology every single time, so I might as well use a different letter
+for it.</p>
+</li>
+<li>
+<p><em>I have said absolutely nothing about homology, or why we care
+about singular (co)homology, or what we learn at all about the
+topological space <span class="math inline">X</span> by doing this,
+or…</em></p>
+<p>Yeah I’ve skipped a lot. I just really didn’t want to fall into the
+trap of writing the homotopical equivalent of the Haskell community’s
+“monads are burritos” introductory post where I say “homology counts
+holes and cohomology counts obstructions”. Not because I think it’s bad
+to have such posts, but because there are only finitely many units of
+energy in my fingers and brain to write blog posts, and I really don’t
+wanna get any more sidetracked than I already am by writing this
+extended remark.</p>
+</li>
+</ol>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>I am joking of course, but “in every joke there is a
+kernel of truth”…<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Already I’m going to be making some choices about
+conventions that reveal my mathematical upbringing, but oh well.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Can’t use up all my blog post topics in one go!<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Maybe “nice” means “abelian”, but it’s really just that
+shorthand for saying “it’s whatever it needs to be in order for
+everything I say to make sense (and ideally even be true)”.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>By which I mean category theorists, of course.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>We start saying “<span class="math inline">\mathbb{Z}</span>-module” instead of abelian group
+now. The definition is entirely equivalent, but it points us in the
+right direction for talking about abelian categories of modules over a
+ring.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

@@ -2,13 +2,284 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.net/">
   <id>https://thosgood.net/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2026-08-01T00:00:00Z</updated>
+  <updated>2026-08-08T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.net/" type="text/html"/>
   <link rel="self" href="https://thosgood.net/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.net</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.net,2026-08-08:/blog/2026-08-08-cohomology-notation-part-1/</id>
+    <title type="html">How does cohomology relate to cohomology?</title>
+    <published>2026-08-08T00:00:00Z</published>
+    <updated>2026-08-08T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.net/blog/2026-08-08-cohomology-notation-part-1/" type="text/html"/>
+    <content type="html">&lt;p&gt;There are so many things called cohomology and so many ways of
+writing the letter “H”. And I’m not even talking about the distinction
+between de Rham cohomology and singular cohomology and absolute Hodge
+cohomology: I really just mean the difference between writing &lt;span
+class="math inline"&gt;\mathbb{H}^q(X;\Omega^p)&lt;/span&gt; and &lt;span
+class="math inline"&gt;\mathrm{H}^q(X,\Omega^p)&lt;/span&gt;. Why does one use a
+semicolon and the other a comma, and one an &lt;span
+class="math inline"&gt;\mathbb{H}&lt;/span&gt; and the other an &lt;span
+class="math inline"&gt;\mathrm{H}&lt;/span&gt;? And what about that one time that
+I saw somebody write &lt;span class="math inline"&gt;\mathscr{H}&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;I remember being so confused by this during my PhD, and as a result
+all my notes from those days are a nightmare to read. Normally this
+wouldn’t matter at all, but for various reasons I’m interested in
+revisiting some of my old calculations. So here we go: I’m finally going
+to set my notation straight, and clear up as many of my past confusions
+as possible.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id="internal-cohomology"&gt;Internal cohomology&lt;/h1&gt;
+&lt;p&gt;Firstly, let’s forget all about spaces and that geometry nonsense and
+talk about the one thing&lt;a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; that matters: cochain&lt;a href="#fn2"
+class="footnote-ref" id="fnref2" role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;
+complexes. I really don’t have the energy today to write a good
+introduction to &lt;em&gt;why&lt;/em&gt; we care about complexes nor &lt;em&gt;why&lt;/em&gt;
+their cohomology is an interesting thing to study.&lt;a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;
+Again, this blog post is really just about fixing some notation and
+stating some classical theorems. With that in mind, let’s speed
+through.&lt;/p&gt;
+&lt;p&gt;We pick some nice&lt;a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; category &lt;span
+class="math inline"&gt;\mathcal{A}&lt;/span&gt; and we decide that, for some
+reason that I really won’t get into here, we care deeply about the
+category &lt;span class="math inline"&gt;\mathsf{Ch}(\mathcal{A})&lt;/span&gt; of
+&lt;em&gt;cochain complexes&lt;/em&gt;. This is the category whose objects are of
+the form &lt;span class="math display"&gt;
+    \ldots
+    \xrightarrow{d^{n-1}} C^n
+    \xrightarrow{d^n} C^{n+1}
+    \xrightarrow{d^{n+1}} \ldots
+&lt;/span&gt; where &lt;span class="math inline"&gt;(C^n\mid n\in\mathbb{Z})&lt;/span&gt;
+are objects of &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; and &lt;span
+class="math inline"&gt;(d^n\mid n\in\mathbb{Z})&lt;/span&gt; are morphisms in
+&lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; &lt;em&gt;such that&lt;/em&gt; &lt;span
+class="math inline"&gt;d^n\circ d^{n-1}=0&lt;/span&gt;, i.e. any composite of
+these morphisms (called &lt;em&gt;differentials&lt;/em&gt;) is zero; the morphisms
+between objects in this category are maybe not what you expect, because
+they’re simply the degree-wise morphisms, i.e. &lt;span
+class="math inline"&gt;f^\bullet\colon C^\bullet\to D^\bullet&lt;/span&gt; is
+just a collection of morphisms &lt;span class="math inline"&gt;f^n\colon
+C^n\to D^n&lt;/span&gt; in &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt;
+satisfying absolutely no conditions whatsoever. However, we are often
+interested in those morphisms that respect the differentials, i.e. those
+such that everything commutes: &lt;span class="math display"&gt;
+\begin{CD}
+    \ldots @&amp;gt;{d^{n-1}}&amp;gt;&amp;gt; C^n @&amp;gt;{d^n}&amp;gt;&amp;gt; C^{n+1}
+@&amp;gt;{d^{n+1}}&amp;gt;&amp;gt; \ldots
+\\  @. @VV{f^{n-1}}V @VV{f^n}V @.
+\\  \ldots @&amp;gt;{e^{n-1}}&amp;gt;&amp;gt; D^n @&amp;gt;{e^n}&amp;gt;&amp;gt; D^{n+1}
+@&amp;gt;{e^{n+1}}&amp;gt;&amp;gt; \ldots
+\end{CD}
+&lt;/span&gt; We call such morphisms &lt;strong&gt;chain maps&lt;/strong&gt;, and denote
+the category of cochain complexes with chain maps by &lt;span
+class="math inline"&gt;\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Now, here’s our first and most fundamental definition today, where
+we’re already going to be using slightly non-standard terminology.&lt;/p&gt;
+&lt;div class="itenv" title="Definition (Internal cohomology)"&gt;
+&lt;p&gt;Let &lt;span
+class="math inline"&gt;C^\bullet\in\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt; be a
+cochain complex. Its &lt;strong&gt;internal cohomology&lt;/strong&gt; is the &lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-graded collection of abelian
+groups &lt;span class="math inline"&gt;(\mathscr{H}^n(C^\bullet)\mid
+n\in\mathbb{Z})&lt;/span&gt;, where we define &lt;span class="math display"&gt;
+    \mathscr{H}^n(C^\bullet)
+    \coloneqq \frac{\operatorname{Ker}d^n}{\operatorname{Im}d^{n-1}}
+&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Isn’t that neat!&lt;/p&gt;
+&lt;h1 id="singular-cohomology"&gt;Singular cohomology&lt;/h1&gt;
+&lt;p&gt;With the definition of internal cohomology in our pockets, we can
+take it out and show it to our second-best friend: homotopy theory. In
+return, homotopy theory shows us &lt;em&gt;its&lt;/em&gt; favourite fun little
+gadget: simplices.&lt;/p&gt;
+&lt;p&gt;People&lt;a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; love to say that you can understand
+something by studying maps into it. So if we have some space &lt;span
+class="math inline"&gt;X&lt;/span&gt; then maybe we can understand it better by
+looking at how the topological simplices &lt;span
+class="math inline"&gt;\Delta^n=\{(t_0,\ldots,t_n) \mid \sum_{i=0}^n
+t_i=1\}\subset\mathbb{R}^{n+1}&lt;/span&gt; map into &lt;span
+class="math inline"&gt;X&lt;/span&gt;. This leads us to define the
+&lt;strong&gt;singular &lt;span class="math inline"&gt;n&lt;/span&gt;-simplices in &lt;span
+class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as the set &lt;span
+class="math display"&gt;
+    \sigma_n(X)
+    \coloneqq \{\sigma\colon\Delta^n\to X\}
+&lt;/span&gt; of continuous maps. We can think of this set &lt;span
+class="math inline"&gt;\sigma_n(X)&lt;/span&gt; as an abelian group by just
+letting ourselves write down purely formal (finite) sums of such maps,
+like &lt;span class="math inline"&gt;2\sigma-5\tau&lt;/span&gt;. When we do this we
+will refer to the elements not as singular &lt;span
+class="math inline"&gt;n&lt;/span&gt;-simplices but instead as &lt;strong&gt;singular
+&lt;span class="math inline"&gt;n&lt;/span&gt;-chains&lt;/strong&gt;. Here’s where we come
+back to talking about complexes: these abelian groups actually sit
+together really nicely in a complex &lt;span class="math display"&gt;
+    \ldots
+    \xleftarrow{\partial_{n-1}} \sigma_{n-1}(X)
+    \xleftarrow{\partial_n} \sigma_n(X)
+    \xleftarrow{\partial_{n+1}}
+    \ldots
+&lt;/span&gt; where we define the &lt;strong&gt;boundary operator&lt;/strong&gt; &lt;span
+class="math inline"&gt;\partial_n&lt;/span&gt; by taking an alternating sum of
+omitted indices. What do we mean by that? Well, the topological &lt;span
+class="math inline"&gt;n&lt;/span&gt;-simplex &lt;span
+class="math inline"&gt;\Delta^n&lt;/span&gt; has, in particular, &lt;span
+class="math inline"&gt;(n+1)&lt;/span&gt;-many vertices, say &lt;span
+class="math inline"&gt;v_0,\ldots,v_n&lt;/span&gt;. So every singular &lt;span
+class="math inline"&gt;n&lt;/span&gt;-simplex &lt;span
+class="math inline"&gt;\sigma\colon\Delta^n\to X&lt;/span&gt; describes, in
+particular, &lt;span class="math inline"&gt;(n+1)&lt;/span&gt;-many points &lt;span
+class="math inline"&gt;\sigma(v_0),\ldots,\sigma(v_n)&lt;/span&gt; in &lt;span
+class="math inline"&gt;X&lt;/span&gt;. It’s not true that we can entirely recover
+the whole image &lt;span class="math inline"&gt;\sigma(\Delta^n)\subseteq
+X&lt;/span&gt; from just these vertices, but they do describe a lot of
+information. For example, any subset &lt;span class="math inline"&gt;S&lt;/span&gt;
+of them uniquely defines a subspace of &lt;span
+class="math inline"&gt;\sigma(\Delta^n)&lt;/span&gt;, simply by looking at the
+image of the subspace of &lt;span class="math inline"&gt;\Delta^n&lt;/span&gt; given
+by the span (i.e. convex hull) of the vertices in that subset.
+Notationally, we like to write &lt;span
+class="math inline"&gt;[\sigma_{s_1},\ldots,\sigma_{s_k}]&lt;/span&gt; to mean
+this “restriction” of &lt;span class="math inline"&gt;\sigma&lt;/span&gt; to the
+subset of vertices &lt;span
+class="math inline"&gt;S=\{s_1,\ldots,s_n\}&lt;/span&gt;. This means that we can
+define &lt;span class="math display"&gt;
+    \begin{aligned}
+        \partial_n\colon
+        \sigma_n(X)
+        &amp;amp;\longrightarrow \sigma_{n-1}(X)
+    \\  \sigma
+        &amp;amp;\longmapsto \sum_{i=0}^n (-1)^i
+[s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
+    \end{aligned}
+&lt;/span&gt; If we want to really use some good notation that will save us a
+lot of time in the long run, we might write this “all the vertices apart
+from the &lt;span class="math inline"&gt;i&lt;/span&gt;-th one” using some standard
+notation: &lt;span class="math display"&gt;
+    [s_1,\ldots,\widehat{s_i},\ldots,s_n]
+    \coloneqq [s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Ok, great, but what about the fact that our arrows are all going
+left-to-right? Our differentials &lt;span
+class="math inline"&gt;\partial_n&lt;/span&gt; are &lt;em&gt;decreasing&lt;/em&gt; degree,
+not increasing it! Indeed, this isn’t a cochain complex at all, it’s a
+regular old &lt;em&gt;chain&lt;/em&gt; complex. Well we can fix this using the
+standard trick of turning things into co-things in algebra: taking
+duals. Pick some &lt;span class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-module&lt;a
+href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; &lt;span class="math inline"&gt;A&lt;/span&gt;
+and define the &lt;strong&gt;singular &lt;span
+class="math inline"&gt;n&lt;/span&gt;-cochains in &lt;span
+class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as &lt;span class="math display"&gt;
+    \sigma^n(X)
+    \coloneqq
+\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}\big(\sigma_n(X),A\big)
+&lt;/span&gt; which is itself also a &lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-module. Actually, even better than
+this: &lt;span
+class="math inline"&gt;\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(-,A)&lt;/span&gt;
+is a (contravariant) &lt;em&gt;functor&lt;/em&gt; and thus gives us morphisms &lt;span
+class="math display"&gt;
+    \operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(\partial_n(-),
+A)
+    \eqqcolon \partial^{n-1}
+    \colon \sigma^{n-1}(X)\to\sigma^n(X).
+&lt;/span&gt; So we get the cochain complex that we’ve been hoping for all
+this time: &lt;span class="math display"&gt;
+    \ldots
+    \xrightarrow{\partial^{n-1}} \sigma^n(X)
+    \xrightarrow{\partial^n} \sigma^{n+1}(X)
+    \xrightarrow{\partial^{n+1}} \ldots
+&lt;/span&gt; whence, finally, another cohomology definition!&lt;/p&gt;
+&lt;div class="itenv" title="Definition (Singular cohomology)"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;X&lt;/span&gt; be a topological space. Its
+&lt;strong&gt;singular cohomology&lt;/strong&gt; is the &lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-graded collection of abelian
+groups &lt;span class="math inline"&gt;(\mathrm{H}^n(X;A)\mid
+n\in\mathbb{Z})&lt;/span&gt;, where we define the &lt;span
+class="math inline"&gt;n&lt;/span&gt;-th singular cohomology group as the &lt;span
+class="math inline"&gt;n&lt;/span&gt;-th internal cohomology group of the cochain
+complex of singular cochains: &lt;span class="math display"&gt;
+    \mathrm{H}^n(X;A)
+    \coloneqq \mathscr{H}^n(\sigma^\bullet(X)).
+&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;There are three important things to note at this point:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;We never really specified anything about the abelian group
+&lt;span class="math inline"&gt;A&lt;/span&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Indeed, we really should have called this &lt;strong&gt;singular cohomology
+with coefficients in &lt;span class="math inline"&gt;A&lt;/span&gt;&lt;/strong&gt;, but I
+was being lazy. From now on though I promise to follow what is the
+standard convention: &lt;em&gt;if we don’t specify &lt;span
+class="math inline"&gt;A&lt;/span&gt;, then we mean that &lt;span
+class="math inline"&gt;A=\mathbb{Z}&lt;/span&gt;&lt;/em&gt;. That is, “singular
+cohomology” means &lt;span
+class="math inline"&gt;\mathrm{H}^n(X;\mathbb{Z})&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;We’re using a fancy &lt;span
+class="math inline"&gt;\mathscr{H}&lt;/span&gt; for internal cohomology but
+basically nobody does this.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yeah, this is something that I went back and forth on for a while
+when writing this blog post. On one hand, I think it would be very nice
+and tidy and helpful to use different notation for different things, and
+indeed the very purpose of this post is to clear up what all the
+different notation means. On the other hand, it’s sometimes detrimental
+to “lie” about standard conventions, even if they do feel like a slight
+abuse of notation. In the end, I looked at the first draft of this post,
+where I wrote &lt;span
+class="math display"&gt;\mathrm{H}^n(X;A)\coloneqq\mathrm{H}^n(\sigma^\bullet(X))&lt;/span&gt;
+and decided that I really didn’t like it, and quite liked using &lt;span
+class="math inline"&gt;\mathscr{H}&lt;/span&gt; for internal cohomology. Anyway,
+I’m already being pedantic enough to insist on saying &lt;em&gt;internal&lt;/em&gt;
+cohomology every single time, so I might as well use a different letter
+for it.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;I have said absolutely nothing about homology, or why we care
+about singular (co)homology, or what we learn at all about the
+topological space &lt;span class="math inline"&gt;X&lt;/span&gt; by doing this,
+or…&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yeah I’ve skipped a lot. I just really didn’t want to fall into the
+trap of writing the homotopical equivalent of the Haskell community’s
+“monads are burritos” introductory post where I say “homology counts
+holes and cohomology counts obstructions”. Not because I think it’s bad
+to have such posts, but because there are only finitely many units of
+energy in my fingers and brain to write blog posts, and I really don’t
+wanna get any more sidetracked than I already am by writing this
+extended remark.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn1"&gt;&lt;p&gt;I am joking of course, but “in every joke there is a
+kernel of truth”…&lt;a href="#fnref1" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn2"&gt;&lt;p&gt;Already I’m going to be making some choices about
+conventions that reveal my mathematical upbringing, but oh well.&lt;a
+href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn3"&gt;&lt;p&gt;Can’t use up all my blog post topics in one go!&lt;a
+href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn4"&gt;&lt;p&gt;Maybe “nice” means “abelian”, but it’s really just that
+shorthand for saying “it’s whatever it needs to be in order for
+everything I say to make sense (and ideally even be true)”.&lt;a
+href="#fnref4" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn5"&gt;&lt;p&gt;By which I mean category theorists, of course.&lt;a
+href="#fnref5" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn6"&gt;&lt;p&gt;We start saying “&lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-module” instead of abelian group
+now. The definition is entirely equivalent, but it points us in the
+right direction for talking about abelian categories of modules over a
+ring.&lt;a href="#fnref6" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.net,2026-08-01:/blog/2026-08-01-emf-2026/</id>
     <title type="html">Electromagnetic Field 2026</title>
@@ -1420,26 +1691,6 @@ one such reader, and I wrote them down in &lt;em&gt;my&lt;/em&gt; PhD thesis.&lt
 href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.net,2022-04-08:/blog/2022-04-08-diagrammatic-equations-and-multiphysics/</id>
-    <title type="html">Diagrammatic equations and multiphysics</title>
-    <published>2022-04-08T00:00:00Z</published>
-    <updated>2022-04-08T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.net/blog/2022-04-08-diagrammatic-equations-and-multiphysics/" type="text/html"/>
-    <content type="html">&lt;p&gt;Just a very short post (you don’t even need to click “Continue
-reading” if you’re looking at this on my blog archive) — I finally
-managed to do some more maths (but only because I had some very hard
-working and very good coauthors), and I’ve written about it on the Topos
-blog as a two-part series: &lt;a
-href="https://topos.site/blog/2022/04/diagrammatic-equations-and-multiphysics-part-1/"&gt;Part
-1&lt;/a&gt; and &lt;a
-href="https://topos.site/blog/2022/04/diagrammatic-equations-and-multiphysics-part-2/"&gt;Part
-2&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I would love to write more, but after having written these I’m afraid
-I’m all blogged out for the minute, so ciao for now!&lt;/p&gt;
-&lt;!-- more --&gt;
 </content>
   </entry>
 </feed>
