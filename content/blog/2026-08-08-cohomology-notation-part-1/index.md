@@ -16,13 +16,13 @@ created_at: 2026-08-08
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\Hom}{\operatorname{Hom}}
 
-There are so many things called cohomology and so many ways of writing the letter "H". And I'm not even talking about the distinction between de Rham cohomology and singular cohomology and absolute Hodge cohomology, I really just mean the difference between writing something like $\mathbb{H}^q(X;\Omega^p)$ and $\mathrm{H}^q(X,\Omega^p)$. Why does one use a semicolon and the other a comma, and one an $\mathbb{H}$ and the other an $\mathrm{H}$? And what about that one time that I saw somebody write $\mathscr{H}$?
+There are so many things called cohomology and so many ways of writing the letter "H". And I'm not even talking about the distinction between de Rham cohomology and singular cohomology and absolute Hodge cohomology: I really just mean the difference between writing $\mathbb{H}^q(X;\Omega^p)$ and $\mathrm{H}^q(X,\Omega^p)$. Why does one use a semicolon and the other a comma, and one an $\mathbb{H}$ and the other an $\mathrm{H}$? And what about that one time that I saw somebody write $\mathscr{H}$?
 
 I remember being so confused by this during my PhD, and as a result all my notes from those days are a nightmare to read. Normally this wouldn't matter at all, but for various reasons I'm interested in revisiting some of my old calculations. So here we go: I'm finally going to set my notation straight, and clear up as many of my past confusions as possible.
 
 <!-- more -->
 
-## Internal cohomology
+# Internal cohomology
 
 Firstly, let's forget all about spaces and that geometry nonsense and talk about the one thing[^1] that matters: cochain[^2] complexes. I really don't have the energy today to write a good introduction to *why* we care about complexes nor *why* their cohomology is an interesting thing to study.[^3] Again, this blog post is really just about fixing some notation and stating some classical theorems. With that in mind, let's speed through.
 
@@ -57,7 +57,7 @@ $$
 
 Isn't that neat!
 
-## Singular cohomology
+# Singular cohomology
 
 With the definition of internal cohomology in our pockets, we can take it out and show it to our second-best friend: homotopy theory. In return, homotopy theory shows us *its* favourite fun little gadget: simplices.
 
