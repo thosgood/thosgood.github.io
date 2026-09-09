@@ -3,7 +3,7 @@ title: How does cohomology relate to cohomology?
 part: Part 1
 kind: article
 tags: ['maths', 'homological-algebra', 'category-theory', 'algebraic-topology']
-created_at: 2026-08-08
+created_at: 2026-09-08
 ---
 
 \newcommand{\dgCh}[1]{\mathsf{Ch}(#1)}
