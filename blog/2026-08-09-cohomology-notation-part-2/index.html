@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@tim_hosgood">
+    <meta name="twitter:title" content="How does cohomology relate to cohomology? // Tim Hosgood">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
+
+    
+    <title>How does cohomology relate to cohomology? (Part 2) | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <link rel="stylesheet" href="/assets/css/post.css">
+    <link rel="stylesheet" href="/assets/css/citations.css">
+
+    <link rel="stylesheet" href="/assets/css/tachyons.css">
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+
+    <link rel="me" href="https://mathstodon.xyz/@thosgood">
+</head>
+
+
+  <body>
+
+    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
+  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
+    <div class="w-third-ns tl pv0-ns pv3 center">
+      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
+    </div>
+    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
+      <ol class="fr-ns list ma0 pl0">
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/about/">About</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/work/">Work</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/translations/">Translations</a>
+        </li>
+        <li class="ph2-ns ph1 dib f4">
+          <a class="nav_link" href="/blog/">Blog</a>
+        </li>
+        <li class="pl2-ns pl1 dib f4">
+          <a class="nav_link" href="/cv/">CV</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+
+    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
+      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
+        
+  <div id="post-nav" class="w-100-ns w-100">
+    <!-- Display settings -->
+    
+    <!-- Navigation -->
+    <a href="/blog/#2026-08-09-cohomology-notation-part-2-" class="fr f5">← Return to all posts</a>
+  </div>
+  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
+    <h1 id="post-title">How does cohomology relate to cohomology?</h1>
+    <h2 id="post-part">Part 2</h2>
+    <h6 id="post-date">9th of August, 2026</h6>
+    <div class="tag-list">
+      <a href="/blog/maths" rel="tag">maths</a>, <a href="/blog/category-theory" rel="tag">category-theory</a>, <a href="/blog/algebraic-geometry" rel="tag">algebraic-geometry</a>, <a href="/blog/complex-geometry" rel="tag">complex-geometry</a>
+    </div>
+    <!-- Other posts in the same series -->
+    
+      <div id="post-other-parts" class="mt3">
+        <span class="i">See all parts of this series:</span>
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a href="/blog/2026-08-08-cohomology-notation-part-1/">Part 1</a>
+          
+        
+          
+            <span class="active">Part 2</span>
+          
+        
+      </div>
+    
+  </div>
+  <div id="post-content" class="w-90-ns ph3-ns w-100">
+    <!-- Content -->
+    <ol id="toc">
+<li><a href="#sheaves">Sheaves</a></li>
+<li><a href="#the-sheaf-of-holomorphic-functions">The sheaf of holomorphic
+functions</a></li>
+</ol>
+<p><em>Edit:</em> Having now completed the full draft of this post, it
+turns out that I’m actually just going to talk about sheaves and
+holomorphic functions for a really long time. Stay tuned for the
+<em>next</em> part in this series, where I actually will get back to
+talking about cohomology!</p>
+<!-- more -->
+<p>In the last post, we saw “the” definition of cohomology, namely that
+of <strong>internal cohomology</strong> of a cochain complex <span class="math inline">\mathscr{H}^n(C^\bullet)</span>. From this
+definition, we then described how to build <strong>singular
+cohomology</strong> of a topological space <span class="math inline">\mathrm{H}^n(X;A)</span>. Maybe it will be useful to
+start recording these definitions in a table that we can add to as we go
+along. Let’s see what we have so far:</p>
+<table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 60%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr>
+<th>Cohomology</th>
+<th>Input</th>
+<th>Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>internal</td>
+<td>cochain complex <span class="math inline">C^\bullet</span>
+</td>
+<td><span class="math inline">\mathscr{H}^n(C^\bullet)</span></td>
+</tr>
+<tr>
+<td>singular</td>
+<td>topological space <span class="math inline">X</span>; coefficient
+group <span class="math inline">A</span>
+</td>
+<td><span class="math inline">\mathrm{H}^n(X;A)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Ok, nice! Let’s add some more rows to this table, and let’s bring
+some sheaves into the story.</p>
+<h1 id="sheaves">Sheaves</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>Just as I didn’t really want to end up writing a blog post about
+<em>why</em> we care so much about cohomology, I don’t really want to
+write one right now about sheaves. So, for fun, I’m going to start by
+giving “the other” definition of sheaf, for a change of pace. Then after
+a few paragraphs of digression I’ll give the usual, slightly less
+whimsical, definition so that we can get back to talking about what
+really matters: which type of “H” we’re going to use for our next
+cohomology definition.</p>
+<p>What’s a sheaf? Well for the purposes of today’s post it’s just one
+space nicely indexed by another space: a <strong>sheaf</strong> <span class="math inline">Y</span> on a <strong>base space</strong> <span class="math inline">X</span> is a continuous map <span class="math inline">\pi\colon Y\to X</span> that we impose a condition
+on. What condition, I hear you ask? Well, we’re not going to ask that
+<span class="math inline">\pi</span> be a homeomorphism (i.e. a
+topological isomorphism) because then this wouldn’t be very interesting
+at all.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> But we can ask that <span class="math inline">\pi</span> be a <em>little</em> bit of a
+homeomorphism. For example, maybe it becomes a homeomorphism when we
+restrict it to some subset <span class="math inline">Y'\subset
+Y</span>. That could be interesting, right? We wouldn’t be saying that
+<span class="math inline">Y\cong X</span>, but merely that <span class="math inline">Y'\cong X'</span> for some subsets <span class="math inline">Y'\subset Y</span> and <span class="math inline">X'\subset X</span>. Oh, how about this: there
+are actually <em>lots</em> of subsets of <span class="math inline">Y</span> on which <span class="math inline">\pi</span> restricts to a homeomorphism. Hmm, how
+many? That’s a good question. Let’s just go the whole way and say that
+there’s one (not necessarily unique) for each point in <span class="math inline">Y</span>. And since we’re dealing with topological
+spaces, we should probably make sure that all of these subsets are
+actually open subsets.</p>
+<p>Great! We’ve rediscovered the definition of a <strong>local
+homeomorphism</strong>: for all <span class="math inline">y\in Y</span>
+there exists an open neighbourhood <span class="math inline">V_y\subseteq Y</span> such that <span class="math inline">U_y\coloneqq\pi(V_y)\subseteq X</span> is open and
+<span class="math inline">\pi|V_y</span> is a homeomorphism <span class="math inline">\pi|V_y\colon V_y\cong U_y</span>. We are then
+simply defining a sheaf on <span class="math inline">X</span> as a local
+homeomorphism into <span class="math inline">X</span>. Unfortunately,
+while this definition is very good for some purposes (e.g. defining
+pullback sheaves, or sheafification of a presheaf, or carrying out
+representability arguments) it is less convenient when we want to start
+throwing some algebra into the picture. So let’s switch back to the
+<em>other</em> definition of a sheaf.</p>
+<p>We know that a local homeomorphism <span class="math inline">\pi\colon Y\to X</span> lets us view <span class="math inline">Y</span> as being made up of open subsets of <span class="math inline">X</span>, at least locally. So since <span class="math inline">\pi</span> isn’t a “global” homeomorphism, it
+doesn’t really make sense for us to try to find a “global” inverse to
+<span class="math inline">\pi</span>, i.e. a map <span class="math inline">\sigma\colon X\to Y</span> such that <span class="math inline">\pi\circ\sigma=\mathrm{id}_X</span> and <span class="math inline">\sigma\circ\pi=\mathrm{id}_Y</span>. But we could do
+exactly the same trick, and try to find “local” inverses. However, we
+will run into a problem here: there is a real asymmetry in the
+definition of local homeomorphism, and a rather nasty subtlety to some
+natural terminology. In fact, this is a problem that we see all over the
+place once we start looking at formalisms of so-called <strong>weak
+equivalences</strong>, namely that there is a very big difference
+between two objects “being weakly equivalent” and there actually
+existing a weak equivalence between them. More concretely, it seems (and
+is!) natural to say that <span class="math inline">Y</span> <strong>is
+locally homeomorphic to</strong> <span class="math inline">X</span> if
+every point <span class="math inline">y\in Y</span> has an open
+neighbourhood <span class="math inline">V_y</span> such that there
+exists some homeomorphism <span class="math inline">\pi_{V_y}\colon
+V_y\cong U_y\coloneqq\operatorname{Im}(\pi_{V_y})\subseteq X</span>.
+This looks <em>very</em> similar to our definition of local
+homeomorphism but with one key difference: we did not specify some
+“global” map <span class="math inline">\pi\colon Y\to X</span> at the
+start. So yes, if we have some local homeomorphism <span class="math inline">\pi\colon Y\to X</span> then it is indeed true that
+<span class="math inline">Y</span> is locally homeomorphic to <span class="math inline">X</span>, but the converse does <em>not</em>
+necessarily hold, because we don’t know that we will be able to “glue
+together” all the <span class="math inline">\pi_{V_y}</span> to get a
+map <span class="math inline">\pi\colon Y\to X</span>. For example, if
+there exist some <span class="math inline">V_y</span> and <span class="math inline">V_{y'}</span> that overlap (<span class="math inline">V_{yy'}\coloneqq V_y\cap
+V_{y'}\neq\varnothing</span>) but <span class="math inline">\pi_{V_y}</span> and <span class="math inline">\pi_{V_{y'}}</span> are not equal on this
+overlap (<span class="math inline">\pi_{V_y}|V_{yy'}\neq\pi_{V_{y'}}|V_{y''}</span>)
+then how should we define our tentative map <span class="math inline">\pi</span> on this overlap? Should it be equal to
+<span class="math inline">\pi_{V_y}</span> or <span class="math inline">\pi_{V_{y'}}</span>? Even if we make a choice,
+we now need to prove that we won’t run into any problems anywhere else
+with any other intersections, and then we need to worry about
+intersections of <em>three</em> open subsets, and then of <em>four</em>,
+and… and so on. The classical example of such a case is any sufficiently
+non-trivial manifold, say the sphere <span class="math inline">S^2\subset\mathbb{R}^3</span>. By definition of
+being a manifold<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, it is indeed locally homeomorphic
+to <span class="math inline">\mathbb{R}^2</span>, but there cannot<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> exist any local homeomorphism <span class="math inline">S^2\to\mathbb{R}^2</span>. As a bonus annoying
+quirk, note that there <em>is</em> a local homeomorphism in the other
+direction: <span class="math inline">\mathbb{R}^2\to S^2</span>, given
+by the inverse<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> to <a href="https://en.wikipedia.org/wiki/Stereographic_projection">stereographic
+projection</a>.</p>
+<p>This asymmetry means (although I’m not suggesting that this is
+obvious) that we shouldn’t expect to be able to find even a local
+inverse to a local homeomorphism, but instead only a <em>one-sided</em>
+local inverse. That is, given a local homeomorphism <span class="math inline">\pi\colon Y\to X</span>, we might have <em>some</em>
+success in finding maps <span class="math inline">X\supseteq
+U\xrightarrow{\sigma_U} V\subseteq Y</span> such that <span class="math inline">\pi\circ\sigma_U=\mathrm{id}_U</span>. So let’s turn
+this into a definition! Given a sheaf <span class="math inline">\pi\colon Y\to X</span> and an open subset <span class="math inline">U\subset X</span>, we define the <strong>set of
+sections of <span class="math inline">Y\xrightarrow{\pi}X</span> over
+<span class="math inline">U</span></strong> as <span class="math display">
+    \Gamma(U,Y\xrightarrow{\pi}X)
+    \coloneqq \{\sigma\colon U\to Y \mid \pi\circ\sigma =
+\mathrm{id}_U\}.
+</span> But if we leave out any specific choice of open subset <span class="math inline">U</span> we obtain a (contravariant) functor from
+the category (really, the poset; morphisms are given by inclusion of one
+open subset into another, and this doesn’t involve any choice or extra
+data) <span class="math inline">\mathsf{Op}(X)</span> of open subsets of
+<span class="math inline">X</span> to the category of sets: <span class="math display">
+    \begin{aligned}
+        \Gamma\colon
+        \mathsf{Op}(X)^\mathrm{op}
+        &amp;\longrightarrow \mathsf{Set}
+    \\  U
+        &amp;\longmapsto \Gamma(U,Y\xrightarrow{\pi}X)
+    \end{aligned}
+</span> This functor is particularly nice, since it satisfies exactly
+the kinds of properties that we were worried about before when asking
+whether or not some <span class="math inline">\pi_{V_y}</span> and <span class="math inline">\pi_{V_{y'}}</span> would be able to “glue” on
+the overlap <span class="math inline">V_{yy'}</span>. We could
+phrase this property in terms of “unique gluing of compatible local
+sections”, or in terms of “descent”, but I’m actually going to opt for
+neither of those and just keep things a bit vague. That is, a sheaf
+(from this perspective) is a <strong>presheaf</strong> (i.e. a functor
+<span class="math inline">\mathsf{Op}(X)^\mathrm{op}\to\mathsf{Set}</span>)
+that comes from this construction of starting with a local
+homeomorphism.</p>
+<p>If this were a real introduction to sheaves, then I would talk about
+structure sheaves and, in particular, the sheaf of holomorphic
+functions, which is sort of “the original” sheaf. However, this is not a
+real introduction to sheaves! We’ll be content for now to just point out
+one generalisation: what if we replace the category <span class="math inline">\mathsf{Set}</span> by something with algebraic
+structure, e.g. the category of abelian groups? If we do this then we
+get <strong>sheaves of abelian groups</strong>, and these are the guys
+that we really care about in the story of sheaf cohomology. To give just
+one concrete example, I will actually talk a tiny bit about the sheaf of
+holomorphic functions. If you don’t really know about holomorphic
+functions, then don’t worry, because I’ll just say some things that I
+promise are true and you can just believe me and get on with your
+life.</p>
+<h1 id="the-sheaf-of-holomorphic-functions">The sheaf of holomorphic
+functions</h1>
+<a href="#post-title" class="toc-back">↟</a>
+<p>To pick one of the myriad of (eventually equivalent) definitions, a
+<strong>holomorphic</strong> function <span class="math inline">f\colon\mathbb{C}\to\mathbb{C}</span> is a function
+that is everywhere complex-differentiable. That is, for all <span class="math inline">z_0\in\mathbb{C}</span>, the limit <span class="math display">
+    f'(z_0)
+    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
+</span> exists, i.e. is a well-defined complex number, i.e. gives a
+well-defined function <span class="math inline">f'\colon\mathbb{C}\to\mathbb{C}</span>. The
+thing that makes holomorphic functions so wonderful (and also so tough
+to work with) is the sneaky little detail about what we mean when we say
+“the limit as <span class="math inline">z</span> approaches <span class="math inline">z_0</span>”. In real analysis, working in <span class="math inline">\mathbb{R}</span>, there are basically just two ways
+that one number <span class="math inline">x</span> can approach another
+number <span class="math inline">x_0</span>: either <span class="math inline">x</span> gets smaller and smaller until it is really
+close to <span class="math inline">x</span>, or it gets larger and
+larger until it is really close to <span class="math inline">x</span>.
+That is, <span class="math inline">\mathbb{R}</span> just looks like a
+line. But <span class="math inline">\mathbb{C}</span> is a whole plane,
+and this means that <span class="math inline">z</span> can approach
+<span class="math inline">z_0</span> in infinitely many interesting
+ways. For example, it could approach it along <em>any</em> straight line
+coming out of <span class="math inline">z_0</span>, or it could “spiral
+inwards”, or do something even more fancy. The fact that there are so
+many possible ways that <span class="math inline">z</span> could
+approach <span class="math inline">z_0</span> means that this limit
+existing is a really strict requirement. And, as is usual in
+mathematics, the more strictly defined an object is, the more well
+behaved it is. This leads to a bunch of other (again, equivalent)
+definitions of holomorphic functions, and we’ll focus on one in
+particular: a function <span class="math inline">f\colon\mathbb{C}\to\mathbb{C}</span> is holomorphic
+if and only if it is <strong>analytic</strong>, i.e. if an only if, for
+all <span class="math inline">z_0\in\mathbb{C}</span>, we can find a
+(nice) open neighbourhood <span class="math inline">U_{z_0}\subseteq\mathbb{C}</span> on which <span class="math inline">f</span> can be expressed as a power series centred
+at <span class="math inline">z_0</span>: <span class="math display">
+    f|U_{z_0}
+    = \sum_{i=0}^\infty a_i(z-z_0)^i
+    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.
+</span></p>
+<p>Lots of nice functions are holomorphic. For example, any polynomial
+is holomorphic: in short, a polynomial is just a finite power series, so
+it’s definitely analytic. All the trigonometric functions that we know
+and love (when suitably extended from being defined only on the real
+numbers to being defined on all the complex numbers) are holomorphic,
+and this is because the complex exponential function <span class="math inline">z\mapsto e^{\lambda z}</span> is holomorphic (for
+any fixed <span class="math inline">\lambda\in\mathbb{C}</span>).
+Holomorphic functions are also closed under all the sensible operations:
+point-wise addition, subtraction, product, and multiplication by a
+scalar (and thus form a ring, and a <span class="math inline">\mathbb{C}</span>-vector space; they form a <span class="math inline">\mathbb{C}</span>-algebra), and even division, as
+long as the denominator is never zero anywhere.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>
+They’re also closed under composition.</p>
+<p>However, holomorphic functions are very “rigid”. Here are two
+fundamental theorems that demonstrate what we mean when we say that:</p>
+<div class="itenv" title="Picard's little theorem">
+<p>If <span class="math inline">f\colon\mathbb{C}\to\mathbb{C}</span> is
+holomorphic, then exactly one of the following statements is true:</p>
+<ol type="1">
+<li><span class="math inline">\operatorname{Im}(f)=\mathbb{C}</span></li>
+<li>
+<span class="math inline">\operatorname{Im}(f)=\mathbb{C}\setminus\{z_0\}</span>
+for some specific <span class="math inline">z_0\in\mathbb{C}</span>
+</li>
+<li>
+<span class="math inline">f</span> is constant.</li>
+</ol>
+</div>
+<div class="itenv" title="Identity theorem">
+<p>Let <span class="math inline">U\subseteq\mathbb{C}</span> be a
+non-empty, connected, open subset. If <span class="math inline">f\colon
+U\to\mathbb{C}</span> is holomorphic, then the following statements are
+equivalent:</p>
+<ol type="1">
+<li>There exists some <span class="math inline">z_0\in\mathbb{C}</span>
+such that <span class="math inline">f^{(n)}(z_0)=0</span> for all <span class="math inline">n\in\mathbb{N}</span> (where <span class="math inline">f^{(n)}</span> denotes the <span class="math inline">n</span>-th derivative of <span class="math inline">f</span>).</li>
+<li>
+<span class="math inline">f</span> is the constant zero
+function.</li>
+</ol>
+</div>
+<p>So Picard’s little theorem tells us that non-constant holomorphic
+functions cannot have their image squished down into some small open
+subset; holomorphic functions really have to have complete free roam of
+the complex plane. In fact, it generalises another fundamental theorem,
+namely <strong>Liouville’s theorem</strong>, which says that any
+holomorphic function that is bounded must actually in fact be constant.
+Liouville’s theorem, although weaker, can actually be used to prove the
+fundamental theorem of algebra, as well as another “rigidity” property
+of holomorphic functions: if <span class="math inline">f</span> and
+<span class="math inline">g</span> are holomorphic functions, and <span class="math inline">g</span> dominates <span class="math inline">f</span> (i.e. <span class="math inline">|f(z)|\leqslant|g(z)|</span> for all <span class="math inline">z\in\mathbb{C}</span>), then actually <span class="math inline">g</span> and <span class="math inline">f</span> are
+basically just the same function (i.e. there exists some <span class="math inline">\lambda\in\mathbb{C}</span> such that <span class="math inline">f=\lambda g</span>).</p>
+<p>The identity theorem tells us, in particular, that if <span class="math inline">f</span> is constant on any connected open subset of
+<span class="math inline">\mathbb{C}</span>, <em>no matter how
+small</em>, then it is <em>globally</em> constant. This is
+<em>really</em> strong: the global behaviour of a holomorphic function
+can be entirely determined by its behaviour on the smallest possible
+open disc you could imagine! Indeed, it turns out that a holomorphic
+function (defined on any non-empty connected open set) is always
+entirely determined by its restriction to <em>any</em> non-empty open
+subset. This is very very not true for real analytic functions, or
+smooth functions, or anything familiar back in the world of real
+analysis!</p>
+<p>These facts have a lot of consequences for the geometry of
+holomorphic functions. We can define holomorphic functions of many
+variables, i.e. <span class="math inline">f\colon\mathbb{C}^n\to\mathbb{C}</span>, in a way
+that turns out to be surprisingly simple: Hartog’s theorem (or Osgood’s
+lemma, if we are a bit more careful) tells us that we just need to ask
+for <span class="math inline">f</span> to be holomorphic in each
+variable. This is surprising because the same is not true in real
+analysis! The famous<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> counter-example is <span class="math display">
+    f(x,y)
+    \coloneqq
+    \begin{cases}
+        \frac{xy}{x^2+y^2} &amp;\text{if }(x,y)\neq(0,0)
+    \\  0 &amp;\text{if }(x,y)=(0,0)
+    \end{cases}
+</span> which is differentiable in each variable, but it is not even
+continuous (at the origin) in both variables. Once we know how to talk
+about multivariable holomorphic functions, we can define <strong>complex
+manifolds</strong> as topological spaces that are locally biholomorphic
+to (i.e. there exists a holomorphic map with holomorphic inverse) open<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> subsets of <span class="math inline">\mathbb{C}^n</span>. And now, <em>finally</em>, we
+can get back to the sheaf of holomorphic functions.</p>
+<p>If we have any space <span class="math inline">X</span> whatsoever,
+then it’s usually interesting to study the functions <em>on</em> that
+space<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, by which we mean maps <span class="math inline">X\to A</span>, where <span class="math inline">A</span> is some suitably relevant space, and where
+the maps preserve whatever interesting structure is common between <span class="math inline">X</span> and <span class="math inline">A</span>. For
+example, in the setting of complex geometry, we are interested in
+holomorphic functions from a complex manifold into the complex plane:
+<span class="math inline">f\colon X\to\mathbb{C}</span>. But now these
+rigidity theorems come into play: if <span class="math inline">X</span>
+is a <em>compact</em> complex manifold (e.g. complex projective space,
+or the vanishing of some (homogeneous) polynomials inside complex
+projective space) then <em>every</em> holomorphic function <span class="math inline">X\to\mathbb{C}</span> is actually just a constant
+function. This is bad news! Looking at functions on a space no longer
+helps us recover that space up to isomorphism, and that will make a lot
+of category theorists very sad. This will also make a lot of
+real-analysis fans sad, because there are lots and lots of smooth
+functions from a smooth manifold into <span class="math inline">\mathbb{R}</span>.</p>
+<p>There are two (not mutually exclusive) ways of fixing this.</p>
+<p>One way is to say “well maybe we should just ignore the compact
+spaces”. This is actually a surprisingly good idea, in some senses. It
+is true that this means we will be leaving the world of projective
+geometry, and thus throwing away a gargantuan bunch of useful tools that
+Chow’s theorem (or, more generally, <a href="https://en.wikipedia.org/wiki/Algebraic_geometry_and_analytic_geometry">GAGA</a>)
+would have let us borrow from algebraic geometry. It’s also true that
+we’re throwing away a hypothesis that makes a <em>lot</em> of things a
+lot easier (finite things are so much simpler than infinite things!).
+But the reward is that we’ll start seeing a lot more <strong>Stein
+manifolds</strong> around, and these are my best friend. I actually have
+a draft blog post about Stein manifolds, non-algebraic complex geometry,
+and model categories, so I’m going to just leave this sentence as an
+unexplained cliffhanger for now.</p>
+<p>The other way is to go back to sheaf theory, and so this is the one
+that we’ll be exploring here. It turns out, by the above theorems about
+holomorphic functions, and a little bit more complex analysis, that if
+we have some complex manifold <span class="math inline">X</span>
+(compact or not, we now don’t care) then around any point <span class="math inline">x\in X</span> we can always find a small enough open
+neighbourhood <span class="math inline">U_x\subseteq X</span> such that
+the set of holomorphic functions on <span class="math inline">U_x</span>
+is actually the same as the set of holomorphic functions on <span class="math inline">\mathbb{C}^n</span>. That’s a lot of holomorphic
+functions! If anything, that’s maybe too many holomorphic functions…
+When we have some really small <span class="math inline">U_x</span> and
+another really small <span class="math inline">U_{x'}</span>, what
+are we going to do on <span class="math inline">U_{xx'}\coloneqq
+U_x\cap U_{x'}</span>? There are two ways we can think of <span class="math inline">\{f\colon U_{xx'}\to\mathbb{C}\}</span> as being
+equal to <span class="math inline">\{f\colon\mathbb{C}^n\to\mathbb{C}\}</span>, and
+what if they’re not the same? But hopefully some alarm bells are ringing
+in your head now: we’ve already had this exact same conversation! Let’s
+build a sheaf!</p>
+<p>Given a complex manifold <span class="math inline">X</span> we define
+its <strong>sheaf of holomorphic functions</strong> (usually denoted by
+<span class="math inline">\mathcal{O}_X</span>) to be given by <span class="math display">
+    \begin{aligned}
+        \mathcal{O}_X\colon
+        \mathsf{Op}(X)
+        &amp;\longrightarrow \mathsf{Ab}
+    \\  U
+        &amp;\longmapsto \{f\colon U\to\mathbb{C} \mid f\text{ is
+holomorphic}\}
+    \end{aligned}
+</span> Note that we could have chosen to land in the category of <span class="math inline">\mathbb{C}</span>-algebras, but we’ll just look at
+the underlying abelian group for now. But why is this thing a
+<em>sheaf</em>? That’s an argument we’re not going to get into today.
+I’m just going to say that it is, and you can either just believe me or
+(much better) think about it and do some internet/book searching. But
+the argument that needs to be given is, in essence, that if we have open
+subsets <span class="math inline">U,V\subseteq X</span> with a non-empty
+overlap <span class="math inline">U\cap V\neq\varnothing</span>, and
+holomorphic functions <span class="math inline">f_U\colon
+U\to\mathbb{C}</span> and <span class="math inline">f_V\colon
+V\to\mathbb{C}</span> <em>such that</em> <span class="math inline">f_U=f_V</span>, then there actually exists a unique
+holomorphic function <span class="math inline">f_{U\cup V}\colon U\cup
+V</span> on the <em>union</em> such that <span class="math inline">f_U=f_{U\cup V}|U</span> and <span class="math inline">f_V=f_{U\cup V}|V</span>. That is, if we have a
+collection of holomorphic functions on little open subsets, and whenever
+they could possibly be simultaneously defined they actually all agree,
+then we never really had a collection of little holomorphic functions
+but instead just secretly had one big holomorphic function the whole
+time, that recovers the little ones by restriction.</p>
+<p>This sheaf is amazing. In fact, it’s so amazing that there’s a whole
+theorem just saying how amazing this sheaf is, and it’s such an
+incredible theorem that I would argue that it deserves the name of
+“fundamental theorem of complex geometry”. In fact, because this is our
+blog post and we can do what we like, let’s just make that true now.</p>
+<div class="itenv" title="Fundamental theorem of complex geometry">
+<p>Let <span class="math inline">X</span> be a complex manifold. Then
+the sheaf <span class="math inline">\mathcal{O}_X</span> of holomorphic
+functions on <span class="math inline">X</span> is amazing.</p>
+</div>
+<p>If we wanted to use some more standard terminology here, we would
+substitute the word “amazing” for the word “coherent”, and our theorem
+then becomes the following:</p>
+<div class="itenv" title="Oka coherence">
+<p>Let <span class="math inline">X</span> be a complex manifold. Then
+the sheaf <span class="math inline">\mathcal{O}_X</span> of holomorphic
+functions on <span class="math inline">X</span> is a
+<strong>coherent</strong> sheaf.</p>
+</div>
+<p>The story of coherent sheaves, however, really will have to wait for
+another day.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>This isn’t really entirely true, but it’s true enough
+for now.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>As a short aside to this already far-too-long aside,
+this interplay between manifolds and local homeomorphisms can be made
+much more explicit, in that we can actually <em>define</em> manifolds in
+terms of sheaves. This is a beautiful story, but one for another time.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>“Proof left as an exercise to the reader.” In short,
+we’ll find that the best we can do is build a local homeomorphism from
+the sphere <em>minus a single point</em> into <span class="math inline">\mathbb{R}^2</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>That is, think of <span class="math inline">\mathbb{R}^2</span> as a big piece of graph paper on
+a table, and think of <span class="math inline">S^2</span> as a globe.
+Place the globe with the south pole touching the origin of the graph
+paper (thus with the north pole also directly above the origin). We
+define the desired map <span class="math inline">\psi\colon\mathbb{R}^2\to S^2</span> by setting
+<span class="math inline">\psi(x)</span> to be the (unique!) point on
+the globe where the straight line from <span class="math inline">x</span> to the north pole (which “leaves” the flat
+plane of the table, existing in the 3-dimensional ambient space)
+intersects the globe.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>The desire to talk about the absolutely beautiful story
+of meromorphic functions and Riemann–Roch theorems is very strong, but
+I’m trying <em>so hard</em> to get back to defining sheaf cohomology as
+quickly as I can.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>i.e. the one found <a href="https://en.wikipedia.org/wiki/Hartogs%27s_theorem_on_separate_holomorphicity">on
+Wikipedia</a>, and the one that I remember from my undergraduate
+degree.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>If I were being careful then I would say some more
+adjectives in front of the word “open”.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>I recently got to record <a href="https://topos.institute/work/lectures/2-torials/2026-07-28_hosgood_geometry/">some
+very fun videos with my friend Jason</a> on why we are interested in
+functions “on a space”.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+  <!-- giscus comments -->
+  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
+  </script>
+
+      </div>
+      
+      
+    </div>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html><!-- Render maths in comments --><html>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
+
+
+<!-- Display settings (dark mode, font, etc) -->
+
+<script type="text/javascript">
+  const body = document.getElementsByTagName('body')[0];
+  const content = document.getElementById('post-content');
+
+  function lightStyle() {
+    body.style.background = 'white';
+    body.style.color = 'black';
+    document.getElementById('post-nav').style.background = 'white'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#2a7ae2';
+    }
+  }
+  function darkStyle() {
+    body.style.background = '#333';
+    body.style.color = '#eee';
+    document.getElementById('post-nav').style.background = '#555'
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+      links[i].style.color = '#82b2ee';
+    }
+    var tables = document.getElementsByTagName('table');
+    for (var i = 0; i < tables.length; i++) {
+      tables[i].style.color = 'black';
+    }
+  }
+</script>
+</html>

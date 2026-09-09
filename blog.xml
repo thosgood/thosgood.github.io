@@ -2,13 +2,548 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.net/">
   <id>https://thosgood.net/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2026-08-08T00:00:00Z</updated>
+  <updated>2026-08-09T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.net/" type="text/html"/>
   <link rel="self" href="https://thosgood.net/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.net</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.net,2026-08-09:/blog/2026-08-09-cohomology-notation-part-2/</id>
+    <title type="html">How does cohomology relate to cohomology?</title>
+    <published>2026-08-09T00:00:00Z</published>
+    <updated>2026-08-09T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.net/blog/2026-08-09-cohomology-notation-part-2/" type="text/html"/>
+    <content type="html">&lt;p&gt;&lt;em&gt;Edit:&lt;/em&gt; Having now completed the full draft of this post, it
+turns out that I’m actually just going to talk about sheaves and
+holomorphic functions for a really long time. Stay tuned for the
+&lt;em&gt;next&lt;/em&gt; part in this series, where I actually will get back to
+talking about cohomology!&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;In the last post, we saw “the” definition of cohomology, namely that
+of &lt;strong&gt;internal cohomology&lt;/strong&gt; of a cochain complex &lt;span
+class="math inline"&gt;\mathscr{H}^n(C^\bullet)&lt;/span&gt;. From this
+definition, we then described how to build &lt;strong&gt;singular
+cohomology&lt;/strong&gt; of a topological space &lt;span
+class="math inline"&gt;\mathrm{H}^n(X;A)&lt;/span&gt;. Maybe it will be useful to
+start recording these definitions in a table that we can add to as we go
+along. Let’s see what we have so far:&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 13%" /&gt;
+&lt;col style="width: 60%" /&gt;
+&lt;col style="width: 26%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Cohomology&lt;/th&gt;
+&lt;th&gt;Input&lt;/th&gt;
+&lt;th&gt;Notation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;internal&lt;/td&gt;
+&lt;td&gt;cochain complex &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math inline"&gt;\mathscr{H}^n(C^\bullet)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;singular&lt;/td&gt;
+&lt;td&gt;topological space &lt;span class="math inline"&gt;X&lt;/span&gt;; coefficient
+group &lt;span class="math inline"&gt;A&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span class="math inline"&gt;\mathrm{H}^n(X;A)&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ok, nice! Let’s add some more rows to this table, and let’s bring
+some sheaves into the story.&lt;/p&gt;
+&lt;h1 id="sheaves"&gt;Sheaves&lt;/h1&gt;
+&lt;p&gt;Just as I didn’t really want to end up writing a blog post about
+&lt;em&gt;why&lt;/em&gt; we care so much about cohomology, I don’t really want to
+write one right now about sheaves. So, for fun, I’m going to start by
+giving “the other” definition of sheaf, for a change of pace. Then after
+a few paragraphs of digression I’ll give the usual, slightly less
+whimsical, definition so that we can get back to talking about what
+really matters: which type of “H” we’re going to use for our next
+cohomology definition.&lt;/p&gt;
+&lt;p&gt;What’s a sheaf? Well for the purposes of today’s post it’s just one
+space nicely indexed by another space: a &lt;strong&gt;sheaf&lt;/strong&gt; &lt;span
+class="math inline"&gt;Y&lt;/span&gt; on a &lt;strong&gt;base space&lt;/strong&gt; &lt;span
+class="math inline"&gt;X&lt;/span&gt; is a continuous map &lt;span
+class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; that we impose a condition
+on. What condition, I hear you ask? Well, we’re not going to ask that
+&lt;span class="math inline"&gt;\pi&lt;/span&gt; be a homeomorphism (i.e. a
+topological isomorphism) because then this wouldn’t be very interesting
+at all.&lt;a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; But we can ask that &lt;span
+class="math inline"&gt;\pi&lt;/span&gt; be a &lt;em&gt;little&lt;/em&gt; bit of a
+homeomorphism. For example, maybe it becomes a homeomorphism when we
+restrict it to some subset &lt;span class="math inline"&gt;Y&amp;#39;\subset
+Y&lt;/span&gt;. That could be interesting, right? We wouldn’t be saying that
+&lt;span class="math inline"&gt;Y\cong X&lt;/span&gt;, but merely that &lt;span
+class="math inline"&gt;Y&amp;#39;\cong X&amp;#39;&lt;/span&gt; for some subsets &lt;span
+class="math inline"&gt;Y&amp;#39;\subset Y&lt;/span&gt; and &lt;span
+class="math inline"&gt;X&amp;#39;\subset X&lt;/span&gt;. Oh, how about this: there
+are actually &lt;em&gt;lots&lt;/em&gt; of subsets of &lt;span
+class="math inline"&gt;Y&lt;/span&gt; on which &lt;span
+class="math inline"&gt;\pi&lt;/span&gt; restricts to a homeomorphism. Hmm, how
+many? That’s a good question. Let’s just go the whole way and say that
+there’s one (not necessarily unique) for each point in &lt;span
+class="math inline"&gt;Y&lt;/span&gt;. And since we’re dealing with topological
+spaces, we should probably make sure that all of these subsets are
+actually open subsets.&lt;/p&gt;
+&lt;p&gt;Great! We’ve rediscovered the definition of a &lt;strong&gt;local
+homeomorphism&lt;/strong&gt;: for all &lt;span class="math inline"&gt;y\in Y&lt;/span&gt;
+there exists an open neighbourhood &lt;span
+class="math inline"&gt;V_y\subseteq Y&lt;/span&gt; such that &lt;span
+class="math inline"&gt;U_y\coloneqq\pi(V_y)\subseteq X&lt;/span&gt; is open and
+&lt;span class="math inline"&gt;\pi|V_y&lt;/span&gt; is a homeomorphism &lt;span
+class="math inline"&gt;\pi|V_y\colon V_y\cong U_y&lt;/span&gt;. We are then
+simply defining a sheaf on &lt;span class="math inline"&gt;X&lt;/span&gt; as a local
+homeomorphism into &lt;span class="math inline"&gt;X&lt;/span&gt;. Unfortunately,
+while this definition is very good for some purposes (e.g. defining
+pullback sheaves, or sheafification of a presheaf, or carrying out
+representability arguments) it is less convenient when we want to start
+throwing some algebra into the picture. So let’s switch back to the
+&lt;em&gt;other&lt;/em&gt; definition of a sheaf.&lt;/p&gt;
+&lt;p&gt;We know that a local homeomorphism &lt;span
+class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; lets us view &lt;span
+class="math inline"&gt;Y&lt;/span&gt; as being made up of open subsets of &lt;span
+class="math inline"&gt;X&lt;/span&gt;, at least locally. So since &lt;span
+class="math inline"&gt;\pi&lt;/span&gt; isn’t a “global” homeomorphism, it
+doesn’t really make sense for us to try to find a “global” inverse to
+&lt;span class="math inline"&gt;\pi&lt;/span&gt;, i.e. a map &lt;span
+class="math inline"&gt;\sigma\colon X\to Y&lt;/span&gt; such that &lt;span
+class="math inline"&gt;\pi\circ\sigma=\mathrm{id}_X&lt;/span&gt; and &lt;span
+class="math inline"&gt;\sigma\circ\pi=\mathrm{id}_Y&lt;/span&gt;. But we could do
+exactly the same trick, and try to find “local” inverses. However, we
+will run into a problem here: there is a real asymmetry in the
+definition of local homeomorphism, and a rather nasty subtlety to some
+natural terminology. In fact, this is a problem that we see all over the
+place once we start looking at formalisms of so-called &lt;strong&gt;weak
+equivalences&lt;/strong&gt;, namely that there is a very big difference
+between two objects “being weakly equivalent” and there actually
+existing a weak equivalence between them. More concretely, it seems (and
+is!) natural to say that &lt;span class="math inline"&gt;Y&lt;/span&gt; &lt;strong&gt;is
+locally homeomorphic to&lt;/strong&gt; &lt;span class="math inline"&gt;X&lt;/span&gt; if
+every point &lt;span class="math inline"&gt;y\in Y&lt;/span&gt; has an open
+neighbourhood &lt;span class="math inline"&gt;V_y&lt;/span&gt; such that there
+exists some homeomorphism &lt;span class="math inline"&gt;\pi_{V_y}\colon
+V_y\cong U_y\coloneqq\operatorname{Im}(\pi_{V_y})\subseteq X&lt;/span&gt;.
+This looks &lt;em&gt;very&lt;/em&gt; similar to our definition of local
+homeomorphism but with one key difference: we did not specify some
+“global” map &lt;span class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; at the
+start. So yes, if we have some local homeomorphism &lt;span
+class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; then it is indeed true that
+&lt;span class="math inline"&gt;Y&lt;/span&gt; is locally homeomorphic to &lt;span
+class="math inline"&gt;X&lt;/span&gt;, but the converse does &lt;em&gt;not&lt;/em&gt;
+necessarily hold, because we don’t know that we will be able to “glue
+together” all the &lt;span class="math inline"&gt;\pi_{V_y}&lt;/span&gt; to get a
+map &lt;span class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt;. For example, if
+there exist some &lt;span class="math inline"&gt;V_y&lt;/span&gt; and &lt;span
+class="math inline"&gt;V_{y&amp;#39;}&lt;/span&gt; that overlap (&lt;span
+class="math inline"&gt;V_{yy&amp;#39;}\coloneqq V_y\cap
+V_{y&amp;#39;}\neq\varnothing&lt;/span&gt;) but &lt;span
+class="math inline"&gt;\pi_{V_y}&lt;/span&gt; and &lt;span
+class="math inline"&gt;\pi_{V_{y&amp;#39;}}&lt;/span&gt; are not equal on this
+overlap (&lt;span
+class="math inline"&gt;\pi_{V_y}|V_{yy&amp;#39;}\neq\pi_{V_{y&amp;#39;}}|V_{y&amp;#39;&amp;#39;}&lt;/span&gt;)
+then how should we define our tentative map &lt;span
+class="math inline"&gt;\pi&lt;/span&gt; on this overlap? Should it be equal to
+&lt;span class="math inline"&gt;\pi_{V_y}&lt;/span&gt; or &lt;span
+class="math inline"&gt;\pi_{V_{y&amp;#39;}}&lt;/span&gt;? Even if we make a choice,
+we now need to prove that we won’t run into any problems anywhere else
+with any other intersections, and then we need to worry about
+intersections of &lt;em&gt;three&lt;/em&gt; open subsets, and then of &lt;em&gt;four&lt;/em&gt;,
+and… and so on. The classical example of such a case is any sufficiently
+non-trivial manifold, say the sphere &lt;span
+class="math inline"&gt;S^2\subset\mathbb{R}^3&lt;/span&gt;. By definition of
+being a manifold&lt;a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, it is indeed locally homeomorphic
+to &lt;span class="math inline"&gt;\mathbb{R}^2&lt;/span&gt;, but there cannot&lt;a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; exist any local homeomorphism &lt;span
+class="math inline"&gt;S^2\to\mathbb{R}^2&lt;/span&gt;. As a bonus annoying
+quirk, note that there &lt;em&gt;is&lt;/em&gt; a local homeomorphism in the other
+direction: &lt;span class="math inline"&gt;\mathbb{R}^2\to S^2&lt;/span&gt;, given
+by the inverse&lt;a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt; to &lt;a
+href="https://en.wikipedia.org/wiki/Stereographic_projection"&gt;stereographic
+projection&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This asymmetry means (although I’m not suggesting that this is
+obvious) that we shouldn’t expect to be able to find even a local
+inverse to a local homeomorphism, but instead only a &lt;em&gt;one-sided&lt;/em&gt;
+local inverse. That is, given a local homeomorphism &lt;span
+class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt;, we might have &lt;em&gt;some&lt;/em&gt;
+success in finding maps &lt;span class="math inline"&gt;X\supseteq
+U\xrightarrow{\sigma_U} V\subseteq Y&lt;/span&gt; such that &lt;span
+class="math inline"&gt;\pi\circ\sigma_U=\mathrm{id}_U&lt;/span&gt;. So let’s turn
+this into a definition! Given a sheaf &lt;span
+class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; and an open subset &lt;span
+class="math inline"&gt;U\subset X&lt;/span&gt;, we define the &lt;strong&gt;set of
+sections of &lt;span class="math inline"&gt;Y\xrightarrow{\pi}X&lt;/span&gt; over
+&lt;span class="math inline"&gt;U&lt;/span&gt;&lt;/strong&gt; as &lt;span
+class="math display"&gt;
+    \Gamma(U,Y\xrightarrow{\pi}X)
+    \coloneqq \{\sigma\colon U\to Y \mid \pi\circ\sigma =
+\mathrm{id}_U\}.
+&lt;/span&gt; But if we leave out any specific choice of open subset &lt;span
+class="math inline"&gt;U&lt;/span&gt; we obtain a (contravariant) functor from
+the category (really, the poset; morphisms are given by inclusion of one
+open subset into another, and this doesn’t involve any choice or extra
+data) &lt;span class="math inline"&gt;\mathsf{Op}(X)&lt;/span&gt; of open subsets of
+&lt;span class="math inline"&gt;X&lt;/span&gt; to the category of sets: &lt;span
+class="math display"&gt;
+    \begin{aligned}
+        \Gamma\colon
+        \mathsf{Op}(X)^\mathrm{op}
+        &amp;amp;\longrightarrow \mathsf{Set}
+    \\  U
+        &amp;amp;\longmapsto \Gamma(U,Y\xrightarrow{\pi}X)
+    \end{aligned}
+&lt;/span&gt; This functor is particularly nice, since it satisfies exactly
+the kinds of properties that we were worried about before when asking
+whether or not some &lt;span class="math inline"&gt;\pi_{V_y}&lt;/span&gt; and &lt;span
+class="math inline"&gt;\pi_{V_{y&amp;#39;}}&lt;/span&gt; would be able to “glue” on
+the overlap &lt;span class="math inline"&gt;V_{yy&amp;#39;}&lt;/span&gt;. We could
+phrase this property in terms of “unique gluing of compatible local
+sections”, or in terms of “descent”, but I’m actually going to opt for
+neither of those and just keep things a bit vague. That is, a sheaf
+(from this perspective) is a &lt;strong&gt;presheaf&lt;/strong&gt; (i.e. a functor
+&lt;span
+class="math inline"&gt;\mathsf{Op}(X)^\mathrm{op}\to\mathsf{Set}&lt;/span&gt;)
+that comes from this construction of starting with a local
+homeomorphism.&lt;/p&gt;
+&lt;p&gt;If this were a real introduction to sheaves, then I would talk about
+structure sheaves and, in particular, the sheaf of holomorphic
+functions, which is sort of “the original” sheaf. However, this is not a
+real introduction to sheaves! We’ll be content for now to just point out
+one generalisation: what if we replace the category &lt;span
+class="math inline"&gt;\mathsf{Set}&lt;/span&gt; by something with algebraic
+structure, e.g. the category of abelian groups? If we do this then we
+get &lt;strong&gt;sheaves of abelian groups&lt;/strong&gt;, and these are the guys
+that we really care about in the story of sheaf cohomology. To give just
+one concrete example, I will actually talk a tiny bit about the sheaf of
+holomorphic functions. If you don’t really know about holomorphic
+functions, then don’t worry, because I’ll just say some things that I
+promise are true and you can just believe me and get on with your
+life.&lt;/p&gt;
+&lt;h1 id="the-sheaf-of-holomorphic-functions"&gt;The sheaf of holomorphic
+functions&lt;/h1&gt;
+&lt;p&gt;To pick one of the myriad of (eventually equivalent) definitions, a
+&lt;strong&gt;holomorphic&lt;/strong&gt; function &lt;span
+class="math inline"&gt;f\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt; is a function
+that is everywhere complex-differentiable. That is, for all &lt;span
+class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;, the limit &lt;span
+class="math display"&gt;
+    f&amp;#39;(z_0)
+    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
+&lt;/span&gt; exists, i.e. is a well-defined complex number, i.e. gives a
+well-defined function &lt;span
+class="math inline"&gt;f&amp;#39;\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt;. The
+thing that makes holomorphic functions so wonderful (and also so tough
+to work with) is the sneaky little detail about what we mean when we say
+“the limit as &lt;span class="math inline"&gt;z&lt;/span&gt; approaches &lt;span
+class="math inline"&gt;z_0&lt;/span&gt;”. In real analysis, working in &lt;span
+class="math inline"&gt;\mathbb{R}&lt;/span&gt;, there are basically just two ways
+that one number &lt;span class="math inline"&gt;x&lt;/span&gt; can approach another
+number &lt;span class="math inline"&gt;x_0&lt;/span&gt;: either &lt;span
+class="math inline"&gt;x&lt;/span&gt; gets smaller and smaller until it is really
+close to &lt;span class="math inline"&gt;x&lt;/span&gt;, or it gets larger and
+larger until it is really close to &lt;span class="math inline"&gt;x&lt;/span&gt;.
+That is, &lt;span class="math inline"&gt;\mathbb{R}&lt;/span&gt; just looks like a
+line. But &lt;span class="math inline"&gt;\mathbb{C}&lt;/span&gt; is a whole plane,
+and this means that &lt;span class="math inline"&gt;z&lt;/span&gt; can approach
+&lt;span class="math inline"&gt;z_0&lt;/span&gt; in infinitely many interesting
+ways. For example, it could approach it along &lt;em&gt;any&lt;/em&gt; straight line
+coming out of &lt;span class="math inline"&gt;z_0&lt;/span&gt;, or it could “spiral
+inwards”, or do something even more fancy. The fact that there are so
+many possible ways that &lt;span class="math inline"&gt;z&lt;/span&gt; could
+approach &lt;span class="math inline"&gt;z_0&lt;/span&gt; means that this limit
+existing is a really strict requirement. And, as is usual in
+mathematics, the more strictly defined an object is, the more well
+behaved it is. This leads to a bunch of other (again, equivalent)
+definitions of holomorphic functions, and we’ll focus on one in
+particular: a function &lt;span
+class="math inline"&gt;f\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt; is holomorphic
+if and only if it is &lt;strong&gt;analytic&lt;/strong&gt;, i.e. if an only if, for
+all &lt;span class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;, we can find a
+(nice) open neighbourhood &lt;span
+class="math inline"&gt;U_{z_0}\subseteq\mathbb{C}&lt;/span&gt; on which &lt;span
+class="math inline"&gt;f&lt;/span&gt; can be expressed as a power series centred
+at &lt;span class="math inline"&gt;z_0&lt;/span&gt;: &lt;span class="math display"&gt;
+    f|U_{z_0}
+    = \sum_{i=0}^\infty a_i(z-z_0)^i
+    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.
+&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Lots of nice functions are holomorphic. For example, any polynomial
+is holomorphic: in short, a polynomial is just a finite power series, so
+it’s definitely analytic. All the trigonometric functions that we know
+and love (when suitably extended from being defined only on the real
+numbers to being defined on all the complex numbers) are holomorphic,
+and this is because the complex exponential function &lt;span
+class="math inline"&gt;z\mapsto e^{\lambda z}&lt;/span&gt; is holomorphic (for
+any fixed &lt;span class="math inline"&gt;\lambda\in\mathbb{C}&lt;/span&gt;).
+Holomorphic functions are also closed under all the sensible operations:
+point-wise addition, subtraction, product, and multiplication by a
+scalar (and thus form a ring, and a &lt;span
+class="math inline"&gt;\mathbb{C}&lt;/span&gt;-vector space; they form a &lt;span
+class="math inline"&gt;\mathbb{C}&lt;/span&gt;-algebra), and even division, as
+long as the denominator is never zero anywhere.&lt;a href="#fn5"
+class="footnote-ref" id="fnref5" role="doc-noteref"&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt;
+They’re also closed under composition.&lt;/p&gt;
+&lt;p&gt;However, holomorphic functions are very “rigid”. Here are two
+fundamental theorems that demonstrate what we mean when we say that:&lt;/p&gt;
+&lt;div class="itenv" title="Picard&amp;#39;s little theorem"&gt;
+&lt;p&gt;If &lt;span class="math inline"&gt;f\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt; is
+holomorphic, then exactly one of the following statements is true:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;&lt;span
+class="math inline"&gt;\operatorname{Im}(f)=\mathbb{C}&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span
+class="math inline"&gt;\operatorname{Im}(f)=\mathbb{C}\setminus\{z_0\}&lt;/span&gt;
+for some specific &lt;span class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class="math inline"&gt;f&lt;/span&gt; is constant.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="itenv" title="Identity theorem"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;U\subseteq\mathbb{C}&lt;/span&gt; be a
+non-empty, connected, open subset. If &lt;span class="math inline"&gt;f\colon
+U\to\mathbb{C}&lt;/span&gt; is holomorphic, then the following statements are
+equivalent:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;There exists some &lt;span class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;
+such that &lt;span class="math inline"&gt;f^{(n)}(z_0)=0&lt;/span&gt; for all &lt;span
+class="math inline"&gt;n\in\mathbb{N}&lt;/span&gt; (where &lt;span
+class="math inline"&gt;f^{(n)}&lt;/span&gt; denotes the &lt;span
+class="math inline"&gt;n&lt;/span&gt;-th derivative of &lt;span
+class="math inline"&gt;f&lt;/span&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;span class="math inline"&gt;f&lt;/span&gt; is the constant zero
+function.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;p&gt;So Picard’s little theorem tells us that non-constant holomorphic
+functions cannot have their image squished down into some small open
+subset; holomorphic functions really have to have complete free roam of
+the complex plane. In fact, it generalises another fundamental theorem,
+namely &lt;strong&gt;Liouville’s theorem&lt;/strong&gt;, which says that any
+holomorphic function that is bounded must actually in fact be constant.
+Liouville’s theorem, although weaker, can actually be used to prove the
+fundamental theorem of algebra, as well as another “rigidity” property
+of holomorphic functions: if &lt;span class="math inline"&gt;f&lt;/span&gt; and
+&lt;span class="math inline"&gt;g&lt;/span&gt; are holomorphic functions, and &lt;span
+class="math inline"&gt;g&lt;/span&gt; dominates &lt;span
+class="math inline"&gt;f&lt;/span&gt; (i.e. &lt;span
+class="math inline"&gt;|f(z)|\leqslant|g(z)|&lt;/span&gt; for all &lt;span
+class="math inline"&gt;z\in\mathbb{C}&lt;/span&gt;), then actually &lt;span
+class="math inline"&gt;g&lt;/span&gt; and &lt;span class="math inline"&gt;f&lt;/span&gt; are
+basically just the same function (i.e. there exists some &lt;span
+class="math inline"&gt;\lambda\in\mathbb{C}&lt;/span&gt; such that &lt;span
+class="math inline"&gt;f=\lambda g&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;The identity theorem tells us, in particular, that if &lt;span
+class="math inline"&gt;f&lt;/span&gt; is constant on any connected open subset of
+&lt;span class="math inline"&gt;\mathbb{C}&lt;/span&gt;, &lt;em&gt;no matter how
+small&lt;/em&gt;, then it is &lt;em&gt;globally&lt;/em&gt; constant. This is
+&lt;em&gt;really&lt;/em&gt; strong: the global behaviour of a holomorphic function
+can be entirely determined by its behaviour on the smallest possible
+open disc you could imagine! Indeed, it turns out that a holomorphic
+function (defined on any non-empty connected open set) is always
+entirely determined by its restriction to &lt;em&gt;any&lt;/em&gt; non-empty open
+subset. This is very very not true for real analytic functions, or
+smooth functions, or anything familiar back in the world of real
+analysis!&lt;/p&gt;
+&lt;p&gt;These facts have a lot of consequences for the geometry of
+holomorphic functions. We can define holomorphic functions of many
+variables, i.e. &lt;span
+class="math inline"&gt;f\colon\mathbb{C}^n\to\mathbb{C}&lt;/span&gt;, in a way
+that turns out to be surprisingly simple: Hartog’s theorem (or Osgood’s
+lemma, if we are a bit more careful) tells us that we just need to ask
+for &lt;span class="math inline"&gt;f&lt;/span&gt; to be holomorphic in each
+variable. This is surprising because the same is not true in real
+analysis! The famous&lt;a href="#fn6" class="footnote-ref" id="fnref6"
+role="doc-noteref"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; counter-example is &lt;span
+class="math display"&gt;
+    f(x,y)
+    \coloneqq
+    \begin{cases}
+        \frac{xy}{x^2+y^2} &amp;amp;\text{if }(x,y)\neq(0,0)
+    \\  0 &amp;amp;\text{if }(x,y)=(0,0)
+    \end{cases}
+&lt;/span&gt; which is differentiable in each variable, but it is not even
+continuous (at the origin) in both variables. Once we know how to talk
+about multivariable holomorphic functions, we can define &lt;strong&gt;complex
+manifolds&lt;/strong&gt; as topological spaces that are locally biholomorphic
+to (i.e. there exists a holomorphic map with holomorphic inverse) open&lt;a
+href="#fn7" class="footnote-ref" id="fnref7"
+role="doc-noteref"&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; subsets of &lt;span
+class="math inline"&gt;\mathbb{C}^n&lt;/span&gt;. And now, &lt;em&gt;finally&lt;/em&gt;, we
+can get back to the sheaf of holomorphic functions.&lt;/p&gt;
+&lt;p&gt;If we have any space &lt;span class="math inline"&gt;X&lt;/span&gt; whatsoever,
+then it’s usually interesting to study the functions &lt;em&gt;on&lt;/em&gt; that
+space&lt;a href="#fn8" class="footnote-ref" id="fnref8"
+role="doc-noteref"&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt;, by which we mean maps &lt;span
+class="math inline"&gt;X\to A&lt;/span&gt;, where &lt;span
+class="math inline"&gt;A&lt;/span&gt; is some suitably relevant space, and where
+the maps preserve whatever interesting structure is common between &lt;span
+class="math inline"&gt;X&lt;/span&gt; and &lt;span class="math inline"&gt;A&lt;/span&gt;. For
+example, in the setting of complex geometry, we are interested in
+holomorphic functions from a complex manifold into the complex plane:
+&lt;span class="math inline"&gt;f\colon X\to\mathbb{C}&lt;/span&gt;. But now these
+rigidity theorems come into play: if &lt;span class="math inline"&gt;X&lt;/span&gt;
+is a &lt;em&gt;compact&lt;/em&gt; complex manifold (e.g. complex projective space,
+or the vanishing of some (homogeneous) polynomials inside complex
+projective space) then &lt;em&gt;every&lt;/em&gt; holomorphic function &lt;span
+class="math inline"&gt;X\to\mathbb{C}&lt;/span&gt; is actually just a constant
+function. This is bad news! Looking at functions on a space no longer
+helps us recover that space up to isomorphism, and that will make a lot
+of category theorists very sad. This will also make a lot of
+real-analysis fans sad, because there are lots and lots of smooth
+functions from a smooth manifold into &lt;span
+class="math inline"&gt;\mathbb{R}&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;There are two (not mutually exclusive) ways of fixing this.&lt;/p&gt;
+&lt;p&gt;One way is to say “well maybe we should just ignore the compact
+spaces”. This is actually a surprisingly good idea, in some senses. It
+is true that this means we will be leaving the world of projective
+geometry, and thus throwing away a gargantuan bunch of useful tools that
+Chow’s theorem (or, more generally, &lt;a
+href="https://en.wikipedia.org/wiki/Algebraic_geometry_and_analytic_geometry"&gt;GAGA&lt;/a&gt;)
+would have let us borrow from algebraic geometry. It’s also true that
+we’re throwing away a hypothesis that makes a &lt;em&gt;lot&lt;/em&gt; of things a
+lot easier (finite things are so much simpler than infinite things!).
+But the reward is that we’ll start seeing a lot more &lt;strong&gt;Stein
+manifolds&lt;/strong&gt; around, and these are my best friend. I actually have
+a draft blog post about Stein manifolds, non-algebraic complex geometry,
+and model categories, so I’m going to just leave this sentence as an
+unexplained cliffhanger for now.&lt;/p&gt;
+&lt;p&gt;The other way is to go back to sheaf theory, and so this is the one
+that we’ll be exploring here. It turns out, by the above theorems about
+holomorphic functions, and a little bit more complex analysis, that if
+we have some complex manifold &lt;span class="math inline"&gt;X&lt;/span&gt;
+(compact or not, we now don’t care) then around any point &lt;span
+class="math inline"&gt;x\in X&lt;/span&gt; we can always find a small enough open
+neighbourhood &lt;span class="math inline"&gt;U_x\subseteq X&lt;/span&gt; such that
+the set of holomorphic functions on &lt;span class="math inline"&gt;U_x&lt;/span&gt;
+is actually the same as the set of holomorphic functions on &lt;span
+class="math inline"&gt;\mathbb{C}^n&lt;/span&gt;. That’s a lot of holomorphic
+functions! If anything, that’s maybe too many holomorphic functions…
+When we have some really small &lt;span class="math inline"&gt;U_x&lt;/span&gt; and
+another really small &lt;span class="math inline"&gt;U_{x&amp;#39;}&lt;/span&gt;, what
+are we going to do on &lt;span class="math inline"&gt;U_{xx&amp;#39;}\coloneqq
+U_x\cap U_{x&amp;#39;}&lt;/span&gt;? There are two ways we can think of &lt;span
+class="math inline"&gt;\{f\colon U_{xx&amp;#39;}\to\mathbb{C}\}&lt;/span&gt; as being
+equal to &lt;span
+class="math inline"&gt;\{f\colon\mathbb{C}^n\to\mathbb{C}\}&lt;/span&gt;, and
+what if they’re not the same? But hopefully some alarm bells are ringing
+in your head now: we’ve already had this exact same conversation! Let’s
+build a sheaf!&lt;/p&gt;
+&lt;p&gt;Given a complex manifold &lt;span class="math inline"&gt;X&lt;/span&gt; we define
+its &lt;strong&gt;sheaf of holomorphic functions&lt;/strong&gt; (usually denoted by
+&lt;span class="math inline"&gt;\mathcal{O}_X&lt;/span&gt;) to be given by &lt;span
+class="math display"&gt;
+    \begin{aligned}
+        \mathcal{O}_X\colon
+        \mathsf{Op}(X)
+        &amp;amp;\longrightarrow \mathsf{Ab}
+    \\  U
+        &amp;amp;\longmapsto \{f\colon U\to\mathbb{C} \mid f\text{ is
+holomorphic}\}
+    \end{aligned}
+&lt;/span&gt; Note that we could have chosen to land in the category of &lt;span
+class="math inline"&gt;\mathbb{C}&lt;/span&gt;-algebras, but we’ll just look at
+the underlying abelian group for now. But why is this thing a
+&lt;em&gt;sheaf&lt;/em&gt;? That’s an argument we’re not going to get into today.
+I’m just going to say that it is, and you can either just believe me or
+(much better) think about it and do some internet/book searching. But
+the argument that needs to be given is, in essence, that if we have open
+subsets &lt;span class="math inline"&gt;U,V\subseteq X&lt;/span&gt; with a non-empty
+overlap &lt;span class="math inline"&gt;U\cap V\neq\varnothing&lt;/span&gt;, and
+holomorphic functions &lt;span class="math inline"&gt;f_U\colon
+U\to\mathbb{C}&lt;/span&gt; and &lt;span class="math inline"&gt;f_V\colon
+V\to\mathbb{C}&lt;/span&gt; &lt;em&gt;such that&lt;/em&gt; &lt;span
+class="math inline"&gt;f_U=f_V&lt;/span&gt;, then there actually exists a unique
+holomorphic function &lt;span class="math inline"&gt;f_{U\cup V}\colon U\cup
+V&lt;/span&gt; on the &lt;em&gt;union&lt;/em&gt; such that &lt;span
+class="math inline"&gt;f_U=f_{U\cup V}|U&lt;/span&gt; and &lt;span
+class="math inline"&gt;f_V=f_{U\cup V}|V&lt;/span&gt;. That is, if we have a
+collection of holomorphic functions on little open subsets, and whenever
+they could possibly be simultaneously defined they actually all agree,
+then we never really had a collection of little holomorphic functions
+but instead just secretly had one big holomorphic function the whole
+time, that recovers the little ones by restriction.&lt;/p&gt;
+&lt;p&gt;This sheaf is amazing. In fact, it’s so amazing that there’s a whole
+theorem just saying how amazing this sheaf is, and it’s such an
+incredible theorem that I would argue that it deserves the name of
+“fundamental theorem of complex geometry”. In fact, because this is our
+blog post and we can do what we like, let’s just make that true now.&lt;/p&gt;
+&lt;div class="itenv" title="Fundamental theorem of complex geometry"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;X&lt;/span&gt; be a complex manifold. Then
+the sheaf &lt;span class="math inline"&gt;\mathcal{O}_X&lt;/span&gt; of holomorphic
+functions on &lt;span class="math inline"&gt;X&lt;/span&gt; is amazing.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If we wanted to use some more standard terminology here, we would
+substitute the word “amazing” for the word “coherent”, and our theorem
+then becomes the following:&lt;/p&gt;
+&lt;div class="itenv" title="Oka coherence"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;X&lt;/span&gt; be a complex manifold. Then
+the sheaf &lt;span class="math inline"&gt;\mathcal{O}_X&lt;/span&gt; of holomorphic
+functions on &lt;span class="math inline"&gt;X&lt;/span&gt; is a
+&lt;strong&gt;coherent&lt;/strong&gt; sheaf.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The story of coherent sheaves, however, really will have to wait for
+another day.&lt;/p&gt;
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn1"&gt;&lt;p&gt;This isn’t really entirely true, but it’s true enough
+for now.&lt;a href="#fnref1" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn2"&gt;&lt;p&gt;As a short aside to this already far-too-long aside,
+this interplay between manifolds and local homeomorphisms can be made
+much more explicit, in that we can actually &lt;em&gt;define&lt;/em&gt; manifolds in
+terms of sheaves. This is a beautiful story, but one for another time.&lt;a
+href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn3"&gt;&lt;p&gt;“Proof left as an exercise to the reader.” In short,
+we’ll find that the best we can do is build a local homeomorphism from
+the sphere &lt;em&gt;minus a single point&lt;/em&gt; into &lt;span
+class="math inline"&gt;\mathbb{R}^2&lt;/span&gt;.&lt;a href="#fnref3"
+class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn4"&gt;&lt;p&gt;That is, think of &lt;span
+class="math inline"&gt;\mathbb{R}^2&lt;/span&gt; as a big piece of graph paper on
+a table, and think of &lt;span class="math inline"&gt;S^2&lt;/span&gt; as a globe.
+Place the globe with the south pole touching the origin of the graph
+paper (thus with the north pole also directly above the origin). We
+define the desired map &lt;span
+class="math inline"&gt;\psi\colon\mathbb{R}^2\to S^2&lt;/span&gt; by setting
+&lt;span class="math inline"&gt;\psi(x)&lt;/span&gt; to be the (unique!) point on
+the globe where the straight line from &lt;span
+class="math inline"&gt;x&lt;/span&gt; to the north pole (which “leaves” the flat
+plane of the table, existing in the 3-dimensional ambient space)
+intersects the globe.&lt;a href="#fnref4" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn5"&gt;&lt;p&gt;The desire to talk about the absolutely beautiful story
+of meromorphic functions and Riemann–Roch theorems is very strong, but
+I’m trying &lt;em&gt;so hard&lt;/em&gt; to get back to defining sheaf cohomology as
+quickly as I can.&lt;a href="#fnref5" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn6"&gt;&lt;p&gt;i.e. the one found &lt;a
+href="https://en.wikipedia.org/wiki/Hartogs%27s_theorem_on_separate_holomorphicity"&gt;on
+Wikipedia&lt;/a&gt;, and the one that I remember from my undergraduate
+degree.&lt;a href="#fnref6" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn7"&gt;&lt;p&gt;If I were being careful then I would say some more
+adjectives in front of the word “open”.&lt;a href="#fnref7"
+class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn8"&gt;&lt;p&gt;I recently got to record &lt;a
+href="https://topos.institute/work/lectures/2-torials/2026-07-28_hosgood_geometry/"&gt;some
+very fun videos with my friend Jason&lt;/a&gt; on why we are interested in
+functions “on a space”.&lt;a href="#fnref8" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.net,2026-08-08:/blog/2026-08-08-cohomology-notation-part-1/</id>
     <title type="html">How does cohomology relate to cohomology?</title>
@@ -81,7 +616,7 @@ the category of cochain complexes with chain maps by &lt;span
 class="math inline"&gt;\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Now, here’s our first and most fundamental definition today, where
 we’re already going to be using slightly non-standard terminology.&lt;/p&gt;
-&lt;div class="itenv" title="Definition (Internal cohomology)"&gt;
+&lt;div class="rmenv" title="Definition (Internal cohomology)"&gt;
 &lt;p&gt;Let &lt;span
 class="math inline"&gt;C^\bullet\in\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt; be a
 cochain complex. Its &lt;strong&gt;internal cohomology&lt;/strong&gt; is the &lt;span
@@ -197,7 +732,7 @@ this time: &lt;span class="math display"&gt;
     \xrightarrow{\partial^n} \sigma^{n+1}(X)
     \xrightarrow{\partial^{n+1}} \ldots
 &lt;/span&gt; whence, finally, another cohomology definition!&lt;/p&gt;
-&lt;div class="itenv" title="Definition (Singular cohomology)"&gt;
+&lt;div class="rmenv" title="Definition (Singular cohomology)"&gt;
 &lt;p&gt;Let &lt;span class="math inline"&gt;X&lt;/span&gt; be a topological space. Its
 &lt;strong&gt;singular cohomology&lt;/strong&gt; is the &lt;span
 class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-graded collection of abelian
@@ -1397,298 +1932,6 @@ href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;
 and more general homotopy theories”. (2012). arXiv:&lt;a
 href="https://arxiv.org/abs/1010.0717v2"&gt;1010.0717v2&lt;/a&gt;&lt;a
 href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.net,2022-04-25:/blog/2022-04-25-some-research-questions-from-my-notesbooks/</id>
-    <title type="html">Some research questions from my notebooks</title>
-    <published>2022-04-25T00:00:00Z</published>
-    <updated>2022-04-25T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.net/blog/2022-04-25-some-research-questions-from-my-notesbooks/" type="text/html"/>
-    <content type="html">&lt;p&gt;One thing that the past few years have taught me is that I am not
-good at doing maths all by myself. In fact, I would go as far as to say
-I am completely useless and unmotivated. I do much better when I have
-co-authors to give me deadlines and friends to talk to, but, for obvious
-reasons, the past two years have not been good for this. Not really the
-ideal time for first postdocs, but alas, that’s life.&lt;/p&gt;
-&lt;p&gt;I recently found an old notebook with some vague questions and
-research ideas in it, and then realised that I have had no motivation to
-work on any of these alone, so why not put them out there for other
-people to see?&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;p&gt;A common fear amongst early-career mathematicians seems to be getting
-scooped: having somebody solve the questions you were working on before
-you do, maybe even by having read your work and using it as a launchpad.
-This is very understandable, since we live in a horrible academic world
-where publishing is everything, and trying to publish some results that
-you’ve arrived at &lt;em&gt;after&lt;/em&gt; somebody else, no matter how shortly or
-how differently, suddenly becomes a &lt;em&gt;lot&lt;/em&gt; harder, which makes
-getting a job next year &lt;em&gt;much&lt;/em&gt; more difficult, and… Because of
-this, I’ve always been a bit cautious in writing what I’m working on.
-But, in the context of my life, the world around me, and some other
-things, I realise that these fears aren’t really very well founded for
-me right now. There’s no point in me worrying about other people using
-my ideas to solve problems before I do if &lt;em&gt;I’m not even working on
-applying my ideas myself&lt;/em&gt;. Not only that, it’s not like I’m sitting
-on some goldmine of potential paths to solutions of big long-standing
-open problems — I just have a few small ideas about small things, none
-of them are particularly profound or ingenious (in fact, now that I read
-back what I’ve written, I see that they’re basically all just “&lt;em&gt;what
-if you did X, but with the Čech nerve instead?&lt;/em&gt;”). If anything, I
-shouldn’t be worried about people scooping my ideas, but the opposite:
-trying to get anybody to listen at all!&lt;/p&gt;
-&lt;p&gt;So I figured I might as well just open up some of&lt;a href="#fn1"
-class="footnote-ref" id="fnref1" role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; my
-“research” in the hopes that one of you might see one of the questions I
-have and think “oh, that’s interesting, I wonder if Tim would like to
-talk about this sometime” (to which I would almost certainly (time and
-obligations permitting) answer, “yes, that would be very lovely”).&lt;/p&gt;
-&lt;h1 id="some-simplicial-things"&gt;Some simplicial things&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;(These questions are about using the Čech nerve, and sometimes
-the notion of (pre)sheaves on the Čech nerve — cf. e.g. Definition 2.2.1
-in “&lt;a href="https://arxiv.org/abs/2003.10023"&gt;Simplicial Chern-Weil
-theory for coherent analytic sheaves, Part I&lt;/a&gt;”.)&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="barycentric-global-sections-always-exist"&gt;Barycentric global
-sections always exist&lt;/h2&gt;
-&lt;p&gt;Take a presheaf &lt;span class="math inline"&gt;\mathscr{F}&lt;/span&gt; (of
-&lt;span class="math inline"&gt;\mathbb{R}&lt;/span&gt;-modules, say) on some space
-&lt;span class="math inline"&gt;X&lt;/span&gt;, and pick a bunch of local sections
-&lt;span class="math inline"&gt;\{s_i\in\Gamma(U_i,\mathscr{F})\}_{i\in
-I}&lt;/span&gt;, where &lt;span class="math inline"&gt;\{U_i\}_{i\in I}&lt;/span&gt; is an
-open cover of &lt;span class="math inline"&gt;X&lt;/span&gt;. Since we only have a
-presheaf, there’s no reason for these local sections to glue to give a
-global section. &lt;em&gt;But&lt;/em&gt; if we pull back our presheaf along the Čech
-nerve then we can consider the “barycentric global section” &lt;span
-class="math inline"&gt;\sum_{j=0}^p t_j s_j&lt;/span&gt; on any &lt;span
-class="math inline"&gt;U_{\alpha_0\ldots\alpha_p}&lt;/span&gt;. This is like the
-“uniform average” of all the sections: if we fibre integrate then we’d
-get e.g. &lt;span class="math inline"&gt;\frac1{p+1}\sum_{i=0}^p
-s_{\alpha_j}&lt;/span&gt; on each &lt;span
-class="math inline"&gt;U_{\alpha_0\ldots\alpha_p}&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Is this ever useful at all, as a sort of “second best thing” for a
-global section that you know doesn’t exist?&lt;/p&gt;
-&lt;h2 id="čech-nerves-of-things"&gt;Čech nerves of things&lt;/h2&gt;
-&lt;p&gt;Consider some complex-analytic “thing” (i.e. manifold, space,
-whatever) &lt;span class="math inline"&gt;X&lt;/span&gt; that is locally algebraic
-(whatever that might mean). If we take the Čech nerve then is the
-resulting simplicial “thing” an &lt;em&gt;algebraic&lt;/em&gt; simplicial “thing”
-&lt;span class="math inline"&gt;\widetilde{X}&lt;/span&gt;? In the case where &lt;span
-class="math inline"&gt;X&lt;/span&gt; is &lt;em&gt;not&lt;/em&gt; algebraic, can we measure
-how far away it is from being so by looking at the simplicial “thing”
-&lt;span class="math inline"&gt;\widetilde{X}&lt;/span&gt;?&lt;/p&gt;
-&lt;p&gt;A simpler, similar question: is the Čech nerve of an affine cover of
-an (algebraic) scheme an “affine object” in the category of simplicial
-schemes?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(This last question should be something already well known, but I
-just don’t know the answer myself.)&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id="some-analytic-geometry"&gt;Some analytic geometry&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;(These questions are about taking things that we know how to do
-in the smooth or the algebraic world, and trying to do them in the
-complex-analytic world.)&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="chernweil-for-stacks"&gt;Chern–Weil for stacks&lt;/h2&gt;
-&lt;p&gt;One way of cheekily summarising some of the results from &lt;a
-href="https://tel.archives-ouvertes.fr/tel-02882140"&gt;my PhD thesis&lt;/a&gt;
-would be that “sheaves on the Čech nerve sometimes allow you to apply
-smooth methods to complex-analytic things”, and the application of this
-that I considered was Chern–Weil theory via the Atiyah exact sequence.
-So is it possible to extend some results concerning Chern–Weil theory
-via the Atiyah exact sequence on differentiable stacks to the
-complex-analytic case?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(This question was prompted by seeing two papers on the arXiv by
-Indranil Biswas, Saikat Chatterjee, Praphulla Koushik, and Frank
-Neumann: &lt;a
-href="https://arxiv.org/abs/2012.08442"&gt;&lt;code&gt;2012.08442&lt;/code&gt;&lt;/a&gt; and
-&lt;a
-href="https://arxiv.org/abs/2012.08447"&gt;&lt;code&gt;2012.08447&lt;/code&gt;&lt;/a&gt;.)&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="holomorphic-deligne-cohomology"&gt;Holomorphic Deligne
-cohomology&lt;/h2&gt;
-&lt;p&gt;This is one that I’ve been thinking about ever since the middle of my
-PhD, and it was actually the original problem that I’d hoped to solve
-(but that turned out to be much more difficult than we’d first thought).
-Deligne cohomology in the &lt;em&gt;smooth&lt;/em&gt; setting is really well
-understood — for example, Urs Schreiber has written SO much about this
-(and all very very lovely, albeit nearly entirely far over my head)
-under the name of &lt;em&gt;differential cohomology&lt;/em&gt;. But at some point
-quite early on there is a partition of unity argument, which means that
-it fails in the holomorphic case. Indeed, there are lots of little
-worked examples you can do that show that Deligne cohomology in the
-complex-analytic world really is quite different.&lt;/p&gt;
-&lt;p&gt;One “simple” concrete problem is the following: given a holomorphic
-vector bundle (not even an arbitrary coherent analytic sheaf!), write
-down &lt;em&gt;Čech representatives&lt;/em&gt; for its Chern classes &lt;em&gt;in Deligne
-cohomology&lt;/em&gt;. Just the first part (Čech representatives) was done&lt;a
-href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; in &lt;a
-href="http://wrap.warwick.ac.uk/40592/"&gt;Green’s 1980 PhD thesis&lt;/a&gt;;
-just the second part (holomorphic Deligne cohomology) was done in &lt;a
-href="http://jgrivaux.perso.math.cnrs.fr/articles/Chern.pdf"&gt;Grivaux’s
-2009 thesis&lt;/a&gt;. There is a (beautiful and very good) paper by Brylinski
-and McLaughlin (“&lt;a
-href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-178/issue-1/%C4%8Cech-cocycles-for-characteristic-classes/cmp/1104286562.pdf"&gt;Cech
-Cocycles for Characteristic Classes&lt;/a&gt;”) that seems to give an answer,
-but only gives a proof in the smooth setting, and when I sat down (many
-&lt;em&gt;many&lt;/em&gt; times) and tried to work through it myself, the degrees in
-the holomorphic setting seemed to be exactly the wrong ones that you
-would get from trying to treat smooth Deligne cohomology like
-holomorphic Deligne cohomology (i.e. bidegree &lt;span
-class="math inline"&gt;(2p,0)&lt;/span&gt; instead of &lt;span
-class="math inline"&gt;(p,p)&lt;/span&gt;, if I remember correctly). It is also
-one of those answers where they say “ok, here are all the ingredients
-you need, so just put them together”, but then don’t just write down the
-explicit representatives (something that always frustrates me: if
-putting the pieces together is hard, then say it’s hard; if it’s easy,
-then why not just do it?!).&lt;/p&gt;
-&lt;p&gt;To reduce this problem down to the very simplest form: given a
-rank-&lt;span class="math inline"&gt;2&lt;/span&gt; holomorphic vector bundle
-defined by transition functions &lt;span
-class="math inline"&gt;g_{\alpha\beta}&lt;/span&gt;, write down a Čech cocycle
-&lt;em&gt;in terms of the &lt;span
-class="math inline"&gt;g_{\alpha\beta}&lt;/span&gt;&lt;/em&gt; representing the second
-Chern class in &lt;em&gt;Deligne cohomology&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;(For example, we know how to do this in de Rham cohomology: you
-can take &lt;span
-class="math inline"&gt;\operatorname{tr}(\omega_{\alpha\beta}g_{\alpha\beta}\omega_{\beta\gamma}g_{\alpha\beta}^{-1})&lt;/span&gt;
-or, equivalently (via some algebraic manipulations), &lt;span
-class="math inline"&gt;\operatorname{tr}(\omega_{\alpha\beta}(\omega_{\alpha\gamma}-\omega_{\alpha\beta}))&lt;/span&gt;,
-where &lt;span
-class="math inline"&gt;\omega_{\alpha\beta}=\operatorname{d}\log
-g_{\alpha\beta}=g_{\alpha\beta}^{-1}dg_{\alpha\beta}&lt;/span&gt;, and you can
-then extend this to give a closed element of the Čech-de Rham
-bicomplex.)&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id="some-analytic-sheaves"&gt;Some analytic sheaves&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;(More complex-analytic geometry, this time dealing with
-holomorphic vector bundles and their generalisations.)&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="complexes-of-coherent-sheaves"&gt;Complexes of coherent
-sheaves&lt;/h2&gt;
-&lt;p&gt;If you’re dealing with sheaves in algebraic geometry, then you might
-care about whether or not they’re coherent. Given that we like to think
-of complexes of sheaves instead of just single sheaves (e.g. we like
-working in the derived category), we are interested in the derived
-category &lt;span class="math inline"&gt;D^\mathrm{b}\mathsf{Coh}(X)&lt;/span&gt; of
-(bounded) complexes of coherent sheaves. But there’s another category
-which arises quite often in practice, namely the category &lt;span
-class="math inline"&gt;D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))&lt;/span&gt;
-of complexes of sheaves that are not necessarily coherent, but whose
-(internal, i.e. “kernel of the differential of the complex modulo the
-image of the differential”) cohomology consists of coherent sheaves. The
-latter sounds like it should be more general, but in nice algebraic
-cases the two are actually equivalent! This follows from a result in SGA
-6:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SGA 6, II, Corollaire 2.2.2.1.&lt;/strong&gt; If &lt;span
-class="math inline"&gt;X&lt;/span&gt; is a Noetherian scheme, then the canonical
-fully faithful functor &lt;span
-class="math inline"&gt;D^\mathrm{b}(\mathsf{Coh}(X))\hookrightarrow
-D(\mathsf{Sh}(X))&lt;/span&gt; identifies the codomain with the full
-subcategory &lt;span
-class="math inline"&gt;D^\mathrm{b}_{\mathsf{Coh}}(\mathsf{Sh}(X))&lt;/span&gt;
-of the domain.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Now there’s another related result, which follows from applying the
-above corollary to a specific case:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SGA 6, I, Exemples 5.11 (+ II, Corollaire 2.2.2.1).&lt;/strong&gt;
-If &lt;span class="math inline"&gt;X&lt;/span&gt; is a smooth scheme, then there is
-a canonical equivalence of triangulated categories &lt;span
-class="math inline"&gt;\mathsf{Perf}(X)\xrightarrow{\sim}D^{\mathrm{b}}(\mathsf{Coh}(X))&lt;/span&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This says that, for &lt;em&gt;smooth&lt;/em&gt; schemes, pseudo-coherence is
-equivalent to perfectness (being &lt;em&gt;locally&lt;/em&gt; resolved by locally
-free sheaves).&lt;/p&gt;
-&lt;p&gt;Now, the analogue of this second statement is still true in the
-analytic case: coherent analytic sheaves always have &lt;em&gt;local&lt;/em&gt;
-locally free resolutions. But the first statement is a corollary to
-Proposition 2.2.2, which uses the fact that “every quasi-coherent module
-is the filtrant colimit of its coherent submodules”, and this is
-&lt;em&gt;not&lt;/em&gt; true in the analytic case (in fact, this raises a question
-I’ll talk about after this one).&lt;/p&gt;
-&lt;p&gt;So are these two categories, “complexes of coherent sheaves” and
-“complexes of sheaves with coherent cohomology” equivalent in the
-analytic setting? In the specific case where &lt;span
-class="math inline"&gt;X&lt;/span&gt; is a smooth compact analytic
-&lt;em&gt;surface&lt;/em&gt;, yes! This is Corollary 5.2.2 of Bondal and Van den
-Bergh’s “&lt;a href="https://arxiv.org/abs/math/0204218"&gt;Generators and
-representability of functors in commutative and noncommutative
-geometry&lt;/a&gt;”. But in higher dimensions, it is (as far as I can tell)
-still an open question.&lt;/p&gt;
-&lt;p&gt;I don’t have any particular insight into this problem, except that I
-think (yet again) that sheaves on the nerve might have something to say
-about this. Furthermore, I haven’t read the details of Bondal and Van
-den Bergh’s proofs, nor those in SGA 6, so probably the following is
-obvious (or even tautological, actually), but it’s intriguing that these
-hypotheses (&lt;span class="math inline"&gt;X&lt;/span&gt; is smooth, compact, and a
-surface) are exactly those found in Schuster’s “&lt;a
-href="https://www.degruyter.com/document/doi/10.1515/crll.1982.337.159/html"&gt;Locally
-free resolutions of coherent sheaves on surfaces&lt;/a&gt;” which shows that,
-under these hypothesis, coherent analytic sheaves can be
-&lt;em&gt;globally&lt;/em&gt; resolved by locally free sheaves (the &lt;em&gt;resolution
-property&lt;/em&gt;).&lt;/p&gt;
-&lt;h2 id="the-resolution-property"&gt;The resolution property&lt;/h2&gt;
-&lt;p&gt;Whether or not coherent analytic sheaves can be &lt;em&gt;globally&lt;/em&gt;
-resolved by locally free sheaves (instead of just &lt;em&gt;locally&lt;/em&gt;
-resolved) is controlled by the so-called &lt;em&gt;resolution property&lt;/em&gt;,
-mentioned above. We say that something (e.g. a stack) &lt;em&gt;has the
-resolution property&lt;/em&gt; if every coherent sheaf admits a surjection
-from a locally free sheaf — what happens if we change this to “… a
-surjection from a locally free sheaf &lt;em&gt;on the nerve&lt;/em&gt;”? This could
-be useful for Riemann–Roch for Artin stacks: these have the resolution
-property when they are quotients of quasi-projective schemes by
-reductive groups, but not in general (and so this assumption appears in
-Toën’s Riemann–Roch paper). It could also be useful for a formal GAGA
-theorem, cf. Geraschenko and Zureick-Brown’s “&lt;a
-href="https://arxiv.org/abs/1208.2882"&gt;Formal GAGA for good moduli
-spaces&lt;/a&gt;”.&lt;/p&gt;
-&lt;h2 id="analogies-between-algebraic-and-analytic-geometry"&gt;Analogies
-between algebraic and analytic geometry&lt;/h2&gt;
-&lt;p&gt;Here I’m just going to refer you to a previous blog post of mine: “&lt;a
-href="/blog/2021-09-24-some-questions-about-analytic-geometry/"&gt;Some
-questions about complex-analytic geometry&lt;/a&gt;”. The main one here is
-“&lt;em&gt;how should we define the notion of quasi-coherence for an analytic
-sheaf?&lt;/em&gt;”, followed immediately by “&lt;em&gt;why did we pick this
-definition, and not the others?&lt;/em&gt;”. One possible answer is “read
-Scholze and Clausen’s lecture notes on condensed mathematics, Conrad’s
-paper on relative ampleness in rigid geometry, and Eschmeier and
-Putinar’s book &lt;em&gt;Spectral Decompositions and Analytic Sheaves&lt;/em&gt;,
-and see if you can put all the pieces together”.&lt;/p&gt;
-&lt;p&gt;Just for the sake of it, here are some possible contenders for the
-definition of quasi-coherence for an analytic sheaf &lt;span
-class="math inline"&gt;\mathscr{F}&lt;/span&gt; of &lt;span
-class="math inline"&gt;\mathcal{O}_X&lt;/span&gt;-modules:&lt;/p&gt;
-&lt;ol type="1"&gt;
-&lt;li&gt;being &lt;em&gt;of local presentation&lt;/em&gt;, i.e. for all &lt;span
-class="math inline"&gt;x\in X&lt;/span&gt; there exists an open &lt;span
-class="math inline"&gt;U\subseteq X&lt;/span&gt; on which there is an exact
-sequence &lt;span class="math display"&gt;\mathcal{O}_X^{\oplus I}|U \to
-\mathcal{O}_X^{\oplus J}|U \to \mathscr{F}|U \to 0&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;being the filtrant colimit of its coherent subsheaves&lt;/li&gt;
-&lt;li&gt;being &lt;em&gt;Fréchet quasi-coherent&lt;/em&gt;, or, equivalently, admitting a
-global “topologically free” resolution&lt;/li&gt;
-&lt;li&gt;something analogous to arising from the right Kan extension of
-something like the pseudofunctor &lt;span
-class="math inline"&gt;\mathsf{CRing}\to\mathsf{Cat}&lt;/span&gt; defined by
-&lt;span class="math inline"&gt;R\mapsto\mathsf{Mod}_R&lt;/span&gt; (very vague, I
-know).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I know that there are &lt;a
-href="https://math.stackexchange.com/questions/2840594/gaga-and-quasicoherent-sheaf/2841087#2841087"&gt;examples
-of 1. that do not satisfy 2.&lt;/a&gt;, but I actually don’t know how the
-other notions interact at all.&lt;/p&gt;
-&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes"&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id="fn1"&gt;&lt;p&gt;Apart from one paper which I’m currently working on with
-a co-author, because that’s not just my story to share. But this will
-hopefully hit the arXiv… within a year? I dunno, I’ve been saying that
-about this specific paper for the past two years, so we’ll see what
-actually happens.&lt;a href="#fnref1" class="footnote-back"
-role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2"&gt;&lt;p&gt;Well, the method was explained, but the actual
-computations were basically left as an exercise to the reader — I was
-one such reader, and I wrote them down in &lt;em&gt;my&lt;/em&gt; PhD thesis.&lt;a
-href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </content>
