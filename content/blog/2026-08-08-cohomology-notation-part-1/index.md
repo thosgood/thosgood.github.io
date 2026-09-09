@@ -2,7 +2,7 @@
 title: How does cohomology relate to cohomology?
 part: Part 1
 kind: article
-tags: ['maths', 'homological-algebra', 'category-theory', 'algebraic-geometry']
+tags: ['maths', 'homological-algebra', 'category-theory', 'algebraic-topology']
 created_at: 2026-08-08
 ---
 
@@ -47,7 +47,7 @@ We call such morphisms **chain maps**, and denote the category of cochain comple
 
 Now, here's our first and most fundamental definition today, where we're already going to be using slightly non-standard terminology.
 
-::: {.itenv title="Definition (Internal cohomology)"}
+::: {.rmenv title="Definition (Internal cohomology)"}
 Let $C^\bullet\in\Ch{\mathcal{A}}$ be a cochain complex. Its **internal cohomology** is the $\mathbb{Z}$-graded collection of abelian groups $(\sHH^n(C^\bullet)\mid n\in\mathbb{Z})$, where we define
 $$
     \sHH^n(C^\bullet)
@@ -110,7 +110,7 @@ $$
 $$
 whence, finally, another cohomology definition!
 
-::: {.itenv title="Definition (Singular cohomology)"}
+::: {.rmenv title="Definition (Singular cohomology)"}
 Let $X$ be a topological space. Its **singular cohomology** is the $\mathbb{Z}$-graded collection of abelian groups $(\HH^n(X;A)\mid n\in\mathbb{Z})$, where we define the $n$-th singular cohomology group as the $n$-th internal cohomology group of the cochain complex of singular cochains:
 $$
     \HH^n(X;A)
