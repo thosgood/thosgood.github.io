@@ -33,17 +33,14 @@
 
   .doi {
     &:before { content: 'DOI: '; }
-    a { font-weight: 400; }
   }
 
   .arxiv {
     &:before { content: 'arXiv: '; }
-    a { font-weight: 400; }
   }
 
   .hal {
     &:before { content: 'HAL: '; }
-    a { font-weight: 400; }
   }
 }
 

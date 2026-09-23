@@ -306,7 +306,7 @@ ul.fancy-list {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 1em;
 
   li {
     margin: 0;
