@@ -26,10 +26,10 @@ created_at: 2026-09-09
 
 In the last post, we saw "the" definition of cohomology, namely that of **internal cohomology** of a cochain complex $\sHH^n(C^\bullet)$. From this definition, we then described how to build **singular cohomology** of a topological space $\HH^n(X;A)$. Maybe it will be useful to start recording these definitions in a table that we can add to as we go along. Let's see what we have so far:
 
-| Cohomology | Input                                        | Notation            |
-| ---------- | -------------------------------------------- | ------------------- |
-| internal   | cochain complex $C^\bullet$                  | $\sHH^n(C^\bullet)$ |
-| singular   | topological space $X$; coefficient group $A$ | $\HH^n(X;A)$        |
+| Cohomology | Notation | Definition | Input |
+| :- | :- | :-- | :---- |
+| internal | $\sHH^n(C^\bullet)$ | ${\Ker d^n}/{\Im d^{n-1}}$ | cochain complex $C^\bullet$ |
+| singular | $\HH^n(X;A)$ | $\sHH^n(\sigma^\bullet(X))$ | topological space $X$; coefficient group $A$ |
 
 Ok, nice! Let's add some more rows to this table, and let's bring some sheaves into the story.
 

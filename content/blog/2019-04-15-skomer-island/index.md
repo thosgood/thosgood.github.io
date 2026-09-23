@@ -28,4 +28,4 @@ To quote from the [Wikipedia article](https://en.wikipedia.org/wiki/Atlantic_puf
 
 As of 2015, the Atlantic puffin is rated 'vulnerable' by the International Union for the Conservation of Nature, and was reported as being 'threatened with extinction' by BirdLife International in 2018.
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/timhosgood/albums/72157677732207497" title="Skomer island"><img src="https://live.staticflickr.com/7852/40648359233_c37c6a3618_z.jpg" width="640" height="427" alt="Skomer island"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/timhosgood/albums/72157677732207497" title="Skomer island"><img src="https://live.staticflickr.com/7852/40648359233_c37c6a3618_z.jpg" width="640" height="427" alt="Skomer island"></a><script async src="//embedr.flickr.com/_assets/client-code.js" charset="utf-8"></script>
