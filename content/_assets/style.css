@@ -16,7 +16,7 @@
   --h1-font: 1.7em var(--header-font-family);
   --h2-font: 1.5em var(--header-font-family);
   --h3-font: italic 1.3em var(--header-font-family);
-  --h4-font: italic 1.2em var(--header-font-family);
+  --h4-font: 1.2em var(--header-font-family);
 
   --monospace-font-family: 'Maple Mono', monospace;
   --monospace-font: 0.825em var(--monospace-font-family);
@@ -105,6 +105,8 @@ body {
 /* |------------------------| */
 
 #about-me-postcard {
+  margin: 1em 0;
+
   display: flex;
 
   flex-direction: row;
@@ -163,17 +165,34 @@ content {
   line-height: var(--line-height);
   font-size: var(--main-font-size);
 
+  hr {
+    width: 100%;
+    color: black;
+  }
+
   h1 {
     font: var(--h1-font);
   }
   h2 {
     font: var(--h2-font);
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid black;
   }
   h3 {
     font: var(--h3-font);
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
   }
   h4 {
     font: var(--h4-font);
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   strong {
@@ -188,7 +207,7 @@ content {
     margin: 0;
 
     li {
-      margin: 0.5em 0;
+      margin: 1em 0;
     }
   }
 
@@ -199,6 +218,10 @@ content {
   }
   a:hover {
     border: 1px dashed var(--primary);
+  }
+
+  .subtle-link {
+    color: black;
   }
 
   code {
