@@ -2,22 +2,55 @@
   font-family: 'IM Fell DW Pica';
   src: url('IMFellDWPica-Regular.ttf') format('truetype');
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'IM Fell DW Pica';
   src: url('IMFellDWPica-Italic.ttf') format('truetype');
   font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Maple Mono';
   src: url('MapleMono[wght].ttf') format('truetype');
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Maple Mono';
   src: url('MapleMono-Italic[wght].ttf') format('truetype');
   font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-Medium.otf');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  src: url('Vollkorn-MediumItalic.otf');
+  font-style: italic;
+  font-weight: 600;
 }

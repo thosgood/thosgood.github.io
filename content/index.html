@@ -4,28 +4,41 @@ katex: false
 ---
 
 <div id="about-me-postcard">
-  <div>
-    <h1>Tim Hosgood</h1>
 
-    <ul class="i">
-      <li>pro-social applied maths</li>
-      <li>homotopical complex geometry</li>
-      <li>higher category theory</li>
-      <li>translation & outreach</li>
-    </ul>
+  <div id="about-me-interests">
+    <h4>Topics of work</h4>
+
+    <span>pro-social applied maths</span>
+    <span>homotopical complex geometry</span>
+    <span>higher category theory</span>
+    <span>translation & outreach</span>
   </div>
 
-  <img src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean" style="max-width: 14rem;">
-
-  <div>
-    <code>email @ thosgood . net</code>
-    <ol>
-      <li><a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">arXiv</a></li>
-      <li><a href="https://orcid.org/<%= @config[:orcid_id] %>">ORCID</a></li>
-      <li><a href="https://github.com/<%= @config[:github_username] %>">GitHub</a></li>
-      <li><a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">Mastodon</a></li>
-    </ol>
+  <div id="about-me-links">
+    <div id="about-me-contact">
+      <h4>Contact</h4>
+      <code>email @ thosgood . net</code>
+    </div>
+    
+    <div id="about-me-other-links">
+      <h4>Other links</h4>
+      <a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">
+        <code>arXiv</code>
+      </a>
+      <a href="https://orcid.org/<%= @config[:orcid_id] %>">
+        <code>ORCID</code>
+      </a>
+      <a href="https://github.com/<%= @config[:github_username] %>">
+        <code>GitHub</code>
+      </a>
+      <a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">
+        <code>Mastodon</code>
+      </a>
+    </div>
   </div>
+
+  <img id="about-me-photo" src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean">
+
 </div>
 
 
@@ -72,7 +85,7 @@ katex: false
   <li>
     From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig">Wushi Goldring</a> at Stockholm University.
   </li>
-  
+
   <li>
     In 2020, I defended my PhD thesis (on the subject of Chern classes of coherent analytic sheaves through methods of higher category theory) at the Université d'Aix-Marseille, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/">Damien Calaque</a>.
     During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679">DerSympApp</a> project at the Université de Montpellier.

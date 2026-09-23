@@ -2,39 +2,63 @@
 @import url("citations.css");
 
 :root {
+  --page-width: 900px;
+
   --primary: #af7350;
   --off-white: #fcfbf8;
 
-  --main-font-family: 'IM Fell DW Pica', serif;
+  --main-font-family: 'Vollkorn', serif;
   --main-font-size: 1.2rem;
 
   --header-font-family: 'IM Fell DW Pica', serif;
-  --h1-font-size: 1.4rm;
+  --h1-font: 1.7em var(--header-font-family);
+  --h2-font: 1.5em var(--header-font-family);
+  --h3-font: italic 1.3em var(--header-font-family);
+  --h4-font: italic 1.2em var(--header-font-family);
 
   --monospace-font: 0.825em 'Maple Mono', monospace;
 }
 
-/* ========== */
-/* Typography */
-/* ========== */
+
+/* ||========|| */
+/* || LAYOUT || */
+/* ||========|| */
+
+
+/* |------------------| */
+/* | LAYOUT / General | */
+/* |------------------| */
 
 body {
   margin: 0 auto;
-  width: 900px;
+  max-width: var(--page-width);
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  font-family: 'Vollkorn';
+  font-family: var(--main-font-family);
   background-color: var(--off-white);
 
   nav {
     width: 100%;
-    
+    padding: 2rem 0;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    #navigation-name {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    #navigation-page-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
   }
 
   content {
@@ -45,31 +69,131 @@ body {
   }
 }
 
+@media screen and (width <= 900px) {
+  body {
+    padding-top: 1em;
+    padding-left: 1em;
+    align-items: flex-start;
+
+    nav {
+      padding-top: 0;
+      width: auto;
+      flex-direction: column;
+      gap: 1em;
+
+      #navigation-page-links {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  }
+}
+
+
+/* |------------------------| */
+/* | LAYOUT / Page-specific | */
+/* |------------------------| */
+
+#about-me-postcard {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  #about-me-interests {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-me-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #about-me-contact {}
+
+    #about-me-other-links {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  #about-me-photo {
+    max-width: 300px;
+  }
+}
+
+@media screen and (width <= 900px) {
+  #about-me-postcard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+
+    #about-me-interests {
+      order: 2;
+    }
+    #about-me-links {
+      order: 3;
+      gap: 1em;
+    }
+    #about-me-photo {
+      order: 1;
+    }
+  }
+}
+
+
+/* |============| */
+/* | TYPOGRAPHY | */
+/* |============| */
+
+
+/* |----------------------| */
+/* | Typography / General | */
+/* |----------------------| */
+
 content {
   font-size: var(--main-font-size);
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--header-font-family);
+  h1 {
+    font: var(--h1-font);
+  }
+  h2 {
+    font: var(--h2-font);
+  }
+  h3 {
+    font: var(--h3-font);
+  }
+  h4 {
+    font: var(--h4-font);
   }
 
   strong {
-    font-weight: 550;
+    font-weight: 600;
   }
 
   p {
     line-height: 1.3;
   }
 
-  code,
-  a code {
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    border: 1px solid transparent;
+  }
+  a:hover {
+    border: 1px dashed var(--primary);
+  }
+
+  code {
     font: var(--monospace-font);
   }
 }
-
-
-/* ======= */
-/* Nav bar */
-/* ======= */
 
 #top-navigation {
   -webkit-user-select: none;
@@ -77,43 +201,33 @@ content {
   -ms-user-select: none;
   user-select: none;
 
-  .active {
+  span.active,
+  a.navigation-link {
     color: var(--primary);
-    border: 2px solid transparent;
+    font: var(--h2-font);
+  }
+
+  .active {
     border-bottom: 2px solid var(--primary);
   }
 
   .navigation-link {
     text-decoration: none;
-    border: 2px solid transparent;
   }
   .navigation-link:hover {
-    color: var(--primary);
-    background: none;
-    border: 2px solid transparent;
     border-bottom: 2px dashed var(--primary);
   }
 }
 
 
-/* ===== */
-/* Links */
-/* ===== */
-
-a {
-  text-decoration: underline;
-  color: var(--primary);
-  border: 1px solid transparent;
-}
-
-a:hover {
-  border: 1px dashed var(--primary);
-}
+/* |----------------------------| */
+/* | Typography / Page specific | */
+/* |----------------------------| */
 
 
-/* ========== */
-/* Blog posts */
-/* ========== */
+/* |============| */
+/* | Blog posts | */
+/* |============| */
 
 .tag-list {
   font: var(--monospace-font);

@@ -2,20 +2,10 @@
   <div id="navigation-name">
     <%= link_to_unless_current(@config[:full_name], '/', :class => 'navigation-link') %>
   </div>
-  <div id="navigation-pages">
-    <ol class="navigation-list">
-      <li>
-        <%= link_to_unless_current('Work', '/work/', :class => 'navigation-link') %>
-      </li>
-      <li>
-        <%= link_to_unless_current('Translations', '/translations/', :class => 'navigation-link') %>
-      </li>
-      <li>
-        <%= link_to_unless_current('Blog', '/blog/', :class => 'navigation-link') %>
-      </li>
-      <li>
-        <%= link_to_unless_current('CV', '/cv/', :class => 'navigation-link') %>
-      </li>
-    </ol>
+  <div id="navigation-page-links">
+    <%= link_to_unless_current('Work', '/work/', :class => 'navigation-link') %>
+    <%= link_to_unless_current('Translations', '/translations/', :class => 'navigation-link') %>
+    <%= link_to_unless_current('Blog', '/blog/', :class => 'navigation-link') %>
+    <%= link_to_unless_current('CV', '/cv/', :class => 'navigation-link') %>
   </div>
 </nav>
