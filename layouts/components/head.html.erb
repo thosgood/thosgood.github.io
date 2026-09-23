@@ -9,8 +9,9 @@
     <% end %>
 
     <link rel="stylesheet" href="/_assets/style.css">
-    <link rel="stylesheet" href="/_assets/tachyons.css">
+    <% if @item[:katex] != false %>
     <link rel="stylesheet" href="/_assets/katex/katex.min.css">
+    <% end %>
 
     <link rel="me" href="https://mathstodon.xyz/@thosgood"></a>
 </head>

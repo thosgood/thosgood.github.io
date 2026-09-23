@@ -3,19 +3,9 @@ title: Home
 katex: false
 ---
 
-<div class="content">
-
-  <div class="w-80-ns center db mt4-ns">
-
-    <img src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean" class="fr-ns db center ba br4 b--black-70" style="max-width: 14rem;">
-
-    <h1 class="tl-ns tc mv0">
-      Tim Hosgood
-    </h1>
-
-    <h3>
-      <code>email @ thosgood . net</code>
-    </h3>
+<div id="postcard">
+  <div>
+    <h1>Tim Hosgood</h1>
 
     <ul class="i">
       <li>pro-social applied maths</li>
@@ -23,72 +13,76 @@ katex: false
       <li>higher category theory</li>
       <li>translation & outreach</li>
     </ul>
-
   </div>
 
-  <div class="cb-ns"></div>
-  
-  <div id="footer_bar" class="center">
-    <ol class="fr-ns list ma0 pl0">
-      <li class="ph2-ns ph1 dib"><a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">arXiv</a></li>
-      <li class="ph2-ns ph1 dib"><a href="https://orcid.org/<%= @config[:orcid_id] %>">ORCID</a></li>
-      <li class="ph2-ns ph1 dib"><a href="https://github.com/<%= @config[:github_username] %>">GitHub</a></li>
-      <li class="pl2-ns ph1 dib"><a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">Mastodon</a></li>
+  <img src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean" style="max-width: 14rem;">
+
+  <div>
+    <code>email @ thosgood . net</code>
+    <ol>
+      <li><a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">arXiv</a></li>
+      <li><a href="https://orcid.org/<%= @config[:orcid_id] %>">ORCID</a></li>
+      <li><a href="https://github.com/<%= @config[:github_username] %>">GitHub</a></li>
+      <li><a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">Mastodon</a></li>
     </ol>
   </div>
+</div>
 
-  <h4>What I'm doing</h4>
 
-  <p class="fw5">
-    My job is Social Impact Lead at the <a href="https://topos.institute">Topos Institute</a>, based in Oxford, UK.
-  </p>
+<h2>What I'm doing</h2>
 
-  <p>
-    My mathematical research focuses on approaching complex geometry (in particular, coherent analytic sheaves on non-algebraic complex manifolds) through the interface of homotopy theory (model categories, homotopy (co)limits, and simplicial/cubical objects) and algebraic geometry (derived categories, (co)chain complexes, and Maurer–Cartan elements).
-  </p>
+<p>
+  My job is <strong>Social Impact Lead</strong> at the <a href="https://topos.institute">Topos Institute</a>.
+  I'm based in Oxford, UK.
+</p>
 
-  <p>
-    I also have some ongoing side projects:
+<p>
+  My mathematical research focuses on understanding <strong>(non-algebraic) complex geometry</strong> through the lens of <strong>categorical homotopy theory</strong>.
+</p>
 
-    <ul>
-      <li>
-        <a href="https://qubit.guide">qubit.guide</a>
-        &mdash;
-        an online book about introductory quantum information science, co-authored with <a href="https://www.arturekert.org/home" class="dark_link">Artur Ekert</a>, <a href="http://www.ma.rhul.ac.uk/akay/" class="dark_link">Alastair Kay</a>, and <a href="https://fisica.unipv.it/personale/Persona.php?ID=55" class="dark_link">Chiara Macchiavello</a>.
-      </li>
-      <li>
-        <%= link_to('~/translations', '/translations') %>
-        &mdash;
-        translations of maths papers into English.
-      </li>
-      <li>
-        <a href="https://thosgood.net/maths-dictionary">~/maths-dictionary</a>
-        &mdash;
-        an open-source multilingual mathematical dictionary.
-      </li>
-    </ul>
-  </p>
-
-  <h4>What I've done</h4>
+<p>
+  I also have some ongoing side projects:
 
   <ul>
     <li>
-      At the end of 2023, I was a visiting researcher at the <a href="https://www.oist.jp/" class="dark_link">Okinawa Institute of Science and Technology</a> working with Artur Ekert on the online introductory resource <a href="https://qubit.guide">qubit.guide</a> for quantum information science.
+      <a href="https://qubit.guide">qubit.guide</a>
+      &mdash;
+      an online book about introductory quantum information science, co-authored with <a href="https://www.arturekert.org/home">Artur Ekert</a>, <a href="http://www.ma.rhul.ac.uk/akay/">Alastair Kay</a>, and <a href="https://fisica.unipv.it/personale/Persona.php?ID=55">Chiara Macchiavello</a>
     </li>
     <li>
-      From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home" class="dark_link">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig" class="dark_link">Wushi Goldring</a> at Stockholm University.
+      <%= link_to('~/translations', '/translations') %>
+      &mdash;
+      translations of maths papers into English
     </li>
     <li>
-      In 2020, I defended my PhD thesis (<a href="https://tel.archives-ouvertes.fr/tel-02882140">HAL:tel-02882140</a>) at the Université d'Aix-Marseille on the subject of twisting cochains in complex geometry and Chern classes of coherent analytic sheaves, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/" class="dark_link">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/" class="dark_link">Damien Calaque</a>.
-      During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679" class="dark_link">DerSympApp</a> project at the Université de Montpellier.
-    </li>
-    <li>
-      In 2016 I graduated with an MMath from the University of Oxford, after having finished my BA in Mathematics there the previous year.
+      <a href="https://thosgood.net/maths-dictionary">~/maths-dictionary</a>
+      &mdash;
+      an open-source multilingual mathematical dictionary
     </li>
   </ul>
+</p>
 
-  <p>
-    For more details, see <%= link_to('~/cv', '/cv') %>.
-  </p>
+<h2>What I've done</h2>
 
-</div>
+<ul>
+  <li>
+    At the end of 2023, I was a visiting researcher at the <a href="https://www.oist.jp/">Okinawa Institute of Science and Technology</a> working with Artur Ekert on the online introductory resource <a href="https://qubit.guide">qubit.guide</a> for quantum information science.
+  </li>
+
+  <li>
+    From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig">Wushi Goldring</a> at Stockholm University.
+  </li>
+  
+  <li>
+    In 2020, I defended my PhD thesis (on the subject of Chern classes of coherent analytic sheaves through methods of higher category theory) at the Université d'Aix-Marseille, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/">Damien Calaque</a>.
+    During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679">DerSympApp</a> project at the Université de Montpellier.
+  </li>
+
+  <li>
+    In 2016 I graduated with an MMath from the University of Oxford, after having finished my BA in Mathematics there the previous year.
+  </li>
+</ul>
+
+<p>
+  For more details, see <%= link_to('~/cv', '/cv') %>.
+</p>
