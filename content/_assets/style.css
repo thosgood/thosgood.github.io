@@ -300,8 +300,8 @@ content {
 /* | TYPOGRAPHY / Translations | */
 /* |---------------------------| */
 
-ul.fancy-list {
-  margin: 0;
+ul.fancy-citations-list {
+  margin: 0.5em 0;
   padding: 0;
 
   display: flex;
@@ -312,15 +312,26 @@ ul.fancy-list {
     margin: 0;
     padding: 0.5em;
 
-    flex-basis: 60%;
+    flex-basis: 55%;
     /*flex-grow: 1;*/
 
-    border: 1px solid var(--primary);
-    list-style-type: none;
+    /*border: 1px solid var(--primary);*/
+    border-left: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
 
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+  }
+}
+
+.translation-links {
+  display: flex;
+  gap: 0.5em;
+  
+  a {
+    /*padding: 0 0.2em;*/
+    text-decoration: none;
   }
 }
 
