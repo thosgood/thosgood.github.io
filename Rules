@@ -50,11 +50,6 @@ compile '/*.html' do
   layout '/Default.*'
   write item.identifier.without_ext + '/index.html'
 end
-compile '/*.md' do
-  filter :pandoc
-  layout '/Default.*'
-  write item.identifier.without_ext + '/index.html'
-end
 
 
 # BLOG POSTS

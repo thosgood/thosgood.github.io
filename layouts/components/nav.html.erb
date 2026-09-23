@@ -1,20 +1,20 @@
-<nav id="top_navigation">
-  <div id="navigation_name">
-    <span><%= link_to_unless_current(@config[:full_name], '/', :class => 'navigation_link') %></span>
+<nav id="top-navigation">
+  <div id="navigation-name">
+    <%= link_to_unless_current(@config[:full_name], '/', :class => 'navigation-link') %>
   </div>
-  <div id="navigation_pages">
-    <ol class="navigation_list">
+  <div id="navigation-pages">
+    <ol class="navigation-list">
       <li>
-        <%= link_to_unless_current('Work', '/work/', :class => 'navigation_link') %>
+        <%= link_to_unless_current('Work', '/work/', :class => 'navigation-link') %>
       </li>
       <li>
-        <%= link_to_unless_current('Translations', '/translations/', :class => 'navigation_link') %>
+        <%= link_to_unless_current('Translations', '/translations/', :class => 'navigation-link') %>
       </li>
       <li>
-        <%= link_to_unless_current('Blog', '/blog/', :class => 'navigation_link') %>
+        <%= link_to_unless_current('Blog', '/blog/', :class => 'navigation-link') %>
       </li>
       <li>
-        <%= link_to_unless_current('CV', '/cv/', :class => 'navigation_link') %>
+        <%= link_to_unless_current('CV', '/cv/', :class => 'navigation-link') %>
       </li>
     </ol>
   </div>
