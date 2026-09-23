@@ -1,61 +1,95 @@
-/* Papers */
+/* |--------| */
+/* | Papers | */
+/* |--------| */
 
-.citation .author:after {
-  content: '.';
+.citation {
+  .author{
+    &:after { content: '.'; }
+  }
+
+  .title {
+    font-weight: 400;
+    &:before { content: '"'; }
+    &:after { content: '".'; }
+  }
+
+  .journal {
+    font-style: italic;
+  }
+
+  .volume {
+    font-weight: 600;
+  }
+
+  .year{
+    &:before { content: '('; }
+    &:after { content: ')'; }
+  }
+
+  .pages {
+    /*&:before { content: 'pp. '; }*/
+    &:after { content: '.'; }
+  }
+
+  .doi {
+    &:before { content: 'DOI: '; }
+    a { font-weight: 400; }
+  }
+
+  .arxiv {
+    &:before { content: 'arXiv: '; }
+    a { font-weight: 400; }
+  }
+
+  .hal {
+    &:before { content: 'HAL: '; }
+    a { font-weight: 400; }
+  }
 }
 
-.citation .title {
-  font-weight: 400;
-}
-.citation .title:before { content: '"'; }
-.citation .title:after { content: '".'; }
+.spacious-citations {
+  .citation {
+    .title {
+      display: block;
+      &:after { content: '"'; }
+    }
 
-.citation .journal {
-  font-style: italic;
-}
+    .author {
+      display: block;
+      &:after { content: ''; }
+    }
 
-.citation .volume {
-  font-weight: 600;
-}
-
-.citation .year:before { content: '('; }
-.citation .year:after { content: ')'; }
-
-.citation .pages:before { content: 'pp. '; }
-.citation .pages:after { content: '.'; }
-
-.citation .doi:before { content: 'DOI: '; }
-.citation .doi a {
-  font-weight: 400;
-}
-
-.citation .arxiv:before { content: 'arXiv: '; }
-.citation .arxiv a {
-  font-weight: 400;
-}
-
-.citation .hal:before { content: 'HAL: '; }
-.citation .hal a {
-  font-weight: 400;
+    .pages {
+      &:after { content: ''; }
+    }
+  }
 }
 
 
-/* Books */
+/* |-------| */
+/* | Books | */
+/* |-------| */
 
-.book .author:after { content: '.'; }
+.book {
+  .author {
+    &:after { content: '.'; }
+  }
 
-.book .title {
-  font-style: italic;
+  .title {
+    font-style: italic;
+    &:after { content: '.'; }
+  }
+
+  .publisher {
+    &:after { content: ','; }
+  }
+
+  .volume {
+    font-weight: 600;
+  }
+
+  .year {
+    &:before { content: '('; }
+    &:after { content: ').'; }
+  }
 }
-.book .title:after { content: '.'; }
-
-.book .publisher:after { content: ','; }
-
-.book .series {}
-
-.book .volume {
-  font-weight: 600;
-}
-
-.book .year:before { content: '('; }
-.book .year:after { content: ').'; }
