@@ -1,12 +1,4 @@
 **/.DS_Store
-
-# For projects using Nanoc (http://nanoc.ws/)
-
-# Default location for output (needs to match output_dir's value found in nanoc.yaml)
-public/
-
-# Temporary file directory
+_assets/
 tmp/
-
-# Crash Log
 crash.log

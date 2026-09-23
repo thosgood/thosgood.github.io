@@ -35,7 +35,7 @@ Here's a copy of my title and abstract at the moment:
 > In this talk, I will speak about my experiences in working on large translation projects with an open-source approach — the technology and methodology that was helpful for doing so, as well as some of the difficulties — and describe the sorts of resources that I believe would have been helpful. Hopefully this can form a starting point for community thought on the types of projects that we could focus on in the future.
 
 As for geometry, I gave a talk at the [New York City Category Theory Seminar](https://www.sci.brooklyn.cuny.edu/~noson/Seminar/index.html) on "loose simplicial objects", which are a generalisation of some simplicial methods that have been turning up time and time again in the past literature on twisting cochains, amongst other places.
-[My talk](https://www.youtube.com/watch?v=YpOpKzfXRl8) wasn't very good (I severely ran out of time), but [the slides](https://thosgood.net/assets/files/loose-simplicial-objects.pdf) are available, and hopefully there'll be a real paper on the arXiv this year.
+[My talk](https://www.youtube.com/watch?v=YpOpKzfXRl8) wasn't very good (I severely ran out of time), but [the slides](https://thosgood.net/_assets/files/loose-simplicial-objects.pdf) are available, and hopefully there'll be a real paper on the arXiv this year.
 I'm currently thinking about what Clausen (et al) call the "modified Hodge conjecture", but entirely by accident --- it just so happens that the relationship between holomorphic Deligne cohomology and refined notions of coherent analytic sheaves are two things that have been surrounding my research for the past eight years now!
 
 I also took up knitting and my mum showed me how to knit a chicken.
