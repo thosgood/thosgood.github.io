@@ -310,13 +310,17 @@ ul.fancy-list {
 
   li {
     margin: 0;
-    padding: 0.4em;
+    padding: 0.5em;
 
-    flex-basis: 40%;
-    flex-grow: 1;
+    flex-basis: 60%;
+    /*flex-grow: 1;*/
 
     border: 1px solid var(--primary);
     list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
   }
 }
 

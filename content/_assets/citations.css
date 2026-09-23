@@ -48,7 +48,9 @@
   .citation {
     .title {
       display: block;
-      &:after { content: '"'; }
+      font-weight: 600;
+      &:before { content: ''; }
+      &:after { content: ''; }
     }
 
     .author {
