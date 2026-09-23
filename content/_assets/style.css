@@ -23,9 +23,15 @@
 }
 
 
-/* ||========|| */
-/* || LAYOUT || */
-/* ||========|| */
+
+/*
+    __                            __
+   / /   ____ ___  ______  __  __/ /_
+  / /   / __ `/ / / / __ \/ / / / __/
+ / /___/ /_/ / /_/ / /_/ / /_/ / /_
+/_____/\__,_/\__, /\____/\__,_/\__/
+            /____/
+*/
 
 
 /* |------------------| */
@@ -33,7 +39,7 @@
 /* |------------------| */
 
 body {
-  margin: 0 auto;
+  margin: 2em auto;
   max-width: var(--page-width);
 
   display: flex;
@@ -45,7 +51,7 @@ body {
 
   nav {
     width: 100%;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
 
     display: flex;
     flex-direction: row;
@@ -72,12 +78,11 @@ body {
   }
 }
 
-/**/
 
 @media screen and (width <= 900px) {
   body {
-    padding-top: 1em;
-    padding-left: 1em;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
     align-items: flex-start;
 
     nav {
@@ -111,31 +116,43 @@ body {
       aspect-ratio: 1 / 1;
     }
   }
+
+  #about-me-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 }
 
 @media screen and (width <= 900px) {
   #about-me-postcard {
-    flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 2em;
 
-    #about-me-interests {
-      order: 2;
-    }
-    #about-me-links {
-      order: 3;
-      gap: 2em;
-    }
     #about-me-photo {
       order: 1;
+    }
+
+    #about-me-text {
+      order: 2;
+      flex-direction: column;
+      gap: 1em;
     }
   }
 }
 
 
-/* |============| */
-/* | TYPOGRAPHY | */
-/* |============| */
+
+/*
+  ______                                         __
+ /_  __/_  ______  ____  ____ __________ _____  / /_  __  __
+  / / / / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / /
+ / / / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ /
+/_/  \__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, /
+    /____/_/          /____/          /_/          /____/
+*/
 
 
 /* |----------------------| */
@@ -169,6 +186,7 @@ content {
 
   ol, ul {
     margin: 0;
+
     li {
       margin: 0.5em 0;
     }
@@ -213,6 +231,23 @@ content {
 }
 
 
+@media screen and (width <= 900px) {
+  body {
+    nav {
+      .active,
+      .navigation-link {
+        border: 2px solid transparent;
+      }
+
+      .active {
+        padding: 0 0.25em;
+        border-left: 2px solid var(--primary);
+      }
+    }
+  }
+}
+
+
 /* |----------------------------| */
 /* | Typography / Page specific | */
 /* |----------------------------| */
@@ -238,9 +273,9 @@ content {
 }
 
 
-/* |============| */
+/* |------------| */
 /* | Blog posts | */
-/* |============| */
+/* |------------| */
 
 .tag-list {
   font: var(--monospace-font);
