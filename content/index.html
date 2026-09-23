@@ -5,39 +5,59 @@ katex: false
 
 <div id="about-me-postcard">
 
-  <div id="about-me-interests">
-    <h4>Topics of work</h4>
+  <div id="about-me-text">
+    <div id="about-me-interests">
+      <h4>Areas of work</h4>
 
-    <span>pro-social applied maths</span>
-    <span>homotopical complex geometry</span>
-    <span>higher category theory</span>
-    <span>translation & outreach</span>
-  </div>
+      <ul>
+        <li>pro-social applied maths</li>
+        <li>homotopical complex geometry</li>
+        <li>higher category theory</li>
+        <li>translation & outreach</li>
+      </ul>
+    </div>
 
-  <div id="about-me-links">
     <div id="about-me-contact">
       <h4>Contact</h4>
-      <code>email @ thosgood . net</code>
+
+      <ul>
+        <li>
+          <code>email @ thosgood . net</code>
+        </li>
+        <li>
+          <a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">
+          <code>@<%= @config[:mastodon_username] %>@mathstodon.xyz</code>
+          </a>
+        </li>
+      </ul>
     </div>
-    
+
     <div id="about-me-other-links">
       <h4>Other links</h4>
-      <a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">
-        <code>arXiv</code>
-      </a>
-      <a href="https://orcid.org/<%= @config[:orcid_id] %>">
-        <code>ORCID</code>
-      </a>
-      <a href="https://github.com/<%= @config[:github_username] %>">
-        <code>GitHub</code>
-      </a>
-      <a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">
-        <code>Mastodon</code>
-      </a>
+
+      <ul>
+        <li>
+          <a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">
+          arXiv
+          </a>
+        </li>
+        <li>
+          <a href="https://orcid.org/<%= @config[:orcid_id] %>">
+          ORCID
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/<%= @config[:github_username] %>">
+          GitHub
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <img id="about-me-photo" src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean">
+  <div id="about-me-photo">
+    <img src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean">
+  </div>
 
 </div>
 
@@ -45,56 +65,32 @@ katex: false
 <h2>What I'm doing</h2>
 
 <p>
-  My job is <strong>Social Impact Lead</strong> at the <a href="https://topos.institute">Topos Institute</a>.
-  I'm based in Oxford, UK.
+  My job is <strong>Social Impact Lead</strong> at the <a href="https://topos.institute">Topos Institute</a>, based in Oxford, UK, where I work on bringing mathematics and computer science to impact
 </p>
 
 <p>
-  My mathematical research focuses on understanding <strong>(non-algebraic) complex geometry</strong> through the lens of <strong>categorical homotopy theory</strong>.
+  My research in pure mathematics focuses on understanding <strong>(non-algebraic) complex geometry</strong> through the lens of <strong>categorical homotopy theory</strong>.
 </p>
 
-<p>
-  I also have some ongoing side projects:
-
-  <ul>
-    <li>
-      <a href="https://qubit.guide">qubit.guide</a>
-      &mdash;
-      an online book about introductory quantum information science, co-authored with <a href="https://www.arturekert.org/home">Artur Ekert</a>, <a href="http://www.ma.rhul.ac.uk/akay/">Alastair Kay</a>, and <a href="https://fisica.unipv.it/personale/Persona.php?ID=55">Chiara Macchiavello</a>
-    </li>
-    <li>
-      <%= link_to('~/translations', '/translations') %>
-      &mdash;
-      translations of maths papers into English
-    </li>
-    <li>
-      <a href="https://thosgood.net/maths-dictionary">~/maths-dictionary</a>
-      &mdash;
-      an open-source multilingual mathematical dictionary
-    </li>
-  </ul>
-</p>
 
 <h2>What I've done</h2>
 
-<ul>
-  <li>
-    At the end of 2023, I was a visiting researcher at the <a href="https://www.oist.jp/">Okinawa Institute of Science and Technology</a> working with Artur Ekert on the online introductory resource <a href="https://qubit.guide">qubit.guide</a> for quantum information science.
-  </li>
+<p>
+  At the end of 2023, I was a visiting researcher at the <a href="https://www.oist.jp/">Okinawa Institute of Science and Technology</a> working with Artur Ekert on the online introductory resource <a href="https://qubit.guide">qubit.guide</a> for quantum information science.
+</p>
 
-  <li>
-    From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig">Wushi Goldring</a> at Stockholm University.
-  </li>
+<p>
+  From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig">Wushi Goldring</a> at Stockholm University.
+</p>
 
-  <li>
-    In 2020, I defended my PhD thesis (on the subject of Chern classes of coherent analytic sheaves through methods of higher category theory) at the Université d'Aix-Marseille, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/">Damien Calaque</a>.
-    During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679">DerSympApp</a> project at the Université de Montpellier.
-  </li>
+<p>
+  In 2020, I defended my PhD thesis (on the subject of Chern classes of coherent analytic sheaves through methods of higher category theory) at the Université d'Aix-Marseille, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/">Damien Calaque</a>.
+  During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679">DerSympApp</a> project at the Université de Montpellier.
+</p>
 
-  <li>
-    In 2016 I graduated with an MMath from the University of Oxford, after having finished my BA in Mathematics there the previous year.
-  </li>
-</ul>
+<p>
+  In 2016 I graduated with an MMath from the University of Oxford, after having finished my BA in Mathematics there the previous year.
+</p>
 
 <p>
   For more details, see <%= link_to('~/cv', '/cv') %>.
