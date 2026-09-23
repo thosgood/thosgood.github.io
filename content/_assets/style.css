@@ -324,6 +324,14 @@ ul.fancy-list {
   }
 }
 
+@media screen and (width <= 900px) {
+  ul.fancy-list {
+    li {
+      flex-basis: 90%;
+    }
+  }
+}
+
 
 /* |-------------------------| */
 /* | TYPOGRAPHY / Blog posts | */
