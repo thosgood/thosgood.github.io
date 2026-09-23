@@ -18,7 +18,7 @@ module PostHelper
 
   def get_short_date(post)
     attribute_to_time(post[:created_at])
-      .strftime('%y/%m/%d')
+      .strftime('%d/%m/%y')
   end
 
   def get_day(post)
