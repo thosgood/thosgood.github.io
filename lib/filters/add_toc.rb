@@ -14,9 +14,10 @@ class AddTocFilter < Nanoc::Filter
     toc_items.each do |item|
       doc.at_css('#toc').add_child(Nokogiri::HTML.fragment(item))
     end
-    headers.each do |header|
-      header.add_next_sibling(Nokogiri::HTML.fragment('<a href="#post-title" class="toc-back">&#8607;</a>'))
-    end
+    # # "Scroll to top" links
+    # headers.each do |header|
+    #   header.add_next_sibling(Nokogiri::HTML.fragment('<a href="#post-title" class="toc-back">&#8607;</a>'))
+    # end
     doc.to_s
   end
 

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'IM Fell DW Pica';
+  src: url('IMFellDWPica-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IM Fell DW Pica';
+  src: url('IMFellDWPica-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('MapleMono[wght].ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maple Mono';
+  src: url('MapleMono-Italic[wght].ttf') format('truetype');
+  font-style: italic;
+}

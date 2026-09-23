@@ -4,17 +4,15 @@
 
   <body>
 
-    <div id="postcard_main_wrapper" class="mw7 flex flex-column center">
+    <div id="postcard_main_wrapper">
       
-      <%= render '/components/small_header.html.erb' %>
+      <%= render '/components/nav.html.erb' %>
       
-      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv0-ns mv3 ph4">
+      <div id="main">
         <%= yield %>
       </div>
       
       <%= render '/components/small_footer.html.erb' %>
-      
-      <a href="/_assets/images/birds.png" class="tc" style="border: none;"><img src="/_assets/images/2pigeon.gif" alt="a gif of a pigeon flying" class="absolute bottom-0 left-0"></a>
     
     </div>
 

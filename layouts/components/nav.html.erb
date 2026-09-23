@@ -1,0 +1,23 @@
+<div id="nav_wrapper">
+  <div id="nav">
+    <div>
+      <span><%= link_to_unless_current(@config[:full_name], '/', :class => 'nav_link') %></span>
+    </div>
+    <div id="nav_bar">
+      <ol>
+        <li>
+          <%= link_to_unless_current('Work', '/work/', :class => 'nav_link') %>
+        </li>
+        <li>
+          <%= link_to_unless_current('Translations', '/translations/', :class => 'nav_link') %>
+        </li>
+        <li>
+          <%= link_to_unless_current('Blog', '/blog/', :class => 'nav_link') %>
+        </li>
+        <li>
+          <%= link_to_unless_current('CV', '/cv/', :class => 'nav_link') %>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
