@@ -29,12 +29,12 @@ jobs:
 
       - name: Other files
         run: |
-          cp robots.txt public/
+          cp robots.txt _site/
           
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: public
+          FOLDER: _site
           CLEAN: true
