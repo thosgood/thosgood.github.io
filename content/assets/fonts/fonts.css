@@ -43,14 +43,14 @@
 
 @font-face {
   font-family: 'Vollkorn';
-  src: url('Vollkorn-Medium.otf') format('opentype');
+  src: url('Vollkorn-SemiBold.otf') format('opentype');
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Vollkorn';
-  src: url('Vollkorn-MediumItalic.otf') format('opentype');
+  src: url('Vollkorn-SemiBoldItalic.otf') format('opentype');
   font-style: italic;
   font-weight: 600;
 }
