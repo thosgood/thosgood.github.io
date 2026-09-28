@@ -18,7 +18,7 @@ module PostHelper
 
   def get_short_date(post)
     attribute_to_time(post[:created_at])
-      .strftime('%y/%m/%d')
+      .strftime('%d/%m/%y')
   end
 
   def get_day(post)
@@ -52,7 +52,7 @@ module PostHelper
     content = post.compiled_content
     if content =~ /\s#{fold_indicator}\s/
       preview = content.partition(fold_indicator).first +
-      "<a href='#{post.path}' class='post-in-list-summary-continue'>Continue reading &rarr;</a>"
+      "<a href='#{post.path}' class='continue-reading-link'>Continue reading &rarr;</a>"
     end
     return preview
   end

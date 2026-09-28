@@ -1,39 +1,100 @@
 ---
 title: Home
 katex: false
-footer: true
 ---
 
-<div class="content">
+<div id="about-me-postcard">
 
-  <div class="w-80-ns center db mt4-ns">
+  <div id="about-me-text">
+    <div id="about-me-interests">
+      <h4>Areas of work</h4>
 
-    <img src="/assets/images/me.jpg" alt="a photo of me in front of the ocean" class="fl-ns db center ba br4 b--black-70" style="max-width: 14rem;">
+      <ul>
+        <li>homotopical complex geometry</li>
+        <li>higher category theory</li>
+        <li>translation & outreach</li>
+        <li>pro-social applied maths</li>
+      </ul>
+    </div>
 
-    <h3 class="fr-ns tr-ns tc mt0">
-      Tim Hosgood
-    </h3>
+    <div id="about-me-contact">
+      <h4>Contact</h4>
 
-    <p class="fr-ns tr-ns tc mv2 i">
-      pro-social applied maths
-      <br>
-      homotopical complex geometry
-      <br>
-      higher category theory
-      <br>
-      translation & accessibility
-    </p>
+      <ul>
+        <li>
+          <code>email @ thosgood . net</code>
+        </li>
+        <li>
+          <a href="https://mathstodon.xyz/@<%= @config[:mastodon_username] %>">
+          <code>@<%= @config[:mastodon_username] %>@mathstodon.xyz</code>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-    <p class="fr-ns tr-ns tc mv0">
-      &nbsp;&nbsp;———&nbsp;&nbsp;
-    </p>
+    <div id="about-me-other-links">
+      <h4>Other links</h4>
 
-    <p class="fr-ns tr-ns tc mv2">
-      <code>email @ thosgood.net</code>
-      <br>
-      <a href="https://mathstodon.xyz/@thosgood"><code>@thosgood@mathstodon.xyz</code></a>
-    </p>
+      <ul>
+        <li>
+          <a href="https://arxiv.org/a/<%= @config[:arxiv_username] %>">
+          arXiv
+          </a>
+        </li>
+        <li>
+          <a href="https://orcid.org/<%= @config[:orcid_id] %>">
+          ORCID
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/<%= @config[:github_username] %>">
+          GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <div id="about-me-photo">
+    <figure>
+      <img src="/_assets/images/me.jpg" alt="a photo of me in front of the ocean">
+      <figcaption>photos of birds instead of me: <a href="https://www.flickr.com/photos/timhosgood/albums/">Flickr</a></figcaption>
+    </figure>
   </div>
 
 </div>
+
+
+<h2>What I'm doing</h2>
+
+<p>
+  My job is <strong>Social Impact Lead</strong> at the <a href="https://topos.institute">Topos Institute</a>, based in Oxford, UK, where I work on bringing mathematics and computer science to impact
+</p>
+
+<p>
+  My research in pure mathematics focuses on understanding <strong>(non-algebraic) complex geometry</strong> through the lens of <strong>categorical homotopy theory</strong>.
+</p>
+
+
+<h2>What I've done</h2>
+
+<p>
+  At the end of 2023, I was a visiting researcher at the <a href="https://www.oist.jp/">Okinawa Institute of Science and Technology</a> working with Artur Ekert on the online introductory resource <a href="https://qubit.guide">qubit.guide</a> for quantum information science.
+</p>
+
+<p>
+  From 2020 to 2023 I was a postdoc: first with <a href="https://www.arturekert.org/home">Artur Ekert</a> at both the Centre for Quantum Technologies and the University of Oxford; and then with <a href="https://sites.google.com/site/wushijig">Wushi Goldring</a> at Stockholm University.
+</p>
+
+<p>
+  In 2020, I defended my PhD thesis (on the subject of Chern classes of coherent analytic sheaves through methods of higher category theory) at the Université d'Aix-Marseille, supervised by <a href="http://jgrivaux.perso.math.cnrs.fr/">Julien Grivaux</a> and <a href="https://imag.umontpellier.fr/~calaque/">Damien Calaque</a>.
+  During the final year of my PhD, I worked as part of the <a href="https://doi.org/10.3030/768679">DerSympApp</a> project at the Université de Montpellier.
+</p>
+
+<p>
+  In 2016 I graduated with an MMath from the University of Oxford, after having finished my BA in Mathematics there the previous year.
+</p>
+
+<p>
+  For more details, see <%= link_to('~/cv', '/cv') %>.
+</p>

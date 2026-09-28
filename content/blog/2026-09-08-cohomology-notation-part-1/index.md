@@ -33,8 +33,11 @@ $$
     \xrightarrow{d^n} C^{n+1}
     \xrightarrow{d^{n+1}} \ldots
 $$
-where $(C^n\mid n\in\mathbb{Z})$ are objects of $\mathcal{A}$ and $(d^n\mid n\in\mathbb{Z})$ are morphisms in $\mathcal{A}$ *such that* $d^n\circ d^{n-1}=0$, i.e. any composite of these morphisms (called *differentials*) is zero;
-the morphisms between objects in this category are maybe not what you expect, because they're simply the degree-wise morphisms, i.e. $f^\bullet\colon C^\bullet\to D^\bullet$ is just a collection of morphisms $f^n\colon C^n\to D^n$ in $\mathcal{A}$ satisfying absolutely no conditions whatsoever.
+where $(C^n\mid n\in\mathbb{Z})$ are objects of $\mathcal{A}$ and $(d^n\mid n\in\mathbb{Z})$ are morphisms in $\mathcal{A}$ such that any composite of these morphisms (called **differentials**) is zero, i.e.
+$$
+    d^n\circ d^{n-1}=0.
+$$
+Now, the morphisms between objects in this category are maybe not what you expect: they're simply the degree-wise morphisms, i.e. $f^\bullet\colon C^\bullet\to D^\bullet$ is just a collection of morphisms $f^n\colon C^n\to D^n$ in $\mathcal{A}$ satisfying absolutely *no conditions whatsoever*.
 However, we are often interested in those morphisms that respect the differentials, i.e. those such that everything commutes:
 $$
 \begin{CD}
@@ -43,7 +46,7 @@ $$
 \\  \ldots @>{e^{n-1}}>> D^n @>{e^n}>> D^{n+1} @>{e^{n+1}}>> \ldots
 \end{CD}
 $$
-We call such morphisms **chain maps**, and denote the category of cochain complexes with chain maps by $\Ch{\mathcal{A}}$.
+We call such morphisms **chain maps**, and denote the subcategory of cochain complexes with chain maps by $\Ch{\mathcal{A}}$.
 
 Now, here's our first and most fundamental definition today, where we're already going to be using slightly non-standard terminology.
 
@@ -92,7 +95,7 @@ $$
 
 Ok, great, but what about the fact that our arrows are all going left-to-right? Our differentials $\partial_n$ are *decreasing* degree, not increasing it! Indeed, this isn't a cochain complex at all, it's a regular old *chain* complex. Well we can fix this using the standard trick of turning things into co-things in algebra: taking duals. Pick some $\mathbb{Z}$-module[^6] $A$ and define the **singular $n$-cochains in $X$** as
 $$
-    \sigma^n(X)
+    \sigma^n(X;A)
     \coloneqq \Hom_{\Mod{\mathbb{Z}}}\big(\sigma_n(X),A\big)
 $$
 which is itself also a $\mathbb{Z}$-module. Actually, even better than this: $\Hom_{\Mod{\mathbb{Z}}}(-,A)$ is a (contravariant) *functor* and thus gives us morphisms
@@ -114,7 +117,7 @@ whence, finally, another cohomology definition!
 Let $X$ be a topological space. Its **singular cohomology** is the $\mathbb{Z}$-graded collection of abelian groups $(\HH^n(X;A)\mid n\in\mathbb{Z})$, where we define the $n$-th singular cohomology group as the $n$-th internal cohomology group of the cochain complex of singular cochains:
 $$
     \HH^n(X;A)
-    \coloneqq \sHH^n(\sigma^\bullet(X)).
+    \coloneqq \sHH^n(\sigma^\bullet(X;A)).
 $$
 :::
 
@@ -122,12 +125,12 @@ There are three important things to note at this point:
 
 1. *We never really specified anything about the abelian group $A$.*
 
-    Indeed, we really should have called this **singular cohomology with coefficients in $A$**, but I was being lazy. From now on though I promise to follow what is the standard convention: *if we don't specify $A$, then we mean that $A=\mathbb{Z}$*. That is, "singular cohomology" means $\HH^n(X;\mathbb{Z})$.
+    Indeed, we really should have called this **singular cohomology with coefficients in $A$**, but I was being lazy. From now on though I promise to follow what is the standard convention: *if we don't specify $A$, then we mean that $A=\mathbb{Z}$*. That is, "singular cohomology" means $\HH^n(X)\coloneqq\HH^n(X;\mathbb{Z})$.
 
 2. *We're using a fancy $\sHH$ for internal cohomology but basically nobody does this.*
 
-    Yeah, this is something that I went back and forth on for a while when writing this blog post. On one hand, I think it would be very nice and tidy and helpful to use different notation for different things, and indeed the very purpose of this post is to clear up what all the different notation means. On the other hand, it's sometimes detrimental to "lie" about standard conventions, even if they do feel like a slight abuse of notation. In the end, I looked at the first draft of this post, where I wrote $$\HH^n(X;A)\coloneqq\HH^n(\sigma^\bullet(X))$$
-    and decided that I really didn't like it, and quite liked using $\sHH$ for internal cohomology. Anyway, I'm already being pedantic enough to insist on saying *internal* cohomology every single time, so I might as well use a different letter for it.
+    Yeah, this is something that I went back and forth on for a while when writing this blog post. On one hand, I think it would be very nice and tidy and helpful to use different notation for different things, and indeed the very purpose of this post is to clear up what all the different notation means. On the other hand, it's sometimes detrimental to "lie" about standard conventions, even if they do feel like a slight abuse of notation. In the end, I looked at the first draft of this post, where I wrote $$\HH^n(X;A)\coloneqq\HH^n(\sigma^\bullet(X;A))$$
+    and decided that this just seemed confusing to me, and that I quite liked using $\sHH$ for internal cohomology. Anyway, I'm already being pedantic enough to insist on saying *internal* cohomology every single time, so I might as well use a different letter for it.
 
 3. *I have said absolutely nothing about homology, or why we care about singular (co)homology, or what we learn at all about the topological space $X$ by doing this, or...*
 
