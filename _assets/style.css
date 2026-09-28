@@ -1,0 +1,477 @@
+@import url("fonts/fonts.css");
+@import url("citations.css");
+
+:root {
+  --page-width: 900px;
+
+  --orange: #af7350;
+  --purple: #7f5b84;
+  --off-white: #fcfbf8;
+
+  --primary: var(--purple);
+
+  --main-font-family: 'Vollkorn', serif;
+  --main-font-size: 1.2rem;
+
+  --line-height: 1.35;
+
+  --header-font-family: 'IM Fell DW Pica', serif;
+  --h1-font: 1.7em var(--header-font-family);
+  --h2-font: 1.5em var(--header-font-family);
+  --h3-font: italic 1.3em var(--header-font-family);
+  --h4-font: 1.2em var(--header-font-family);
+
+  --monospace-font-family: 'Maple Mono', monospace;
+  --monospace-font: 0.825em var(--monospace-font-family);
+
+  /*--s: 104px; /* control the size*/*/
+  /*--c1: #f6edb3;*/
+  /*--c2: #9cceb5;*/
+  /*--c3: #53b6b2;*/
+
+  /*--_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;*/
+  /*--_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);*/
+  /*background:
+    var(--_g),var(--_g) 0 calc(var(--s)/2),
+    conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+    conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+    linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+    conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+    linear-gradient(-150deg,var(--_l)) var(--c3);*/
+  /*background-size: calc(0.866*var(--s)) var(--s);*/
+}
+
+
+
+/*
+    __                            __
+   / /   ____ ___  ______  __  __/ /_
+  / /   / __ `/ / / / __ \/ / / / __/
+ / /___/ /_/ / /_/ / /_/ / /_/ / /_
+/_____/\__,_/\__, /\____/\__,_/\__/
+            /____/
+*/
+
+
+/* |------------------| */
+/* | LAYOUT / General | */
+/* |------------------| */
+
+body {
+  margin: 2em auto;
+  max-width: var(--page-width);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: var(--main-font-family);
+  background-color: var(--off-white);
+
+  nav {
+    width: 100%;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #navigation-name {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    #navigation-page-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
+  }
+
+  content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (width <= 900px) {
+  body {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    align-items: flex-start;
+
+    nav {
+      padding-top: 0;
+      width: auto;
+      flex-direction: column;
+      gap: 1em;
+
+      #navigation-page-links {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  }
+}
+
+
+/* |--------------------| */
+/* | LAYOUT / Home page | */
+/* |--------------------| */
+
+#about-me-postcard {
+  margin: 1em 0;
+
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+
+  #about-me-photo {
+    img {
+      max-width: 300px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  #about-me-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@media screen and (width <= 900px) {
+  #about-me-postcard {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 2em;
+
+    #about-me-photo {
+      order: 1;
+    }
+
+    #about-me-text {
+      order: 2;
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+}
+
+
+
+/*
+  ______                                         __
+ /_  __/_  ______  ____  ____ __________ _____  / /_  __  __
+  / / / / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / /
+ / / / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ /
+/_/  \__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, /
+    /____/_/          /____/          /_/          /____/
+*/
+
+
+/* |----------------------| */
+/* | TYPOGRAPHY / General | */
+/* |----------------------| */
+
+content {
+  line-height: var(--line-height);
+  font-size: var(--main-font-size);
+
+  hr {
+    width: 100%;
+    color: black;
+  }
+
+  h1 {
+    font: var(--h1-font);
+  }
+  h2 {
+    font: var(--h2-font);
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid black;
+  }
+  h3 {
+    font: var(--h3-font);
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+  }
+  h4 {
+    font: var(--h4-font);
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+
+  ol, ul {
+    margin: 0;
+
+    li {
+      margin: 1em 0;
+    }
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    border: 1px solid transparent;
+  }
+  a:hover {
+    border: 1px dashed var(--primary);
+  }
+
+  .subtle-link {
+    color: black;
+  }
+
+  code {
+    font: var(--monospace-font);
+  }
+}
+
+#top-navigation {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  span.active,
+  a.navigation-link {
+    color: var(--primary);
+    font: var(--h2-font);
+  }
+
+  .active {
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .navigation-link {
+    text-decoration: none;
+  }
+  .navigation-link:hover {
+    border-bottom: 2px dashed var(--primary);
+  }
+}
+
+
+@media screen and (width <= 900px) {
+  body {
+    nav {
+      .active,
+      .navigation-link {
+        border: 2px solid transparent;
+      }
+
+      .active {
+        padding: 0 0.25em;
+        border-left: 2px solid var(--primary);
+      }
+    }
+  }
+}
+
+
+/* |------------------------| */
+/* | TYPOGRAPHY / Home page | */
+/* |------------------------| */
+
+#about-me-postcard {
+  #about-me-photo {
+    img {
+      border-radius: 1em;
+    }
+  }
+
+  #about-me-text {
+    h4 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style-type: '* ';
+
+      li {
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+
+/* |---------------------------| */
+/* | TYPOGRAPHY / Translations | */
+/* |---------------------------| */
+
+ul.fancy-citations-list {
+  margin: 0.5em 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+
+  li {
+    margin: 0;
+    padding: 0.5em;
+
+    flex-basis: 55%;
+    /*flex-grow: 1;*/
+
+    /*border: 1px solid var(--primary);*/
+    border-left: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+.translation-links {
+  display: flex;
+  gap: 0.5em;
+
+  a {
+    /*padding: 0 0.2em;*/
+    text-decoration: none;
+  }
+}
+
+@media screen and (width <= 900px) {
+  ul.fancy-list {
+    li {
+      flex-basis: 90%;
+    }
+  }
+}
+
+
+/* |---------------------------| */
+/* | TYPOGRAPHY / Blog archive | */
+/* |---------------------------| */
+
+#blog-archive {
+  .blog-archive-entry {
+    margin: 2.5em 0;
+
+    h3 {
+      font-style: normal;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .continue-reading-link {
+      float: right;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/* |-------------------------| */
+/* | TYPOGRAPHY / Blog posts | */
+/* |-------------------------| */
+
+.tag-list {
+  font: var(--monospace-font);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+article {
+  .katex {
+    font-size: 1.1em;
+  }
+
+  #post-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px dashed var(--primary);
+
+    & > * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #post-tag-list {
+      a {
+        font: var(--monospace-font);
+      }
+    }
+  }
+
+  #post-content {
+    font-size: 110%;
+
+    h1 {
+      margin: 1.5em 0 1em 0;
+    }
+    h2 {
+      margin: 1em 0 0.75em 0;
+    }
+
+    img {
+      max-width: 80%;
+    }
+
+    .footnote-ref {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    table {
+      margin: 1em 0;
+    }
+
+    /* Environments */
+
+    .rmenv,
+    .itenv {
+      padding-left: 1em;
+      border-left: 2px solid var(--primary);
+      border-radius: 0.25em;
+    }
+    .itenv {
+      font-style: italic;
+      em {
+        font-style: normal !important;
+      }
+    }
+    .rmenv[title]::before,
+    .itenv[title]::before {
+      font-family: var(--header-font-family);
+      font-weight: 600;
+      content: attr(title)".";
+    }
+  }
+}

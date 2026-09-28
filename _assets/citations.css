@@ -1,0 +1,94 @@
+/* |--------| */
+/* | Papers | */
+/* |--------| */
+
+.citation {
+  .author{
+    &:after { content: '.'; }
+  }
+
+  .title {
+    font-weight: 400;
+    &:before { content: '"'; }
+    &:after { content: '".'; }
+  }
+
+  .journal {
+    font-style: italic;
+  }
+
+  .volume {
+    font-weight: 600;
+  }
+
+  .year{
+    &:before { content: '('; }
+    &:after { content: ')'; }
+  }
+
+  .pages {
+    /*&:before { content: 'pp. '; }*/
+    &:after { content: '.'; }
+  }
+
+  .doi {
+    &:before { content: 'DOI: '; }
+  }
+
+  .arxiv {
+    &:before { content: 'arXiv: '; }
+  }
+
+  .hal {
+    &:before { content: 'HAL: '; }
+  }
+}
+
+.spacious-citations {
+  .citation {
+    .title {
+      display: block;
+      font-weight: 600;
+      &:before { content: ''; }
+      &:after { content: ''; }
+    }
+
+    .author {
+      display: block;
+      &:after { content: ''; }
+    }
+
+    .pages {
+      &:after { content: ''; }
+    }
+  }
+}
+
+
+/* |-------| */
+/* | Books | */
+/* |-------| */
+
+.book {
+  .author {
+    &:after { content: '.'; }
+  }
+
+  .title {
+    font-style: italic;
+    &:after { content: '.'; }
+  }
+
+  .publisher {
+    &:after { content: ','; }
+  }
+
+  .volume {
+    font-weight: 600;
+  }
+
+  .year {
+    &:before { content: '('; }
+    &:after { content: ').'; }
+  }
+}

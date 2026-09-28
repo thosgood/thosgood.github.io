@@ -31,28 +31,38 @@ start recording these definitions in a table that we can add to as we go
 along. Let’s see what we have so far:&lt;/p&gt;
 &lt;table&gt;
 &lt;colgroup&gt;
-&lt;col style="width: 13%" /&gt;
-&lt;col style="width: 60%" /&gt;
-&lt;col style="width: 26%" /&gt;
+&lt;col style="width: 16%" /&gt;
+&lt;col style="width: 16%" /&gt;
+&lt;col style="width: 25%" /&gt;
+&lt;col style="width: 41%" /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Cohomology&lt;/th&gt;
-&lt;th&gt;Input&lt;/th&gt;
-&lt;th&gt;Notation&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Cohomology&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Notation&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Definition&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Input&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;internal&lt;/td&gt;
-&lt;td&gt;cochain complex &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;span class="math inline"&gt;\mathscr{H}^n(C^\bullet)&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;internal&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span
+class="math inline"&gt;\mathscr{H}^n(C^\bullet)&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span
+class="math inline"&gt;{\operatorname{Ker}d^n}/{\operatorname{Im}d^{n-1}}&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;cochain complex &lt;span
+class="math inline"&gt;C^\bullet&lt;/span&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;singular&lt;/td&gt;
-&lt;td&gt;topological space &lt;span class="math inline"&gt;X&lt;/span&gt;; coefficient
-group &lt;span class="math inline"&gt;A&lt;/span&gt;&lt;/td&gt;
-&lt;td&gt;&lt;span class="math inline"&gt;\mathrm{H}^n(X;A)&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;singular&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span
+class="math inline"&gt;\mathrm{H}^n(X;A)&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;&lt;span
+class="math inline"&gt;\mathscr{H}^n(\sigma^\bullet(X))&lt;/span&gt;&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;topological space &lt;span
+class="math inline"&gt;X&lt;/span&gt;; coefficient group &lt;span
+class="math inline"&gt;A&lt;/span&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -593,17 +603,19 @@ the form &lt;span class="math display"&gt;
 &lt;/span&gt; where &lt;span class="math inline"&gt;(C^n\mid n\in\mathbb{Z})&lt;/span&gt;
 are objects of &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; and &lt;span
 class="math inline"&gt;(d^n\mid n\in\mathbb{Z})&lt;/span&gt; are morphisms in
-&lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; &lt;em&gt;such that&lt;/em&gt; &lt;span
-class="math inline"&gt;d^n\circ d^{n-1}=0&lt;/span&gt;, i.e. any composite of
-these morphisms (called &lt;em&gt;differentials&lt;/em&gt;) is zero; the morphisms
-between objects in this category are maybe not what you expect, because
-they’re simply the degree-wise morphisms, i.e. &lt;span
-class="math inline"&gt;f^\bullet\colon C^\bullet\to D^\bullet&lt;/span&gt; is
-just a collection of morphisms &lt;span class="math inline"&gt;f^n\colon
-C^n\to D^n&lt;/span&gt; in &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt;
-satisfying absolutely no conditions whatsoever. However, we are often
-interested in those morphisms that respect the differentials, i.e. those
-such that everything commutes: &lt;span class="math display"&gt;
+&lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; such that any composite of
+these morphisms (called &lt;strong&gt;differentials&lt;/strong&gt;) is zero, i.e.
+&lt;span class="math display"&gt;
+    d^n\circ d^{n-1}=0.
+&lt;/span&gt; Now, the morphisms between objects in this category are maybe
+not what you expect: they’re simply the degree-wise morphisms,
+i.e. &lt;span class="math inline"&gt;f^\bullet\colon C^\bullet\to
+D^\bullet&lt;/span&gt; is just a collection of morphisms &lt;span
+class="math inline"&gt;f^n\colon C^n\to D^n&lt;/span&gt; in &lt;span
+class="math inline"&gt;\mathcal{A}&lt;/span&gt; satisfying absolutely &lt;em&gt;no
+conditions whatsoever&lt;/em&gt;. However, we are often interested in those
+morphisms that respect the differentials, i.e. those such that
+everything commutes: &lt;span class="math display"&gt;
 \begin{CD}
     \ldots @&amp;gt;{d^{n-1}}&amp;gt;&amp;gt; C^n @&amp;gt;{d^n}&amp;gt;&amp;gt; C^{n+1}
 @&amp;gt;{d^{n+1}}&amp;gt;&amp;gt; \ldots
@@ -612,7 +624,7 @@ such that everything commutes: &lt;span class="math display"&gt;
 @&amp;gt;{e^{n+1}}&amp;gt;&amp;gt; \ldots
 \end{CD}
 &lt;/span&gt; We call such morphisms &lt;strong&gt;chain maps&lt;/strong&gt;, and denote
-the category of cochain complexes with chain maps by &lt;span
+the subcategory of cochain complexes with chain maps by &lt;span
 class="math inline"&gt;\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Now, here’s our first and most fundamental definition today, where
 we’re already going to be using slightly non-standard terminology.&lt;/p&gt;
@@ -712,7 +724,7 @@ role="doc-noteref"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; &lt;span class="math in
 and define the &lt;strong&gt;singular &lt;span
 class="math inline"&gt;n&lt;/span&gt;-cochains in &lt;span
 class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as &lt;span class="math display"&gt;
-    \sigma^n(X)
+    \sigma^n(X;A)
     \coloneqq
 \operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}\big(\sigma_n(X),A\big)
 &lt;/span&gt; which is itself also a &lt;span
@@ -742,7 +754,7 @@ class="math inline"&gt;n&lt;/span&gt;-th singular cohomology group as the &lt;sp
 class="math inline"&gt;n&lt;/span&gt;-th internal cohomology group of the cochain
 complex of singular cochains: &lt;span class="math display"&gt;
     \mathrm{H}^n(X;A)
-    \coloneqq \mathscr{H}^n(\sigma^\bullet(X)).
+    \coloneqq \mathscr{H}^n(\sigma^\bullet(X;A)).
 &lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;There are three important things to note at this point:&lt;/p&gt;
@@ -756,7 +768,7 @@ standard convention: &lt;em&gt;if we don’t specify &lt;span
 class="math inline"&gt;A&lt;/span&gt;, then we mean that &lt;span
 class="math inline"&gt;A=\mathbb{Z}&lt;/span&gt;&lt;/em&gt;. That is, “singular
 cohomology” means &lt;span
-class="math inline"&gt;\mathrm{H}^n(X;\mathbb{Z})&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
+class="math inline"&gt;\mathrm{H}^n(X)\coloneqq\mathrm{H}^n(X;\mathbb{Z})&lt;/span&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;We’re using a fancy &lt;span
 class="math inline"&gt;\mathscr{H}&lt;/span&gt; for internal cohomology but
 basically nobody does this.&lt;/em&gt;&lt;/p&gt;
@@ -768,12 +780,12 @@ different notation means. On the other hand, it’s sometimes detrimental
 to “lie” about standard conventions, even if they do feel like a slight
 abuse of notation. In the end, I looked at the first draft of this post,
 where I wrote &lt;span
-class="math display"&gt;\mathrm{H}^n(X;A)\coloneqq\mathrm{H}^n(\sigma^\bullet(X))&lt;/span&gt;
-and decided that I really didn’t like it, and quite liked using &lt;span
-class="math inline"&gt;\mathscr{H}&lt;/span&gt; for internal cohomology. Anyway,
-I’m already being pedantic enough to insist on saying &lt;em&gt;internal&lt;/em&gt;
-cohomology every single time, so I might as well use a different letter
-for it.&lt;/p&gt;&lt;/li&gt;
+class="math display"&gt;\mathrm{H}^n(X;A)\coloneqq\mathrm{H}^n(\sigma^\bullet(X;A))&lt;/span&gt;
+and decided that this just seemed confusing to me, and that I quite
+liked using &lt;span class="math inline"&gt;\mathscr{H}&lt;/span&gt; for internal
+cohomology. Anyway, I’m already being pedantic enough to insist on
+saying &lt;em&gt;internal&lt;/em&gt; cohomology every single time, so I might as
+well use a different letter for it.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;em&gt;I have said absolutely nothing about homology, or why we care
 about singular (co)homology, or what we learn at all about the
 topological space &lt;span class="math inline"&gt;X&lt;/span&gt; by doing this,
@@ -1042,7 +1054,7 @@ turning up time and time again in the past literature on twisting
 cochains, amongst other places. &lt;a
 href="https://www.youtube.com/watch?v=YpOpKzfXRl8"&gt;My talk&lt;/a&gt; wasn’t
 very good (I severely ran out of time), but &lt;a
-href="https://thosgood.net/assets/files/loose-simplicial-objects.pdf"&gt;the
+href="https://thosgood.net/_assets/files/loose-simplicial-objects.pdf"&gt;the
 slides&lt;/a&gt; are available, and hopefully there’ll be a real paper on the
 arXiv this year. I’m currently thinking about what Clausen (et al) call
 the “modified Hodge conjecture”, but entirely by accident — it just so

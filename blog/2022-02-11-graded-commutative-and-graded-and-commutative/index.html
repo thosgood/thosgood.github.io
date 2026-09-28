@@ -1,92 +1,63 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tim_hosgood">
-    <meta name="twitter:title" content="Graded commutative rings and graded and commutative rings // Tim Hosgood">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
 
     
     <title>Graded commutative rings and graded and commutative rings | Tim Hosgood</title>
     
 
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
-    <link rel="stylesheet" href="/assets/css/post.css">
-    <link rel="stylesheet" href="/assets/css/citations.css">
+    <link rel="stylesheet" href="/_assets/style.css">
+    
+    <link rel="stylesheet" href="/_assets/katex/katex.min.css">
+    
 
-    <link rel="stylesheet" href="/assets/css/tachyons.css">
-    <link rel="stylesheet" href="/assets/katex/katex.min.css">
-
-    <link rel="me" href="https://mathstodon.xyz/@thosgood">
+    <link rel="me" href="https://mathstodon.xyz/@thosgood"></a>
 </head>
 
 
   <body>
 
-    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
-  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
-    <div class="w-third-ns tl pv0-ns pv3 center">
-      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
-    </div>
-    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
-      <ol class="fr-ns list ma0 pl0">
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/about/">About</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/work/">Work</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/translations/">Translations</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/blog/">Blog</a>
-        </li>
-        <li class="pl2-ns pl1 dib f4">
-          <a class="nav_link" href="/cv/">CV</a>
-        </li>
-      </ol>
-    </div>
+    <nav id="top-navigation">
+  <div id="navigation-name">
+    <a class="navigation-link" href="/">Tim Hosgood</a>
   </div>
-</div>
+  <div id="navigation-page-links">
+    <a class="navigation-link" href="/research/">Research</a>
+    <a class="navigation-link" href="/translations/">Translations</a>
+    <a class="navigation-link" href="/blog/">Blog</a>
+    <a class="navigation-link" href="/cv/">CV</a>
+  </div>
+</nav>
 
 
-    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
-      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
-        
-  <div id="post-nav" class="w-100-ns w-100">
-    <!-- Display settings -->
+    <content id="main">
+      
+
+<article>
+
+  <div id="post-title-block">
     
-    <!-- Navigation -->
-    <a href="/blog/#2022-02-11-graded-commutative-and-graded-and-commutative-" class="fr f5">← Return to all posts</a>
-  </div>
-  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
-    <h1 id="post-title">Graded commutative rings and graded and commutative rings</h1>
-    <h2 id="post-part"></h2>
-    <h6 id="post-date">11th of February, 2022</h6>
-    <div class="tag-list">
+    <h1 id="post-title">
+      <a href="/blog/">Blog</a> / Graded commutative rings and graded and commutative rings
+    </h1>
+    
+
+    <p id="post-date">11th of February, 2022</p>
+
+    
+    
+
+    
+    <div id="post-tag-list">
       <a href="/blog/algebraic-topology" rel="tag">algebraic-topology</a>
     </div>
-    <!-- Other posts in the same series -->
-    
   </div>
-  <div id="post-content" class="w-90-ns ph3-ns w-100">
-    <!-- Content -->
-    <ol id="toc">
-<li><a href="#graded-rings">Graded rings</a></li>
-<li><a href="#commutativity">Commutativity</a></li>
-<li><a href="#freeness">Freeness</a></li>
-<li><a href="#circles-and-spheres">Circles and spheres</a></li>
-<li><a href="#the-k%C3%BCnneth-theorem">The Künneth theorem</a></li>
-<li><a href="#some-useful-cohomology-rings">Some useful cohomology rings</a></li>
-</ol>
-<p>One of the many reasons that teaching is fun is because you get to
+
+  
+  <div id="post-content">
+    <p>One of the many reasons that teaching is fun is because you get to
 look back at things that you haven’t seen in a while and try to
 understand them in light of what you’ve learnt in the meantime. This
 means that you sometimes have the unexpected joy of having to teach
@@ -102,16 +73,19 @@ course on algebraic topology (e.g. knows what the cup product in
 cohomology is).</p>
 <!-- more -->
 <h1 id="graded-rings">Graded rings</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Our starting point is the omnipresent <em>polynomial ring</em>: given
-a ring <span class="math inline">S</span>, we define <span class="math inline">S[x]</span> to be the set of polynomials in one
+a ring <span class="math inline">S</span>, we define <span
+class="math inline">S[x]</span> to be the set of polynomials in one
 variable (namely <span class="math inline">x</span>) with coefficients
-in <span class="math inline">S</span>, so elements of <span class="math inline">S[x]</span> are of the form <span class="math display">
+in <span class="math inline">S</span>, so elements of <span
+class="math inline">S[x]</span> are of the form <span
+class="math display">
   f = s_n x^n + s_{n-1} x^{n-1} + \ldots + s_1 x + s_0
 </span> where the <span class="math inline">s_i</span> are elements of
 <span class="math inline">R</span>. (More generally, we have the
 <em>polynomial ring in <span class="math inline">n</span>
-indeterminates</em>: <span class="math inline">S[x_1,x_2,\ldots,x_n]</span>, which is entirely
+indeterminates</em>: <span
+class="math inline">S[x_1,x_2,\ldots,x_n]</span>, which is entirely
 analogous, but with more than one variable; this is important, but we
 don’t need to worry about it too much for now).</p>
 <p>These rings are <em>really</em> nice, in lots of ways that we won’t
@@ -134,24 +108,31 @@ monomials, basically by definition of what it means to be a polynomial:
 structure!</p>
 <div class="rmenv" title="Definition">
 <p>A ring <span class="math inline">R</span> is a <em>graded ring</em>
-if there exist abelian groups <span class="math inline">(R_d)_{d\in\mathbb{N}}</span>, where <span class="math inline">R_d\subseteq R</span> for all <span class="math inline">d\in\mathbb{N}</span>, such that</p>
+if there exist abelian groups <span
+class="math inline">(R_d)_{d\in\mathbb{N}}</span>, where <span
+class="math inline">R_d\subseteq R</span> for all <span
+class="math inline">d\in\mathbb{N}</span>, such that</p>
 <ol type="i">
-<li>
-<span class="math inline">R\cong\bigoplus_{d=0}^\infty
+<li><span class="math inline">R\cong\bigoplus_{d=0}^\infty
 R_d</span>;</li>
-<li>
-<span class="math inline">R_d R_e\subseteq R_{d+e}</span>.</li>
+<li><span class="math inline">R_d R_e\subseteq R_{d+e}</span>.</li>
 </ol>
 <p>Given <span class="math inline">r\in R\setminus\{0\}</span>, if there
 exists some <span class="math inline">d\in\mathbb{N}</span> such that
-<span class="math inline">r\in R_d</span>, then we say that <span class="math inline">r</span> is <em>homogeneous of degree <span class="math inline">d</span></em>, and we write <span class="math inline">|r|=d</span>.</p>
+<span class="math inline">r\in R_d</span>, then we say that <span
+class="math inline">r</span> is <em>homogeneous of degree <span
+class="math inline">d</span></em>, and we write <span
+class="math inline">|r|=d</span>.</p>
 </div>
 <p>The prototypical example is the thing we started with: the polynomial
-ring <span class="math inline">R=S[x]</span> is a graded ring with <span class="math inline">R_d\coloneqq\{sx^d \mid s\in S\}</span>; the more
-general polynomial ring <span class="math inline">R=S[x_1,\ldots,x_n]</span> in <span class="math inline">n</span> variables is a graded ring with <span class="math inline">R_d\coloneqq\{s x_1^{m_1}x_2^{m_2}\cdots
+ring <span class="math inline">R=S[x]</span> is a graded ring with <span
+class="math inline">R_d\coloneqq\{sx^d \mid s\in S\}</span>; the more
+general polynomial ring <span
+class="math inline">R=S[x_1,\ldots,x_n]</span> in <span
+class="math inline">n</span> variables is a graded ring with <span
+class="math inline">R_d\coloneqq\{s x_1^{m_1}x_2^{m_2}\cdots
 x_n^{m_n}\mid s\in S, m_1+m_2+\ldots+m_n=d\}</span>.</p>
 <h1 id="commutativity">Commutativity</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Now let’s talk about something confusing: what is a <em>graded
 commutative ring</em>? Or should we say <em>commutative graded
 ring</em>? Or should these two things be different?</p>
@@ -178,8 +159,10 @@ R</span>.</p>
 </div>
 <p>So this is a slightly odd definition: graded commutativity is like
 commutativity, but with a possible minus sign, depending on the degree
-of the (homogeneous) elements.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> To understand this
-better, let’s turn back to our good old friend <span class="math inline">S[x]</span>. If <span class="math inline">S</span>
+of the (homogeneous) elements.<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a> To understand this
+better, let’s turn back to our good old friend <span
+class="math inline">S[x]</span>. If <span class="math inline">S</span>
 is commutative, then <span class="math inline">S[x]</span> is clearly
 commutative, but is it graded commutative? Shockingly, no! Indeed, we
 are asking if the following equality holds <span class="math display">
@@ -192,13 +175,17 @@ are asking if the following equality holds <span class="math display">
 <p>The first one can happen (if <span class="math inline">S</span> is a
 field of characteristic <span class="math inline">2</span>, for example,
 e.g. <span class="math inline">\mathbb{Z}/2\mathbb{Z}</span>), but the
-second one cannot, by the very definition of <span class="math inline">S[x]</span>. <em>But</em> this second case does
-happen in the <em>ring of dual numbers</em> <span class="math inline">S[x]/(x^2)</span>.</p>
-<p>Going back to the polynomial ring <span class="math inline">S[x]</span>, we could also do something entirely
+second one cannot, by the very definition of <span
+class="math inline">S[x]</span>. <em>But</em> this second case does
+happen in the <em>ring of dual numbers</em> <span
+class="math inline">S[x]/(x^2)</span>.</p>
+<p>Going back to the polynomial ring <span
+class="math inline">S[x]</span>, we could also do something entirely
 different and <em>define</em> <span class="math inline">x</span> to be
 of <em>degree <span class="math inline">2</span></em>. That is, we are
 giving <span class="math inline">S[x]</span> a <em>different</em> graded
-ring structure: <span class="math inline">S[x]\cong\bigoplus_{d=0}^\infty R_d</span> where
+ring structure: <span
+class="math inline">S[x]\cong\bigoplus_{d=0}^\infty R_d</span> where
 <span class="math display">
   R_d =
   \begin{cases}
@@ -208,7 +195,8 @@ ring structure: <span class="math inline">S[x]\cong\bigoplus_{d=0}^\infty R_d</s
 </span> (After a little bit of thought, you can see that this is “the
 same as” simply looking at <span class="math inline">S[y^2]</span>,
 where <span class="math inline">y</span> is an indeterminate of degree
-<span class="math inline">1</span> again). Then we have that <span class="math display">
+<span class="math inline">1</span> again). Then we have that <span
+class="math display">
   (-1)^{|x||x|} x\cdot x = x^2
 </span> and so this graded ring <em>is</em> graded commutative.</p>
 <p>A nice little summary table would be helpful right about now (and,
@@ -224,24 +212,30 @@ just in this table, we’re going to make the assumption that
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x]</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x]</span></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2=0</span> in <span class="math inline">S</span>)</td>
+<td style="text-align: center;">❌ (<strong>unless</strong> <span
+class="math inline">2=0</span> in <span
+class="math inline">S</span>)</td>
 </tr>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x]/(x^2)</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x]/(x^2)</span></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x^2]</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x^2]</span></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
 <p>Let’s look at one more example that we’re going to need when it comes
-to doing some algebraic topology: the <em>exterior algebra</em> <span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> of a ring
+to doing some algebraic topology: the <em>exterior algebra</em> <span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> of a ring
 <span class="math inline">S</span> can be defined as the graded ring
 <span class="math display">
   \Lambda_S[\alpha_1,\ldots,\alpha_n] \coloneqq
@@ -249,15 +243,20 @@ S[\alpha_1,\ldots,\alpha_n]/(\alpha_i^2,\alpha_i\alpha_j+\alpha_j\alpha_i)_{1\le
 i,j\leq n}
 </span> where each <span class="math inline">\alpha_i</span> is of
 degree <span class="math inline">1</span> (although, again, we can
-modify this if we want to). Note that <span class="math inline">\Lambda_S[\alpha]\cong S[\alpha]/(\alpha^2)</span>,
+modify this if we want to). Note that <span
+class="math inline">\Lambda_S[\alpha]\cong S[\alpha]/(\alpha^2)</span>,
 i.e. <em>the exterior algebra of <span class="math inline">S</span> in
 one variable is exactly the ring of dual numbers</em>.</p>
-<p>The exterior algebra is commutative (if <span class="math inline">S</span> is), but is it graded commutative? Well
-it’s enough to check the condition on the generators <span class="math inline">\alpha_i</span>, but we see that <span class="math display">
+<p>The exterior algebra is commutative (if <span
+class="math inline">S</span> is), but is it graded commutative? Well
+it’s enough to check the condition on the generators <span
+class="math inline">\alpha_i</span>, but we see that <span
+class="math display">
   \alpha_i\alpha_j
   = -\alpha_j\alpha_i
   = (-1)^{|\alpha_i||\alpha_j|}\alpha_j\alpha_i
-</span> where the first equality is exactly by the definition of <span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> (and note
+</span> where the first equality is exactly by the definition of <span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> (and note
 that, if <span class="math inline">i=j</span>, then everything is zero,
 and we definitely have that <span class="math inline">0=0</span>).</p>
 <p>Back to our table:</p>
@@ -271,63 +270,85 @@ and we definitely have that <span class="math inline">0=0</span>).</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x]</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x]</span></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2=0</span> in <span class="math inline">S</span>)</td>
+<td style="text-align: center;">❌ (<strong>unless</strong> <span
+class="math inline">2=0</span> in <span
+class="math inline">S</span>)</td>
 </tr>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x^2]</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x^2]</span></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td style="text-align: center;"><span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
-<td style="text-align: center;">❌ (unless <span class="math inline">n=1</span>)</td>
+<td style="text-align: center;"><span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
+<td style="text-align: center;">❌ (unless <span
+class="math inline">n=1</span>)</td>
 <td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p>(we’ve removed the row for <span class="math inline">S[x]/(x^2)</span>, since this is just a specific
-example of the exterior algebra <span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> where
+<p>(we’ve removed the row for <span
+class="math inline">S[x]/(x^2)</span>, since this is just a specific
+example of the exterior algebra <span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> where
 <span class="math inline">n=1</span>.)</p>
 <h1 id="freeness">Freeness</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Unrelated to the property of (graded) commutativity is that of being
 <em>free</em>. For <em>commutative</em> rings, being free basically
 means being isomorphic to a polynomial ring in finitely many variables.
 So <span class="math inline">S[x]</span> is free (as a commutative
-ring), as is <span class="math inline">S[x^2]</span>, but <span class="math inline">S[x]/(x^2)</span> is <em>not</em> free (as a
-commutative ring) — the latter has a nilpotent element (i.e. some <span class="math inline">r</span> such that <span class="math inline">r^2=0</span>, namely <span class="math inline">r=x</span>) and free commutative rings never have
+ring), as is <span class="math inline">S[x^2]</span>, but <span
+class="math inline">S[x]/(x^2)</span> is <em>not</em> free (as a
+commutative ring) — the latter has a nilpotent element (i.e. some <span
+class="math inline">r</span> such that <span
+class="math inline">r^2=0</span>, namely <span
+class="math inline">r=x</span>) and free commutative rings never have
 nilpotent elements, so it cannot be isomorphic to a free commutative
-ring.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+ring.<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></p>
 <p>But note that I’ve been very careful to say “free <em>as a
-commutative ring</em>”, and this is important: <span class="math inline">\Lambda_S[\alpha]</span> is <strong>not</strong> a
+commutative ring</em>”, and this is important: <span
+class="math inline">\Lambda_S[\alpha]</span> is <strong>not</strong> a
 free <em>commutative ring</em>, but it <strong>is</strong> a free
 <em>graded commutative ring</em>. What do I mean by this? I mean that,
-if we just use the fact that <span class="math inline">\Lambda_S[\alpha]</span> is a graded commutative
+if we just use the fact that <span
+class="math inline">\Lambda_S[\alpha]</span> is a graded commutative
 ring, <em>forgetting all about how it’s actually defined</em>, then we
 can recover the fact that <span class="math inline">\alpha_i^2=0</span>
 and <span class="math inline">\alpha_i\alpha_j=-\alpha_j\alpha_i</span>
 <em>without having to ask for it</em> (…most of the time).</p>
-<p>That is, if we know that <span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> is graded
+<p>That is, if we know that <span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> is graded
 commutative, then we know that <span class="math display">
   \alpha_i\cdot\alpha_i =
 (-1)^{|\alpha_i||\alpha_i|}\alpha_i\cdot\alpha_i =
 -\alpha_i\cdot\alpha_i
 </span> which rearranges to give <span class="math display">
   2\alpha_i^2=0.
-</span> But then, if we can <em>divide by <span class="math inline">2</span></em> (i.e. if <span class="math inline">2</span> is an invertible element) in our ring <span class="math inline">S</span>, then we see that <span class="math inline">\alpha^2</span> <em>must be</em> equal to zero,
-automatically! (The other relation that we need to impose, that <span class="math inline">\alpha_i\alpha_j=-\alpha_j\alpha_i</span> is exactly
-the definition of being graded commutative (since all our <span class="math inline">\alpha_i</span> are of degree <span class="math inline">1</span>), so we don’t even need to worry about
+</span> But then, if we can <em>divide by <span
+class="math inline">2</span></em> (i.e. if <span
+class="math inline">2</span> is an invertible element) in our ring <span
+class="math inline">S</span>, then we see that <span
+class="math inline">\alpha^2</span> <em>must be</em> equal to zero,
+automatically! (The other relation that we need to impose, that <span
+class="math inline">\alpha_i\alpha_j=-\alpha_j\alpha_i</span> is exactly
+the definition of being graded commutative (since all our <span
+class="math inline">\alpha_i</span> are of degree <span
+class="math inline">1</span>), so we don’t even need to worry about
 enforcing that one separately!)</p>
 <p>Of course, I’m going to put this in the table (and I’ll write
 “gc-ring” to mean “graded commutative ring”).</p>
 <table>
 <colgroup>
-<col style="width: 18%">
-<col style="width: 19%">
-<col style="width: 31%">
-<col style="width: 31%">
+<col style="width: 18%" />
+<col style="width: 19%" />
+<col style="width: 31%" />
+<col style="width: 31%" />
 </colgroup>
 <thead>
 <tr>
@@ -339,22 +360,32 @@ enforcing that one separately!)</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><span class="math inline">S[x]</span></td>
+<td style="text-align: center;"><span
+class="math inline">S[x]</span></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2=0</span> in <span class="math inline">S</span>)</td>
-<td style="text-align: center;">✅</td>
-</tr>
-<tr>
-<td style="text-align: center;"><span class="math inline">S[x^d]</span></td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2</span> divides <span class="math inline">d</span>)</td>
+<td style="text-align: center;">❌ (<strong>unless</strong> <span
+class="math inline">2=0</span> in <span
+class="math inline">S</span>)</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td style="text-align: center;"><span class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
-<td style="text-align: center;">❌ (unless <span class="math inline">n=1</span>)</td>
+<td style="text-align: center;"><span
+class="math inline">S[x^d]</span></td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌ (<strong>unless</strong> <span class="math inline">2</span> is invertible in <span class="math inline">S</span>)</td>
+<td style="text-align: center;">❌ (<strong>unless</strong> <span
+class="math inline">2</span> divides <span
+class="math inline">d</span>)</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span
+class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span></td>
+<td style="text-align: center;">❌ (unless <span
+class="math inline">n=1</span>)</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌ (<strong>unless</strong> <span
+class="math inline">2</span> is invertible in <span
+class="math inline">S</span>)</td>
 </tr>
 </tbody>
 </table>
@@ -362,19 +393,26 @@ enforcing that one separately!)</p>
 subtleties come from how the number <span class="math inline">2</span>
 behaves (except for the exterior algebra only being commutative when in
 one variable, but this isn’t a “graded” property, so we’ll ignore that
-one), and this is a very common thing to happen.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+one), and this is a very common thing to happen.<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <h1 id="circles-and-spheres">Circles and spheres</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Before diving into the applications, we just need one more abstract
-remark about graded rings: the tensor product <span class="math inline">R\otimes S</span> of two graded rings has a natural
+remark about graded rings: the tensor product <span
+class="math inline">R\otimes S</span> of two graded rings has a natural
 graded ring structure by setting <span class="math display">
   \deg(r\otimes s) \coloneqq \deg(r)+\deg(s)
 </span> and defining the multiplication to have a sign that “makes
 things work nicely”: <span class="math display">
-  (r\otimes s)(r'\otimes s') \coloneqq
-(-1)^{|r'||s|}(rr')\otimes(ss')
-</span> (note that the exponent uses the two “inner” terms, <span class="math inline">r'</span> and <span class="math inline">s</span>, <strong>not</strong> <span class="math inline">r</span> and <span class="math inline">s</span>, nor
-<span class="math inline">r'</span> and <span class="math inline">s'</span> (nor <span class="math inline">r</span> and <span class="math inline">s'</span>, for that matter)).</p>
+  (r\otimes s)(r&#39;\otimes s&#39;) \coloneqq
+(-1)^{|r&#39;||s|}(rr&#39;)\otimes(ss&#39;)
+</span> (note that the exponent uses the two “inner” terms, <span
+class="math inline">r&#39;</span> and <span
+class="math inline">s</span>, <strong>not</strong> <span
+class="math inline">r</span> and <span class="math inline">s</span>, nor
+<span class="math inline">r&#39;</span> and <span
+class="math inline">s&#39;</span> (nor <span
+class="math inline">r</span> and <span
+class="math inline">s&#39;</span>, for that matter)).</p>
 <p>What does this all have to do with algebraic topology? Hopefully
 you’ve already seen the ring structure on cohomology (of a manifold),
 given by the cup product. In fact, the cup product lets us assemble the
@@ -386,7 +424,10 @@ enough to satisfy whatever hypotheses the theorem in question might
 need”.</em></p>
 <p>Here’s a fun fact that we won’t prove:</p>
 <div class="itenv" title="Lemma">
-<p>Let <span class="math inline">X</span> and <span class="math inline">Y</span> be spaces. If <span class="math inline">Y</span> is such that <span class="math inline">\operatorname{H}^\bullet(Y)</span> is <em>free</em>
+<p>Let <span class="math inline">X</span> and <span
+class="math inline">Y</span> be spaces. If <span
+class="math inline">Y</span> is such that <span
+class="math inline">\operatorname{H}^\bullet(Y)</span> is <em>free</em>
 (as a graded commutative ring) and <em>finitely generated</em>, then
 <span class="math display">
   \operatorname{H}^\bullet(X\times Y) \cong
@@ -406,25 +447,32 @@ need”.</em></p>
 generator of <span class="math inline">\operatorname{H}^1(S^1)</span>,
 then <span class="math display">
   \alpha^2 \coloneqq \alpha\smile\alpha
-</span> is an element of <span class="math inline">\operatorname{H}^2(S^1)</span>, but this group is
-zero, and so it must be the case that <span class="math inline">\alpha^2=0</span>. Thus <span class="math display">
+</span> is an element of <span
+class="math inline">\operatorname{H}^2(S^1)</span>, but this group is
+zero, and so it must be the case that <span
+class="math inline">\alpha^2=0</span>. Thus <span class="math display">
   \operatorname{H}^\bullet(S^1) \cong \mathbb{Z}\langle1\rangle \oplus
 \mathbb{Z}\langle\alpha\rangle/(\alpha^2)
   = \Lambda_{\mathbb{Z}}[\alpha]
 </span> (where here the angled brackets mean “the abelian group
 generated by these elements”).</p>
-<p>But we know that <span class="math inline">\Lambda_{\mathbb{Z}}[\alpha]</span> is free as a
+<p>But we know that <span
+class="math inline">\Lambda_{\mathbb{Z}}[\alpha]</span> is free as a
 graded commutative ring, and it has only one generator so it’s also
-finitely generated; we can apply the Lemma above to get that <span class="math display">
+finitely generated; we can apply the Lemma above to get that <span
+class="math display">
   \operatorname{H}^\bullet(S^1\times S^1)
   \cong
 \operatorname{H}^\bullet(S^1)\otimes\operatorname{H}^\bullet(S^1)
-</span> but this is exactly <span class="math inline">\Lambda_{\mathbb{Z}}[\alpha_1,\alpha_2]</span>
+</span> but this is exactly <span
+class="math inline">\Lambda_{\mathbb{Z}}[\alpha_1,\alpha_2]</span>
 (where <span class="math inline">\alpha_i</span> is the generator of the
 first cohomology of the <span class="math inline">i</span>-th copy of
 <span class="math inline">S^1</span>).</p>
-<p>Finally, recall that <span class="math inline">\Lambda_{\mathbb{Z}}[\alpha_1,\alpha_2]</span> is
-graded commutative but <em>not</em> commutative (i.e. <span class="math inline">\alpha_1\alpha_2=-\alpha_2\alpha_1</span>).</p>
+<p>Finally, recall that <span
+class="math inline">\Lambda_{\mathbb{Z}}[\alpha_1,\alpha_2]</span> is
+graded commutative but <em>not</em> commutative (i.e. <span
+class="math inline">\alpha_1\alpha_2=-\alpha_2\alpha_1</span>).</p>
 </div>
 <div class="rmenv" title="Example 2">
 <p>We know that <span class="math display">
@@ -437,21 +485,27 @@ graded commutative but <em>not</em> commutative (i.e. <span class="math inline"
 generator of <span class="math inline">\operatorname{H}^2(S^2)</span>,
 then <span class="math display">
   \beta^2 \coloneqq \beta\smile\beta
-</span> is an element of <span class="math inline">\operatorname{H}^4(S^2)</span>, but this group is
-zero, and so it must be the case that <span class="math inline">\beta^2=0</span>. Thus <span class="math display">
+</span> is an element of <span
+class="math inline">\operatorname{H}^4(S^2)</span>, but this group is
+zero, and so it must be the case that <span
+class="math inline">\beta^2=0</span>. Thus <span class="math display">
   \operatorname{H}^\bullet(S^2) \cong \mathbb{Z}\langle1\rangle \oplus
 \mathbb{Z}\langle\beta\rangle/(\beta^2)
   = \Lambda_{\mathbb{Z}}[\beta]
 </span> where <em><span class="math inline">\beta</span> is of degree
 <span class="math inline">2</span></em>.</p>
-<p>As in the previous example, the Lemma gives us that <span class="math display">
+<p>As in the previous example, the Lemma gives us that <span
+class="math display">
   \operatorname{H}^\bullet(S^2\times S^2)
   \cong
 \operatorname{H}^\bullet(S^2)\otimes\operatorname{H}^\bullet(S^2)
-</span> which is exactly <span class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span>, but
-<em>where <span class="math inline">\beta</span> is of degree <span class="math inline">2</span></em> (we’re repeating this because it’s
+</span> which is exactly <span
+class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span>, but
+<em>where <span class="math inline">\beta</span> is of degree <span
+class="math inline">2</span></em> (we’re repeating this because it’s
 important).</p>
-<p>Now, <span class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span> is
+<p>Now, <span
+class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span> is
 graded commutative (since it’s a cohomology ring, and recall that these
 are always graded commutative, by the sign in the definition of the cup
 product), but we see that <span class="math display">
@@ -467,20 +521,27 @@ S^1</span> and <span class="math inline">S^2\times S^2</span> are not
 isomorphic (because one is commutative and the other is not).</p>
 </div>
 <h1 id="the-künneth-theorem">The Künneth theorem</h1>
-<a href="#post-title" class="toc-back">↟</a>
-<p>What happens to our useful lemma if the cohomology ring <span class="math inline">\operatorname{H}^\bullet(Y)</span> is finitely
+<p>What happens to our useful lemma if the cohomology ring <span
+class="math inline">\operatorname{H}^\bullet(Y)</span> is finitely
 generated but <em>not</em> free? That is (by the classification of
 finite groups), what if it has <em>torsion</em>? The <em>Künneth
 theorem</em> tells us that this torsion is exactly the “correction term”
 needed to fix the Lemma.</p>
 <div class="itenv" title="Corollary (to the Künneth theorem)">
-<p>Let <span class="math inline">X</span> and <span class="math inline">Y</span> be spaces. If <span class="math inline">Y</span> is such that <span class="math inline">\operatorname{H}^\bullet(Y)</span> is finitely
+<p>Let <span class="math inline">X</span> and <span
+class="math inline">Y</span> be spaces. If <span
+class="math inline">Y</span> is such that <span
+class="math inline">\operatorname{H}^\bullet(Y)</span> is finitely
 generated, then <span class="math display">
   \operatorname{H}^\bullet(X\times Y)
   \cong (\operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y))
   \oplus
 \operatorname{Tor}_{\bullet+1}(\operatorname{H}^\bullet(X),\operatorname{H}^\bullet(Y))
-</span> (note that this <span class="math inline">\operatorname{Tor}</span> term is zero if <span class="math inline">\operatorname{H}^\bullet(Y)</span> is free<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, so this really is a generalisation
+</span> (note that this <span
+class="math inline">\operatorname{Tor}</span> term is zero if <span
+class="math inline">\operatorname{H}^\bullet(Y)</span> is free<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a>, so this really is a generalisation
 of our previous lemma).</p>
 </div>
 <div class="itenv" title="Example">
@@ -492,10 +553,14 @@ of our previous lemma).</p>
   \\0 &amp;\text{otherwise.}
   \end{cases}
 </span> Doing some <span class="math inline">\operatorname{Tor}</span>
-calculations (use the fact that <span class="math inline">\mathbb{Z}</span> is free and thus flat (or even
-just projective) to see that <span class="math inline">\operatorname{Tor}(\mathbb{Z},-)=\operatorname{Tor}(-,\mathbb{Z})=0</span>;
-use the fact that <span class="math inline">\operatorname{Tor}(A,\mathbb{Z}/m\mathbb{Z})\cong\{a\in
-A\mid ma=0\}</span> to see that <span class="math inline">\operatorname{Tor}(\mathbb{Z}/2\mathbb{Z},\mathbb{Z}/2\mathbb{Z})\cong\mathbb{Z}/2\mathbb{Z}</span>),
+calculations (use the fact that <span
+class="math inline">\mathbb{Z}</span> is free and thus flat (or even
+just projective) to see that <span
+class="math inline">\operatorname{Tor}(\mathbb{Z},-)=\operatorname{Tor}(-,\mathbb{Z})=0</span>;
+use the fact that <span
+class="math inline">\operatorname{Tor}(A,\mathbb{Z}/m\mathbb{Z})\cong\{a\in
+A\mid ma=0\}</span> to see that <span
+class="math inline">\operatorname{Tor}(\mathbb{Z}/2\mathbb{Z},\mathbb{Z}/2\mathbb{Z})\cong\mathbb{Z}/2\mathbb{Z}</span>),
 the above Corollary gives us that <span class="math display">
   \operatorname{H}^n(\mathbb{RP}^2\times\mathbb{RP}^2) =
   \begin{cases}
@@ -508,90 +573,126 @@ the above Corollary gives us that <span class="math display">
 </span> We’ve written the case <span class="math inline">n=3</span> on a
 separate line because this is exactly the “correction term” given by the
 Künneth theorem, i.e. the previous Lemma would have given us everything
-else but would have said that <span class="math inline">\operatorname{H}^3=0</span>; Künneth tells us
+else but would have said that <span
+class="math inline">\operatorname{H}^3=0</span>; Künneth tells us
 otherwise.</p>
 </div>
 <div class="rmenv" title="Exercise">
-<p>Calculate <span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^2\times\mathbb{RP}^2;\mathbb{Q}/\mathbb{Z})</span>.</p>
+<p>Calculate <span
+class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^2\times\mathbb{RP}^2;\mathbb{Q}/\mathbb{Z})</span>.</p>
 <p><em>Hint: use the Universal Coefficient Theorem, or the long exact
-sequence associated to the short exact sequence <span class="math inline">0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadrightarrow\mathbb{Q}/\mathbb{Z}\to0</span>,
-and recall that <span class="math inline">\operatorname{Tor}(A,\mathbb{Q}/\mathbb{Z})\cong\operatorname{tors}(A)</span>,
+sequence associated to the short exact sequence <span
+class="math inline">0\to\mathbb{Z}\hookrightarrow\mathbb{Q}\twoheadrightarrow\mathbb{Q}/\mathbb{Z}\to0</span>,
+and recall that <span
+class="math inline">\operatorname{Tor}(A,\mathbb{Q}/\mathbb{Z})\cong\operatorname{tors}(A)</span>,
 the torsion part of <span class="math inline">A</span>.</em></p>
 </div>
 <h1 id="some-useful-cohomology-rings">Some useful cohomology rings</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Real projective spaces have pretty nice cohomology rings, but they
 differ in presentation depending on the parity of the dimension:</p>
 <ul>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^{2n})\cong\mathbb{Z}[\beta]/(2\beta,\beta^{n+1})</span>,
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^{2n})\cong\mathbb{Z}[\beta]/(2\beta,\beta^{n+1})</span>,
 where <span class="math inline">|\beta|=2</span>;</li>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^{2n+1})\cong\mathbb{Z}[\beta,\varepsilon]/(2\beta,\beta^{n+1},\epsilon^2,\beta\epsilon)</span>,
-where <span class="math inline">|\beta|=2</span> and <span class="math inline">|\varepsilon|=2n+1</span> (here <span class="math inline">\epsilon</span> is the generator of <span class="math inline">\operatorname{H}^{2n+1}</span>).</li>
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^{2n+1})\cong\mathbb{Z}[\beta,\varepsilon]/(2\beta,\beta^{n+1},\epsilon^2,\beta\epsilon)</span>,
+where <span class="math inline">|\beta|=2</span> and <span
+class="math inline">|\varepsilon|=2n+1</span> (here <span
+class="math inline">\epsilon</span> is the generator of <span
+class="math inline">\operatorname{H}^{2n+1}</span>).</li>
 </ul>
-<p>What’s nice is that, if we work with <span class="math inline">\mathbb{Z}/2\mathbb{Z}</span> coefficients (instead
+<p>What’s nice is that, if we work with <span
+class="math inline">\mathbb{Z}/2\mathbb{Z}</span> coefficients (instead
 of <span class="math inline">\mathbb{Z}</span>), then we can write both
 cases together as one thing:</p>
 <ul>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^n;\mathbb{Z}/2\mathbb{Z})\cong(\mathbb{Z}/2\mathbb{Z})[\alpha]/(\alpha^{n+1})</span>,
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^n;\mathbb{Z}/2\mathbb{Z})\cong(\mathbb{Z}/2\mathbb{Z})[\alpha]/(\alpha^{n+1})</span>,
 where <span class="math inline">|\alpha|=1</span>.</li>
 </ul>
-<p>Given that <span class="math inline">\mathbb{C}</span> is <span class="math inline">2</span>-dimensional over <span class="math inline">\mathbb{R}</span>, complex projective space behaves
+<p>Given that <span class="math inline">\mathbb{C}</span> is <span
+class="math inline">2</span>-dimensional over <span
+class="math inline">\mathbb{R}</span>, complex projective space behaves
 much nicer, since we don’t need to worry about parity:</p>
 <ul>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{CP}^n)\cong\mathbb{Z}[\beta]/(\beta^{n+1})</span>,
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{CP}^n)\cong\mathbb{Z}[\beta]/(\beta^{n+1})</span>,
 where <span class="math inline">|\beta|=2</span>.</li>
 </ul>
 <p>Finally, if you know how to define infinite dimensional projective
 spaces, then it’s a very lovely cheeky little fact that the cohomology
-rings are just given by “taking the limit <span class="math inline">n\to\infty</span>”, i.e.</p>
+rings are just given by “taking the limit <span
+class="math inline">n\to\infty</span>”, i.e.</p>
 <ul>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^\infty)\cong\mathbb{Z}[\alpha]</span>,
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{RP}^\infty)\cong\mathbb{Z}[\alpha]</span>,
 where <span class="math inline">|\alpha|=1</span>;</li>
-<li>
-<span class="math inline">\operatorname{H}^\bullet(\mathbb{CP}^\infty)\cong\mathbb{Z}[\beta]</span>,
+<li><span
+class="math inline">\operatorname{H}^\bullet(\mathbb{CP}^\infty)\cong\mathbb{Z}[\beta]</span>,
 where <span class="math inline">|\beta|=2</span>.</li>
 </ul>
 <p>Nice!</p>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
 <ol>
 <li id="fn1"><p>Note that this condition extends to give some condition
-on the multiplication of arbitrary elements of <span class="math inline">R</span>, since every element can be written (in a
-unique way) as a sum of homogeneous elements, by the fact that <span class="math inline">R\cong\bigoplus_{d=0}^\infty R_d</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+on the multiplication of arbitrary elements of <span
+class="math inline">R</span>, since every element can be written (in a
+unique way) as a sum of homogeneous elements, by the fact that <span
+class="math inline">R\cong\bigoplus_{d=0}^\infty R_d</span>.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>This is very similar to the fact that a group
-homomorphism must send an element of order <span class="math inline">n</span> to an element of order <span class="math inline">m</span> <em>such that <span class="math inline">m</span> divides <span class="math inline">n</span></em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+homomorphism must send an element of order <span
+class="math inline">n</span> to an element of order <span
+class="math inline">m</span> <em>such that <span
+class="math inline">m</span> divides <span
+class="math inline">n</span></em>.<a href="#fnref2"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Both number theorists and algebraic geometers get very
 tired of having to write “let <span class="math inline">k</span> be a
-field of characteristic not equal to <span class="math inline">2</span>”, since <span class="math inline">2</span>
+field of characteristic not equal to <span
+class="math inline">2</span>”, since <span class="math inline">2</span>
 “behaves badly” for them; some algebraic topologists, on the other hand,
 get very excited when you say “calculate (co)homology with coefficients
 in a field of characteristic <span class="math inline">2</span>”, since
 <span class="math inline">2</span> “behaves nicely” for them. Basically,
-<span class="math inline">2</span> is a tricky number.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Or if we work over a field instead of over <span class="math inline">\mathbb{Z}</span>…<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<span class="math inline">2</span> is a tricky number.<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Or if we work over a field instead of over <span
+class="math inline">\mathbb{Z}</span>…<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
   </div>
-  <!-- giscus comments -->
-  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
-  </script>
 
-      </div>
-      
-      
-    </div>
+  
+  <script src="https://giscus.app/client.js"
+          data-repo="thosgood/thosgood.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM="
+          data-category="Comments"
+          data-category-id="DIC_kwDOBsbU484CdW9A"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</article>
+
+    </content>
 
     
-      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+      <script type="text/javascript" src="/_assets/jquery-3.6.4.slim.min.js"></script>
 
 <!-- Use KaTeX rendering for all static page content -->
-<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript" src="/_assets/katex/katex.min.js"></script>
 <script type="text/javascript">
   $("span[class='math inline']").replaceWith(
     function(){
@@ -613,7 +714,11 @@ in a field of characteristic <span class="math inline">2</span>”, since
     
 
   </body>
-</html><!-- Render maths in comments --><html>
+</html>
+
+
+
+<!-- Render maths in comments -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(window).bind("load", function() {
@@ -629,35 +734,3 @@ in a field of characteristic <span class="math inline">2</span>”, since
         });
   });
 </script>
-
-
-<!-- Display settings (dark mode, font, etc) -->
-
-<script type="text/javascript">
-  const body = document.getElementsByTagName('body')[0];
-  const content = document.getElementById('post-content');
-
-  function lightStyle() {
-    body.style.background = 'white';
-    body.style.color = 'black';
-    document.getElementById('post-nav').style.background = 'white'
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      links[i].style.color = '#2a7ae2';
-    }
-  }
-  function darkStyle() {
-    body.style.background = '#333';
-    body.style.color = '#eee';
-    document.getElementById('post-nav').style.background = '#555'
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      links[i].style.color = '#82b2ee';
-    }
-    var tables = document.getElementsByTagName('table');
-    for (var i = 0; i < tables.length; i++) {
-      tables[i].style.color = 'black';
-    }
-  }
-</script>
-</html>

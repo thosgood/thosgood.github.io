@@ -4,23 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tim_hosgood">
-    <meta name="twitter:title" content="Blog // Tim Hosgood">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
-
     
     <title>Blog | Tim Hosgood</title>
     
 
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
-    <link rel="stylesheet" href="/assets/css/post.css">
-    <link rel="stylesheet" href="/assets/css/citations.css">
-
-    <link rel="stylesheet" href="/assets/css/tachyons.css">
-    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+    <link rel="stylesheet" href="/_assets/style.css">
+    
+    <link rel="stylesheet" href="/_assets/katex/katex.min.css">
+    
 
     <link rel="me" href="https://mathstodon.xyz/@thosgood"></a>
 </head>
@@ -28,76 +19,52 @@
 
   <body>
 
-    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
-  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
-    <div class="w-third-ns tl pv0-ns pv3 center">
-      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
-    </div>
-    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
-      <ol class="fr-ns list ma0 pl0">
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/about/">About</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/work/">Work</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/translations/">Translations</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <span class="active">Blog</span>
-        </li>
-        <li class="pl2-ns pl1 dib f4">
-          <a class="nav_link" href="/cv/">CV</a>
-        </li>
-      </ol>
-    </div>
+    <nav id="top-navigation">
+  <div id="navigation-name">
+    <a class="navigation-link" href="/">Tim Hosgood</a>
   </div>
-</div>
+  <div id="navigation-page-links">
+    <a class="navigation-link" href="/research/">Research</a>
+    <a class="navigation-link" href="/translations/">Translations</a>
+    <span class="active">Blog</span>
+    <a class="navigation-link" href="/cv/">CV</a>
+  </div>
+</nav>
 
 
-    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
-      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
-        <div class="content tj">
+    <content id="main">
+      <h2>Blog archive</h2>
 
-  <h1>Blog</h1>
+<p>
+  This blog is mainly a haphazard collection of notes about things that I'm in the process of learning, and is only infrequently updated.
+  <strong>There will certainly be mistakes.</strong>
+  If you want, you can subscribe to this blog's <a href="https://thosgood.net/blog.xml">RSS feed</a>.
+</p>
 
-  <p>
-    This blog is mainly a haphazard collection of notes about things that I'm in the process of learning, and is only infrequently updated.
-    <span class="fw5">There will certainly be mistakes.</span>
-    Blog post dates are in the format YY/MM/DD.
-  </p>
-  <p>
-    If you want, you can subscribe to this blog's <a href="https://thosgood.net/blog.xml">RSS feed</a>.
-  </p>
-  <p>
-  </p>
-</div>
-
-<div id="blog-archive" class="w-100 mt3">
+<div id="blog-archive">
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2026-09-09-cohomology-notation-part-2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2026-09-09-cohomology-notation-part-2-">
       
-        <a class="no-underline" href="/blog/2026-09-09-cohomology-notation-part-2/">How does cohomology relate to cohomology? (Part 2)</a>
+        <a href="/blog/2026-09-09-cohomology-notation-part-2/">How does cohomology relate to cohomology? [Part 2]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      26/09/09
+      9th of September, 2026
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p><em>Edit:</em> Having now completed the full draft of this post, it
 turns out that I’m actually just going to talk about sheaves and
 holomorphic functions for a really long time. Stay tuned for the
 <em>next</em> part in this series, where I actually will get back to
 talking about cohomology!</p>
-<a href='/blog/2026-09-09-cohomology-notation-part-2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2026-09-09-cohomology-notation-part-2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -106,21 +73,21 @@ talking about cohomology!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2026-09-08-cohomology-notation-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2026-09-08-cohomology-notation-part-1-">
       
-        <a class="no-underline" href="/blog/2026-09-08-cohomology-notation-part-1/">How does cohomology relate to cohomology? (Part 1)</a>
+        <a href="/blog/2026-09-08-cohomology-notation-part-1/">How does cohomology relate to cohomology? [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      26/09/08
+      8th of September, 2026
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>There are so many things called cohomology and so many ways of
 writing the letter “H”. And I’m not even talking about the distinction
@@ -138,7 +105,7 @@ wouldn’t matter at all, but for various reasons I’m interested in
 revisiting some of my old calculations. So here we go: I’m finally going
 to set my notation straight, and clear up as many of my past confusions
 as possible.</p>
-<a href='/blog/2026-09-08-cohomology-notation-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2026-09-08-cohomology-notation-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -147,27 +114,27 @@ as possible.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2026-08-01-emf-2026-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2026-08-01-emf-2026-">
       
-        <a class="no-underline" href="/blog/2026-08-01-emf-2026/">Electromagnetic Field 2026</a>
+        <a href="/blog/2026-08-01-emf-2026/">Electromagnetic Field 2026</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      26/08/01
+      1st of August, 2026
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Last month I went to my first ever Electromagnetic Field festival. It
 made me very happy and filled me with a hopeful joy that I have not felt
 for a very long time. I don’t have much else to say right now, but here
 are some links to some photos and stories.</p>
-<a href='/blog/2026-08-01-emf-2026/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2026-08-01-emf-2026/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -176,21 +143,21 @@ are some links to some photos and stories.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2026-01-09-some-arabic-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2026-01-09-some-arabic-part-1-">
       
-        <a class="no-underline" href="/blog/2026-01-09-some-arabic-part-1/">Some Arabic revision (Part 1)</a>
+        <a href="/blog/2026-01-09-some-arabic-part-1/">Some Arabic revision [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      26/01/09
+      9th of January, 2026
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>As a fun treat, because it’s something I’ve long wanted to do, I’ve
 been taking Arabic classes once a week during term times. In lieu of any
@@ -201,7 +168,7 @@ to anybody else (and hopefully it’s very clear that I’m a very beginner
 beginner), since it’s not a tutorial so much as a collection of my
 random class notes. But 2026 is the year of not worrying about such
 things when it comes to stuff I do in my spare time.</p>
-<a href='/blog/2026-01-09-some-arabic-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2026-01-09-some-arabic-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -210,26 +177,26 @@ things when it comes to stuff I do in my spare time.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2025-01-07-woops-long-time-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2025-01-07-woops-long-time-">
       
-        <a class="no-underline" href="/blog/2025-01-07-woops-long-time/">Woops it's been a while</a>
+        <a href="/blog/2025-01-07-woops-long-time/">Woops it's been a while</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      25/01/07
+      7th of January, 2025
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I managed to forget to write a blog post for the entirety of 2024 —
 wow! Let’s see if I can zip through some things that have happened in
 the past 14 months.</p>
-<a href='/blog/2025-01-07-woops-long-time/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2025-01-07-woops-long-time/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -238,26 +205,26 @@ the past 14 months.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2023-10-04-translations-part-5-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2023-10-04-translations-part-5-">
       
-        <a class="no-underline" href="/blog/2023-10-04-translations-part-5/">Translations (Part 5)</a>
+        <a href="/blog/2023-10-04-translations-part-5/">Translations [Part 5]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      23/10/04
+      4th of October, 2023
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Briefly: two very short translations concerning geometry, and the
 final two seminars of FGA (thus finishing a complete first draft of the
 entire FGA seminar series).</p>
-<a href='/blog/2023-10-04-translations-part-5/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2023-10-04-translations-part-5/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -266,21 +233,21 @@ entire FGA seminar series).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2023-09-08-cech-totalisation-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2023-09-08-cech-totalisation-">
       
-        <a class="no-underline" href="/blog/2023-09-08-cech-totalisation/">Čech totalisation</a>
+        <a href="/blog/2023-09-08-cech-totalisation/">Čech totalisation</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      23/09/08
+      8th of September, 2023
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>After a pretty long time (over two and half years or so), <a
 href="https://www.zeinalian.com/">Mahmoud Zeinalian</a> and I have
@@ -296,7 +263,7 @@ describing principal bundles. There might be a second part to this, but
 for those interested or wanting for more details I recommend just
 delving into the paper — I spent a lot of time trying to make it as
 readable as possible!</p>
-<a href='/blog/2023-09-08-cech-totalisation/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2023-09-08-cech-totalisation/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -305,27 +272,27 @@ readable as possible!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2023-07-30-translations-part-4-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2023-07-30-translations-part-4-">
       
-        <a class="no-underline" href="/blog/2023-07-30-translations-part-4/">Translations (Part 4)</a>
+        <a href="/blog/2023-07-30-translations-part-4/">Translations [Part 4]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      23/07/04
+      4th of July, 2023
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Hopefully one of my co-authors and I will be uploading a long-awaited
 preprint on dg-categories, twisting cochains, and homotopy limits to the
 arXiv “soon”. Until then, here are the small handful of translations
 that I’ve finished in the year since I last wrote</p>
-<a href='/blog/2023-07-30-translations-part-4/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2023-07-30-translations-part-4/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -334,21 +301,21 @@ that I’ve finished in the year since I last wrote</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-12-03-virtual-double-categories-workshop-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-12-03-virtual-double-categories-workshop-">
       
-        <a class="no-underline" href="/blog/2022-12-03-virtual-double-categories-workshop/">Virtual Double Categories Workshop</a>
+        <a href="/blog/2022-12-03-virtual-double-categories-workshop/">Virtual Double Categories Workshop</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/12/03
+      3rd of December, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I now realise two things: firstly, I haven’t posted anything in
 really quite a while; secondly, I should have written this specific blog
@@ -364,7 +331,7 @@ href="https://bryceclarke.github.io/virtual-double-categories-workshop/">the
 workshop webpage</a>, but if you want to hear a bit more about my
 personal interest in double categories and how this workshop came about,
 then read on.</p>
-<a href='/blog/2022-12-03-virtual-double-categories-workshop/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-12-03-virtual-double-categories-workshop/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -373,21 +340,21 @@ then read on.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-05-30-various-notions-of-cosimplicial-presheaves-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-05-30-various-notions-of-cosimplicial-presheaves-">
       
-        <a class="no-underline" href="/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/">Various notions of (co)simplicial (pre)sheaves</a>
+        <a href="/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/">Various notions of (co)simplicial (pre)sheaves</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/05/30
+      30th of May, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>For the first time, I have released into the wild a preprint of which
 I am the sole author, and had no real supervision. This is a scary
@@ -400,7 +367,7 @@ really have any formal experience with. Anyway, I hope the resulting
 paper is at least mildly “good” (whatever that might mean). It’s called
 “Various notions of (co)simplicial (pre)sheaves”, and is now on the
 arXiv: <a href="https://arxiv.org/abs/2205.15185">2205.15185</a>.</p>
-<a href='/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -409,21 +376,21 @@ arXiv: <a href="https://arxiv.org/abs/2205.15185">2205.15185</a>.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-04-25-some-research-questions-from-my-notesbooks-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-04-25-some-research-questions-from-my-notesbooks-">
       
-        <a class="no-underline" href="/blog/2022-04-25-some-research-questions-from-my-notesbooks/">Some research questions from my notebooks</a>
+        <a href="/blog/2022-04-25-some-research-questions-from-my-notesbooks/">Some research questions from my notebooks</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/04/25
+      25th of April, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>One thing that the past few years have taught me is that I am not
 good at doing maths all by myself. In fact, I would go as far as to say
@@ -435,7 +402,7 @@ ideal time for first postdocs, but alas, that’s life.</p>
 research ideas in it, and then realised that I have had no motivation to
 work on any of these alone, so why not put them out there for other
 people to see?</p>
-<a href='/blog/2022-04-25-some-research-questions-from-my-notesbooks/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-04-25-some-research-questions-from-my-notesbooks/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -444,21 +411,21 @@ people to see?</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-04-08-diagrammatic-equations-and-multiphysics-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-04-08-diagrammatic-equations-and-multiphysics-">
       
-        <a class="no-underline" href="/blog/2022-04-08-diagrammatic-equations-and-multiphysics/">Diagrammatic equations and multiphysics</a>
+        <a href="/blog/2022-04-08-diagrammatic-equations-and-multiphysics/">Diagrammatic equations and multiphysics</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/04/08
+      8th of April, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Just a very short post (you don’t even need to click “Continue
 reading” if you’re looking at this on my blog archive) — I finally
@@ -471,7 +438,7 @@ href="https://topos.site/blog/2022/04/diagrammatic-equations-and-multiphysics-pa
 2</a>.</p>
 <p>I would love to write more, but after having written these I’m afraid
 I’m all blogged out for the minute, so ciao for now!</p>
-<a href='/blog/2022-04-08-diagrammatic-equations-and-multiphysics/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-04-08-diagrammatic-equations-and-multiphysics/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -480,21 +447,21 @@ I’m all blogged out for the minute, so ciao for now!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-02-11-graded-commutative-and-graded-and-commutative-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-02-11-graded-commutative-and-graded-and-commutative-">
       
-        <a class="no-underline" href="/blog/2022-02-11-graded-commutative-and-graded-and-commutative/">Graded commutative rings and graded and commutative rings</a>
+        <a href="/blog/2022-02-11-graded-commutative-and-graded-and-commutative/">Graded commutative rings and graded and commutative rings</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/02/11
+      11th of February, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>One of the many reasons that teaching is fun is because you get to
 look back at things that you haven’t seen in a while and try to
@@ -510,7 +477,7 @@ gonna assume that you know a bit about rings in the first half; the
 second half is aimed for somebody who’s a reasonable way through a first
 course on algebraic topology (e.g. knows what the cup product in
 cohomology is).</p>
-<a href='/blog/2022-02-11-graded-commutative-and-graded-and-commutative/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-02-11-graded-commutative-and-graded-and-commutative/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -519,21 +486,21 @@ cohomology is).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-02-05-every-bundle-is-flat-from-infinity-pov-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-02-05-every-bundle-is-flat-from-infinity-pov-">
       
-        <a class="no-underline" href="/blog/2022-02-05-every-bundle-is-flat-from-infinity-pov/">Every principal bundle is flat, in the infinity world</a>
+        <a href="/blog/2022-02-05-every-bundle-is-flat-from-infinity-pov/">Every principal bundle is flat, in the infinity world</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/02/05
+      5th of February, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Earlier today, Mahmoud Zeinalian explained something to me that
 Dennis Sullivan once explained to him, and it’s been sitting in my brain
@@ -543,7 +510,7 @@ story, I thought I’d write a little blog post about it. It’s going to
 move quite quickly, because I don’t want to spend time developing the
 prerequisites — the main purpose is for this to jog my brain two weeks
 down the line when I forget all the details!</p>
-<a href='/blog/2022-02-05-every-bundle-is-flat-from-infinity-pov/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-02-05-every-bundle-is-flat-from-infinity-pov/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -552,27 +519,27 @@ down the line when I forget all the details!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2022-01-23-translations-part-3-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2022-01-23-translations-part-3-">
       
-        <a class="no-underline" href="/blog/2022-01-23-translations-part-3/">Translations (Part 3)</a>
+        <a href="/blog/2022-01-23-translations-part-3/">Translations [Part 3]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      22/01/23
+      23rd of January, 2022
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I haven’t blogged about it in a while, but I’ve been working on just
 making <a href="https://thosgood.net/translations">my translations</a> a
 bit better, both in terms of content and accessibility. Let’s have a
 look at what I’ve done, shall we?</p>
-<a href='/blog/2022-01-23-translations-part-3/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2022-01-23-translations-part-3/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -581,27 +548,27 @@ look at what I’ve done, shall we?</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-12-22-blog-comments-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-12-22-blog-comments-">
       
-        <a class="no-underline" href="/blog/2021-12-22-blog-comments/">Comments on blog posts</a>
+        <a href="/blog/2021-12-22-blog-comments/">Comments on blog posts</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/12/22
+      22nd of December, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This blog now has support for comments! I haven’t had a chance to
 properly test things yet, and there are still some kinks left to iron
 out, but please do use this as an excuse to browse back through old
 posts and say nice things.</p>
-<a href='/blog/2021-12-22-blog-comments/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-12-22-blog-comments/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -610,28 +577,28 @@ posts and say nice things.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-11-29-lie-algebra-cohomology-part-3-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-11-29-lie-algebra-cohomology-part-3-">
       
-        <a class="no-underline" href="/blog/2021-11-29-lie-algebra-cohomology-part-3/">The basics of Lie algebra cohomology (Part 3)</a>
+        <a href="/blog/2021-11-29-lie-algebra-cohomology-part-3/">The basics of Lie algebra cohomology [Part 3]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/11/29
+      29th of November, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>We’ll end this series (for now) by talking about two things that we
 really should talk about: Lie algebra <em>homology</em>, and
 <em>relative</em> Lie algebra (co)homology. (We will work over a field
 <span class="math inline">k</span>, but really we are thinking only of
 the case <span class="math inline">k=\mathbb{C}</span>).</p>
-<a href='/blog/2021-11-29-lie-algebra-cohomology-part-3/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-11-29-lie-algebra-cohomology-part-3/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -640,21 +607,21 @@ the case <span class="math inline">k=\mathbb{C}</span>).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-11-25-left-adjoints-lenses-and-localisation-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-11-25-left-adjoints-lenses-and-localisation-">
       
-        <a class="no-underline" href="/blog/2021-11-25-left-adjoints-lenses-and-localisation/">Left adjoints, lenses, and localisation</a>
+        <a href="/blog/2021-11-25-left-adjoints-lenses-and-localisation/">Left adjoints, lenses, and localisation</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/11/26
+      26th of November, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This is really just a cross-post announcement: I wrote <a
 href="https://topos.institute/blog/2021/11/left-adjoints-lenses-and-localisation/">a
@@ -669,7 +636,7 @@ it’s really a fermented and distilled version of an old blog post from
 here, namely <a
 href="/blog/2019-07-14-cauchy-completion-and-profunctors/"><em>Cauchy
 completion and profunctors</em></a>.</p>
-<a href='/blog/2021-11-25-left-adjoints-lenses-and-localisation/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-11-25-left-adjoints-lenses-and-localisation/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -678,28 +645,28 @@ completion and profunctors</em></a>.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-11-24-lie-algebra-cohomology-part-2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-11-24-lie-algebra-cohomology-part-2-">
       
-        <a class="no-underline" href="/blog/2021-11-24-lie-algebra-cohomology-part-2/">The basics of Lie algebra cohomology (Part 2)</a>
+        <a href="/blog/2021-11-24-lie-algebra-cohomology-part-2/">The basics of Lie algebra cohomology [Part 2]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/11/24
+      24th of November, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Continuing on from last time, let’s now take a look at some actual
 computational methods for Lie algebra cohomology, as well as some
 applications and important results. We’ll study the cohomology of
 semisimple Lie algebras, finite dimensional nilpotent Lie algebras, and
 then take a little detour to talk about the Borel–Weil–Bott theorem.</p>
-<a href='/blog/2021-11-24-lie-algebra-cohomology-part-2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-11-24-lie-algebra-cohomology-part-2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -708,21 +675,21 @@ then take a little detour to talk about the Borel–Weil–Bott theorem.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-11-22-lie-algebra-cohomology-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-11-22-lie-algebra-cohomology-part-1-">
       
-        <a class="no-underline" href="/blog/2021-11-22-lie-algebra-cohomology-part-1/">The basics of Lie algebra cohomology (Part 1)</a>
+        <a href="/blog/2021-11-22-lie-algebra-cohomology-part-1/">The basics of Lie algebra cohomology [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/11/22
+      22nd of November, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>As part of a reading group I’m in on Kac–Moody groups (something I
 know nothing about), I had to give a talk introducing the basics of Lie
@@ -731,7 +698,7 @@ sort of motivation and intuition, and some worked examples. Since I’ve
 written these notes anyway, I figured I might as well put them up on
 this blog, and then, when I inevitably forget all I ever once knew, I
 can refer back to here.</p>
-<a href='/blog/2021-11-22-lie-algebra-cohomology-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-11-22-lie-algebra-cohomology-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -740,21 +707,21 @@ can refer back to here.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-11-10-two-blog-posts-on-topos-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-11-10-two-blog-posts-on-topos-">
       
-        <a class="no-underline" href="/blog/2021-11-10-two-blog-posts-on-topos/">Two recent preprints and the Topos blog</a>
+        <a href="/blog/2021-11-10-two-blog-posts-on-topos/">Two recent preprints and the Topos blog</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/11/10
+      10th of November, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Over the past couple of months, between moving countries, teaching,
 and a bunch of administrative faff, I’ve managed to write two short
@@ -762,7 +729,7 @@ preprints with <a href="http://www.dspivak.net/">David Spivak</a>. I
 blogged about them over on the <a href="https://topos.site/blog/">Topos
 blog</a>, but I’ll just write a little crossover post here with some
 links (so that people don’t think that this blog is entirely dead).</p>
-<a href='/blog/2021-11-10-two-blog-posts-on-topos/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-11-10-two-blog-posts-on-topos/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -771,21 +738,21 @@ links (so that people don’t think that this blog is entirely dead).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-09-24-some-questions-about-analytic-geometry-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-09-24-some-questions-about-analytic-geometry-">
       
-        <a class="no-underline" href="/blog/2021-09-24-some-questions-about-analytic-geometry/">Some questions about complex-analytic geometry</a>
+        <a href="/blog/2021-09-24-some-questions-about-analytic-geometry/">Some questions about complex-analytic geometry</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/09/24
+      24th of September, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Despite being an analytic/algebraic geometer by name (and title, and
 qualification, and academic upbringing, and …), there are so many gaps
@@ -797,7 +764,7 @@ questions. Thus: this blog post.</p>
 <p>I am going to explain what I do know, talk about what I don’t, and
 then ask some semi-concrete questions that I’m hoping people will be
 able to help me out with!</p>
-<a href='/blog/2021-09-24-some-questions-about-analytic-geometry/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-09-24-some-questions-about-analytic-geometry/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -806,26 +773,26 @@ able to help me out with!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-06-25-another-life-update-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-06-25-another-life-update-">
       
-        <a class="no-underline" href="/blog/2021-06-25-another-life-update/">Another life update</a>
+        <a href="/blog/2021-06-25-another-life-update/">Another life update</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/06/25
+      25th of June, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Hello. Yet again I haven’t been blogging in quite a long while, which
 is, yet again, due to an unexpectedly hectic couple of months. Let’s
 have a look at what I’ve been doing, shall we?</p>
-<a href='/blog/2021-06-25-another-life-update/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-06-25-another-life-update/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -834,26 +801,26 @@ have a look at what I’ve been doing, shall we?</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2021-02-24-life-update-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2021-02-24-life-update-">
       
-        <a class="no-underline" href="/blog/2021-02-24-life-update/">Life update</a>
+        <a href="/blog/2021-02-24-life-update/">Life update</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      21/02/24
+      24th of February, 2021
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I haven’t posted anything here in well over a couple of months, so I
 thought it’d be a nice idea to just say “hello, I am still here, and
 here’s why I’ve been too tired to post anything”, whence this post.</p>
-<a href='/blog/2021-02-24-life-update/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2021-02-24-life-update/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -862,28 +829,28 @@ here’s why I’ve been too tired to post anything”, whence this post.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-11-06-translations-part-2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-11-06-translations-part-2-">
       
-        <a class="no-underline" href="/blog/2020-11-06-translations-part-2/">Translations (Part 2)</a>
+        <a href="/blog/2020-11-06-translations-part-2/">Translations [Part 2]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/11/06
+      6th of November, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I’ve had a bit of free time during various quarantines and lockdowns
 as of late, so I’ve been able to do some more translations. Here’s a
 quick summary of what I’ve uploaded to <a
 href="https://thosgood.net/translations">thosgood.net/translations</a>
 recently, as well as what I’m now working on.</p>
-<a href='/blog/2020-11-06-translations-part-2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-11-06-translations-part-2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -892,21 +859,21 @@ recently, as well as what I’m now working on.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-09-06-JMRA-video-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-09-06-JMRA-video-">
       
-        <a class="no-underline" href="/blog/2020-09-06-JMRA-video/">JMRA Video</a>
+        <a href="/blog/2020-09-06-JMRA-video/">JMRA Video</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/09/06
+      6th of September, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I recently submitted a video to the <a
 href="https://sites.google.com/view/jmra/home">Junior Mathematician
@@ -918,7 +885,7 @@ narrative.</p>
 <p>For the sake of it, or in case you’re the sort of person who prefers
 to read instead of watch, I’ve included the transcript of the whole
 video below.</p>
-<a href='/blog/2020-09-06-JMRA-video/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-09-06-JMRA-video/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -927,21 +894,21 @@ video below.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-08-18-translations-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-08-18-translations-part-1-">
       
-        <a class="no-underline" href="/blog/2020-08-18-translations-part-1/">Translations (Part 1)</a>
+        <a href="/blog/2020-08-18-translations-part-1/">Translations [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/08/18
+      18th of August, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I’ve been having quite a bit of fun translating some maths papers
 into English recently. Of course, I’m still chugging away at the <a
@@ -952,7 +919,7 @@ started putting some of my other translations all together, and they can
 now be found at <a href="https://thosgood.net/translations"
 class="uri">https://thosgood.net/translations</a>. There are a lot still
 in progress, but here’s a summary of what I’ve done so far.</p>
-<a href='/blog/2020-08-18-translations-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-08-18-translations-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -961,21 +928,21 @@ in progress, but here’s a summary of what I’ve done so far.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-07-15-hochschild-and-cyclic-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-07-15-hochschild-and-cyclic-">
       
-        <a class="no-underline" href="/blog/2020-07-15-hochschild-and-cyclic/">Hochschild and cyclic homology (briefly)</a>
+        <a href="/blog/2020-07-15-hochschild-and-cyclic/">Hochschild and cyclic homology (briefly)</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/07/15
+      15th of July, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Once again I feel the urge to type something nice, but have nothing
 new of my own to share. I did recently find, however, some notes I once
@@ -984,7 +951,7 @@ the hundredth time, so I thought I’d share them here. They’re not
 particularly enlightening, and I can’t claim to add any insight, but I
 often use my own blog as a reference for definitions that I once knew
 but later forgot, so this will at least serve that purpose!</p>
-<a href='/blog/2020-07-15-hochschild-and-cyclic/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-07-15-hochschild-and-cyclic/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -993,21 +960,21 @@ but later forgot, so this will at least serve that purpose!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-07-03-thesis-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-07-03-thesis-">
       
-        <a class="no-underline" href="/blog/2020-07-03-thesis/">Thesis online</a>
+        <a href="/blog/2020-07-03-thesis/">Thesis online</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/07/03
+      3rd of July, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Having finished my defence (entirely virtually, and hence, of course,
 plagued with many technical difficulties), I have now been able to share
@@ -1020,7 +987,7 @@ examples and (hopefully) helpful appendices. It also has geese! You can
 find a copy of it on <a
 href="https://tel.archives-ouvertes.fr/tel-02882140/document">here on
 TEL</a>.</p>
-<a href='/blog/2020-07-03-thesis/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-07-03-thesis/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1029,21 +996,21 @@ TEL</a>.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-06-02-some-videos-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-06-02-some-videos-">
       
-        <a class="no-underline" href="/blog/2020-06-02-some-videos/">Some videos I recorded</a>
+        <a href="/blog/2020-06-02-some-videos/">Some videos I recorded</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/06/02
+      2nd of June, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p><strong>Edit.</strong> <em>I’m in the process of moving over from
 YouTube to Vimeo (no ads, less tracking, and no Google), so you can find
@@ -1061,7 +1028,7 @@ href="https://www.youtube.com/playlist?list=PL1-fVcTSjrGSrMHbNcPpdbhNFbCU-FXVL">
 Analytic Sheaves For All</a> which aims to discuss motivations for
 coherence conditions of complex-analytic sheaves from various points of
 view. Hopefully there will be more updates to the latter soon!</p>
-<a href='/blog/2020-06-02-some-videos/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-06-02-some-videos/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1070,21 +1037,21 @@ view. Hopefully there will be more updates to the latter soon!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-05-29-connection-confusion-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-05-29-connection-confusion-">
       
-        <a class="no-underline" href="/blog/2020-05-29-connection-confusion/">Confusion about connections</a>
+        <a href="/blog/2020-05-29-connection-confusion/">Confusion about connections</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/05/29
+      29th of May, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I am a big fan of Stephen Bruce Sontz’s book <a
 href="https://www.springer.com/gp/book/9783319147642"><em>Principal
@@ -1093,7 +1060,7 @@ somebody who usually finds differential geometry (a) dull, and (b)
 incomprehensible. Anyway, there’s a lovely quote from this book about
 how confusing the terminology surrounding connections can be, so let’s
 try to clear some of that up today.</p>
-<a href='/blog/2020-05-29-connection-confusion/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-05-29-connection-confusion/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1102,21 +1069,21 @@ try to clear some of that up today.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2020-03-29-simplicial-chern-weil-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2020-03-29-simplicial-chern-weil-">
       
-        <a class="no-underline" href="/blog/2020-03-29-simplicial-chern-weil/">Simplicial Chern-Weil theory</a>
+        <a href="/blog/2020-03-29-simplicial-chern-weil/">Simplicial Chern-Weil theory</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      20/03/29
+      29th of March, 2020
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This week just gone I uploaded two preprints to the arXiv:</p>
 <ol type="1">
@@ -1134,7 +1101,7 @@ are quite nice, but I’ll probably turn the good ones into blog posts at
 some point in the coming months.</p>
 <p>So what are these two papers about? And why is it split into two
 parts?</p>
-<a href='/blog/2020-03-29-simplicial-chern-weil/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2020-03-29-simplicial-chern-weil/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1143,21 +1110,21 @@ parts?</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-12-08-det-omega-p2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-12-08-det-omega-p2-">
       
-        <a class="no-underline" href="/blog/2019-12-08-det-omega-p2/">The determinant bundle</a>
+        <a href="/blog/2019-12-08-det-omega-p2/">The determinant bundle</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/12/08
+      8th of December, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>As always, when I haven’t written anything on here in a while, I’m
 going to write about something entirely irrelevant to anything I’ve
@@ -1169,7 +1136,7 @@ going to compute the determinant of the cotangent sheaf of the complex
 projective sphere. Note that even the statement of this problem makes me
 uneasy: I am nowhere near as comfortable with classical algebraic
 geometry as I should be!</p>
-<a href='/blog/2019-12-08-det-omega-p2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-12-08-det-omega-p2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1178,21 +1145,21 @@ geometry as I should be!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-11-07-categorical-translation-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-11-07-categorical-translation-">
       
-        <a class="no-underline" href="/blog/2019-11-07-categorical-translation/">Categorical translation for mathematical language</a>
+        <a href="/blog/2019-11-07-categorical-translation/">Categorical translation for mathematical language</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/11/07
+      7th of November, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Being unable to ever properly finish any project that I start, but
 loving starting new projects, has made getting around to typing up this
@@ -1204,7 +1171,7 @@ it’s really just to the one (mabye two) reader(s) of this blog), but I’m
 doing so in the hopes that somebody who actually knows about this sort
 of applied category theory can help me get somewhat closer to a solid
 understanding.</p>
-<a href='/blog/2019-11-07-categorical-translation/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-11-07-categorical-translation/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1213,28 +1180,28 @@ understanding.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-11-06-blue-tit-rescue-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-11-06-blue-tit-rescue-">
       
-        <a class="no-underline" href="/blog/2019-11-06-blue-tit-rescue/">Bird rescue</a>
+        <a href="/blog/2019-11-06-blue-tit-rescue/">Bird rescue</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/11/06
+      6th of November, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>On a particularly bad day, when I’d gone into the maths department on
 a public holiday by accident<a href="#fn1" class="footnote-ref"
 id="fnref1" role="doc-noteref"><sup>1</sup></a>, I saw nobody around.
 Coming down the staircase to leave, however, I saw a blue tit trapped
 inside, loitering by the photo of Grothendieck.</p>
-<a href='/blog/2019-11-06-blue-tit-rescue/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-11-06-blue-tit-rescue/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1243,21 +1210,21 @@ inside, loitering by the photo of Grothendieck.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-10-09-matrix-riot-what-is-it-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-10-09-matrix-riot-what-is-it-">
       
-        <a class="no-underline" href="/blog/2019-10-09-matrix-riot-what-is-it/">Matrix: open, secure, and decentralised</a>
+        <a href="/blog/2019-10-09-matrix-riot-what-is-it/">Matrix: open, secure, and decentralised</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/10/09
+      9th of October, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Anybody who follows me on Twitter will have heard me go on about
 Matrix, and Riot, and maybe a whole host of other such things. I
@@ -1266,7 +1233,7 @@ all, but I thought that I’d try to explain a bit why I’m quite so
 passionate about this stuff, and why I’m bothering to try to work on
 “LaTeX” support (with scare quotes for good reason, as explained
 later).</p>
-<a href='/blog/2019-10-09-matrix-riot-what-is-it/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-10-09-matrix-riot-what-is-it/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1275,21 +1242,21 @@ later).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-09-05-day-convolution-part-3-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-09-05-day-convolution-part-3-">
       
-        <a class="no-underline" href="/blog/2019-09-05-day-convolution-part-3/">Weighted limits, ends, and Day convolution (Part 3)</a>
+        <a href="/blog/2019-09-05-day-convolution-part-3/">Weighted limits, ends, and Day convolution [Part 3]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/09/05
+      5th of September, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Finally, I find myself with enough motivation to start writing the
 last part to this series. It’s been a while, but hopefully nobody has
@@ -1300,7 +1267,7 @@ this post is because coends (or, really, cowedges) appeared to me
 recently in a tweet about Stokes’ theorem, which I found pretty neat
 indeed — more details can be found in <a
 href="/blog/2019-09-04-stokes-coend/">this post</a>.</p>
-<a href='/blog/2019-09-05-day-convolution-part-3/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-09-05-day-convolution-part-3/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1309,21 +1276,21 @@ href="/blog/2019-09-04-stokes-coend/">this post</a>.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-09-04-stokes-coend-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-09-04-stokes-coend-">
       
-        <a class="no-underline" href="/blog/2019-09-04-stokes-coend/">Everything is Stokes'; everything is coend</a>
+        <a href="/blog/2019-09-04-stokes-coend/">Everything is Stokes'; everything is coend</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/09/04
+      4th of September, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>For category theorists, the idea that “everything is a Kan extension”
 is a familiar one, as is the slightly more abstract version “everything
@@ -1331,7 +1298,7 @@ is a (co)end”. For differential geometers, the idea that “everything is
 Stokes’ theorem” is sort of the equivalent adage. In an entirely typical
 turn of events, it seems that these two seemingly unrelated aphorisms
 can be linked together, as I found out today on Twitter.</p>
-<a href='/blog/2019-09-04-stokes-coend/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-09-04-stokes-coend/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1340,21 +1307,21 @@ can be linked together, as I found out today on Twitter.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-08-14-mathematical-motivation-meagre-contributions-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-08-14-mathematical-motivation-meagre-contributions-">
       
-        <a class="no-underline" href="/blog/2019-08-14-mathematical-motivation-meagre-contributions/">Mathematical motivation and meagre contributions</a>
+        <a href="/blog/2019-08-14-mathematical-motivation-meagre-contributions/">Mathematical motivation and meagre contributions</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/08/14
+      14th of August, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I find myself in a mathematical rut more often than I would like. It
 is very easy, especially as a PhD student, I think, to become
@@ -1363,7 +1330,7 @@ whole. I realised only the other day, after talking to my family, some
 of the things that can contribute towards this. Hopefully this post can
 serve as a reminder to myself that I am human being who is trying to be
 a mathematician, and not the other way around.</p>
-<a href='/blog/2019-08-14-mathematical-motivation-meagre-contributions/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-08-14-mathematical-motivation-meagre-contributions/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1372,24 +1339,24 @@ a mathematician, and not the other way around.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-07-29-graded-homotopy-structures-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-07-29-graded-homotopy-structures-">
       
-        <a class="no-underline" href="/blog/2019-07-29-graded-homotopy-structures/">Graded homotopy structures</a>
+        <a href="/blog/2019-07-29-graded-homotopy-structures/">Graded homotopy structures</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/07/29
+      29th of July, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>As I mentioned in a previous post, I recently saw a talk by <a
-href="http://math.ucalgary.ca/math_unitis/profiles/1-7046986">Rachel
+href="http://math.ucalgary.ca/math_unitis/pro_assets/files/1-7046986">Rachel
 Hardeman</a> on the A-homotopy theory of graphs, and it really intrigued
 me. In particular, it seemed to me that there was some nice structure
 that could be abstractified: that of a “graded homotopy structure”, as
@@ -1398,7 +1365,7 @@ everything in <a
 href="https://www.matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>,
 I’ve decided to post it here, in the hope that I might be able to get
 some answers.</p>
-<a href='/blog/2019-07-29-graded-homotopy-structures/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-07-29-graded-homotopy-structures/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1407,21 +1374,21 @@ some answers.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-07-26-twisting-cochains-and-twisted-complexes-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-07-26-twisting-cochains-and-twisted-complexes-">
       
-        <a class="no-underline" href="/blog/2019-07-26-twisting-cochains-and-twisted-complexes/">Twisting cochains and twisted complexes</a>
+        <a href="/blog/2019-07-26-twisting-cochains-and-twisted-complexes/">Twisting cochains and twisted complexes</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/07/26
+      26th of July, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This week was the <a href="https://ytm2019.epfl.ch">Young Topologists
 Meeting</a> at EPFL in Lausanne, and had courses by Julie Bergner (on 1-
@@ -1429,8 +1396,8 @@ and 2-Segal spaces) and Vidit Nanda (on the topology of data), as well
 as a bunch of great talks by various postdocs and PhD students. I was
 lucky enough to get the chance to talk about twisting cochains and
 twisted complexes for half an hour, and you can find the slides <a
-href="https://thosgood.net/assets/files/twisting-cochains-YTM19.pdf">here</a>.</p>
-<a href='/blog/2019-07-26-twisting-cochains-and-twisted-complexes/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+href="https://thosgood.net/_assets/files/twisting-cochains-YTM19.pdf">here</a>.</p>
+<a href='/blog/2019-07-26-twisting-cochains-and-twisted-complexes/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1439,21 +1406,21 @@ href="https://thosgood.net/assets/files/twisting-cochains-YTM19.pdf">here</a>.</
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-07-15-more-than-one-less-than-three-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-07-15-more-than-one-less-than-three-">
       
-        <a class="no-underline" href="/blog/2019-07-15-more-than-one-less-than-three/">More-than-one-but-less-than-three-categories</a>
+        <a href="/blog/2019-07-15-more-than-one-less-than-three/">More-than-one-but-less-than-three-categories</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/07/15
+      15th of July, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>What with all the wild applications of, and progress in, the theory
 of <span class="math inline">\infty</span>-categories, I had really
@@ -1461,7 +1428,7 @@ neglected studying any kind of lower higher-category theory. But, as in
 many other ways, CT2019 opened my eyes somewhat, and now I’m trying to
 catch up on the theory of 2-categories, which have some really beautiful
 structure and examples.</p>
-<a href='/blog/2019-07-15-more-than-one-less-than-three/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-07-15-more-than-one-less-than-three/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1470,28 +1437,28 @@ structure and examples.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-07-14-cauchy-completion-and-profunctors-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-07-14-cauchy-completion-and-profunctors-">
       
-        <a class="no-underline" href="/blog/2019-07-14-cauchy-completion-and-profunctors/">Cauchy completion and profunctors</a>
+        <a href="/blog/2019-07-14-cauchy-completion-and-profunctors/">Cauchy completion and profunctors</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/07/14
+      14th of July, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>An idea that came up in a few talks at CT2019 was that of ‘spans
 whose left leg is a left adjoint’. I managed (luckily) to get a chance
 to ask Mike Shulman a few questions about this, as well as post in <a
 href="https://www.matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>.
 What follows are some things that I learnt (mostly from [BD86]).</p>
-<a href='/blog/2019-07-14-cauchy-completion-and-profunctors/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-07-14-cauchy-completion-and-profunctors/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1500,21 +1467,21 @@ What follows are some things that I learnt (mostly from [BD86]).</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-07-13-ct2019-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-07-13-ct2019-">
       
-        <a class="no-underline" href="/blog/2019-07-13-ct2019/">CT2019</a>
+        <a href="/blog/2019-07-13-ct2019/">CT2019</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/07/13
+      13th of July, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I have just come back from CT2019 in Edinburgh, and it was a
 fantastic week. There were a bunch of really interesting talks, and I
@@ -1523,7 +1490,7 @@ had a chance to meet some lovely people. I also got to tell people about
 href="https://www.matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>,
 and so hopefully that will start to pick up in the not-too-distant
 future.</p>
-<a href='/blog/2019-07-13-ct2019/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-07-13-ct2019/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1532,28 +1499,28 @@ future.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2019-04-15-skomer-island-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2019-04-15-skomer-island-">
       
-        <a class="no-underline" href="/blog/2019-04-15-skomer-island/">Skomer island</a>
+        <a href="/blog/2019-04-15-skomer-island/">Skomer island</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      19/04/15
+      15th of April, 2019
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I haven’t posted anything in a while, and rather than trying to write
 about maths, I wanted to just share some lovely photos of Skomer island
 (which I recently visited). I am even less knowledgeable about birds
 than I am about maths, but I do love them, and this was the first time
 in my life that I’d actually seen a puffin in the flesh!</p>
-<a href='/blog/2019-04-15-skomer-island/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2019-04-15-skomer-island/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1562,21 +1529,21 @@ in my life that I’d actually seen a puffin in the flesh!</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-12-12-twisting-cochains-and-arbitrary-dg-categories-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-12-12-twisting-cochains-and-arbitrary-dg-categories-">
       
-        <a class="no-underline" href="/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories/">Twisting cochains and arbitrary dg-categories</a>
+        <a href="/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories/">Twisting cochains and arbitrary dg-categories</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/12/12
+      12th of December, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Having recently been thinking about twisting cochains (a major part
 of my thesis) a bit more, I think I better understand one reason why
@@ -1589,7 +1556,7 @@ class="math inline">A_\infty</span>-categories and their role in
 ‘homotopy things’.</p>
 <p>This isn’t a long post and could probably instead be a tweet but then
 this blog would be a veritable ghost town.</p>
-<a href='/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-12-12-twisting-cochains-and-arbitrary-dg-categories/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1598,21 +1565,21 @@ this blog would be a veritable ghost town.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-10-31-torsors-and-principal-bundles-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-10-31-torsors-and-principal-bundles-">
       
-        <a class="no-underline" href="/blog/2018-10-31-torsors-and-principal-bundles/">Torsors and principal bundles</a>
+        <a href="/blog/2018-10-31-torsors-and-principal-bundles/">Torsors and principal bundles</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/10/31
+      31st of October, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>In my thesis, switching between vector bundles and principal <span
 class="math inline">\mathrm{GL}_r</span>-bundles has often made certain
@@ -1633,7 +1600,7 @@ class="math inline">G</span> is the underlying vector space acting via
 translation’</em>,<a href="#fn2" class="footnote-ref" id="fnref2"
 role="doc-noteref"><sup>2</sup></a> which makes a nice short topic of
 discussion, whence this post.</p>
-<a href='/blog/2018-10-31-torsors-and-principal-bundles/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-10-31-torsors-and-principal-bundles/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1642,21 +1609,21 @@ discussion, whence this post.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-08-25-localisation-and-model-categories-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-08-25-localisation-and-model-categories-part-1-">
       
-        <a class="no-underline" href="/blog/2018-08-25-localisation-and-model-categories-part-1/">Localisation and model categories (Part 1)</a>
+        <a href="/blog/2018-08-25-localisation-and-model-categories-part-1/">Localisation and model categories [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/08/25
+      25th of August, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>After some exceptionally enlightening discussions with Eduard Balzin
 recently, I’ve made some notes on the links between model categories,
@@ -1664,7 +1631,7 @@ homotopy categories, and localisation, and how they all tie in together.
 There’s nothing particularly riveting or original here, but hopefully
 these notes can help somebody else who was lost in this mire of
 ideas.</p>
-<a href='/blog/2018-08-25-localisation-and-model-categories-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-08-25-localisation-and-model-categories-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1673,28 +1640,28 @@ ideas.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-08-16-categorification-of-the-dold-kan-correspondence-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-08-16-categorification-of-the-dold-kan-correspondence-">
       
-        <a class="no-underline" href="/blog/2018-08-16-categorification-of-the-dold-kan-correspondence/">Categorification of the Dold-Kan correspondence</a>
+        <a href="/blog/2018-08-16-categorification-of-the-dold-kan-correspondence/">Categorification of the Dold-Kan correspondence</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/08/16
+      16th of August, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>So I’m currently at the Max Planck Institute for Mathematics in Bonn,
 Germany, for a conference on ‘Higher algebra and mathematical physics’.
 Lots of the talks have gone entirely above my head (reminding me how far
 behind my physics education has fallen), but have still been very
 interesting.</p>
-<a href='/blog/2018-08-16-categorification-of-the-dold-kan-correspondence/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-08-16-categorification-of-the-dold-kan-correspondence/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1703,21 +1670,21 @@ interesting.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-07-08-nothing-really-that-new-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-07-08-nothing-really-that-new-">
       
-        <a class="no-underline" href="/blog/2018-07-08-nothing-really-that-new/">Nothing really that new</a>
+        <a href="/blog/2018-07-08-nothing-really-that-new/">Nothing really that new</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/07/08
+      8th of July, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Just a small post to point out that I’ve <a
 href="https://thosgood.github.io/papers/">uploaded some new notes</a>,
@@ -1725,7 +1692,7 @@ including some I took at the Derived Algebraic Geometry in Toulouse
 (DAGIT) conference last year. I’ve been hard at work on thesis things,
 so haven’t been able to write up all the blog stuff that I’ve wanted to,
 but hopefully will get a chance sometime in the near future.</p>
-<a href='/blog/2018-07-08-nothing-really-that-new/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-07-08-nothing-really-that-new/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1734,21 +1701,21 @@ but hopefully will get a chance sometime in the near future.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-04-26-derived-dg-triangulated-and-infinity-categories-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-04-26-derived-dg-triangulated-and-infinity-categories-">
       
-        <a class="no-underline" href="/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories/">Derived, DG, triangulated, and infinity-categories</a>
+        <a href="/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories/">Derived, DG, triangulated, and infinity-categories</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/04/26
+      26th of April, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This post assumes that you have seen the construction of derived
 categories and maybe the definitions of dg- and <span
@@ -1760,7 +1727,7 @@ equivalence classes of chain homotopic complexes; and then formally
 inverting all quasi-isomorphisms. Both of them seemed to be some sort of
 quotienting/equivalence-class-like action, so why not do them at the
 same time? What different roles were played by each step?</p>
-<a href='/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-04-26-derived-dg-triangulated-and-infinity-categories/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1769,27 +1736,27 @@ same time? What different roles were played by each step?</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-04-11-triangulation-of-products-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-04-11-triangulation-of-products-">
       
-        <a class="no-underline" href="/blog/2018-04-11-triangulation-of-products/">Triangulations of products of triangulations</a>
+        <a href="/blog/2018-04-11-triangulation-of-products/">Triangulations of products of triangulations</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/04/11
+      11th of April, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>At a conference this week, I ended up having a conversation with
 Nicolas Vichery and Eduard Balzin about why simplices are the prevalent
 choice of geometric shape for higher structure, as opposed to e.g. cubes
 or globes.</p>
-<a href='/blog/2018-04-11-triangulation-of-products/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-04-11-triangulation-of-products/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1798,26 +1765,26 @@ or globes.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-03-12-spectra-part-3-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-03-12-spectra-part-3-">
       
-        <a class="no-underline" href="/blog/2018-03-12-spectra-part-3/">Loop spaces, spectra, and operads (Part 3)</a>
+        <a href="/blog/2018-03-12-spectra-part-3/">Loop spaces, spectra, and operads [Part 3]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/03/12
+      12th of March, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>This post is a weird one: it’s not really aimed at any one audience,
 but is more of a dump of a bunch of information that I’m trying to
 process.</p>
-<a href='/blog/2018-03-12-spectra-part-3/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-03-12-spectra-part-3/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1826,21 +1793,21 @@ process.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2018-02-15-day-convolution-part-2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2018-02-15-day-convolution-part-2-">
       
-        <a class="no-underline" href="/blog/2018-02-15-day-convolution-part-2/">Weighted limits, ends, and Day convolution (Part 2)</a>
+        <a href="/blog/2018-02-15-day-convolution-part-2/">Weighted limits, ends, and Day convolution [Part 2]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      18/02/15
+      15th of February, 2018
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>Using the idea of weighted limits, defined in the last post, we can
 now talk about <strong>ends</strong>. The idea of an end is that, given
@@ -1854,7 +1821,7 @@ where the two actions coincide. Dually, a motivation behind the
 <strong>coend</strong> is in asking for some universal quotient of <span
 class="math inline">\coprod_{c\in\mathcal{C}}F(c,c)</span> that
 <em>forces</em> the two actions to agree.</p>
-<a href='/blog/2018-02-15-day-convolution-part-2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2018-02-15-day-convolution-part-2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1863,21 +1830,21 @@ class="math inline">\coprod_{c\in\mathcal{C}}F(c,c)</span> that
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2017-12-11-spectra-part-2-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2017-12-11-spectra-part-2-">
       
-        <a class="no-underline" href="/blog/2017-12-11-spectra-part-2/">Loop spaces, spectra, and operads (Part 2)</a>
+        <a href="/blog/2017-12-11-spectra-part-2/">Loop spaces, spectra, and operads [Part 2]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      17/12/11
+      11th of December, 2017
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>In the previous post of this series, I talked a bit about basic loop
 space stuff and how this gave birth to the idea of
@@ -1888,7 +1855,7 @@ what I was going to delve into next and speak about
 deloopings. I’ll probably leave the stuff about <span
 class="math inline">E_\infty</span>-algebras for another post, but will
 definitely at least mention about how it ties in to all this stuff.</p>
-<a href='/blog/2017-12-11-spectra-part-2/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2017-12-11-spectra-part-2/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1897,21 +1864,21 @@ definitely at least mention about how it ties in to all this stuff.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2017-12-08-spectra-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2017-12-08-spectra-part-1-">
       
-        <a class="no-underline" href="/blog/2017-12-08-spectra-part-1/">Loop spaces, spectra, and operads (Part 1)</a>
+        <a href="/blog/2017-12-08-spectra-part-1/">Loop spaces, spectra, and operads [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      17/12/08
+      8th of December, 2017
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>I have been reading recently about spectra and their use in defining
 cohomology theories. Something that came up quite a lot was the idea of
@@ -1924,7 +1891,7 @@ class="math inline">E_\infty</span>-algebras, and operads all fit
 together. In an attempt to solidify this understanding and pinpoint any
 difficulties, I’m going to try to write up what I ‘understand’ so
 far.</p>
-<a href='/blog/2017-12-08-spectra-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2017-12-08-spectra-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1933,21 +1900,21 @@ far.</p>
 </div>
 
   
-    <div class="w-80-ns post-in-list">
-  <div class="w-100 post-in-list-header">
-    <h3 id="2017-12-08-day-convolution-part-1-" class="post-in-list-title">
+    <div class="blog-archive-entry">
+  <div>
+    <h3 id="2017-12-08-day-convolution-part-1-">
       
-        <a class="no-underline" href="/blog/2017-12-08-day-convolution-part-1/">Weighted limits, ends, and Day convolution (Part 1)</a>
+        <a href="/blog/2017-12-08-day-convolution-part-1/">Weighted limits, ends, and Day convolution [Part 1]</a>
       
     </h3>
 
-    <span class="post-in-list-date">
+    <span>
       <!-- From lib/post_helper.rb -->
-      17/12/08
+      8th of December, 2017
     </span>
   </div>
 
-  <article class="post-in-list-summary">
+  <article>
     <!-- From lib/post_helper.rb -->
     <p>A motto of category theory is that ‘Kan extensions are everywhere’.
 As a simplification of this, ‘(co)limits are in a lot of places’. By
@@ -1957,7 +1924,7 @@ a <strong>weighted limit</strong>. In this post I’m going to assume that
 you are already convinced of the usefulness and omnipresence of limits
 and not talk too much (if at all) about why they are interesting in
 their own right.</p>
-<a href='/blog/2017-12-08-day-convolution-part-1/' class='post-in-list-summary-continue'>Continue reading &rarr;</a>
+<a href='/blog/2017-12-08-day-convolution-part-1/' class='continue-reading-link'>Continue reading &rarr;</a>
   </article>
 
   <div class="tag-list">
@@ -1968,16 +1935,13 @@ their own right.</p>
   
 </div>
 
-      </div>
-      
-      
-    </div>
+    </content>
 
     
-      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+      <script type="text/javascript" src="/_assets/jquery-3.6.4.slim.min.js"></script>
 
 <!-- Use KaTeX rendering for all static page content -->
-<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript" src="/_assets/katex/katex.min.js"></script>
 <script type="text/javascript">
   $("span[class='math inline']").replaceWith(
     function(){

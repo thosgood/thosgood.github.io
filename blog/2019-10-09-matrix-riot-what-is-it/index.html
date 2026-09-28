@@ -1,93 +1,63 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@tim_hosgood">
-    <meta name="twitter:title" content="Matrix: open, secure, and decentralised // Tim Hosgood">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://thosgood.net/assets/images/me.jpg">
 
     
     <title>Matrix: open, secure, and decentralised | Tim Hosgood</title>
     
 
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/blog.css">
-    <link rel="stylesheet" href="/assets/css/post.css">
-    <link rel="stylesheet" href="/assets/css/citations.css">
+    <link rel="stylesheet" href="/_assets/style.css">
+    
+    <link rel="stylesheet" href="/_assets/katex/katex.min.css">
+    
 
-    <link rel="stylesheet" href="/assets/css/tachyons.css">
-    <link rel="stylesheet" href="/assets/katex/katex.min.css">
-
-    <link rel="me" href="https://mathstodon.xyz/@thosgood">
+    <link rel="me" href="https://mathstodon.xyz/@thosgood"></a>
 </head>
 
 
   <body>
 
-    <div id="header_wrapper" class="h3-ns w-100 flex items-center justify-center">
-  <div id="header" class="w-60-ns w-80-m flex flex-wrap items-center">
-    <div class="w-third-ns tl pv0-ns pv3 center">
-      <span class="f4"><a class="nav_link" href="/">Tim Hosgood</a></span>
-    </div>
-    <div id="nav_bar" class="w-two-thirds-ns tr-ns center">
-      <ol class="fr-ns list ma0 pl0">
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/about/">About</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/work/">Work</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/translations/">Translations</a>
-        </li>
-        <li class="ph2-ns ph1 dib f4">
-          <a class="nav_link" href="/blog/">Blog</a>
-        </li>
-        <li class="pl2-ns pl1 dib f4">
-          <a class="nav_link" href="/cv/">CV</a>
-        </li>
-      </ol>
-    </div>
+    <nav id="top-navigation">
+  <div id="navigation-name">
+    <a class="navigation-link" href="/">Tim Hosgood</a>
   </div>
-</div>
+  <div id="navigation-page-links">
+    <a class="navigation-link" href="/research/">Research</a>
+    <a class="navigation-link" href="/translations/">Translations</a>
+    <a class="navigation-link" href="/blog/">Blog</a>
+    <a class="navigation-link" href="/cv/">CV</a>
+  </div>
+</nav>
 
 
-    <div id="main_wrapper" class="mw7 mv4 flex flex-column center">
-      <div id="main" class="w-100 flex flex-wrap items-start lh-title mv3 ph4">
-        
-  <div id="post-nav" class="w-100-ns w-100">
-    <!-- Display settings -->
+    <content id="main">
+      
+
+<article>
+
+  <div id="post-title-block">
     
-    <!-- Navigation -->
-    <a href="/blog/#2019-10-09-matrix-riot-what-is-it-" class="fr f5">← Return to all posts</a>
-  </div>
-  <div id="post-pre-content" class="w-100-ns ph3-ns w-100">
-    <h1 id="post-title">Matrix: open, secure, and decentralised</h1>
-    <h2 id="post-part"></h2>
-    <h6 id="post-date">9th of October, 2019</h6>
-    <div class="tag-list">
+    <h1 id="post-title">
+      <a href="/blog/">Blog</a> / Matrix: open, secure, and decentralised
+    </h1>
+    
+
+    <p id="post-date">9th of October, 2019</p>
+
+    
+    
+
+    
+    <div id="post-tag-list">
       <a href="/blog/matrix" rel="tag">matrix</a>, <a href="/blog/general" rel="tag">general</a>
     </div>
-    <!-- Other posts in the same series -->
-    
   </div>
-  <div id="post-content" class="w-90-ns ph3-ns w-100">
-    <!-- Content -->
-    <ol id="toc">
-<li><a href="#what-are-matrix-riot-etc.">What are Matrix, Riot, etc.?</a></li>
-<li><a href="#why-do-you-write-latex-in-scare-quotes">Why do you write “LaTeX”
-in scare quotes?</a></li>
-<li><a href="#why-are-you-telling-me-all-this">Why are you telling me all
-this?</a></li>
-<li><a href="#if-i-do-now-care-what-can-i-do">If I do now care, what can I
-do?</a></li>
-</ol>
-<p>Anybody who follows me on Twitter will have heard me go on about
+
+  
+  <div id="post-content">
+    <p>Anybody who follows me on Twitter will have heard me go on about
 Matrix, and Riot, and maybe a whole host of other such things. I
 understand that most people probably won’t really care much about it
 all, but I thought that I’d try to explain a bit why I’m quite so
@@ -96,7 +66,6 @@ passionate about this stuff, and why I’m bothering to try to work on
 later).</p>
 <!-- more -->
 <h1 id="what-are-matrix-riot-etc.">What are Matrix, Riot, etc.?</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p><strong>tl;dr: Matrix is like email, and Riot is like an email
 client.</strong></p>
 <p>Anybody who has ever used IRC has some idea of what Matrix is, and
@@ -183,7 +152,8 @@ might be asking.</p>
 <p>Firstly, if anybody is trying to explain why a system that ensures
 privacy/security by saying “oh but I can’t tell you the details of how
 it works, because then hackers could hack it”, then they are almost
-certainly explaining <a href="https://en.wikipedia.org/wiki/Security_through_obscurity">a pretty
+certainly explaining <a
+href="https://en.wikipedia.org/wiki/Security_through_obscurity">a pretty
 insecure system</a>. Good cryptographic algorithms are those where every
 single step is read by hundreds of different scientists and developers
 and mathematicians, over and over, for 30 years, and everybody agrees
@@ -203,10 +173,12 @@ your message before decryption, and then quickly sneaking it away to
 keep on the other phone just after decoding. Who knows?</p>
 <h2 id="so-its-just-like-that-xckd-comic-right">So it’s just like that
 XCKD comic, right?</h2>
-<p>In almost any conversation, there is a relevant XKCD: here, it’s <a href="https://xkcd.com/927/">#927</a> : there are so many competing
+<p>In almost any conversation, there is a relevant XKCD: here, it’s <a
+href="https://xkcd.com/927/">#927</a> : there are so many competing
 standards, so why try for another one?</p>
 <figure>
-<img src="xkcd927.png" title="XKCD number 927" alt="The XKCD in question">
+<img src="xkcd927.png" title="XKCD number 927"
+alt="The XKCD in question" />
 <figcaption aria-hidden="true">The XKCD in question</figcaption>
 </figure>
 <p>First of all, as mentioned above, Matrix solves a pretty big problem
@@ -229,7 +201,6 @@ Matrix is not saying “everybody has to use me”, but instead “anybody who
 uses me can also talk to people not using me”.</p>
 <h1 id="why-do-you-write-latex-in-scare-quotes">Why do you write “LaTeX”
 in scare quotes?</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>What I’ve been working on for a while is trying to find a way to be
 able to type formatted maths in messages.</p>
 <p>This started off as the naive idea of teaching Riot to understand
@@ -250,7 +221,8 @@ that are either not necessary for instant messages, or already possible
 to do in much simpler ways): all we really want is to be able to turn
 something like</p>
 <pre><code>\oiint_{\partial\Sigma}\omega\,\mathrm{d}\tau</code></pre>
-<p>into <span class="math inline">\oiint_{\partial\Sigma}\omega\,\mathrm{d}\tau</span>.</p>
+<p>into <span
+class="math inline">\oiint_{\partial\Sigma}\omega\,\mathrm{d}\tau</span>.</p>
 <p>So I write “LaTeX” support, because we don’t really want LaTeX, but
 instead something like MathJax or KaTeX: something that can just display
 LaTeX syntax as nice SVG/HTML content.</p>
@@ -261,7 +233,8 @@ non-profit organisation that helps make Matrix and Riot. The main
 consensus now is that, we should <em>not</em> just be asking how to make
 Riot display LaTeX syntax as recognisable maths (this is something
 that’s easy enough to do that even I did it, having the bare minimum
-amount of experience with Javascript: the result is <a href="https://pigeon.digital">https://pigeon.digital</a>); we should be
+amount of experience with Javascript: the result is <a
+href="https://pigeon.digital">https://pigeon.digital</a>); we should be
 asking how to deal with the idea of wanting to send mathematical syntax
 (that is easy to type) in a way that agrees with Matrix, i.e. how to add
 in rules to the Matrix specification that say how mathematical symbols
@@ -270,7 +243,6 @@ should be dealt with.</p>
 exciting for other people too, I promise! Hear me out.</p>
 <h1 id="why-are-you-telling-me-all-this">Why are you telling me all
 this?</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>What people are now trying to do is to come up with a way of sending
 “LaTeX” source code (here the square quotes mark the fact that we don’t
 want to be able to send arbitrary LaTeX code to be executed, for fair
@@ -313,7 +285,6 @@ that we could have ones that have a bit more support for modern things
 that we take for granted (images, file sharing, etc., as above).</p>
 <h1 id="if-i-do-now-care-what-can-i-do">If I do now care, what can I
 do?</h1>
-<a href="#post-title" class="toc-back">↟</a>
 <p>Well, depending on how you feel, and what you like to do, there are
 lots of things that you could do! Here are some suggestions, in no
 particular order.</p>
@@ -332,8 +303,10 @@ say so! and if you know how, you can implement/fix/add it! Riot probably
 also has most of the things that you are used to: public rooms, private
 rooms, one-to-one chats, room bots, and the like.</li>
 <li>Join some of the standard Matrix rooms to listen and learn (as well
-as to say hello to people and talk)! These are ones like Matrix HQ (<a href="https://matrix.to/#/#matrix:matrix.org"><code>#matrix:matrix.org</code></a>)
-and Riot Web/Desktop (<a href="https://matrix.to/#/#riot-web:matrix.org"><code>#riot-web:matrix.org</code></a>).</li>
+as to say hello to people and talk)! These are ones like Matrix HQ (<a
+href="https://matrix.to/#/#matrix:matrix.org"><code>#matrix:matrix.org</code></a>)
+and Riot Web/Desktop (<a
+href="https://matrix.to/#/#riot-web:matrix.org"><code>#riot-web:matrix.org</code></a>).</li>
 <li>If you want to learn more about how Matrix actually works, or about
 other clients, or anything at all really, then just ask me (via email,
 Twitter, or even Matrix itself!) and I will either answer, or point you
@@ -347,9 +320,12 @@ the very least, I can guarantee that they’re super welcoming and never
 home to responses like “that’s a stupid question: please do more
 research before asking stuff like that here” (although, sure, the caveat
 is that they’re very small…). There are currently two maths rooms that I
-run (<a href="https://matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>
-and <a href="https://matrix.to/#/#math.AT:matrix.org"><code>#math.AT:matrix.org</code></a>),
-and a community that I moderate (<a href="https://matrix.to/#/+mathematics:matrix.org"><code>+mathematics:matrix.org</code></a>),
+run (<a
+href="https://matrix.to/#/#math.CT:matrix.org"><code>#math.CT:matrix.org</code></a>
+and <a
+href="https://matrix.to/#/#math.AT:matrix.org"><code>#math.AT:matrix.org</code></a>),
+and a community that I moderate (<a
+href="https://matrix.to/#/+mathematics:matrix.org"><code>+mathematics:matrix.org</code></a>),
 which keeps a list of interesting rooms to do with mathematics. Don’t
 see a room that you’d like to exist? Then make one! You can make it
 private and just use it with your local team/work group/reading group;
@@ -358,20 +334,33 @@ for it to be added to the Mathematics community list!</li>
 </ol>
 
   </div>
-  <!-- giscus comments -->
-  <script src="https://giscus.app/client.js" data-repo="thosgood/thosgood.github.io" data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM=" data-category="Comments" data-category-id="DIC_kwDOBsbU484CdW9A" data-mapping="title" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" data-loading="lazy" crossorigin="anonymous" async>
-  </script>
 
-      </div>
-      
-      
-    </div>
+  
+  <script src="https://giscus.app/client.js"
+          data-repo="thosgood/thosgood.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM="
+          data-category="Comments"
+          data-category-id="DIC_kwDOBsbU484CdW9A"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</article>
+
+    </content>
 
     
-      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+      <script type="text/javascript" src="/_assets/jquery-3.6.4.slim.min.js"></script>
 
 <!-- Use KaTeX rendering for all static page content -->
-<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript" src="/_assets/katex/katex.min.js"></script>
 <script type="text/javascript">
   $("span[class='math inline']").replaceWith(
     function(){
@@ -393,7 +382,11 @@ for it to be added to the Mathematics community list!</li>
     
 
   </body>
-</html><!-- Render maths in comments --><html>
+</html>
+
+
+
+<!-- Render maths in comments -->
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(window).bind("load", function() {
@@ -409,35 +402,3 @@ for it to be added to the Mathematics community list!</li>
         });
   });
 </script>
-
-
-<!-- Display settings (dark mode, font, etc) -->
-
-<script type="text/javascript">
-  const body = document.getElementsByTagName('body')[0];
-  const content = document.getElementById('post-content');
-
-  function lightStyle() {
-    body.style.background = 'white';
-    body.style.color = 'black';
-    document.getElementById('post-nav').style.background = 'white'
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      links[i].style.color = '#2a7ae2';
-    }
-  }
-  function darkStyle() {
-    body.style.background = '#333';
-    body.style.color = '#eee';
-    document.getElementById('post-nav').style.background = '#555'
-    var links = document.getElementsByTagName('a');
-    for (var i = 0; i < links.length; i++) {
-      links[i].style.color = '#82b2ee';
-    }
-    var tables = document.getElementsByTagName('table');
-    for (var i = 0; i < tables.length; i++) {
-      tables[i].style.color = 'black';
-    }
-  }
-</script>
-</html>
