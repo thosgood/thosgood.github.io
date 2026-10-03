@@ -2,13 +2,398 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://thosgood.net/">
   <id>https://thosgood.net/</id>
   <title>Tim Hosgood's blog</title>
-  <updated>2026-09-09T00:00:00Z</updated>
+  <updated>2026-10-03T00:00:00Z</updated>
   <link rel="alternate" href="https://thosgood.net/" type="text/html"/>
   <link rel="self" href="https://thosgood.net/blog.xml" type="application/atom+xml"/>
   <author>
     <name>Tim Hosgood</name>
     <uri>https://thosgood.net</uri>
   </author>
+  <entry>
+    <id>tag:thosgood.net,2026-10-03:/blog/2026-10-03-cohomology-notation-part-3/</id>
+    <title type="html">How does cohomology relate to cohomology?</title>
+    <published>2026-10-03T00:00:00Z</published>
+    <updated>2026-10-03T00:00:00Z</updated>
+    <link rel="alternate" href="https://thosgood.net/blog/2026-10-03-cohomology-notation-part-3/" type="text/html"/>
+    <content type="html">&lt;p&gt;Having read the previous part of this series, we know all about the
+sheaf of holomorphic functions on a complex manifold. This means I now
+have to hold good on my promise and get back to talking about
+cohomologies. But…&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;I think it’s often helpful to get a glimpse of what we’re working
+towards before we start actually working towards it. I remember the
+amount of turmoil I experienced writing my thesis by reading the phrase
+“by a standard spectral sequence argument” and not really knowing what
+that actually meant when it came to doing an explicit calculation. I
+think that it’s quite common to have the same experience for
+cohomological arguments. And I’m not saying that this is bad — it really
+is the case that there are some standard sentences that we would end up
+saying so repeatedly otherwise — but I think it’s nice to see the
+details for once. So here’s a sentence that I could imagine writing (and
+almost certainly have actually written in correspondence with coauthors)
+when talking about a cohomological argument:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By taking a nice enough cover, the standard arguments tell us that we
+can compute singular cohomology &lt;span
+class="math inline"&gt;\mathrm{H}^r(X;\mathbb{C})&lt;/span&gt; via the Čech–de
+Rham bicomplex &lt;span
+class="math inline"&gt;\operatorname{Tot}^r\check{\mathscr{C}}^\bullet(\Omega_X^\bullet)&lt;/span&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So what do I mean by “the standard arguments” here? And what is this
+sentence actually saying? In short, it’s a repeated syllogism of
+statements concerning when various types of cohomology actually
+coincide.&lt;/p&gt;
+&lt;div class="rmenv" title="Suggestion"&gt;
+&lt;p&gt;Before writing more words, let me just say that if you don’t find
+“reading ahead” a helpful practice then you should just skip over the
+rest of this section. It’s all just a big mess of things that we have
+not yet seen.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here’s what I might write if I wanted to be more explicit about the
+actual “standard” facts that I’m appealing to:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By taking a Stein cover &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt;
+and using the fact that the sheaves &lt;span
+class="math inline"&gt;\Omega_X^i&lt;/span&gt; are coherent, Cartan’s Theorem B
+tells us that the cohomology of the total complex of the Čech–de Rham
+bicomplex at &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt; computes the
+Čech cohomology of the de Rham complex: &lt;span
+class="math display"&gt;\check{\mathbb{H}}^r(\mathcal{U};\Omega_X^\bullet)\cong\check{\mathbb{H}}^r(X;\Omega_X^\bullet).\tag{1}&lt;/span&gt;Next,
+since &lt;span class="math inline"&gt;X&lt;/span&gt; is paracompact and, again,
+Cartan’s Theorem B, we know that Čech cohomology computes sheaf
+cohomology: &lt;span
+class="math display"&gt;\check{\mathbb{H}}^r(X;\Omega_X^\bullet)\cong\mathbb{H}^r(X;\Omega_X^\bullet).\tag{2}&lt;/span&gt;
+Finally, the (holomorphic) de Rham theorem tells us that the sheaf
+cohomology of the de Rham complex computes the singular cohomology:
+&lt;span
+class="math display"&gt;\mathbb{H}^r(X;\Omega_X^\bullet)\cong\mathrm{H}^r(X;\mathbb{C}).\tag{3}&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Irrelevant of what all the words mean, hopefully you can see the idea
+here: we want to end up computing this singular cohomology &lt;span
+class="math inline"&gt;\mathrm{H}^r(X;\mathbb{C})&lt;/span&gt; that we saw all
+the way back in Part 1 (well, almost, modulo the fact that here I’ve
+written &lt;span class="math inline"&gt;\mathbb{C}&lt;/span&gt; instead of &lt;span
+class="math inline"&gt;\mathbb{Z}&lt;/span&gt;, but we can ignore that difference
+for now), but what we actually know how to compute is something a priori
+very different, namely this thing denoted &lt;span
+class="math inline"&gt;\check{\mathbb{H}}^r(\mathcal{U};\Omega_X^\bullet)&lt;/span&gt;.
+But because mathematics is our friend we can get to the former from the
+latter by taking three steps, where each one is some argument saying
+that “well look I actually computed this very specific thing but it
+turns out that all the choices that I made didn’t actually matter”.
+Indeed, as we will eventually see, the isomorphism in (1) is saying that
+we didn’t have to actually take some colimit over &lt;em&gt;all possible&lt;/em&gt;
+covers but we could instead just pick a specific one, as long as it’s
+nice enough; the isomorphism in (2) is saying that we didn’t actually
+have to work with the space &lt;span class="math inline"&gt;X&lt;/span&gt; but
+instead “just” with a colimit over all possible covers of &lt;span
+class="math inline"&gt;X&lt;/span&gt; (but somehow this is actually easier!); and
+the isomorphism in (3) is saying that we didn’t actually have to look at
+the topological structure of &lt;span class="math inline"&gt;X&lt;/span&gt; (recall
+that we defined singular cohomology by looking at the groups of singular
+&lt;span class="math inline"&gt;n&lt;/span&gt;-simplices sitting inside of &lt;span
+class="math inline"&gt;X&lt;/span&gt;) but could instead just work with some
+purely algebraic gadget that we can essentially do linear algebra
+on.&lt;/p&gt;
+&lt;p&gt;This sequence of arguments turns up everywhere in calculations of
+cohomology, but particularly so in geometry, where we are interested in
+how all the different structures that our spaces have (topological,
+algebraic, analytic, and maybe more) do or don’t work well together. And
+this general pattern is something that we should keep in mind when we
+(finally, &lt;em&gt;finally&lt;/em&gt;) introduce sheaf cohomology, hypercohomology,
+and Čech cohomology:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To show that one cohomology “computes” another cohomology we apply
+&lt;strong&gt;acyclicity&lt;/strong&gt; theorems over and over until we get from the
+thing that we &lt;em&gt;can&lt;/em&gt; compute to the thing that we &lt;em&gt;want&lt;/em&gt; to
+compute.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;These “acyclicity” theorems are thus a key part of any explanation of
+how these cohomologies all talk with one another. Depending on what
+“flavour” of cohomology you’re working with, they will take different
+forms. Roughly:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;topological&lt;/em&gt; cohomologies really like &lt;em&gt;contractible&lt;/em&gt;
+subsets and &lt;em&gt;locally constant&lt;/em&gt; coefficients&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;algebraic&lt;/em&gt; cohomologies really like &lt;em&gt;affine&lt;/em&gt; subsets
+and &lt;em&gt;quasi-coherent&lt;/em&gt; coefficients&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;complex-analytic&lt;/em&gt; (resp. &lt;em&gt;real-analytic&lt;/em&gt;)
+cohomologies really like &lt;em&gt;Stein&lt;/em&gt; (resp. &lt;em&gt;coherent
+analytic&lt;/em&gt;) subsets and &lt;em&gt;coherent&lt;/em&gt; coefficients.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There’s another beautiful story about Cartan-type acyclicity theorems
+that is actually a bit of a mystery to me, and I think there is some
+interesting research (or, at least, literature review and exposition) to
+be done here.&lt;a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; But not today!&lt;/p&gt;
+&lt;h2 id="quasi-isomorphisms"&gt;Quasi-isomorphisms&lt;/h2&gt;
+&lt;p&gt;The main takeaway of that long introduction is that it’s going to be
+a bit hopeless to introduce a bunch of new meanings of the word
+“cohomology” if we don’t have the right language to say when two
+different meanings do or do not coincide. So let’s learn about one of my
+other favourite mathematical things:
+&lt;strong&gt;quasi-isomorphisms&lt;/strong&gt;. As a brief reminder (because there
+has been so much rambling in the meantime), recall that a morphism &lt;span
+class="math inline"&gt;f^\bullet\colon(C^\bullet,d^\bullet)\to(D^\bullet,e^\bullet)&lt;/span&gt;
+of (cochain) complexes is merely a collection of “degree-wise” morphisms
+&lt;span class="math inline"&gt;f^i\colon C^i\to D^i&lt;/span&gt;, and if these
+morphisms happen to commute with the differentials &lt;span
+class="math inline"&gt;d^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;e^\bullet&lt;/span&gt; then we call the morphism a
+&lt;strong&gt;chain map&lt;/strong&gt;.&lt;a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="rmenv" title="Definition (Quasi-isomorphism)"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;f^\bullet\colon
+(C^\bullet,d^\bullet)\to(D^\bullet,e^\bullet)&lt;/span&gt; be a chain map of
+complexes. We say that &lt;span class="math inline"&gt;f^\bullet&lt;/span&gt; is a
+&lt;strong&gt;quasi-isomorphism&lt;/strong&gt; if it “induces an isomorphism in
+cohomology”, i.e. if the induced maps &lt;span
+class="math inline"&gt;\mathscr{H}^i(f^\bullet)\colon\mathscr{H}^i(C^\bullet)\to\mathscr{H}^i(D^\bullet)&lt;/span&gt;
+are isomorphisms for all &lt;span
+class="math inline"&gt;i\in\mathbb{Z}&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;An important exercise is to unwrap what these “induced maps” &lt;span
+class="math inline"&gt;\mathscr{H}^i(f^\bullet)&lt;/span&gt; actually are, and to
+see why we really require &lt;span class="math inline"&gt;f^\bullet&lt;/span&gt; to
+be a chain map. Recall that &lt;span
+class="math inline"&gt;\mathscr{H}^i(C^\bullet)&lt;/span&gt; is defined as &lt;span
+class="math inline"&gt;\operatorname{Ker}{d^n}/\operatorname{Im}{d^{n-1}}&lt;/span&gt;,
+and so the “obvious” thing to try is to say that &lt;span
+class="math inline"&gt;\mathscr{H}^i(f^\bullet)&lt;/span&gt; is simply the
+restriction of &lt;span class="math inline"&gt;f^i&lt;/span&gt; to &lt;span
+class="math inline"&gt;\operatorname{Ker}{d^n}&lt;/span&gt;. That is, we set
+&lt;span class="math display"&gt;
+    \mathscr{H}^i(f^\bullet)
+    \coloneqq f^i|\operatorname{Ker}{d^n}
+&lt;/span&gt; and now just need to show that this is indeed well defined,
+which means showing that the following two properties hold:&lt;/p&gt;
+&lt;ol type="1"&gt;
+&lt;li&gt;The restriction in the source lands in the restriction in the
+target: &lt;span
+class="math inline"&gt;\operatorname{Im}(f^i|\operatorname{Ker}{d^n})\subseteq\operatorname{Ker}e^n&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The map respects the quotients: &lt;span
+class="math inline"&gt;[c]=[c&amp;#39;]\in\mathscr{H}^i(C^\bullet)\iff
+[(f^i|\operatorname{Ker}{d^n})(c)]=[(f^i|\operatorname{Ker}{d^n})(c&amp;#39;)\in\mathscr{H}^i(D^\bullet)]&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Again, the hypothesis that &lt;span class="math inline"&gt;f^\bullet&lt;/span&gt;
+is a chain map (i.e. respects the differentials) is key here.&lt;/p&gt;
+&lt;p&gt;The very name of quasi-isomorphisms suggest that they should have
+some relation to isomorphisms. An &lt;strong&gt;isomorphism&lt;/strong&gt; of
+complexes is a chain map with an inverse that is also a chain map.
+Unravelling this definition, we see that an isomorphism of complexes is
+really just a chain map &lt;span class="math inline"&gt;f^\bullet&lt;/span&gt; such
+that each &lt;span class="math inline"&gt;f^i&lt;/span&gt; is an isomorphism. Now,
+it is not hard to show that every isomorphism is also a
+quasi-isomorphism, but the converse is definitely not true (as we will
+soon show in an example). But quasi-isomorphisms (just like
+isomorphisms) satisfy the 2-out-of-3 property: if we have a composable
+pair of morphisms &lt;span class="math display"&gt;
+    C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet
+&lt;/span&gt; and we set &lt;span class="math inline"&gt;h^\bullet=g^\bullet
+f^\bullet&lt;/span&gt;, then if any two out of the three morphisms &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt;, &lt;span
+class="math inline"&gt;g^\bullet&lt;/span&gt;, and &lt;span
+class="math inline"&gt;h^\bullet&lt;/span&gt; are quasi isomorphisms, then so too
+is the third. This tells us, for example, that quasi-isomorphisms are
+closed under composition (apply the statement to &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;g^\bullet&lt;/span&gt;). This 2-out-of-3 property is
+something that will prove to be very useful later on (even if I forget
+to mention it), because it captures a key behaviour of “morphisms that
+deserve to be called weak equivalences”.&lt;/p&gt;
+&lt;p&gt;So quasi-isomorphisms are a generalisation of isomorphisms, but why
+are they a &lt;em&gt;good&lt;/em&gt; generalisation? Here I’ll just give the cheap
+answer: we’re only interested in cochain complexes for their cohomology,
+so we shouldn’t really mind whether or not two complexes are the same,
+as long as they have the same cohomology. Let’s give an example.&lt;/p&gt;
+&lt;p&gt;Consider the cochain complexes (of abelian groups) &lt;span
+class="math display"&gt;
+\begin{array}{rrcl}
+    C^\bullet \coloneqq &amp;amp; \mathbb{Z} &amp;amp; \xrightarrow{\cdot 2}
+&amp;amp; \mathbb{Z}
+    \\ D^\bullet\coloneqq &amp;amp; 0 &amp;amp; \to &amp;amp; \mathbb{Z}/2\mathbb{Z}
+\end{array}
+&lt;/span&gt; (where we write &lt;span class="math inline"&gt;\cdot2&lt;/span&gt; to mean
+the map &lt;span class="math inline"&gt;n\mapsto 2n&lt;/span&gt;), and define a
+chain map &lt;span class="math inline"&gt;f^\bullet\colon C^\bullet\to
+D^\bullet&lt;/span&gt; by &lt;span class="math display"&gt;
+\begin{CD}
+    \mathbb{Z} @&amp;gt;{\cdot2}&amp;gt;&amp;gt; \mathbb{Z}
+    \\ @VVV @VV{\mod2}V
+    \\0 @&amp;gt;&amp;gt;&amp;gt; \mathbb{Z}/2\mathbb{Z}
+\end{CD}
+&lt;/span&gt; We can easily see this to be a chain map, since the path &lt;span
+class="math inline"&gt;\to\circ\downarrow&lt;/span&gt; is zero by virtue of
+factoring through &lt;span class="math inline"&gt;0&lt;/span&gt;, and the path &lt;span
+class="math inline"&gt;\downarrow\circ\to&lt;/span&gt; is zero since if we double
+a number and then take its value modulo 2 we get zero; the diagram
+commutes.&lt;/p&gt;
+&lt;p&gt;Note that there is &lt;em&gt;no way at all&lt;/em&gt; that &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt; could ever be an isomorphism, since
+in particular the map &lt;span
+class="math inline"&gt;f^0\colon\mathbb{Z}\to0&lt;/span&gt; cannot be an
+isomorphism. But &lt;span class="math inline"&gt;f^\bullet&lt;/span&gt; &lt;em&gt;is&lt;/em&gt;
+a quasi-isomorphism. To see this, we have to calculate the cohomology of
+&lt;span class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt; and show that the induced maps
+&lt;span class="math inline"&gt;\mathscr{H}^i(f^\bullet)&lt;/span&gt; are
+isomorphisms. First, the cohomologies: &lt;span class="math display"&gt;
+\begin{aligned}
+    \mathscr{H}^i(C^\bullet)
+    &amp;amp;= \left( \frac{\operatorname{Ker}(\cdot
+2)}{\operatorname{Im}(0\to\mathbb{Z})} \longrightarrow
+\frac{\operatorname{Ker}(\mathbb{Z}\to0)}{\operatorname{Im}(\cdot2)}
+\right)
+    \\&amp;amp;= \left( \frac{0}{0} \longrightarrow
+\frac{\mathbb{Z}}{2\mathbb{Z}} \right)
+    \\&amp;amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
+    \\[1em]\mathscr{H}^i(D^\bullet) &amp;amp;= \left(
+\frac{\operatorname{Ker}(0\to0)}{\operatorname{Im}(0\to0)}
+\longrightarrow
+\frac{\operatorname{Ker}(\mathbb{Z}/2\mathbb{Z}\to0)}{\operatorname{Im}(0\to\mathbb{Z}/2\mathbb{Z})}
+\right)
+    \\&amp;amp;= \left( \frac{0}{0} \longrightarrow
+\frac{\mathbb{Z}/2\mathbb{Z}}{0} \right)
+    \\&amp;amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
+\end{aligned}
+&lt;/span&gt; And now we have to repeat&lt;a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; a very important
+warning: &lt;em&gt;two objects being isomorphic is very different from having
+an explicit isomorphism between them&lt;/em&gt;. Here, for example, we see
+that the cohomologies &lt;span
+class="math inline"&gt;\mathscr{H}^\bullet(C)&lt;/span&gt; and &lt;span
+class="math inline"&gt;\mathscr{H}^\bullet(D)&lt;/span&gt; are clearly isomorphic
+(they are identical!). But the question is &lt;em&gt;not&lt;/em&gt; “do &lt;span
+class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt; have isomorphic cohomologies?”; the
+question is “does the morphism &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt; witness the fact that &lt;span
+class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt; have isomorphic cohomologies?”.
+Here the answer is a happy one: &lt;span
+class="math inline"&gt;\mathscr{H}^{0}(f^\bullet)=0\colon0\to0&lt;/span&gt; is an
+isomorphism of the zero object with itself, and &lt;span
+class="math inline"&gt;\mathscr{H}^{1}(f^\bullet)=\mathrm{id}\colon\mathbb{Z}/2\mathbb{Z}\to\mathbb{Z}/2\mathbb{Z}&lt;/span&gt;
+is an identity isomorphism. So &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt; is a quasi-isomorphism, despite not
+being an isomorphism.&lt;/p&gt;
+&lt;p&gt;Returning to this subtle (but important) distinction between “seeing
+that two things are isomorphic” and “having a morphism that induces an
+isomorphism between two things”, we can ask ourselves a question: by
+just looking at &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt; in this example, we knew for a fact
+that we could never find an isomorphism between them; by just looking at
+&lt;span class="math inline"&gt;\mathscr{H}^\bullet(C)&lt;/span&gt; and &lt;span
+class="math inline"&gt;\mathscr{H}^\bullet(D)&lt;/span&gt; it seemed very hopeful
+that we would be able to find a quasi-isomorphism, because these
+cohomologies were identical, but can we be &lt;em&gt;sure&lt;/em&gt; that we would
+have been able to find one?&lt;/p&gt;
+&lt;p&gt;Before answering this question, it’s worth carrying on with the
+example above (which is a sort of canonical example, largely because it
+allows us to point out all these weird quirks). If quasi-isomorphisms
+are a generalisation of isomorphisms, and isomorphisms are morphisms
+that have inverses, then do quasi-isomorphisms have some sort of
+“quasi-inverse”? This is where things get nasty (but in a way that turns
+out to actually be very satisfying, once we get some more homological
+algebra in our toolkit). We gave a specific quasi-isomorphism &lt;span
+class="math inline"&gt;f^\bullet\colon C^\bullet\to D^\bullet&lt;/span&gt; above,
+so let’s just look at trying to find a “quasi-inverse” for this. Well,
+even if we don’t know what a good definition for a quasi-inverse would
+be, it makes sense that it should at the very least be a map (maybe not
+necessarily even a chain map) &lt;span class="math inline"&gt;g^\bullet\colon
+D^\bullet\to C^\bullet&lt;/span&gt; such that… some nice condition is
+satisfied. But &lt;span
+class="math inline"&gt;\operatorname{Hom}(D^\bullet,C^\bullet)=0&lt;/span&gt;!
+That is, there is only one map (which does happen to be a chain map,
+trivially) from &lt;span class="math inline"&gt;D^\bullet&lt;/span&gt; to &lt;span
+class="math inline"&gt;C^\bullet&lt;/span&gt;, and that is the zero map. This
+means that any condition we try to phrase in terms of &lt;span
+class="math inline"&gt;g^\bullet f^\bullet&lt;/span&gt; or &lt;span
+class="math inline"&gt;f^\bullet g^\bullet&lt;/span&gt;, or even something more
+complicated like &lt;span class="math inline"&gt;g^jf^i&lt;/span&gt; and &lt;span
+class="math inline"&gt;f^kg^\ell&lt;/span&gt;, is going to be vacuous here,
+because &lt;span class="math inline"&gt;g^\bullet&lt;/span&gt; is identically zero,
+and anything composed with zero is zero.&lt;/p&gt;
+&lt;p&gt;OK, so let’s actually pin down some definitions and say what’s
+happening here in more straightforward terms. It turns out that the
+“obvious” definition of quasi-inverse is indeed the good one.&lt;/p&gt;
+&lt;div class="rmenv" title="Definition (Quasi-inverse)"&gt;
+&lt;p&gt;Let &lt;span class="math inline"&gt;f^\bullet\colon C^\bullet\to
+D^\bullet&lt;/span&gt; and &lt;span class="math inline"&gt;g^\bullet\colon
+D^\bullet\to C^\bullet&lt;/span&gt; be chain maps. We say that &lt;span
+class="math inline"&gt;f^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;g^\bullet&lt;/span&gt; are &lt;strong&gt;quasi-inverse&lt;/strong&gt;
+to one another if &lt;span
+class="math inline"&gt;\mathscr{H}^\bullet(f)&lt;/span&gt; and &lt;span
+class="math inline"&gt;\mathscr{H}^\bullet(g)&lt;/span&gt; are inverse to one
+another (and are thus, in particular, both isomorphisms).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;But…&lt;/p&gt;
+&lt;div class="itenv" title="Proposition"&gt;
+&lt;p&gt;Not every quasi-isomorphism admits a quasi-inverse. That is, although
+an isomorphism &lt;span class="math inline"&gt;\mathscr{H}^\bullet(f)&lt;/span&gt;
+admits, by definition, an inverse &lt;span
+class="math inline"&gt;(\mathscr{H}^\bullet(f))^{-1}&lt;/span&gt;, it is
+&lt;em&gt;not&lt;/em&gt; the case that there exists some &lt;span
+class="math inline"&gt;g^\bullet&lt;/span&gt; such that &lt;span
+class="math inline"&gt;(\mathscr{H}^\bullet(f))^{-1}=\mathscr{H}^\bullet(g)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Here is where I really have to bite my tongue&lt;a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;
+because this story leads directly into the story of model categories,
+and homotopy equivalences and weak homotopy equivalences, and
+Whitehead’s theorem, and … lots of other things that I’d love to talk
+about. But no! Not today!&lt;/p&gt;
+&lt;p&gt;Let’s just end this meandering post with a question, and an
+unjustified answer. Namely, if we have some quasi-isomorphism, can we
+immediately tell whether or not we’ll be able to find a quasi-inverse?
+Well, here’s a sufficient condition for a quasi-isomorphism to admit a
+quasi-inverse: the complexes &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt;
+and &lt;span class="math inline"&gt;D^\bullet&lt;/span&gt; consist only of free
+modules. Here’s an &lt;em&gt;even better&lt;/em&gt; sufficient condition: the
+complexes &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt; consist only of &lt;a
+href="https://en.wikipedia.org/wiki/Projective_module"&gt;&lt;strong&gt;projective&lt;/strong&gt;
+modules&lt;/a&gt;. Both of these conditions might feel a bit odd: they don’t
+actually mention any properties about the quasi-isomorphism itself, just
+its source and target. But really what we’re noticing is a statement
+about the &lt;strong&gt;hom-space&lt;/strong&gt; between &lt;span
+class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
+class="math inline"&gt;D^\bullet&lt;/span&gt;; we’re saying something about the
+value of the bifunctor &lt;span
+class="math inline"&gt;(C,D)\mapsto\operatorname{Hom}_{\mathrm{q-iso}}(C,D)&lt;/span&gt;
+on particularly nice objects.&lt;/p&gt;
+&lt;p&gt;But here’s the &lt;em&gt;real&lt;/em&gt; question: will I finally get around to
+talking about sheaf cohomology in the next blog post? Who knows, who
+knows.&lt;/p&gt;
+&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn1"&gt;&lt;p&gt;See &lt;a
+href="https://mathoverflow.net/questions/472618/converses-to-cartans-theorem-b"&gt;this
+question&lt;/a&gt; and &lt;a
+href="https://mathoverflow.net/questions/472300/smooth-analogue-of-cartans-theorem-b"&gt;this
+question&lt;/a&gt; on MathOverflow. For bonus points, write an answer to
+them!&lt;a href="#fnref1" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn2"&gt;&lt;p&gt;It’s only typing this now that I wonder if the
+terminology &lt;strong&gt;cochain map&lt;/strong&gt; is ever used. I’ve never seen
+it myself, and it would make a lot more sense, but I suppose that there
+are already so many “co” in “cohomology of cochain complexes” (and even
+more if you throw in “coherent” somewhere, even though that’s cheating
+because that doesn’t mean the “co” of something “herent”).&lt;a
+href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn3"&gt;&lt;p&gt;I can’t remember if I’ve already given this warning in
+this blog post series or if I’ve just repeated it so many times in my
+life that I feel like I must have already said it here.&lt;a href="#fnref3"
+class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id="fn4"&gt;&lt;p&gt;Bite my fingers?&lt;a href="#fnref4" class="footnote-back"
+role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
   <entry>
     <id>tag:thosgood.net,2026-09-09:/blog/2026-09-09-cohomology-notation-part-2/</id>
     <title type="html">How does cohomology relate to cohomology?</title>
@@ -1754,198 +2139,6 @@ you have any thoughts — I’m not on Twitter any longer (and I never got
 around to fixing comments on this blog), but you can always drop me an
 email, or I’m now semi-active (but rarely) &lt;a
 href="https://mathstodon.xyz/@thosgood"&gt;on Mathstodon&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <id>tag:thosgood.net,2022-05-30:/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/</id>
-    <title type="html">Various notions of (co)simplicial (pre)sheaves</title>
-    <published>2022-05-30T00:00:00Z</published>
-    <updated>2022-05-30T00:00:00Z</updated>
-    <link rel="alternate" href="https://thosgood.net/blog/2022-05-30-various-notions-of-cosimplicial-presheaves/" type="text/html"/>
-    <content type="html">&lt;p&gt;For the first time, I have released into the wild a preprint of which
-I am the sole author, and had no real supervision. This is a scary
-moment indeed — how do I know that I haven’t written complete made-up
-nonsense? It’s true that I talked with a couple of close colleagues
-about the results, and they nodded in vague agreement, but the
-responsibility of checking the actual formal details is all on me. Even
-worse, I wanted to include some results about something that I don’t
-really have any formal experience with. Anyway, I hope the resulting
-paper is at least mildly “good” (whatever that might mean). It’s called
-“Various notions of (co)simplicial (pre)sheaves”, and is now on the
-arXiv: &lt;a href="https://arxiv.org/abs/2205.15185"&gt;2205.15185&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- more --&gt;
-&lt;h1 id="where-this-paper-came-from"&gt;Where this paper came from&lt;/h1&gt;
-&lt;p&gt;Ever since my PhD thesis, I’ve been thinking on-and-off about these
-things called “sheaves on the Čech nerve”, which were introduced by
-Green&lt;a href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, and then later in a different way
-by Toledo and Tong&lt;a href="#fn2" class="footnote-ref" id="fnref2"
-role="doc-noteref"&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;, in order to do some nice
-homotopical construction in complex geometry. The vague idea is that a
-sheaf &lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; on a space &lt;span
-class="math inline"&gt;X&lt;/span&gt; can be split up into finer parts, with an
-individual sheaf &lt;span class="math inline"&gt;\mathcal{F}^p&lt;/span&gt; for each
-simplicial level of the Čech nerve of (a cover of) &lt;span
-class="math inline"&gt;X&lt;/span&gt;, i.e. instead of just describing what &lt;span
-class="math inline"&gt;\mathcal{F}&lt;/span&gt; looks like on all of &lt;span
-class="math inline"&gt;X&lt;/span&gt;, we describe what it looks like on all the
-open sets in a cover of &lt;span class="math inline"&gt;X&lt;/span&gt; (this is
-&lt;span class="math inline"&gt;\mathcal{F}^0&lt;/span&gt;), and then what it looks
-like on each pairwise intersection &lt;span class="math inline"&gt;U\cap
-V&lt;/span&gt; of open sets from the cover (this is &lt;span
-class="math inline"&gt;\mathcal{F}^1&lt;/span&gt;), and then what it looks like
-on each triple-wise intersection &lt;span class="math inline"&gt;U\cap V\cap
-W&lt;/span&gt; of open sets from the cover (this is &lt;span
-class="math inline"&gt;\mathcal{F}^2&lt;/span&gt;), and… and so on. One reason
-for wanting to do this is that sometimes we want to endow our sheaf
-&lt;span class="math inline"&gt;\mathcal{F}&lt;/span&gt; with some extra structure
-or data (such as a &lt;a
-href="https://en.wikipedia.org/wiki/Connection_(vector_bundle)#Formal_definition"&gt;&lt;em&gt;Koszul
-connection&lt;/em&gt;&lt;/a&gt;, in the case of Green/Toledo–Tong) that might not
-exist globally (as is indeed the case for holomorphic connections),
-&lt;em&gt;but&lt;/em&gt; that exists &lt;em&gt;locally&lt;/em&gt; — decomposing our sheaf &lt;span
-class="math inline"&gt;\mathcal{F}&lt;/span&gt; into different simplicial levels
-over the Čech nerve lets us do exactly this!&lt;/p&gt;
-&lt;p&gt;Anyway, what always annoyed me about this story (however petty this
-might be) was the terminology: a bunch of sheaves &lt;span
-class="math inline"&gt;(\mathcal{F}^p)_{p\in\mathbb{N}}&lt;/span&gt; living over
-a simplicial space &lt;span
-class="math inline"&gt;(X_p)_{p\in\mathbb{N}}&lt;/span&gt; were called
-&lt;em&gt;simplicial sheaves&lt;/em&gt;, but they’re &lt;em&gt;not&lt;/em&gt; simplicial objects
-in the category of sheaves on &lt;span class="math inline"&gt;X&lt;/span&gt;, and,
-even worse, they don’t actually really even look very simplicial (the
-morphisms all end up going the wrong way, making them look
-&lt;em&gt;co&lt;/em&gt;simplicial). So is there any relation between these things
-(which I gave the uninventive but fairly descriptive name of &lt;em&gt;sheaves
-on a simplicial space&lt;/em&gt;) and actual simplicial sheaves? Since the
-only reference that I know of which actually talks about these sheaves
-on simplicial spaces is Green’s aforementioned thesis (and Toledo–Tong’s
-aforementioned summary of it), I couldn’t find if anybody else actually
-even cared about these objects, let alone cared enough to figure out if
-they also deserved the name of “simplicial sheaves”.&lt;/p&gt;
-&lt;h1 id="an-unexpected-application"&gt;An unexpected application&lt;/h1&gt;
-&lt;p&gt;When I finally got the motivation to sit down and write things down,
-I realised that there was also another pretty large gap in what I knew
-about these things: the second thing you normally learn about after
-learning about sheaves is &lt;em&gt;sections&lt;/em&gt; of a sheaf. So what is a
-section of a sheaf on a simplicial space? In one of life’s little
-coincidences, when I started thinking about this specific question
-seriously, I was working in an office three floors above Vincent
-Wang-Maścianica, who patiently helped me to understand the basics of
-string diagrams as well as some other stuff that he was working on. The
-reason this is a coincidence is because, one afternoon (to mildly
-dramatise the story) he saw a diagram on my board and said “oh, I didn’t
-realise you were studying X”, to which I replied, “I’m not, I’m thinking
-about sections of sheaves on simplicial spaces”, to which we both
-replied “oh… interesting”.&lt;/p&gt;
-&lt;p&gt;The upshot of the ensuing conversations with Vincent left me
-reasonably convinced that I could find an application for sheaves on
-simplicial spaces outside their one appearance in complex geometry: they
-could be used to describe “stuff, stuff relating that stuff, and the
-order in which those relations should evolve”. To give a more concrete
-example of this, consider the following scenario: we have some objects
-&lt;span class="math inline"&gt;x_1,\ldots,x_n&lt;/span&gt; in a category that has a
-nice notion of tensor product (e.g. a symmetric monoidal category), and
-we want to understand what endomorphisms of &lt;span
-class="math inline"&gt;x_1\otimes x_2\otimes \ldots\otimes x_n&lt;/span&gt; look
-like. One way of getting such endomorphisms is to build them up from
-smaller endomorphisms! For example, say we have objects &lt;span
-class="math inline"&gt;A&lt;/span&gt;, &lt;span class="math inline"&gt;B&lt;/span&gt;, &lt;span
-class="math inline"&gt;C&lt;/span&gt;, and &lt;span class="math inline"&gt;D&lt;/span&gt;,
-and an endomorphism &lt;span
-class="math inline"&gt;f\in\operatorname{End}(A\otimes B)&lt;/span&gt; and
-another endomorphism &lt;span
-class="math inline"&gt;g\in\operatorname{End}(B\otimes C\otimes D)&lt;/span&gt;.
-Then we can get an endomorphism on &lt;span class="math inline"&gt;A\otimes
-B\otimes C\otimes D&lt;/span&gt; by composing &lt;span
-class="math inline"&gt;f&lt;/span&gt; and &lt;span class="math inline"&gt;g&lt;/span&gt;,
-after extending them by identity morphisms: &lt;span
-class="math inline"&gt;(\mathrm{id}_A\otimes
-g)\circ(f\otimes\mathrm{id}_C\otimes\mathrm{id}_D)&lt;/span&gt;. But of course
-we could have also composed these in the other order, doing &lt;span
-class="math inline"&gt;g&lt;/span&gt; first and then &lt;span
-class="math inline"&gt;f&lt;/span&gt;, or we could have even picked different
-endomorphisms, or we could have had &lt;em&gt;more&lt;/em&gt; endomorphisms on
-tensor products of &lt;em&gt;different&lt;/em&gt; subsets of our objects.&lt;/p&gt;
-&lt;p&gt;In the paper, I (timidly) make the argument that all of these choices
-can be bundled up into one sheaf on a simplicial space, and then that a
-single choice of all the data described above corresponds to a
-&lt;em&gt;section&lt;/em&gt; of this sheaf. There are some caveats in this
-construction (for example, the method that I describe requires that we
-fix the number and type of endomorphisms beforehand), but I think that
-most of them could probably be done away with by somebody who actually
-knows something about these very restrictive sorts of string diagrams
-(e.g. if there are some “generating” shapes of these diagrams then you
-could maybe consider building a simplicial space for each one and then
-gluing them altogether with some limit-y process).&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src="endomorphism-construction.png"
-alt="String diagrams of a certain form correspond to sections of a specific sheaf on a simplicial space." /&gt;
-&lt;figcaption aria-hidden="true"&gt;String diagrams of a certain form
-correspond to sections of a specific sheaf on a simplicial
-space.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Really, the only reason that I actually include this construction at
-all (beyond wanting to make people in another field aware of these
-objects that I find so fascinating) is in the hope that somebody comes
-along and makes it much better! I think it could be extended to describe
-much more general string diagrams, with copies and deletes and whatnot,
-but this is not something that I have the knowledge to do on my own.&lt;/p&gt;
-&lt;p&gt;This application is, I think, not particularly useful, and might just
-be an example of “if all you have is a hammer, then everything looks
-like a nail”, or even just a tautology (“of &lt;em&gt;course&lt;/em&gt; sections of
-a sheaf on a simplicial space describe such things — they’re just
-objects in the totalisation of the cosimplicial simplicial mapping space
-from a cofibrant replacement of a point, and the simplicial nature is
-exactly describing the notion of linear order”, or something like this,
-says some hypothetical expert), but “hey ho”, thought I, “why not just
-write it down anyway — maybe somebody else will also like to think about
-such things from this point of view”.&lt;/p&gt;
-&lt;h1 id="whats-actually-in-the-paper"&gt;What’s actually in the paper&lt;/h1&gt;
-&lt;p&gt;The paper is mostly a survey, but contains some proofs of what I’m
-calling “pre-folklore results” — results which I think would be folklore
-if I’d ever actually heard anybody else care about them!&lt;/p&gt;
-&lt;p&gt;The first two sections (after the introduction) define three (or
-really four) notions of “simplicial sheaf” and describes how they relate
-to one another; the next section recalls a technical construction that
-shows how to understand this story in the specific setting of (locally)
-ringed spaces via a lovely construction&lt;a href="#fn3"
-class="footnote-ref" id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; of
-lax homotopy limits of model categories by Bergner; the final section is
-split into two, and contains a summary of the application of sheaves on
-simplicial spaces to coherent sheaves in complex geometry, and then this
-semi-conjectural construction relating sections of a sheaf on a
-simplicial space to string diagrams describing endomorphisms generated
-by endomorphisms.&lt;/p&gt;
-&lt;p&gt;If anybody does actually read this and have any comments,
-corrections, criticisms, or complaints, then please do let me know — you
-can leave a comment here, or email me, or tweet at me, or whatever you
-like. Happy reading!&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src="three-notions.png"
-alt="The three main notions of simplicial sheaf." /&gt;
-&lt;figcaption aria-hidden="true"&gt;The three main notions of simplicial
-sheaf.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;section id="footnotes" class="footnotes footnotes-end-of-document"
-role="doc-endnotes"&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id="fn1"&gt;&lt;p&gt;H.I. Green. “Chern classes for coherent sheaves”. PhD
-Thesis. University of Warwick, (1980). &lt;a
-href="https://pugwash.lib.warwick.ac.uk/record=b1751746~S1"&gt;pugwash.lib.warwick.ac.uk/record=b1751746~S1&lt;/a&gt;&lt;a
-href="#fnref1" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn2"&gt;&lt;p&gt;Domingo Toledo and Yue Lin L Tong. “Green’s theory of
-Chern classes and the Riemann-Roch formula”. In: &lt;em&gt;The Lefschetz
-Centennial Conference, Part 1&lt;/em&gt;, Amer. Math. Soc. (1987). DOI:&lt;a
-href="https://doi.org/10.1090/conm/058.1/860421"&gt;10.1090/conm/058.1/860421&lt;/a&gt;&lt;a
-href="#fnref2" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id="fn3"&gt;&lt;p&gt;Julia E. Bergner. “Homotopy limits of model categories
-and more general homotopy theories”. (2012). arXiv:&lt;a
-href="https://arxiv.org/abs/1010.0717v2"&gt;1010.0717v2&lt;/a&gt;&lt;a
-href="#fnref3" class="footnote-back" role="doc-backlink"&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
 </content>
   </entry>
 </feed>

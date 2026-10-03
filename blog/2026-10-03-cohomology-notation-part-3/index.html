@@ -1,0 +1,636 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <title>How does cohomology relate to cohomology? (Part 3) | Tim Hosgood</title>
+    
+
+    <link rel="stylesheet" href="/assets/style.css">
+    
+    <link rel="stylesheet" href="/assets/katex/katex.min.css">
+    
+
+    <link rel="me" href="https://mathstodon.xyz/@thosgood"></a>
+</head>
+
+
+  <body>
+
+    <nav id="top-navigation">
+  <div id="navigation-name">
+    <a class="navigation-link" href="/">Tim Hosgood</a>
+  </div>
+  <div id="navigation-page-links">
+    <a class="navigation-link" href="/research/">Research</a>
+    <a class="navigation-link" href="/translations/">Translations</a>
+    
+    
+      <span class="active">Blog</span>
+    
+    <a class="navigation-link" href="/cv/">CV</a>
+  </div>
+</nav>
+
+
+    <content id="main">
+      
+
+<article>
+
+  <div id="post-title-block">
+    
+    <h1 id="post-title">
+      <a href="/blog/">Blog</a> / How does cohomology relate to cohomology? [Part 3]
+    </h1>
+    
+
+    <p id="post-date">3rd of October, 2026</p>
+
+    
+    
+    <div id="post-other-parts">
+      <i>Other posts in this series:</i>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="/blog/2026-09-08-cohomology-notation-part-1/">Part 1</a>
+        
+      
+        
+          <a href="/blog/2026-09-09-cohomology-notation-part-2/">Part 2</a>
+        
+      
+        
+          <span class="active">Part 3</span>
+        
+      
+    </div>
+    
+
+    
+    <div id="post-tag-list">
+      <a href="/blog/maths" rel="tag">maths</a>, <a href="/blog/homological-algebra" rel="tag">homological-algebra</a>
+    </div>
+  </div>
+
+  
+  <div id="post-content">
+    <p>Having read the previous part of this series, we know all about the
+sheaf of holomorphic functions on a complex manifold. This means I now
+have to hold good on my promise and get back to talking about
+cohomologies. But…</p>
+<!-- more -->
+<p>I think it’s often helpful to get a glimpse of what we’re working
+towards before we start actually working towards it. I remember the
+amount of turmoil I experienced writing my thesis by reading the phrase
+“by a standard spectral sequence argument” and not really knowing what
+that actually meant when it came to doing an explicit calculation. I
+think that it’s quite common to have the same experience for
+cohomological arguments. And I’m not saying that this is bad — it really
+is the case that there are some standard sentences that we would end up
+saying so repeatedly otherwise — but I think it’s nice to see the
+details for once. So here’s a sentence that I could imagine writing (and
+almost certainly have actually written in correspondence with coauthors)
+when talking about a cohomological argument:</p>
+<blockquote>
+<p>By taking a nice enough cover, the standard arguments tell us that we
+can compute singular cohomology <span
+class="math inline">\mathrm{H}^r(X;\mathbb{C})</span> via the Čech–de
+Rham bicomplex <span
+class="math inline">\operatorname{Tot}^r\check{\mathscr{C}}^\bullet(\Omega_X^\bullet)</span>.</p>
+</blockquote>
+<p>So what do I mean by “the standard arguments” here? And what is this
+sentence actually saying? In short, it’s a repeated syllogism of
+statements concerning when various types of cohomology actually
+coincide.</p>
+<div class="rmenv" title="Suggestion">
+<p>Before writing more words, let me just say that if you don’t find
+“reading ahead” a helpful practice then you should just skip over the
+rest of this section. It’s all just a big mess of things that we have
+not yet seen.</p>
+</div>
+<p>Here’s what I might write if I wanted to be more explicit about the
+actual “standard” facts that I’m appealing to:</p>
+<blockquote>
+<p>By taking a Stein cover <span class="math inline">\mathcal{U}</span>
+and using the fact that the sheaves <span
+class="math inline">\Omega_X^i</span> are coherent, Cartan’s Theorem B
+tells us that the cohomology of the total complex of the Čech–de Rham
+bicomplex at <span class="math inline">\mathcal{U}</span> computes the
+Čech cohomology of the de Rham complex: <span
+class="math display">\check{\mathbb{H}}^r(\mathcal{U};\Omega_X^\bullet)\cong\check{\mathbb{H}}^r(X;\Omega_X^\bullet).\tag{1}</span>Next,
+since <span class="math inline">X</span> is paracompact and, again,
+Cartan’s Theorem B, we know that Čech cohomology computes sheaf
+cohomology: <span
+class="math display">\check{\mathbb{H}}^r(X;\Omega_X^\bullet)\cong\mathbb{H}^r(X;\Omega_X^\bullet).\tag{2}</span>
+Finally, the (holomorphic) de Rham theorem tells us that the sheaf
+cohomology of the de Rham complex computes the singular cohomology:
+<span
+class="math display">\mathbb{H}^r(X;\Omega_X^\bullet)\cong\mathrm{H}^r(X;\mathbb{C}).\tag{3}</span></p>
+</blockquote>
+<p>Irrelevant of what all the words mean, hopefully you can see the idea
+here: we want to end up computing this singular cohomology <span
+class="math inline">\mathrm{H}^r(X;\mathbb{C})</span> that we saw all
+the way back in Part 1 (well, almost, modulo the fact that here I’ve
+written <span class="math inline">\mathbb{C}</span> instead of <span
+class="math inline">\mathbb{Z}</span>, but we can ignore that difference
+for now), but what we actually know how to compute is something a priori
+very different, namely this thing denoted <span
+class="math inline">\check{\mathbb{H}}^r(\mathcal{U};\Omega_X^\bullet)</span>.
+But because mathematics is our friend we can get to the former from the
+latter by taking three steps, where each one is some argument saying
+that “well look I actually computed this very specific thing but it
+turns out that all the choices that I made didn’t actually matter”.
+Indeed, as we will eventually see, the isomorphism in (1) is saying that
+we didn’t have to actually take some colimit over <em>all possible</em>
+covers but we could instead just pick a specific one, as long as it’s
+nice enough; the isomorphism in (2) is saying that we didn’t actually
+have to work with the space <span class="math inline">X</span> but
+instead “just” with a colimit over all possible covers of <span
+class="math inline">X</span> (but somehow this is actually easier!); and
+the isomorphism in (3) is saying that we didn’t actually have to look at
+the topological structure of <span class="math inline">X</span> (recall
+that we defined singular cohomology by looking at the groups of singular
+<span class="math inline">n</span>-simplices sitting inside of <span
+class="math inline">X</span>) but could instead just work with some
+purely algebraic gadget that we can essentially do linear algebra
+on.</p>
+<p>This sequence of arguments turns up everywhere in calculations of
+cohomology, but particularly so in geometry, where we are interested in
+how all the different structures that our spaces have (topological,
+algebraic, analytic, and maybe more) do or don’t work well together. And
+this general pattern is something that we should keep in mind when we
+(finally, <em>finally</em>) introduce sheaf cohomology, hypercohomology,
+and Čech cohomology:</p>
+<blockquote>
+<p>To show that one cohomology “computes” another cohomology we apply
+<strong>acyclicity</strong> theorems over and over until we get from the
+thing that we <em>can</em> compute to the thing that we <em>want</em> to
+compute.</p>
+</blockquote>
+<p>These “acyclicity” theorems are thus a key part of any explanation of
+how these cohomologies all talk with one another. Depending on what
+“flavour” of cohomology you’re working with, they will take different
+forms. Roughly:</p>
+<ul>
+<li><em>topological</em> cohomologies really like <em>contractible</em>
+subsets and <em>locally constant</em> coefficients</li>
+<li><em>algebraic</em> cohomologies really like <em>affine</em> subsets
+and <em>quasi-coherent</em> coefficients</li>
+<li><em>complex-analytic</em> (resp. <em>real-analytic</em>)
+cohomologies really like <em>Stein</em> (resp. <em>coherent
+analytic</em>) subsets and <em>coherent</em> coefficients.</li>
+</ul>
+<p>There’s another beautiful story about Cartan-type acyclicity theorems
+that is actually a bit of a mystery to me, and I think there is some
+interesting research (or, at least, literature review and exposition) to
+be done here.<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> But not today!</p>
+<h2 id="quasi-isomorphisms">Quasi-isomorphisms</h2>
+<p>The main takeaway of that long introduction is that it’s going to be
+a bit hopeless to introduce a bunch of new meanings of the word
+“cohomology” if we don’t have the right language to say when two
+different meanings do or do not coincide. So let’s learn about one of my
+other favourite mathematical things:
+<strong>quasi-isomorphisms</strong>. As a brief reminder (because there
+has been so much rambling in the meantime), recall that a morphism <span
+class="math inline">f^\bullet\colon(C^\bullet,d^\bullet)\to(D^\bullet,e^\bullet)</span>
+of (cochain) complexes is merely a collection of “degree-wise” morphisms
+<span class="math inline">f^i\colon C^i\to D^i</span>, and if these
+morphisms happen to commute with the differentials <span
+class="math inline">d^\bullet</span> and <span
+class="math inline">e^\bullet</span> then we call the morphism a
+<strong>chain map</strong>.<a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div class="rmenv" title="Definition (Quasi-isomorphism)">
+<p>Let <span class="math inline">f^\bullet\colon
+(C^\bullet,d^\bullet)\to(D^\bullet,e^\bullet)</span> be a chain map of
+complexes. We say that <span class="math inline">f^\bullet</span> is a
+<strong>quasi-isomorphism</strong> if it “induces an isomorphism in
+cohomology”, i.e. if the induced maps <span
+class="math inline">\mathscr{H}^i(f^\bullet)\colon\mathscr{H}^i(C^\bullet)\to\mathscr{H}^i(D^\bullet)</span>
+are isomorphisms for all <span
+class="math inline">i\in\mathbb{Z}</span>.</p>
+</div>
+<p>An important exercise is to unwrap what these “induced maps” <span
+class="math inline">\mathscr{H}^i(f^\bullet)</span> actually are, and to
+see why we really require <span class="math inline">f^\bullet</span> to
+be a chain map. Recall that <span
+class="math inline">\mathscr{H}^i(C^\bullet)</span> is defined as <span
+class="math inline">\operatorname{Ker}{d^n}/\operatorname{Im}{d^{n-1}}</span>,
+and so the “obvious” thing to try is to say that <span
+class="math inline">\mathscr{H}^i(f^\bullet)</span> is simply the
+restriction of <span class="math inline">f^i</span> to <span
+class="math inline">\operatorname{Ker}{d^n}</span>. That is, we set
+<span class="math display">
+    \mathscr{H}^i(f^\bullet)
+    \coloneqq f^i|\operatorname{Ker}{d^n}
+</span> and now just need to show that this is indeed well defined,
+which means showing that the following two properties hold:</p>
+<ol type="1">
+<li>The restriction in the source lands in the restriction in the
+target: <span
+class="math inline">\operatorname{Im}(f^i|\operatorname{Ker}{d^n})\subseteq\operatorname{Ker}e^n</span>.</li>
+<li>The map respects the quotients: <span
+class="math inline">[c]=[c&#39;]\in\mathscr{H}^i(C^\bullet)\iff
+[(f^i|\operatorname{Ker}{d^n})(c)]=[(f^i|\operatorname{Ker}{d^n})(c&#39;)\in\mathscr{H}^i(D^\bullet)]</span>.</li>
+</ol>
+<p>Again, the hypothesis that <span class="math inline">f^\bullet</span>
+is a chain map (i.e. respects the differentials) is key here.</p>
+<p>The very name of quasi-isomorphisms suggest that they should have
+some relation to isomorphisms. An <strong>isomorphism</strong> of
+complexes is a chain map with an inverse that is also a chain map.
+Unravelling this definition, we see that an isomorphism of complexes is
+really just a chain map <span class="math inline">f^\bullet</span> such
+that each <span class="math inline">f^i</span> is an isomorphism. Now,
+it is not hard to show that every isomorphism is also a
+quasi-isomorphism, but the converse is definitely not true (as we will
+soon show in an example). But quasi-isomorphisms (just like
+isomorphisms) satisfy the 2-out-of-3 property: if we have a composable
+pair of morphisms <span class="math display">
+    C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet
+</span> and we set <span class="math inline">h^\bullet=g^\bullet
+f^\bullet</span>, then if any two out of the three morphisms <span
+class="math inline">f^\bullet</span>, <span
+class="math inline">g^\bullet</span>, and <span
+class="math inline">h^\bullet</span> are quasi isomorphisms, then so too
+is the third. This tells us, for example, that quasi-isomorphisms are
+closed under composition (apply the statement to <span
+class="math inline">f^\bullet</span> and <span
+class="math inline">g^\bullet</span>). This 2-out-of-3 property is
+something that will prove to be very useful later on (even if I forget
+to mention it), because it captures a key behaviour of “morphisms that
+deserve to be called weak equivalences”.</p>
+<p>So quasi-isomorphisms are a generalisation of isomorphisms, but why
+are they a <em>good</em> generalisation? Here I’ll just give the cheap
+answer: we’re only interested in cochain complexes for their cohomology,
+so we shouldn’t really mind whether or not two complexes are the same,
+as long as they have the same cohomology. Let’s give an example.</p>
+<p>Consider the cochain complexes (of abelian groups) <span
+class="math display">
+\begin{array}{rrcl}
+    C^\bullet \coloneqq &amp; \mathbb{Z} &amp; \xrightarrow{\cdot 2}
+&amp; \mathbb{Z}
+    \\ D^\bullet\coloneqq &amp; 0 &amp; \to &amp; \mathbb{Z}/2\mathbb{Z}
+\end{array}
+</span> (where we write <span class="math inline">\cdot2</span> to mean
+the map <span class="math inline">n\mapsto 2n</span>), and define a
+chain map <span class="math inline">f^\bullet\colon C^\bullet\to
+D^\bullet</span> by <span class="math display">
+\begin{CD}
+    \mathbb{Z} @&gt;{\cdot2}&gt;&gt; \mathbb{Z}
+    \\ @VVV @VV{\mod2}V
+    \\0 @&gt;&gt;&gt; \mathbb{Z}/2\mathbb{Z}
+\end{CD}
+</span> We can easily see this to be a chain map, since the path <span
+class="math inline">\to\circ\downarrow</span> is zero by virtue of
+factoring through <span class="math inline">0</span>, and the path <span
+class="math inline">\downarrow\circ\to</span> is zero since if we double
+a number and then take its value modulo 2 we get zero; the diagram
+commutes.</p>
+<p>Note that there is <em>no way at all</em> that <span
+class="math inline">f^\bullet</span> could ever be an isomorphism, since
+in particular the map <span
+class="math inline">f^0\colon\mathbb{Z}\to0</span> cannot be an
+isomorphism. But <span class="math inline">f^\bullet</span> <em>is</em>
+a quasi-isomorphism. To see this, we have to calculate the cohomology of
+<span class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span> and show that the induced maps
+<span class="math inline">\mathscr{H}^i(f^\bullet)</span> are
+isomorphisms. First, the cohomologies: <span class="math display">
+\begin{aligned}
+    \mathscr{H}^i(C^\bullet)
+    &amp;= \left( \frac{\operatorname{Ker}(\cdot
+2)}{\operatorname{Im}(0\to\mathbb{Z})} \longrightarrow
+\frac{\operatorname{Ker}(\mathbb{Z}\to0)}{\operatorname{Im}(\cdot2)}
+\right)
+    \\&amp;= \left( \frac{0}{0} \longrightarrow
+\frac{\mathbb{Z}}{2\mathbb{Z}} \right)
+    \\&amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
+    \\[1em]\mathscr{H}^i(D^\bullet) &amp;= \left(
+\frac{\operatorname{Ker}(0\to0)}{\operatorname{Im}(0\to0)}
+\longrightarrow
+\frac{\operatorname{Ker}(\mathbb{Z}/2\mathbb{Z}\to0)}{\operatorname{Im}(0\to\mathbb{Z}/2\mathbb{Z})}
+\right)
+    \\&amp;= \left( \frac{0}{0} \longrightarrow
+\frac{\mathbb{Z}/2\mathbb{Z}}{0} \right)
+    \\&amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
+\end{aligned}
+</span> And now we have to repeat<a href="#fn3" class="footnote-ref"
+id="fnref3" role="doc-noteref"><sup>3</sup></a> a very important
+warning: <em>two objects being isomorphic is very different from having
+an explicit isomorphism between them</em>. Here, for example, we see
+that the cohomologies <span
+class="math inline">\mathscr{H}^\bullet(C)</span> and <span
+class="math inline">\mathscr{H}^\bullet(D)</span> are clearly isomorphic
+(they are identical!). But the question is <em>not</em> “do <span
+class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span> have isomorphic cohomologies?”; the
+question is “does the morphism <span
+class="math inline">f^\bullet</span> witness the fact that <span
+class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span> have isomorphic cohomologies?”.
+Here the answer is a happy one: <span
+class="math inline">\mathscr{H}^{0}(f^\bullet)=0\colon0\to0</span> is an
+isomorphism of the zero object with itself, and <span
+class="math inline">\mathscr{H}^{1}(f^\bullet)=\mathrm{id}\colon\mathbb{Z}/2\mathbb{Z}\to\mathbb{Z}/2\mathbb{Z}</span>
+is an identity isomorphism. So <span
+class="math inline">f^\bullet</span> is a quasi-isomorphism, despite not
+being an isomorphism.</p>
+<p>Returning to this subtle (but important) distinction between “seeing
+that two things are isomorphic” and “having a morphism that induces an
+isomorphism between two things”, we can ask ourselves a question: by
+just looking at <span class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span> in this example, we knew for a fact
+that we could never find an isomorphism between them; by just looking at
+<span class="math inline">\mathscr{H}^\bullet(C)</span> and <span
+class="math inline">\mathscr{H}^\bullet(D)</span> it seemed very hopeful
+that we would be able to find a quasi-isomorphism, because these
+cohomologies were identical, but can we be <em>sure</em> that we would
+have been able to find one?</p>
+<p>Before answering this question, it’s worth carrying on with the
+example above (which is a sort of canonical example, largely because it
+allows us to point out all these weird quirks). If quasi-isomorphisms
+are a generalisation of isomorphisms, and isomorphisms are morphisms
+that have inverses, then do quasi-isomorphisms have some sort of
+“quasi-inverse”? This is where things get nasty (but in a way that turns
+out to actually be very satisfying, once we get some more homological
+algebra in our toolkit). We gave a specific quasi-isomorphism <span
+class="math inline">f^\bullet\colon C^\bullet\to D^\bullet</span> above,
+so let’s just look at trying to find a “quasi-inverse” for this. Well,
+even if we don’t know what a good definition for a quasi-inverse would
+be, it makes sense that it should at the very least be a map (maybe not
+necessarily even a chain map) <span class="math inline">g^\bullet\colon
+D^\bullet\to C^\bullet</span> such that… some nice condition is
+satisfied. But <span
+class="math inline">\operatorname{Hom}(D^\bullet,C^\bullet)=0</span>!
+That is, there is only one map (which does happen to be a chain map,
+trivially) from <span class="math inline">D^\bullet</span> to <span
+class="math inline">C^\bullet</span>, and that is the zero map. This
+means that any condition we try to phrase in terms of <span
+class="math inline">g^\bullet f^\bullet</span> or <span
+class="math inline">f^\bullet g^\bullet</span>, or even something more
+complicated like <span class="math inline">g^jf^i</span> and <span
+class="math inline">f^kg^\ell</span>, is going to be vacuous here,
+because <span class="math inline">g^\bullet</span> is identically zero,
+and anything composed with zero is zero.</p>
+<p>OK, so let’s actually pin down some definitions and say what’s
+happening here in more straightforward terms. It turns out that the
+“obvious” definition of quasi-inverse is indeed the good one.</p>
+<div class="rmenv" title="Definition (Quasi-inverse)">
+<p>Let <span class="math inline">f^\bullet\colon C^\bullet\to
+D^\bullet</span> and <span class="math inline">g^\bullet\colon
+D^\bullet\to C^\bullet</span> be chain maps. We say that <span
+class="math inline">f^\bullet</span> and <span
+class="math inline">g^\bullet</span> are <strong>quasi-inverse</strong>
+to one another if <span
+class="math inline">\mathscr{H}^\bullet(f)</span> and <span
+class="math inline">\mathscr{H}^\bullet(g)</span> are inverse to one
+another (and are thus, in particular, both isomorphisms).</p>
+</div>
+<p>But…</p>
+<div class="itenv" title="Proposition">
+<p>Not every quasi-isomorphism admits a quasi-inverse. That is, although
+an isomorphism <span class="math inline">\mathscr{H}^\bullet(f)</span>
+admits, by definition, an inverse <span
+class="math inline">(\mathscr{H}^\bullet(f))^{-1}</span>, it is
+<em>not</em> the case that there exists some <span
+class="math inline">g^\bullet</span> such that <span
+class="math inline">(\mathscr{H}^\bullet(f))^{-1}=\mathscr{H}^\bullet(g)</span>.</p>
+</div>
+<p>Here is where I really have to bite my tongue<a href="#fn4"
+class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>
+because this story leads directly into the story of model categories,
+and homotopy equivalences and weak homotopy equivalences, and
+Whitehead’s theorem, and … lots of other things that I’d love to talk
+about. But no! Not today!</p>
+<p>Let’s just end this meandering post with a question, and an
+unjustified answer. Namely, if we have some quasi-isomorphism, can we
+immediately tell whether or not we’ll be able to find a quasi-inverse?
+Well, here’s a sufficient condition for a quasi-isomorphism to admit a
+quasi-inverse: the complexes <span class="math inline">C^\bullet</span>
+and <span class="math inline">D^\bullet</span> consist only of free
+modules. Here’s an <em>even better</em> sufficient condition: the
+complexes <span class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span> consist only of <a
+href="https://en.wikipedia.org/wiki/Projective_module"><strong>projective</strong>
+modules</a>. Both of these conditions might feel a bit odd: they don’t
+actually mention any properties about the quasi-isomorphism itself, just
+its source and target. But really what we’re noticing is a statement
+about the <strong>hom-space</strong> between <span
+class="math inline">C^\bullet</span> and <span
+class="math inline">D^\bullet</span>; we’re saying something about the
+value of the bifunctor <span
+class="math inline">(C,D)\mapsto\operatorname{Hom}_{\mathrm{q-iso}}(C,D)</span>
+on particularly nice objects.</p>
+<p>But here’s the <em>real</em> question: will I finally get around to
+talking about sheaf cohomology in the next blog post? Who knows, who
+knows.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>See <a
+href="https://mathoverflow.net/questions/472618/converses-to-cartans-theorem-b">this
+question</a> and <a
+href="https://mathoverflow.net/questions/472300/smooth-analogue-of-cartans-theorem-b">this
+question</a> on MathOverflow. For bonus points, write an answer to
+them!<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>It’s only typing this now that I wonder if the
+terminology <strong>cochain map</strong> is ever used. I’ve never seen
+it myself, and it would make a lot more sense, but I suppose that there
+are already so many “co” in “cohomology of cochain complexes” (and even
+more if you throw in “coherent” somewhere, even though that’s cheating
+because that doesn’t mean the “co” of something “herent”).<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I can’t remember if I’ve already given this warning in
+this blog post series or if I’ve just repeated it so many times in my
+life that I feel like I must have already said it here.<a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Bite my fingers?<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+  </div>
+
+  
+  <script src="https://giscus.app/client.js"
+          data-repo="thosgood/thosgood.github.io"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkxMTM2OTM5MjM="
+          data-category="Comments"
+          data-category-id="DIC_kwDOBsbU484CdW9A"
+          data-mapping="title"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</article>
+
+    </content>
+
+    
+      <script type="text/javascript" src="/assets/jquery-3.6.4.slim.min.js"></script>
+
+<!-- Use KaTeX rendering for all static page content -->
+<script type="text/javascript" src="/assets/katex/katex.min.js"></script>
+<script type="text/javascript">
+  $("span[class='math inline']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex, {throwOnError: false}) +
+             "</span>";
+  });
+
+  $("span[class='math display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex, {displayMode: true, fleqn: true, throwOnError: false}) +
+             "</div>";
+  });
+</script>
+
+    
+
+  </body>
+</html>
+
+
+
+<!-- Render maths in comments -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  $(window).bind("load", function() {
+    renderMathInElement(document.getElementById('commento'), {
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError : false,
+          fleqn : true
+        });
+  });
+</script>
