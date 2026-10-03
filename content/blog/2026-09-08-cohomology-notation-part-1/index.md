@@ -2,7 +2,7 @@
 title: How does cohomology relate to cohomology?
 part: Part 1
 kind: article
-tags: ['maths', 'homological-algebra', 'category-theory', 'algebraic-topology']
+tags: ['maths', 'homological-algebra', 'algebraic-topology']
 created_at: 2026-09-08
 ---
 
