@@ -337,7 +337,7 @@ ul.fancy-citations-list {
     margin: 0;
     padding: 0.5em;
 
-    flex-basis: 55%;
+    flex-basis: 45%;
     /*flex-grow: 1;*/
 
     /*border: 1px solid var(--primary);*/
