@@ -226,15 +226,13 @@ class="math inline">\varphi(n)=\varphi(gn)=g\varphi(n)</span> for all
 class="math inline">a\in\operatorname{Inv}_G(A)</span>, we can define
 <span class="math inline">\varphi_a\colon1\mapsto a</span>.</p>
 <p>This leads us to consider the <em>functor of invariants</em> <span
-class="math display">
-  \operatorname{Inv}\coloneqq\operatorname{Hom}_{\mathbb{Z}[G]}(\mathbb{Z}^\mathrm{triv},-)\colon
-\mathsf{Mod}_{\mathbb{Z}[G]}\to\mathsf{Mod}_{\mathbb{Z}}.
-</span> But, as always, since this is a functor between categories of
-modules, we are interested in <em>deriving it</em>, and this is exactly
-the definition of group cohomology: <span class="math display">
-  \operatorname{H}^n(G,A) \coloneqq
-\operatorname{Ext}_{\mathbb{Z}[G]}^\bullet(\mathbb{Z}^\mathrm{triv},-).
-</span></p>
+class="math display">\operatorname{Inv}\coloneqq\operatorname{Hom}_{\mathbb{Z}[G]}(\mathbb{Z}^\mathrm{triv},-)\colon
+\mathsf{Mod}_{\mathbb{Z}[G]}\to\mathsf{Mod}_{\mathbb{Z}}.</span> But, as
+always, since this is a functor between categories of modules, we are
+interested in <em>deriving it</em>, and this is exactly the definition
+of group cohomology: <span class="math display">\operatorname{H}^n(G,A)
+\coloneqq
+\operatorname{Ext}_{\mathbb{Z}[G]}^\bullet(\mathbb{Z}^\mathrm{triv},-).</span></p>
 <p>To actually compute this, then, it suffices to find a projective
 resolution of <span class="math inline">\mathbb{Z}^\mathrm{triv}</span>
 as a <span class="math inline">\mathbb{Z}[G]</span>-module, and there is
@@ -250,18 +248,15 @@ class="math inline">G^{\times(n+1)}</span>, and write its elements as
 symbols of the form <span class="math inline">(g_0|\ldots|g_n)</span>
 for <span class="math inline">g_i\in G</span>. Then we define <span
 class="math inline">d_0\colon B_0\to\mathbb{Z}^\mathrm{triv}</span> by
-<span class="math display">
-  d_0\left(\sum_i m_i g_i\right) = \sum_i m_i
-</span> and <span class="math inline">d_n\colon B_n \to B_{n-1}</span>
-by <span class="math display">
-  \begin{aligned}
+<span class="math display">d_0\left(\sum_i m_i g_i\right) = \sum_i
+m_i</span> and <span class="math inline">d_n\colon B_n \to
+B_{n-1}</span> by <span class="math display">\begin{aligned}
     d_n(g_0|\ldots|g_n) =
     \,\,&amp;g_0(g_1|\ldots|g_n)
   \\+&amp;\sum_{i=0}^{n-1} (-1)^i (g_0|\ldots|g_{i-1}|g_i
 g_{i+1}|g_{i+2}|\ldots|g_n)
   \\\pm&amp;(g_0|\ldots|g_n).
-  \end{aligned}
-</span></p>
+  \end{aligned}</span></p>
 <p>Something that we won’t discuss is that this complicated equation is
 actually somehow “natural”, in that the bar construction is a “nice
 thing” that “makes sense”. For more on this (since it would require a
@@ -275,14 +270,14 @@ explicitly:</p>
 <li><span
 class="math inline">\operatorname{H}^0(G,A)=A^G\coloneqq\operatorname{Inv}_G(A)</span>.</li>
 <li><span class="math inline">\operatorname{H}^1(G,A)</span> is given by
-the quotient <span class="math display">
-    \{\varphi\colon\underline{G}\to\underline{A} \mid
+the quotient <span
+class="math display">\{\varphi\colon\underline{G}\to\underline{A} \mid
 \varphi(gh)=\varphi(g)+g\varphi(h)\}\Big/\{\varphi=\varphi_a\colon
-g\mapsto ag-a\}
-  </span> where we write <span class="math inline">\underline{G}</span>
-to denote the underlying <em>set</em> of a group (note that this reduces
-to <span class="math inline">\operatorname{Hom}(G,A)</span> in the case
-where <span class="math inline">A</span> has the trivial <span
+g\mapsto ag-a\}</span> where we write <span
+class="math inline">\underline{G}</span> to denote the underlying
+<em>set</em> of a group (note that this reduces to <span
+class="math inline">\operatorname{Hom}(G,A)</span> in the case where
+<span class="math inline">A</span> has the trivial <span
 class="math inline">G</span>-action).</li>
 <li><span class="math inline">\operatorname{H}^2(G,A)</span> classifies
 isomorphism classes of extensions of <span class="math inline">G</span>
@@ -327,16 +322,14 @@ href="https://en.wikipedia.org/wiki/Lie_algebra#Derivations">derivations</a>
 <span class="math inline">\operatorname{Der}(\mathfrak{g},M)</span>
 modulo <em>inner</em> derivations <span
 class="math inline">\operatorname{PDer}(\mathfrak{g},M)</span>, where
-<span class="math display">
-    \begin{aligned}
+<span class="math display">\begin{aligned}
       \operatorname{Der}(\mathfrak{g},M) &amp;\coloneqq
       \{\varphi\in\operatorname{Hom}_k(\mathfrak{g},M) \mid
 \varphi([x,y])=xf(y)-yf(x)\}
     \\\operatorname{PDer}(\mathfrak{g},M) &amp;\coloneqq
       \{\varphi\in\operatorname{Hom}_k(\mathfrak{g},M) \mid
 \varphi=\varphi_m\colon x\mapsto xm\}
-    \end{aligned}
-  </span> In particular, <span
+    \end{aligned}</span> In particular, <span
 class="math inline">\operatorname{H}^1(\mathfrak{g},\mathfrak{g})</span>
 (where <span class="math inline">\mathfrak{g}</span> acts on itself by
 the adjoint action) will be given by <a
@@ -367,11 +360,10 @@ information, but also <em>geometric</em> information:</p>
 <div class="itenv" title="Cartan&#39;s Theorem">
 <p>Let <span class="math inline">G</span> be a compact connected Lie
 group, and <span class="math inline">\mathfrak{g}</span> its Lie
-algebra. Then <span class="math display">
-  \operatorname{H}_\mathrm{dR}^\bullet(G) \cong
+algebra. Then <span
+class="math display">\operatorname{H}_\mathrm{dR}^\bullet(G) \cong
 \operatorname{H}^\bullet(\mathfrak{g},\mathbb{R}) \cong
-\operatorname{Inv}_G(\wedge^\bullet\mathfrak{g}^*).
-</span></p>
+\operatorname{Inv}_G(\wedge^\bullet\mathfrak{g}^*).</span></p>
 </div>
 <h1 id="the-universal-enveloping-algebra-and-poincarébirkhoff-witt">The
 universal enveloping algebra and Poincaré–Birkhoff-Witt</h1>
@@ -381,16 +373,13 @@ algebra, so let’s talk about this for a bit.</p>
 <p>Any (associative) algebra <span class="math inline">A</span> has an
 “underlying” Lie algebra <span class="math inline">A_-</span>, whose set
 of elements is the same, and is endowed with the Lie bracket defined by
-<span class="math display">
-  [x,y] \coloneqq xy-yx.
-</span> This gives us a “forgetful” functor <span class="math display">
-  \begin{aligned}
+<span class="math display">[x,y] \coloneqq xy-yx.</span> This gives us a
+“forgetful” functor <span class="math display">\begin{aligned}
     \mathsf{Alg} &amp;\to \mathsf{LieAlg}
   \\A &amp;\mapsto A_-
-  \end{aligned}
-</span> and so we can ask the natural question, <em>does this functor
-have a left adjoint?</em> We will show that the answer to this question
-is “yes”, by functorially constructing an algebra <span
+  \end{aligned}</span> and so we can ask the natural question, <em>does
+this functor have a left adjoint?</em> We will show that the answer to
+this question is “yes”, by functorially constructing an algebra <span
 class="math inline">U(\mathfrak{g})</span> such that <span
 class="math inline">\mathfrak{g}</span> sits inside <span
 class="math inline">U(\mathfrak{g})</span>, generating it as an algebra
@@ -401,11 +390,10 @@ class="math inline">\mathfrak{g}</span>.</p>
 <div class="rmenv" title="Definition">
 <p>The <em>tensor algebra <span
 class="math inline">T(\mathfrak{g})</span></em> is the algebra <span
-class="math display">
-  T(\mathfrak{g}) \coloneqq \bigoplus_{n=0}^\infty \mathfrak{g}^{\otimes
-n}
-</span> (where we take the tensor product of <span
-class="math inline">\mathfrak{g}</span> as a <em>vector space</em>).</p>
+class="math display">T(\mathfrak{g}) \coloneqq \bigoplus_{n=0}^\infty
+\mathfrak{g}^{\otimes n}</span> (where we take the tensor product of
+<span class="math inline">\mathfrak{g}</span> as a <em>vector
+space</em>).</p>
 </div>
 <p>Note that, a priori, <span class="math inline">x\otimes y-y\otimes
 x\neq[x,y]</span>. In other words, the inclusion <span
@@ -415,14 +403,11 @@ is <em>not</em> a Lie algebra homomorphism.</p>
 <p>The <em>universal enveloping algebra <span
 class="math inline">U(\mathfrak{g})</span></em> is the largest quotient
 algebra of <span class="math inline">T(\mathfrak{g})</span> such that
-the composite <span class="math display">
-  \mathfrak{g}\hookrightarrow T(\mathfrak{g}) \twoheadrightarrow
-U(\mathfrak{g})
-</span> is a Lie algebra homomorphism. Constructively, <span
-class="math display">
-  U(\mathfrak{g}) \coloneqq T(\mathfrak{g})/(x\otimes y-y\otimes
-x-[x,y]).
-</span></p>
+the composite <span class="math display">\mathfrak{g}\hookrightarrow
+T(\mathfrak{g}) \twoheadrightarrow U(\mathfrak{g})</span> is a Lie
+algebra homomorphism. Constructively, <span
+class="math display">U(\mathfrak{g}) \coloneqq T(\mathfrak{g})/(x\otimes
+y-y\otimes x-[x,y]).</span></p>
 </div>
 <p>Note that, if <span class="math inline">\mathfrak{g}</span> is
 abelian (i.e. if the bracket is zero), then <span
@@ -431,11 +416,11 @@ algebra <span
 class="math inline">\operatorname{Sym}(\mathfrak{g})</span>.</p>
 <div class="itenv" title="Lemma">
 <p>The universal enveloping algebra construction is left adjoint to the
-underlying Lie algebra functor, i.e. <span class="math display">
-  \operatorname{Hom}_\mathsf{Alg}(U(\mathfrak{g}),A) \cong
-\operatorname{Hom}_\mathsf{LieAlg}(\mathfrak{g},A_-)
-</span> functorially in <span class="math inline">\mathfrak{g}</span>
-and <span class="math inline">A</span>.</p>
+underlying Lie algebra functor, i.e. <span
+class="math display">\operatorname{Hom}_\mathsf{Alg}(U(\mathfrak{g}),A)
+\cong \operatorname{Hom}_\mathsf{LieAlg}(\mathfrak{g},A_-)</span>
+functorially in <span class="math inline">\mathfrak{g}</span> and <span
+class="math inline">A</span>.</p>
 </div>
 <p>Another way of stating this universal property (and, indeed, the one
 that is found in a lot of introductory texts) is the following:</p>
@@ -463,11 +448,10 @@ theorem</a>.</p>
 <div class="itenv" title="Poincaré–Birkhoff–Witt Theorem">
 <p>Let <span class="math inline">(x_1,\ldots,x_n)</span> be a vector
 space basis for <span class="math inline">\mathfrak{g}</span>. Then the
-ordered set of monomials <span class="math display">
-  (x_1^{i_1}x_2^{i_2}\ldots x_n^{i_n} \mid
-(i_1,\ldots,i_n)\in\mathbb{N}^n)
-</span> is a vector space basis for <span
-class="math inline">U(\mathfrak{g})</span>.</p>
+ordered set of monomials <span
+class="math display">(x_1^{i_1}x_2^{i_2}\ldots x_n^{i_n} \mid
+(i_1,\ldots,i_n)\in\mathbb{N}^n)</span> is a vector space basis for
+<span class="math inline">U(\mathfrak{g})</span>.</p>
 </div>
 <h1 id="actual-definitions">Actual definitions</h1>
 <p>I’m going to end this post by actually defining the thing that I’ve
@@ -483,15 +467,12 @@ of a Lie algebra.</p>
 Then a <em><span class="math inline">\mathfrak{g}</span>-module <span
 class="math inline">M</span></em> is a vector space endowed with a <span
 class="math inline">\mathfrak{g}</span>-action such that <span
-class="math display">
-  [x,y]\cdot m = x\cdot(y\cdot m) - y\cdot(x\cdot m).
-</span> Equivalently, we can require that the map <span
-class="math display">
-  \begin{aligned}
+class="math display">[x,y]\cdot m = x\cdot(y\cdot m) - y\cdot(x\cdot
+m).</span> Equivalently, we can require that the map <span
+class="math display">\begin{aligned}
     \mathfrak{g}&amp;\to \operatorname{End}(\mathfrak{g})
   \\x &amp;\mapsto x\cdot(-)
-  \end{aligned}
-</span> induced by the <span
+  \end{aligned}</span> induced by the <span
 class="math inline">\mathfrak{g}</span>-action be a Lie algebra
 homomorphism.</p>
 </div>
@@ -503,29 +484,27 @@ explain how they are equivalent afterwards.</p>
 <div class="rmenv" title="Definition">
 <p>The <em>Chevalley–Eilenberg complex <span
 class="math inline">\operatorname{CE}^\bullet(\mathfrak{g},M)</span></em>
-is defined by <span class="math display">
-  \operatorname{CE}(\mathfrak{g},M)^p \coloneqq
-\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)
-</span> (i.e. the set of <span class="math inline">p</span>-linear
-alternating maps <span class="math inline">\mathfrak{g}^{\times p}\to
-M</span>) with differential <span
+is defined by <span
+class="math display">\operatorname{CE}(\mathfrak{g},M)^p \coloneqq
+\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)</span> (i.e. the set of
+<span class="math inline">p</span>-linear alternating maps <span
+class="math inline">\mathfrak{g}^{\times p}\to M</span>) with
+differential <span
 class="math inline">d\colon\operatorname{CE}(\mathfrak{g},M)^p\to\operatorname{CE}(\mathfrak{g},M)^{p+1}</span>
-given by <span class="math display">
-  \begin{aligned}
+given by <span class="math display">\begin{aligned}
     (dc)(x_1,\ldots,x_{p+1}) \coloneqq
     \,\,&amp;\sum_{1\leqslant i&lt;j\leqslant p+1}
 (-1)^{i+j}c([x_i,x_j],x_1,\ldots,\widehat{x_i},\ldots,\widehat{x_j},\ldots,x_{p+1})
   \\+&amp;\sum_{i=1}^{p+1} (-1)^{i+1} x_i
 c(x_1,\ldots,\widehat{x_i},\ldots,x_{p+1}).
-  \end{aligned}
-</span> We then define the <em>Lie algebra cohomology of <span
-class="math inline">\mathfrak{g}</span></em> (<em>with coefficients in
-<span class="math inline">M</span></em>) to be the internal cohomology
-of this complex, i.e. <span class="math display">
-  \operatorname{H}^p(\mathfrak{g},M) \coloneqq
-\operatorname{Z}^p(\mathfrak{g},M)/\operatorname{B}^p(\mathfrak{g},M)
-</span> (“the kernel of <span class="math inline">d_p</span> modulo the
-image of <span class="math inline">d_{p-1}</span>”).</p>
+  \end{aligned}</span> We then define the <em>Lie algebra cohomology of
+<span class="math inline">\mathfrak{g}</span></em> (<em>with
+coefficients in <span class="math inline">M</span></em>) to be the
+internal cohomology of this complex, i.e. <span
+class="math display">\operatorname{H}^p(\mathfrak{g},M) \coloneqq
+\operatorname{Z}^p(\mathfrak{g},M)/\operatorname{B}^p(\mathfrak{g},M)</span>
+(“the kernel of <span class="math inline">d_p</span> modulo the image of
+<span class="math inline">d_{p-1}</span>”).</p>
 </div>
 <p>This Chevalley–Eilenberg complex deserves a whole blog post to
 itself, because there’s a beautiful story about how it links to
@@ -565,27 +544,24 @@ correspondence between <span
 class="math inline">\mathfrak{g}</span>-modules and <span
 class="math inline">U(\mathfrak{g})</span>-modules</em>.</p>
 <p>Using this, we can prove a result analogous to what we had for group
-cohomology, namely that <span class="math display">
-  M^\mathfrak{g}\cong
-\operatorname{Hom}_{U(\mathfrak{g})}(k^\mathrm{triv},M).
-</span> So, if we want to show that the derived functor of invariants is
-“the same” as the notion Lie algebra cohomology that we defined above,
-we need to show that <span class="math display">
-  \operatorname{Ext}_{U(\mathfrak{g})}^\bullet(k^\mathrm{triv},M) \simeq
-\operatorname{H}^\bullet(\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)).
-</span> To do this, it would suffice to show that <span
-class="math display">
-  \operatorname{Hom}_k(\wedge^p\mathfrak{g},M) \cong
-\operatorname{Hom}_{U(\mathfrak{g})}(P^\bullet,M)
-</span> for some projective resolution <span
-class="math inline">P^\bullet</span> of <span
-class="math inline">k^\mathrm{triv}</span>. We won’t give the details
-here, but this is indeed true, and comes from the projective resolution
-<span class="math display">
-  U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow
-k^\mathrm{triv}
-</span> where we choose some “clever” definition of differential for the
-complex <span
+cohomology, namely that <span class="math display">M^\mathfrak{g}\cong
+\operatorname{Hom}_{U(\mathfrak{g})}(k^\mathrm{triv},M).</span> So, if
+we want to show that the derived functor of invariants is “the same” as
+the notion Lie algebra cohomology that we defined above, we need to show
+that <span
+class="math display">\operatorname{Ext}_{U(\mathfrak{g})}^\bullet(k^\mathrm{triv},M)
+\simeq
+\operatorname{H}^\bullet(\operatorname{Hom}_k(\wedge^p\mathfrak{g},M)).</span>
+To do this, it would suffice to show that <span
+class="math display">\operatorname{Hom}_k(\wedge^p\mathfrak{g},M) \cong
+\operatorname{Hom}_{U(\mathfrak{g})}(P^\bullet,M)</span> for some
+projective resolution <span class="math inline">P^\bullet</span> of
+<span class="math inline">k^\mathrm{triv}</span>. We won’t give the
+details here, but this is indeed true, and comes from the projective
+resolution <span
+class="math display">U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}\twoheadrightarrow
+k^\mathrm{triv}</span> where we choose some “clever” definition of
+differential for the complex <span
 class="math inline">U(\mathfrak{g})\otimes_k\wedge^p\mathfrak{g}</span>
 (namely that of the <a
 href="https://en.wikipedia.org/wiki/Koszul_complex">Koszul complex</a>),

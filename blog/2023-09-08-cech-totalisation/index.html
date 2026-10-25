@@ -85,34 +85,30 @@ concretely afterwards.</p>
 <p>Let <span class="math inline">G</span> be a Lie group (i.e. a group
 object in the category <span class="math inline">\mathsf{Man}</span> of
 smooth manifolds). Then Yoneda gives us a presheaf <span
-class="math display">
-  y^G
+class="math display">y^G
   = \mathsf{Man}(-,G)
-  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Set}
-</span> but we can in fact endow this presheaf with the structure of a
-Lie group, by using the Lie group structure of <span
-class="math inline">G</span> “pointwise”. This means that we can deloop
-<span class="math inline">y^G</span> to obtain a presheaf of one-element
-groupoids <span class="math display">
-  \mathbb{B}y^G
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Set}</span> but we can in
+fact endow this presheaf with the structure of a Lie group, by using the
+Lie group structure of <span class="math inline">G</span> “pointwise”.
+This means that we can deloop <span class="math inline">y^G</span> to
+obtain a presheaf of one-element groupoids <span
+class="math display">\mathbb{B}y^G
   = \mathbb{B}\mathsf{Man}(-,G)
-  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Grpd}.
-</span> In other words, given any smooth manifold <span
-class="math inline">X</span>, we obtain a groupoid <span
-class="math inline">\mathbb{B}y^G(X)</span> with a single object <span
-class="math inline">*</span> and with endomorphism group <span
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Grpd}.</span> In other words,
+given any smooth manifold <span class="math inline">X</span>, we obtain
+a groupoid <span class="math inline">\mathbb{B}y^G(X)</span> with a
+single object <span class="math inline">*</span> and with endomorphism
+group <span
 class="math inline">\operatorname{Hom}(*,*)\cong\mathsf{Man}(X,G)</span>.
 Finally, for this step, we can take the categorical nerve <span
 class="math inline">\mathcal{N}\colon\mathsf{Cat}\to\mathsf{sSet}</span>
-to obtain a presheaf of simplicial sets <span class="math display">
-  \mathcal{N}\mathbb{B}y^G
-  \colon\mathsf{Man}^\mathrm{op}\to[\Delta^\mathrm{op},\mathsf{Set}].
-</span> So if we go back and forget about our choice of <span
+to obtain a presheaf of simplicial sets <span
+class="math display">\mathcal{N}\mathbb{B}y^G
+  \colon\mathsf{Man}^\mathrm{op}\to[\Delta^\mathrm{op},\mathsf{Set}].</span>
+So if we go back and forget about our choice of <span
 class="math inline">G</span>, instead leaving that open, we get a
-functor <span class="math display">
-  \mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}^\mathrm{op},[\Delta^\mathrm{op},\mathsf{Set}]].
-</span></p>
+functor <span class="math display">\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}^\mathrm{op},[\Delta^\mathrm{op},\mathsf{Set}]].</span></p>
 <p>Let’s now think about covers. Let <span
 class="math inline">\mathsf{Man}_\mathcal{U}</span> denote the category
 whose objects are pairs <span class="math inline">(X,\mathcal{U})</span>
@@ -123,26 +119,23 @@ class="math inline">\mathsf{Man}</span> such that <span
 class="math inline">\mathcal{U}</span> is a refinement of <span
 class="math inline">f^{-1}(\mathcal{V})</span>. Then we can write the
 Čech nerve <span class="math inline">\check{\mathcal{N}}</span> as a
-functor <span class="math display">
-  \check{\mathcal{N}}
-  \colon\mathsf{Man}_\mathcal{U}\to[\Delta^\mathrm{op},\mathsf{Man}]
-</span> and then the purely abstract fact that <span
+functor <span class="math display">\check{\mathcal{N}}
+  \colon\mathsf{Man}_\mathcal{U}\to[\Delta^\mathrm{op},\mathsf{Man}]</span>
+and then the purely abstract fact that <span
 class="math inline">[\mathcal{C},\mathcal{D}]^\mathrm{op}\cong[\mathcal{C}^\mathrm{op},\mathcal{D}^\mathrm{op}]</span>
 for any categories <span class="math inline">\mathcal{C}</span> and
 <span class="math inline">\mathcal{D}</span> lets us apply an <span
 class="math inline">\mathrm{op}</span> to get a functor <span
-class="math display">
-  \check{\mathcal{N}}^\mathrm{op}
-  \colon\mathsf{Man}_\mathcal{U}^\mathrm{op}\to[\Delta,\mathsf{Man}^\mathrm{op}].
-</span></p>
+class="math display">\check{\mathcal{N}}^\mathrm{op}
+  \colon\mathsf{Man}_\mathcal{U}^\mathrm{op}\to[\Delta,\mathsf{Man}^\mathrm{op}].</span></p>
 <p>We can precompose (which we write with as <span
 class="math inline">(-)^*</span>) the above <span
 class="math inline">\mathcal{N}\mathbb{B}y^{(-)}</span> with this <span
 class="math inline">\check{\mathcal{N}}^\mathrm{op}</span> to obtain a
-single functor <span class="math display">
-  (\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{csSet}]
-</span> where <span
+single functor <span
+class="math display">(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{csSet}]</span>
+where <span
 class="math inline">\mathsf{csSet}=[\Delta,[\Delta^\mathrm{op},\mathsf{Set}]]</span>
 is the category of cosimplicial simplicial sets. The very last step (for
 real this time) is to then <em>totalise</em> over the cosimplicial
@@ -152,10 +145,9 @@ that turns a cosimplicial simplicial set into a simplicial set in
 exactly the same way that taking the total complex turns a bicomplex
 into a complex (don’t worry, we’ll talk more about what this functor is
 later). All in all, we get a simplicial presheaf on the category of
-smooth manifolds with chosen cover, namely <span class="math display">
-  \operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{sSet}].
-</span></p>
+smooth manifolds with chosen cover, namely <span
+class="math display">\operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{sSet}].</span></p>
 <p>Now comes the punchline.</p>
 <div class="itenv" title="Theorem">
 <p>For any Lie group <span class="math inline">G</span> and space with
@@ -216,52 +208,45 @@ totalisation and Reedy fibrancy</h1>
 simplicial space given in degree <span class="math inline">p</span> by
 the disjoint union of all non-empty <span
 class="math inline">p</span>-fold intersections of elements of <span
-class="math inline">\mathcal{U}</span>, i.e. <span class="math display">
-  \check{\mathcal{N}}\mathcal{U}_p
-  = \coprod U_{\alpha_0\ldots\alpha_p}
-</span> and the face and degeneracy maps are given by dropping/repeating
-indices <span class="math inline">\alpha_i</span>. If the cover is
-“good”, then this gives a fibrant replacement of <span
-class="math inline">X</span>, and so can be used to compute cohomology
-(or more general mapping spaces). I love the Čech nerve — I think it
-turns up in almost everything I write — but I’d rather spend my little
-remaining energy describing totalisation instead.</p>
+class="math inline">\mathcal{U}</span>, i.e. <span
+class="math display">\check{\mathcal{N}}\mathcal{U}_p
+  = \coprod U_{\alpha_0\ldots\alpha_p}</span> and the face and
+degeneracy maps are given by dropping/repeating indices <span
+class="math inline">\alpha_i</span>. If the cover is “good”, then this
+gives a fibrant replacement of <span class="math inline">X</span>, and
+so can be used to compute cohomology (or more general mapping spaces). I
+love the Čech nerve — I think it turns up in almost everything I write —
+but I’d rather spend my little remaining energy describing totalisation
+instead.</p>
 <p>The prototypical cosimplicial simplicial set is <span
-class="math display">
-  \begin{aligned}
+class="math display">\begin{aligned}
     \Delta[\star]
     \colon\Delta
     &amp;\to\mathsf{sSet}
   \\ [p]
     &amp;\mapsto\Delta[p]=\operatorname{Hom}_\Delta(-,[p])
-  \end{aligned}
-</span> which we can think of as “all of the simplices <span
-class="math inline">\Delta[p]</span> gathered together”. This lets us
-define a functor <span class="math display">
-  \begin{aligned}
+  \end{aligned}</span> which we can think of as “all of the simplices
+<span class="math inline">\Delta[p]</span> gathered together”. This lets
+us define a functor <span class="math display">\begin{aligned}
     L
     \colon\mathsf{sSet}
     &amp;\to\mathsf{csSet}
   \\Y_\bullet
     &amp;\mapsto Y_\bullet\times\Delta[\star]
-  \end{aligned}
-</span> and this admits a right adjoint, which we call
-<em>totalisation</em> <span class="math display">
-  \begin{aligned}
+  \end{aligned}</span> and this admits a right adjoint, which we call
+<em>totalisation</em> <span class="math display">\begin{aligned}
     \operatorname{Tot}
     \colon\mathsf{csSet}
     &amp;\to\mathsf{sSet}
   \\Y_\bullet^\star
     &amp;\mapsto
 \underline{\operatorname{Hom}}_\mathsf{csSet}(\Delta[\star],Y_\bullet^\star)
-  \end{aligned}
-</span> where we make use of the fact that <span
+  \end{aligned}</span> where we make use of the fact that <span
 class="math inline">\mathsf{csSet}</span> is enriched over <span
-class="math inline">\mathsf{sSet}</span> via <span class="math display">
-  \left(\underline{\operatorname{Hom}}_\mathsf{csSet}(A_\bullet^\star,B_\bullet^\star)\right)_p
+class="math inline">\mathsf{sSet}</span> via <span
+class="math display">\left(\underline{\operatorname{Hom}}_\mathsf{csSet}(A_\bullet^\star,B_\bullet^\star)\right)_p
   =
-\operatorname{Hom}_\mathsf{csSet}(A_\bullet^\star\times\Delta[p],B_\bullet^\star).
-</span></p>
+\operatorname{Hom}_\mathsf{csSet}(A_\bullet^\star\times\Delta[p],B_\bullet^\star).</span></p>
 <p>The particularly useful fact about totalisation is the following:</p>
 <blockquote>
 <p><em>If <span
@@ -373,15 +358,14 @@ class="math inline">\mathcal{F}\colon\mathsf{Space}^\mathrm{op}\to\mathsf{dgCat}
 be a presheaf on the category of spaces that sends finite products to
 coproducts, and let <span class="math inline">X\in\mathsf{Space}</span>
 be a space with cover <span class="math inline">\mathcal{U}</span>. Then
-there is a weak equivalence of Kan complexes <span class="math display">
-  \operatorname{Tot}\langle\mathcal{N}^\mathrm{dg}\mathcal{F}(\check{\mathcal{N}}\mathcal{U})\rangle
+there is a weak equivalence of Kan complexes <span
+class="math display">\operatorname{Tot}\langle\mathcal{N}^\mathrm{dg}\mathcal{F}(\check{\mathcal{N}}\mathcal{U})\rangle
   \simeq
-  \langle\mathcal{N}^\mathrm{dg}\big(\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}\big))\rangle
-</span> where we write <span class="math inline">\langle-\rangle</span>
-to denote the maximal Kan complex, and on the left-hand side we are
-taking the totalisation of cosimplicial simplicial sets, and on the
-right-hand side we are taking the totalisation of cosimplicial
-dg-categories.</p>
+  \langle\mathcal{N}^\mathrm{dg}\big(\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}\big))\rangle</span>
+where we write <span class="math inline">\langle-\rangle</span> to
+denote the maximal Kan complex, and on the left-hand side we are taking
+the totalisation of cosimplicial simplicial sets, and on the right-hand
+side we are taking the totalisation of cosimplicial dg-categories.</p>
 </div>
 <h1 id="applications">Applications</h1>
 <p>So what do Mahmoud and I actually use Čech totalisation for in our

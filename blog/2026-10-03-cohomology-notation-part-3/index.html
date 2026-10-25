@@ -334,11 +334,10 @@ and so the “obvious” thing to try is to say that <span
 class="math inline">\mathscr{H}^i(f^\bullet)</span> is simply the
 restriction of <span class="math inline">f^i</span> to <span
 class="math inline">\operatorname{Ker}{d^n}</span>. That is, we set
-<span class="math display">
-    \mathscr{H}^i(f^\bullet)
-    \coloneqq f^i|\operatorname{Ker}{d^n}
-</span> and now just need to show that this is indeed well defined,
-which means showing that the following two properties hold:</p>
+<span class="math display">\mathscr{H}^i(f^\bullet)
+    \coloneqq f^i|\operatorname{Ker}{d^n}</span> and now just need to
+show that this is indeed well defined, which means showing that the
+following two properties hold:</p>
 <ol type="1">
 <li>The restriction in the source lands in the restriction in the
 target: <span
@@ -359,9 +358,9 @@ it is not hard to show that every isomorphism is also a
 quasi-isomorphism, but the converse is definitely not true (as we will
 soon show in an example). But quasi-isomorphisms (just like
 isomorphisms) satisfy the 2-out-of-3 property: if we have a composable
-pair of morphisms <span class="math display">
-    C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet
-</span> and we set <span class="math inline">h^\bullet=g^\bullet
+pair of morphisms <span
+class="math display">C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet</span>
+and we set <span class="math inline">h^\bullet=g^\bullet
 f^\bullet</span>, then if any two out of the three morphisms <span
 class="math inline">f^\bullet</span>, <span
 class="math inline">g^\bullet</span>, and <span
@@ -379,23 +378,20 @@ answer: we’re only interested in cochain complexes for their cohomology,
 so we shouldn’t really mind whether or not two complexes are the same,
 as long as they have the same cohomology. Let’s give an example.</p>
 <p>Consider the cochain complexes (of abelian groups) <span
-class="math display">
-\begin{array}{rrcl}
+class="math display">\begin{array}{rrcl}
     C^\bullet \coloneqq &amp; \mathbb{Z} &amp; \xrightarrow{\cdot 2}
 &amp; \mathbb{Z}
     \\ D^\bullet\coloneqq &amp; 0 &amp; \to &amp; \mathbb{Z}/2\mathbb{Z}
-\end{array}
-</span> (where we write <span class="math inline">\cdot2</span> to mean
-the map <span class="math inline">n\mapsto 2n</span>), and define a
-chain map <span class="math inline">f^\bullet\colon C^\bullet\to
-D^\bullet</span> by <span class="math display">
-\begin{CD}
+\end{array}</span> (where we write <span
+class="math inline">\cdot2</span> to mean the map <span
+class="math inline">n\mapsto 2n</span>), and define a chain map <span
+class="math inline">f^\bullet\colon C^\bullet\to D^\bullet</span> by
+<span class="math display">\begin{CD}
     \mathbb{Z} @&gt;{\cdot2}&gt;&gt; \mathbb{Z}
     \\ @VVV @VV{\mod2}V
     \\0 @&gt;&gt;&gt; \mathbb{Z}/2\mathbb{Z}
-\end{CD}
-</span> We can easily see this to be a chain map, since the path <span
-class="math inline">\to\circ\downarrow</span> is zero by virtue of
+\end{CD}</span> We can easily see this to be a chain map, since the path
+<span class="math inline">\to\circ\downarrow</span> is zero by virtue of
 factoring through <span class="math inline">0</span>, and the path <span
 class="math inline">\downarrow\circ\to</span> is zero since if we double
 a number and then take its value modulo 2 we get zero; the diagram
@@ -409,8 +405,8 @@ a quasi-isomorphism. To see this, we have to calculate the cohomology of
 <span class="math inline">C^\bullet</span> and <span
 class="math inline">D^\bullet</span> and show that the induced maps
 <span class="math inline">\mathscr{H}^i(f^\bullet)</span> are
-isomorphisms. First, the cohomologies: <span class="math display">
-\begin{aligned}
+isomorphisms. First, the cohomologies: <span
+class="math display">\begin{aligned}
     \mathscr{H}^i(C^\bullet)
     &amp;= \left( \frac{\operatorname{Ker}(\cdot
 2)}{\operatorname{Im}(0\to\mathbb{Z})} \longrightarrow
@@ -427,12 +423,11 @@ isomorphisms. First, the cohomologies: <span class="math display">
     \\&amp;= \left( \frac{0}{0} \longrightarrow
 \frac{\mathbb{Z}/2\mathbb{Z}}{0} \right)
     \\&amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
-\end{aligned}
-</span> And now we have to repeat<a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a> a very important
-warning: <em>two objects being isomorphic is very different from having
-an explicit isomorphism between them</em>. Here, for example, we see
-that the cohomologies <span
+\end{aligned}</span> And now we have to repeat<a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> a
+very important warning: <em>two objects being isomorphic is very
+different from having an explicit isomorphism between them</em>. Here,
+for example, we see that the cohomologies <span
 class="math inline">\mathscr{H}^\bullet(C)</span> and <span
 class="math inline">\mathscr{H}^\bullet(D)</span> are clearly isomorphic
 (they are identical!). But the question is <em>not</em> “do <span

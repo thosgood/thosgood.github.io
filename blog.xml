@@ -162,11 +162,10 @@ and so the “obvious” thing to try is to say that &lt;span
 class="math inline"&gt;\mathscr{H}^i(f^\bullet)&lt;/span&gt; is simply the
 restriction of &lt;span class="math inline"&gt;f^i&lt;/span&gt; to &lt;span
 class="math inline"&gt;\operatorname{Ker}{d^n}&lt;/span&gt;. That is, we set
-&lt;span class="math display"&gt;
-    \mathscr{H}^i(f^\bullet)
-    \coloneqq f^i|\operatorname{Ker}{d^n}
-&lt;/span&gt; and now just need to show that this is indeed well defined,
-which means showing that the following two properties hold:&lt;/p&gt;
+&lt;span class="math display"&gt;\mathscr{H}^i(f^\bullet)
+    \coloneqq f^i|\operatorname{Ker}{d^n}&lt;/span&gt; and now just need to
+show that this is indeed well defined, which means showing that the
+following two properties hold:&lt;/p&gt;
 &lt;ol type="1"&gt;
 &lt;li&gt;The restriction in the source lands in the restriction in the
 target: &lt;span
@@ -187,9 +186,9 @@ it is not hard to show that every isomorphism is also a
 quasi-isomorphism, but the converse is definitely not true (as we will
 soon show in an example). But quasi-isomorphisms (just like
 isomorphisms) satisfy the 2-out-of-3 property: if we have a composable
-pair of morphisms &lt;span class="math display"&gt;
-    C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet
-&lt;/span&gt; and we set &lt;span class="math inline"&gt;h^\bullet=g^\bullet
+pair of morphisms &lt;span
+class="math display"&gt;C^\bullet\xrightarrow{f^\bullet}D^\bullet\xrightarrow{g^\bullet}E^\bullet&lt;/span&gt;
+and we set &lt;span class="math inline"&gt;h^\bullet=g^\bullet
 f^\bullet&lt;/span&gt;, then if any two out of the three morphisms &lt;span
 class="math inline"&gt;f^\bullet&lt;/span&gt;, &lt;span
 class="math inline"&gt;g^\bullet&lt;/span&gt;, and &lt;span
@@ -207,23 +206,20 @@ answer: we’re only interested in cochain complexes for their cohomology,
 so we shouldn’t really mind whether or not two complexes are the same,
 as long as they have the same cohomology. Let’s give an example.&lt;/p&gt;
 &lt;p&gt;Consider the cochain complexes (of abelian groups) &lt;span
-class="math display"&gt;
-\begin{array}{rrcl}
+class="math display"&gt;\begin{array}{rrcl}
     C^\bullet \coloneqq &amp;amp; \mathbb{Z} &amp;amp; \xrightarrow{\cdot 2}
 &amp;amp; \mathbb{Z}
     \\ D^\bullet\coloneqq &amp;amp; 0 &amp;amp; \to &amp;amp; \mathbb{Z}/2\mathbb{Z}
-\end{array}
-&lt;/span&gt; (where we write &lt;span class="math inline"&gt;\cdot2&lt;/span&gt; to mean
-the map &lt;span class="math inline"&gt;n\mapsto 2n&lt;/span&gt;), and define a
-chain map &lt;span class="math inline"&gt;f^\bullet\colon C^\bullet\to
-D^\bullet&lt;/span&gt; by &lt;span class="math display"&gt;
-\begin{CD}
+\end{array}&lt;/span&gt; (where we write &lt;span
+class="math inline"&gt;\cdot2&lt;/span&gt; to mean the map &lt;span
+class="math inline"&gt;n\mapsto 2n&lt;/span&gt;), and define a chain map &lt;span
+class="math inline"&gt;f^\bullet\colon C^\bullet\to D^\bullet&lt;/span&gt; by
+&lt;span class="math display"&gt;\begin{CD}
     \mathbb{Z} @&amp;gt;{\cdot2}&amp;gt;&amp;gt; \mathbb{Z}
     \\ @VVV @VV{\mod2}V
     \\0 @&amp;gt;&amp;gt;&amp;gt; \mathbb{Z}/2\mathbb{Z}
-\end{CD}
-&lt;/span&gt; We can easily see this to be a chain map, since the path &lt;span
-class="math inline"&gt;\to\circ\downarrow&lt;/span&gt; is zero by virtue of
+\end{CD}&lt;/span&gt; We can easily see this to be a chain map, since the path
+&lt;span class="math inline"&gt;\to\circ\downarrow&lt;/span&gt; is zero by virtue of
 factoring through &lt;span class="math inline"&gt;0&lt;/span&gt;, and the path &lt;span
 class="math inline"&gt;\downarrow\circ\to&lt;/span&gt; is zero since if we double
 a number and then take its value modulo 2 we get zero; the diagram
@@ -237,8 +233,8 @@ a quasi-isomorphism. To see this, we have to calculate the cohomology of
 &lt;span class="math inline"&gt;C^\bullet&lt;/span&gt; and &lt;span
 class="math inline"&gt;D^\bullet&lt;/span&gt; and show that the induced maps
 &lt;span class="math inline"&gt;\mathscr{H}^i(f^\bullet)&lt;/span&gt; are
-isomorphisms. First, the cohomologies: &lt;span class="math display"&gt;
-\begin{aligned}
+isomorphisms. First, the cohomologies: &lt;span
+class="math display"&gt;\begin{aligned}
     \mathscr{H}^i(C^\bullet)
     &amp;amp;= \left( \frac{\operatorname{Ker}(\cdot
 2)}{\operatorname{Im}(0\to\mathbb{Z})} \longrightarrow
@@ -255,12 +251,11 @@ isomorphisms. First, the cohomologies: &lt;span class="math display"&gt;
     \\&amp;amp;= \left( \frac{0}{0} \longrightarrow
 \frac{\mathbb{Z}/2\mathbb{Z}}{0} \right)
     \\&amp;amp;= \left( 0 \longrightarrow \mathbb{Z}/2\mathbb{Z} \right)
-\end{aligned}
-&lt;/span&gt; And now we have to repeat&lt;a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; a very important
-warning: &lt;em&gt;two objects being isomorphic is very different from having
-an explicit isomorphism between them&lt;/em&gt;. Here, for example, we see
-that the cohomologies &lt;span
+\end{aligned}&lt;/span&gt; And now we have to repeat&lt;a href="#fn3"
+class="footnote-ref" id="fnref3" role="doc-noteref"&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; a
+very important warning: &lt;em&gt;two objects being isomorphic is very
+different from having an explicit isomorphism between them&lt;/em&gt;. Here,
+for example, we see that the cohomologies &lt;span
 class="math inline"&gt;\mathscr{H}^\bullet(C)&lt;/span&gt; and &lt;span
 class="math inline"&gt;\mathscr{H}^\bullet(D)&lt;/span&gt; are clearly isomorphic
 (they are identical!). But the question is &lt;em&gt;not&lt;/em&gt; “do &lt;span
@@ -579,27 +574,24 @@ class="math inline"&gt;\pi\colon Y\to X&lt;/span&gt; and an open subset &lt;span
 class="math inline"&gt;U\subset X&lt;/span&gt;, we define the &lt;strong&gt;set of
 sections of &lt;span class="math inline"&gt;Y\xrightarrow{\pi}X&lt;/span&gt; over
 &lt;span class="math inline"&gt;U&lt;/span&gt;&lt;/strong&gt; as &lt;span
-class="math display"&gt;
-    \Gamma(U,Y\xrightarrow{\pi}X)
+class="math display"&gt;\Gamma(U,Y\xrightarrow{\pi}X)
     \coloneqq \{\sigma\colon U\to Y \mid \pi\circ\sigma =
-\mathrm{id}_U\}.
-&lt;/span&gt; But if we leave out any specific choice of open subset &lt;span
-class="math inline"&gt;U&lt;/span&gt; we obtain a (contravariant) functor from
-the category (really, the poset; morphisms are given by inclusion of one
-open subset into another, and this doesn’t involve any choice or extra
-data) &lt;span class="math inline"&gt;\mathsf{Op}(X)&lt;/span&gt; of open subsets of
-&lt;span class="math inline"&gt;X&lt;/span&gt; to the category of sets: &lt;span
-class="math display"&gt;
-    \begin{aligned}
+\mathrm{id}_U\}.&lt;/span&gt; But if we leave out any specific choice of open
+subset &lt;span class="math inline"&gt;U&lt;/span&gt; we obtain a (contravariant)
+functor from the category (really, the poset; morphisms are given by
+inclusion of one open subset into another, and this doesn’t involve any
+choice or extra data) &lt;span class="math inline"&gt;\mathsf{Op}(X)&lt;/span&gt; of
+open subsets of &lt;span class="math inline"&gt;X&lt;/span&gt; to the category of
+sets: &lt;span class="math display"&gt;\begin{aligned}
         \Gamma\colon
         \mathsf{Op}(X)^\mathrm{op}
         &amp;amp;\longrightarrow \mathsf{Set}
     \\  U
         &amp;amp;\longmapsto \Gamma(U,Y\xrightarrow{\pi}X)
-    \end{aligned}
-&lt;/span&gt; This functor is particularly nice, since it satisfies exactly
-the kinds of properties that we were worried about before when asking
-whether or not some &lt;span class="math inline"&gt;\pi_{V_y}&lt;/span&gt; and &lt;span
+    \end{aligned}&lt;/span&gt; This functor is particularly nice, since it
+satisfies exactly the kinds of properties that we were worried about
+before when asking whether or not some &lt;span
+class="math inline"&gt;\pi_{V_y}&lt;/span&gt; and &lt;span
 class="math inline"&gt;\pi_{V_{y&amp;#39;}}&lt;/span&gt; would be able to “glue” on
 the overlap &lt;span class="math inline"&gt;V_{yy&amp;#39;}&lt;/span&gt;. We could
 phrase this property in terms of “unique gluing of compatible local
@@ -631,11 +623,10 @@ functions&lt;/h1&gt;
 class="math inline"&gt;f\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt; is a function
 that is everywhere complex-differentiable. That is, for all &lt;span
 class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;, the limit &lt;span
-class="math display"&gt;
-    f&amp;#39;(z_0)
-    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
-&lt;/span&gt; exists, i.e. is a well-defined complex number, i.e. gives a
-well-defined function &lt;span
+class="math display"&gt;f&amp;#39;(z_0)
+    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}&lt;/span&gt; exists,
+i.e. is a well-defined complex number, i.e. gives a well-defined
+function &lt;span
 class="math inline"&gt;f&amp;#39;\colon\mathbb{C}\to\mathbb{C}&lt;/span&gt;. The
 thing that makes holomorphic functions so wonderful (and also so tough
 to work with) is the sneaky little detail about what we mean when we say
@@ -667,11 +658,10 @@ all &lt;span class="math inline"&gt;z_0\in\mathbb{C}&lt;/span&gt;, we can find a
 (nice) open neighbourhood &lt;span
 class="math inline"&gt;U_{z_0}\subseteq\mathbb{C}&lt;/span&gt; on which &lt;span
 class="math inline"&gt;f&lt;/span&gt; can be expressed as a power series centred
-at &lt;span class="math inline"&gt;z_0&lt;/span&gt;: &lt;span class="math display"&gt;
-    f|U_{z_0}
+at &lt;span class="math inline"&gt;z_0&lt;/span&gt;: &lt;span
+class="math display"&gt;f|U_{z_0}
     = \sum_{i=0}^\infty a_i(z-z_0)^i
-    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.
-&lt;/span&gt;&lt;/p&gt;
+    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Lots of nice functions are holomorphic. For example, any polynomial
 is holomorphic: in short, a polynomial is just a finite power series, so
 it’s definitely analytic. All the trigonometric functions that we know
@@ -758,19 +748,17 @@ for &lt;span class="math inline"&gt;f&lt;/span&gt; to be holomorphic in each
 variable. This is surprising because the same is not true in real
 analysis! The famous&lt;a href="#fn6" class="footnote-ref" id="fnref6"
 role="doc-noteref"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; counter-example is &lt;span
-class="math display"&gt;
-    f(x,y)
+class="math display"&gt;f(x,y)
     \coloneqq
     \begin{cases}
         \frac{xy}{x^2+y^2} &amp;amp;\text{if }(x,y)\neq(0,0)
     \\  0 &amp;amp;\text{if }(x,y)=(0,0)
-    \end{cases}
-&lt;/span&gt; which is differentiable in each variable, but it is not even
-continuous (at the origin) in both variables. Once we know how to talk
-about multivariable holomorphic functions, we can define &lt;strong&gt;complex
-manifolds&lt;/strong&gt; as topological spaces that are locally biholomorphic
-to (i.e. there exists a holomorphic map with holomorphic inverse) open&lt;a
-href="#fn7" class="footnote-ref" id="fnref7"
+    \end{cases}&lt;/span&gt; which is differentiable in each variable, but it
+is not even continuous (at the origin) in both variables. Once we know
+how to talk about multivariable holomorphic functions, we can define
+&lt;strong&gt;complex manifolds&lt;/strong&gt; as topological spaces that are
+locally biholomorphic to (i.e. there exists a holomorphic map with
+holomorphic inverse) open&lt;a href="#fn7" class="footnote-ref" id="fnref7"
 role="doc-noteref"&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; subsets of &lt;span
 class="math inline"&gt;\mathbb{C}^n&lt;/span&gt;. And now, &lt;em&gt;finally&lt;/em&gt;, we
 can get back to the sheaf of holomorphic functions.&lt;/p&gt;
@@ -835,30 +823,28 @@ build a sheaf!&lt;/p&gt;
 &lt;p&gt;Given a complex manifold &lt;span class="math inline"&gt;X&lt;/span&gt; we define
 its &lt;strong&gt;sheaf of holomorphic functions&lt;/strong&gt; (usually denoted by
 &lt;span class="math inline"&gt;\mathcal{O}_X&lt;/span&gt;) to be given by &lt;span
-class="math display"&gt;
-    \begin{aligned}
+class="math display"&gt;\begin{aligned}
         \mathcal{O}_X\colon
         \mathsf{Op}(X)
         &amp;amp;\longrightarrow \mathsf{Ab}
     \\  U
         &amp;amp;\longmapsto \{f\colon U\to\mathbb{C} \mid f\text{ is
 holomorphic}\}
-    \end{aligned}
-&lt;/span&gt; Note that we could have chosen to land in the category of &lt;span
-class="math inline"&gt;\mathbb{C}&lt;/span&gt;-algebras, but we’ll just look at
-the underlying abelian group for now. But why is this thing a
-&lt;em&gt;sheaf&lt;/em&gt;? That’s an argument we’re not going to get into today.
-I’m just going to say that it is, and you can either just believe me or
-(much better) think about it and do some internet/book searching. But
-the argument that needs to be given is, in essence, that if we have open
-subsets &lt;span class="math inline"&gt;U,V\subseteq X&lt;/span&gt; with a non-empty
-overlap &lt;span class="math inline"&gt;U\cap V\neq\varnothing&lt;/span&gt;, and
-holomorphic functions &lt;span class="math inline"&gt;f_U\colon
-U\to\mathbb{C}&lt;/span&gt; and &lt;span class="math inline"&gt;f_V\colon
-V\to\mathbb{C}&lt;/span&gt; &lt;em&gt;such that&lt;/em&gt; &lt;span
-class="math inline"&gt;f_U=f_V&lt;/span&gt;, then there actually exists a unique
-holomorphic function &lt;span class="math inline"&gt;f_{U\cup V}\colon U\cup
-V&lt;/span&gt; on the &lt;em&gt;union&lt;/em&gt; such that &lt;span
+    \end{aligned}&lt;/span&gt; Note that we could have chosen to land in the
+category of &lt;span class="math inline"&gt;\mathbb{C}&lt;/span&gt;-algebras, but
+we’ll just look at the underlying abelian group for now. But why is this
+thing a &lt;em&gt;sheaf&lt;/em&gt;? That’s an argument we’re not going to get into
+today. I’m just going to say that it is, and you can either just believe
+me or (much better) think about it and do some internet/book searching.
+But the argument that needs to be given is, in essence, that if we have
+open subsets &lt;span class="math inline"&gt;U,V\subseteq X&lt;/span&gt; with a
+non-empty overlap &lt;span class="math inline"&gt;U\cap
+V\neq\varnothing&lt;/span&gt;, and holomorphic functions &lt;span
+class="math inline"&gt;f_U\colon U\to\mathbb{C}&lt;/span&gt; and &lt;span
+class="math inline"&gt;f_V\colon V\to\mathbb{C}&lt;/span&gt; &lt;em&gt;such that&lt;/em&gt;
+&lt;span class="math inline"&gt;f_U=f_V&lt;/span&gt;, then there actually exists a
+unique holomorphic function &lt;span class="math inline"&gt;f_{U\cup V}\colon
+U\cup V&lt;/span&gt; on the &lt;em&gt;union&lt;/em&gt; such that &lt;span
 class="math inline"&gt;f_U=f_{U\cup V}|U&lt;/span&gt; and &lt;span
 class="math inline"&gt;f_V=f_{U\cup V}|V&lt;/span&gt;. That is, if we have a
 collection of holomorphic functions on little open subsets, and whenever
@@ -980,36 +966,32 @@ class="math inline"&gt;\mathcal{A}&lt;/span&gt; and we decide that, for some
 reason that I really won’t get into here, we care deeply about the
 category &lt;span class="math inline"&gt;\mathsf{Ch}(\mathcal{A})&lt;/span&gt; of
 &lt;em&gt;cochain complexes&lt;/em&gt;. This is the category whose objects are of
-the form &lt;span class="math display"&gt;
-    \ldots
+the form &lt;span class="math display"&gt;\ldots
     \xrightarrow{d^{n-1}} C^n
     \xrightarrow{d^n} C^{n+1}
-    \xrightarrow{d^{n+1}} \ldots
-&lt;/span&gt; where &lt;span class="math inline"&gt;(C^n\mid n\in\mathbb{Z})&lt;/span&gt;
-are objects of &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; and &lt;span
+    \xrightarrow{d^{n+1}} \ldots&lt;/span&gt; where &lt;span
+class="math inline"&gt;(C^n\mid n\in\mathbb{Z})&lt;/span&gt; are objects of &lt;span
+class="math inline"&gt;\mathcal{A}&lt;/span&gt; and &lt;span
 class="math inline"&gt;(d^n\mid n\in\mathbb{Z})&lt;/span&gt; are morphisms in
 &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt; such that any composite of
 these morphisms (called &lt;strong&gt;differentials&lt;/strong&gt;) is zero, i.e.
-&lt;span class="math display"&gt;
-    d^n\circ d^{n-1}=0.
-&lt;/span&gt; Now, the morphisms between objects in this category are maybe
-not what you expect: they’re simply the degree-wise morphisms,
-i.e. &lt;span class="math inline"&gt;f^\bullet\colon C^\bullet\to
-D^\bullet&lt;/span&gt; is just a collection of morphisms &lt;span
-class="math inline"&gt;f^n\colon C^n\to D^n&lt;/span&gt; in &lt;span
-class="math inline"&gt;\mathcal{A}&lt;/span&gt; satisfying absolutely &lt;em&gt;no
-conditions whatsoever&lt;/em&gt;. However, we are often interested in those
-morphisms that respect the differentials, i.e. those such that
-everything commutes: &lt;span class="math display"&gt;
-\begin{CD}
+&lt;span class="math display"&gt;d^n\circ d^{n-1}=0.&lt;/span&gt; Now, the morphisms
+between objects in this category are maybe not what you expect: they’re
+simply the degree-wise morphisms, i.e. &lt;span
+class="math inline"&gt;f^\bullet\colon C^\bullet\to D^\bullet&lt;/span&gt; is
+just a collection of morphisms &lt;span class="math inline"&gt;f^n\colon
+C^n\to D^n&lt;/span&gt; in &lt;span class="math inline"&gt;\mathcal{A}&lt;/span&gt;
+satisfying absolutely &lt;em&gt;no conditions whatsoever&lt;/em&gt;. However, we are
+often interested in those morphisms that respect the differentials,
+i.e. those such that everything commutes: &lt;span
+class="math display"&gt;\begin{CD}
     \ldots @&amp;gt;{d^{n-1}}&amp;gt;&amp;gt; C^n @&amp;gt;{d^n}&amp;gt;&amp;gt; C^{n+1}
 @&amp;gt;{d^{n+1}}&amp;gt;&amp;gt; \ldots
 \\  @. @VV{f^{n-1}}V @VV{f^n}V @.
 \\  \ldots @&amp;gt;{e^{n-1}}&amp;gt;&amp;gt; D^n @&amp;gt;{e^n}&amp;gt;&amp;gt; D^{n+1}
 @&amp;gt;{e^{n+1}}&amp;gt;&amp;gt; \ldots
-\end{CD}
-&lt;/span&gt; We call such morphisms &lt;strong&gt;chain maps&lt;/strong&gt;, and denote
-the subcategory of cochain complexes with chain maps by &lt;span
+\end{CD}&lt;/span&gt; We call such morphisms &lt;strong&gt;chain maps&lt;/strong&gt;, and
+denote the subcategory of cochain complexes with chain maps by &lt;span
 class="math inline"&gt;\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Now, here’s our first and most fundamental definition today, where
 we’re already going to be using slightly non-standard terminology.&lt;/p&gt;
@@ -1019,10 +1001,10 @@ class="math inline"&gt;C^\bullet\in\mathsf{Ch}^0(\mathcal{A})&lt;/span&gt; be a
 cochain complex. Its &lt;strong&gt;internal cohomology&lt;/strong&gt; is the &lt;span
 class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-graded collection of abelian
 groups &lt;span class="math inline"&gt;(\mathscr{H}^n(C^\bullet)\mid
-n\in\mathbb{Z})&lt;/span&gt;, where we define &lt;span class="math display"&gt;
-    \mathscr{H}^n(C^\bullet)
-    \coloneqq \frac{\operatorname{Ker}d^n}{\operatorname{Im}d^{n-1}}
-&lt;/span&gt;&lt;/p&gt;
+n\in\mathbb{Z})&lt;/span&gt;, where we define &lt;span
+class="math display"&gt;\mathscr{H}^n(C^\bullet)
+    \coloneqq
+\frac{\operatorname{Ker}d^n}{\operatorname{Im}d^{n-1}}&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Isn’t that neat!&lt;/p&gt;
 &lt;h1 id="singular-cohomology"&gt;Singular cohomology&lt;/h1&gt;
@@ -1040,26 +1022,23 @@ t_i=1\}\subset\mathbb{R}^{n+1}&lt;/span&gt; map into &lt;span
 class="math inline"&gt;X&lt;/span&gt;. This leads us to define the
 &lt;strong&gt;singular &lt;span class="math inline"&gt;n&lt;/span&gt;-simplices in &lt;span
 class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as the set &lt;span
-class="math display"&gt;
-    \sigma_n(X)
-    \coloneqq \{\sigma\colon\Delta^n\to X\}
-&lt;/span&gt; of continuous maps. We can think of this set &lt;span
-class="math inline"&gt;\sigma_n(X)&lt;/span&gt; as an abelian group by just
-letting ourselves write down purely formal (finite) sums of such maps,
-like &lt;span class="math inline"&gt;2\sigma-5\tau&lt;/span&gt;. When we do this we
-will refer to the elements not as singular &lt;span
+class="math display"&gt;\sigma_n(X)
+    \coloneqq \{\sigma\colon\Delta^n\to X\}&lt;/span&gt; of continuous maps.
+We can think of this set &lt;span class="math inline"&gt;\sigma_n(X)&lt;/span&gt; as
+an abelian group by just letting ourselves write down purely formal
+(finite) sums of such maps, like &lt;span
+class="math inline"&gt;2\sigma-5\tau&lt;/span&gt;. When we do this we will refer
+to the elements not as singular &lt;span
 class="math inline"&gt;n&lt;/span&gt;-simplices but instead as &lt;strong&gt;singular
 &lt;span class="math inline"&gt;n&lt;/span&gt;-chains&lt;/strong&gt;. Here’s where we come
 back to talking about complexes: these abelian groups actually sit
-together really nicely in a complex &lt;span class="math display"&gt;
-    \ldots
+together really nicely in a complex &lt;span class="math display"&gt;\ldots
     \xleftarrow{\partial_{n-1}} \sigma_{n-1}(X)
     \xleftarrow{\partial_n} \sigma_n(X)
     \xleftarrow{\partial_{n+1}}
-    \ldots
-&lt;/span&gt; where we define the &lt;strong&gt;boundary operator&lt;/strong&gt; &lt;span
-class="math inline"&gt;\partial_n&lt;/span&gt; by taking an alternating sum of
-omitted indices. What do we mean by that? Well, the topological &lt;span
+    \ldots&lt;/span&gt; where we define the &lt;strong&gt;boundary operator&lt;/strong&gt;
+&lt;span class="math inline"&gt;\partial_n&lt;/span&gt; by taking an alternating sum
+of omitted indices. What do we mean by that? Well, the topological &lt;span
 class="math inline"&gt;n&lt;/span&gt;-simplex &lt;span
 class="math inline"&gt;\Delta^n&lt;/span&gt; has, in particular, &lt;span
 class="math inline"&gt;(n+1)&lt;/span&gt;-many vertices, say &lt;span
@@ -1081,22 +1060,19 @@ class="math inline"&gt;[\sigma_{s_1},\ldots,\sigma_{s_k}]&lt;/span&gt; to mean
 this “restriction” of &lt;span class="math inline"&gt;\sigma&lt;/span&gt; to the
 subset of vertices &lt;span
 class="math inline"&gt;S=\{s_1,\ldots,s_n\}&lt;/span&gt;. This means that we can
-define &lt;span class="math display"&gt;
-    \begin{aligned}
+define &lt;span class="math display"&gt;\begin{aligned}
         \partial_n\colon
         \sigma_n(X)
         &amp;amp;\longrightarrow \sigma_{n-1}(X)
     \\  \sigma
         &amp;amp;\longmapsto \sum_{i=0}^n (-1)^i
 [s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
-    \end{aligned}
-&lt;/span&gt; If we want to really use some good notation that will save us a
-lot of time in the long run, we might write this “all the vertices apart
-from the &lt;span class="math inline"&gt;i&lt;/span&gt;-th one” using some standard
-notation: &lt;span class="math display"&gt;
-    [s_1,\ldots,\widehat{s_i},\ldots,s_n]
-    \coloneqq [s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]
-&lt;/span&gt;&lt;/p&gt;
+    \end{aligned}&lt;/span&gt; If we want to really use some good notation
+that will save us a lot of time in the long run, we might write this
+“all the vertices apart from the &lt;span class="math inline"&gt;i&lt;/span&gt;-th
+one” using some standard notation: &lt;span
+class="math display"&gt;[s_1,\ldots,\widehat{s_i},\ldots,s_n]
+    \coloneqq [s_1,\ldots,s_{i-1},s_{i+1},\ldots,s_n]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Ok, great, but what about the fact that our arrows are all going
 left-to-right? Our differentials &lt;span
 class="math inline"&gt;\partial_n&lt;/span&gt; are &lt;em&gt;decreasing&lt;/em&gt; degree,
@@ -1108,27 +1084,25 @@ href="#fn6" class="footnote-ref" id="fnref6"
 role="doc-noteref"&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt; &lt;span class="math inline"&gt;A&lt;/span&gt;
 and define the &lt;strong&gt;singular &lt;span
 class="math inline"&gt;n&lt;/span&gt;-cochains in &lt;span
-class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as &lt;span class="math display"&gt;
-    \sigma^n(X;A)
+class="math inline"&gt;X&lt;/span&gt;&lt;/strong&gt; as &lt;span
+class="math display"&gt;\sigma^n(X;A)
     \coloneqq
-\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}\big(\sigma_n(X),A\big)
-&lt;/span&gt; which is itself also a &lt;span
+\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}\big(\sigma_n(X),A\big)&lt;/span&gt;
+which is itself also a &lt;span
 class="math inline"&gt;\mathbb{Z}&lt;/span&gt;-module. Actually, even better than
 this: &lt;span
 class="math inline"&gt;\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(-,A)&lt;/span&gt;
 is a (contravariant) &lt;em&gt;functor&lt;/em&gt; and thus gives us morphisms &lt;span
-class="math display"&gt;
-    \operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(\partial_n(-),
+class="math display"&gt;\operatorname{Hom}_{\mathbb{Z}\text{-}\mathsf{mod}}(\partial_n(-),
 A)
     \eqqcolon \partial^{n-1}
-    \colon \sigma^{n-1}(X)\to\sigma^n(X).
-&lt;/span&gt; So we get the cochain complex that we’ve been hoping for all
-this time: &lt;span class="math display"&gt;
-    \ldots
+    \colon \sigma^{n-1}(X)\to\sigma^n(X).&lt;/span&gt; So we get the cochain
+complex that we’ve been hoping for all this time: &lt;span
+class="math display"&gt;\ldots
     \xrightarrow{\partial^{n-1}} \sigma^n(X)
     \xrightarrow{\partial^n} \sigma^{n+1}(X)
-    \xrightarrow{\partial^{n+1}} \ldots
-&lt;/span&gt; whence, finally, another cohomology definition!&lt;/p&gt;
+    \xrightarrow{\partial^{n+1}} \ldots&lt;/span&gt; whence, finally, another
+cohomology definition!&lt;/p&gt;
 &lt;div class="rmenv" title="Definition (Singular cohomology)"&gt;
 &lt;p&gt;Let &lt;span class="math inline"&gt;X&lt;/span&gt; be a topological space. Its
 &lt;strong&gt;singular cohomology&lt;/strong&gt; is the &lt;span
@@ -1137,10 +1111,9 @@ groups &lt;span class="math inline"&gt;(\mathrm{H}^n(X;A)\mid
 n\in\mathbb{Z})&lt;/span&gt;, where we define the &lt;span
 class="math inline"&gt;n&lt;/span&gt;-th singular cohomology group as the &lt;span
 class="math inline"&gt;n&lt;/span&gt;-th internal cohomology group of the cochain
-complex of singular cochains: &lt;span class="math display"&gt;
-    \mathrm{H}^n(X;A)
-    \coloneqq \mathscr{H}^n(\sigma^\bullet(X;A)).
-&lt;/span&gt;&lt;/p&gt;
+complex of singular cochains: &lt;span
+class="math display"&gt;\mathrm{H}^n(X;A)
+    \coloneqq \mathscr{H}^n(\sigma^\bullet(X;A)).&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;There are three important things to note at this point:&lt;/p&gt;
 &lt;ol type="1"&gt;
@@ -1538,34 +1511,30 @@ concretely afterwards.&lt;/p&gt;
 &lt;p&gt;Let &lt;span class="math inline"&gt;G&lt;/span&gt; be a Lie group (i.e. a group
 object in the category &lt;span class="math inline"&gt;\mathsf{Man}&lt;/span&gt; of
 smooth manifolds). Then Yoneda gives us a presheaf &lt;span
-class="math display"&gt;
-  y^G
+class="math display"&gt;y^G
   = \mathsf{Man}(-,G)
-  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Set}
-&lt;/span&gt; but we can in fact endow this presheaf with the structure of a
-Lie group, by using the Lie group structure of &lt;span
-class="math inline"&gt;G&lt;/span&gt; “pointwise”. This means that we can deloop
-&lt;span class="math inline"&gt;y^G&lt;/span&gt; to obtain a presheaf of one-element
-groupoids &lt;span class="math display"&gt;
-  \mathbb{B}y^G
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Set}&lt;/span&gt; but we can in
+fact endow this presheaf with the structure of a Lie group, by using the
+Lie group structure of &lt;span class="math inline"&gt;G&lt;/span&gt; “pointwise”.
+This means that we can deloop &lt;span class="math inline"&gt;y^G&lt;/span&gt; to
+obtain a presheaf of one-element groupoids &lt;span
+class="math display"&gt;\mathbb{B}y^G
   = \mathbb{B}\mathsf{Man}(-,G)
-  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Grpd}.
-&lt;/span&gt; In other words, given any smooth manifold &lt;span
-class="math inline"&gt;X&lt;/span&gt;, we obtain a groupoid &lt;span
-class="math inline"&gt;\mathbb{B}y^G(X)&lt;/span&gt; with a single object &lt;span
-class="math inline"&gt;*&lt;/span&gt; and with endomorphism group &lt;span
+  \colon\mathsf{Man}^\mathrm{op}\to\mathsf{Grpd}.&lt;/span&gt; In other words,
+given any smooth manifold &lt;span class="math inline"&gt;X&lt;/span&gt;, we obtain
+a groupoid &lt;span class="math inline"&gt;\mathbb{B}y^G(X)&lt;/span&gt; with a
+single object &lt;span class="math inline"&gt;*&lt;/span&gt; and with endomorphism
+group &lt;span
 class="math inline"&gt;\operatorname{Hom}(*,*)\cong\mathsf{Man}(X,G)&lt;/span&gt;.
 Finally, for this step, we can take the categorical nerve &lt;span
 class="math inline"&gt;\mathcal{N}\colon\mathsf{Cat}\to\mathsf{sSet}&lt;/span&gt;
-to obtain a presheaf of simplicial sets &lt;span class="math display"&gt;
-  \mathcal{N}\mathbb{B}y^G
-  \colon\mathsf{Man}^\mathrm{op}\to[\Delta^\mathrm{op},\mathsf{Set}].
-&lt;/span&gt; So if we go back and forget about our choice of &lt;span
+to obtain a presheaf of simplicial sets &lt;span
+class="math display"&gt;\mathcal{N}\mathbb{B}y^G
+  \colon\mathsf{Man}^\mathrm{op}\to[\Delta^\mathrm{op},\mathsf{Set}].&lt;/span&gt;
+So if we go back and forget about our choice of &lt;span
 class="math inline"&gt;G&lt;/span&gt;, instead leaving that open, we get a
-functor &lt;span class="math display"&gt;
-  \mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}^\mathrm{op},[\Delta^\mathrm{op},\mathsf{Set}]].
-&lt;/span&gt;&lt;/p&gt;
+functor &lt;span class="math display"&gt;\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}^\mathrm{op},[\Delta^\mathrm{op},\mathsf{Set}]].&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Let’s now think about covers. Let &lt;span
 class="math inline"&gt;\mathsf{Man}_\mathcal{U}&lt;/span&gt; denote the category
 whose objects are pairs &lt;span class="math inline"&gt;(X,\mathcal{U})&lt;/span&gt;
@@ -1576,26 +1545,23 @@ class="math inline"&gt;\mathsf{Man}&lt;/span&gt; such that &lt;span
 class="math inline"&gt;\mathcal{U}&lt;/span&gt; is a refinement of &lt;span
 class="math inline"&gt;f^{-1}(\mathcal{V})&lt;/span&gt;. Then we can write the
 Čech nerve &lt;span class="math inline"&gt;\check{\mathcal{N}}&lt;/span&gt; as a
-functor &lt;span class="math display"&gt;
-  \check{\mathcal{N}}
-  \colon\mathsf{Man}_\mathcal{U}\to[\Delta^\mathrm{op},\mathsf{Man}]
-&lt;/span&gt; and then the purely abstract fact that &lt;span
+functor &lt;span class="math display"&gt;\check{\mathcal{N}}
+  \colon\mathsf{Man}_\mathcal{U}\to[\Delta^\mathrm{op},\mathsf{Man}]&lt;/span&gt;
+and then the purely abstract fact that &lt;span
 class="math inline"&gt;[\mathcal{C},\mathcal{D}]^\mathrm{op}\cong[\mathcal{C}^\mathrm{op},\mathcal{D}^\mathrm{op}]&lt;/span&gt;
 for any categories &lt;span class="math inline"&gt;\mathcal{C}&lt;/span&gt; and
 &lt;span class="math inline"&gt;\mathcal{D}&lt;/span&gt; lets us apply an &lt;span
 class="math inline"&gt;\mathrm{op}&lt;/span&gt; to get a functor &lt;span
-class="math display"&gt;
-  \check{\mathcal{N}}^\mathrm{op}
-  \colon\mathsf{Man}_\mathcal{U}^\mathrm{op}\to[\Delta,\mathsf{Man}^\mathrm{op}].
-&lt;/span&gt;&lt;/p&gt;
+class="math display"&gt;\check{\mathcal{N}}^\mathrm{op}
+  \colon\mathsf{Man}_\mathcal{U}^\mathrm{op}\to[\Delta,\mathsf{Man}^\mathrm{op}].&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;We can precompose (which we write with as &lt;span
 class="math inline"&gt;(-)^*&lt;/span&gt;) the above &lt;span
 class="math inline"&gt;\mathcal{N}\mathbb{B}y^{(-)}&lt;/span&gt; with this &lt;span
 class="math inline"&gt;\check{\mathcal{N}}^\mathrm{op}&lt;/span&gt; to obtain a
-single functor &lt;span class="math display"&gt;
-  (\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{csSet}]
-&lt;/span&gt; where &lt;span
+single functor &lt;span
+class="math display"&gt;(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{csSet}]&lt;/span&gt;
+where &lt;span
 class="math inline"&gt;\mathsf{csSet}=[\Delta,[\Delta^\mathrm{op},\mathsf{Set}]]&lt;/span&gt;
 is the category of cosimplicial simplicial sets. The very last step (for
 real this time) is to then &lt;em&gt;totalise&lt;/em&gt; over the cosimplicial
@@ -1605,10 +1571,9 @@ that turns a cosimplicial simplicial set into a simplicial set in
 exactly the same way that taking the total complex turns a bicomplex
 into a complex (don’t worry, we’ll talk more about what this functor is
 later). All in all, we get a simplicial presheaf on the category of
-smooth manifolds with chosen cover, namely &lt;span class="math display"&gt;
-  \operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
-  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{sSet}].
-&lt;/span&gt;&lt;/p&gt;
+smooth manifolds with chosen cover, namely &lt;span
+class="math display"&gt;\operatorname{Tot}(\check{\mathcal{N}}^\mathrm{op})^*\mathcal{N}\mathbb{B}y^{(-)}
+  \colon\mathsf{LieGroup}\to[\mathsf{Man}_\mathcal{U}^\mathrm{op},\mathsf{sSet}].&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Now comes the punchline.&lt;/p&gt;
 &lt;div class="itenv" title="Theorem"&gt;
 &lt;p&gt;For any Lie group &lt;span class="math inline"&gt;G&lt;/span&gt; and space with
@@ -1669,52 +1634,45 @@ totalisation and Reedy fibrancy&lt;/h1&gt;
 simplicial space given in degree &lt;span class="math inline"&gt;p&lt;/span&gt; by
 the disjoint union of all non-empty &lt;span
 class="math inline"&gt;p&lt;/span&gt;-fold intersections of elements of &lt;span
-class="math inline"&gt;\mathcal{U}&lt;/span&gt;, i.e. &lt;span class="math display"&gt;
-  \check{\mathcal{N}}\mathcal{U}_p
-  = \coprod U_{\alpha_0\ldots\alpha_p}
-&lt;/span&gt; and the face and degeneracy maps are given by dropping/repeating
-indices &lt;span class="math inline"&gt;\alpha_i&lt;/span&gt;. If the cover is
-“good”, then this gives a fibrant replacement of &lt;span
-class="math inline"&gt;X&lt;/span&gt;, and so can be used to compute cohomology
-(or more general mapping spaces). I love the Čech nerve — I think it
-turns up in almost everything I write — but I’d rather spend my little
-remaining energy describing totalisation instead.&lt;/p&gt;
+class="math inline"&gt;\mathcal{U}&lt;/span&gt;, i.e. &lt;span
+class="math display"&gt;\check{\mathcal{N}}\mathcal{U}_p
+  = \coprod U_{\alpha_0\ldots\alpha_p}&lt;/span&gt; and the face and
+degeneracy maps are given by dropping/repeating indices &lt;span
+class="math inline"&gt;\alpha_i&lt;/span&gt;. If the cover is “good”, then this
+gives a fibrant replacement of &lt;span class="math inline"&gt;X&lt;/span&gt;, and
+so can be used to compute cohomology (or more general mapping spaces). I
+love the Čech nerve — I think it turns up in almost everything I write —
+but I’d rather spend my little remaining energy describing totalisation
+instead.&lt;/p&gt;
 &lt;p&gt;The prototypical cosimplicial simplicial set is &lt;span
-class="math display"&gt;
-  \begin{aligned}
+class="math display"&gt;\begin{aligned}
     \Delta[\star]
     \colon\Delta
     &amp;amp;\to\mathsf{sSet}
   \\ [p]
     &amp;amp;\mapsto\Delta[p]=\operatorname{Hom}_\Delta(-,[p])
-  \end{aligned}
-&lt;/span&gt; which we can think of as “all of the simplices &lt;span
-class="math inline"&gt;\Delta[p]&lt;/span&gt; gathered together”. This lets us
-define a functor &lt;span class="math display"&gt;
-  \begin{aligned}
+  \end{aligned}&lt;/span&gt; which we can think of as “all of the simplices
+&lt;span class="math inline"&gt;\Delta[p]&lt;/span&gt; gathered together”. This lets
+us define a functor &lt;span class="math display"&gt;\begin{aligned}
     L
     \colon\mathsf{sSet}
     &amp;amp;\to\mathsf{csSet}
   \\Y_\bullet
     &amp;amp;\mapsto Y_\bullet\times\Delta[\star]
-  \end{aligned}
-&lt;/span&gt; and this admits a right adjoint, which we call
-&lt;em&gt;totalisation&lt;/em&gt; &lt;span class="math display"&gt;
-  \begin{aligned}
+  \end{aligned}&lt;/span&gt; and this admits a right adjoint, which we call
+&lt;em&gt;totalisation&lt;/em&gt; &lt;span class="math display"&gt;\begin{aligned}
     \operatorname{Tot}
     \colon\mathsf{csSet}
     &amp;amp;\to\mathsf{sSet}
   \\Y_\bullet^\star
     &amp;amp;\mapsto
 \underline{\operatorname{Hom}}_\mathsf{csSet}(\Delta[\star],Y_\bullet^\star)
-  \end{aligned}
-&lt;/span&gt; where we make use of the fact that &lt;span
+  \end{aligned}&lt;/span&gt; where we make use of the fact that &lt;span
 class="math inline"&gt;\mathsf{csSet}&lt;/span&gt; is enriched over &lt;span
-class="math inline"&gt;\mathsf{sSet}&lt;/span&gt; via &lt;span class="math display"&gt;
-  \left(\underline{\operatorname{Hom}}_\mathsf{csSet}(A_\bullet^\star,B_\bullet^\star)\right)_p
+class="math inline"&gt;\mathsf{sSet}&lt;/span&gt; via &lt;span
+class="math display"&gt;\left(\underline{\operatorname{Hom}}_\mathsf{csSet}(A_\bullet^\star,B_\bullet^\star)\right)_p
   =
-\operatorname{Hom}_\mathsf{csSet}(A_\bullet^\star\times\Delta[p],B_\bullet^\star).
-&lt;/span&gt;&lt;/p&gt;
+\operatorname{Hom}_\mathsf{csSet}(A_\bullet^\star\times\Delta[p],B_\bullet^\star).&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The particularly useful fact about totalisation is the following:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;If &lt;span
@@ -1826,15 +1784,14 @@ class="math inline"&gt;\mathcal{F}\colon\mathsf{Space}^\mathrm{op}\to\mathsf{dgC
 be a presheaf on the category of spaces that sends finite products to
 coproducts, and let &lt;span class="math inline"&gt;X\in\mathsf{Space}&lt;/span&gt;
 be a space with cover &lt;span class="math inline"&gt;\mathcal{U}&lt;/span&gt;. Then
-there is a weak equivalence of Kan complexes &lt;span class="math display"&gt;
-  \operatorname{Tot}\langle\mathcal{N}^\mathrm{dg}\mathcal{F}(\check{\mathcal{N}}\mathcal{U})\rangle
+there is a weak equivalence of Kan complexes &lt;span
+class="math display"&gt;\operatorname{Tot}\langle\mathcal{N}^\mathrm{dg}\mathcal{F}(\check{\mathcal{N}}\mathcal{U})\rangle
   \simeq
-  \langle\mathcal{N}^\mathrm{dg}\big(\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}\big))\rangle
-&lt;/span&gt; where we write &lt;span class="math inline"&gt;\langle-\rangle&lt;/span&gt;
-to denote the maximal Kan complex, and on the left-hand side we are
-taking the totalisation of cosimplicial simplicial sets, and on the
-right-hand side we are taking the totalisation of cosimplicial
-dg-categories.&lt;/p&gt;
+  \langle\mathcal{N}^\mathrm{dg}\big(\operatorname{Tot}\mathcal{F}(\check{\mathcal{N}}\mathcal{U}\big))\rangle&lt;/span&gt;
+where we write &lt;span class="math inline"&gt;\langle-\rangle&lt;/span&gt; to
+denote the maximal Kan complex, and on the left-hand side we are taking
+the totalisation of cosimplicial simplicial sets, and on the right-hand
+side we are taking the totalisation of cosimplicial dg-categories.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h1 id="applications"&gt;Applications&lt;/h1&gt;
 &lt;p&gt;So what do Mahmoud and I actually use Čech totalisation for in our
@@ -2050,8 +2007,7 @@ would be worth looking at the &lt;em&gt;triple&lt;/em&gt; category which has
 arbitrary morphisms in one direction, and then the left and right parts
 of the factorisation system in the other two directions. Something that
 I’ve been thinking about ever since that conversation is how, if you
-take two squares &lt;span class="math display"&gt;
-  \begin{CD}
+take two squares &lt;span class="math display"&gt;\begin{CD}
     X @&amp;gt;{f}&amp;gt;&amp;gt; X&amp;#39;
   \\@V{i}VV @VV{i&amp;#39;}V
   \\Y @&amp;gt;&amp;gt;&amp;gt; Y&amp;#39;
@@ -2061,27 +2017,25 @@ take two squares &lt;span class="math display"&gt;
     X @&amp;gt;{f}&amp;gt;&amp;gt; X&amp;#39;
   \\@V{p}VV @VV{p&amp;#39;}V
   \\Z @&amp;gt;&amp;gt;&amp;gt; Z&amp;#39;
-  \end{CD}
-&lt;/span&gt; where &lt;span class="math inline"&gt;f&lt;/span&gt; is arbitrary, &lt;span
-class="math inline"&gt;i&lt;/span&gt; and &lt;span class="math inline"&gt;i&amp;#39;&lt;/span&gt;
-are in the left part of the factorisation system, and &lt;span
-class="math inline"&gt;p&lt;/span&gt; and &lt;span class="math inline"&gt;p&amp;#39;&lt;/span&gt;
-in the right part, then you can think about “gluing them together along
-&lt;span class="math inline"&gt;f&lt;/span&gt;” to get the diagram &lt;span
-class="math display"&gt;
-  \begin{CD}
+  \end{CD}&lt;/span&gt; where &lt;span class="math inline"&gt;f&lt;/span&gt; is arbitrary,
+&lt;span class="math inline"&gt;i&lt;/span&gt; and &lt;span
+class="math inline"&gt;i&amp;#39;&lt;/span&gt; are in the left part of the
+factorisation system, and &lt;span class="math inline"&gt;p&lt;/span&gt; and &lt;span
+class="math inline"&gt;p&amp;#39;&lt;/span&gt; in the right part, then you can think
+about “gluing them together along &lt;span class="math inline"&gt;f&lt;/span&gt;” to
+get the diagram &lt;span class="math display"&gt;\begin{CD}
     Y @&amp;gt;&amp;gt;&amp;gt; Y&amp;#39;
   \\@A{i}AA @AA{i&amp;#39;}A
   \\X @&amp;gt;&amp;gt;&amp;gt; X&amp;#39;
   \\@V{p}VV @VV{p&amp;#39;}V
   \\Z @&amp;gt;&amp;gt;&amp;gt; Z&amp;#39;
-  \end{CD}
-&lt;/span&gt; which looks exactly like a 2-morphism of spans, or a cell in
-&lt;span class="math inline"&gt;\mathbb{S}\mathrm{pan}_{\mathrm{LR}}&lt;/span&gt;
-(where spans have their left leg in the left part of the factorisation
-system, and their right leg in the right part). In the case where you
-don’t quite have a factorisation system, but something “close”, this
-category of spans turns up in geometry: a colleague (and friend) here at
+  \end{CD}&lt;/span&gt; which looks exactly like a 2-morphism of spans, or a
+cell in &lt;span
+class="math inline"&gt;\mathbb{S}\mathrm{pan}_{\mathrm{LR}}&lt;/span&gt; (where
+spans have their left leg in the left part of the factorisation system,
+and their right leg in the right part). In the case where you don’t
+quite have a factorisation system, but something “close”, this category
+of spans turns up in geometry: a colleague (and friend) here at
 Stockholm recently wrote a paper (&lt;a
 href="https://arxiv.org/abs/2204.08968"&gt;“A descent principle for compact
 support extensions of functors”&lt;/a&gt;) about how such spans can be used to

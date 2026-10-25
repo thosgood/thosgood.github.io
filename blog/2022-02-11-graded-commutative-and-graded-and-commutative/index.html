@@ -82,10 +82,9 @@ class="math inline">S[x]</span> to be the set of polynomials in one
 variable (namely <span class="math inline">x</span>) with coefficients
 in <span class="math inline">S</span>, so elements of <span
 class="math inline">S[x]</span> are of the form <span
-class="math display">
-  f = s_n x^n + s_{n-1} x^{n-1} + \ldots + s_1 x + s_0
-</span> where the <span class="math inline">s_i</span> are elements of
-<span class="math inline">R</span>. (More generally, we have the
+class="math display">f = s_n x^n + s_{n-1} x^{n-1} + \ldots + s_1 x +
+s_0</span> where the <span class="math inline">s_i</span> are elements
+of <span class="math inline">R</span>. (More generally, we have the
 <em>polynomial ring in <span class="math inline">n</span>
 indeterminates</em>: <span
 class="math inline">S[x_1,x_2,\ldots,x_n]</span>, which is entirely
@@ -95,18 +94,15 @@ don’t need to worry about it too much for now).</p>
 talk about today, but one <em>particularly</em> nice thing that they
 have is a <em>grading</em>, given by the <em>degree</em>. Recall that
 the degree of a <em>monomial</em> is defined to be the “total power”,
-i.e. <span class="math display">
-  \deg(x^n) = n
-</span> (we say <em>total</em> power to deal with the case of multiple
-variables, e.g. <span class="math inline">\deg(x^my^n)=m+n</span>). The
-degree behaves nicely under multiplication <span class="math display">
-  \deg(x^m\cdot x^n) = m+n
-</span> and we have a <em>unique</em> way of writing <em>any</em>
-polynomial <span class="math inline">f\in S[x]</span> as a sum of
-monomials, basically by definition of what it means to be a polynomial:
-<span class="math display">
-  f = \sum_{i=0}^n r_i x^i.
-</span></p>
+i.e. <span class="math display">\deg(x^n) = n</span> (we say
+<em>total</em> power to deal with the case of multiple variables,
+e.g. <span class="math inline">\deg(x^my^n)=m+n</span>). The degree
+behaves nicely under multiplication <span
+class="math display">\deg(x^m\cdot x^n) = m+n</span> and we have a
+<em>unique</em> way of writing <em>any</em> polynomial <span
+class="math inline">f\in S[x]</span> as a sum of monomials, basically by
+definition of what it means to be a polynomial: <span
+class="math display">f = \sum_{i=0}^n r_i x^i.</span></p>
 <p>So let’s do what we always do and generalise this to an abstract
 structure!</p>
 <div class="rmenv" title="Definition">
@@ -155,10 +151,9 @@ what does it mean for a ring to be “graded commutative”?</p>
 <p>A ring <span class="math inline">R</span> is <em>graded
 commutative</em> if <span class="math inline">R</span> is a
 <em>graded</em> ring <span class="math inline">R=\bigoplus_{d=0}^\infty
-R_d</span> such that <span class="math display">
-  rs = (-1)^{|r||s|}sr
-</span> for all homogeneous elements <span class="math inline">r,s\in
-R</span>.</p>
+R_d</span> such that <span class="math display">rs =
+(-1)^{|r||s|}sr</span> for all homogeneous elements <span
+class="math inline">r,s\in R</span>.</p>
 </div>
 <p>So this is a slightly odd definition: graded commutativity is like
 commutativity, but with a possible minus sign, depending on the degree
@@ -168,9 +163,9 @@ better, let’s turn back to our good old friend <span
 class="math inline">S[x]</span>. If <span class="math inline">S</span>
 is commutative, then <span class="math inline">S[x]</span> is clearly
 commutative, but is it graded commutative? Shockingly, no! Indeed, we
-are asking if the following equality holds <span class="math display">
-  x^2 = x\cdot x \overset{?}{=} (-1)^{|x||x|} x\cdot x = -x^2.
-</span> We see that this only happens in two cases:</p>
+are asking if the following equality holds <span
+class="math display">x^2 = x\cdot x \overset{?}{=} (-1)^{|x||x|} x\cdot
+x = -x^2.</span> We see that this only happens in two cases:</p>
 <ol type="1">
 <li>if <span class="math inline">2=0</span>; or</li>
 <li>if <span class="math inline">x^2=0</span>.</li>
@@ -189,19 +184,17 @@ of <em>degree <span class="math inline">2</span></em>. That is, we are
 giving <span class="math inline">S[x]</span> a <em>different</em> graded
 ring structure: <span
 class="math inline">S[x]\cong\bigoplus_{d=0}^\infty R_d</span> where
-<span class="math display">
-  R_d =
+<span class="math display">R_d =
   \begin{cases}
     \{sx^d \mid s\in S\} &amp;\text{if }d\text{ is even;}
   \\0 &amp;\text{if }d\text{ is odd.}
-  \end{cases}
-</span> (After a little bit of thought, you can see that this is “the
-same as” simply looking at <span class="math inline">S[y^2]</span>,
-where <span class="math inline">y</span> is an indeterminate of degree
-<span class="math inline">1</span> again). Then we have that <span
-class="math display">
-  (-1)^{|x||x|} x\cdot x = x^2
-</span> and so this graded ring <em>is</em> graded commutative.</p>
+  \end{cases}</span> (After a little bit of thought, you can see that
+this is “the same as” simply looking at <span
+class="math inline">S[y^2]</span>, where <span
+class="math inline">y</span> is an indeterminate of degree <span
+class="math inline">1</span> again). Then we have that <span
+class="math display">(-1)^{|x||x|} x\cdot x = x^2</span> and so this
+graded ring <em>is</em> graded commutative.</p>
 <p>A nice little summary table would be helpful right about now (and,
 just in this table, we’re going to make the assumption that
 <strong><span class="math inline">S</span> is commutative</strong>).</p>
@@ -240,12 +233,10 @@ class="math inline">S[x^2]</span></td>
 to doing some algebraic topology: the <em>exterior algebra</em> <span
 class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> of a ring
 <span class="math inline">S</span> can be defined as the graded ring
-<span class="math display">
-  \Lambda_S[\alpha_1,\ldots,\alpha_n] \coloneqq
+<span class="math display">\Lambda_S[\alpha_1,\ldots,\alpha_n] \coloneqq
 S[\alpha_1,\ldots,\alpha_n]/(\alpha_i^2,\alpha_i\alpha_j+\alpha_j\alpha_i)_{1\leq
-i,j\leq n}
-</span> where each <span class="math inline">\alpha_i</span> is of
-degree <span class="math inline">1</span> (although, again, we can
+i,j\leq n}</span> where each <span class="math inline">\alpha_i</span>
+is of degree <span class="math inline">1</span> (although, again, we can
 modify this if we want to). Note that <span
 class="math inline">\Lambda_S[\alpha]\cong S[\alpha]/(\alpha^2)</span>,
 i.e. <em>the exterior algebra of <span class="math inline">S</span> in
@@ -254,11 +245,10 @@ one variable is exactly the ring of dual numbers</em>.</p>
 class="math inline">S</span> is), but is it graded commutative? Well
 it’s enough to check the condition on the generators <span
 class="math inline">\alpha_i</span>, but we see that <span
-class="math display">
-  \alpha_i\alpha_j
+class="math display">\alpha_i\alpha_j
   = -\alpha_j\alpha_i
-  = (-1)^{|\alpha_i||\alpha_j|}\alpha_j\alpha_i
-</span> where the first equality is exactly by the definition of <span
+  = (-1)^{|\alpha_i||\alpha_j|}\alpha_j\alpha_i</span> where the first
+equality is exactly by the definition of <span
 class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> (and note
 that, if <span class="math inline">i=j</span>, then everything is zero,
 and we definitely have that <span class="math inline">0=0</span>).</p>
@@ -327,14 +317,12 @@ and <span class="math inline">\alpha_i\alpha_j=-\alpha_j\alpha_i</span>
 <em>without having to ask for it</em> (…most of the time).</p>
 <p>That is, if we know that <span
 class="math inline">\Lambda_S[\alpha_1,\ldots,\alpha_n]</span> is graded
-commutative, then we know that <span class="math display">
-  \alpha_i\cdot\alpha_i =
+commutative, then we know that <span
+class="math display">\alpha_i\cdot\alpha_i =
 (-1)^{|\alpha_i||\alpha_i|}\alpha_i\cdot\alpha_i =
--\alpha_i\cdot\alpha_i
-</span> which rearranges to give <span class="math display">
-  2\alpha_i^2=0.
-</span> But then, if we can <em>divide by <span
-class="math inline">2</span></em> (i.e. if <span
+-\alpha_i\cdot\alpha_i</span> which rearranges to give <span
+class="math display">2\alpha_i^2=0.</span> But then, if we can
+<em>divide by <span class="math inline">2</span></em> (i.e. if <span
 class="math inline">2</span> is an invertible element) in our ring <span
 class="math inline">S</span>, then we see that <span
 class="math inline">\alpha^2</span> <em>must be</em> equal to zero,
@@ -402,13 +390,12 @@ class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p>Before diving into the applications, we just need one more abstract
 remark about graded rings: the tensor product <span
 class="math inline">R\otimes S</span> of two graded rings has a natural
-graded ring structure by setting <span class="math display">
-  \deg(r\otimes s) \coloneqq \deg(r)+\deg(s)
-</span> and defining the multiplication to have a sign that “makes
-things work nicely”: <span class="math display">
-  (r\otimes s)(r&#39;\otimes s&#39;) \coloneqq
-(-1)^{|r&#39;||s|}(rr&#39;)\otimes(ss&#39;)
-</span> (note that the exponent uses the two “inner” terms, <span
+graded ring structure by setting <span
+class="math display">\deg(r\otimes s) \coloneqq \deg(r)+\deg(s)</span>
+and defining the multiplication to have a sign that “makes things work
+nicely”: <span class="math display">(r\otimes s)(r&#39;\otimes s&#39;)
+\coloneqq (-1)^{|r&#39;||s|}(rr&#39;)\otimes(ss&#39;)</span> (note that
+the exponent uses the two “inner” terms, <span
 class="math inline">r&#39;</span> and <span
 class="math inline">s</span>, <strong>not</strong> <span
 class="math inline">r</span> and <span class="math inline">s</span>, nor
@@ -432,42 +419,37 @@ class="math inline">Y</span> be spaces. If <span
 class="math inline">Y</span> is such that <span
 class="math inline">\operatorname{H}^\bullet(Y)</span> is <em>free</em>
 (as a graded commutative ring) and <em>finitely generated</em>, then
-<span class="math display">
-  \operatorname{H}^\bullet(X\times Y) \cong
-\operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y)
-</span> (where <span class="math inline">\cong</span> means “isomorphic
-<em>as graded rings</em>”).</p>
+<span class="math display">\operatorname{H}^\bullet(X\times Y) \cong
+\operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y)</span>
+(where <span class="math inline">\cong</span> means “isomorphic <em>as
+graded rings</em>”).</p>
 </div>
 <p>Using this, we can look at two examples.</p>
 <div class="rmenv" title="Example 1">
-<p>We know that <span class="math display">
-  \operatorname{H}^n(S^1) =
+<p>We know that <span class="math display">\operatorname{H}^n(S^1) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0,1\text{;}
   \\0 &amp;\text{otherwise.}
-  \end{cases}
-</span> If we denote by <span class="math inline">\alpha</span> the
-generator of <span class="math inline">\operatorname{H}^1(S^1)</span>,
-then <span class="math display">
-  \alpha^2 \coloneqq \alpha\smile\alpha
-</span> is an element of <span
-class="math inline">\operatorname{H}^2(S^1)</span>, but this group is
-zero, and so it must be the case that <span
-class="math inline">\alpha^2=0</span>. Thus <span class="math display">
-  \operatorname{H}^\bullet(S^1) \cong \mathbb{Z}\langle1\rangle \oplus
+  \end{cases}</span> If we denote by <span
+class="math inline">\alpha</span> the generator of <span
+class="math inline">\operatorname{H}^1(S^1)</span>, then <span
+class="math display">\alpha^2 \coloneqq \alpha\smile\alpha</span> is an
+element of <span class="math inline">\operatorname{H}^2(S^1)</span>, but
+this group is zero, and so it must be the case that <span
+class="math inline">\alpha^2=0</span>. Thus <span
+class="math display">\operatorname{H}^\bullet(S^1) \cong
+\mathbb{Z}\langle1\rangle \oplus
 \mathbb{Z}\langle\alpha\rangle/(\alpha^2)
-  = \Lambda_{\mathbb{Z}}[\alpha]
-</span> (where here the angled brackets mean “the abelian group
-generated by these elements”).</p>
+  = \Lambda_{\mathbb{Z}}[\alpha]</span> (where here the angled brackets
+mean “the abelian group generated by these elements”).</p>
 <p>But we know that <span
 class="math inline">\Lambda_{\mathbb{Z}}[\alpha]</span> is free as a
 graded commutative ring, and it has only one generator so it’s also
 finitely generated; we can apply the Lemma above to get that <span
-class="math display">
-  \operatorname{H}^\bullet(S^1\times S^1)
+class="math display">\operatorname{H}^\bullet(S^1\times S^1)
   \cong
-\operatorname{H}^\bullet(S^1)\otimes\operatorname{H}^\bullet(S^1)
-</span> but this is exactly <span
+\operatorname{H}^\bullet(S^1)\otimes\operatorname{H}^\bullet(S^1)</span>
+but this is exactly <span
 class="math inline">\Lambda_{\mathbb{Z}}[\alpha_1,\alpha_2]</span>
 (where <span class="math inline">\alpha_i</span> is the generator of the
 first cohomology of the <span class="math inline">i</span>-th copy of
@@ -478,31 +460,27 @@ graded commutative but <em>not</em> commutative (i.e. <span
 class="math inline">\alpha_1\alpha_2=-\alpha_2\alpha_1</span>).</p>
 </div>
 <div class="rmenv" title="Example 2">
-<p>We know that <span class="math display">
-  \operatorname{H}^n(S^2) =
+<p>We know that <span class="math display">\operatorname{H}^n(S^2) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0,2\text{;}
   \\0 &amp;\text{otherwise.}
-  \end{cases}
-</span> If we denote by <span class="math inline">\beta</span> the
-generator of <span class="math inline">\operatorname{H}^2(S^2)</span>,
-then <span class="math display">
-  \beta^2 \coloneqq \beta\smile\beta
-</span> is an element of <span
-class="math inline">\operatorname{H}^4(S^2)</span>, but this group is
-zero, and so it must be the case that <span
-class="math inline">\beta^2=0</span>. Thus <span class="math display">
-  \operatorname{H}^\bullet(S^2) \cong \mathbb{Z}\langle1\rangle \oplus
-\mathbb{Z}\langle\beta\rangle/(\beta^2)
-  = \Lambda_{\mathbb{Z}}[\beta]
-</span> where <em><span class="math inline">\beta</span> is of degree
-<span class="math inline">2</span></em>.</p>
+  \end{cases}</span> If we denote by <span
+class="math inline">\beta</span> the generator of <span
+class="math inline">\operatorname{H}^2(S^2)</span>, then <span
+class="math display">\beta^2 \coloneqq \beta\smile\beta</span> is an
+element of <span class="math inline">\operatorname{H}^4(S^2)</span>, but
+this group is zero, and so it must be the case that <span
+class="math inline">\beta^2=0</span>. Thus <span
+class="math display">\operatorname{H}^\bullet(S^2) \cong
+\mathbb{Z}\langle1\rangle \oplus \mathbb{Z}\langle\beta\rangle/(\beta^2)
+  = \Lambda_{\mathbb{Z}}[\beta]</span> where <em><span
+class="math inline">\beta</span> is of degree <span
+class="math inline">2</span></em>.</p>
 <p>As in the previous example, the Lemma gives us that <span
-class="math display">
-  \operatorname{H}^\bullet(S^2\times S^2)
+class="math display">\operatorname{H}^\bullet(S^2\times S^2)
   \cong
-\operatorname{H}^\bullet(S^2)\otimes\operatorname{H}^\bullet(S^2)
-</span> which is exactly <span
+\operatorname{H}^\bullet(S^2)\otimes\operatorname{H}^\bullet(S^2)</span>
+which is exactly <span
 class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span>, but
 <em>where <span class="math inline">\beta</span> is of degree <span
 class="math inline">2</span></em> (we’re repeating this because it’s
@@ -511,12 +489,11 @@ important).</p>
 class="math inline">\Lambda_{\mathbb{Z}}[\beta_1,\beta_2]</span> is
 graded commutative (since it’s a cohomology ring, and recall that these
 are always graded commutative, by the sign in the definition of the cup
-product), but we see that <span class="math display">
-  \beta_1\beta_2
+product), but we see that <span class="math display">\beta_1\beta_2
   = (-1)^{|\beta_1||\beta_2|} \beta_2\beta_1
   = (-1)^{4}\beta_2\beta_1
-  = \beta_2\beta_1
-</span> and so this cohomology ring is actually commutative!</p>
+  = \beta_2\beta_1</span> and so this cohomology ring is actually
+commutative!</p>
 </div>
 <div class="itenv" title="Corollary">
 <p>The cohomology rings of <span class="math inline">S^1\times
@@ -535,50 +512,48 @@ needed to fix the Lemma.</p>
 class="math inline">Y</span> be spaces. If <span
 class="math inline">Y</span> is such that <span
 class="math inline">\operatorname{H}^\bullet(Y)</span> is finitely
-generated, then <span class="math display">
-  \operatorname{H}^\bullet(X\times Y)
+generated, then <span
+class="math display">\operatorname{H}^\bullet(X\times Y)
   \cong (\operatorname{H}^\bullet(X)\otimes\operatorname{H}^\bullet(Y))
   \oplus
-\operatorname{Tor}_{\bullet+1}(\operatorname{H}^\bullet(X),\operatorname{H}^\bullet(Y))
-</span> (note that this <span
-class="math inline">\operatorname{Tor}</span> term is zero if <span
-class="math inline">\operatorname{H}^\bullet(Y)</span> is free<a
-href="#fn4" class="footnote-ref" id="fnref4"
+\operatorname{Tor}_{\bullet+1}(\operatorname{H}^\bullet(X),\operatorname{H}^\bullet(Y))</span>
+(note that this <span class="math inline">\operatorname{Tor}</span> term
+is zero if <span class="math inline">\operatorname{H}^\bullet(Y)</span>
+is free<a href="#fn4" class="footnote-ref" id="fnref4"
 role="doc-noteref"><sup>4</sup></a>, so this really is a generalisation
 of our previous lemma).</p>
 </div>
 <div class="itenv" title="Example">
-<p>We know that <span class="math display">
-  \operatorname{H}^n(\mathbb{RP}^2) =
+<p>We know that <span
+class="math display">\operatorname{H}^n(\mathbb{RP}^2) =
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0\text{;}
   \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=2\text{;}
   \\0 &amp;\text{otherwise.}
-  \end{cases}
-</span> Doing some <span class="math inline">\operatorname{Tor}</span>
-calculations (use the fact that <span
-class="math inline">\mathbb{Z}</span> is free and thus flat (or even
-just projective) to see that <span
+  \end{cases}</span> Doing some <span
+class="math inline">\operatorname{Tor}</span> calculations (use the fact
+that <span class="math inline">\mathbb{Z}</span> is free and thus flat
+(or even just projective) to see that <span
 class="math inline">\operatorname{Tor}(\mathbb{Z},-)=\operatorname{Tor}(-,\mathbb{Z})=0</span>;
 use the fact that <span
 class="math inline">\operatorname{Tor}(A,\mathbb{Z}/m\mathbb{Z})\cong\{a\in
 A\mid ma=0\}</span> to see that <span
 class="math inline">\operatorname{Tor}(\mathbb{Z}/2\mathbb{Z},\mathbb{Z}/2\mathbb{Z})\cong\mathbb{Z}/2\mathbb{Z}</span>),
-the above Corollary gives us that <span class="math display">
-  \operatorname{H}^n(\mathbb{RP}^2\times\mathbb{RP}^2) =
+the above Corollary gives us that <span
+class="math display">\operatorname{H}^n(\mathbb{RP}^2\times\mathbb{RP}^2)
+=
   \begin{cases}
     \mathbb{Z} &amp;\text{if }n=0\text{;}
   \\(\mathbb{Z}/2\mathbb{Z})^2 &amp;\text{if }n=2\text{;}
   \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=3{;}
   \\\mathbb{Z}/2\mathbb{Z} &amp;\text{if }n=4{;}
   \\0 &amp;\text{otherwise.}
-  \end{cases}
-</span> We’ve written the case <span class="math inline">n=3</span> on a
-separate line because this is exactly the “correction term” given by the
-Künneth theorem, i.e. the previous Lemma would have given us everything
-else but would have said that <span
-class="math inline">\operatorname{H}^3=0</span>; Künneth tells us
-otherwise.</p>
+  \end{cases}</span> We’ve written the case <span
+class="math inline">n=3</span> on a separate line because this is
+exactly the “correction term” given by the Künneth theorem, i.e. the
+previous Lemma would have given us everything else but would have said
+that <span class="math inline">\operatorname{H}^3=0</span>; Künneth
+tells us otherwise.</p>
 </div>
 <div class="rmenv" title="Exercise">
 <p>Calculate <span

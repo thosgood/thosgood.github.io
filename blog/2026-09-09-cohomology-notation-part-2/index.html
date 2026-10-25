@@ -366,27 +366,24 @@ class="math inline">\pi\colon Y\to X</span> and an open subset <span
 class="math inline">U\subset X</span>, we define the <strong>set of
 sections of <span class="math inline">Y\xrightarrow{\pi}X</span> over
 <span class="math inline">U</span></strong> as <span
-class="math display">
-    \Gamma(U,Y\xrightarrow{\pi}X)
+class="math display">\Gamma(U,Y\xrightarrow{\pi}X)
     \coloneqq \{\sigma\colon U\to Y \mid \pi\circ\sigma =
-\mathrm{id}_U\}.
-</span> But if we leave out any specific choice of open subset <span
-class="math inline">U</span> we obtain a (contravariant) functor from
-the category (really, the poset; morphisms are given by inclusion of one
-open subset into another, and this doesn’t involve any choice or extra
-data) <span class="math inline">\mathsf{Op}(X)</span> of open subsets of
-<span class="math inline">X</span> to the category of sets: <span
-class="math display">
-    \begin{aligned}
+\mathrm{id}_U\}.</span> But if we leave out any specific choice of open
+subset <span class="math inline">U</span> we obtain a (contravariant)
+functor from the category (really, the poset; morphisms are given by
+inclusion of one open subset into another, and this doesn’t involve any
+choice or extra data) <span class="math inline">\mathsf{Op}(X)</span> of
+open subsets of <span class="math inline">X</span> to the category of
+sets: <span class="math display">\begin{aligned}
         \Gamma\colon
         \mathsf{Op}(X)^\mathrm{op}
         &amp;\longrightarrow \mathsf{Set}
     \\  U
         &amp;\longmapsto \Gamma(U,Y\xrightarrow{\pi}X)
-    \end{aligned}
-</span> This functor is particularly nice, since it satisfies exactly
-the kinds of properties that we were worried about before when asking
-whether or not some <span class="math inline">\pi_{V_y}</span> and <span
+    \end{aligned}</span> This functor is particularly nice, since it
+satisfies exactly the kinds of properties that we were worried about
+before when asking whether or not some <span
+class="math inline">\pi_{V_y}</span> and <span
 class="math inline">\pi_{V_{y&#39;}}</span> would be able to “glue” on
 the overlap <span class="math inline">V_{yy&#39;}</span>. We could
 phrase this property in terms of “unique gluing of compatible local
@@ -418,11 +415,10 @@ functions</h1>
 class="math inline">f\colon\mathbb{C}\to\mathbb{C}</span> is a function
 that is everywhere complex-differentiable. That is, for all <span
 class="math inline">z_0\in\mathbb{C}</span>, the limit <span
-class="math display">
-    f&#39;(z_0)
-    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}
-</span> exists, i.e. is a well-defined complex number, i.e. gives a
-well-defined function <span
+class="math display">f&#39;(z_0)
+    \coloneqq \lim_{z\to z_0} \frac{f(z)-f(z_0)}{z-z_0}</span> exists,
+i.e. is a well-defined complex number, i.e. gives a well-defined
+function <span
 class="math inline">f&#39;\colon\mathbb{C}\to\mathbb{C}</span>. The
 thing that makes holomorphic functions so wonderful (and also so tough
 to work with) is the sneaky little detail about what we mean when we say
@@ -454,11 +450,10 @@ all <span class="math inline">z_0\in\mathbb{C}</span>, we can find a
 (nice) open neighbourhood <span
 class="math inline">U_{z_0}\subseteq\mathbb{C}</span> on which <span
 class="math inline">f</span> can be expressed as a power series centred
-at <span class="math inline">z_0</span>: <span class="math display">
-    f|U_{z_0}
+at <span class="math inline">z_0</span>: <span
+class="math display">f|U_{z_0}
     = \sum_{i=0}^\infty a_i(z-z_0)^i
-    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.
-</span></p>
+    = a_0 + a_1(z-z_0) + a_2(z-z_0)^2 + \ldots.</span></p>
 <p>Lots of nice functions are holomorphic. For example, any polynomial
 is holomorphic: in short, a polynomial is just a finite power series, so
 it’s definitely analytic. All the trigonometric functions that we know
@@ -545,19 +540,17 @@ for <span class="math inline">f</span> to be holomorphic in each
 variable. This is surprising because the same is not true in real
 analysis! The famous<a href="#fn6" class="footnote-ref" id="fnref6"
 role="doc-noteref"><sup>6</sup></a> counter-example is <span
-class="math display">
-    f(x,y)
+class="math display">f(x,y)
     \coloneqq
     \begin{cases}
         \frac{xy}{x^2+y^2} &amp;\text{if }(x,y)\neq(0,0)
     \\  0 &amp;\text{if }(x,y)=(0,0)
-    \end{cases}
-</span> which is differentiable in each variable, but it is not even
-continuous (at the origin) in both variables. Once we know how to talk
-about multivariable holomorphic functions, we can define <strong>complex
-manifolds</strong> as topological spaces that are locally biholomorphic
-to (i.e. there exists a holomorphic map with holomorphic inverse) open<a
-href="#fn7" class="footnote-ref" id="fnref7"
+    \end{cases}</span> which is differentiable in each variable, but it
+is not even continuous (at the origin) in both variables. Once we know
+how to talk about multivariable holomorphic functions, we can define
+<strong>complex manifolds</strong> as topological spaces that are
+locally biholomorphic to (i.e. there exists a holomorphic map with
+holomorphic inverse) open<a href="#fn7" class="footnote-ref" id="fnref7"
 role="doc-noteref"><sup>7</sup></a> subsets of <span
 class="math inline">\mathbb{C}^n</span>. And now, <em>finally</em>, we
 can get back to the sheaf of holomorphic functions.</p>
@@ -622,30 +615,28 @@ build a sheaf!</p>
 <p>Given a complex manifold <span class="math inline">X</span> we define
 its <strong>sheaf of holomorphic functions</strong> (usually denoted by
 <span class="math inline">\mathcal{O}_X</span>) to be given by <span
-class="math display">
-    \begin{aligned}
+class="math display">\begin{aligned}
         \mathcal{O}_X\colon
         \mathsf{Op}(X)
         &amp;\longrightarrow \mathsf{Ab}
     \\  U
         &amp;\longmapsto \{f\colon U\to\mathbb{C} \mid f\text{ is
 holomorphic}\}
-    \end{aligned}
-</span> Note that we could have chosen to land in the category of <span
-class="math inline">\mathbb{C}</span>-algebras, but we’ll just look at
-the underlying abelian group for now. But why is this thing a
-<em>sheaf</em>? That’s an argument we’re not going to get into today.
-I’m just going to say that it is, and you can either just believe me or
-(much better) think about it and do some internet/book searching. But
-the argument that needs to be given is, in essence, that if we have open
-subsets <span class="math inline">U,V\subseteq X</span> with a non-empty
-overlap <span class="math inline">U\cap V\neq\varnothing</span>, and
-holomorphic functions <span class="math inline">f_U\colon
-U\to\mathbb{C}</span> and <span class="math inline">f_V\colon
-V\to\mathbb{C}</span> <em>such that</em> <span
-class="math inline">f_U=f_V</span>, then there actually exists a unique
-holomorphic function <span class="math inline">f_{U\cup V}\colon U\cup
-V</span> on the <em>union</em> such that <span
+    \end{aligned}</span> Note that we could have chosen to land in the
+category of <span class="math inline">\mathbb{C}</span>-algebras, but
+we’ll just look at the underlying abelian group for now. But why is this
+thing a <em>sheaf</em>? That’s an argument we’re not going to get into
+today. I’m just going to say that it is, and you can either just believe
+me or (much better) think about it and do some internet/book searching.
+But the argument that needs to be given is, in essence, that if we have
+open subsets <span class="math inline">U,V\subseteq X</span> with a
+non-empty overlap <span class="math inline">U\cap
+V\neq\varnothing</span>, and holomorphic functions <span
+class="math inline">f_U\colon U\to\mathbb{C}</span> and <span
+class="math inline">f_V\colon V\to\mathbb{C}</span> <em>such that</em>
+<span class="math inline">f_U=f_V</span>, then there actually exists a
+unique holomorphic function <span class="math inline">f_{U\cup V}\colon
+U\cup V</span> on the <em>union</em> such that <span
 class="math inline">f_U=f_{U\cup V}|U</span> and <span
 class="math inline">f_V=f_{U\cup V}|V</span>. That is, if we have a
 collection of holomorphic functions on little open subsets, and whenever

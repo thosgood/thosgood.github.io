@@ -197,14 +197,12 @@ the case <span class="math inline">k=\mathbb{C}</span>).</p>
 <p>Just as Lie algebra cohomology is constructed to be the derived
 functor of the functor of invariants, Lie algebra homology is
 constructed to be the derived functor of the functor of
-<em>coinvariants</em>: <span class="math display">
-  \begin{aligned}
+<em>coinvariants</em>: <span class="math display">\begin{aligned}
     \operatorname{Coinv}_\mathfrak{g}(M) = M_\mathfrak{g}&amp;\coloneqq
 M/\mathfrak{g}M
   \\\operatorname{H}_\bullet(\mathfrak{g},M) &amp;\coloneqq
 \operatorname{Tor}_\bullet^{U(\mathfrak{g})}(k,M).
-  \end{aligned}
-</span> We need to justify why this <span
+  \end{aligned}</span> We need to justify why this <span
 class="math inline">\operatorname{Tor}</span> is indeed the derived
 functor of <span class="math inline">\operatorname{Coinv}</span>, since
 the latter doesn’t seem to have anything to do with tensor products a
@@ -236,24 +234,20 @@ U(\mathfrak{g})/\mathfrak{J}=U(\mathfrak{g})_\mathfrak{g}</span>.</p>
 <p>With this, we can see why the derived functor of the coinvariants
 functor is calculated by <span
 class="math inline">\operatorname{Tor}</span>, since <span
-class="math display">
-  \begin{aligned}
+class="math display">\begin{aligned}
     k\otimes_{U(\mathfrak{g})}M
     &amp;\cong U(\mathfrak{g})/\mathfrak{J}_{U(\mathfrak{g})}M
   \\&amp;\cong M/\mathfrak{J}M
   \\&amp;\cong M/\mathfrak{g}M
     = M_\mathfrak{g}.
-  \end{aligned}
-</span></p>
+  \end{aligned}</span></p>
 <p>As we did for cohomology, we can construct a chain complex that
-computes the Lie algebra homology: we define <span class="math display">
-  \wedge_p = \wedge_p(\mathfrak{g},M) \coloneqq
-\wedge^p(\mathfrak{g})\otimes_k M
-</span> (so that <span class="math inline">\wedge_0=M</span>), with
-differential <span
+computes the Lie algebra homology: we define <span
+class="math display">\wedge_p = \wedge_p(\mathfrak{g},M) \coloneqq
+\wedge^p(\mathfrak{g})\otimes_k M</span> (so that <span
+class="math inline">\wedge_0=M</span>), with differential <span
 class="math inline">\partial\colon\wedge_p\to\wedge_{p-1}</span> given
-by <span class="math display">
-  \begin{aligned}
+by <span class="math display">\begin{aligned}
     &amp;\partial_p(x_1\wedge\ldots\wedge x_p\otimes m) =
   \\\,&amp;\sum_{1\leqslant i&lt;j\leqslant p} (-1)^{i+j}
 [x_i,x_j]\wedge
@@ -261,12 +255,9 @@ x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge\widehat{x_j}\wedge\ldots\we
 x_p \otimes m
   \\+&amp;\sum_{i=1}^p (-1)^i
 x_1\wedge\ldots\wedge\widehat{x_i}\wedge\ldots\wedge x_p \otimes (x_im).
-  \end{aligned}
-</span> The claim (which we won’t prove) is then that <span
-class="math display">
-  \operatorname{H}_p(\mathfrak{g},M) \cong
-\operatorname{Z}_p(\mathfrak{g},M)/\operatorname{B}_p(\mathfrak{g},M).
-</span></p>
+  \end{aligned}</span> The claim (which we won’t prove) is then that
+<span class="math display">\operatorname{H}_p(\mathfrak{g},M) \cong
+\operatorname{Z}_p(\mathfrak{g},M)/\operatorname{B}_p(\mathfrak{g},M).</span></p>
 <h1 id="relative-lie-algebra-cohomology-some-properties">Relative Lie
 algebra (co)homology: some properties</h1>
 <p>Again, as is usual for (co)homology theories, we wish to have some
@@ -282,12 +273,12 @@ in <span class="math inline">M</span>), we at the very least recover the
 non-relative (co)homology of <span
 class="math inline">\mathfrak{g}</span> when <span
 class="math inline">\mathfrak{h}</span> is zero, i.e. we should
-definitely have that <span class="math display">
-  \operatorname{H}^\bullet(\mathfrak{g},0;M) \cong
-\operatorname{H}^\bullet(\mathfrak{g};M).
-</span> But before giving the definition, it’s maybe also helpful to see
-another theorem which will hold, which tells us about the case of the
-relative cohomology of a <em>reductive</em> subalgebra.</p>
+definitely have that <span
+class="math display">\operatorname{H}^\bullet(\mathfrak{g},0;M) \cong
+\operatorname{H}^\bullet(\mathfrak{g};M).</span> But before giving the
+definition, it’s maybe also helpful to see another theorem which will
+hold, which tells us about the case of the relative cohomology of a
+<em>reductive</em> subalgebra.</p>
 <div class="rmenv" title="Definition">
 <p>Let <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> be a
 Lie algebra pair. We say that it is <em>reductive</em> if the adjoint
@@ -315,11 +306,11 @@ class="math inline">\mathfrak{g}</span>, i.e. a vector subspace such
 that <span
 class="math inline">[\mathfrak{a},\mathfrak{g}]\subseteq\mathfrak{a}</span>).</li>
 </ul>
-<p>Then <span class="math display">
-  \operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{g}\simeq
+<p>Then <span
+class="math display">\operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{g}\simeq
 \operatorname{H}^\bullet(\mathfrak{a};M)^\mathfrak{h}\simeq
-\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M)
-</span> (where the superscript denotes the space of invariants).</p>
+\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M)</span> (where the
+superscript denotes the space of invariants).</p>
 </div>
 <h1 id="relative-lie-algebra-cohomology-some-definitions">Relative Lie
 algebra (co)homology: some definitions</h1>
@@ -331,14 +322,14 @@ recover the derived functor definition.</p>
 <div class="rmenv" title="Definition">
 <p>The <em>relative Chevalley–Eilenberg complex <span
 class="math inline">\operatorname{CE}^\bullet(\mathfrak{g},\mathfrak{h};M)</span></em>
-is defined by <span class="math display">
-  \operatorname{CE}^p(\mathfrak{g},\mathfrak{h};M) \coloneqq \big(
-(\wedge^p(\mathfrak{g}/\mathfrak{h})^*)\otimes_k M \big)^\mathfrak{h}
-</span> and the differential is given by the duals of the Lie bracket
-and the action of <span class="math inline">\mathfrak{g}</span> on <span
-class="math inline">M</span>, i.e. <span class="math display">
-  d \coloneqq \rho^* + [-,-]^*.
-</span></p>
+is defined by <span
+class="math display">\operatorname{CE}^p(\mathfrak{g},\mathfrak{h};M)
+\coloneqq \big( (\wedge^p(\mathfrak{g}/\mathfrak{h})^*)\otimes_k M
+\big)^\mathfrak{h}</span> and the differential is given by the duals of
+the Lie bracket and the action of <span
+class="math inline">\mathfrak{g}</span> on <span
+class="math inline">M</span>, i.e. <span class="math display">d
+\coloneqq \rho^* + [-,-]^*.</span></p>
 </div>
 <p>By definition, if <span class="math inline">\mathfrak{h}=0</span>,
 then we recover exactly the Chevalley–Eilenberg complex of <span
@@ -348,12 +339,11 @@ isomorphism of the form <span
 class="math inline">\operatorname{Hom}_k(A,V)\cong A^*\otimes_k
 V</span>).</p>
 <p>As for relative homology, we define the complex <span
-class="math display">
-  \wedge_p = \wedge_p(\mathfrak{g},\mathfrak{h};M) \coloneqq
-\frac{\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k
-M}{\mathfrak{h}\cdot(\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k M)}
-</span> where <span class="math inline">\mathfrak{h}\cdot V</span>, for
-an <span class="math inline">\mathfrak{h}</span>-module <span
+class="math display">\wedge_p = \wedge_p(\mathfrak{g},\mathfrak{h};M)
+\coloneqq \frac{\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k
+M}{\mathfrak{h}\cdot(\wedge^p(\mathfrak{g}/\mathfrak{h})\otimes_k
+M)}</span> where <span class="math inline">\mathfrak{h}\cdot V</span>,
+for an <span class="math inline">\mathfrak{h}</span>-module <span
 class="math inline">V</span>, denotes the span of elements of the form
 <span class="math inline">x\cdot v</span> for <span
 class="math inline">x\in\mathfrak{h}</span> and <span
@@ -378,15 +368,12 @@ is finitely semisimple under the adjoint action of <span
 class="math inline">\mathfrak{h}</span>. Write <span
 class="math inline">\mathcal{G}\coloneqq U(\mathfrak{g})</span>, and
 <span class="math inline">\mathcal{H}\coloneqq U(\mathfrak{h})</span>.
-Then the complex <span class="math display">
-  \ldots \to D_2 \to D_1 \to D_0
-</span> is a <span
+Then the complex <span class="math display">\ldots \to D_2 \to D_1 \to
+D_0</span> is a <span
 class="math inline">(\mathcal{G},\mathcal{H})</span>-projective
 resolution of <span class="math inline">k^\mathrm{triv}</span>, where
-<span class="math display">
-  D_p \coloneqq
-\mathcal{G}\otimes_\mathcal{H}\wedge^p(\mathfrak{g}/\mathfrak{h}).
-</span></p>
+<span class="math display">D_p \coloneqq
+\mathcal{G}\otimes_\mathcal{H}\wedge^p(\mathfrak{g}/\mathfrak{h}).</span></p>
 </div>
 <div class="itenv" title="Corollary">
 <p>Under the same assumptions, the complex <span
@@ -400,28 +387,27 @@ resolution of <span class="math inline">M</span>.</p>
 Lie algebra pair such that <span class="math inline">\mathfrak{g}</span>
 is finitely semisimple under the adjoint action of <span
 class="math inline">\mathfrak{h}</span>. Then <span
-class="math display">
-  \operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
-\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(M^t,k) \simeq
-\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(k,M)
-</span> (where <span class="math inline">M^t</span> is the right <span
+class="math display">\operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)
+\simeq \operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(M^t,k)
+\simeq
+\operatorname{Tor}_\bullet^{(\mathcal{G},\mathcal{H})}(k,M)</span>
+(where <span class="math inline">M^t</span> is the right <span
 class="math inline">\mathfrak{g}</span>-module with the same underlying
 space as <span class="math inline">M</span>, but with <span
 class="math inline">m\cdot x\coloneqq -xm</span> for <span
 class="math inline">m\in M</span> and <span
 class="math inline">x\in\mathfrak{g}</span>), and <span
-class="math display">
-  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M) \simeq
-\operatorname{Ext}_{(\mathcal{G},\mathcal{H})}^\bullet(k,M).
-</span></p>
+class="math display">\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M)
+\simeq
+\operatorname{Ext}_{(\mathcal{G},\mathcal{H})}^\bullet(k,M).</span></p>
 </div>
 <p>A “fun” exercise is then to prove that, for any Lie algebra pair
 <span class="math inline">(\mathfrak{g},\mathfrak{h})</span> and any
 <span class="math inline">\mathfrak{g}</span>-module <span
-class="math inline">M</span>, <span class="math display">
-  \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M^*) \simeq
-\operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)^*.
-</span></p>
+class="math inline">M</span>, <span
+class="math display">\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{h};M^*)
+\simeq
+\operatorname{H}_\bullet(\mathfrak{g},\mathfrak{h};M)^*.</span></p>
 
   </div>
 
