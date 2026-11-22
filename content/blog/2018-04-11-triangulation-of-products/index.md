@@ -37,7 +37,7 @@ $$
 \end{aligned}
 $$
 
-that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points 0 and 1; and the 1-simplices correspond to the line from 0 to 1, as well as the two degenerate 'lines' from 0 to 0 and from 1 to 1_.
+that is, all simplices in degree 2 and higher are degenerate (and we include all of them); the 0-simplices correspond to the points $0$ and $1$; and the 1-simplices correspond to the line from $0$ to $1$, as well as the two degenerate 'lines' from $0$ to $0$ and from $1$ to $1$.
 
 When we apply geometric realisation, these degenerate simplices will 'vanish', and so we can just look at what the non-degenerate 1-simplices of $X_\bullet\times X_\bullet$ are to see what happens in terms of triangulation.
 There are nine 1-simplices in the product:
